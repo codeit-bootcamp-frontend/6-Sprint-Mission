@@ -1,3 +1,7 @@
+:root {
+  font-size: 18px;
+}
+
 body {
   width: 100vw;
   display: flex;
@@ -11,6 +15,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 70px;
 }
 
 main {
@@ -24,13 +29,24 @@ main {
 /* nav 구역 */
 
 .navigation {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70px;
+  padding: 0 200px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.navigation-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  flex-grow: 1;
   max-width: 1920px;
-  height: 70px;
-  padding: 0 200px;
 }
 
 .panda-logo::before {
