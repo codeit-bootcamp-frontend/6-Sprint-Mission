@@ -118,6 +118,11 @@ input::placeholder {
   right: 8px;
 }
 
+form button .active {
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
 /* easy-signin-section */
 
 .easy-signin {
