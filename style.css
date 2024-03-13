@@ -46,6 +46,10 @@ html {
   font-family: Pretendard, sans-serif;
 }
 
+body {
+  color: var(--cool-gray700);
+}
+
 a {
   text-decoration: none;
 }
@@ -80,6 +84,12 @@ a {
   gap: 10px;
 }
 
+.button-large {
+  width: 355px;
+  height: 56px;
+  border-radius: 40px;
+}
+
 
 /* CSS for header */
 
@@ -105,6 +115,50 @@ header {
   font-size: 25px;
   color: var(--point-blue);
   font-weight: 700;
+}
+
+
+/* CSS for banner */
+
+.banner {
+  width: 100%;
+  height: 540px;
+  background-color: var(--background-blue);
+}
+
+.banner-content {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner-text {
+  /* Q1. absolute로 배치하는 게 맞을까요? */
+  position: absolute;
+  left: 0px;
+}
+
+.banner-text p {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.banner-text .button {
+  margin-top: 32px;
+}
+
+.banner-content img {
+  /* Q1. absolute로 배치하는 게 맞을까요? */
+  position: absolute;
+  bottom: 0;
+  right: -137px;
 }
 
 
