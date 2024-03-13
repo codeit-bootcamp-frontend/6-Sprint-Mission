@@ -1,9 +1,13 @@
 /* layout */
+.wrap {
+  display:grid;
+  grid-template-rows:70px 1fr 160px;
+}
 .header {
   display:flex;
   align-items:center;
   justify-content:space-between;;
-  padding:10px 10.42vw;
+  padding:0 10.42vw;
   background:#fff;
   
   .img-logo {
@@ -20,8 +24,7 @@
 .footer {
   display:flex;
   justify-content:space-between;
-  align-items: center;
-  padding:32px 10.42vw 108px;
+  padding:32px 10.42vw 0;
   background:#111827;
   color:#fff;
   .footer-tit {
