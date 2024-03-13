@@ -146,4 +146,22 @@
   height: 160px;
   background-color: #111827;
   display: flex;
+  justify-content: space-between;
+  padding: 32px 200px 0;
+}
+
+.footer__copyright {
+  color: #9ca3af;
+}
+
+.footer__info {
+  color: #e5e7eb;
+  display: flex;
+  gap: 30px;
+}
+
+.footer_sns {
+  color: white;
+  display: flex;
+  gap: 12px;
 }
