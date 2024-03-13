@@ -165,6 +165,46 @@ header {
 }
 
 
+/* CSS for main */
+
+main {
+  width: 100%;
+  margin-bottom: 138px;
+}
+
+.main-content {
+  height: 720px;
+
+  display: flex;
+  gap: 64px;
+}
+
+.main-content.right-align {
+  justify-content: right;
+}
+
+.main-content.right-align p {
+  text-align: right;
+}
+
+.main-content img {
+  width: 588px;
+}
+
+.content-keyword {
+  color: var(--point-blue);
+  font-size: 18px;
+}
+
+.main-content .content-title {
+  margin: 12px 0 24px;
+}
+
+.content-description {
+  font-size: 24px;
+}
+
+
 /* CSS for footer */
 
 footer {
