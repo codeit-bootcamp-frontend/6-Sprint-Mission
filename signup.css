@@ -112,6 +112,10 @@ input::placeholder {
   margin-bottom: 24px;
 }
 
+.signup-form input:focus {
+  outline: #3692ff solid 1.5px;
+}
+
 .signup-form i {
   position: absolute;
   top: 10px;
