@@ -54,7 +54,7 @@ input::placeholder {
 /* input */
 
 .basic-input {
-  width: 640px;
+  width: 612px;
   height: 56px;
   padding: 16px 20px;
   background-color: var(--color-cool-gray-100);
@@ -108,13 +108,14 @@ input::placeholder {
 }
 
 .signup-form input {
+  width: 640px;
   margin-bottom: 24px;
 }
 
 .signup-form i {
   position: absolute;
   top: 10px;
-  right: 28px;
+  right: 8px;
 }
 
 /* easy-signin-section */
