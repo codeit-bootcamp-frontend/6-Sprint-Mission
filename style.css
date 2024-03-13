@@ -22,7 +22,6 @@
   height: 48px;
   font-size: 16px;
   font-weight: 600;
-  font-family: Pretendard;
 }
 
 /* home-top */
@@ -50,7 +49,6 @@
 }
 
 .home-top__title {
-  font-family: Pretendard;
   font-weight: 700;
   font-size: 40px;
   line-height: 56px;
@@ -64,7 +62,6 @@
   background-color: #3692ff;
   height: 56px;
   border-radius: 40px;
-  font-family: Pretendard;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
@@ -94,6 +91,44 @@
 
 .section:last-child {
   margin-bottom: 0px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.section__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section__badge {
+  color: #3692ff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25.2px;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+}
+
+.section__subtitle {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: 8;
+}
+
+.section-right {
+  flex-direction: row-reverse;
+  text-align: right;
 }
 
 /* home-bottom */
