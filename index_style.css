@@ -93,6 +93,25 @@ main{
 .main-content{
   margin-bottom: 20vh;
   margin-top: 10vh;
+  height: 25vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.right-align{
+  margin-bottom: 20vh;
+  margin-top: 10vh;
+  height: 25vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  
+}
+.right-align .blue-text,
+.right-align .main-text1,
+.right-align .main-text2 {
+  margin-left: auto;
 }
 .blue-text{
   font-family: 'Pretendard';
@@ -102,7 +121,7 @@ main{
   display: flex;
   align-items: center;
   color: #3692FF;
-  margin: 5vw 3vw 1vw 3vw ;
+  margin: 5vw 3vw 0vw 3vw ;
 }
 .main-text1{
   font-family: 'Pretendard';
@@ -114,7 +133,7 @@ main{
   align-items: center;
   letter-spacing: 0.02em;
   color: #374151;
-  margin: 1vw 3vw 1vw 3vw ;
+  margin: 0vw 3vw 0vw 3vw ;
 }
 .main-text2{
   font-family: 'Pretendard';
@@ -126,7 +145,7 @@ main{
   align-items: center;
   letter-spacing: 0.08em;
   color: #374151;
-  margin: 1vw 3vw 1vw 3vw ;
+  margin: -3vw 3vw 0vw 3vw ;
 }
 .banner-img2{
   position: absolute;
