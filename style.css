@@ -6,6 +6,13 @@ body {
   align-items: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -21,6 +28,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
+  max-width: 1920px;
   height: 70px;
   padding: 0 200px;
 }
@@ -119,15 +127,22 @@ main {
 /* footer 영역 */
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
   height: 160px;
-  padding: 32px 200px;
   background-color: var(--color-gray-900);
   font-weight: 400;
   font-size: 16px;
   line-height: 19.09px;
   color: #fff;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  max-width: 1920px;
+  padding: 32px 200px;
 }
 
 .footer-center {
