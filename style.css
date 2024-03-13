@@ -9,6 +9,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  padding: 0 200px;
+}
+
+.header__login-btn {
+  cursor: pointer;
+  background-color: #3692ff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 48px;
 }
 
 /* home-top */
