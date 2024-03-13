@@ -1,7 +1,3 @@
-body {
-  background-color: #cfe5ff;
-}
-
 /* header */
 
 .header {
@@ -24,17 +20,61 @@ body {
   align-items: center;
   width: 128px;
   height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Pretendard;
 }
 
 /* home-top */
 
 .home-top,
 .home-bottom {
+  background-color: #cfe5ff;
+}
+
+.home-top__container {
   height: 540px;
   display: flex;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+}
+
+.home-top__left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 355px;
+  z-index: 2;
+}
+
+.home-top__title {
+  font-family: Pretendard;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+}
+
+.home-top__detail-btn {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3692ff;
+  height: 56px;
+  border-radius: 40px;
+  font-family: Pretendard;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.home-top__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
 /* main, section */

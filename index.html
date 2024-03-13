@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
     <title>판다마켓</title>
   </head>
   <body>
@@ -13,12 +18,20 @@
       <div class="header__login-btn">로그인</div>
     </header>
     <div class="home-top">
-      <h1 class="home-top__title">
-        일상의 모든 물건을<br />
-        거래해 보세요
-      </h1>
-      <div class="home-top__detail-btn">구경하러 가기</div>
-      <img src="/assets/img/Img_home_top.png" />
+      <div class="home-top__container">
+        <div class="home-top__left">
+          <h1 class="home-top__title">
+            일상의 모든 물건을<br />
+            거래해 보세요
+          </h1>
+          <div class="home-top__detail-btn">구경하러 가기</div>
+        </div>
+        <img
+          class="home-top__img"
+          src="/assets/img/Img_home_top.png"
+          alt="home-top-img"
+        />
+      </div>
     </div>
     <main class="main">
       <div class="main__container">
