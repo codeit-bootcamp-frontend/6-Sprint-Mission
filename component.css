@@ -1,0 +1,46 @@
+/* button */
+
+.btn-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 48px;
+  padding: 12px 20px;
+  background-color: var(--color-blue);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 355px;
+  height: 56px;
+  background-color: var(--color-blue);
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-small:hover {
+  background-color: #1967d6;
+}
+
+.btn-large:hover {
+  background-color: #1967d6;
+}
+
+.btn--click {
+  background-color: #1251aa;
+}
+
+.btn--inactive {
+  background-color: #9ca3af;
+}
