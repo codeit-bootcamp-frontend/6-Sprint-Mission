@@ -160,6 +160,7 @@ ul, dl {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
+  word-break: keep-all;
 }
 
 .section-desc {
