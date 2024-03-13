@@ -1,0 +1,49 @@
+/* layout */
+.header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;;
+  padding:10px 10.42vw;
+  background:#fff;
+  
+  .img-logo {
+    display:flex;
+  }
+}
+
+.section-wrap {
+  position:relative;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.footer {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:32px 10.42vw 108px;
+  background:#111827;
+  color:#fff;
+  .footer-tit {
+    font-family: Pretendard, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  .footer-nav {
+    display:flex;
+    gap:59px;
+  }
+  .footer-sns {
+    display:flex;
+    gap:12px;
+  }
+  .link {
+    &:visited {
+      color:#fff;
+    }
+    &:link {
+      color:#fff;
+    }
+  }
+}
