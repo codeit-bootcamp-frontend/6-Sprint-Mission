@@ -80,6 +80,7 @@ button {
 }
 .s2 {
   background-color: var(--bannerbg);
+  padding-bottom: 160px;
 }
 .banner {
   display: flex;
@@ -159,12 +160,41 @@ h1 {
 }
 footer {
   background-color: var(--gray900);
+  height: 160px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.nav {
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub_nav {
+  display: flex;
+  flex-direction: row;
+}
+.p {
+  color: var(--gray400);
+  font-size: 16px;
 }
 .year {
+  font-size: 16px;
+  color: var(--gray400);
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
 }
 
+.icons {
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
 
 
 
