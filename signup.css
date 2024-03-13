@@ -21,7 +21,7 @@ body {
 
 /* form */
 
-.signin-form button {
+.signup-form button {
   width: 640px;
   height: 56px;
   padding: 16px 0;
@@ -54,7 +54,7 @@ input::placeholder {
 /* input */
 
 .basic-input {
-  width: 612px;
+  width: 640px;
   height: 56px;
   padding: 16px 20px;
   background-color: var(--color-cool-gray-100);
@@ -97,9 +97,9 @@ input::placeholder {
   background-image: url(/icon/visibility-off.svg);
 }
 
-/* signin -input */
+/* signup -input */
 
-.signin-form label {
+.signup-form label {
   display: block;
   margin-bottom: 16px;
   font-weight: 700;
@@ -107,11 +107,11 @@ input::placeholder {
   color: var(--color-cool-gray-800);
 }
 
-.signin-form input {
+.signup-form input {
   margin-bottom: 24px;
 }
 
-.signin-form i {
+.signup-form i {
   position: absolute;
   top: 10px;
   right: 28px;
