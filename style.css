@@ -1,0 +1,222 @@
+/* 색상 css 변수 */
+:root {
+  --main: #3692ff;
+  --error: #f74747;
+  --gray50: #f7f7f8;
+  --gray100: #E8EBED;
+  --gray200: #E5E7EB;
+  --gray400: #9EA4A8;
+  --gray500: #72787F;
+  --gray600: #454C53;
+  --gray700: #374151;
+  --gray800: #26282B;
+  --gray900: #1B1D1F;
+  --btn1: #3692FF;
+  --btn2: #1967D6;
+  --btn3: #1251AA;
+  --btn4: #9CA3AF;
+  --bannerbg: #CFE5FF;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular';
+  color: var(--gray700);
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  height: 51px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 1rem 200px;
+  background-color: #fff;
+  z-index: 1000;
+}
+/* 버튼 스타일링 */
+button {
+  background-color: var(--btn1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#btn_small {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 128px;
+  height: 48px;
+  font-size: 16px;
+}
+#btn_large {
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  width: 355px;
+  height: 56px;
+  font-size: 20px;
+}
+.s1 {
+  background-color: var(--bannerbg);
+  height: 540px;
+  padding-top: 93px;
+}
+.s2 {
+  background-color: var(--bannerbg);
+}
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1920px;
+  margin: auto;
+}
+.banner2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1920px;
+  margin: auto;
+}
+.home_img1 {
+  width: 996px;
+  height: 447px;
+  /* 가로세로 비율 일정하게 줄이려고 */
+  object-fit: scale-down;
+}
+.home_img2 {
+  width: 996px;
+  height: 447px;
+  /* 가로세로 비율 일정하게 줄이려고 */
+  object-fit: scale-down;
+}
+/* a태그 텍스트 스타일 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+.imgs {
+  width: 588px;
+  height: 444px;
+  object-fit: scale-down;
+}
+.para {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10rem 0;
+  gap: 5rem;
+  align-items: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.text_left {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.badge {
+  color: var(--main);
+  font-size: 18px;
+}
+.des {
+  color: var(--gray700);
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+footer {
+  background-color: var(--gray900);
+}
+.year {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) and (max-width: 1920px) {
+  header {
+    gap: 1rem;
+  }
+  .banner {
+    padding: 0 500px;
+  }
+  .banner2 {
+    padding: 0 500px;
+    flex-direction: column;
+  }
+  .home_img1 {
+    width: 700px;
+    position: relative;
+    bottom: -65px;
+  }
+  .para {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .banner {
+    flex-direction: column;
+    padding: 0 200px;
+  }
+  .home_img1 {
+    width: 400px;
+    position: relative;
+    top: -83px;
+  }
+  .para {
+    flex-direction: column;
+    gap: 0;
+  }
+  .imgs {
+    width: 300px;
+  }
+}
