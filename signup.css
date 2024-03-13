@@ -140,15 +140,15 @@ input::placeholder {
   margin-right: 16px;
 }
 
-/* to-signup-section */
+/* to-sign-section */
 
-.to-signup-section {
+.to-sign-section {
   display: flex;
   justify-content: center;
   margin-top: 24px;
 }
 
-.to-signup-section a {
+.to-sign-section a {
   margin-left: 8px;
   color: var(--color-blue);
   text-decoration: underline;
