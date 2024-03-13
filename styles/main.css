@@ -15,7 +15,7 @@
 
 .header__login-btn {
   cursor: pointer;
-  background-color: #3692ff;
+  background-color: var(--main-color);
   padding: 12px 20px;
   border-radius: 8px;
   color: white;
@@ -32,7 +32,7 @@
 
 .home-top,
 .home-bottom {
-  background-color: #cfe5ff;
+  background-color: var(--light-sky-blue);
 }
 
 .home-top__container,
@@ -64,7 +64,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3692ff;
+  background-color: var(--main-color);
   height: 56px;
   border-radius: 40px;
   font-weight: 600;
@@ -113,7 +113,7 @@
 }
 
 .section__badge {
-  color: #3692ff;
+  color: var(--main-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 25.2px;
@@ -149,14 +149,14 @@
 
 .footer {
   height: 160px;
-  background-color: #111827;
+  background-color: var(--footer-bg);
   display: flex;
   justify-content: space-between;
   padding: 32px 200px 0;
 }
 
 .footer__copyright {
-  color: #9ca3af;
+  color: var(--text-gray);
   cursor: pointer;
 }
 
@@ -167,7 +167,7 @@
 
 .footer__info a {
   cursor: pointer;
-  color: #e5e7eb;
+  color: var(--text-white);
 }
 
 .footer__sns {
