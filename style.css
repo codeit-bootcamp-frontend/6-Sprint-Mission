@@ -1,0 +1,141 @@
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+/* nav 구역 */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 70px;
+  padding: 0 200px;
+}
+
+.panda-logo::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 41px;
+  background-image: url(/logo/panda-logo.svg);
+}
+
+/* banner 구역 */
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 540px;
+  background-color: #cfe5ff;
+}
+
+.banner-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1920px;
+  height: 540px;
+}
+
+.top-banner-img,
+.bottom-banner-img {
+  position: absolute;
+  right: 10vw;
+  bottom: 0;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  width: 1200px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  z-index: 1;
+}
+
+/* section-container 영역 */
+
+.section-container {
+  width: 1200px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  height: 720px;
+}
+
+.section:nth-child(2) {
+  justify-content: end;
+  text-align: right;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.badge {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-blue);
+}
+
+.section-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: 0.2;
+  color: var(--color-gray-700);
+}
+
+.section-description {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: 0.8;
+  color: var(--color-gray-700);
+}
+
+/* footer 영역 */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 160px;
+  padding: 32px 200px;
+  background-color: var(--color-gray-900);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.09px;
+  color: #fff;
+}
+
+.footer-center {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 12px;
+}
