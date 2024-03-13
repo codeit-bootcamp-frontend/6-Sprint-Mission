@@ -9,6 +9,10 @@
   padding: 0 200px;
 }
 
+.header__logo {
+  cursor: pointer;
+}
+
 .header__login-btn {
   cursor: pointer;
   background-color: #3692ff;
@@ -66,6 +70,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .home-top__img,
@@ -92,7 +97,7 @@
 }
 
 .section:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 138px;
 }
 
 .section {
@@ -152,16 +157,27 @@
 
 .footer__copyright {
   color: #9ca3af;
+  cursor: pointer;
 }
 
 .footer__info {
-  color: #e5e7eb;
   display: flex;
   gap: 30px;
 }
 
-.footer_sns {
+.footer__info a {
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.footer__sns {
   color: white;
   display: flex;
   gap: 12px;
+}
+
+.footer__sns img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
