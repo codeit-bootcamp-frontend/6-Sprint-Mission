@@ -31,7 +31,8 @@
   background-color: #cfe5ff;
 }
 
-.home-top__container {
+.home-top__container,
+.home-bottom__container {
   height: 540px;
   display: flex;
   align-items: center;
@@ -67,7 +68,8 @@
   line-height: 24px;
 }
 
-.home-top__img {
+.home-top__img,
+.home-bottom__img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -132,6 +134,11 @@
 }
 
 /* home-bottom */
+.home-bottom__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+}
 
 /* footer */
 
