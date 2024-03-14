@@ -28,6 +28,16 @@ header {
   line-height: 1.1931rem;
 }
 
+.small-button:hover,
+.large-button:hover {
+  background-color: var(--blue-hover);
+}
+
+.small-button:active,
+.large-button:active {
+  background-color: var(--blue-active);
+}
+
 .header-logo {
   width: 9.5625rem;
 }
