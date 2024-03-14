@@ -4,6 +4,30 @@
     format('woff');
 }
 
+@media (max-width: 1023px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 479px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 body {
   font-family: 'Pretendard-Regular';
 }
@@ -24,7 +48,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 12.5rem;
+  padding-inline: 200px;
 }
 
 .small-button {
