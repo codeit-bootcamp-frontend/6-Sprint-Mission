@@ -195,6 +195,7 @@ main > section > .wrapper > p:last-of-type
 {
 	color: #374151;
 	font-size: 24px;
+	font-weight: 500;
 	line-height: 28.8px;
 }
 
