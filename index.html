@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>판다마켓</title>
+    <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <a href="/index.html"><img id="logo" src="/images/logo.png" /></a>
+        <button id="login" onclick="navigateTo('/signin')">로그인</button>
+      </div>
+    </div>
+    <div class="main-visual-wrap">
+      <div class="wrap-contents">
+        <div id="text1">일상의 모든 물건을 거래해 보세요</div>
+        <button id="go" onclick="navigateTo('/items')">구경하러 가기</button>
+      </div>
+      <img id="images3" src="./images/image1.png" />
+    </div>
+    <div class="main-container">
+      <div class="hot-products">
+        <img id="images1" src="./images/image3.png" />
+        <div>
+          <p>Hot item</p>
+          <p id="hot-texts">인기 상품을 확인해 보세요</p>
+          가장 HOT한 중고거래 물품을 판다 마켓에서 확인해 보세요
+        </div>
+      </div>
+      <div class="hot-products-2">
+        <img id="images1" src="./images/image4.png" />
+        <div>
+          <p>search</p>
+          <p id="hot-texts">구매를 원하는 상품을 검색하세요</p>
+          구매하고 싶은 물품은 검색해서 쉽게 찾아보세요
+        </div>
+      </div>
+      <div class="hot-products">
+        <img id="images1" src="./images/image5.png" />
+        <div>
+          <p>Register</p>
+          <p id="hot-texts">판매를 원하는 상품을 등록하세요</p>
+          어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요
+        </div>
+      </div>
+    </div>
+    <div class="footer-visual-wrap">
+      <div class="wrap-contents-2">
+        <div id="text1">
+          믿을 수 있는 <br />
+          판다마켓 중고거래
+        </div>
+      </div>
+      <img id="images3" src="./images/image2.png" />
+    </div>
+    <footer class="footer-bar">
+      <div class="footer-contents">
+        <div>©codeit - 2024</div>
+      </div>
+    </footer>
+  </body>
+</html>
