@@ -2,12 +2,9 @@
 
 *
 {
-	box-sizing: border-box;
-}
-
-body
-{
 	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 :root
@@ -131,7 +128,6 @@ header > .container > a#login
 
 .banner > .container > .wrapper > h1
 {
-	margin: 0px;
 	font-size: 40px;
 	font-weight: 700;
 }
@@ -180,28 +176,26 @@ main > section.right
 
 main > section > .wrapper
 {
+	gap: 12px;
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: column;
 }
 
-main > section > .wrapper > h1
-{
-	font-weight: 700;
-}
-
-main > section > .wrapper > h1.type
+main > section > .wrapper > p:first-of-type
 {
 	color: var(--blue);
 	font-size: 18px;
+	font-weight: 700;
 }
 
-main > section > .wrapper > h1.title
+main > section > .wrapper > h1
 {
 	font-size: 40px;
+	font-weight: 700;
 }
 
-main > section > .wrapper > p
+main > section > .wrapper > p:last-of-type
 {
 	color: #374151;
 	font-size: 24px;
