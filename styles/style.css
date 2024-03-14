@@ -19,6 +19,7 @@ button {
 }
 
 header {
+  overflow: hidden;
   position: relative;
   height: 540px;
   background-color: #cfe5ff;
@@ -46,6 +47,11 @@ section {
 main > section:nth-child(even) {
   justify-content: flex-end;
   text-align: right;
+}
+
+footer {
+  height: 160px;
+  background-color: #111827;
 }
 
 .section_text {
@@ -124,4 +130,50 @@ main > section:nth-child(even) {
   top: 93px;
   right: 223px;
   left: 701px;
+}
+
+#bottom_banner {
+  overflow: hidden;
+  position: relative;
+  height: 540px;
+  background-color: #cfe5ff;
+}
+
+#bottom_banner h1 {
+  margin: 214px 0 214px 360px;
+  font-family: "Pretendard-Regular";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #374151;
+}
+
+#bottomimg {
+  position: absolute;
+  left: 701px;
+}
+
+#footer_container {
+  padding: 12px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #9ca3af;
+}
+
+#policy_container {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-weight: 400;
+  color: #e5e7eb;
+}
+
+#sns_container {
+  display: flex;
+  gap: 12px;
 }
