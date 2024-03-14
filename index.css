@@ -1,16 +1,4 @@
-:root {
-	--gray900: #1B1D1F;
-	--gray800: #26282B;
-	--gray600: #454C53;
-	--gray500: #72787F;
-	--gray400: #9EA4A8;
-	--gray300: #E5E7EB;
-	--gray100: #E8EBED;
-	--gray50: #F7F7F8;
-
-	--blue: #3692FF;
-	--red: #F74747;
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 *
 {
@@ -20,109 +8,136 @@
 body
 {
 	margin: 0px;
-	font-family: Pretendard;
-	overflow-x: hidden;
 }
 
-a {
+:root
+{
+	--red: #F74747;
+	--blue: #3692FF;
+
+	--gray900: #1B1D1F;
+	--gray800: #26282B;
+	--gray600: #454C53;
+	--gray500: #72787F;
+	--gray400: #9EA4A8;
+	--gray300: #E5E7EB;
+	--gray100: #E8EBED;
+	--gray50: #F7F7F8;
+
+	font-family: Pretendard;
+}
+
+a[href]
+{
 	text-decoration: none;
 }
-
-a[href]:hover {
+a[href]:hover
+{
 	cursor: pointer;
 }
 
-.button:hover {
+.button:hover
+{
 	background-color: #1967D6 !important;
 }
-
-.button:focus {
+.button:focus
+{
 	background-color: #1251AA !important;
 }
-
-.button.inactive {
+.button.inactive
+{
 	background-color: #9CA3AF !important;
 }
 
-header .container,
-footer .container {
+header > .container,
+footer > .container
+{
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	height: 60px;
 	margin-left: 200px;
 	margin-right: 200px;
-	justify-content: space-between;
 }
 
-header .container a {
+header > .container > a
+{
 	gap: 10px;
 	display: flex;
 	flex-shrink: 0;
 	align-items: center;
 }
 
-header #logo {
+header > .container > a#logo
+{
 	color: var(--blue);
 	font-size: 25px;
 	font-weight: 700;
 }
 
-header #logo img {
+header > .container > a#logo > img
+{
 	width: 40px;
 	padding: 6px;
 	border-radius: 12px;
 	background-color: var(--blue);
 }
 
-header #login {
+header > .container > a#login
+{
 	color: #FFFFFF;
 	padding: 12px 20px;
 	border-radius: 8px;
 	background-color: var(--blue);
 }
 
-.banner {
+.banner
+{
 	overflow: hidden;
 	background-color: #CFE5FF;
 }
 
-.banner .container {
+.banner > .container
+{
+	width: 1200px;
+	height: 540px;
 	position: relative;
 	display: flex;
 	align-items: center;
-	width: 1200px;
-	height: 540px;
 	margin-left: auto;
 	margin-right: auto;
+	
 }
 
-.banner .container img {
-	position: absolute;
-	bottom: 0px;
+.banner > .container > img
+{
 	left: 340px;
+	bottom: 0px;
+	position: absolute;
 }
 
-.banner .container .wrapper {
+.banner > .container > .wrapper
+{
 	height: 200px;
 	display: flex;
 	flex-direction: column;
-}
-
-.banner.top .container .wrapper {
-	justify-content: space-between;
-}
-
-.banner.bottom .container .wrapper {
 	justify-content: center;
 }
 
-.banner .container .wrapper h1 {
+.banner:has(.button) > .container > .wrapper
+{
+	justify-content: space-between;
+}
+
+.banner > .container > .wrapper > h1
+{
 	margin: 0px;
 	font-size: 40px;
 	font-weight: 700;
 }
 
-.banner .container .wrapper a {
+.banner > .container > .wrapper > a
+{
 	color: #FFFFFF;
 	font-size: 20px;
 	font-weight: 600;
@@ -133,69 +148,87 @@ header #login {
 	background-color: var(--blue);
 }
 
-main {
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 140px;
-}
-
-main > section {
-	gap: 64px;
-	height: 720px;
+main
+{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	overflow-x: hidden;
 }
 
-main > section.left {
+main > section
+{
+	gap: 64px;
+	display: flex;
+	align-items: center;
+	width: 1200px;
+	height: 720px;
+}
+
+main > section.left
+{
 	text-align: left;
 	flex-direction: row;
 }
 
-main > section.right {
+main > section.right
+{
 	text-align: right;
 	flex-direction: row-reverse;
 }
 
-main > section .wrapper h1 {
+main > section > .wrapper
+{
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+}
+
+main > section > .wrapper h1
+{
 	font-weight: 700;
 }
 
-main > section .wrapper h1.type {
+main > section > .wrapper h1.type
+{
 	color: var(--blue);
 	font-size: 18px;
 }
 
-main > section .wrapper h1.title {
+main > section > .wrapper h1.title
+{
 	font-size: 40px;
 }
 
-main > section .wrapper p {
+main > section > .wrapper p
+{
 	color: #374151;
 	font-size: 24px;
 }
 
-footer {
+footer
+{
 	height: 160px;
+	color: #9CA3AF;
 	font-size: 16px;
 	font-weight: 400;
 	background-color: #111827;
 }
 
-footer .container {
+footer > .container
+{
 	gap: 10px;
-	padding-top: 30px;
 	flex-wrap: wrap;
+	padding-top: 30px;
 }
 
-footer .container a {
+footer > .container > * > a
+{
 	flex-grow: 0;
 }
 
-footer .container .left {
-	color: #9CA3AF;
-}
-
-footer .container .center a {
+footer > .container > .center > a 
+{
 	color: var(--gray300);
 }
