@@ -28,6 +28,10 @@ header {
   line-height: 1.1931rem;
 }
 
+.header-logo {
+  width: 9.5625rem;
+}
+
 /* 배너 */
 
 .banner {
