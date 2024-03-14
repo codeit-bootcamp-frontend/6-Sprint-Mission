@@ -185,23 +185,23 @@ main > section > .wrapper
 	flex-direction: column;
 }
 
-main > section > .wrapper h1
+main > section > .wrapper > h1
 {
 	font-weight: 700;
 }
 
-main > section > .wrapper h1.type
+main > section > .wrapper > h1.type
 {
 	color: var(--blue);
 	font-size: 18px;
 }
 
-main > section > .wrapper h1.title
+main > section > .wrapper > h1.title
 {
 	font-size: 40px;
 }
 
-main > section > .wrapper p
+main > section > .wrapper > p
 {
 	color: #374151;
 	font-size: 24px;
