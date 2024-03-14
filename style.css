@@ -85,7 +85,6 @@ button {
 }
 .s2 {
   background-color: var(--bannerbg);
-  padding-bottom: 160px;
 }
 .bannertext {
   z-index: 100;
@@ -169,7 +168,7 @@ h1 {
 footer {
   background-color: var(--gray900);
   height: 160px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -195,9 +194,6 @@ footer {
   padding: 0;
   display: flex;
   flex-direction: row;
-}
-
-.icons {
 }
 .icon {
   width: 20px;
@@ -229,6 +225,9 @@ footer {
   }
   .para {
     flex-direction: column;
+  }
+  .para.left {
+    flex-direction: column-reverse;
   }
 }
 
@@ -265,6 +264,10 @@ footer {
   }
   .banner2 {
     padding: 0 100px;
+  }
+  footer {
+    padding: 1rem;
+    height: 100%;
   }
   .nav {
     flex-direction: column;
