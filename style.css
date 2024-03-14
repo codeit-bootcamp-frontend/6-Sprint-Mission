@@ -1,3 +1,27 @@
+:root {
+  --gray-900: #1b1d1f;
+  --gray-700: #26282b;
+  --gray-600: #454c53;
+  --gray-500: #72787f;
+  --gray-400: #9ea4a8;
+  --gray-200: #e5e7eb;
+  --gray-100: #e8ebed;
+  --gray-50: #f7f7f8;
+
+  --blue-primary: #3692ff;
+  --blue-hover: #1967d6;
+  --blue-active: #1251aa;
+  --blue-disabled: #9ca3af;
+
+  --red-primary: #f74747;
+
+  --banner-bg: #cfe5ff;
+  --footer-bg: #111827;
+
+  --white: #ffffff;
+  --typography: #374151;
+}
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
@@ -52,7 +76,7 @@ header {
 }
 
 .small-button {
-  background-color: #3692ff;
+  background-color: var(--blue-primary);
   width: 8rem;
   height: 3rem;
   padding: 0.75rem 1.25rem;
@@ -60,7 +84,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--white);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.1931rem;
@@ -69,7 +93,7 @@ header {
 /* 배너 */
 
 .banner {
-  background-color: #cfe5ff;
+  background-color: var(--banner-bg);
 }
 
 .banner-container {
@@ -89,7 +113,7 @@ header {
 }
 
 .banner-title {
-  color: #374151;
+  color: var(--typography);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3.5rem;
@@ -97,8 +121,8 @@ header {
 }
 
 .large-button {
-  background-color: #3692ff;
-  color: white;
+  background-color: var(--blue-primary);
+  color: var(--white);
   width: 22.1875rem;
   height: 3.5rem;
   padding: 0.75rem 1.25rem;
@@ -150,14 +174,14 @@ section:nth-child(even) {
 }
 
 .section-badge {
-  color: #3692ff;
+  color: var(--blue-primary);
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.575rem;
 }
 
 .section-title {
-  color: #374151;
+  color: var(--typography);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3.5rem;
@@ -165,7 +189,7 @@ section:nth-child(even) {
 }
 
 .section-description {
-  color: #374151;
+  color: var(--typography);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -175,7 +199,7 @@ section:nth-child(even) {
 /* 푸터 */
 
 footer {
-  background-color: #111827;
+  background-color: var(--footer-bg);
   height: 10rem;
   display: flex;
   justify-content: space-around;
@@ -183,7 +207,7 @@ footer {
 }
 
 .footer-copyright {
-  color: #9ca3af;
+  color: var(--blue-disabled);
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1931rem;
@@ -194,7 +218,7 @@ footer {
   display: flex;
   gap: 1.875rem;
   > a {
-    color: #e5e7eb;
+    color: var(--gray-200);
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.1931rem;
