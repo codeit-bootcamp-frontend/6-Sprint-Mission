@@ -81,17 +81,15 @@ header > .container > a#logo
 	font-weight: 700;
 }
 
-header > .container > a#logo > img
-{
-	width: 40px;
-	padding: 6px;
-	border-radius: 12px;
-	background-color: var(--blue);
-}
-
 header > .container > a#login
 {
 	color: #FFFFFF;
+	font-weight: 600;
+	width: 128px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 12px 20px;
 	border-radius: 8px;
 	background-color: var(--blue);
@@ -124,7 +122,6 @@ header > .container > a#login
 
 .banner > .container > .wrapper
 {
-	width: 355px;
 	height: 200px;
 	display: flex;
 	flex-direction: column;
@@ -140,6 +137,7 @@ header > .container > a#login
 {
 	font-size: 40px;
 	font-weight: 700;
+	line-height: 56px;
 }
 
 .banner > .container > .wrapper > a
@@ -147,9 +145,11 @@ header > .container > a#login
 	color: #FFFFFF;
 	font-size: 20px;
 	font-weight: 600;
-	text-align: center;
-	padding-top: 18px;
-	padding-bottom: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	width: 355px;
 	border-radius: 40px;
 	background-color: var(--blue);
 }
@@ -203,12 +203,14 @@ main > section > .wrapper > h1
 {
 	font-size: 40px;
 	font-weight: 700;
+	line-height: 56px;
 }
 
 main > section > .wrapper > p:last-of-type
 {
 	color: #374151;
 	font-size: 24px;
+	line-height: 28.8px;
 }
 
 footer
