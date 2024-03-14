@@ -44,3 +44,100 @@
 .btn--inactive {
   background-color: #9ca3af;
 }
+
+/* input 공통 */
+input::placeholder {
+  color: var(--color-cool-gray-400);
+}
+
+.input {
+  position: relative;
+  font-size: 16px;
+}
+
+.input label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* todo 적용안됨 수정 예정 */
+.input i {
+  fill: currentColor;
+}
+
+/* input */
+
+.input-primary {
+  width: 612px;
+  height: 56px;
+  padding: 16px 20px;
+  background-color: var(--color-cool-gray-100);
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.input-search {
+  width: 996px;
+  height: 48px;
+  padding: 12px 40px;
+  background-color: var(--color-cool-gray-100);
+  border-radius: 25px;
+}
+
+.input-border {
+  width: 350px;
+  height: 58px;
+  padding: 16px 20px;
+  /* background-color: var(--color-cool-gray-100); */
+  border: 1px solid #79747e;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.icon-search::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/icon/search.svg);
+}
+
+.icon-toggle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/icon/toggle.svg);
+}
+
+/* input option */
+
+.input--border-red {
+  border: 1px solid var(--color-red);
+}
+
+.input--caption-red {
+  display: block;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--color-red);
+}
+
+.input--caption-olive {
+  display: block;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #0b3b2d;
+}

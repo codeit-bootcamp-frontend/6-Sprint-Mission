@@ -1,6 +1,6 @@
-:root {
+/* :root {
   font-size: 18px;
-}
+} */
 
 body {
   width: 100vw;
@@ -18,7 +18,7 @@ body {
   margin-top: 70px;
 }
 
-main {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +28,7 @@ main {
 
 /* nav 구역 */
 
-.navigation {
+.gnb {
   position: fixed;
   top: 0;
   display: flex;
@@ -41,7 +41,7 @@ main {
   z-index: 9999;
 }
 
-.navigation-inner {
+.gnb-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,12 +49,10 @@ main {
   max-width: 1920px;
 }
 
-.panda-logo::before {
-  content: "";
+.gnb-inner__logo {
   display: block;
   width: 150px;
   height: 41px;
-  background-image: url(/logo/panda-logo.svg);
 }
 
 /* banner 구역 */
@@ -74,14 +72,13 @@ main {
   height: 540px;
 }
 
-.top-banner-img,
-.bottom-banner-img {
+.banner-inner__img {
   position: absolute;
   right: 10vw;
   bottom: 0;
 }
 
-.banner-content {
+.banner-inner__description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,35 +92,35 @@ main {
 
 /* section-container 영역 */
 
-.section-container {
+.section {
   width: 1200px;
 }
 
-.section {
+.section-inner {
   display: flex;
   align-items: center;
   gap: 64px;
   height: 720px;
 }
 
-.section:nth-child(2) {
+.section-inner:nth-child(2) {
   justify-content: end;
   text-align: right;
 }
 
-.section-content {
+.section-inner__description {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.badge {
+.section-inner__description .badge {
   font-weight: 700;
   font-size: 18px;
   color: var(--color-blue);
 }
 
-.section-title {
+.section-inner__description .title {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 40px;
@@ -132,7 +129,7 @@ main {
   color: var(--color-gray-700);
 }
 
-.section-description {
+.section-inner__description .description {
   font-weight: 500;
   font-size: 24px;
   line-height: 28.8px;
@@ -161,12 +158,12 @@ main {
   padding: 32px 200px;
 }
 
-.footer-center {
+.footer-inner__center {
   display: flex;
   gap: 30px;
 }
 
-.footer-sns {
+.footer-inner__sns {
   display: flex;
   gap: 12px;
 }
