@@ -182,6 +182,7 @@ footer {
 .sub_nav {
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
 .p {
   color: var(--gray400);
@@ -274,5 +275,6 @@ footer {
   }
   .sub_nav {
     flex-direction: column;
+    gap: 0;
   }
 }
