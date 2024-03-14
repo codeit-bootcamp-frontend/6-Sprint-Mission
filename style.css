@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Pretendard-Regular', sans-serif;
+  font-family: 'Pretendard-Regular';
 }
 
 * {
@@ -20,26 +20,26 @@ body {
 /* 헤더 */
 
 header {
-  height: 70px;
+  height: 4.375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 200px;
+  padding-inline: 12.5rem;
 }
 
 .small-button {
   background-color: #3692ff;
-  width: 128px;
-  height: 48px;
-  padding: 12px 20px;
-  border-radius: 8px;
+  width: 8rem;
+  height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 19.09px;
+  font-size: 1rem;
+  line-height: 1.1931rem;
 }
 
 /* 배너 */
@@ -49,36 +49,36 @@ header {
 }
 
 .banner-container {
-  height: 540px;
+  height: 33.75rem;
   display: flex;
   justify-content: center;
   align-items: end;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
 }
 
 .banner-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   margin: auto 0;
 }
 
 .banner-title {
   color: #374151;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
-  width: 355px;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  width: 22.1875rem;
 }
 
 .large-button {
   background-color: #3692ff;
   color: white;
-  width: 355px;
-  height: 56px;
-  padding: 12px 20px;
-  border-radius: 50px;
+  width: 22.1875rem;
+  height: 3.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,7 @@ header {
 /* 메인 */
 
 main {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -100,16 +100,16 @@ main {
 section {
   display: flex;
   align-items: center;
-  gap: 80px;
-  padding-block: 140px;
+  gap: 5rem;
+  padding-block: 8.75rem;
 }
 
 section:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 80px;
-  padding-block: 140px;
+  gap: 5rem;
+  padding-block: 8.75rem;
   > div {
     order: -1;
   }
@@ -122,29 +122,29 @@ section:nth-child(even) {
 .seciton-content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .section-badge {
   color: #3692ff;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 25.2px;
+  font-size: 1.125rem;
+  line-height: 1.575rem;
 }
 
 .section-title {
   color: #374151;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   letter-spacing: 2%;
 }
 
 .section-description {
   color: #374151;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28.8px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   letter-spacing: 8%;
 }
 
@@ -152,33 +152,33 @@ section:nth-child(even) {
 
 footer {
   background-color: #111827;
-  height: 160px;
+  height: 10rem;
   display: flex;
   justify-content: space-around;
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .footer-copyright {
   color: #9ca3af;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19.09px;
+  font-size: 1rem;
+  line-height: 1.1931rem;
   text-align: center;
 }
 
 .footer-document {
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
   > a {
     color: #e5e7eb;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19.09px;
+    font-size: 1rem;
+    line-height: 1.1931rem;
     text-align: center;
   }
 }
 
 .footer-sns {
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
 }
