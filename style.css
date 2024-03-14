@@ -39,6 +39,13 @@ a {
   background-color: #3691ff;
   color: #fff;
 }
+/* 로그인 버튼에 포인터를 올려뒀을 경우*/
+a:hover.header-login-btn {
+  background-color: #1967d6;
+}
+a:active.header-login-btn {
+  background-color: #1251aa;
+}
 
 /* 컨테이너 */
 #container {
@@ -52,6 +59,7 @@ a {
   justify-content: center;
   height: 540px;
 }
+
 /* 상단 배너 내부 */
 .banner-top .banner-content {
   display: flex;
@@ -66,6 +74,7 @@ a {
   color: #374151;
 }
 
+/* 구경하러 가기 버튼 */
 .banner-top .banner-item-btn {
   background-color: #3691ff;
   color: #fff;
@@ -74,6 +83,14 @@ a {
   font-weight: 600;
   padding: 15px 100px;
   text-align: center;
+}
+
+/* 구경하러 가기 버튼에 포인터를 올려뒀을 경우*/
+.banner-top a:hover.banner-item-btn {
+  background-color: #1967d6;
+}
+.banner-top a:active.banner-item-btn {
+  background-color: #1251aa;
 }
 
 .banner-top .banner-img {
