@@ -241,6 +241,7 @@ footer .copyright {
   font-size: var(--font-16);
   font-weight: 400;
   line-height: 19px;
+  flex: 1;
 }
 
 footer .pageLink {
@@ -259,7 +260,9 @@ footer .pageLink a:not(:last-of-type) {
 
 footer .snsLink {
   display: flex;
+  justify-content: flex-end;
   gap: 12px;
+  flex: 1;
 }
 
 footer .snsLink > a {
