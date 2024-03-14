@@ -82,7 +82,7 @@ header {
 /* 메인 */
 
 main {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -104,6 +104,10 @@ section:nth-child(even) {
   > div {
     order: -1;
   }
+}
+
+.section-image {
+  max-width: 45%;
 }
 
 .seciton-content {
