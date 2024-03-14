@@ -1,38 +1,5 @@
 <!DOCTYPE html>
 
-<!-- 
-
-
-                        Sprint-Mission 1 심화 요구사항
-?    사용자의 브라우저가 크고 작아짐에 따라 페이지의 
-?    요소간 간격, 요소의 크기, font-size 등 모든 크기와 관련된 값이 
-?    크고 작아지도록 설정해 보세요.(설정값은 자유입니다)
-
-
-                        Sprint-Mission 1 기본 요구사항
-/    PC사이즈만 고려해 주어진 디자인을 구현합니다.
-/    랜딩 페이지의 url path는 루트(‘/’) 입니다.
-O    HTML, CSS 파일을 Netlify로 배포해 주세요. (참고: https://www.codeit.kr/learn/5309)
-O    “로그인”버튼 클릭 시 로그인 페이지(‘/signin’)로 이동합니다
-O    “구경하러가기”버튼 클릭 시(’/items’)로 이동합니다.
-O    title은 “판다마켓”으로 설정해 주세요.
-O    화면의 너비가 1920px 이상이면 하늘색 배경색은 너비를 꽉 채우도록 채워지고, 
-X    내부 요소들의 위치는 고정되고, 여백만 커지도록 해주세요.
-O    화면의 너비가 1920px 보다 작아질 때, “판다마켓” 로고의 왼쪽 여백 200px“로그인" 버튼의 오른쪽 여백 200px이 유지되고, 
-O    화면의 너비가 작아질수록 두 요소간 거리가 가까워지도록 해주세요.
-O    클릭으로 기능이 동작해야 하는 경우, 사용자가 클릭할 수 있는 요소임을 알 수 있도록 cursor: pointer를 설정해 주세요.
-O    “판다마켓” 클릭 시 루트 페이지(‘/’)로 이동시켜주세요.
-
-헤더 상단고정인줄알고 fixed로 했다가 바꿈;;
-헤더부분 flex space-between으로 만들어서 왼쪽여백 오른쪽여백이 생각이안난다 잠을 못자니까 멍청해졌다 ㅜ
-헤더뿐이 아니고 모든부분의 위치를 flex space-between으로해서 요소들 위치도 고정이 안되는데 이건 나중에 차차 수정해야겠다.
-심화는 아마 px대신 em,rem,% 같은 상대적인 단위를 써야할것같다. js없이는 아직은 잘 모르겠다. js써도되나?
-아마 그리드로도 될지도? 근데그리드가 젤어려움 ㅜ
-이게 언제까지더라 금요일 이었던거 같은데 
-
-
--->
-
 <html lang="ko">
 
 <head>
@@ -49,7 +16,7 @@ O    “판다마켓” 클릭 시 루트 페이지(‘/’)로 이동시켜주�
         </a>
     </div>
     <div>
-        <a class="login btn" href="/signin">로그인</a>
+        <a class="login btn" href="login.html">로그인</a>
     </div>
 </header>
 
@@ -58,9 +25,8 @@ O    “판다마켓” 클릭 시 루트 페이지(‘/’)로 이동시켜주�
         <div>
             <p>일상의 모든 물건을 <br>
                 거래해보세요</p>
-            <a href="/items" class="btn_items btn">구경하러가기</a>
+            <a href="items.html" class="btn_items btn">구경하러가기</a>
         </div>
-        <!-- <img src="img/img_home_top.svg" class="img-top"> -->
     </section>
 
     <section class="sec-2">
@@ -94,7 +60,6 @@ O    “판다마켓” 클릭 시 루트 페이지(‘/’)로 이동시켜주�
         <div>
             <p>믿을 수 있는<br>판다마켓 중고거래</p>
         </div>
-        <!-- <img src="img/img_home_bottom.svg" class="img-bottom"> -->
     </section>
 
 </main>
