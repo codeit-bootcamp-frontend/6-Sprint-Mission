@@ -138,3 +138,38 @@ section:nth-child(even) {
   line-height: 28.8px;
   letter-spacing: 8%;
 }
+
+/* 푸터 */
+
+footer {
+  background-color: #111827;
+  height: 160px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+.footer-copyright {
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.09px;
+  text-align: center;
+}
+
+.footer-document {
+  display: flex;
+  gap: 30px;
+  > a {
+    color: #e5e7eb;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.09px;
+    text-align: center;
+  }
+}
+
+.footer-sns {
+  display: flex;
+  gap: 12px;
+}
