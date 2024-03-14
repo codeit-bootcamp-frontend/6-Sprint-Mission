@@ -14,8 +14,8 @@ body {
   margin: 0;
 }
 
-button {
-  border: none;
+a {
+  text-decoration: none;
 }
 
 header {
@@ -75,7 +75,7 @@ footer {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
-  color: #374171;
+  color: #374151;
 }
 
 .section_detail {
@@ -87,11 +87,15 @@ footer {
 }
 
 #loginbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 128px;
   height: 48px;
   background-color: #3692ff;
   border-radius: 8px;
 
+  font-family: "Pretendard-Regular";
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
@@ -99,6 +103,7 @@ footer {
 
 #header_container {
   position: absolute;
+  width: 355px;
   top: 170px;
   bottom: 170px;
   left: 200px;
@@ -109,13 +114,18 @@ footer {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
-#header_container button {
+#header_container a {
+  display: flex;
   width: 100%;
   height: 56px;
   background-color: #3692ff;
   border-radius: 40px;
+  justify-content: center;
+  align-items: center;
 
   font-family: "Pretendard-Regular";
   font-size: 24px;
@@ -170,6 +180,9 @@ footer {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-weight: 400;
+}
+
+#policy_container a:link {
   color: #e5e7eb;
 }
 
