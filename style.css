@@ -1,0 +1,323 @@
+/* --------------------     palette     -------------------- */
+:root {
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray700: #374151;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+  --blue: #3692ff;
+}
+/* --------------------     //palette     -------------------- */
+
+/* --------------------     font     -------------------- */
+@font-face {
+  font-family: "ROKAF Sans";
+  src: url("/font/ROKAF\ Sans.ttf") format("truetype");
+}
+/* --------------------     //font     -------------------- */
+
+/* --------------------     헤더     -------------------- */
+.header {
+  height: 70px;
+  border-bottom: 1px solid #dfdfdf;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 200px;
+}
+
+.logo {
+  display: flex;
+  width: 153px;
+  height: 51px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_icon {
+  width: 40px;
+  height: 40.14px;
+  border-radius: 11.18px;
+}
+
+.logo_title {
+  width: 103px;
+  height: 35px;
+  font-family: ROKAF Sans;
+  font-size: 25.63px;
+  font-weight: 700;
+  line-height: 34.6px;
+  color: var(--blue);
+}
+
+.login_btn {
+  /* 버튼 배경 */
+  width: 128px;
+  height: 48px;
+  padding: 14.5px 43px;
+  border-radius: 8px;
+  background: var(--blue);
+  /* 로고 글자 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.09px;
+  color: #ffffff;
+}
+/* --------------------     //헤더     -------------------- */
+
+/* --------------------     상단 배너     -------------------- */
+.hero_section {
+  background-color: #cfe5ff;
+  overflow: hidden;
+}
+
+.hero_container {
+  display: flex;
+  width: 1200px;
+  height: 540px;
+  margin: 0 auto;
+}
+
+.hero_info {
+  margin-top: 170px;
+}
+
+.hero_img {
+  margin-top: 93px;
+}
+
+.hero_info_text {
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--gray700);
+}
+
+.hero_btn {
+  width: 355px;
+  border-radius: 40px;
+  background-color: var(--blue);
+  margin-top: 32px;
+  color: #ffffff;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  padding: 16px 122px;
+  display: inline-block;
+}
+/* --------------------     //상단 배너     -------------------- */
+
+/* --------------------     본문     -------------------- */
+
+/* 본문 공통 */
+.main_guideline {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* //본문 공통 */
+
+/* Hot item */
+.hot_item_contnet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 955px;
+  margin: 138px 0;
+}
+
+.hot_item_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 303px;
+  height: 231px;
+}
+
+.item_call_to_action {
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--gray700);
+}
+
+.item_title {
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  color: var(--blue);
+}
+
+.item_description {
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: var(--gray700);
+}
+/* //Hot item */
+
+/* Search item */
+.item_container_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search_contnet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 955px;
+  margin: 138px 0;
+}
+
+.search_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 231px;
+}
+
+.search_title {
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  text-align: right;
+  color: var(--blue);
+}
+
+.search_call_to_action {
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: right;
+  color: var(--gray700);
+}
+
+.search_description {
+  width: 303px;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  text-align: right;
+  color: var(--gray700);
+}
+/* //Search item */
+
+/* Register item */
+.item_description.register {
+  width: 370px;
+}
+/* //Register item */
+
+/* --------------------     //본문     -------------------- */
+
+/* --------------------     하단 배너     -------------------- */
+
+.bottom_banner_container {
+  width: 100%;
+  margin-top: 276px;
+  background-color: #cfe5ff;
+  overflow: hidden;
+}
+
+.bottom_banner {
+  display: flex;
+  width: 1520px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.bottom_banner_text {
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--gray700);
+}
+
+/* --------------------     //하단 배너     -------------------- */
+
+/* --------------------     footer     -------------------- */
+.footer_container {
+  display: flex;
+  justify-content: center;
+  height: 160px;
+  padding: 32px 200px 32px 200px;
+  background-color: var(--gray900);
+}
+
+.footer_menu_container {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_menu_left {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
+  text-align: center;
+  color: var(--gray400);
+}
+
+.footer_menu_center {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
+  text-align: center;
+  color: var(--gray200);
+  display: flex;
+  justify-content: space-between;
+  width: 159px;
+  height: 19px;
+}
+.footer_menu_center a {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: var(--gray200);
+}
+
+.footer_menu_right {
+  display: flex;
+  justify-content: space-between;
+  width: 116px;
+}
+/* --------------------     //footer     -------------------- */
+
+/* --------------------     미디어 쿼리     -------------------- */
+
+/* 뷰포트 가로 1920px 이상일 때 */
+@media (min-width: 1920px) {
+  /* 넓이 고정, 중앙 배치 */
+  .header {
+    width: 1520px;
+    margin: 0 auto;
+  }
+  /* 넓이 고정 */
+  .footer_menu_container {
+    width: 1520px;
+  }
+}
+/* --------------------     //미디어 쿼리     -------------------- */
