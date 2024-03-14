@@ -3,30 +3,31 @@
   --main: #3692ff;
   --error: #f74747;
   --gray50: #f7f7f8;
-  --gray100: #E8EBED;
-  --gray200: #E5E7EB;
-  --gray400: #9EA4A8;
-  --gray500: #72787F;
-  --gray600: #454C53;
+  --gray100: #e8ebed;
+  --gray200: #e5e7eb;
+  --gray400: #9ea4a8;
+  --gray500: #72787f;
+  --gray600: #454c53;
   --gray700: #374151;
-  --gray800: #26282B;
-  --gray900: #1B1D1F;
-  --btn1: #3692FF;
-  --btn2: #1967D6;
-  --btn3: #1251AA;
-  --btn4: #9CA3AF;
-  --bannerbg: #CFE5FF;
+  --gray800: #26282b;
+  --gray900: #1b1d1f;
+  --btn1: #3692ff;
+  --btn2: #1967d6;
+  --btn3: #1251aa;
+  --btn4: #9ca3af;
+  --bannerbg: #cfe5ff;
 }
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: var(--gray700);
 }
 html {
@@ -73,6 +74,10 @@ button {
   height: 56px;
   font-size: 20px;
 }
+#btn_small:hover,
+#btn_large:hover {
+  background-color: var(--btn2);
+}
 .s1 {
   background-color: var(--bannerbg);
   height: 540px;
@@ -81,6 +86,9 @@ button {
 .s2 {
   background-color: var(--bannerbg);
   padding-bottom: 160px;
+}
+.bannertext {
+  z-index: 100;
 }
 .banner {
   display: flex;
@@ -196,18 +204,7 @@ footer {
   height: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width:768px) and (max-width: 1920px) {
+@media (min-width: 100px) and (max-width: 1200px) {
   header {
     gap: 1rem;
   }
@@ -215,13 +212,20 @@ footer {
     padding: 0 500px;
   }
   .banner2 {
-    padding: 0 500px;
+    padding: 0 300px;
+    display: flex;
     flex-direction: column;
   }
   .home_img1 {
     width: 700px;
     position: relative;
     bottom: -65px;
+  }
+
+  .home_img2 {
+    width: 700px;
+    position: relative;
+    bottom: -33px;
   }
   .para {
     flex-direction: column;
@@ -242,11 +246,30 @@ footer {
     position: relative;
     top: -83px;
   }
+  .home_img2 {
+    width: 500px;
+    position: relative;
+    bottom: -6rem;
+  }
+  .banner2 h1 {
+    font-size: 30px;
+    position: relative;
+    top: 8rem;
+  }
   .para {
     flex-direction: column;
     gap: 0;
   }
   .imgs {
     width: 300px;
+  }
+  .banner2 {
+    padding: 0 100px;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .sub_nav {
+    flex-direction: column;
   }
 }
