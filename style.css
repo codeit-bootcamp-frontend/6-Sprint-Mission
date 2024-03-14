@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +15,10 @@
 }
 
 body {
-  font-family: Pretendard;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 button {
@@ -71,23 +76,27 @@ h3 {
 }
 
 /* Main - First Section */
-.common_style {
+.banner {
   background-color: var(--background-color);
-  height: 540px;
+  overflow: hidden;
 }
 
-.first_section {
+.banner_container {
   position: relative;
-  padding: 170px 0 0 360px;
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 540px;
+  margin: 0 auto;
 }
 
-.featured_img {
+.banner_img {
   position: absolute;
-  top: 93px;
-  left: 701px;
+  left: 340px;
+  bottom: 0;
 }
 
-.featured_title {
+.banner_title {
   margin-bottom: 32px;
 }
 
@@ -106,13 +115,16 @@ h3 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  padding: 137px 0;
+  gap: 274px;
 }
 
 .info_content {
   display: flex;
   align-items: center;
   gap: 64px;
-  padding: 138px 360px;
+  width: 1200px;
 }
 
 .info_content img {
@@ -182,7 +194,7 @@ footer {
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
-  color: #E5E7EB;
+  color: #e5e7eb;
 }
 
 .footer_links a:first-child {
@@ -200,13 +212,8 @@ footer {
   gap: 12px;
 }
 
-
 @media screen and (max-width: 375px) {
-
 }
-
 
 @media screen and (min-width: 375px) and (max-width: 744px) {
-
 }
-
