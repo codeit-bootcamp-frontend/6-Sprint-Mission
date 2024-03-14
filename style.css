@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+/* 공통 */
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /* 헤더 */
 
 header {
@@ -10,11 +16,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 200px;
-}
-
-.link {
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .small-button {
@@ -30,4 +31,50 @@ header {
   font-weight: 600;
   font-size: 16px;
   line-height: 19.09px;
+}
+
+/* 배너 */
+
+.banner {
+  background-color: #cfe5ff;
+}
+
+.banner-container {
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: auto 0;
+}
+
+.banner-title {
+  color: #374151;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  width: 355px;
+}
+
+.large-button {
+  background-color: #3692ff;
+  color: white;
+  width: 355px;
+  height: 56px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  overflow: hidden;
 }
