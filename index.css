@@ -171,25 +171,19 @@ main > section.right
 	text-align: right;
 	flex-direction: row-reverse;
 }
-main > section > .wrapper
-{
-	gap: 12px;
-	display: flex;
-	flex-shrink: 0;
-	flex-direction: column;
-}
-
 main > section > .wrapper > p:first-of-type
 {
 	color: var(--blue);
 	font-size: 18px;
 	font-weight: 700;
+	margin-bottom: 12px;
 }
 main > section > .wrapper > h1
 {
 	font-size: 40px;
 	font-weight: 700;
 	line-height: 56px;
+	margin-bottom: 24px;
 }
 main > section > .wrapper > p:last-of-type
 {
