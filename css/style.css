@@ -12,6 +12,14 @@
   --red: #f74747;
   --blue: #3692ff;
   --white: #fff;
+
+  /* font size */
+  --font-16: 1rem;
+  --font-18: 1.125rem;
+  --font-20: 1.25rem;
+  --font-24: 1.5rem;
+  --font-26: 1.625rem;
+  --font-40: 2.5rem;
 }
 
 @font-face {
@@ -73,7 +81,7 @@ a {
 .button {
   border-radius: 8px;
   background-color: var(--blue);
-  font-size: 1rem;
+  font-size: var(--font-16);
   font-weight: 600;
   line-height: 19px;
   color: var(--white);
@@ -103,7 +111,7 @@ header .logoImg {
 
 header .logoText {
   color: var(--blue);
-  font-size: 1.625rem;
+  font-size: var(--font-26);
   font-weight: 700;
   line-height: 35px;
   letter-spacing: 0em;
@@ -124,12 +132,14 @@ header .button {
 .banner .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   padding: 170px 0;
+  max-width: calc(1920px - 442px);
 }
 
 .banner .mainText p.description {
-  font-size: 2.5rem;
+  font-size: var(--font-40);
   font-weight: 700;
   line-height: 56px;
   color: var(--cool-gray);
@@ -140,18 +150,19 @@ header .button {
 .banner .bannerImg {
   position: absolute;
   bottom: 0;
-  right: -117px;
+  right: 0;
 }
 
 .banner .mainText {
   z-index: 1;
+  width: 1200px;
 }
 
 /* 구경하러 가기 배너 */
 .itemBanner .mainText a.button {
   width: 355px;
   margin: 32px 0 0;
-  font-size: 1.25rem;
+  font-size: var(--font-20);
   font-weight: 600;
   line-height: 24px;
   padding: 16px 0;
@@ -180,14 +191,14 @@ main.introduceSection > article .imgArea {
 
 main.introduceSection .textArea .keyword {
   color: var(--blue);
-  font-size: 1.125rem;
+  font-size: var(--font-18);
   font-weight: 700;
   line-height: 25.2px;
 }
 
 main.introduceSection .textArea .title {
   color: var(--cool-gray);
-  font-size: 2.5rem;
+  font-size: var(--font-40);
   font-weight: 700;
   line-height: 56px;
   letter-spacing: 0.02em;
@@ -196,7 +207,7 @@ main.introduceSection .textArea .title {
 
 main.introduceSection .textArea .detail {
   color: var(--cool-gray);
-  font-size: 1.5rem;
+  font-size: var(--font-24);
   font-weight: 500;
   line-height: 29px;
   letter-spacing: 0.08em;
@@ -227,13 +238,13 @@ footer .inner {
 
 footer .copyright {
   color: #9ca3af;
-  font-size: 1rem;
+  font-size: var(--font-16);
   font-weight: 400;
   line-height: 19px;
 }
 
 footer .pageLink {
-  font-size: 1rem;
+  font-size: var(--font-16);
   font-weight: 400;
   line-height: 19px;
 }
