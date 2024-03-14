@@ -52,9 +52,18 @@ footer > .container
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 60px;
 	margin-left: 200px;
 	margin-right: 200px;
+}
+
+header > .container
+{
+	height: 70px;
+}
+
+footer > .container
+{
+	height: 160px;
 }
 
 header > .container > a
@@ -115,6 +124,7 @@ header > .container > a#login
 
 .banner > .container > .wrapper
 {
+	width: 355px;
 	height: 200px;
 	display: flex;
 	flex-direction: column;
@@ -203,7 +213,6 @@ main > section > .wrapper > p:last-of-type
 
 footer
 {
-	height: 160px;
 	color: #9CA3AF;
 	font-size: 16px;
 	font-weight: 400;
@@ -212,17 +221,30 @@ footer
 
 footer > .container
 {
-	gap: 10px;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	padding-top: 30px;
 }
 
-footer > .container > * > a
+footer > .container > *
 {
-	flex-grow: 0;
+	display: flex;
 }
+
+footer > .container > .center
+{
+	gap: 30px;
+	color: var(--gray300);
+}
+
 
 footer > .container > .center > a 
 {
 	color: var(--gray300);
+}
+
+
+footer > .container > .right
+{
+	gap: 12px;
 }
