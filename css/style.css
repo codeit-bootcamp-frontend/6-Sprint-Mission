@@ -1,0 +1,63 @@
+/* Style */
+html {
+  font-size: 10px;
+}
+body {
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+body.hidden {
+  position: fixed;
+  overflow-y: hidden;
+  touch-action: none;
+}
+main {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #666;
+  display: block;
+}
+a,
+button {
+  color: #666;
+}
+p,
+li {
+  word-break: keep-all;
+}
+
+.clear {
+  clear: both;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+caption > div,
+legend,
+.hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.skip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100%;
+  transition: all 0.5s;
+  line-height: 5rem;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  z-index: 100;
+}
+.skip:focus {
+  top: 0;
+}
