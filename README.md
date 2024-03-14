@@ -1,3 +1,5 @@
+https://part1-kimbomi-sprint6.netlify.app/
+
 체크리스트 [기본] <br>
 [v]랜딩 페이지의 url path는 루트(‘/’)로 설정합니다.<br>
 [v]title은 “판다마켓”로 설정합니다.<br>
