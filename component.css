@@ -141,3 +141,136 @@ input::placeholder {
   font-size: 12px;
   color: #0b3b2d;
 }
+
+/* pagination */
+.pagination ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.pagination li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #f1f1f1;
+  border-radius: 100%;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 0;
+  color: var(--color-cool-gray-500);
+}
+
+.pagination .current {
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+/* popup */
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 540px;
+  height: 250px;
+  padding: 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.popup-sm {
+  position: relative;
+  width: 327px;
+  height: 220px;
+  padding: 81px 0 28px 0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  background-color: rgb(90, 122, 122);
+}
+
+.popup-btn {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  width: 120px;
+  height: 48px;
+  padding: 14px 46px;
+  border-radius: 8px;
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+.popup-btn-sm {
+  position: absolute;
+  bottom: 28px;
+  right: 94px;
+  width: 138px;
+  height: 42px;
+  padding: 12px 56px;
+  border-radius: 8px;
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+/* modal */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #a05050;
+}
+
+.icon-check::before {
+  content: "";
+  display: block;
+  margin-bottom: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/icon/check.svg);
+}
+
+.modal p {
+  margin-bottom: 32px;
+}
+
+.modal-btn__yes {
+  width: 80px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: var(--color-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+.modal-btn__no {
+  width: 80px;
+  height: 38px;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--color-blue);
+  background-color: transparent;
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
