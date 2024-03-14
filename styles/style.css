@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+header {
+  position: relative;
+  height: 540px;
+  background-color: #cfe5ff;
+}
+
+nav {
+  display: flex;
+  height: 70px;
+  margin: 10px 200px 9px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  height: 720px;
+}
+
+main > section:nth-child(even) {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.section_text {
+  margin: 0 64px;
+}
+
+.section_img {
+  width: 588px;
+  height: 444px;
+}
+
+.section_tag {
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-weight: 700;
+  color: #3692ff;
+}
+
+.section_title {
+  font-family: "Pretendard-Regular";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #374171;
+}
+
+.section_detail {
+  font-family: "Pretendard-Regular";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  color: #374151;
+}
+
+#loginbtn {
+  width: 128px;
+  height: 48px;
+  background-color: #3692ff;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#header_container {
+  position: absolute;
+  top: 170px;
+  bottom: 170px;
+  left: 200px;
+}
+
+#header_container h1 {
+  font-family: "Pretendard-Regular";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+#header_container button {
+  width: 100%;
+  height: 56px;
+  background-color: #3692ff;
+  border-radius: 40px;
+
+  font-family: "Pretendard-Regular";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#headerimg {
+  position: absolute;
+  top: 93px;
+  right: 223px;
+  left: 701px;
+}
