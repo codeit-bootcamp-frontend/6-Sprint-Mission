@@ -1,0 +1,83 @@
+#header, #footer, main, .container {
+  width:100%; 
+}
+#header .container, #footer .container {
+  max-width: 1520px;
+  width: 90%;
+  padding: 15px 0;
+}
+#header {
+  background: #fff;
+  position: sticky;
+  top:0;
+  z-index: 5;
+}
+#logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer {
+  background: var(--gray900);
+}
+#footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 160px;
+  padding: 2rem 0;
+}
+#footer .copy {
+  color: var(--sub-gray-color);
+}
+#footer .foot-menu {
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+}
+#footer .foot-menu a {
+  color: var(--gray200);
+}
+#footer .foot-menu a:hover {
+  color: var(--gray400);
+}
+#footer .sns-links {
+  justify-content: flex-end;
+  display: flex;
+  gap: 10px;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 버튼 공통 */
+.btn {
+  background-color: var(--main-blue-color);
+  border-radius: 999px;
+  color: #fff;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;;
+  align-items: center;
+}
+.btn:hover {
+  background-color: var(--sub-light-blue-color);
+}
+.btn-large {
+  width: 355px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.login-btn {
+  border-radius: 8px;
+}
