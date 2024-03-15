@@ -24,7 +24,12 @@ body {
 /* CSS for header */
 
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
+  background-color: var(--white);
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
   padding: 10px 200px 9px;
