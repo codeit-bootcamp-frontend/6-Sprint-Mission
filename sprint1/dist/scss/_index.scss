@@ -48,10 +48,15 @@
   }
   .section-wrap {
     display:flex;
-    gap:64px;
+    gap:5.3vw;
   }
   .section-img {
     flex:0 0;
+  }
+  .section-img img {
+    @media screen and (max-width : 1200px){
+      max-width:49vw;
+    }
   }
   .section-content {
     display:flex;
