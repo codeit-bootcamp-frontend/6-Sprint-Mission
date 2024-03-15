@@ -1,0 +1,78 @@
+:root {
+  /* color variables */
+  
+  --background-blue: #CFE5FF;
+  --point-blue: #3692FF;
+  --point-red: #F74747;
+
+  --button-hover: #1967D6;
+  --button-click: #1251AA;
+
+  --white: #FFFFFF;
+
+  --cool-gray900: #111827;
+  --cool-gray700: #374151;
+  --cool-gray400: #9CA3AF;
+  --cool-gray200: #E5E7EB;
+
+  --gray900: #1B1D1F;
+  --gray800: #26282B;
+  --gray600: #454C53;
+  --gray500: #72787F;
+  --gray400: #9EA4A8;
+  --gray200: #E5E7EB;
+  --gray100: #E8EBED;
+  --gray50: #F7F7F8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  word-break: keep-all;
+  font-family: Pretendard, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: var(--point-blue);
+  color: var(--white);
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.button:active {
+  background-color: var(--button-click);
+}
+
+.button:disabled {
+  background-color: var(--cool-gray400);
+}
+
+a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-small {
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  gap: 10px;
+}
+
+.button-large {
+  width: 355px;
+  height: 56px;
+  border-radius: 40px;
+}
