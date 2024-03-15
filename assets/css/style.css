@@ -1,0 +1,118 @@
+/* 고정헤더영역 */
+.header-area {
+  display: flex;
+  height: 7rem;
+  border-bottom: 1px solid #dfdfdf;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-area .logo a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-area .btn-login {
+  display: flex;
+  min-width: 12.8rem;
+  height: 4.8rem;
+  padding: 1.2rem 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.9rem;
+  text-align: center;
+}
+
+/* 상단배너영역 */
+.main-area .main-banner-top {
+  display: flex;
+  height: 54rem;
+  background-color: #cfe5ff;
+  background-image: url("/assets/images/Img_home_top.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  align-items: center;
+}
+.main-area .main-banner-top .btn-gosite {
+  display: flex;
+  margin-top: 3.2rem;
+  width: 35.5rem;
+  height: 5.6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50em;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+/* 특징영역 */
+.main-area .main-feature {
+  margin-bottom: 13.8rem;
+}
+.main-area .feature-item {
+  display: flex;
+  height: 72rem;
+  gap: 6.4rem;
+  align-items: center;
+}
+.main-area .feature-item .sub-title {
+  margin-bottom: 1.2rem;
+}
+.main-area .feature-item .title {
+  margin-bottom: 2.4rem;
+}
+
+.main-area .feature-list li:nth-child(2n) {
+  justify-content: flex-end;
+}
+.main-area .feature-list li:nth-child(2n) .image-wrap {
+  order: 2;
+}
+.main-area .feature-list li:nth-child(2n) .content-wrap {
+  order: 1;
+  text-align: right;
+}
+
+/* 하단배너영역 */
+.main-area .main-banner-btm {
+  display: flex;
+  height: 54rem;
+  align-items: center;
+  background-color: #cfe5ff;
+  background-image: url("/assets/images/Img_home_bottom.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+/* 고정푸터영역 */
+.footer-area {
+  display: flex;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  height: 16rem;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--cool-gray-900);
+  font-size: 1.6rem;
+}
+.footer-area .copy {
+  color: var(--cool-gray-400);
+}
+.footer-area .btn-links {
+  display: flex;
+  gap: 3rem;
+}
+.footer-area .btn-links a {
+  color: var(--cool-gray-200);
+}
+.footer-area .btn-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+.footer-area .btn-socials a {
+  color: var(--white);
+}
