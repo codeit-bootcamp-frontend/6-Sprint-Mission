@@ -146,7 +146,7 @@ main {
     height: 540px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     background-image: url('img/img_home_bottom.svg');
     background-repeat: no-repeat;
     background-position: 80% bottom;
@@ -154,11 +154,9 @@ main {
 }
 
 .sec-3>div {
-    flex-basis: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
     font-size: 40px;
     font-weight: 700;
     color: var(--cool_gray700);
