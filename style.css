@@ -1,228 +1,261 @@
-/* 색상 팔레트 */
 :root {
-  /* BLUE */
-  --blue: #3692ff;
-  --blue-100: #1967d6;
-  --blue-200: #1251aa;
-  --blue-50: #9ca3af;
+    /* 색상 팔레트 ---------------------------------------- */
+    /* BLUE */
+    --blue: #3692ff;
+    --blue-100: #1967d6;
+    --blue-200: #1251aa;
+    --blue-50: #9ca3af;
 
-  /* error/RED */
-  --red: #f74747;
+    /* error/RED */
+    --red: #f74747;
 
-  /* GRAY */
-  --gray-900: #1b1d1f;
-  --gray-800: #26282b;
-  --gray-600: #454c53;
-  --gray-500: #72787f;
-  --gray-400: #9ea4a8;
-  --gray-200: #e5e7eb;
-  --gray-100: #e8ebed;
-  --gray-50: #f7f7f8;
+    /* GRAY */
+    --gray-900: #1b1d1f;
+    --gray-800: #26282b;
+    --gray-600: #454c53;
+    --gray-500: #72787f;
+    --gray-400: #9ea4a8;
+    --gray-200: #e5e7eb;
+    --gray-100: #e8ebed;
+    --gray-50: #f7f7f8;
+
+    /* 글자 크기 ------------------------------------------- */
+    font-size: 16px;
+    --font-size-lg: clamp(2rem, 4vw, 3.5rem);
+    --font-size-md: clamp(1rem, 3vw, 2.5rem);
+    --font-size-sm: clamp(1rem, 2vw, 1.5rem);
+    --font-size-lt: clamp(0.8rem, 1vw, 1rem);
 }
 
-/* 버튼 */
+/* 버튼 색변경 */
 a.blue {
-  background-color: var(--blue);
+    background-color: var(--blue);
 }
 a:hover.blue {
-  background-color: var(--blue-100);
+    background-color: var(--blue-100);
 }
 a:active.blue {
-  background-color: var(--blue-200);
+    background-color: var(--blue-200);
 }
 
 /* ------------------------------------------------- */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-family: Pretendard, sans-serif;
-  word-break: keep-all;
+    font-family: Pretendard, sans-serif;
+    word-break: keep-all;
 }
 
 body {
-  margin: 0;
-  height: 100vh;
+    margin: 0;
+    height: 100vh;
 }
 
 a {
-  text-decoration: none;
-  color: #000;
-  cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
 }
 
 /* 헤더 */
 #header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 /* 사이트 로고 */
 .header-logo {
-  margin-left: 200px;
+    margin-left: 10rem;
 }
 
 /* 로그인 버튼 */
 .header-login-btn {
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 8px;
-  margin-right: 200px;
-  color: #fff;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 8px;
+    margin-right: 200px;
+    color: #fff;
+    font-size: var(--font-size-lt);
+    font-weight: 600;
 }
 
 /* 컨테이너 ------------------------------------------------------ */
 #container {
 }
 
-/* 상단 배너 */
+/* 상단 배너 ------------------------------------------------------ */
 .banner-top {
-  display: flex;
-  background-color: #cfe5ff;
-  align-items: center;
-  justify-content: center;
-  height: 540px;
+    position: relative;
+    display: flex;
+    background-color: #cfe5ff;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 30vw;
 }
 
 /* 상단 배너 내부 */
 .banner-top .banner-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    position: relative;
+    left: -24vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1;
 }
 
 .banner-top .banner-title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #374151;
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: #374151;
 }
 
-/* 구경하러 가기 버튼 */
+/* "구경하러 가기" 버튼 */
 .banner-top .banner-item-btn {
-  color: #fff;
-  border-radius: 9999px;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 15px 100px;
-  text-align: center;
+    display: flex;
+    color: #fff;
+    border-radius: 9999px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    width: 18vw;
+    height: 3vw;
+    padding: 1rem 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-top .banner-img {
-  position: relative;
-  bottom: -45px;
+    position: absolute;
+    width: 55vw;
+    right: 10vw;
+    bottom: 0;
 }
 
 /* 메인 컨테이너 ------------------------------------------------------ */
 .container-content {
-  width: 1200px;
-  margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
 }
 
 /* content 내부 나누기 */
 .content-section {
-  display: flex;
-  align-items: center;
-  height: 720px;
-  gap: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 5vw 0;
+    gap: 4vw;
 }
 
 /* content 이미지 */
 .content-section img {
-  flex-grow: 1;
-  width: 600px;
-  height: 450px;
+    flex-grow: 1;
+    width: 25vw;
 }
 
 /* content 내용 */
 .content-item {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 600px;
-  height: 450;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 25vw;
+    gap: 15px;
 }
 
 /* 중간 설명 우측 정렬 */
 #right-align {
-  align-items: end;
-  text-align: right;
+    align-items: end;
+    text-align: right;
 }
 
 /* 태그 */
 .content-tag {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--blue);
+    margin: 0;
+    font-size: var(--font-size-lt);
+    font-weight: 700;
+    color: var(--blue);
 }
 
 /* 타이틀 */
 .content-title {
-  margin: 0;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 56px;
+    margin: 0;
+    font-size: var(--font-size-md);
+    font-weight: 700;
 }
 
 /* 내용 */
 .content-description {
-  font-size: 24px;
-  font-weight: 500;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
 }
 
 /* 하단 배너 ------------------------------------------------------ */
 .banner-bottom {
-  background-color: #cfe5ff;
-  display: flex;
-  justify-content: center;
+    position: relative;
+    display: flex;
+    background-color: #cfe5ff;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 30vw;
 }
 
 .banner-bottom .banner-content {
-  display: flex;
-  align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -27vw;
+    width: 15vw;
+    z-index: 1;
 }
 
 .banner-bottom .banner-description {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #374151;
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: #374151;
+}
+
+.banner-bottom .banner-img {
+    position: absolute;
+    width: 55vw;
+    left: 18vw;
 }
 
 /* 하단 footer ------------------------------------------------------ */
 #footer {
-  background-color: #111827;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 32px 0 80px;
+    background-color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0 80px;
 }
 
 .company {
-  font-size: 16px;
-  font-weight: 400;
-  color: #9ca3af;
+    font-size: var(--font-size-lt);
+    font-weight: 400;
+    color: #9ca3af;
 }
 
 #footer .middle {
-  display: flex;
-  gap: 30px;
+    display: flex;
+    gap: 2vw;
 }
 
 .privacy,
 .faq {
-  color: #e5e7eb;
-  font-size: 16px;
-  font-weight: 400;
+    color: #e5e7eb;
+    font-size: var(--font-size-lt);
+    font-weight: 400;
 }
 
 .social {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
 }
