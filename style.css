@@ -175,9 +175,12 @@ footer .copyright {
 }
 
 footer .links {
-  color: var(--gray200);
   display: flex;
   gap: 30px;
+}
+
+footer .links a {
+  color: var(--gray200);
 }
 
 footer .links a:visited {
