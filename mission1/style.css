@@ -1,35 +1,30 @@
-body{
-    margin: 0;
-    overflow-x: none;
+html,body{
+
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
     background-color: #FFFFFF;
-   
 }
-
-
 
 /* header */
 .wrap{
-    border:1px black solid;
     height: 70px;
     width: 100%;    
     background-color: #FFFFFF;
-   
-    position: relative;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .wrap a{
-    
+    margin-top: 10px;
+    margin-left: 200px;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 200px;
+   
   
 }
 
 .loginBtn{
+
     cursor: pointer;
     position: absolute;
     border:none;
@@ -47,31 +42,26 @@ body{
 
 /* main */
 
-main{
-    
-    border: 1px solid;
-    width: 100%;
-    background-color: skyblue;  
-    
-
-}
- 
 .card{
+
     background-color: skyblue;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    gap: 100px;
     height: 540px;
     width: 100%;
 }
 
-.card .box{
-    position: absolute;
-    display: inline;
-    top: 170px;
-    left: 360px;
+.box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
 .box h1{
+    margin: 0;
     font-weight: 700;
     font-size: 40px;
     line-height: 56px;
@@ -79,6 +69,8 @@ main{
 }
 
 .box button{
+    margin-bottom: 80px;
+    padding: 0;
     width: 355px;
     height: 56px;
     border-radius: 40px;
@@ -94,33 +86,26 @@ main{
 .card img{
     width: 996px;
     height: 447px;
-    margin-top: 93px;
-    margin-left: 701px;
-
 }
+
 
 .card2{
    
     background-color: #FFFFFF;
     height: 720px;
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .card2 .confirmBox{
-    width: 100%;
-    position: absolute;
-    top: 137.5px;
-    left: 360px;
+    
     display: flex;
     align-items: center;
 }
 
-
 .confirmBox .specific{
-   padding-left: 50px;
+   margin-left: 50px;
    text-align: left;
-   
-
 }
 
 .specific h1{
@@ -138,28 +123,27 @@ main{
 }
 
 .card3{
+
     background-color: #FFFFFF;
     height: 720px;
-    position: relative;
-}
-
-.card3 .searchBox{
-    width: 100%;
-    position: absolute;
-    top: 138px;
-    left: 591px;
-    display: flex;
+    justify-content: center;
     align-items: center;
+    display: flex;
+    
 }
+.card3 .specific2{
+    margin-right: 50px;
 
+}
+.card3 img{
+    width: 588px;
+    height: 444px;
+}
 
 
 .searchBox .specific2{
-   
     padding-right: 50px;
     text-align: right;
-
-
 }
 
 .specific2 h1{
@@ -176,25 +160,31 @@ main{
     color: #374151;
 }
 
-
 .card4{
     background-color: #FFFFFF;
     height: 720px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 1px red solid;
+    align-items: center;
 }
 
+.card4 img{
+    width: 588px;
+    height: 444px;
+}
 .card4 .registerBox{
     width: 100%;
-    position: absolute;
+    
     top: 138px;
     left: 360px;
-    display: flex;
+   
     align-items: center;
 }
 
 
-.registerBox .specific3{
-    padding-left: 50px;
+.card4 .specific3{
+    margin-left: 50px;
 }
 
 .specific3 h2{
@@ -211,17 +201,11 @@ main{
     color: #374151;
 }
 
-
-
 .card5{
+    display: flex;
     height: 540px;
-    position: relative;
-}
-
-.card5 .pandaTrade{
-    position: absolute;
-    top: 214px;
-    left: 360px;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -230,27 +214,30 @@ main{
     font-size: 40px;
     line-height: 56px;
     color: #374151;
-
+    margin: 0;
 }
 
 .card5 img{
-    display: inline-block;
-    margin-left: 701px;
+    margin-left: 50px;
     height: 540px;
 }
 
 footer{
-    
     height: 160px;
     background-color: #111827;
-    position: relative;
-   
 }
 
 
 footer .tag{
+    height: 100%;
+    align-items: center;
     display: flex;
     justify-content: space-around;
+    
+}
+
+.tag p{
+    margin: 0;
 }
 
 .tag .codeit{
@@ -267,11 +254,8 @@ footer .tag{
     color: #E5E7EB;
 }
 
-.social{
-
+.social a{
     width: 116px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-right: 5px;
 }
 
