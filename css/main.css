@@ -1,0 +1,113 @@
+/*header*/
+header {
+  height: 70x;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  margin-left: 200px;
+}
+header a {
+  margin-right: 200px;
+}
+.login-btn {
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/*banner*/
+.banner-container {
+  height: 540px;
+  background-color: #cfe5ff;
+  position: relative;
+}
+.banner-box {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.banner-container img {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}
+.banner-box h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gray700);
+  margin-bottom: 40px;
+  line-height: 56px;
+}
+.item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 355px;
+  height: 56px;
+  border-radius: 40px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.featured-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.featured-box {
+  display: flex;
+  height: 720px;
+  align-items: center;
+  gap: 48px;
+}
+.featured-box:nth-child(2) {
+  justify-content: flex-end;
+  text-align: right;
+}
+.featured-description h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--gray700);
+  margin: 12px 0;
+}
+.featured-description p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 28.8px;
+  color: var(--gray700);
+}
+.featured-description .featured-tag {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/*footer*/
+footer {
+  height: 160px;
+  background-color: var(--gray900);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19.09px;
+  padding: 24px 120px;
+  box-sizing: border-box;
+}
+footer .copyright {
+  color: var(--gray400);
+}
+footer .footer-tab {
+  color: var(--gray200);
+  gap: 24px;
+}
+.footer-tab a:nth-child(1) {
+  margin-right: 24px;
+}
+footer .social-icons a {
+  margin-right: 12px;
+}

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  /*basic colours*/
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+  --primary-color: #3692ff;
+  --error-color: #f74747;
+}
+a:hover {
+  cursor: pointer;
+}
+.btn {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+.btn:hover {
+  background-color: #1967d6;
+}
