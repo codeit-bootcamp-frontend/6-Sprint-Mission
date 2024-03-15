@@ -1,3 +1,4 @@
+/* color값 변수로 선언 */
 :root {
     --cool_gray900: #111827;
     --cool_gray700: #374151;
@@ -24,10 +25,13 @@
     font-family: Pretendard;
 }
 
+/* a태그 밑줄 제거 */
 a {
     text-decoration: none;
 }
 
+/* 헤더부분 */
+/* fixed는 2번째 미션인데 처음에 만들때 나도모르게 만들어버림; */
 header {
     height: 70px;
     width: 100%;
@@ -38,13 +42,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-/* 
-header div {
-    display: flex;
-    flex-basis: 400px;
-    justify-content: center;
-} */
 
 header .login {
     background: var(--blue1);
@@ -58,6 +55,8 @@ header .login {
     align-items: center;
     color: white;
 }
+
+/* 헤더부분 */
 
 main {
     /* margin-top: 70px; */
@@ -164,8 +163,7 @@ main {
     color: var(--cool_gray700);
 }
 
-
-
+/* 푸터부분 */
 footer {
     padding-top: 15px;
     height: 160px;
@@ -201,10 +199,9 @@ footer>.FAQ>a {
     color: var(--gray200);
 }
 
-footer div:last-child a {
-    background: none;
-}
+/* 푸터부분 */
 
+/* 버튼 속성 */
 .btn:hover {
     background: var(--blue2);
 }
