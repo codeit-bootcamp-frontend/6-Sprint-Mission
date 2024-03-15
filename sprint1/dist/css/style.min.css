@@ -16,6 +16,7 @@ ul, dl {
 /* common */
 :root {
   --brand-blue:#3692FF;
+  --grey700: #374151;
 }
 
 .blind {
@@ -165,6 +166,7 @@ ul, dl {
   font-weight: 700;
   line-height: 56px;
   word-break: keep-all;
+  color: var(--grey700);
 }
 
 .section-desc {
@@ -193,6 +195,7 @@ ul, dl {
   flex-direction: column;
   justify-content: center;
   word-break: keep-all;
+  color: var(--grey700);
 }
 .section-desc .topic {
   font-family: Pretendard, sans-serif;

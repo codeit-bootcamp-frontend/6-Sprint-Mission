@@ -29,6 +29,7 @@
     font-weight: 700;
     line-height: 56px;
     word-break: keep-all;
+    color:var(--grey700);
   }
 }
 .section-desc {
@@ -58,6 +59,7 @@
     flex-direction:column;
     justify-content:center;
     word-break:keep-all;
+    color:var(--grey700);
   }
   .topic {
     font-family: Pretendard, sans-serif;
