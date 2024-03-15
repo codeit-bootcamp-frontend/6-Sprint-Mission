@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 200px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+main {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #111827;
+  color: #E5E7EB;
+}
+
+figure{
+  margin:0;
+}
+
+.blueButton {
+  border-radius: 8px;
+  border: none;
+  background-color: #3692ff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor:pointer;
+}
+
+.blueContent {
+  background-color: #cfe5ff;
+  position: relative;
+  z-index: 0;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+#mainContentContainer{
+  display: flex;
+  justify-content: center;
+}
+
+#mainContent{
+  width:1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainLogoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8.59px;
+}
+
+.loginContainer button {
+  font-size: 16px;
+  padding: 14.5px 43px;
+}
+
+#topContent .blueButton{
+  padding: 16px 122px;
+  border-radius: 40px;
+  display: block;
+}
+
+#topContent a{
+  display: inline-block;
+}
+
+#topContent{
+  height:540px;
+  width: 1920px;
+}
+
+#topDescriptionContainer{
+  position: absolute;
+  top:170px;
+  left:360px;
+  z-index: 2;
+}
+
+.pandaImage{
+  position:absolute;
+  bottom: 0;
+  right:223px;
+  z-index: 1;
+}
+
+.topDescription{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 200px;
+  font-size: 16px;
+}
