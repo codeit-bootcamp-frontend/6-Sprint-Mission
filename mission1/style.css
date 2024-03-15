@@ -165,7 +165,6 @@ html,body{
     height: 720px;
     display: flex;
     justify-content: center;
-    border: 1px red solid;
     align-items: center;
 }
 
