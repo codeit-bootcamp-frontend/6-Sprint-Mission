@@ -1,0 +1,134 @@
+
+html {
+    font-family: Pretendard, sans-serif;
+}
+
+body{
+    margin:0;
+}
+
+.gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 200px;
+}
+.gnb .logo {
+    width: 153px;
+    height: 51px;
+}
+.gnb .login {
+    border-radius: 8px;
+    background-color: #3692FF;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding:12px 20px 12px 20px;
+    gap:10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-banner {
+    background-color: #CFE5FF;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+}
+.banner-panda {
+    margin-top:93px;
+}
+.banner-text {
+    font-size: 40px;
+    font-weight: 700;
+    width: 355px;
+}
+.banner-link {
+    border-radius: 40px;
+    background-color: #3692FF;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    padding:16px;
+    gap: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section1 {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top:138px;
+    margin-left:360px;
+    margin-bottom:138px;
+}
+.section2 {
+    width:1200px;
+    display: flex;
+    align-items: center;
+    gap:64px;
+    margin-top: 138px;
+    margin-left: 591px;
+    text-align: right;
+}
+
+.content-text span {
+    color:#3692FF;
+    font-size: 18px;
+    font-weight: 700;
+}
+.content-text h2 {
+    color: #374151;
+    font-size: 40px;
+    font-weight: 700;
+}
+.content-text p {
+    color: #374151;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer {
+    width: auto;
+    height: 160px;
+    background-color: #111827;
+    padding:32px 200px 32px 200px;
+}
+.bottom-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:30px;
+}
+.bottom-banner .codeit {
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+.bottom-banner .faq {
+    color: #E5E7EB;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    gap:30px;
+    cursor: pointer;
+}
+.bottom-banner .sns {
+    display: flex;
+    gap:12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
