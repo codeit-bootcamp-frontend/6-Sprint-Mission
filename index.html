@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <title>판다마켓</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
   </head>
   <body>
     <header>
@@ -14,76 +20,88 @@
     </header>
     <main>
       <div class="banner">
-        <div>
+        <div class="container contents">
           <h1>
             일상의 모든 물건을<br />
             거래해 보세요
           </h1>
           <button class="large">구경하러 가기</button>
+          <img src="/assets/img_home_top.png" alt="판다가 인사하는 모습" />
         </div>
-        <img src="/assets/img_home_top.png" alt="판다가 인사하는 모습" />
       </div>
-      <section>
-        <img src="/assets/img_home_01.png" alt="인기 상품을 보고 있는 판다들" />
-        <div class="desc">
-          <p>Hot item</p>
-          <h1>
-            인기 상품을<br />
-            확인해 보세요
-          </h1>
-          <p>
-            가장 HOT한 중고거래 물품을<br />
-            판다 마켓에서 확인해 보세요
-          </p>
-        </div>
-      </section>
-      <section>
-        <img src="/assets/img_home_02.png" alt="상품을 검색하는 모습" />
-        <div class="desc">
-          <p>Search</p>
-          <h1>
-            구매를 원하는<br />
-            상품을 검색하세요
-          </h1>
-          <p>
-            구매하고 싶은 물품은 검색해서<br />
-            쉽게 찾아보세요
-          </p>
-        </div>
-      </section>
-      <section>
-        <img src="/assets/img_home_03.png" alt="여러 상품이 나열된 모습" />
-        <div class="desc">
-          <p>Register</p>
-          <h1>
-            판매를 원하는<br />
-            상품을 등록하세요
-          </h1>
-          <p>
-            어떤 물건이든 판매하고 싶은 상품을<br />
-            쉽게 등록하세요
-          </p>
-        </div>
-      </section>
+      <article class="container">
+        <section>
+          <img
+            src="/assets/img_home_01.png"
+            alt="인기 상품을 보고 있는 판다들"
+          />
+          <div>
+            <p class="label">Hot item</p>
+            <h1 class="title">
+              인기 상품을<br />
+              확인해 보세요
+            </h1>
+            <p class="desc">
+              가장 HOT한 중고거래 물품을<br />
+              판다 마켓에서 확인해 보세요
+            </p>
+          </div>
+        </section>
+        <section class="reverse">
+          <div>
+            <p class="label">Search</p>
+            <h1 class="title">
+              구매를 원하는<br />
+              상품을 검색하세요
+            </h1>
+            <p class="desc">
+              구매하고 싶은 물품은 검색해서<br />
+              쉽게 찾아보세요
+            </p>
+          </div>
+          <img src="/assets/img_home_02.png" alt="상품을 검색하는 모습" />
+        </section>
+        <section>
+          <img src="/assets/img_home_03.png" alt="여러 상품이 나열된 모습" />
+          <div>
+            <p class="label">Register</p>
+            <h1 class="title">
+              판매를 원하는<br />
+              상품을 등록하세요
+            </h1>
+            <p class="desc">
+              어떤 물건이든 판매하고 싶은 상품을<br />
+              쉽게 등록하세요
+            </p>
+          </div>
+        </section>
+      </article>
       <div class="banner">
-        <p>
-          믿을 수 있는<br />
-          판다마켓 중고거래
-        </p>
-        <img src="/assets/img_home_bottom.png" alt="판다가 중고거래하는 모습" />
+        <div class="container contents">
+          <h1>
+            믿을 수 있는<br />
+            판다마켓 중고거래
+          </h1>
+          <img
+            src="/assets/img_home_bottom.png"
+            alt="판다가 중고거래하는 모습"
+          />
+        </div>
       </div>
     </main>
     <footer>
-      <div>©codeit - 2024</div>
-      <div class="links">
-        <span>Privacy Policy</span>
-        <span>FAQ</span>
-      </div>
-      <div class="social-icons">
-        <img src="/assets/ic_facebook.svg" alt="페이스북 아이콘" />
-        <img src="/assets/ic_twitter.svg" alt="트위터 아이콘" />
-        <img src="/assets/ic_youtube.svg" alt="유튜브 아이콘" />
-        <img src="/assets/ic_instagram.svg" alt="인스타그램 아이콘" />
+      <div>
+        <div class="copyright">©codeit - 2024</div>
+        <div class="links">
+          <span>Privacy Policy</span>
+          <span>FAQ</span>
+        </div>
+        <div class="social-icons">
+          <img src="/assets/ic_facebook.svg" alt="페이스북 아이콘" />
+          <img src="/assets/ic_twitter.svg" alt="트위터 아이콘" />
+          <img src="/assets/ic_youtube.svg" alt="유튜브 아이콘" />
+          <img src="/assets/ic_instagram.svg" alt="인스타그램 아이콘" />
+        </div>
       </div>
     </footer>
   </body>

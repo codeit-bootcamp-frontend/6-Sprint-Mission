@@ -1,12 +1,13 @@
 :root {
-  --gray900: #1b1d1f;
-  --gray800: #26282b;
-  --gray600: #454c53;
-  --gray500: #72787f;
-  --gray400: #9ea4a8;
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
   --gray200: #e5e7eb;
-  --gray100: #e8ebed;
-  --gray50: #f7f7f8;
+  --gray100: #f3f4f6;
+  --gray50: #f3f4f6;
 
   --blue: #3692ff;
   --red: #f74747;
@@ -16,8 +17,168 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 img {
   display: block;
+  user-select: none;
+}
+
+header {
+  height: 70px;
+}
+
+header > div {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 10px 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100%;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  background: var(--blue);
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.small {
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button.large {
+  width: 355px;
+  height: 56px;
+  border-radius: 28px;
+  font-size: 20px;
+}
+
+.banner {
+  background: #cfe5ff;
+  height: 540px;
+  overflow: hidden;
+}
+
+.banner .contents {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.banner .contents h1 {
+  font-weight: 700;
+  color: var(--gray700);
+  font-size: 40px;
+}
+
+.banner .contents *:not(img) {
+  z-index: 1;
+}
+
+.banner .contents img {
+  width: 996px;
+  position: absolute;
+  bottom: 0;
+  right: -135px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+article {
+  padding-bottom: 138px;
+}
+
+section {
+  padding: 138px 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 64px;
+  color: var(--gray700);
+}
+
+section.reverse {
+  justify-content: right;
+  text-align: right;
+}
+
+section img {
+  max-height: 444px;
+}
+
+section .label {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--blue);
+}
+
+section .title {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+section .desc {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+footer {
+  background: var(--gray900);
+  height: 160px;
+}
+
+footer > div {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 32px 200px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+footer .copyright {
+  color: var(--gray400);
+}
+
+footer .links {
+  color: var(--gray200);
+  display: flex;
+  gap: 30px;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+footer .social-icons img {
+  width: 20px;
+  height: 20px;
 }
