@@ -9,8 +9,13 @@
   --gray100: #f3f4f6;
   --gray50: #f3f4f6;
 
-  --blue: #3692ff;
-  --red: #f74747;
+  --primary700: #1251aa;
+  --primary600: #1967d6;
+  --primary500: #3692ff;
+  --primary300: #cfe5ff;
+  --primary200: #e6f2ff;
+
+  --error: #f74747;
 }
 
 * {
@@ -57,11 +62,24 @@ header > div {
 
 button {
   border: 0;
-  background: var(--blue);
+  background: var(--primary500);
   color: white;
   padding: 12px 20px;
   font-weight: 600;
   cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary600);
+}
+
+button:active {
+  background: var(--primary700);
+}
+
+button:disabled {
+  background: var(--gray400);
+  cursor: default;
 }
 
 button.small {
@@ -79,7 +97,7 @@ button.large {
 }
 
 .banner {
-  background: #cfe5ff;
+  background: var(--primary300);
   height: 540px;
   overflow: hidden;
 }
@@ -140,7 +158,7 @@ section img {
 section .label {
   font-weight: 700;
   font-size: 18px;
-  color: var(--blue);
+  color: var(--primary500);
 }
 
 section .title {
@@ -188,7 +206,7 @@ footer .links a:visited {
 }
 
 footer .links a:active {
-  color: var(--blue);
+  color: var(--primary500);
 }
 
 footer .social-icons {
