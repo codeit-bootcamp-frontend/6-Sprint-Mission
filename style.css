@@ -202,7 +202,7 @@ a {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 30vw;
+    height: 28vw;
 }
 
 .banner-bottom .banner-content {
@@ -211,7 +211,7 @@ a {
     align-items: center;
     justify-content: center;
     left: -27vw;
-    width: 15vw;
+    width: 17vw;
     z-index: 1;
 }
 
