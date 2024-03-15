@@ -14,8 +14,12 @@
   <body>
     <header>
       <div>
-        <img class="logo" src="/assets/logo.png" alt="판다마켓 로고" />
-        <button class="small">로그인</button>
+        <a class="logo" href="/">
+          <img src="/assets/logo.png" alt="판다마켓 로고" />
+        </a>
+        <button class="small" onclick="location.href='/login.html'">
+          로그인
+        </button>
       </div>
     </header>
     <main>
@@ -25,7 +29,9 @@
             일상의 모든 물건을<br />
             거래해 보세요
           </h1>
-          <button class="large">구경하러 가기</button>
+          <button class="large" onclick="location.href='/items.html'">
+            구경하러 가기
+          </button>
           <img src="/assets/img_home_top.png" alt="판다가 인사하는 모습" />
         </div>
       </div>
@@ -93,14 +99,22 @@
       <div>
         <div class="copyright">©codeit - 2024</div>
         <div class="links">
-          <span>Privacy Policy</span>
-          <span>FAQ</span>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/faq.html">FAQ</a>
         </div>
         <div class="social-icons">
-          <img src="/assets/ic_facebook.svg" alt="페이스북 아이콘" />
-          <img src="/assets/ic_twitter.svg" alt="트위터 아이콘" />
-          <img src="/assets/ic_youtube.svg" alt="유튜브 아이콘" />
-          <img src="/assets/ic_instagram.svg" alt="인스타그램 아이콘" />
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="/assets/ic_facebook.svg" alt="페이스북 아이콘" />
+          </a>
+          <a href="https://twitter.com/?lang=ko" target="_blank">
+            <img src="/assets/ic_twitter.svg" alt="트위터 아이콘" />
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <img src="/assets/ic_youtube.svg" alt="유튜브 아이콘" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="/assets/ic_instagram.svg" alt="인스타그램 아이콘" />
+          </a>
         </div>
       </div>
     </footer>

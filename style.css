@@ -29,6 +29,10 @@ img {
   user-select: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   height: 70px;
 }
@@ -45,7 +49,10 @@ header > div {
 
 .logo {
   height: 100%;
-  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
 }
 
 button {
@@ -173,12 +180,20 @@ footer .links {
   gap: 30px;
 }
 
+footer .links a:visited {
+  color: var(--gray200);
+}
+
+footer .links a:active {
+  color: var(--blue);
+}
+
 footer .social-icons {
   display: flex;
   gap: 12px;
 }
 
-footer .social-icons img {
+footer .social-icons a {
   width: 20px;
   height: 20px;
 }
