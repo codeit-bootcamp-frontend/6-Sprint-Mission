@@ -93,6 +93,8 @@ ul, dl {
 
 .header {
   display: flex;
+  box-sizing: border-box;
+  width: 100vw;
   align-items: center;
   justify-content: space-between;
   padding: 0 10.42vw;
@@ -110,6 +112,8 @@ ul, dl {
 
 .footer {
   display: flex;
+  box-sizing: border-box;
+  width: 100vw;
   justify-content: space-between;
   padding: 32px 10.42vw 0;
   background: #111827;
