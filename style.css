@@ -26,14 +26,14 @@ a{
 html {
   font-family: Pretendard, sans-serif;
   word-break: keep-all;
-  font-size: 16px;
+  font-size: 0.83vw;
 }
 
 
 body {
   background-color: #ffffff;
   color: #374151;
-  font-size: 24px;
+  font-size: 1.25vw;
   margin: 0;
 }
 
@@ -43,10 +43,10 @@ header{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 70px;
+  height: 3.65vw;
   background-color: #ffffff;
-  padding: 10px 200px 10px;
-  margin-top: -70px;
+  padding: 0.52vw 10.42vw 0.52vw;
+  margin-top: -3.65vw;
 }
 
 header img{
@@ -54,43 +54,44 @@ header img{
 }
 
 main{
-  margin-top: 70px;
+  margin-top: 3.65vw;
 }
 
 footer{
   display: flex;
   justify-content: space-between ;
   background-color: #111827;
-  padding: 32px 200px 108px 200px;
+  padding: 1.67vw 10.42vw 5.63vw 10.42vw;
   color: var(--footcopyright);
-  gap: 10px;
+  gap: 0.52vw;
   width: 100%;
+  font-size: 0.83vw;
 }
 
 .panda-login{
   cursor: pointer;
   background-color: var(--maintextcolor_blue);
   color: #ffffff;
-  font-size: 16px;
+  font-size: 0.83vw;
   font-weight: 600;
   text-align: center;
-  border-radius: 8px;
-  padding: 12px 20px;
-  width: 128px;
-  height: 48px;
+  border-radius: 0.42vw;
+  padding: 0.63vw 1.04vw;
+  width: 6.67vw;
+  height: 2.50vw;
 }
 
 .panda-banner{
   display: flex;
   justify-content: center;
-  padding: 170px 223px 0px 360px;
+  padding: 8.85vw 11.61vw 0.00vw 18.75vw;
   background-color: var(--maincolor);
-  line-height: 56px;
+  line-height: 2.92vw;
 }
 
 .panda-banner img{
-  width: 996px;
-  height: 448px;
+  width: 51.88vw;
+  height: 23.33vw;
 }
 
 .item-button{
@@ -99,11 +100,11 @@ footer{
   justify-content: center;
   background-color: var(--maintextcolor_blue);
   color: #ffffff;
-  border-radius: 40px;
+  border-radius: 2.08vw;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  padding: 16px;
+  font-size: 1.04vw;
+  line-height: 1.25vw;
+  padding: 0.83vw;
 }
 
 .panda-login:hover, .item-button:hover{
@@ -115,26 +116,26 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 138px 360px 138px 360px;
+  margin: 7.19vw 18.75vw 7.19vw 18.75vw;
 }
 
 .pander-img{
   flex: 1 0 50%;
-  max-width: 588px;
-  height: 444px;
-  padding: 0px auto 0px auto;
-  border-radius: 12px;
+  max-width: 30.63vw;
+  height: 23.13vw;
+  padding: 0.00vw auto 0.00vw auto;
+  border-radius: 0.63vw;
 }
 
 .pander-info{
-  width: 588px;
-  margin-left: 64px;
+  width: 30.63vw;
+  margin-left: 3.33vw;
 }
 
 .pander-info-center{
-  width: 588px;
+  width: 30.63vw;
   text-align: right;
-  margin-right: 64px;
+  margin-right: 3.33vw;
 }
 
 .footer-link{
@@ -148,10 +149,10 @@ footer{
 .footer-sns{
   display: flex;
   justify-content: space-between;
-  width: 116px;
+  width: 6.04vw;
 }
 
 .footer-sns img{
-  width: 18px;
-  height: 18px;
+  width: 0.94vw;
+  height: 0.94vw;
 }
