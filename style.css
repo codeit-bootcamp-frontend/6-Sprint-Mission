@@ -111,6 +111,16 @@ figure {
   z-index: 1;
 }
 
+.reverse{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.reverse>*{
+  text-align: right;
+}
+
 .topDescription {
   font-weight: 700;
   font-size: 40px;
