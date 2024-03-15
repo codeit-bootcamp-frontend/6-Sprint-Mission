@@ -214,7 +214,7 @@ header {
 /* footer */
 
 footer {
-    background-color: var(--footer-background-colo);
+    background-color: var(--footer-background-color);
     height: 160px;
     width: 100%;
     min-width: 1920px;
