@@ -1,4 +1,8 @@
-body {
+*{
+  box-sizing: border-box;
+}
+
+body,p {
   margin: 0;
 }
 
@@ -18,8 +22,6 @@ header {
 
 main {
   margin-top: 70px;
-  display: flex;
-  flex-direction: column;
 }
 
 footer {
@@ -27,8 +29,8 @@ footer {
   color: #E5E7EB;
 }
 
-figure{
-  margin:0;
+figure {
+  margin: 0;
 }
 
 .blueButton {
@@ -37,13 +39,14 @@ figure{
   background-color: #3692ff;
   color: #ffffff;
   font-weight: 600;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .blueContent {
   background-color: #cfe5ff;
   position: relative;
   z-index: 0;
+  height: 540px;
 }
 
 .link {
@@ -51,16 +54,22 @@ figure{
   text-decoration: none;
 }
 
-#mainContentContainer{
+#mainContentContainer {
   display: flex;
   justify-content: center;
 }
 
-#mainContent{
-  width:1200px;
-  display: flex;
-  flex-direction: column;
+#mainContent {
+  width: 1200px;
+  margin-inline: auto;
+}
+
+#mainContent figure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 720px;
   align-items: center;
+  gap: 64px;
 }
 
 .mainLogoContainer {
@@ -74,46 +83,89 @@ figure{
   padding: 14.5px 43px;
 }
 
-#topContent .blueButton{
+#topContent .blueButton {
   padding: 16px 122px;
   border-radius: 40px;
   display: block;
 }
 
-#topContent a{
+#topContent a {
   display: inline-block;
 }
 
-#topContent{
-  height:540px;
+#topContent {
   width: 1920px;
 }
 
-#topDescriptionContainer{
+#topDescriptionContainer {
   position: absolute;
-  top:170px;
-  left:360px;
+  top: 170px;
+  left: 360px;
   z-index: 2;
 }
 
-.pandaImage{
-  position:absolute;
+.pandaImage {
+  position: absolute;
   bottom: 0;
-  right:223px;
+  right: 223px;
   z-index: 1;
 }
 
-.topDescription{
+.topDescription {
   font-weight: 700;
   font-size: 40px;
   line-height: 56px;
   color: #374151;
+  margin-bottom: 32px;
+}
+
+.contentCategory{
+  color:#3692ff;
+  font-weight: 700;
+  font-size:18px;
+  line-height: 25px;
+}
+
+.contentHeader{
+  padding-block: 12px 24px;
+  font-weight: 700;
+  font-size:40px;
+  line-height: 56px;
+  color:#374151;
+}
+
+.contentDescription{
+  font-weight: 500;
+  font-size:24px;
+  line-height: 28px;
+  color:#374151;
+}
+
+.marginContent{
+  margin-top:180px;
+}
+
+#bottomContent{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+}
+
+#bottomContent div{
+  position: absolute;
+  top:214px;
+  left:360px;  z-index: 2;
 }
 
 footer {
+  padding-inline: 200px;
+  height: 160px;
+  font-size: 16px;
+  padding-top:32px;
+}
+
+.footerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 200px;
-  font-size: 16px;
 }
