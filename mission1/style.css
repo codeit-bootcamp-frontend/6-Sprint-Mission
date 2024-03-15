@@ -1,9 +1,8 @@
 body{
     margin: 0;
-    width: 100%;
-    height: 100%;
+    overflow-x: none;
     background-color: #FFFFFF;
-    
+   
 }
 
 
@@ -49,6 +48,7 @@ body{
 /* main */
 
 main{
+    
     border: 1px solid;
     width: 100%;
     background-color: skyblue;  
