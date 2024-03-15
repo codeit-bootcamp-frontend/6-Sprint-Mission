@@ -1,11 +1,3 @@
-/* external fonts */
-
-@font-face {
-  font-family: 'ROKAF Sans';
-  src: url('../fonts/ROKAF_Sans_Bold.ttf') format('truetype');
-}
-
-
 /* color variables */
 
 :root {
@@ -117,20 +109,7 @@ header {
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 40px;
-  margin-right: 8px;
-}
-
-.logo a {
-  font-family: 'ROKAF Sans';
-  font-size: 25px;
-  color: var(--point-blue);
-  font-weight: 700;
+  width: 153px;
 }
 
 
@@ -162,6 +141,7 @@ header {
   position: absolute;
   bottom: 0;
   right: -137px;
+  width: 996px;
 }
 
 
