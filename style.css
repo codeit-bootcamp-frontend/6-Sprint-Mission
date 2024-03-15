@@ -1,0 +1,199 @@
+/* common */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  word-break: keep-all;
+}
+body {
+  margin: 0;
+}
+img {
+}
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.btn_large {
+  width: 355px;
+  height: 56px;
+  top: 20px;
+  left: 20px;
+  border-radius: 40px;
+  color: #FFFFFF;
+  background-color: #3692FF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.btn_small {
+  width: 128px;
+  height: 48px;
+  padding: 12px 20px;
+  gap: 10px;
+  color: #FFFFFF;
+  border-radius: 8px;
+  background-color: #3692FF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 200px;
+  align-items: center;
+  height: 70px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.panda-btn {
+  text-decoration: none;
+  color: #3692FF;
+  font-family: ROKAF Sans;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+/* banner */
+
+.banner-back {
+  background-color: #CFE5FF;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.banner {
+  height: 540px;
+  display: flex;
+  align-items: center;
+}
+.banner-img-top {
+  position: absolute;
+  top: 93px;
+  left: 701px;
+  background-color: #CFE5FF;
+}
+.banner-img-bottom {
+  position: absolute;
+  left: 701px;
+  background-color: #CFE5FF;
+}
+.banner-text {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #374151;
+}
+.banner-area {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+/* card */
+
+.card {
+  height: 720px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.card-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.card-logo {
+  color: #3692FF;
+  display: inline;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.card-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #374151;
+}
+.card-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #374151;
+}
+.mg-footer {
+  margin-bottom: 138px;
+}
+.mid {
+  justify-content: end;
+  text-align: end;
+}
+
+
+/* footer */
+
+footer {
+  background-color: #111827;
+  width: 1,920px;
+  height: 160px;
+  top: 3448px;
+  padding: 32px 200px 32px 200px;
+  gap: 10px;
+}
+.footer-area {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  max-width: 1520px;
+}
+.privacy {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: flex;
+  gap: 30px;
+}
+.privacy > a {
+  color: #E5E7EB;
+  text-decoration: none;
+}
