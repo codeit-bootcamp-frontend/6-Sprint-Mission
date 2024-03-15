@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --maincolor: #cfe5ff;
+  --maintextcolor_blue: #3692ff;
+  --footlinkcolor : #e5e7eb;
+  --footcopyright : #9ca3af;
+}
+
+span{
+  color: var(--maintextcolor_blue);
+  font-weight: 700;
+}
+
+p{
+  font-weight: 500;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-family: Pretendard, sans-serif;
+  word-break: keep-all;
+  font-size: 16px;
+}
+
+
+body {
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 24px;
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  padding: 10px 200px 10px;
+  margin-top: -70px;
+}
+
+header img{
+  width: 8vw;
+}
+
+main{
+  margin-top: 70px;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between ;
+  background-color: #111827;
+  padding: 32px 200px 108px 200px;
+  color: var(--footcopyright);
+  gap: 10px;
+  width: 100%;
+}
+
+.panda-login{
+  cursor: pointer;
+  background-color: var(--maintextcolor_blue);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 128px;
+  height: 48px;
+}
+
+.panda-banner{
+  display: flex;
+  justify-content: center;
+  padding: 170px 223px 0px 360px;
+  background-color: var(--maincolor);
+  line-height: 56px;
+}
+
+.panda-banner img{
+  width: 996px;
+  height: 448px;
+}
+
+.item-button{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: var(--maintextcolor_blue);
+  color: #ffffff;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 16px;
+}
+
+.panda-login:hover, .item-button:hover{
+  background-color: #1967D6;
+  transition: 0.7s;
+}
+
+.pander-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 138px 360px 138px 360px;
+}
+
+.pander-img{
+  flex: 1 0 50%;
+  max-width: 588px;
+  height: 444px;
+  padding: 0px auto 0px auto;
+  border-radius: 12px;
+}
+
+.pander-info{
+  width: 588px;
+  margin-left: 64px;
+}
+
+.pander-info-center{
+  width: 588px;
+  text-align: right;
+  margin-right: 64px;
+}
+
+.footer-link{
+  color: var(--footcopyright)
+}
+
+.footer-link, .footer-sns{
+  cursor: pointer;
+}
+
+.footer-sns{
+  display: flex;
+  justify-content: space-between;
+  width: 116px;
+}
+
+.footer-sns img{
+  width: 18px;
+  height: 18px;
+}
