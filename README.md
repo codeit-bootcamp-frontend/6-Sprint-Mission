@@ -1,17 +1,4 @@
-<!-- # Frontend Mentor - QR code component solution -->
-
-<!--
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
----
-
-사용 전 지우기
-
---- -->
-
 # 코드잇 스프린트 6기 프로젝트
-
-![메인 이미지](images/thumbnail.jpg)
 
 ## 목차
 
@@ -23,7 +10,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [내작업](#내작업)
     - [사용한것](#사용한것)
     - [배운점](#배운점)
-    - [향후분야](#향후분야)
   - [작성자](#작성자)
   - [참고](#참고)
 
@@ -31,71 +17,32 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### 페이지 스크린샷
 
+![메인 이미지](images/thumbnail.jpg)
+
 ### 링크
+
+- 사용한 폰트
+  - [Pretendard](https://github.com/orioncactus/pretendard)
 
 ## 내작업
 
 ### 사용한것
 
 - Semantic HTML5 markup
-- CSS
-
-<!--
-- CSS custom properties
-- Flexbox
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices** -->
+- css 변수
+- css : flexbox
+- css : grid
 
 ### 배운점
 
-<!--
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.** -->
-
-### 향후분야
-
-<!--
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.** -->
+- z-index 사용 시 쌓임 맥락을 주의해야 할 것 같다.
+- Netlify 배포 시 한글이 깨지는 현상이 있었는데, 주의해야 할 것 같다.
 
 ## 작성자
 
-<!--
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+**최수형(SOOHYEONG CHOI)**
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.** -->
+- [github](https://github.com/User850413)
+- [velog](https://velog.io/@user850413)
 
 ## 참고
-
-<!--
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.** -->
