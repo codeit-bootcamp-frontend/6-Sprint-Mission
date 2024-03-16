@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ROKAF Sans Bold';
+  src: url('/font/ROKAF\ Sans\ Medium.ttf') format('truetype');
+}
+
+:root {
+  --pretendard: 'Pretendard-Regular';
+  --rokaf-sans: 'ROKAF Sans Bold';
+
+  --cool-gray-900: #111827;
+  --cool-gray-700: #374151;
+  --cool-gray-400: #9ca3af;
+
+  --brand-blue: #3692FF; 
+
+  --banner-background: #CFE5FF;
+}
