@@ -2,6 +2,7 @@
 @import "variables.css";
 
 @import "header.css";
+@import "main.css";
 
 * {
   box-sizing: border-box;
