@@ -1,0 +1,24 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 200px;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.login {
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--blue);
+  border: none;
+  font-size: 16px;
+  font-family: pretendard;
+  color: white;
+  cursor: pointer;
+}
