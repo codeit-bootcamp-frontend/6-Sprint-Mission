@@ -1,0 +1,236 @@
+/* 헤더 */
+
+.landingHeader {
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+
+.headerHug {
+    margin: 0 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container1 {
+    width: auto;
+    /* height: 40px; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.pandaBack {
+    width: 40px;
+    height: 40px;
+    background-color: #3692FF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pandaIcon {
+    width: 26px;
+    height: 26px;
+}
+
+.pandaName {
+    margin-left: 5px;
+    width: 103;
+    font-size: 22px;
+    font-weight: 700;
+    color: #3692FF;
+
+}
+
+.buttonLogin {
+    background-color: #3692FF;
+    border-radius: 10px;
+    width: 128px;
+    height: 48px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* 상단 이미지 */
+.bannerTop {
+    background-color: #A0E5F1;
+    width: auto;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerContainer1 {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 1600px;
+    padding: 80px 0px;
+    background-image: url(images/banner1.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-position: 500px 0px;
+    background-size: contain;
+}
+
+.bannertext1 {
+    margin-left: 120px;
+    align-items: center;
+}
+
+.buttonShop1 {
+    background-color: #3692FF;
+    display: flex;
+    border-radius: 99px;
+    width: 355px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* 상세기능 - 아이템,검색,등록 */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingContainer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 720px;
+}
+.landingBox1 {
+    position: relative;
+    margin: 130px 255px 130px 0px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.landingImg1 {
+    position: relative;
+    height: auto;
+    width: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.landingText1 {
+    height: 100%;
+    width: 400px;
+    margin-left: 100px;
+}
+.landingContainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 720px;
+}
+.landingBox2 {
+    position: relative;
+    margin: 130px 0px 130px 255px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.landingImg2 {
+    position: relative;
+    height: auto;
+    width: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.landingText2 {
+    height: 100%;
+    width: 400px;
+    margin-right: 100px;
+    text-align: right;
+}
+
+/* 하단 이미지 */
+.bannerBottom {
+    background-color: #A0E5F1;
+    width: auto;
+    height: 540px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerContainer2 {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 1600px;
+    padding: 80px 0px;
+    background-image: url(images/banner2.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-position: 500px 0px;
+    background-size: contain;
+}
+
+.bannertext2 {
+    margin-left: 120px;
+    align-items: center;
+}
+
+/* 푸터 */
+.landingFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 160px;
+    padding-top: 30px;
+    background-color: #111827;
+    color: #ffffff;
+}
+.copyRight {
+    color: #9CA3AF;
+}
+.PPnFAQ {
+    display: flex;
+    gap: 50px;
+}
+.PP, .FAQ {
+    text-decoration: none;
+    color: #E5E7EB
+}
+
+.SNS {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    gap: 20px;
+
+}
+.facebook-outer, .twitter-outer, .youtube-outer, .instagram-outer {
+    background-color: #ffffff;
+    border-radius: 9999px;
+    cursor: pointer;
+}

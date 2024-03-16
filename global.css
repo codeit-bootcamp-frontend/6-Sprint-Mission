@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    
+}
+
+
+@media screen and (min-width: 1920px) {
+    .headerHug {
+        margin: 0 200px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .headerHug {
+        margin: 0 200px;
+    }
+
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+    color: #3692FF;
+}
