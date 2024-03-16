@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap');
+/* Common */
+html{font-size:16px;}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare
+a,button,select{margin:0;padding:0;outline:none;border:0;}
+body,input,textarea,select,button,table{font-family:'Noto Sans KR','돋움',Dotum,AppleGothic,sansserif;font-size:16px}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none !important}
+
+@media screen and (max-width: 991px) {
+    html{font-size:62.5%;}
+}
