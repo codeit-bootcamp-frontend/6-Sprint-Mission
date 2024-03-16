@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ROKAF-Sans';
+    src: url('./font/ROKAF\ Sans\ Bold.ttf');
+    font-weight: 700;
+}
+
+:root {
+    --primary-color: #3692FF;
+    --text-color: #374151;
+    --background-color: #CFE5FF;
+    --footer-background-color: #111827;
+    --footer-text-color: #9CA3AF;
+    --footer-link-color: #E5E7EB;
+    --button-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    margin:9px 200px;
+}
+
+.header_left_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.header_logo_title {
+    font-size: 25.63px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: 'ROKAF-Sans';
+    line-height: 34.6px;
+}
+
+.login {
+    display: block;
+    width: 129px;
+    height: 48px;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--button-color);
+    text-decoration: none;
+}
+
+/* banner */
+
+.banner {
+    background-color: var(--background-color);
+    height: 540px;
+    width: 100%;
+    min-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.banner-text {
+    font-size: 40px;  
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--text-color)
+}
+
+.banner-button {
+    background-color: var(--primary-color);
+    width: 355px;
+    height: 56px;
+    border-radius: 40px;  
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 124px;
+    padding-right: 122px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.banner-image {
+    margin-top: 96px;   
+}
+
+/* main */
+
+.main-first {
+    display: flex;
+    margin: 138px auto;
+    width: 1200px;
+    gap: 64px;
+    align-items: center;
+}
+
+.main-first-text {
+    display: flex;
+    flex-direction: column;  
+}
+
+.main-second {
+    display: flex;
+    margin: 138px auto;
+    width: 1200px;
+    gap: 64px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.main-second-text {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-end;
+}
+
+.main-first-text1 {
+    color: var(--primary-color);
+    font-size: 18px;
+    line-height: 25.2px;
+    font-weight: 700;
+}
+
+.main-first-text-box {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.main-first-text2 {
+    color: var(--text-color);
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
+    letter-spacing: 2%;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.main-first-text3 {
+    color: var(--text-color);
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 500;
+    letter-spacing: 8%;
+}
+
+.main-second-text2 {
+    color: var(--text-color);
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
+    letter-spacing: 2%;
+    text-align: right;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+.main-second-text3 {
+    color: var(--text-color);
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 500;
+    letter-spacing: 8%;
+    text-align: right;
+}
+
+/* bottom banner*/
+
+.banner-bottom {
+    background-color: var(--background-color);
+    height: 540px;
+    width: 100%;
+    min-width: 1920px;
+    margin-top: 276px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--footer-background-color);
+    height: 160px;
+    width: 100%;
+    min-width: 1920px;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 200px;
+}
+
+.footer-left-text {
+    color: var(--footer-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+}
+
+.footer-center-box {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-center-text {
+    color: var(--footer-link-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    text-decoration: none;
+}
+
+.footer-right-box {
+    display: flex;
+    gap: 12px;
+}
