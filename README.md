@@ -16,7 +16,7 @@
 
 ## 스크린샷
 
-![image](https://imgur.com/9cZiNrs)
+![판다마켓](https://github.com/emotigom/6-Sprint-Mission/assets/89232159/cc172863-03ad-4b55-a174-243b19e3cd87)
 
 ## 멘토에게
 
