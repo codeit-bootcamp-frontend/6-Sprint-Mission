@@ -26,7 +26,6 @@ main {
 
 footer {
   background-color: #111827;
-  color: #E5E7EB;
 }
 
 figure {
@@ -40,6 +39,18 @@ figure {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
+}
+
+.blueButton:hover{
+ background-color: #1967D6; 
+}
+
+.blueButton:focus{
+  background-color: #1251AA;
+}
+
+.blueButton:disabled{
+  background-color: #9CA3AF;
 }
 
 .blueContent {
@@ -178,4 +189,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color:#9CA3AF
+}
+
+.policyContent{
+  color: #E5E7EB;
+}
+
+.footerContent{
+  display: flex;
+  gap:12px;
 }
