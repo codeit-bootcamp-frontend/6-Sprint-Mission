@@ -12,6 +12,7 @@
     /* GRAY */
     --gray-900: #1b1d1f;
     --gray-800: #26282b;
+    --gray-700: #374151;
     --gray-600: #454c53;
     --gray-500: #72787f;
     --gray-400: #9ea4a8;
@@ -24,7 +25,7 @@
     --font-size-lg: clamp(2rem, 4vw, 3.5rem);
     --font-size-md: clamp(1rem, 3vw, 2.5rem);
     --font-size-sm: clamp(1rem, 2vw, 1.5rem);
-    --font-size-lt: clamp(0.8rem, 1vw, 1rem);
+    --font-size-lt: clamp(0.6rem, 1vw, 1rem);
 }
 
 /* 버튼 색변경 */
@@ -56,206 +57,220 @@ body {
 a {
     text-decoration: none;
     color: #000;
-    cursor: pointer;
 }
 
-/* 헤더 */
-#header {
+/* 상단 판다 마켓 로고, 로그인 버튼 */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    height: 70px;
+}
+
+.header_content {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
 }
 
-/* 사이트 로고 */
-.header-logo {
-    margin-left: 10rem;
+.header_logo {
+    margin-left: 200px;
 }
 
-/* 로그인 버튼 */
-.header-login-btn {
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 8px;
+.header_login_btn {
     margin-right: 200px;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 8px;
+    gap: 10px;
+    padding: 14px 24px;
+    text-align: center;
     color: #fff;
-    font-size: var(--font-size-lt);
+    font-size: 1rem;
     font-weight: 600;
+    line-height: 19px;
 }
 
-/* 컨테이너 ------------------------------------------------------ */
-#container {
+/* 배너, 메인 콘텐츠 */
+main {
 }
 
-/* 상단 배너 ------------------------------------------------------ */
-.banner-top {
-    position: relative;
+.container {
+}
+
+/* 상단 배너 */
+
+.banner_top {
     display: flex;
     background-color: #cfe5ff;
-    align-items: center;
+    height: 540px;
+    align-items: flex-end;
     justify-content: center;
-    overflow: hidden;
-    height: 30vw;
 }
 
-/* 상단 배너 내부 */
-.banner-top .banner-content {
-    position: relative;
-    left: -24vw;
+/* 상단 배너 콘텐츠 */
+.banner_top_content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    z-index: 1;
-}
-
-.banner-top .banner-title {
-    font-size: var(--font-size-md);
-    font-weight: 700;
-    color: #374151;
-}
-
-/* "구경하러 가기" 버튼 */
-.banner-top .banner-item-btn {
-    display: flex;
-    color: #fff;
-    border-radius: 9999px;
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    width: 18vw;
-    height: 3vw;
-    padding: 1rem 1rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner-top .banner-img {
-    position: absolute;
-    width: 55vw;
-    right: 10vw;
-    bottom: 0;
-}
-
-/* 메인 컨테이너 ------------------------------------------------------ */
-.container-content {
-    width: 70%;
-    margin: 0 auto;
-}
-
-/* content 내부 나누기 */
-.content-section {
-    display: flex;
-    align-items: center;
     justify-content: center;
     height: 100%;
-    margin: 5vw 0;
-    gap: 4vw;
+    gap: 32px;
 }
 
-/* content 이미지 */
-.content-section img {
-    flex-grow: 1;
-    width: 25vw;
+/* 상단 배너 텍스트 */
+.banner_top_text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    color: var(--gray-700);
 }
 
-/* content 내용 */
-.content-item {
+/* 상단 배너 버튼 */
+.banner_top_btn {
+    width: 355px;
+    height: 56px;
+    padding: 16px;
+    border-radius: 9999px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+}
+
+/* 상단 배너 이미지 */
+.banner_top_img {
+    width: 830px;
+}
+
+/* 메인 콘텐츠 */
+.container_content {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    width: 25vw;
-    gap: 15px;
+    width: 1200px;
+    padding: 100px 0;
+    margin: 0 auto;
+    gap: 100px;
 }
 
-/* 중간 설명 우측 정렬 */
-#right-align {
-    align-items: end;
+/* 콘텐츠 내부 */
+.content_item {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+/* 오른쪽 정렬 */
+.right_item {
     text-align: right;
 }
 
-/* 태그 */
-.content-tag {
-    margin: 0;
-    font-size: var(--font-size-lt);
+/* 콘텐츠 이미지 */
+.content_item_img {
+    width: 350px;
+    flex-grow: 1;
+}
+
+/* 콘텐츠 내용 */
+.content_item_sub {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 24px;
+}
+
+/* 콘텐츠 태그 */
+.content_tag {
+    font-size: 18px;
     font-weight: 700;
+    line-height: 25px;
     color: var(--blue);
 }
 
-/* 타이틀 */
-.content-title {
-    margin: 0;
-    font-size: var(--font-size-md);
+/* 콘텐츠 제목 */
+.content_title {
+    font-size: 40px;
     font-weight: 700;
+    line-height: 56px;
+    color: var(--gray-700);
 }
 
-/* 내용 */
-.content-description {
-    font-size: var(--font-size-sm);
+/* 콘텐츠 설명 */
+.content_description {
+    font-size: 24px;
     font-weight: 500;
+    line-height: 28px;
+    color: var(--gray-700);
+    letter-spacing: 8%;
 }
 
-/* 하단 배너 ------------------------------------------------------ */
-.banner-bottom {
-    position: relative;
+/* 하단 배너 */
+.banner_floor {
     display: flex;
     background-color: #cfe5ff;
-    align-items: center;
+    height: 540px;
+    align-items: flex-end;
     justify-content: center;
-    overflow: hidden;
-    height: 28vw;
 }
 
-.banner-bottom .banner-content {
-    position: relative;
+/* <!-- 하단 배너 텍스트 --> */
+.banner_floor_text {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    left: -27vw;
-    width: 17vw;
-    z-index: 1;
-}
-
-.banner-bottom .banner-description {
-    font-size: var(--font-size-md);
+    height: 100%;
     font-weight: 700;
-    color: #374151;
+    font-size: 40px;
+    line-height: 56px;
+    color: var(--gray-700);
 }
 
-.banner-bottom .banner-img {
-    position: absolute;
-    width: 55vw;
-    left: 18vw;
+/* 하단 배너 이미지 */
+.banner_floor_img {
+    width: 830px;
 }
 
-/* 하단 footer ------------------------------------------------------ */
-#footer {
-    background-color: #111827;
+/* 하단 */
+footer {
+    background-color: var(--gray-900);
+    height: 160px;
+}
+
+/* 하단 내부 */
+
+.footer_content {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    padding: 32px 0 80px;
+    padding-top: 30px;
 }
 
-.company {
-    font-size: var(--font-size-lt);
+.footer_copyright {
+    font-size: 16px;
     font-weight: 400;
-    color: #9ca3af;
+    line-height: 19px;
+    color: var(--gray-400);
 }
 
-#footer .middle {
+.footer_middle {
     display: flex;
-    gap: 2vw;
+    gap: 30px;
 }
 
 .privacy,
 .faq {
-    color: #e5e7eb;
-    font-size: var(--font-size-lt);
+    font-size: 16px;
     font-weight: 400;
+    line-height: 19px;
+    color: var(--gray-200);
 }
 
-.social {
+.footer_social {
     display: flex;
-    align-items: center;
-    gap: 1vw;
+    gap: 14px;
+}
+
+.facebook,
+.twitter,
+.youtube,
+.instagram {
 }
