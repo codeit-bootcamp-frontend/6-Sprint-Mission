@@ -1,0 +1,30 @@
+footer {
+  background-color: var(--gray900);
+}
+
+.footer {
+  padding-top: 32px;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px;
+  font-size: 16px;
+  font-family: pretendard;
+  font-weight: 400;
+  color: white;
+}
+
+#source {
+  color: var(--gray400);
+}
+
+#cc {
+  display: flex;
+  gap: 30px;
+}
+
+.icons {
+  height: 20px;
+  display: flex;
+  gap: 12px;
+}
