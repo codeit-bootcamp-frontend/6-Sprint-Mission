@@ -1,10 +1,10 @@
-.container {
+.main-container {
   position: relative;
   background-color: var(--skyblue);
   height: 540px;
 }
 
-.section1 {
+.main-section {
   width: 100%;
   max-width: 1200px;
   height: 540px;
@@ -13,14 +13,21 @@
   align-items: center;
 }
 
-.slogan {
+.main-box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 1;
+}
+
+.main-text {
   font-family: pretendard;
   font-weight: 700;
   font-size: 40px;
   line-height: 56px;
 }
 
-.look-around {
+.main-btn {
   width: 355px;
   height: 56px;
   background-color: var(--blue);
@@ -34,13 +41,6 @@
   cursor: pointer;
 }
 
-.box1 {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  z-index: 1;
-}
-
 .main-panda {
   width: 996px;
   position: absolute;
@@ -48,7 +48,7 @@
   right: 223px;
 }
 
-.section2 {
+.main-section2 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -58,15 +58,15 @@
   gap: 64px;
 }
 
-.section2.middle {
+.main-section2.middle {
   justify-content: flex-end;
 }
 
-.info.middle {
+.main-sec2-info.middle {
   text-align: end;
 }
 
-.category {
+.main-sec2-category {
   font-size: 18px;
   font-family: pretendard;
   font-weight: 700;
