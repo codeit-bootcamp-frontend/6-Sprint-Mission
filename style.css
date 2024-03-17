@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'ROKABold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.1/ROKABold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* flex-shrink: 0 */
+
+body {
+  font-family: 'Pretendard-Regular';
+  background-color: #dcecff;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.main-bar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  min-width: 375px;
+
+}
+
+.signin, .button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #3692FF;
+  padding: 14.5px 43px;
+  border-radius: 8px;
+  display: block;
+}
+
+.signin:hover, .button:hover {
+  background-color: #1251AA;
+  padding: 14.5px 43px;
+  border-radius: 8px;
+  /* display: block; */
+  cursor: pointer;
+}
+
+.button {
+  border-radius: 9999px;
+  width: 355px;
+  text-align: center;
+}
+
+.button:hover {
+  border-radius: 9999px;
+  width: 355px;
+  text-align: center;
+}
+
+.logo a {
+  color: #3692FF;
+  font-family: 'ROKABold';
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 30px;
+}
+
+
+.benner {
+  width: 996px;
+  height: 447px;
+  background-image: url(img/png/Img_home_top.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  position: relative;
+  left: 223px;
+  top: 93px
+}
+
+.title {
+
+  font-size: 40px;
+  font-weight: 700;
+  color: #374151;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.mini-text {
+  color: #3692FF;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: #374151;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.promotion-type1 {
+  text-align: left;
+  margin-left: 64px;
+  flex-shrink: 0
+}
+
+.promotion-type2 {
+  text-align: right;
+  margin-right: 64px;
+  flex-shrink: 0
+}
+
+.promotion {
+  background-color: #fff;
+  max-width: 1920px;
+  min-width: 370px;
+  /* display: grid;
+  max-width: 1200px;
+  max-height: 2838px;
+  grid-template-rows: repeat(3, 720px); */
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
