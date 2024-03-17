@@ -1,7 +1,16 @@
+/* color */
+
 :root {
   --main-color: #3692ff;
   --light-sky-blue: #cfe5ff;
   --footer-bg: #111827;
   --text-gray: #9ca3af;
   --text-white: #e5e7eb;
+}
+
+/* z-index */
+
+:root {
+  --title-with-img: 2;
+  --img: 1;
 }
