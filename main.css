@@ -38,7 +38,7 @@ header {
 }
 
 .main_banner {
-    width: 75rem;
+    width: 1200px;
     height: 100%;
     margin: auto;
     display: flex;
@@ -83,7 +83,7 @@ header {
     width: 100%;
 }
 
-/* home_center */
+/* Main_info */
 .main_info_wrap {
     background-color: white;
 }
@@ -235,4 +235,156 @@ footer img {
     width: 9.9375rem;
     display: flex;
     justify-content: space-between;
+}
+
+/* tablet */
+@media (max-width: 767px) {
+    /* header */
+
+    .header_wrap {
+        margin: 10px 30px;
+    }
+
+    .logo {
+        width: 7.5rem;
+        height: 2.5rem;
+    }
+
+    .header_wrap button {
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* main banner */
+
+    .main_banner_bg {
+        height: 300px;
+    }
+    .main_banner {
+        width: 650px;
+    }
+
+    .main_banner .wrap {
+        width: 355px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .main_banner span {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    .main_banner button {
+        width: 15rem;
+        height: 3rem;
+        border-radius: 2.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1rem;
+    }
+
+    .main_banner_img {
+        width: 500px;
+        height: 100%;
+    }
+
+    .main_banner img {
+        width: 110%;
+        height: 85%;
+    }
+
+    /* Main info */
+
+    .main_info_background {
+        margin: auto;
+        width: 600px;
+    }
+
+    .main_info {
+        height: 400px;
+        gap: 2rem;
+    }
+
+    .main_info img,
+    .main_info_second img {
+        height: 280px;
+    }
+
+    .main_info .text_wrap {
+        gap: 0.4rem;
+    }
+
+    .main_info .blue-title,
+    .main_info_second .blue-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1rem;
+    }
+
+    .main_info .title,
+    .main_info_second .title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+    }
+
+    .main_info .description,
+    .main_info_second .description {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.2rem;
+    }
+
+    .main_info_second {
+        gap: 2rem;
+    }
+
+    /* home_bottom */
+    .bottom_banner {
+        background-color: var(--color-background);
+        height: 300px;
+    }
+
+    .bottom_banner_wrap {
+        margin: auto;
+        width: 650px;
+        height: 100%;
+    }
+
+    .bottom_banner .img_wrap {
+        width: 550px;
+        height: 300px;
+    }
+
+    .bottom_banner .title_wrap {
+        height: 300px;
+    }
+
+    .bottom_banner .title {
+        width: 220px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+    }
+
+    /* footer */
+
+    .footer_wrap {
+        width: 95rem;
+        padding: 1.5rem 10rem;
+        line-height: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    .privacy_footer {
+        margin: auto;
+        flex-direction: column;
+        line-height: 2rem;
+    }
 }
