@@ -8,26 +8,20 @@
   body {
     width: 1920px;
     height: 3608px;
-    top: -1840px;
-    left: -938px;
-    background: #FFFFFF;
+    background: #fff;
   }
 
   header {
-    width: 1920px;
-    padding: 10px 200px 9px 200px;
+    width: 100%;
+    padding: 4px 200px 8px;
     height: 70px;
-    border: 0 0 1px 0;
-    color: #ffffff;
+    color: #fff;
     border-bottom: 1px solid #DFDFDF;
   }
 
 .header_imgage {
-    width: 1,520px;
-    height: 51px;
-    top: 10px;
-    left: 200px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -35,4 +29,9 @@ header > .button {
   width: 128px;
   height: 48px;
   border-radius: 8px;
+}
+
+header > .logo {
+  width: 153px;
+  height: 51px;
 }
