@@ -5,6 +5,7 @@
 }
 
 .main-section {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   height: 540px;
@@ -45,7 +46,7 @@
   width: 996px;
   position: absolute;
   bottom: 0;
-  right: 223px;
+  right: -223px;
 }
 
 .main-section2 {
