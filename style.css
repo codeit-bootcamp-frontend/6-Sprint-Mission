@@ -2,8 +2,10 @@
   box-sizing: border-box;
 }
 
-header {
+.header {
   display: flex;
+  position: sticky;
+  top: 10px;
   max-width: 1920px;
   width: auto;
   height: 51px;
