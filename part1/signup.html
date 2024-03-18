@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로그인</title>
+  <title>회원가입</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./auth.css">
 </head>
@@ -18,11 +18,20 @@
         <input type="email" placeholder="이메일을 입력해주세요">
       </div>
       <div class="form_label">
+        <label for="nickname">닉네임</label>
+        <input type="text" placeholder="닉네임을 입력해주세요">
+      </div>
+      <div class="form_label">
         <label for="password">비밀번호</label>
         <input type="password" placeholder="비밀번호를 입력해주세요" class="password" >
         <img src="./img/icon_visibility.png" alt="passwordicon" class="passwordicon">
       </div>
-      <button id="btn_large" class="login">로그인</button>
+      <div class="form_label">
+        <label for="password">비밀번호 확인</label>
+        <input type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" class="password" >
+        <img src="./img/icon_visibility.png" alt="passwordicon" class="passwordicon">
+      </div>
+      <button id="btn_large" class="login">회원가입</button>
     </form>
     <div class="easylogin">
       <p class="text">간편 로그인하기</p>
@@ -32,8 +41,8 @@
       </div>
     </div>
     <div class="signup">
-      <p>판다마켓이 처음이신가요?</p>
-      <a href="./signup.html">회원가입</a>
+      <p>이미 회원이신가요?</p>
+      <a href="./signin.html">로그인</a>
     </div>
   </div>
 </body>
