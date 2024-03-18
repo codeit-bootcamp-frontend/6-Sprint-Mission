@@ -57,7 +57,7 @@
 
 .login_btn {
   /* 버튼 배경 */
-  width: 128px;
+  min-width: 128px;
   height: 48px;
   padding: 14.5px 43px;
   border-radius: 8px;
