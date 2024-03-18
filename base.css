@@ -1,0 +1,63 @@
+:root {
+    /* background-color */
+    --color-background: #cfe5ff;
+    --color-skyblue-btn-background: #e6f2ff;
+
+    /* color */
+    /* --color-gray900: #1b1d1f;
+    --color-gray800: #26282b;
+    --color-gray600: #454c53;
+    --color-gray500: #72787f;
+    --color-gray400: #9ea4a8;
+    --color-gray200: #e5e7eb;
+    --color-gray100: #e8ebed;
+    --color-gray50: #f7f7f8; */
+
+    --color-cool-gray100: #f3f4f6;
+    --color-cool-gray200: #e5e7eb;
+    --color-cool-gray400: #9ca3af;
+    --color-cool-gray600: #4b5563;
+    --color-cool-gray700: #374151;
+    --color-cool-gray800: #1f2937;
+    --color-cool-gray900: #111827;
+
+    --color-brand-blue: #3692ff;
+    --color-error-red: #f74747;
+
+    --color-alink-blue: #3182f6;
+
+    /* button color */
+    --button-hover-color-blue1: #3792ff;
+    --button-hover-color-blue2: #1867d6;
+    --button-hover-color-blue3: #1151aa;
+    --button-hover-color-gray: #9da3af;
+
+    --color-white: #ffffff;
+    --color-pink: #ff68cc;
+
+    /* button size */
+    --button-login-width: 128px;
+    --button-login-height: 48px;
+
+    /* Desktop input */
+    --desktop-input-width: 640px;
+    --desktop-input-height: 56px;
+
+    --input-border-radius: 12px;
+    --input-background-color-gray100: var(--color-gray100);
+    --input-font-color-gray400: var(--color-cool-gray400);
+    --input-font-color-black: var(--color-gray800);
+    --input-font-size: 16px;
+}
+
+body {
+    font-family: 'pretendard', sans-serif;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
