@@ -1,14 +1,6 @@
 /* :root {
-  font-size: 18px;
+ font-size: 18px;
 } */
-
-body {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .container {
   display: flex;
@@ -45,14 +37,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
-  max-width: 1920px;
+  width: 100%;
+  max-width: 1520px;
 }
 
-.gnb-inner__logo {
+.gnb-inner__logo img {
   display: block;
-  width: 150px;
-  height: 41px;
+  width: 153px;
+  height: 51px;
 }
 
 /* banner 구역 */
@@ -68,13 +60,13 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 1920px;
+  width: 1520px;
   height: 540px;
 }
 
 .banner-inner__img {
   position: absolute;
-  right: 10vw;
+  right: 0;
   bottom: 0;
 }
 
@@ -154,7 +146,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  max-width: 1920px;
+  max-width: 1520px;
   padding: 32px 200px;
 }
 
