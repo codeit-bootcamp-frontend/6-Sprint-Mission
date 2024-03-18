@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,45 +31,43 @@
   <link rel="icon" href="assets/images/signature.png">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
   <header>
-      <nav>
-        <h1>
-          <a class="logo" href="/">
-            <img class="logo-img" src="assets/images/logo.png" alt="홈페이지로 이동"/>
+      <nav class="header__nav">
+        <a class="logo__link" href="/">
+          <h1 class="sr-only">
             판다마켓
-          </a>
-        </h1>
-        <a class="login-button" href="login.html">
+          </h1>
+          <img class="logo__img" src="assets/images/logo.png" alt="판다마켓 홈페이지로 이동"/>
+        </a>
+        <a class="login__button" href="login.html">
           로그인
         </a>
       </nav>
-      <div class="head-banner">
-        <div class="wrap head-banner-wrap">
-          <div class="head-banner-contents">
+      <div class="header-banner">
+        <div class="wrap header-banner__wrap">
+          <div class="header-banner__contents">
             <p class="headline">
               일상의 모든 물건을<br> 거래해 보세요
             </p>
-            <a class="head-banner-button" href="items.html">
+            <a class="header-banner__button" href="items.html">
               구경하러 가기
             </a>  
           </div>
-          <img class="head-banner-img" src="assets/images/Img_home_top.png" alt="홈페이지 배너"/>
+          <img class="header-banner__img" src="assets/images/Img_home_top.png" alt="홈페이지 배너"/>
         </div>
       </div>
   </header>
-
   <main>
     <!-- hot item -->
     <section>
-      <img src="assets/images/Img_home_01.png" alt="인기 상품 안내"/>
-      <div class="description">
-        <h2>
+      <img class="section__img" src="assets/images/Img_home_01.png" alt="인기 상품 안내"/>
+      <div>
+        <h2 class="section__title">
           Hot item
         </h2>
-        <p>
-          <span class="headline">
+        <p class="section__desc">
+          <span class="section__headline headline">
             인기 상품을<br/>
             확인해 보세요
           </span>
@@ -79,14 +77,14 @@
       </div>
     </section>
     <!-- search -->
-    <section class="flex-reverse">
-      <img src="assets/images/Img_home_02.png" alt="검색 기능 안내"/>
-      <div class="description">
-        <h2>
+    <section class="section__search__flex-reverse">
+      <img class="section__img" src="assets/images/Img_home_02.png" alt="검색 기능 안내"/>
+      <div>
+        <h2 class="section__title">
           Search
         </h2>
-        <p>
-          <span class="headline">
+        <p class="section__desc">
+          <span class="section__headline headline">
             구매를 원하는<br/>
             상품을 검색하세요
           </span>
@@ -97,13 +95,13 @@
     </section>
     <!-- Register -->
     <section>
-      <img src="assets/images/Img_home_03.png" alt="상품 등록 안내"/>
-      <div class="description">
-        <h2>
+      <img class="section__img" src="assets/images/Img_home_03.png" alt="상품 등록 안내"/>
+      <div>
+        <h2 class="section__title">
           Register
         </h2>
-        <p>
-          <span class="headline"> 
+        <p class="section__desc">
+          <span class="section__headline headline"> 
             판매를 원하는<br/>
             상품을 등록하세요
           </span>
@@ -113,38 +111,36 @@
       </div>
     </section>
   </main>
-
   <!-- 하단 광고 배너 -->
   <aside>
-    <div class="wrap">
-      <p class="headline">
+    <div class="bottom-banner wrap">
+      <p class="bottom-banner__headline headline">
         믿을 수 있는<br/>
         판다마켓 중고거래
       </p>
-      <img src="assets/images/Img_home_bottom.png" alt="판다마켓 광고 배너"/>
+      <img class="bottom-banner__img" src="assets/images/Img_home_bottom.png" alt="판다마켓 광고 배너"/>
     </div>
   </aside>
-
   <footer>
-    <p>
+    <p class="footer__info">
       ©codeit - 2024
     </p>
     <nav>
-      <ul class="policy-list">
+      <ul class="footer__list footer__policy-list">
         <li>
-          <a href="privacy.html">
+          <a class="footer__privacy-link" href="privacy.html">
             Privacy Policy
           </a>
         </li>
         <li>
-          <a href="faq.html">
+          <a class="footer__privacy-link" href="faq.html">
             FAQ
           </a>
         </li>
       </ul>
     </nav>
     <nav>
-      <ul class="sns-list">
+      <ul class="footer__list footer__sns-list">
         <li>
           <a href="https://www.facebook.com/" target="_blank">
             <img src="assets/images/icon/ic_facebook.svg" alt="페이스북으로 이동"/>

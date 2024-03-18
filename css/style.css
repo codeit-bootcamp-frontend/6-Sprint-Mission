@@ -1,8 +1,7 @@
 @import "reset.css";
+@import "common.css";
 
-/* TODO: 반응형 크기 조정 */
-
-/* 배너 및 컨텐츠 헤드라인 글귀 */
+/* 배너 및 컨텐츠 헤드라인 폰트 */
 .headline {
     font-size: 40px;
     font-weight: 700;
@@ -10,30 +9,26 @@
     color: #374151;
 }
 
-/* header */
-nav {
+.header__nav {
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h1 {
-    margin-left: 200px;
-}
-
-.logo {
+.logo__link {
     display: block;
     width: 153px;
     height: 51px;
     font-size: 0;
+    margin-left: 200px;
 }
 
-.logo-img {
+.logo__img {
     width: 100%;
 }
 
-.login-button {
+.login__button {
     margin-right: 200px;
     display: inline-block;
     border-radius: 8px;
@@ -44,30 +39,26 @@ nav h1 {
     color: #fff;
 }
 
-.head-banner {
+.header-banner {
     height: 540px;
     width: 100vw;
     background-color: #cfe5ff;
     border-top: 1px solid #dfdfdf;
 }
 
-.head-banner-wrap {
+.header-banner__wrap {
     width: 1200px;
     height: 100%;
     position: relative;
 }
 
-.head-banner-contents {
+.header-banner__contents {
     position: absolute;
     top: 170px;
     left: 0;
 }
 
-.head-banner p {
-    width: 100%;
-}
-
-.head-banner-button {
+.header-banner__button {
     /* TODO: 버튼 크기 조정 */
     display: inline-block;
     padding: 16px 124px;
@@ -81,7 +72,7 @@ nav h1 {
     text-align: center;
 }
 
-.head-banner-img {
+.header-banner__img {
     width: 996px;
     height: 447px;
     position: absolute;
@@ -89,9 +80,8 @@ nav h1 {
     bottom: 0;
 }
 
-/* main */
 main, .wrap {
-    width: 120rem;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -103,25 +93,25 @@ section {
     gap: 64px;
 }
 
-section img {
+.section__img {
     width: 588px;
 }
 
-section h2 {
+.section__title {
     font-size: 18px;
     font-weight: 700;
     line-height: 25px;
     color: #3692ff;
 }
 
-section p {
+.section__desc {
     font-size: 24px;
     font-weight: 500;
     line-height: 28.8px;
     color: #374151;
 }
 
-section p span {
+.section__headline {
     display: block;
     font-size: 40px;
     font-weight: 700;
@@ -130,11 +120,10 @@ section p span {
     margin: 24px 0;
 }
 
-.flex-reverse {
+.section__search__flex-reverse {
     flex-direction: row-reverse;
 }
 
-/* aside */
 aside {
     width: 100vw;
     height: 540px;
@@ -142,18 +131,18 @@ aside {
     margin-top: 241px;
 }
 
-aside > div {
+.bottom-banner {
     height: 540px;
     position: relative;
 }
 
-aside .headline {
+.bottom-banner__headline {
     position: absolute;
     top: 214px;
     left: 0;
 }
 
-aside img {
+.bottom-banner__img {
     width: 996px;
     height: 540px;
     position: absolute;
@@ -161,7 +150,6 @@ aside img {
     right: -150px;
 }
 
-/* footer */
 footer {
     width: 100vw;
     height: 160px;
@@ -173,26 +161,26 @@ footer {
     /* TODO: 위치 조정 */
 }
 
-footer p {
+.footer__info {
     font-size: 16px;
     font-weight: 400;
     color: #9ca3af;
 }
 
-footer nav ul {
+.footer__list {
     display: flex;
 }
 
-.policy-list {
+.footer__policy-list {
     gap: 30px;
 }
 
-.policy-list a {
+.footer__privacy-link {
     font-size: 16px;
     font-weight: 400;
     color: #e5e7eb;
 }
 
-.sns-list {
+.footer__sns-list {
     gap: 12px;
 }
