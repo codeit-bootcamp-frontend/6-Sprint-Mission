@@ -20,6 +20,7 @@
   --bannerbg: #cfe5ff;
   --loginbg: #e6f2ff;
 }
+
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -33,14 +34,17 @@
   font-family: "Pretendard-Regular";
   color: var(--gray700);
 }
+
 html {
   height: 100%;
 }
+
 body {
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
+
 /* 버튼 스타일링 */
 button {
   background-color: var(--btn1);
@@ -48,6 +52,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 #btn_small {
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
@@ -55,6 +60,7 @@ button {
   height: 48px;
   font-size: 16px;
 }
+
 #btn_large {
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
@@ -62,11 +68,12 @@ button {
   height: 56px;
   font-size: 20px;
 }
+
 #btn_small:hover,
 #btn_large:hover {
   background-color: var(--btn2);
 }
-/* a태그 텍스트 스타일 제거 */
+
 a {
   text-decoration: none;
   color: inherit;

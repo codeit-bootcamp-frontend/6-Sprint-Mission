@@ -7,12 +7,15 @@
   justify-content: center;
   align-items: center;
 }
+
 .logo {
   width: 20rem;
 }
+
 form {
   width: 35rem;
 }
+
 .form_label {
   display: flex;
   flex-direction: column;
@@ -20,11 +23,13 @@ form {
   margin: 1rem 0;
   position: relative;
 }
+
 label {
   font-size: 18px;
   color: var(--gray700);
   font-weight: 700;
 }
+
 input {
   background-color: var(--coolgray100);
   border: none;
@@ -33,16 +38,20 @@ input {
   padding: 1rem;
   font-size: 16px;
 }
+
 input:focus {
   outline-color: var(--btn1);
 }
+
 .login {
   width: 100% !important;
   background-color: var(--btn4);
 }
+
 .login:hover {
   background-color: var(--main) !important;
 }
+
 .passwordicon {
   width: 24px;
   height: 24px;
@@ -51,6 +60,7 @@ input:focus {
   left: 32rem;
   cursor: pointer;
 }
+
 .easylogin {
   display: flex;
   flex-direction: row;
@@ -62,15 +72,18 @@ input:focus {
   justify-content: space-between;
   align-items: center;
 }
+
 .icons {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
+
 .icons img {
   width: 42px;
   height: 42px;
 }
+
 .signup {
   display: flex;
   flex-direction: row;
@@ -78,14 +91,15 @@ input:focus {
   align-items: center;
   gap: 0.5rem;
 }
+
 .signup a {
   color: var(--main);
 }
+
 .signup p {
   display: inline-block;
   width: max-content;
 }
-
 
 @media (min-width: 100px) and (max-width: 1200px) {
   .container {
