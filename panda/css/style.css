@@ -1,14 +1,14 @@
 /* 헤더부분 */
-/* fixed는 2번째 미션인데 처음에 만들때 나도모르게 만들어버림; */
 header {
     height: 70px;
     width: 100%;
-    /* position: fixed;
-    top: 0; */
+    position: fixed;
+    top: 0;
     padding: 0 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #ffffff;
 }
 
 header .login {
@@ -27,11 +27,11 @@ header .login {
 /* 헤더부분 */
 
 main {
-    /* margin-top: 70px; */
+    margin-top: 70px;
     width: 100%;
 }
 
-.sec-1 {
+.section-1 {
     background-color: var(--bgcolor);
     width: 100%;
     height: 540px;
@@ -43,7 +43,7 @@ main {
     background-size: 55%;
 }
 
-.sec-1>div {
+.section-1>div {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
@@ -66,7 +66,7 @@ main {
     align-items: center;
 }
 
-.sec-2 {
+.section-2 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -107,7 +107,7 @@ main {
     color: var(--cool_gray700);
 }
 
-.sec-3 {
+.section-3 {
     background-color: var(--bgcolor);
     height: 540px;
     width: 100%;
@@ -119,7 +119,7 @@ main {
     background-size: 55%;
 }
 
-.sec-3>div {
+.section-3>div {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
