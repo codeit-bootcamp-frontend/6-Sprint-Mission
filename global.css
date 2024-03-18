@@ -28,30 +28,6 @@
     format('woff');
 }
 
-@media (max-width: 1023px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 1023px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 767px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 479px) {
-  html {
-    font-size: 11px;
-  }
-}
-
 body {
   font-family: 'Pretendard-Regular';
 }
