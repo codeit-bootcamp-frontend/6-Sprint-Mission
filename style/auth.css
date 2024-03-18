@@ -101,7 +101,7 @@ input:focus {
   width: max-content;
 }
 
-@media (min-width: 100px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .container {
     padding: 10rem auto;
   }
@@ -112,20 +112,20 @@ input:focus {
     display: inline-block;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .logo {
     width: 15rem;
   }
   .container {
-    padding: 10rem 0;
+    padding: 10rem 16px;
   }
   form {
-    width: 20rem;
+    width: 25rem;
   }
   .easylogin {
-    width: 20rem;
+    width: 25rem;
   }
   .passwordicon {
-    left: 17rem;
+    left: 22rem;
   }
 }

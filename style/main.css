@@ -36,7 +36,6 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1920px;
   margin: auto;
 }
 
@@ -170,27 +169,35 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 40rem;
-  
 }
 
-@media (min-width: 100px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   header {
+    padding: 0 24px;
     gap: 1rem;
   }
+  .s1 {
+    height: 40rem;
+  }
   .banner {
-    padding: 0 500px;
+    margin: 0 500px;
+    flex-direction: column;
   }
   .banner2 {
+    margin-top: 3rem;
     padding: 0 300px;
     display: flex;
     flex-direction: column;
   }
   .home_img1 {
-    width: 700px;
+    width: 600px;
     position: relative;
-    bottom: -65px;
+    top: -29px;
   }
-
+  .imgs {
+    width: 888px;
+    height: 744px;
+  }
   .home_img2 {
     width: 700px;
     position: relative;
@@ -198,23 +205,32 @@ footer {
   }
   .para {
     flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
   }
   .para.left {
     flex-direction: column-reverse;
+    align-items: flex-end;
   }
   .nav2 {
     gap: 20rem;
   }
+  .text {
+    display: flex;
+    justify-content: left;
+  }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 767px) {
   header {
-    justify-content: center;
-    gap: 5rem;
+    padding: 0 24px;
+    gap: 3rem;
+  }
+  #btn_small {
+    width: 100px;
   }
   .banner {
     flex-direction: column;
-    padding: 0 200px;
   }
   .home_img1 {
     width: 400px;
@@ -233,13 +249,19 @@ footer {
   }
   .para {
     flex-direction: column;
+    margin: 0;
     gap: 0;
   }
+  .para.left {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
   .imgs {
-    width: 300px;
+    width: 400px;
   }
   .banner2 {
     padding: 0 100px;
+    flex-direction: column;
   }
   footer {
     padding: 1rem 0;
@@ -257,5 +279,9 @@ footer {
   .year {
     position: relative;
     left: -105px;
+  }
+  #btn_small {
+    width: auto;
+    white-space: nowrap;
   }
 }
