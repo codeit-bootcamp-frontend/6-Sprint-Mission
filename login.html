@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- facebook -->
+  <meta
+    name="description"
+    content="일상의 모든 물건을 거래해 보세요"
+  >
+  <meta property="og:image" content="assets/images/signature.png">
+  <meta property="og:title" content="판다마켓">
+  <meta
+      property="og:description"
+      content="일상의 모든 물건을 거래해 보세요"
+  >
+  <meta property="og:url" content="https://hazepanda.netlify.app">
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/images/signature.png">
+  <meta
+      name="twitter:title"
+      content="판다마켓"
+  >
+  <meta
+      name="twitter:description"
+      content="일상의 모든 물건을 거래해 보세요"
+  >
+  <title>판다마켓</title>
+  <link rel="icon" href="assets/images/signature.png">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-    로그인 페이지
+    <header class="header">
+        <a class="logo" href="/">
+            <h1 class="sr-only">
+              판다마켓
+            </h1>
+            <img class="logo__img" src="assets/images/logo.png" alt="판다마켓 홈페이지로 이동"/>
+          </a>
+    </header>
+    <main class="login-container">
+        <form class="login-form" action="#" method="post">
+            <label for="email">
+                이메일
+            </label>
+            <input id="email" type="email" value="이메일을 입력해주세요">
+            <label for="password">비밀번호</label>
+            <input id="password" type="password" value="비밀번호를 입력해주세요">
+            <button type="submit">로그인</button>
+        </form>
+        <div class="easy-login">
+            <p class="easy-login__desc">
+                간편 로그인하기
+            </p>
+            <a class="easy-login__icon" href="https://www.google.com/" target="_blank">
+                <img class="easy-login__icon-img" src="assets/images/icon/google.png">
+            </a>
+            <a class="easy-login__icon" href="https://www.kakaocorp.com/page/" target="_blank">
+                <img class="easy-login__icon-img" src="assets/images/icon/kakao.png">
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__signin">
+            판다마켓이 처음이신가요?
+            <a href="signup.html">
+                회원가입
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
