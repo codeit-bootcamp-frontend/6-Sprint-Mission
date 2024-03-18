@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 200px
+}
+
+.login_btn {
+    width: 128px;
+    height: 48px;
+    color: #ffffff;
+    background-color: #3692FF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "pretendard";
+    font-size: 16px;
+    font-weight: 600;
+}
