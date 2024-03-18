@@ -162,7 +162,8 @@ header {
 
 /* main */
 
-.main-first {
+.main-odd,
+.main-even {
     display: flex;
     margin: 138px auto;
     width: 1200px;
@@ -170,39 +171,29 @@ header {
     align-items: center;
 }
 
-.main-first-text {
-    display: flex;
-    flex-direction: column;  
-}
-
-.main-second {
-    display: flex;
-    margin: 138px auto;
-    width: 1200px;
-    gap: 64px;
-    align-items: center;
+.main-even {
     flex-direction: row-reverse;
 }
 
-.main-second-text {
+.main-odd-textbox,
+.main-even-textbox {
     display: flex;
     flex-direction: column;  
+}
+
+.main-even-textbox {
     align-items: flex-end;
 }
 
-.main-first-text1 {
+.main-basis-text1 {
     color: var(--primary-color);
     font-size: 18px;
     line-height: 25.2px;
     font-weight: 700;
 }
 
-.main-first-text-box {
-    margin-top: 12px;
-    margin-bottom: 24px;
-}
-
-.main-first-text2 {
+.main-odd-text2,
+.main-even-text2 {
     color: var(--text-color);
     font-size: 40px;
     line-height: 56px;
@@ -212,7 +203,10 @@ header {
     margin-bottom: 24px;
 }
 
-.main-first-text3 {
+
+
+.main-odd-text3,
+.main-even-text3 {
     color: var(--text-color);
     font-size: 24px;
     line-height: 28.8px;
@@ -220,24 +214,8 @@ header {
     letter-spacing: 8%;
 }
 
-.main-second-text2 {
-    color: var(--text-color);
-    font-size: 40px;
-    line-height: 56px;
-    font-weight: 700;
-    letter-spacing: 2%;
-    text-align: right;
-    margin-top: 12px;
-    margin-bottom: 24px;
-    text-align: right;
-}
-
-.main-second-text3 {
-    color: var(--text-color);
-    font-size: 24px;
-    line-height: 28.8px;
-    font-weight: 500;
-    letter-spacing: 8%;
+.main-even-text2,
+.main-even-text3 {
     text-align: right;
 }
 
