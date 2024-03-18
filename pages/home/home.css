@@ -186,7 +186,6 @@ header {
 .bottom_banner_text {
     width: 1200px;
     display: flex;
-    /* justify-content: center; */
     gap: 32px;
     z-index: 999;
 }
@@ -202,8 +201,8 @@ header {
 
 .bottom_banner_img {
     position: absolute;
-    bottom: -1.5px;
-    right: 10%;
+    bottom: -2px;
+    right: 100px;
 }
 
 .bottom_banner_img img {
