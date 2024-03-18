@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 200px;
+    flex: 0 1 auto;
+    /*gap: calc();*/
+}
+
+header > .login {
+    font-family: "Pretendard";
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    padding-block: 14px;
+    text-align: center;
+    background-color: #3692FF;
+    color: #fff;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+header > .title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header > .title > .name > a {
+    font-family: "ROKAF Bold";
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 34.6px;
+    color: #3692FF;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template: 540px 720px 720px 720px 540px / 1fr;
+}
+
+.footer {
+    width: inherit;
+    height: 160px;
+    display: grid;
+    background-color: #111827;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    padding: 32px 200px;
+}
+
+.footer > .codeit {
+    font-family: "Pretendard";
+    font-size: 1em;
+    line-height: 19.09px;
+}
+
+.footer > .codeit.copyright {
+    color: #9CA3AF;
+}
+
+.footer > .codeit.faqs {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+    justify-content: center;
+}
+
+.footer > .codeit.faqs > a {
+    color: #E5E7EB;
+    text-decoration: none;
+}
+
+.footer > .codeit.sns {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-auto-columns: 20px;
+    justify-content: center;
+    gap: 9px;
+}
+
+.panda {
+    background-color: #CFE5FF;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.panda.intro {
+    padding-inline: 404px 195px;
+}
+
+.panda.banner {
+    padding-inline: 329px 270px;
+}
+
+.panda.intro > div,
+.panda.banner > h2
+{
+    display: flex;
+    font-family: "pretendard";
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 35%;
+    /*gap: calc();*/
+}
+
+.panda.intro > div > h2,
+.panda.banner > h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 56px;
+    padding-bottom: 20px;
+}
+
+/*
+*이렇게 클래스 이름이 아닌 규칙 준 이유는 CSS 내 0-0-0 규칙 상 때문에 클래스 이름을 되도록 주지 않았습니다.
+*/
+.panda.intro > div > a {
+    width: 356px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: #3692FF;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding-block: 16px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.panda.intro > img {
+    width: 996px;
+    height: 447px;
+    background-size: 996px 447px;
+}
+
+.panda-section {
+    display: flex;
+    justify-content: center;
+    padding-block: 138px;
+    gap: 0px 64px;
+}
+
+.panda-section > div {
+    display: flex;
+    font-family: "pretendard";
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12px;
+}
+
+.panda-section > div > h2,
+.panda-section > div > h3 {
+    font-weight: 700;
+}
+
+.panda-section > div > h2 {
+    font-size: 1.125em;
+    line-height: 25.2px;
+    color: #3692FF;
+    letter-spacing: 1px;
+}
+
+.panda-section > div > h3 {
+    font-size: 2.5em;
+    line-height: 56px;
+}
+
+.panda-section > div > p {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 28.8px;
+    letter-spacing: 3px;
+    padding-block-start: 12px;
+}
+
+.panda-section.left-start {
+    padding-inline-end: 190px;
+}
+.panda-section.right-start {
+    flex-flow: row-reverse;
+    text-align: right;
+    padding-inline-start: 190px;
+}
