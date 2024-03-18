@@ -22,6 +22,16 @@ header button{
   height:48px;
   border-radius:8px;
 }
+  @media screen and (max-width: 1200px) {
+    header{
+      padding:10px 24px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    header{
+      padding:16px;
+    }
+  }
 /****************** CSS seting *********************/
 .container{
   margin:0 auto;
@@ -98,8 +108,13 @@ button{
   justify-content:center;
   flex-basis:50%;
 }
+.introduction:nth-child(2n) img {
+  text-align:right;
+  order:2;
+}
 .introduction:nth-child(2n) .intro_txt {
   text-align:right;
+  order:1;
 }
 .introduction .intro_txt span{
   font-size:18px;
@@ -135,6 +150,37 @@ button{
   font-weight:700;
   color:var(--cool_gray);
 }
+  @media screen and (max-width: 1200px) {
+    .main_banner{
+      height:770px;
+      background-position:center bottom;
+    }
+    .main_banner .banner_wrap .banner_txt{
+      width:100%;
+      text-align:center;
+    }
+    .introduction{
+      padding:16px;
+      flex-direction:column;
+    }
+    .introduction .intro_txt{
+      padding:16px 0 0 0;
+    }
+    .introduction:nth-child(2n) img {
+      text-align:right;
+      order:1;
+    }
+    .introduction:nth-child(2n) .intro_txt {
+      text-align:right;
+      order:2;
+    }
+    .bottom_banner{
+      height:927px;
+    }
+    .bottom_banner .container{
+      text-align:center;
+    }
+  }
 /****************** footer *********************/
 footer{
   padding:32px 200px;
@@ -184,11 +230,6 @@ footer .footer_wrap .sns_link ul{
   font-weight:700;
   color:#1F2937;
 }
-.user_form_wrap .form_wrap input{
-  padding:20px;
-  border-radius:12px;
-  background-color:var(--cool_tray_lignt);
-}
 
 .user_form_wrap .form_wrap button{
   padding:20px 0;
@@ -211,6 +252,21 @@ footer .footer_wrap .sns_link ul{
   width:100%;
   max-width:600px;
   background-color:var(--brand_sky_light);
+}
+.user_form_wrap .form_wrap .input_wrap{
+  padding:20px;
+  display:flex;
+  flex-direction:space-between;
+  align-items:center;
+  border-radius:12px;
+  background-color:var(--cool_tray_lignt);
+}
+.user_form_wrap .form_wrap .input_wrap input{
+  flex-grow:1;
+  background:none;
+}
+.user_form_wrap .form_wrap .input_wrap input:focus{
+  border-bottom:1px solid var(--brand_blue);
 }
 .sns_login_wrap p{
   font-weight:500;
