@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 
 a {
     cursor: pointer;
@@ -11,7 +9,6 @@ header {
     justify-content: space-between;
     padding: 11px 200px;
     flex: 0 1 auto;
-    /*gap: calc();*/
 }
 
 header > .login {
@@ -44,11 +41,13 @@ header > .title > .name > a {
 }
 
 main {
-    display: grid;
-    grid-template: 540px 720px 720px 720px 540px / 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer {
+footer {
     width: inherit;
     height: 160px;
     display: grid;
@@ -58,29 +57,29 @@ main {
     padding: 32px 200px;
 }
 
-.footer > .codeit {
+footer > .codeit {
     font-family: "Pretendard";
     font-size: 1em;
     line-height: 19.09px;
 }
 
-.footer > .codeit.copyright {
+footer > .codeit.copyright {
     color: #9CA3AF;
 }
 
-.footer > .codeit.faqs {
+footer > .codeit.faqs {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 30px;
     justify-content: center;
 }
 
-.footer > .codeit.faqs > a {
+footer > .codeit.faqs > a {
     color: #E5E7EB;
     text-decoration: none;
 }
 
-.footer > .codeit.sns {
+footer > .codeit.sns {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-auto-columns: 20px;
@@ -97,14 +96,6 @@ main {
     align-items: flex-end;
 }
 
-.panda.intro {
-    padding-inline: 404px 195px;
-}
-
-.panda.banner {
-    padding-inline: 329px 270px;
-}
-
 .panda.intro > div,
 .panda.banner > h2
 {
@@ -114,7 +105,6 @@ main {
     flex-direction: column;
     justify-content: center;
     bottom: 35%;
-    /*gap: calc();*/
 }
 
 .panda.intro > div > h2,
@@ -149,6 +139,7 @@ main {
 
 .panda-section {
     display: flex;
+    max-width: 1200px;
     justify-content: center;
     padding-block: 138px;
     gap: 0px 64px;
