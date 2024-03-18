@@ -180,3 +180,87 @@ footer>.FAQ>a {
     cursor: default;
     pointer-events: none;
 }
+
+/* singin.html */
+.signin-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.signin-logo {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.signin-label {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 16px 24px;
+    border: none;
+    background-color: var(--bg_label);
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.signin-form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-pwd {
+    position: relative;
+}
+
+.signin-btn {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 15px 100px;
+    background-color: var(--blue1);
+    border: none;
+    color: white;
+}
+
+.pwd-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 24px 0;
+    background-color: var(--bg_social);
+    color: var(--cool_gray800);
+    border-radius: 8px;
+}
+
+.social-login-img {
+    display: flex;
+    gap: 20px;
+}
+
+.switch-signup {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+
+.switch-signup>a {
+    color: var(--signup-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
