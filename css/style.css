@@ -1,5 +1,5 @@
-@import "reset.css";
-@import "common.css";
+@import "../common/reset.css";
+@import "../common/common.css";
 
 /* 배너 및 컨텐츠 헤드라인 폰트 */
 .headline {
