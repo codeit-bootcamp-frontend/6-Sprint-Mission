@@ -96,7 +96,7 @@ input::placeholder {
   left: 16px;
   width: 24px;
   height: 24px;
-  background-image: url(/icon/search.svg);
+  background-image: url(./icon/search.svg);
 }
 
 .icon-toggle::before {
@@ -106,7 +106,7 @@ input::placeholder {
   right: 20px;
   width: 24px;
   height: 24px;
-  background-image: url(/icon/toggle.svg);
+  background-image: url(./icon/toggle.svg);
 }
 
 /* input option */
@@ -236,7 +236,7 @@ input::placeholder {
   margin-bottom: 16px;
   width: 24px;
   height: 24px;
-  background-image: url(/icon/check.svg);
+  background-image: url(./icon/check.svg);
 }
 
 .modal p {
