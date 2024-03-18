@@ -1,0 +1,198 @@
+@import "reset.css";
+
+/* TODO: 반응형 크기 조정 */
+
+/* 배너 및 컨텐츠 헤드라인 글귀 */
+.headline {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #374151;
+}
+
+/* header */
+nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin-left: 200px;
+}
+
+.logo {
+    display: block;
+    width: 153px;
+    height: 51px;
+    font-size: 0;
+}
+
+.logo-img {
+    width: 100%;
+}
+
+.login-button {
+    margin-right: 200px;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background-color: #3692ff;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.head-banner {
+    height: 540px;
+    width: 100vw;
+    background-color: #cfe5ff;
+    border-top: 1px solid #dfdfdf;
+}
+
+.head-banner-wrap {
+    width: 1200px;
+    height: 100%;
+    position: relative;
+}
+
+.head-banner-contents {
+    position: absolute;
+    top: 170px;
+    left: 0;
+}
+
+.head-banner p {
+    width: 100%;
+}
+
+.head-banner-button {
+    /* TODO: 버튼 크기 조정 */
+    display: inline-block;
+    padding: 16px 124px;
+    margin-top: 32px;
+    border-radius: 40px;
+    background-color: #3692ff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.head-banner-img {
+    width: 996px;
+    height: 447px;
+    position: absolute;
+    right: -150px;
+    bottom: 0;
+}
+
+/* main */
+main, .wrap {
+    width: 120rem;
+    margin: 0 auto;
+}
+
+section {
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+section img {
+    width: 588px;
+}
+
+section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #3692ff;
+}
+
+section p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    color: #374151;
+}
+
+section p span {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #374151;
+    margin: 24px 0;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+/* aside */
+aside {
+    width: 100vw;
+    height: 540px;
+    background-color: #cfe5ff;
+    margin-top: 241px;
+}
+
+aside > div {
+    height: 540px;
+    position: relative;
+}
+
+aside .headline {
+    position: absolute;
+    top: 214px;
+    left: 0;
+}
+
+aside img {
+    width: 996px;
+    height: 540px;
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+}
+
+/* footer */
+footer {
+    width: 100vw;
+    height: 160px;
+    padding: 32px 200px;
+    background-color: #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* TODO: 위치 조정 */
+}
+
+footer p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9ca3af;
+}
+
+footer nav ul {
+    display: flex;
+}
+
+.policy-list {
+    gap: 30px;
+}
+
+.policy-list a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #e5e7eb;
+}
+
+.sns-list {
+    gap: 12px;
+}
