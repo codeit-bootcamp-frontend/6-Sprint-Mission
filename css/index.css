@@ -1,0 +1,373 @@
+:root {
+  --main: #3692ff;
+  --main-darker: #1967d6;
+  --white: #fff;
+  --logo: "ROKAF Sans";
+  --gray200: #e5e7eb;
+  --gray400: #9ca3af;
+  --gray700: #374151;
+  --gray900: #111827;
+}
+body {
+}
+/* 헤더 */
+header {
+  height: 70px;
+  padding: 10px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: var(--logo);
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+header .logo {
+  color: var(--main);
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+header .login {
+  background-color: var(--main);
+  color: var(--white);
+  border-radius: 8px;
+  font-size: 1.6rem;
+  width: 128px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+}
+header .login:hover {
+  background-color: var(--main-darker);
+}
+
+/* 메인 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visual {
+  width: 100%;
+  height: 540px;
+  background-color: #cfe5ff;
+  position: relative;
+}
+.visual__content {
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+.visual__bg {
+  position: absolute;
+  bottom: 0;
+  left: 701px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.visual h1 {
+  line-height: 1.4;
+  color: var(--gray700);
+}
+.goShopping {
+  width: 355px;
+  height: 56px;
+  border-radius: 40px;
+  background-color: var(--main);
+  text-align: center;
+  line-height: 56px;
+  color: var(--white);
+  font-size: 2rem;
+}
+.goShopping:hover {
+  background-color: var(--main-darker);
+}
+main .item {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  gap: 24px;
+  height: 720px;
+  align-items: center;
+  color: var(--gray700);
+}
+.item:nth-child(2n-1) {
+  flex-direction: row-reverse;
+}
+.item__image {
+  height: 444px;
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.image01 {
+  background-image: url("../images/item_01.svg");
+}
+.image02 {
+  background-image: url("../images/item_02.svg");
+}
+.image03 {
+  background-image: url("../images/item_03.svg");
+}
+.item__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.item:nth-child(2n-1) .item__text {
+  align-items: end;
+  text-align: right;
+}
+.item__maintitle {
+  order: 2;
+  line-height: 1.4;
+  margin: 12px 0 24px;
+  font-size: 4rem;
+}
+.item__subtitle {
+  order: 0;
+  color: var(--main);
+  font-size: 1.8rem;
+}
+
+.item__desc {
+  order: 3;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+/* 푸터 */
+footer {
+  background-color: var(--gray900);
+  padding: 32px 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copyright {
+  color: var(--gray400);
+  font-size: 1.6rem;
+}
+.footer__FAQ {
+  font-size: 1.6rem;
+  color: var(--gray200);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0 auto;
+}
+.socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+.socials a {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.socials .facebook {
+  background-image: url("../images/ico_facebook.svg");
+}
+.socials .twitter {
+  background-image: url("../images/ico_twitter.svg");
+}
+.socials .youtube {
+  background-image: url("../images/ico_youtube.svg");
+}
+.socials .insta {
+  background-image: url("../images/ico_insta.svg");
+}
+
+/* 데스크톱(992~1200) */
+@media (max-width: 1200px) {
+  body {
+    /* background-color: rgb(255, 133, 133); */
+  }
+  header {
+    padding: 10px 100px;
+  }
+  .visual__content {
+    width: 971px;
+  }
+  .visual__bg {
+    left: 201px;
+  }
+  main .item {
+    width: 971px;
+  }
+  footer {
+    padding: 32px 100px;
+  }
+}
+
+/* 타블렛(768~992) */
+@media (max-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+  body {
+    /* background-color: rgb(255, 253, 133); */
+  }
+  header {
+    padding: 10px 50px;
+  }
+  .visual__content {
+    width: 750px;
+  }
+  .visual__bg {
+    left: 201px;
+  }
+  main .item {
+    width: 750px;
+  }
+  .item__image {
+    flex: 1.4;
+  }
+  footer {
+    padding: 32px 50px;
+  }
+}
+
+/* 작은 타블렛(600~768) */
+@media (max-width: 768px) {
+  body {
+    /* background-color: rgb(137, 255, 133); */
+  }
+  header {
+    padding: 10px 50px;
+  }
+
+  header .logo img {
+    display: none;
+  }
+  .visual:first-child {
+    margin-bottom: 30px;
+  }
+  .visual__content {
+    width: 550px;
+  }
+  .visual__bg {
+    left: 50px;
+  }
+  main .item {
+    width: 550px;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item:nth-child(2n-1) {
+    flex-direction: column;
+  }
+  .item__image {
+    height: 200px;
+    width: 100%;
+  }
+  .item__text {
+    padding: 0;
+  }
+  .item__maintitle br {
+    display: inline-block;
+    content: " ";
+  }
+  .item__desc br {
+    display: inline-block;
+    content: " ";
+  }
+  .item:nth-child(2n-1) .item__text {
+    align-items: center;
+    text-align: center;
+  }
+  .bottom {
+    width: 100%;
+    left: 0;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+  .footer__copyright {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .footer__FAQ {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+  .socials {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* 모바일(~600) */
+@media (max-width: 600px) {
+  body {
+    /* background-color: rgb(133, 220, 255); */
+    min-width: 600px;
+  }
+  header {
+    padding: 10px 50px;
+  }
+  header .login {
+    font-size: 2rem;
+  }
+  .visual__content {
+    height: calc(100% - 30px);
+    width: 500px;
+    justify-content: end;
+    gap: 16px;
+  }
+  .visual__bg {
+    left: -100px;
+  }
+  .goShopping {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    line-height: 100px;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .item {
+    width: 500px;
+  }
+  .visual:last-child {
+    padding: 30px;
+  }
+  .visual:last-child .visual__content {
+    justify-content: start;
+  }
+  .visual:last-child h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 5rem;
+  }
+  .bottom {
+    left: 0;
+  }
+}
