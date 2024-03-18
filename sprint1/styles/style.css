@@ -6,7 +6,6 @@
 
 body {
   color: #374151;
-  word-break: keep-all;
   font-family: "Pretendard", sans-serif;
 }
 
@@ -27,7 +26,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 200px 108px 200px;
+  padding: 32px 200px 108px;
   font-size: 16px;
 }
 
@@ -54,7 +53,7 @@ a {
 
 .button {
   background-color: #3692ff;
-  color: #ffffff;
+  color: #fff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,27 +66,26 @@ a {
   padding: 14.5px 43px;
 }
 
-.top_main {
+.banner {
+  background-color: #cfe5ff;
   height: 540px;
-  background-image: url(../assets/Img_home_top.png);
-  background-repeat: no-repeat;
-  background-size: 996px 447px;
-  background-position: bottom;
-  background-color: skyblue;
-}
-
-.footer-content {
-  padding: 30px 200px 0;
   display: flex;
-  align-items: top;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
 }
 
-.footer-content .word {
-  color: #9CA3AF;
+#topBanner {
+  background-image: url("../images/home/hero-image.png");
+}
+
+#bottomBanner {
+  background-image: url("../images/home/bottom-banner-image.png");
+}
+
+.standard {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
