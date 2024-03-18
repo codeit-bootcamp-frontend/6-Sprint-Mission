@@ -78,24 +78,24 @@ body {
 
 /* header */
 
-header {
+.gnb {
     display: flex;
     align-items: center;
     margin:9px 200px;
 }
 
-.header_left_box {
+.gnb-left-box {
     display: flex;
     align-items: center;
     gap: 10px;
     flex-grow: 1;
+    text-decoration: none;
 }
 
-.header_logo_title {
+.gnb-logo-title {
     font-size: 25.63px;
     font-weight: 700;
     color: var(--primary-color);
-    text-decoration: none;
     font-family: 'ROKAF-Sans';
     line-height: 34.6px;
 }
