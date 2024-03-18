@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
+  color: var(--white-primary);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.1931rem;
@@ -74,7 +74,7 @@ header {
 
 .large-button {
   background-color: var(--blue-primary);
-  color: var(--white);
+  color: var(--white-primary);
   width: 22.1875rem;
   height: 3.5rem;
   padding: 0.75rem 1.25rem;
