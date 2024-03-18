@@ -122,7 +122,6 @@ body {
     background-color: var(--background-color);
     height: 540px;
     width: 100%;
-    min-width: 1920px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +197,7 @@ body {
     font-size: 40px;
     line-height: 56px;
     font-weight: 700;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     margin-top: 12px;
     margin-bottom: 24px;
 }
@@ -211,7 +210,7 @@ body {
     font-size: 24px;
     line-height: 28.8px;
     font-weight: 500;
-    letter-spacing: 8%;
+    letter-spacing: 0.08em;
 }
 
 .main-even-text2,
@@ -225,7 +224,6 @@ body {
     background-color: var(--background-color);
     height: 540px;
     width: 100%;
-    min-width: 1920px;
     margin-top: 276px;    
     display: flex;
     align-items: center;
@@ -239,7 +237,6 @@ footer {
     background-color: var(--footer-background-color);
     height: 160px;
     width: 100%;
-    min-width: 1920px;
 }
 
 .footer-box {
