@@ -32,32 +32,30 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <header>
-      <nav class="header__nav">
-        <a class="logo" href="/">
-          <h1 class="sr-only">
-            판다마켓
-          </h1>
-          <img class="logo__img" src="assets/images/logo.png" alt="판다마켓 홈페이지로 이동"/>
-        </a>
-        <a class="login__button" href="login.html">
-          로그인
-        </a>
-      </nav>
-      <div class="header-banner">
-        <div class="wrap header-banner__wrap">
-          <div class="header-banner__contents">
-            <p class="headline">
-              일상의 모든 물건을<br> 거래해 보세요
-            </p>
-            <a class="header-banner__button" href="items.html">
-              구경하러 가기
-            </a>  
-          </div>
-          <img class="header-banner__img" src="assets/images/Img_home_top.png" alt="홈페이지 배너"/>
-        </div>
-      </div>
+  <header class="header__fixed">
+    <a class="logo" href="/">
+      <h1 class="sr-only">
+        판다마켓
+      </h1>
+      <img class="logo__img" src="assets/images/logo.png" alt="판다마켓 홈페이지로 이동"/>
+    </a>
+    <a class="login__button" href="login.html">
+      로그인
+    </a>
   </header>
+  <aside class="header-banner">
+    <div class="wrap header-banner__wrap">
+      <div class="header-banner__contents">
+        <p class="headline">
+          일상의 모든 물건을<br> 거래해 보세요
+        </p>
+        <a class="header-banner__button" href="items.html">
+          구경하러 가기
+        </a>  
+      </div>
+      <img class="header-banner__img" src="assets/images/Img_home_top.png" alt="홈페이지 배너"/>
+    </div>
+  </aside>
   <main>
     <!-- hot item -->
     <section>
@@ -112,8 +110,8 @@
     </section>
   </main>
   <!-- 하단 광고 배너 -->
-  <aside>
-    <div class="bottom-banner wrap">
+  <aside class="bottom-banner">
+    <div class="bottom-banner__wrap wrap">
       <p class="bottom-banner__headline headline">
         믿을 수 있는<br/>
         판다마켓 중고거래

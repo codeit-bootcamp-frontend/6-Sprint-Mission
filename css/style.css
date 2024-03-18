@@ -9,11 +9,15 @@
     color: #374151;
 }
 
-.header__nav {
+.header__fixed {
+    width: 100vw;
     height: 70px;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
 }
 
 .logo {
@@ -41,7 +45,7 @@
 
 .header-banner {
     width: 100vw;
-    height: 540px;
+    height: 610px;
     background-color: #cfe5ff;
     border-top: 1px solid #dfdfdf;
 }
@@ -54,7 +58,7 @@
 
 .header-banner__contents {
     position: absolute;
-    top: 170px;
+    top: 240px;
     left: 0;
 }
 
@@ -125,14 +129,14 @@ section {
     flex-direction: row-reverse;
 }
 
-aside {
+.bottom-banner {
     width: 100vw;
     height: 540px;
     background-color: #cfe5ff;
     margin-top: 241px;
 }
 
-.bottom-banner {
+.bottom-banner__wrap {
     height: 540px;
     position: relative;
 }
