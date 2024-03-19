@@ -1,0 +1,90 @@
+*{
+  margin:0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+h2{
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color:#3692ff;
+}
+
+.logo{
+  width: 153px;
+}
+
+.login{
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 14.5px 43px;
+  background-color: #3692ff;
+  color:#ffffff;
+  display: inline-flex;
+  justify-content: center;  
+}
+
+.banner{
+  background-color: #CFE5FF;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 100%;
+  height: 540px;
+  display: flex;
+}
+
+
+#main-img{
+  background-image: url("../img/home/hero-image.png");
+  background-position: 80% bottom;
+}
+
+.main{
+  display: inline-block;
+}
+
+.pop-content{
+  display: flex;
+  align-items: center;
+}
+
+.search-content{
+  display: flex;
+}
+
+.sell-content{
+  display: flex;
+}
+
+.main-content{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 138px 0;
+}
+
+
+#foot-img{
+  background-image: url("../img/home/bottom-banner-image.png");
+  background-position: 80% bottom;
+}
