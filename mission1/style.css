@@ -8,25 +8,22 @@ body {
 
 /* header */
 
-.wrap {
+header {
   height: 70px;
   width: 100%;
   background-color: #ffffff;
-  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.wrap a {
+#home {
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  left: 200px;
+  margin-left: 10px;
 }
 
-.loginBtn {
+#login {
   cursor: pointer;
-  position: absolute;
   border: none;
   background-color: #3692ff;
   border-radius: 8px;
@@ -36,8 +33,7 @@ body {
   font-weight: 600;
   width: 128px;
   height: 48px;
-  top: 10px;
-  right: 200px;
+  margin-right: 10px;
 }
 
 /* main */
@@ -47,15 +43,19 @@ main {
 }
 
 .card {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
   height: 540px;
   width: 100%;
 }
 
 .card .box {
-  position: absolute;
-  top: 170px;
-  left: 360px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .box h1 {
@@ -81,18 +81,17 @@ main {
 .card img {
   width: 996px;
   height: 447px;
-  margin-top: 93px;
-  margin-left: 680px;
 }
 
 .card2 {
   background-color: #ffffff;
   height: 720px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card2 .confirmBox {
-  position: absolute;
   top: 137.5px;
   left: 360px;
   display: flex;
@@ -121,13 +120,12 @@ main {
 .card3 {
   background-color: #ffffff;
   height: 720px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card3 .searchBox {
-  position: absolute;
-  top: 138px;
-  left: 591px;
   display: flex;
   align-items: center;
 }
@@ -154,13 +152,12 @@ main {
 .card4 {
   background-color: #ffffff;
   height: 720px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card4 .registerBox {
-  position: absolute;
-  top: 138px;
-  left: 360px;
   display: flex;
   align-items: center;
 }
@@ -185,13 +182,9 @@ main {
 
 .card5 {
   height: 540px;
-  position: relative;
-}
-
-.card5 .pandaTrade {
-  position: absolute;
-  top: 214px;
-  left: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card5 h2 {
@@ -202,15 +195,15 @@ main {
 }
 
 .card5 img {
-  display: inline-block;
-  margin-left: 680px;
   height: 540px;
 }
 
 footer {
   height: 160px;
   background-color: #111827;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .tag {
@@ -238,4 +231,3 @@ footer .tag {
   justify-content: space-around;
   align-items: center;
 }
-
