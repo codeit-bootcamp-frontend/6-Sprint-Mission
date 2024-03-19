@@ -61,14 +61,17 @@ main h2 {
     width: 100%;
     height: 540px;
     position: absolute;
+}
+
+.banner > .banner-center{
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 32px;
-}
-
-.banner > div{
-    height: 100px;
 }
 
 .top{
@@ -106,18 +109,19 @@ main h2 {
     width: 996px;
     height: 447px;
     top: 93px;
-    left: 701px;
+    left: 341px;
 }
 
 .banner-text{
-    
+    line-height: 56px;
+    text-align: left;
 }
 
 .bottom img {
     position: absolute;
     width: 996px;
     height: 540px;
-    left: 701px;
+    left: 341px;
 }
 
 .main-middle {
