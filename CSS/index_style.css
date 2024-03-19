@@ -1,11 +1,21 @@
 * {
   box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 header{
   height:70px;
+  width: 100%;
   display: flex;;
   flex-direction: row;
   align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  margin-top: -30px;
 }
 .logo{
   margin: 0 200px;
@@ -35,6 +45,7 @@ header{
   text-decoration: none;
 }
 .banner{
+  top:70px;
   background-color: #cfe5ff;
   height: 540px;
   width: 100%;
