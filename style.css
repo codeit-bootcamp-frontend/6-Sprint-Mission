@@ -1,0 +1,184 @@
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* 헤더 */
+
+header {
+  height: 4.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 200px;
+}
+
+.small-button {
+  background-color: var(--blue-primary);
+  width: 8rem;
+  height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1931rem;
+}
+
+.small-button:hover,
+.large-button:hover {
+  background-color: var(--blue-hover);
+}
+
+.small-button:active,
+.large-button:active {
+  background-color: var(--blue-active);
+}
+
+.header-logo {
+  width: 9.5625rem;
+}
+
+/* 배너 */
+
+.banner {
+  background-color: var(--banner-bg);
+}
+
+.banner-container {
+  height: 33.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto 0;
+}
+
+.banner-title {
+  color: var(--typography);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  width: 22.1875rem;
+}
+
+.large-button {
+  background-color: var(--blue-primary);
+  color: var(--white-primary);
+  width: 22.1875rem;
+  height: 3.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  overflow: hidden;
+}
+
+/* 메인 */
+
+main {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-block: 8.75rem;
+}
+
+section:nth-child(even) {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5rem;
+  padding-block: 8.75rem;
+  > div {
+    order: -1;
+  }
+}
+
+.section-image {
+  max-width: 45%;
+}
+
+.seciton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.section-badge {
+  color: var(--blue-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.575rem;
+}
+
+.section-title {
+  color: var(--typography);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  letter-spacing: 2%;
+}
+
+.section-description {
+  color: var(--typography);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  letter-spacing: 8%;
+}
+
+/* 푸터 */
+
+footer {
+  background-color: var(--footer-bg);
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2.5rem;
+}
+
+.footer-copyright {
+  color: var(--blue-disabled);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1931rem;
+  text-align: center;
+}
+
+.footer-document {
+  display: flex;
+  gap: 1.875rem;
+  > a {
+    color: var(--gray-200);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1931rem;
+    text-align: center;
+  }
+}
+
+.footer-sns {
+  display: flex;
+  gap: 0.75rem;
+}
