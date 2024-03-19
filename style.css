@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 1920px;
+}
+
+.container {
+
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-bottom {
+  height: 540px;
+  background-color: #CFE5FF;
+  background-image: url("images/Img_home_top.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
