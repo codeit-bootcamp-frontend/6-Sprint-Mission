@@ -21,6 +21,7 @@
 /* --------------------     //font     -------------------- */
 
 /* --------------------     헤더     -------------------- */
+
 .header {
   height: 70px;
   border-bottom: 1px solid #dfdfdf;
@@ -28,7 +29,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .logo {
@@ -37,6 +41,7 @@
   height: 51px;
   justify-content: space-between;
   align-items: center;
+  margin: 0 200px;
 }
 
 .logo_icon {
@@ -68,6 +73,7 @@
   font-weight: 600;
   line-height: 19.09px;
   color: #ffffff;
+  margin: 0 200px;
 }
 /* --------------------     //헤더     -------------------- */
 
