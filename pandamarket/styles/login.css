@@ -1,4 +1,5 @@
 * {
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -37,20 +38,27 @@ label {
   line-height: 21.48px;
 }
 
-input {
+input::placeholder {
+  text-indent: 24px;
+  color: #9CA3AF;
   font-family: 'Pretendard';
   font-weight: 400;
   font-size: 16px;
-  color: #9CA3AF;
+  line-height: 24px;
+}
+
+input {
+  text-indent: 24px;
+  font-size: 16px;
   height: 56px;
-  border: none;
   width: 100%;
   margin-top: 16px;
   margin-bottom: 16px;
+  border: none;
 }
 
 input:focus {
-  border: 1px solid #3692ff;
+  outline: 2px solid #3692ff;
 }
 
 .submit {
