@@ -1,3 +1,21 @@
+:root {
+    --gray900 : #1B1D1F;
+    --gray800 : #26282B;
+    --gray600 : #454C53;
+    --gray500 : #72787F;
+    --gray400 : #9EA4A8;
+    --gray200 : #E5E7EB;
+    --gray100 : #E8EBED;
+    --gray50 : #F7F7F8;
+
+    --color-black : #374151;
+    --color-darkblack : #111827;
+    --color-white : #FFFFFF;
+    --color-lightblue :#CFE5FF;
+    --color-blue : #3692FF;
+    --error-red : #F74747;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,8 +40,8 @@
 }
 
 button {
-    color: #ffffff;
-    background-color: #3692FF;
+    color: var(--color-white);
+    background-color: var(--color-blue);
 }
 
 .btnlogin {
@@ -36,25 +54,25 @@ button {
 
 
 main p {
-    color:#3692FF;
+    color: var(--color-blue);
     font-weight: 700;
     font-size: 18px;
 }
 
 main h1 {
-    color:#374151;
+    color:var(--color-black);
     font-weight: 700;
     font-size: 40px;
 }
 
 main h2 {
-    color:#374151;
+    color:var(--color-black);
     font-weight: 500;
     font-size: 24px;
 }
 
 .banner {
-    background-color: #CFE5FF;
+    background-color: var(--color-lightblue);
     width: 100%;
     height: 540px;
     position: absolute;
@@ -168,12 +186,12 @@ section h2 {
 
 
 footer {
-    background-color: #111827;
+    background-color: var(--color-darkblack);
     width: 100%;
     height: 160px;
     position: absolute;
     top: 3448px;
-    color: #E5E7EB;
+    color: var(--gray200);
     
 }
 
