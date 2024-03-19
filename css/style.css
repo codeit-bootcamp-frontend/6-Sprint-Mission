@@ -1,0 +1,151 @@
+/* 기본 셋팅 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Pretendard';
+  line-height: 1.6em;
+  font-weight: 400;
+  color: #374151;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+button {
+  cursor: pointer;
+  border: 0;
+	outline: 0;
+}
+a {
+  text-decoration: none;
+}
+#wrap {
+	width:100%;
+	min-width: 1200px;
+	position:relative; 
+	margin:0 auto;
+	overflow:hidden;
+}
+.inner {
+	width:1200px;
+	margin: 0 auto;
+  position: relative;
+}
+
+/* header */
+header {
+  height: 70px;
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login_btn {
+  background: #3692FF;
+  width: 128px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* main */
+.main_visual {
+  background: #CFE5FF;
+  height: 540px;
+}
+.mv_txt {
+  height: 540px;
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.mv_txt .tit {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+.mv_txt button {
+  width: 355px;
+  height: 56px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  background: #3692FF;
+  border-radius: 40px;
+  margin-top: 32px;
+}
+.mv_img {
+  position: absolute;
+  bottom: 0;
+  right: -137px;
+}
+.panda_content li {
+  display: flex;
+  align-items: center;
+  padding: 138px 0;
+}
+.panda_content li > div {
+  flex-basis: 50%;
+}
+.panda_content li .txt {
+  margin-left: 60px;
+}
+.panda_content li:nth-child(2) .txt {
+  text-align: right;
+  margin-right: 60px;
+  margin-left: 0;
+}
+.panda_content li .blue_txt {
+  color: #3692FF;
+  font-size: 18px;
+  font-weight: 700;
+}
+.panda_content li .tit {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  margin: 12px 0 24px;
+}
+.panda_content li .sub {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+/* footer */
+footer {
+  background: #111827;
+  height: 160px;
+  padding: 32px 200px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 16px;
+}
+footer .year {
+  color: #9CA3AF;
+}
+footer .link,
+footer .sns {
+  display: flex;
+  align-items: center;
+}
+footer .link {
+  gap: 30px;
+}
+footer .link a {
+  color: #E5E7EB;
+}
+footer .sns {
+  gap: 13px;
+}
