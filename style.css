@@ -114,8 +114,8 @@ h3 {
   line-height: 24px;
 }
 
-/* Main - Second Section */
-.second_section {
+/* Main - Info Section */
+.info_section {
   display: flex;
   justify-content: center;
   flex-direction: column;
