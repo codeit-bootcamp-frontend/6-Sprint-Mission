@@ -1,14 +1,14 @@
+@import 'reset.css';
+
 *{
-  margin:0;
-  padding:0;
   box-sizing: border-box;
 }
 :root{
   --blue:#3692FF;
-  --hoverblue: #1967D6;
-  --clickblue: #1251AA;
-  --inactivecolor:#9CA3AF;
-  --backgroundblue:#CFE5FF;
+  --hover-blue: #1967D6;
+  --click-blue: #1251AA;
+  --inactive-color:#9CA3AF;
+  --background-blue:#CFE5FF;
   --gray900: #1b1d1f;
   --gray800: #26282b;
   --gray600: #454c53;
@@ -18,10 +18,7 @@
   --gray100: #e8ebed;
   --gray50: #f7f7f8;
 }
-a{
-  text-decoration: none;
-  color: #fff;
-}
+
 .container{
   width: 1200px;
   margin: 0 auto;
@@ -50,12 +47,13 @@ header .login-btn button{
   color: #fff;
   border:none;
   cursor: pointer;
+  font-size: 16px;
 }
 header .login-btn button:hover{
-  background-color: var(--hoverblue);
+  background-color: var(--hover-blue);
 }
 header .login-btn button:active{
-  background-color: var(--clickblue);
+  background-color: var(--click-blue);
 }
 
 .top{
@@ -65,8 +63,7 @@ header .login-btn button:active{
   align-items: center;
   justify-content: center;
   margin-top: 70px;
-  background-color: var(--backgroundblue);
-  padding: 0 0 0 170px;
+  background-color: var(--background-blue);
 }
 .top .home-top{
   display: flex;
@@ -91,10 +88,10 @@ header .login-btn button:active{
 }
 
 .top .home-top button:hover{
-  background-color: var(--hoverblue);
+  background-color: var(--hover-blue);
 }
 .top .home-top button:active{
-  background-color: var(--clickblue);
+  background-color: var(--click-blue);
 }
 .top .img-top img{
   width: 996px;
@@ -153,7 +150,7 @@ header .login-btn button:active{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--backgroundblue);
+  background-color: var(--background-blue);
   padding: 0 0 0 170px;
   margin-bottom: -1px;
 }
@@ -196,214 +193,4 @@ footer .info-container .link-container{
 
 footer .info-container .link-container img{
   width: 20px;
-}
-
- /*** 미디어 쿼리 ***/
- 
-@media screen and (max-width: 1550px){
-  .container{
-    width: 800px;
-  }
-  .section,
-  .section-reverse{
-    height: 450px;
-  }
-  .section .section-img img,
-  .section-reverse .section-reverse-img img{
-    width: 400px;
-  }
-  .section .section-description p,
-  .section-reverse .section-reverse-description p{
-    font-weight: 700;
-    font-size: 14px;
-  }
-  .section .section-description h2,
-  .section-reverse .section-reverse-description h2{
-    font-size: 1.75rem;
-  }
-  .section .section-description h3,
-  .section-reverse .section-reverse-description h3{
-    font-size: 1.25rem;
-  }
-  .top{
-    height: 430px;
-  }
-  .top .img-top img{
-    width: 700px;
-    height: 335px;
-  }
-  .top .home-top h2{
-    font-size: 30px;
-    font-weight: 700;
-}
-  .top .home-top button{
-    width: 276px;
-    height: 41px;
-  }
-  .bottom{
-    height: 440px;
-    margin-bottom: -1px;
-  }
-  
-  .bottom h2{
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 700;
-  }
-  
-  .bottom .img-bottom img{
-    width: 750px;
-    height: 440px;
-  }
-
-  footer{
-    padding: 30px 200px 0 200px;
-  }
-}
-
-@media screen and (max-width: 1260px){
-  .container{
-    width: 600px;
-  }
-  .section,
-  .section-reverse{
-    height: 350px;
-  }
-  .section .section-img img,
-  .section-reverse .section-reverse-img img{
-    width: 300px;
-  }
-  .section .section-description p,
-  .section-reverse .section-reverse-description p{
-    font-weight: 700;
-    font-size: 12px;
-  }
-  .section .section-description h2,
-  .section-reverse .section-reverse-description h2{
-    font-size: 1.5rem;
-  }
-  .section .section-description h3,
-  .section-reverse .section-reverse-description h3{
-    font-size: 1rem;
-  }
-  .top{
-    height: 350px;
-  }
-  .top .img-top img{
-    width: 550px;
-    height: 255px;
-  }
-  .top .home-top h2{
-    font-size: 22px;
-    font-weight: 700;
-}
-  .top .home-top button{
-    width: 236px;
-    height: 34px;
-    font-size: 0.75rem;
-  }
-  .bottom{
-    height: 360px;
-    margin-bottom: -1px;
-  }
-  
-  .bottom h2{
-    font-size: 22px;
-    line-height: 40px;
-    font-weight: 700;
-  }
-  
-  .bottom .img-bottom img{
-    width: 620px;
-    height: 360px;
-  }
-  footer{
-    padding: 30px 100px 0 100px;
-  }
-}
-
-@media screen and (max-width: 975px){
-  header{
-    padding: 0 70px;
-  }
-  header .logo-container img{
-    width: 90px;
-    height:40px;
-  }
-  header .login-btn button{
-    width: 80px;
-    height: 31px;
-  }
-  .container{
-    width: 500px;
-  }
-  .section,
-  .section-reverse{
-    height: 260px;
-  }
-  .section .section-img img,
-  .section-reverse .section-reverse-img img{
-      width: 230px;
-  }
-  .section .section-description p,
-  .section-reverse .section-reverse-description p{
-    font-weight: 700;
-    font-size: 12px;
-  }
-  .section .section-description h2,
-  .section-reverse .section-reverse-description h2{
-    font-size: 1.15rem;
-  }
-  .section .section-description h3,
-  .section-reverse .section-reverse-description h3{
-    font-size: 0.7rem;
-  }
-  .top{
-    height: 220px;
-    padding: 0;
-    text-align: center;
-  }
-
-  .top .img-top img{
-    display: none;
-  }
-  .top .home-top h2{
-    font-size: 20px;
-    font-weight: 700;
-}
-  .top .home-top button{
-    width: 216px;
-    height: 30px;
-    font-size: 0.5rem;
-  }
-  .bottom{
-    height: 200px;
-    text-align: center;
-    padding: 0;
-    margin-bottom: -1px;
-  }
-  
-  .bottom h2{
-    font-size: 22px;
-    line-height: 40px;
-    font-weight: 700;
-  }
-  
-  .bottom .img-bottom img{
-    display: none;
-  }
-  footer{
-    padding: 30px 100px 0 100px;
-    height: 100px;
-    font-size: 8px;
-  }
-  footer .info-container .link-container img{
-    width: 15px;
-  }
-}
-
-@media screen and (max-width: 600px){
-  footer .policy-container a{
-    display: none;
-  }
 }

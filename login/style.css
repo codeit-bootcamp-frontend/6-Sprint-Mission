@@ -1,0 +1,124 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --blue:#3692FF;
+  --hover-blue: #1967D6;
+  --click-blue: #1251AA;
+  --inactivecolor:#9CA3AF;
+  --background-blue:#CFE5FF;
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-contaienr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 640px;
+}
+.img-container{
+  display: flex;
+  justify-content: center;
+}
+.img-container a{
+  margin: 60px 0 20px 0;
+}
+.img-container .logo{
+  width: 396px;
+  height: 132px;
+}
+.con label{
+  color: var(--gray800);
+  font-weight: 700;
+  font-size: 18px;
+}
+.con input{
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 16px;
+  outline: none;
+  background-color: var(--gray100);
+  font-size: 16px;
+  padding: 0 0 0 24px;
+}
+.pw{
+  position:relative
+}
+.pw img{
+  position: absolute;
+  width: 24px;
+  right: 20px;
+  top: 55px;
+  cursor: pointer;
+}
+.login-btn{
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  border:none;
+  color: #fff;
+  font-size: 20px;
+  background-color: #9CA3AF;
+  cursor: pointer;
+}
+.login-btn:hover{
+  background-color: var(--blue);
+}
+.easy-login{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #E6F2FF;
+  height: 74px;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 550;
+  color: var(--gray800);
+}
+
+.easy-login-logo img{
+  width: 42px;
+  margin-left: 16px;
+}
+
+.go-signup-container{
+  text-align: center;
+  font-size: 15px;
+}
+.go-signup-container p{
+  display: inline;
+  color: var(--gray800);
+  font-weight: 550;
+}
+.go-signup-container a{
+  color: #3182F6;
+}
+
+@media screen and (max-width:768px){
+  form{
+    width: 500px;
+  }
+}
