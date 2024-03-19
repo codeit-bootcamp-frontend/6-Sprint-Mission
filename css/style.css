@@ -1,5 +1,6 @@
-@import "../common/reset.css";
-@import "../common/common.css";
+body {
+    background-color: #fcfcfc;
+}
 
 /* 배너 및 컨텐츠 헤드라인 폰트 */
 .headline {

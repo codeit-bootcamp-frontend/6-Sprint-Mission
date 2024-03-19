@@ -4,20 +4,17 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 10px;
+	line-height: 1;
+}
+
 ol, ul {
 	list-style: none;
 }
 
 a {
 	text-decoration: none;
-}
-
-html {
-	font-size: 10px;
-}
-
-body {
-	line-height: 1;
 }
 
 img {

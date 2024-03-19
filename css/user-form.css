@@ -1,5 +1,6 @@
-@import "../common/reset.css";
-@import "../common/common.css";
+body {
+    background-color: #fcfcfc;
+}
 
 .logo {
     display: block;
