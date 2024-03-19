@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.header-main{
+    max-width: 1920px;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+}
+
+.logo{
+    width: 153px;
+    height: 51px;
+}
+
+button{
+    color: #ffffff;
+    background-color: #3692FF;
+}
+
+.btnlogin{
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+}
