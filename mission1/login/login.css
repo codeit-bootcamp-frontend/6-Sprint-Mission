@@ -128,6 +128,11 @@ table {
   border-spacing: 0;
 }
 
+/*  */
+body{
+  box-sizing: border-box;
+}
+
 .card {
   margin-top: 60px;
   display: flex;
@@ -135,20 +140,18 @@ table {
   justify-content: center;
   align-items: center;
 }
-
 .card > img {
   width: 396px;
   height: 132px;
 }
-
 .card .loginBox {
-  
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: 18px;
   font-weight: 700;
-  color: #1F2937;
-  gap: 10px;
+  color: #1f2937;
+  gap: 24px;
 }
 .card input {
   background-color: #f3f4f6;
@@ -157,18 +160,60 @@ table {
   border-radius: 12px;
   width: 640px;
 }
-.card input::placeholder{
-  padding: 16px 24px ;
+.card input:focus {
+  background-color: #3692ff;
 }
-.loginButton{
+.card input::placeholder {
+  padding: 16px 24px;
+}
+
+.passwordLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.passwordLabel img {
+  cursor: pointer;
+  position: absolute;
+  right: 550px;
+}
+
+.loginButton {
+  cursor: pointer;
   width: 640px;
   height: 56px;
   border-radius: 40px;
-  background: #9CA3AF;
-  border: #9CA3AF;
-  color:#FFFFFF;
+  background: #9ca3af;
+  border: #9ca3af;
+  color: #ffffff;
   font-weight: 600;
   font-size: 20px;
   text-align: center;
-
 }
+.simpleLoginBox {
+  margin-top: 24px;
+  background: #e6f2ff;
+  display: flex;
+  align-items: center;
+  width: 640px;
+  height: 74px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.simpleLoginBox p {
+  padding-left: 24px;
+}
+.simpleLoginBox .simpleLoginIcons {
+  width: 100px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .signUp {
+  display: inline-block;
+  margin-top: 30px;
+}
+

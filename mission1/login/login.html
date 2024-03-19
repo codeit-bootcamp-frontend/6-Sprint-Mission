@@ -4,30 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login.css" />
     <title>로그인</title>
   </head>
   <body>
     <div class="card">
-        <img src="../logo/bigLogo.png">
-        <div class="loginBox">
-            이메일
-            <input title="이메일" placeholder="이메일을 입력해주세요" >
-            비밀번호
-            <input title="비밀번호" type="password" placeholder="비밀번호를 입력해주세요" >
-             <div id="password" onclick="toggleSwitch()">클릭</div><img src="" alt="">
-        </div>
-        <button class="loginButton">로그인</button>
-        <div class="simpleLoginBox">
+      <a href="/">
+        <img src="../logo/bigLogo.png" />
+      </a>
+      <div class="loginBox">
+        이메일
+        <label class="emailLabel">
+          <input title="이메일" placeholder="이메일을 입력해주세요" />
+        </label>
 
+        비밀번호
+        <label class="passwordLabel" }>
+          <input
+            id="shown"
+            title="비밀번호"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <img
+            id="passIcon"
+            onclick="toggleSwitch()"
+            src="/icon/hidePassword.png"
+            alt=""
+          />
+        </label>
+
+        <img src="" alt="" />
+      </div>
+      <button class="loginButton">로그인</button>
+      <div class="simpleLoginBox">
+        <p>간편로그인하기</p>
+        <div class="simpleLoginIcons">
+          <a href="https://www.google.com/"
+            ><img src="/img/google.png" alt="구글"
+          /></a>
+          <a href="https://www.kakaocorp.com/page/"
+            ><img src="/img/kakao.png" alt="카카오"
+          /></a>
         </div>
+      </div>
+      <p class="signUp">판다 마켓이 처음이신가요? <a href="/singup/signup.html">회원가입</a></p>
     </div>
-    <script>
-      let flag =false
-      function toggleSwitch(){
-        const switchElement = document.getElementById("password");
-        flag =!flag;  
-      }
-    </script>  
+
+    <script src="../scripts/switch.js"></script>
   </body>
 </html>
+
