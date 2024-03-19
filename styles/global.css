@@ -1,0 +1,22 @@
+:root {
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+
+  --cool-gray700: #374151;
+  --cool-gray400: #9ca3af;
+
+  --btn-blue1: #3692ff;
+  --btn-blue2: #1967d6;
+  --btn-blue3: #1251aa;
+
+  --error-red: #f74747;
+
+  --bg-color: #cfe5ff;
+  --footer-bg-color: #111827;
+}
