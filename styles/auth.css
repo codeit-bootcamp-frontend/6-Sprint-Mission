@@ -48,7 +48,7 @@ input {
   cursor: pointer;
 }
 
-/* Button */
+/* Form Submit Button */
 .submit-form-btn {
   width: 100%;
   height: 56px;
@@ -57,4 +57,42 @@ input {
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
+}
+
+/* Social Login Container */
+.social-login-container {
+  width: 100%;
+  height: 74px;
+  padding: 16px 24px;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-800);
+  background-color: var(--blue-100);
+}
+
+.social-login-container h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.social-login-btns {
+  display: flex;
+  gap: 16px;
+}
+
+/* Auth Swith */
+.auth-switch {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--gray-800);
+}
+
+.auth-switch a {
+  color: #3182f6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
