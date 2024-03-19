@@ -39,15 +39,19 @@ ol {
   list-style: none;
 }
 
-input::focus {
+input:focus {
   outline: none;
 }
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 200px 10px;
+  background-color: var(--white-color);
+  z-index: 1;
 }
 
 h1 {
