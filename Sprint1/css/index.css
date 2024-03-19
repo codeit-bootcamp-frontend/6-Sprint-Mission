@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    margin: 0px;
+body {
+    margin: 0;
 }
 
 
@@ -37,7 +39,7 @@ body{
 }
 
 .main_section1 {
-    width: 1200px;
+    max-width: 1200px;
     height: 540px;
     margin: 0 auto;
     display: flex;
@@ -78,7 +80,6 @@ body{
 }
 
 .main_section2{
-    width: 100%;
     max-width: 1200px;
     padding: 138px 0;
     margin: 0 auto;
@@ -94,6 +95,8 @@ body{
 
 .section_box2 {
     font-family: "pretendard";
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
@@ -113,7 +116,7 @@ body{
 }
 
 .section2_content {
-    margin-top: 0px;
+    margin-top: 24px;
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
