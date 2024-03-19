@@ -21,6 +21,7 @@ button {
   cursor: pointer;
   border: 0;
 	outline: 0;
+	font-family: 'Pretendard';
 }
 a {
   text-decoration: none;
@@ -39,34 +40,34 @@ a {
 }
 
 /* font color */
-.blue_color {
+.color_blue {
   color: #3692FF;
 }
-.gray50 {
+.color_gray50 {
   color: #F7F7F8;
 }
-.gray100 {
+.color_gray100 {
   color: #E8EBED;
 }
-.gray200 {
+.color_gray200 {
   color: #E5E7EB;
 }
-.gray400 {
+.color_gray400 {
   color: #9CA3AF;
 }
-.gray500 {
+.color_gray500 {
   color: #72787F;
 }
-.gray600 {
+.color_gray600 {
   color: #454C53; 
 }
-.gray700 {
+.color_gray700 {
   color: #374151; 
 }
-.gray800 {
+.color_gray800 {
   color: #26282B;
 }
-.gray900 {
+.color_gray900 {
   color: #1B1D1F;
 }
 
