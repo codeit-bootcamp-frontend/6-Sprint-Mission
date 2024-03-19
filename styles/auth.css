@@ -1,0 +1,10 @@
+.auth-container {
+  max-width: 640px;
+  margin: auto;
+}
+
+.logo-home-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 40px;
+}
