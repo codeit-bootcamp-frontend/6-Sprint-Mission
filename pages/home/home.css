@@ -77,6 +77,7 @@ header {
 }
 
 .main_banner_img {
+    max-width: 996px;
     position: absolute;
     bottom: -0.15rem;
     right: 10%;
@@ -101,6 +102,7 @@ header {
 }
 
 .main_info .img_wrap {
+    max-width: 588px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,6 +162,7 @@ header {
 
 .main_info_second .img_wrap {
     grid-area: img;
+    max-width: 588px;
 }
 
 .main_info_second .text_wrap {
@@ -200,6 +203,7 @@ header {
 }
 
 .bottom_banner_img {
+    max-width: 996px;
     position: absolute;
     bottom: -2px;
     right: 10rem;
