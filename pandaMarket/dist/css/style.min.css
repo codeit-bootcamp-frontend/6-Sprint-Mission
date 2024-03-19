@@ -14,6 +14,12 @@ ul, dl {
 }
 
 /* common */
+@font-face {
+  font-family: Pretendard;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   --brand-blue:#3692FF;
   --grey700: #374151;
@@ -124,17 +130,17 @@ ul, dl {
   background: #111827;
   color: #fff;
 }
-.footer .footer-tit {
+.footer__tit {
   font-family: Pretendard, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
 }
-.footer .footer-nav {
+.footer__nav {
   display: flex;
   gap: 3.07vw;
 }
-.footer .footer-sns {
+.footer__sns {
   display: flex;
   gap: 0.625vw;
 }
@@ -161,14 +167,14 @@ ul, dl {
   justify-content: center;
   gap: 32px;
 }
-.section-banner .banner-img {
+.section-banner__img {
   position: relative;
   right: 0;
   transform: translateX(133px);
   font-size: 0;
   text-align: right;
 }
-.section-banner .banner-tit {
+.section-banner__tit {
   max-width: 355px;
   font-family: Pretendard, sans-serif;
   font-size: 40px;
@@ -181,13 +187,13 @@ ul, dl {
 .section-desc {
   padding: 138px 0;
 }
-.section-desc.right .section-img {
+.section-desc.right .section-desc__img {
   order: 2;
 }
 .section-desc.right .section-wrap {
   justify-content: flex-end;
 }
-.section-desc.right .section-content {
+.section-desc.right .section-desc__content {
   align-items: flex-end;
   text-align: right;
 }
@@ -195,15 +201,15 @@ ul, dl {
   display: flex;
   gap: 5.3vw;
 }
-.section-desc .section-img {
+.section-desc__img {
   flex: 0 0;
 }
 @media screen and (max-width: 1200px) {
-  .section-desc .section-img img {
+  .section-desc__img img {
     max-width: 49vw;
   }
 }
-.section-desc .section-content {
+.section-desc__content {
   display: flex;
   flex: 1 1;
   flex-direction: column;

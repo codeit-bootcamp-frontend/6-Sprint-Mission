@@ -34,17 +34,17 @@
   padding:32px 10.42vw 0;
   background:#111827;
   color:#fff;
-  .footer-tit {
+  &__tit {
     font-family: Pretendard, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
   }
-  .footer-nav {
+  &__nav {
     display:flex;
     gap:3.07vw;
   }
-  .footer-sns {
+  &__sns {
     display:flex;
     gap:0.625vw;
   }

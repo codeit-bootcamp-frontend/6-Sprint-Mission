@@ -15,14 +15,14 @@
     justify-content:center;
     gap:32px;
   }
-  .banner-img {
+  &__img {
     position:relative;
     right:0;
     transform:translateX(133px);
     font-size:0;
     text-align:right;
   }
-  .banner-tit {
+  &__tit {
     max-width:355px;
     font-family: Pretendard, sans-serif;
     font-size: 40px;
@@ -35,13 +35,13 @@
 .section-desc {
   padding:138px 0;
   &.right {
-    .section-img {
+    .section-desc__img {
       order:2;
     }
     .section-wrap {
       justify-content:flex-end;
     }
-    .section-content {
+    .section-desc__content {
       align-items:flex-end;
       text-align:right;
     }
@@ -50,15 +50,15 @@
     display:flex;
     gap:5.3vw;
   }
-  .section-img {
+  &__img {
     flex:0 0;
   }
-  .section-img img {
+  &__img img {
     @media screen and (max-width : 1200px){
       max-width:49vw;
     }
   }
-  .section-content {
+  &__content {
     display:flex;
     flex:1 1;
     flex-direction:column;
