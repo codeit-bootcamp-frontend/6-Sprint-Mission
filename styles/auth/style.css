@@ -1,0 +1,105 @@
+@media screen and (min-width: 768px) {
+  #inner_container {
+    width: 640px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #inner_container {
+    width: 320px;
+  }
+}
+
+* {
+  font-family: "Pretendard-Regular";
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form label {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--cool-gray800);
+}
+
+form input {
+  height: 24px;
+  border-radius: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px 24px;
+  border: none;
+  background-color: var(--cool-gray100);
+}
+
+form input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--cool-gray400);
+}
+
+form button {
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--cool-gray400);
+  color: #ffffff;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#inner_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+#sns_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  margin: 24px 0;
+  padding: 0 23px;
+  border-radius: 8px;
+  background-color: var(--sns-bg-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--cool-gray800);
+}
+
+#sns_img_container {
+  display: flex;
+  gap: 16px;
+}
+
+#signup_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+
+  > p {
+    color: var(--cool-gray800);
+    margin: 0;
+  }
+}

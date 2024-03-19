@@ -8,8 +8,10 @@
   --gray100: #e8ebed;
   --gray50: #f7f7f8;
 
+  --cool-gray800: #1f2937;
   --cool-gray700: #374151;
   --cool-gray400: #9ca3af;
+  --cool-gray100: #f3f4f6;
 
   --btn-blue1: #3692ff;
   --btn-blue2: #1967d6;
@@ -19,6 +21,7 @@
 
   --bg-color: #cfe5ff;
   --footer-bg-color: #111827;
+  --sns-bg-color: #e6f2ff;
 }
 
 @font-face {

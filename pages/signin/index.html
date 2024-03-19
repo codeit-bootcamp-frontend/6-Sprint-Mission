@@ -6,13 +6,44 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/main/style.css" />
+    <link rel="stylesheet" href="/styles/auth/style.css" />
   </head>
   <body>
-    <nav>
-      <a href="/"><img src="/images/logo.png" alt="logo" /></a>
-      <a href="/pages/signin/" id="loginbtn">로그인</a>
-    </nav>
-    <h1>Sign in page</h1>
+    <div id="container">
+      <a href="/"><img src="/images/logo_l.png" alt="logo_l" /></a>
+      <div id="inner_container">
+        <!-- 로그인 기능이 구현되지 않았으므로 홈으로 돌아가는 링크 설정 -->
+        <form action="/">
+          <label for="email">이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일을 입력해주세요"
+            required
+          />
+          <label for="pwd">비밀번호</label>
+          <input
+            type="password"
+            id="pwd"
+            name="pwd"
+            placeholder="비밀번호를 입력해주세요"
+            required
+          />
+          <button type="submit">로그인</button>
+        </form>
+        <div id="sns_container">
+          간편 로그인하기
+          <div id="sns_img_container">
+            <img src="/images/ic_google.png" alt="googlelogo" />
+            <img src="/images/ic_kakao.png" alt="kakaologo" />
+          </div>
+        </div>
+        <div id="signup_container">
+          <p>판다마켓이 처음이신가요?</p>
+          <a href="/pages/signup/">회원가입</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
