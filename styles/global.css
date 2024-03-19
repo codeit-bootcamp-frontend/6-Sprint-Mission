@@ -24,12 +24,16 @@ body {
 
 /* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 70px;
   padding: 0 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--white);
 }
 
 #signinLinkBtn {
