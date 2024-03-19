@@ -126,7 +126,7 @@ footer {
 }
 
 .footer-container:nth-child(odd) {
-  color: var(--gray-100);
+  color: var(--gray-200);
 }
 
 .footer-container:nth-child(even) {

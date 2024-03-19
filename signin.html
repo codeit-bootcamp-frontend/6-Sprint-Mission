@@ -24,8 +24,36 @@
       </div>
         
       <form method="post">
-        <div>
+        <div class="input-item">
+          <label for="email">이메일</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해주세요"
+          />
         </div>
+        
+        <div class="input-item">
+          <label for="password">비밀번호</label>
+          <div class="password-wrapper">
+            <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <img
+            src="images/icon/eye-invisible.svg"
+            alt="비밀번호 숨기기"
+            class="toggle-password"
+          />
+          </div>
+        </div>
+
+        <button type="submit" class="button submit-form-btn">
+          로그인
+        </button>
       </form>
             
       <div>

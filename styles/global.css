@@ -1,8 +1,10 @@
 :root {
   /* Gray scale */
+  --gray-800: #1f2937;
   --gray-600: #374151;
-  --gray-100: #9CA3AF;
-  --gray-50: #E5E7EB;
+  --gray-200: #9ca3af;
+  --gray-100: #f3f4f6;
+  --gray-50: #e5e7eb;
 
   /* Blue scale */
   --blue-800: #111827;
@@ -48,4 +50,14 @@ header {
   background-color: var(--blue-600);
   text-decoration: none;
   color: var(--white);
+}
+
+.button {
+    border: none;
+    background-color: var(--blue-500);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
