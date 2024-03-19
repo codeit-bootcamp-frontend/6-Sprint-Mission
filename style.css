@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --maincolor: #cfe5ff;
+  --maintextcolor_blue: #3692ff;
+  --footlinkcolor : #e5e7eb;
+  --footcopyright : #9ca3af;
+}
+
+span{
+  color: var(--maintextcolor_blue);
+  font-weight: 700;
+}
+
+p{
+  font-weight: 500;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-family: Pretendard, sans-serif;
+  word-break: keep-all;
+  font-size: 0.83vw;
+}
+
+
+body {
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 1.25vw;
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.65vw;
+  background-color: #ffffff;
+  padding: 0.52vw 10.42vw 0.52vw;
+  margin-top: -3.65vw;
+}
+
+header img{
+  width: 8vw;
+}
+
+main{
+  margin-top: 3.65vw;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between ;
+  background-color: #111827;
+  padding: 1.67vw 10.42vw 5.63vw 10.42vw;
+  color: var(--footcopyright);
+  gap: 0.52vw;
+  width: 100%;
+  font-size: 0.83vw;
+}
+
+.panda-login{
+  cursor: pointer;
+  background-color: var(--maintextcolor_blue);
+  color: #ffffff;
+  font-size: 0.83vw;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0.42vw;
+  padding: 0.63vw 1.04vw;
+  width: 6.67vw;
+  height: 2.50vw;
+}
+
+.panda-banner{
+  display: flex;
+  justify-content: center;
+  padding: 8.85vw 11.61vw 0.00vw 18.75vw;
+  background-color: var(--maincolor);
+  line-height: 2.92vw;
+}
+
+.panda-banner img{
+  width: 51.88vw;
+  height: 23.33vw;
+}
+
+.item-button{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: var(--maintextcolor_blue);
+  color: #ffffff;
+  border-radius: 2.08vw;
+  font-weight: 600;
+  font-size: 1.04vw;
+  line-height: 1.25vw;
+  padding: 0.83vw;
+}
+
+.panda-login:hover, .item-button:hover{
+  background-color: #1967D6;
+  transition: 0.7s;
+}
+
+.pander-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7.19vw 18.75vw 7.19vw 18.75vw;
+}
+
+.pander-img{
+  flex: 1 0 50%;
+  max-width: 30.63vw;
+  height: 23.13vw;
+  padding: 0.00vw auto 0.00vw auto;
+  border-radius: 0.63vw;
+}
+
+.pander-info{
+  width: 30.63vw;
+  margin-left: 3.33vw;
+}
+
+.pander-info-center{
+  width: 30.63vw;
+  text-align: right;
+  margin-right: 3.33vw;
+}
+
+.footer-link{
+  color: var(--footcopyright)
+}
+
+.footer-link, .footer-sns{
+  cursor: pointer;
+}
+
+.footer-sns{
+  display: flex;
+  justify-content: space-between;
+  width: 6.04vw;
+}
+
+.footer-sns img{
+  width: 0.94vw;
+  height: 0.94vw;
+}
