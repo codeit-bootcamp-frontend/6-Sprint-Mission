@@ -1,5 +1,5 @@
 /*로그인*/
-#login section{
+#login section, #join section{
     max-width: 640px;
     margin: 60px auto 0;
 }
