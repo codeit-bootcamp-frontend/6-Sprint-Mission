@@ -127,7 +127,7 @@ footer {
   padding: 1rem 5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -213,7 +213,7 @@ footer {
     align-items: flex-end;
   }
   .nav2 {
-    gap: 20rem;
+    gap: 15rem;
   }
   .text {
     display: flex;
