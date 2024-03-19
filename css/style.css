@@ -9,7 +9,6 @@ body {
 	font-family: 'Pretendard';
   line-height: 1.6em;
   font-weight: 400;
-  color: #374151;
 }
 ol, ul {
 	list-style: none;
@@ -37,6 +36,38 @@ a {
 	width:1200px;
 	margin: 0 auto;
   position: relative;
+}
+
+/* font color */
+.blue_color {
+  color: #3692FF;
+}
+.gray50 {
+  color: #F7F7F8;
+}
+.gray100 {
+  color: #E8EBED;
+}
+.gray200 {
+  color: #E5E7EB;
+}
+.gray400 {
+  color: #9CA3AF;
+}
+.gray500 {
+  color: #72787F;
+}
+.gray600 {
+  color: #454C53; 
+}
+.gray700 {
+  color: #374151; 
+}
+.gray800 {
+  color: #26282B;
+}
+.gray900 {
+  color: #1B1D1F;
 }
 
 /* header */
@@ -106,7 +137,6 @@ header {
   margin-left: 0;
 }
 .panda_content li .blue_txt {
-  color: #3692FF;
   font-size: 18px;
   font-weight: 700;
 }
@@ -132,9 +162,6 @@ footer {
   justify-content: space-between;
   font-size: 16px;
 }
-footer .year {
-  color: #9CA3AF;
-}
 footer .link,
 footer .sns {
   display: flex;
@@ -142,9 +169,6 @@ footer .sns {
 }
 footer .link {
   gap: 30px;
-}
-footer .link a {
-  color: #E5E7EB;
 }
 footer .sns {
   gap: 13px;
