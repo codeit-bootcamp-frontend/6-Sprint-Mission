@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    font-family: Pretendard;
 }
 
 .header-main{
@@ -9,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 200px;
+    border: 0px, 0px, 1px, 0px;
 }
 
 .logo{
@@ -27,3 +30,81 @@ button{
     border-radius: 8px;
     border: none;
 }
+
+
+main p {
+    color:#3692FF;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+main h1 {
+    color:#374151;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+main h2 {
+    color:#374151;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.banner{
+    background-color: #CFE5FF;
+    width: 1920px;
+    height: 540px;
+    position: absolute;
+}
+
+.top{
+    top: 70px;
+}
+
+.bottom{
+    top: 2908px;
+}
+
+.banner-section{
+    width: 357px;
+    height: 56px;
+    position: absolute;
+    top: 170px;
+    left: 360px;
+    line-height: 56px;
+    text-align: left;
+}
+
+.btnexplore {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    width: 357px;
+    height: 56px;
+    border-radius: 40px;
+    border: none;
+    padding :16px, 124px, 16px, 124px;
+    margin-top: 32px;
+}
+
+.top img {
+    position: absolute;
+    width: 996px;
+    height: 447px;
+    top: 93px;
+    left: 701px;
+}
+
+.banner-text{
+    
+}
+
+.bottom img {
+    position: absolute;
+    width: 996px;
+    height: 540px;
+    left: 701px;
+}
+
+
