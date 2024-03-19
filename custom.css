@@ -1,3 +1,7 @@
+/*로그인, 회원가입, 마이페이지 css*/
+@import url(/css/member.css);
+
+
 /*초기 설정*/
 *{
     font-family: "Pretendard";
