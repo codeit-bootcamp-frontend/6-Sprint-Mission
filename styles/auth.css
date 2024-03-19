@@ -25,9 +25,17 @@ input {
   border: none;
   border-radius: 12px;
   background-color: var(--gray-100);
+  }
+
+input::placeholder {
+  color: var(--gray-200);
   font-size: 16px;
   line-height: 24px;
-  }
+}
+
+input:focus {
+  outline-color: var(--blue-500);
+}
 
 .input-item {
   display: flex;
