@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.login-container {
+  margin: 60px auto auto;
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-bottom: 58px;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 24px;
+}
+
+label {
+  color: #1f2937;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.48px;
+}
+
+input {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 16px;
+  color: #9CA3AF;
+  height: 56px;
+  border: none;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+input:focus {
+  border: 1px solid #3692ff;
+}
+
+.submit {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  height: 56px;
+  margin: 0 0 24px;
+  border-radius: 40px;
+  border: none;
+  background-color: #9CA3AF;
+  color: #ffffff;
+}
+
+.OAuth-container {
+  border-radius: 8px;
+  padding: 16px 23px;
+  background-color: #e6feff;
+  display: flex;
+  align-items: center;
+  height: 74px;
+}
+
+.OAuth {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.email-input-container {
+  position: relative;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+#toggle-password {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  cursor: pointer;
+}
+
+.Oauth_img {
+  display: flex;
+  gap: 30px;
+}
