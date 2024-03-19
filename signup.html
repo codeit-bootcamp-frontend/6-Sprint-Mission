@@ -61,9 +61,11 @@
                     비밀번호
                 </label>
                 <div class="user-form__password-input">
-                    <input  class="user-form__input" id="password" type="password" placeholder="비밀번호를 입력해주세요">
-                    <button class="password__visibility-button" type="button">
-                        <img src="assets/images/icon/btn_visibility_off.png" alt="비밀번호 숨기기">
+                    <input id="password" class="user-form__input" type="password" placeholder="비밀번호를 입력해주세요">
+                    <button id="password__btn" class="password__visibility-button" type="button">
+                        <span class="sr-only">
+                            비밀번호를 별표로 숨기는 버튼
+                        </span>
                     </button>
                 </div>
             </div>
@@ -72,9 +74,11 @@
                     비밀번호 확인
                 </label>
                 <div class="user-form__password-input">
-                    <input  class="user-form__input" id="password" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
-                    <button class="password__visibility-button" type="button">
-                        <img src="assets/images/icon/btn_visibility_off.png" alt="비밀번호 숨기기">
+                    <input id="check-password" class="user-form__input" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                    <button id="check-password__btn" class="password__visibility-button" type="button">
+                        <span class="sr-only">
+                            비밀번호를 별표로 숨기는 버튼
+                        </span>
                     </button>
                 </div>
             </div>
@@ -100,5 +104,6 @@
             </a>
         </p>
     </main>
+    <script src="js/userForm.js"></script>
 </body>
 </html>

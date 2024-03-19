@@ -41,14 +41,25 @@ body {
     color: var(--color-gray);
 }
 
+.user-form__input:focus {
+    border: 1px solid var(--color-blue);
+}
+
 .user-form__password-input {
     position: relative;
 }
 
 .password__visibility-button {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/images/icon/btn_visibility_off.png");
     position: absolute;
     top: calc((56px - 24px) / 2);
     right: calc((56px - 24px) / 2);
+}
+
+.visibility {
+    background-image: url("../assets/images/icon/btn_visibility_on.png");
 }
 
 .user-form__button {
