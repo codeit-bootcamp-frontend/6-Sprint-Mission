@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../custom.css">
 </head>
 <body>
-    <main>
+    <main id="login">
         <article>
-            <section id="login">
+            <section>
                 <a href="/" class="login_logo">
                     <img src="../image/login/logo.png" alt="로고 이미지">
                 </a>
@@ -27,7 +27,7 @@
                         </label>
                         <img class="pwd_icon" src="../image/login/eye.png" alt="비밀번호 표시 여부 아이콘"/>
                     </div>
-                    <button type="submit">로그인</button>
+                    <button type="submit" class="submit_btn">로그인</button>
                 </form>
                 <!--
                     간편로그인은 form안에 작성하나요?
@@ -36,15 +36,17 @@
                 -->
                 <div class="login_sns">
                     <p>간편 로그인하기</p>
-                    <a href="https://www.google.com/" target="_blank">
-                        <img src="../image/login/google.png" alt="구글 로그인 아이콘">
-                    </a>
-                    <a href="https://www.kakaocorp.com/page" target="_blank">
-                        <img src="../image/login/kakao.png" alt="카카오톡 로그인 아이콘">
-                    </a>
+                    <div class="sns_area">
+                        <a href="https://www.google.com/" target="_blank">
+                            <img src="../image/login/google.png" alt="구글 로그인 아이콘">
+                        </a>
+                        <a href="https://www.kakaocorp.com/page" target="_blank">
+                            <img src="../image/login/kakao.png" alt="카카오톡 로그인 아이콘">
+                        </a>
+                    </div>
                 </div>
                 <div class="login_btm">
-                    <p>판다마켓이 처음이신가요?</p>
+                    <span>판다마켓이 처음이신가요?</span>
                     <a href="/join.html">회원가입</a>
                 </div>
             </section>
