@@ -4,63 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
     <title>판다마켓</title>
-    <script>
-      function navigateTo(url) {
-        window.location.href = url;
-      }
-    </script>
   </head>
   <body>
-    <header class="header">
-      <a href="/index.html"
-        ><img id="logo" src="/images/logo.png" alt="Logo"
+    <header>
+      <a href="/"
+        ><img src="/images/logo.png" alt="판다마켓 홈" width="153"
       /></a>
-      <button id="login" onclick="navigateTo('/LogIn.html')">로그인</button>
+      <a href="signin.html" id="signinLink" class="button">로그인</a>
     </header>
-    <div class="main-visual">
-      <div class="wrap-contents">
-        <p id="text1">일상의 모든 물건을 거래해 보세요</p>
-        <button id="go" onclick="navigateTo('/items')">구경하러 가기</button>
-      </div>
-      <img id="images3" src="./images/image1.png" alt="Main image" />
-    </div>
     <main>
-      <section class="hot-products">
-        <img src="./images/image3.png" alt="Hot item" class="images1" />
-        <div>
-          <p>Hot item</p>
-          <p id="hot-texts">인기 상품을 확인해 보세요</p>
-          가장 HOT한 중고거래 물품을 <br />
-          판다 마켓에서 확인해 보세요
+      <section id="hero" class="main-visual">
+        <div class="wrap-contents">
+          <h1>
+            일상의 모든 물건을<br />
+            거래해 보세요
+          </h1>
+          <a href="/" class="button go">구경하러 가기</a>
         </div>
       </section>
 
-      <section class="product-search">
-        <img src="./images/image4.png" alt="Search" class="images1" />
-        <div>
-          <p>search</p>
-          <p id="hot-texts">구매를 원하는 상품을 검색하세요</p>
-          구매하고 싶은 물품은 검색해서 쉽게 찾아보세요
+      <section id="features" class="wrap-contents">
+        <div class="feature">
+          <img src="/images/image3.png" alt="인기 상품" width="50%" />
+          <div class="feature-content">
+            <h2 class="feature-tag">Hot item</h2>
+            <h1>인기 상품을<br />확인해 보세요</h1>
+            <p class="feature-description">
+              가장 HOT한 중고거래 물품을<br />판다마켓에서 확인해 보세요
+            </p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-content">
+            <h2 class="feature-tag">Search</h2>
+            <h1>구매를 원하는<br />상품을 검색하세요</h1>
+            <p class="feature-description">
+              구매하고 싶은 물품은 검색해서
+              <br />쉽게 찾아보세요
+            </p>
+          </div>
+          <img src="/images/image4.png" alt="검색 기능" width="50%" />
+        </div>
+        <div class="feature">
+          <img src="/images/image5.png" alt="판매 상품 등록" width="50%" />
+          <div class="feature-content">
+            <h2 class="feature-tag">Register</h2>
+            <h1>판매를 원하는<br />상품을 등록하세요</h1>
+            <p class="feature-description">
+              어떤 물건이든 판매하고 싶은 상품을
+              <br />쉽게 등록하세요
+            </p>
+          </div>
         </div>
       </section>
-
-      <section class="product-register">
-        <img src="./images/image5.png" alt="Register" class="images1" />
-        <div>
-          <p>Register</p>
-          <p id="hot-texts">판매를 원하는 상품을 등록하세요</p>
-          어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요
+      <section id="bottomBanner" class="footer-visual-wrap">
+        <div class="wrap-contents">
+          <h1>
+            믿을 수 있는<br />
+            판다마켓 중고거래
+          </h1>
         </div>
       </section>
     </main>
-    <div class="footer-visual-wrap">
-      <p id="text2">
-        믿을 수 있는<br />
-        판다마켓 중고거래
-      </p>
-      <img id="images3" src="./images/image2.png" alt="Footer image" />
-    </div>
     <footer class="footer">
       <div class="codeit-2024-parent">
         <div class="codeit-2024">©codeit - 2024</div>

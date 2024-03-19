@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -14,7 +16,8 @@
 
 .login-container {
   display: flex;
-  width: 640px;
+  width: auto;
+  max-width: 640px;
   height: 664px;
   margin-top: 20px;
   margin-left: 400px;
