@@ -54,8 +54,37 @@
 }
 .easy-login{
   display: flex;
+  box-sizing: border-box;
+  width: 640px;
+  height: 74px;
+  top: 0px;
+  background: #E6F2FF;
+  border-radius: 8px;
+  padding: 0 23px 0 23px;
+  align-items: center;
 }
-.logo{
+.easy-login>p{
+  width: 120px;
+  height: 24px;
+}
+.google-logo{
   width: 42px;
   height: 42px;
+  margin: 0 8px 0 380px;
+}
+.kakao-logo{
+  width: 42px;
+  height: 42px;
+  margin-left: 8px;
+}
+.signup-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Pretendard;
+  font-size: 15px;
+  gap: 5px;
+}
+.signup{
+  color: #3182F6;
 }
