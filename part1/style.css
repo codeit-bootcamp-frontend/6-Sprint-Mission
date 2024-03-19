@@ -5,11 +5,7 @@
     font-family: Pretendard;
 }
 
-.header{
-    margin: 0 auto;
-}
-
-.header-main{
+.nav-header {
     max-width: 1920px;
     height: 70px;
     align-items: center;
@@ -20,21 +16,22 @@
     border: 0px, 0px, 1px, 0px;
 }
 
-.logo{
+.logo {
     width: 153px;
     height: 100%;
 }
 
-button{
+button {
     color: #ffffff;
     background-color: #3692FF;
 }
 
-.btnlogin{
+.btnlogin {
     width: 128px;
     height: 48px;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -56,7 +53,7 @@ main h2 {
     font-size: 24px;
 }
 
-.banner{
+.banner {
     background-color: #CFE5FF;
     width: 100%;
     height: 540px;
@@ -74,15 +71,15 @@ main h2 {
     gap: 32px;
 }
 
-.top{
+.top {
     top: 70px;
 }
 
-.bottom{
+.bottom {
     top: 2908px;
 }
 
-.banner-section{
+.banner-section {
     width: 357px;
     height: 56px;
     position: absolute;
@@ -102,6 +99,7 @@ main h2 {
     border: none;
     padding :16px, 124px, 16px, 124px;
     margin-top: 32px;
+    cursor: pointer;
 }
 
 .top img {
@@ -112,7 +110,7 @@ main h2 {
     left: 341px;
 }
 
-.banner-text{
+.banner-text {
     line-height: 56px;
     text-align: left;
 }
@@ -131,7 +129,7 @@ main h2 {
     display: block;
 }
 
-.content{
+.content {
     padding: 138px 0;
     display: flex;
     justify-content: left;
@@ -148,7 +146,7 @@ main h2 {
     max-height: 444px;
 }
 
-.section-text{
+.section-text {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -163,9 +161,65 @@ section h1 {
     letter-spacing: 0.02em;
 }
 
-section h2{
+section h2 {
     line-height: 28.8px;
     letter-spacing: 0.08em;
 }
+
+
+footer {
+    background-color: #111827;
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    top: 3448px;
+    color: #E5E7EB;
+    
+}
+
+.nav-footer {
+    max-width: 1520px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 32px 200px 32px 200px;
+    gap: 10px;
+}
+
+.page-text {
+    width : 159px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.page-text > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ico-social{
+    width : 116px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.ico-social > a {
+    display: inline-block;
+}
+
+.ico-social > a > img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
+
+
+
+
 
 
