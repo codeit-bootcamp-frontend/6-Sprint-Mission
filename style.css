@@ -20,6 +20,8 @@
 }
 /* --------------------     //font     -------------------- */
 
+/* --------------------     index.html     -------------------- */
+
 /* --------------------     헤더     -------------------- */
 
 .header {
@@ -327,3 +329,56 @@
   }
 }
 /* --------------------     //미디어 쿼리     -------------------- */
+/* --------------------     //index.html     -------------------- */
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* --------------------     signin.html     -------------------- */
+
+/* guide_container */
+.guide_container {
+  width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* //guide_container */
+
+/* logo */
+
+.logo.login {
+  display: flex;
+  width: 396px;
+  height: 132px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0 40px;
+}
+
+.logo_icon.login {
+  width: 103.53px;
+  height: 103.88px;
+  border-radius: 11.18px;
+}
+
+.logo_title.login {
+  width: 266px;
+  font-family: ROKAF Sans;
+  font-size: 66.34px;
+  font-weight: 700;
+  line-height: 34.6px;
+  color: var(--blue);
+}
+
+/* //logo */
+
+/* form_container */
+.form_container {
+  border: 1px solid red;
+  min-width: 640px;
+  height: 430px;
+}
+/* //form_container */
+/* --------------------     //signin.html     -------------------- */
