@@ -1,211 +1,149 @@
-/* ----- header ----- */
-header {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.img-logo {
-    margin-left: 200px;
-}
-
-.img-logo:hover {
-    cursor: pointer;
-}
-
-.btn-login {
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 19px;
-    width: 128px;
-    height: 48px;
-    padding: 12px 20px;
-    margin-right: 200px;
-    border-radius: 8px;
-    background-color: #1967D6;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.btn-login:hover {
-    cursor: pointer;
-}
-
-/* ----- section.banner ----- */
+/* Section: Banner */
 .banner-top-wrap, .banner-bottom-wrap {
-    height: 540px;
-    background-color: #CFE5FF;
-    display: flex;
-    justify-content: center;
+  height: 540px;
+  background-color: var(--blue-50);
+  display: flex;
+  justify-content: center;
 }
 
 .banner-container {
-    display: flex;
+  display: flex;
 }
 
 .banner-container:hover {
-    cursor: default;
+  cursor: default;
 }
 
 .banner-container:nth-child(odd) {
-    align-items: center;
+  align-items: center;
 }
 
-.banner-container h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #374151;
+.banner-container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #374151;
 }
 
 .banner-top-wrap img {
-    width: 996px;
-    height: 447px;
-    margin-top: 93px;
+  width: 996px;
+  height: 447px;
+  margin-top: 93px;
 }
 
 .banner-bottom-wrap img {
-    width: 996px;
-    height: 540px;
+  width: 996px;
+  height: 540px;
 }
 
-.banner-bottom-wrap h1 {
-    display: inline-block;
-    width: 355px;
+.banner-bottom-wrap h2 {
+  display: inline-block;
+  width: 355px;
 }
 
 .btn-items {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: center;
-    width: 355px;
-    height: 56px;
-    border: none;
-    border-radius: 40px;
-    background-color: #3692FF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  width: 355px;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--blue-500);
 }
 
 .btn-items a {
-    text-decoration: none;
-    color: #FFFFFF;
+  text-decoration: none;
+  color: var(--white);
 }
 
 .btn-items:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-/* ----- section.promotion ----- */
+/* Section: promotion */
 .promotion-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .promotion-wrap:hover {
-    cursor: default;
+  cursor: default;
 }
 
 .promotion-container {
-    height: 720px;
-    display: flex;
-    align-items: center;
-    gap: 10%
+  height: 720px;
+  display: flex;
+  align-items: center;
+  gap: 10%
 }
 
 .promotion-container:nth-child(odd) {
-    justify-content: right;
+  justify-content: right;
 }
 
 .promotion-container img {
-    width: 588px;
-    height: 444px;
+  width: 588px;
+  height: 444px;
 }
 
 .promotion-title span {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25.2px;
-    color: #3692FF;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  color: var(--blue-500);
 }
 
-.promotion-title h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #374151;
+.promotion-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--gray-600);
 }
 
 .promotion-title p {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 28.8px;
-    color: #374151;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--gray-600);
 }
 
-/* ----- footer ----- */
+/* Footer */
 footer {
-    height: 160px;
-    padding: 32px 200px;
-    background-color: #111827;
+  height: 160px;
+  padding: 32px 200px;
+  background-color: var(--blue-800);
 }
 
 .footer-wrap {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.09px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .footer-container:nth-child(odd) {
-    color: #9CA3AF;
+  color: var(--gray-100);
 }
 
 .footer-container:nth-child(even) {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 #footerMenu a {
-    color: #E5E7EB;
-    text-decoration: none;
+  color: var(--gray-50);
+  text-decoration: none;
 }
 
 .footer-container span:hover, .footer-container img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .footer-container:last-child {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
-
-/* ----- Media Query ----- */
-@media (max-width: 1920px) {
-    /* 화면의 너비가 1920px보다 작아질 때 */
-
-    /* 헤더 로고 & 버튼 */
-    .img-logo {
-      margin-left: 100px; /* 왼쪽 여백을 줄임 */
-    }
-    
-    .btn-login {
-      margin-right: 100px; /* 오른쪽 여백을 줄임 */
-    }
-  }
-
-@media (min-width: 1920px) {
-    /* 화면의 너비가 1920px보다 커질 때 */
-
-    .banner-top-wrap, .banner-bottom-wrap, footer {
-        width: 100%;
-    }
-
-    .promotion-container, .banner-container {
-        width: 1200px;
-    }
-  }
