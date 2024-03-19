@@ -2,15 +2,13 @@
   box-sizing: border-box;
 }
 header{
-  height:8vh;
+  height:70px;
   display: flex;;
   flex-direction: row;
   align-items: center;
 }
 .logo{
   margin: 0 200px;
-  width: 153px;
-  height: 2wh;
   flex: none;
   cursor: pointer;
 }
@@ -34,59 +32,62 @@ header{
   font-size: 16px;
   line-height: 19px;
   cursor: pointer;
+  text-decoration: none;
 }
 .banner{
   background-color: #cfe5ff;
-  height: 30vw;
+  height: 540px;
   width: 100%;
   position: relative;
-  padding: 5vw;
+  padding-left: 360px;
 }
 .promo-text{
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
-  font-size: 2vw;
+  font-size: 40px;
   line-height: 140%;
   display: flex;
   align-items: center;
   color: #374151;
-  margin-left: 18%;
+  padding-top: 170px;
 
 }
 .looking-button{
   background: #3692FF;
   border-radius: 40px;
-  width: 20vw;
-  height: 3.5vw;
+  width: 357px;
+  height: 56px;
   border: none;
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 600;
-  font-size: 1.3vw;
+  font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: #FFFFFF;
-  margin-left: 18%;
   cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .banner-img{
   position: absolute;
   bottom: 0px;
-  height: 23vw;
-  width: 50vw;
-  left:40%;
+  left:701px;
 }
 main{
-  width: 62.5vw;
+  width: 1200px;
   margin-left: 18.5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   
 }
 .main-image{
-  width: 30vw;
-  height: 25vw;
+  width: 588px;
+  height: 444px;
   margin-bottom: 20vh;
   margin-top: 10vh;
 }
@@ -150,21 +151,18 @@ main{
 .banner-img2{
   position: absolute;
   bottom: 0px;
-  height: 28vw;
-  width: 50vw;
-  left:40%;
+  left:701px;
 }
 .promo-text2{
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
-  font-size: 2vw;
+  font-size: 40px;
   line-height: 140%;
   display: flex;
   align-items: center;
   color: #374151;
-  margin-left: 18%;
-  margin-top: 10vh;
+  padding-top: 214px;
 }
 footer{
   display: grid;
@@ -200,6 +198,7 @@ footer{
   text-align: center;
   color: #E5E7EB;
   cursor: pointer;
+  text-decoration: none;
 }
 .icon-img{
   display: flex;
