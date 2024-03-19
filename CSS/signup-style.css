@@ -7,11 +7,11 @@
   margin-left: calc(50% - 396px/2);
   margin-top: 60px;
 }
-.login{
+.signup{
   margin-left: 640px;
   margin-top: 30px;
 }
-.login>p{
+.signup>p{
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
@@ -19,7 +19,7 @@
   line-height: 21px;
   color: #1F2937;
 }
-.email,.password{
+.email,.password,.nickname{
   width: 640px;
   height: 56px;
   background: #F3F4F6;
@@ -28,7 +28,8 @@
   padding-left: 20px;
 }
 .email:focus,
-.password:focus{
+.password:focus
+.nickname:focus{
   border-color:#3692ff ;
 }
 .eyeoff{
@@ -57,6 +58,7 @@
   color: #FFFFFF;
   text-decoration: none;
 }
+
 .easy-login{
   display: flex;
   box-sizing: border-box;
@@ -90,6 +92,6 @@
   font-size: 15px;
   gap: 5px;
 }
-.signup{
+.signin{
   color: #3182F6;
 }
