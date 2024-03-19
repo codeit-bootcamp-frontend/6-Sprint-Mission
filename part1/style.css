@@ -1,7 +1,12 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: Pretendard;
+}
+
+.header{
+    margin: 0 auto;
 }
 
 .header-main{
@@ -10,13 +15,14 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 0 200px;
+    margin: 0 auto;
+    padding: 10px 200px;
     border: 0px, 0px, 1px, 0px;
 }
 
 .logo{
     width: 153px;
-    height: 51px;
+    height: 100%;
 }
 
 button{
@@ -52,9 +58,17 @@ main h2 {
 
 .banner{
     background-color: #CFE5FF;
-    width: 1920px;
+    width: 100%;
     height: 540px;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.banner > div{
+    height: 100px;
 }
 
 .top{
@@ -70,7 +84,6 @@ main h2 {
     height: 56px;
     position: absolute;
     top: 170px;
-    left: 360px;
     line-height: 56px;
     text-align: left;
 }
@@ -105,6 +118,50 @@ main h2 {
     width: 996px;
     height: 540px;
     left: 701px;
+}
+
+.main-middle {
+    max-width: 1200px;
+    padding-top: 540px;
+    margin: 0 auto;
+    display: block;
+}
+
+.content{
+    padding: 138px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 64px;
+}
+
+.right{
+    justify-content: right;
+    text-align: right;
+}
+
+.content img {
+    max-height: 444px;
+}
+
+.section-text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section p {
+    line-height: 25.2px;
+}
+
+section h1 {
+    line-height: 56px;
+    letter-spacing: 0.02em;
+}
+
+section h2{
+    line-height: 28.8px;
+    letter-spacing: 0.08em;
 }
 
 
