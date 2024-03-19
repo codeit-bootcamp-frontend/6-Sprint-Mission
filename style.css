@@ -1,0 +1,193 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+main {
+    margin: 0px auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+    height: 70px;
+    background-color: #ffffff;
+}
+
+.button {
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background-color: #3692ff;
+    text-align: center;
+    color: #ffffff;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+#landing {
+    position: relative;
+    width: 1920px;
+    height: 540px;
+    margin: 0 auto;
+    background-color: #cfe5ff;
+}
+
+#intro {
+    position: absolute;
+    width: 355px;
+    height: 200px;
+    top: 170px;
+    left: 360px;
+    font-family: 'pretendard';
+    color: #374151;
+}
+
+#intro > #intro-text {
+    display: block;
+    
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+#intro > a {
+    display: block;
+    width: 355px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: #3692ff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: auto;
+    text-align: center;
+}
+
+#landing > img {
+    position: relative;
+    width: 996px;
+    height: 447px;
+    top: 93px;
+    left: 701px;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #3692ff;
+}
+
+.container > article {
+    display: flex;
+    align-items: center;
+    height: 720px;
+}
+
+.container > article:nth-child(2n) {
+    justify-content: right;
+}
+
+.container > article > div{
+    width: 955px;
+    height: 444px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container > article:nth-child(2n) > div > .desc > * {
+    text-align: right;
+}
+
+.container:nth-child(2n+1) > div > .desc > * {
+    text-align: left;
+}
+
+.container > article > div > .desc {
+    font-family: 'Pretendard';
+}
+
+.container > article > div > img {
+    width: 588px;
+    height: 444px;
+    display: inline
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25.2px;
+    color: #3692ff
+}
+
+.title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    color: #374151;
+    letter-spacing: 2%;
+}
+
+.content {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28.8px;
+    letter-spacing: 8%;
+}
+
+.bottom-container {
+    background-color: #cfe5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 160px;
+    background-color: #111827;
+
+}
+
+#footer-content > * {
+    display: inline;
+    
+}
+
+#footer-content {
+    height: 160px;
+    position: relative;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#copyright {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.09px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+#priv-faq {
+    font-weight: 400;
+    size: 16px;
+    line-height: 19.09px;
+    text-align: center;
+    color: #e5e7eb;
+}
+
+#social > a > img {
+    display: inline;
+    letter-spacing: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
