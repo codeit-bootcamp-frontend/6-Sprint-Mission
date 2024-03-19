@@ -3,24 +3,86 @@
 }
 
 body {
-  margin: 0 auto;
   width: 1920px;
-}
-
-.container {
-
+  margin: 0px auto;
+  border: 1px solid;
+  border-color: red;
 }
 
 .header-top {
+  height: 70px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+}
+
+.login {
+  padding: 12px 20px;
+  background-color: #3692FF;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+  border: 1px solid;
+  border-color: blue;
 }
 
 .header-bottom {
-  height: 540px;
-  background-color: #CFE5FF;
   background-image: url("images/Img_home_top.png");
+  background-color: #CFE5FF;
   background-repeat: no-repeat;
   background-position: center;
+  height: 540px;
+}
+
+section {
+  height: 720px;
+  border: 1px solid;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/*  하나의 섹셕만 오른쪽 정렬을 해보려고 하는데 잘 안됨
+
+.description .second {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+} */
+
+.description img {
+  width: 588px;
+  height: 444px;
+}
+
+.top {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3692FF;
+}
+
+.middle {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.bottom {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+footer {
+  background-image: url("images/Img_home_bottom.png");
+  height: 540px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #CFE5FF;
 }
