@@ -19,7 +19,12 @@
   </head>
   <body>
     <div class="logo">
-      <img src="" alt="logo" />
+      <img
+        width="396"
+        height="132"
+        src="/assets/icon/main-logo.svg"
+        alt="logo"
+      />
     </div>
 
     <form method="post" class="signup-form">
@@ -45,22 +50,36 @@
 
       <div class="form__block">
         <label for="password">비밀번호</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="비밀번호를 입력해주세요"
-        />
+        <div class="password-container">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <img
+            class="password-eye"
+            src="assets/icon/password_eye.svg"
+            alt="password-eye"
+          />
+        </div>
       </div>
 
       <div class="form__block">
         <label for="password-confirm">비밀번호 확인</label>
-        <input
-          id="password-confirm"
-          name="password-confirm"
-          type="password"
-          placeholder="비밀번호를 다시 한 번 입력해주세요"
-        />
+        <div class="password-container">
+          <input
+            id="password-confirm"
+            name="password-confirm"
+            type="password"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
+          <img
+            class="password-eye"
+            src="assets/icon/password_eye.svg"
+            alt="password-eye"
+          />
+        </div>
       </div>
 
       <div class="form__block">
@@ -69,13 +88,13 @@
 
       <div class="form__block">
         <div class="form__easy-login">
-          <span>간편 로그인 하기</span>
-          <img src="" alt="google-logo" />
-          <img src="" alt="kakao-logo" />
+          <span>간편 로그인하기</span>
+          <img src="/assets/icon/ic_google.svg" alt="google-icon" />
+          <img src="/assets/icon/ic_kakao.svg" alt="kakao-icon" />
         </div>
       </div>
 
-      <div class="form__block">
+      <div class="form__block form__link">
         <span>이미 회원이신가요?</span>
         <a href="/login.html">로그인</a>
       </div>
