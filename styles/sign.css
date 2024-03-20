@@ -1,3 +1,7 @@
+body {
+  margin-inline: 1rem;
+}
+
 /* 헤더 */
 
 header {
@@ -17,7 +21,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin: 2.5rem auto 0;
+  margin: 2.5rem auto;
   align-items: center;
 }
 
