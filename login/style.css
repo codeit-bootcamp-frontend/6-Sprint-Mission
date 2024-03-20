@@ -12,15 +12,22 @@ header {
 
 /* 메인 */
 
-/* 입력 폼 */
-
-.form-container {
+main {
   max-width: 40rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin: 2.5rem auto 0;
   align-items: center;
+}
+
+/* 입력 폼 */
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .form {
@@ -79,4 +86,29 @@ header {
 
 .form-button:active {
   background-color: var(--gray-600);
+}
+
+/* 소셜 로그인 */
+
+.social-login-container {
+  width: 100%;
+  height: 4.625rem;
+  border-radius: 0.5rem;
+  padding: 1.5625rem 1.4375rem;
+  background-color: var(--social-login);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-login-container > span {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--gray-800);
+}
+
+.social-login {
+  display: flex;
+  gap: 1rem;
 }
