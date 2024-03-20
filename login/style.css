@@ -1,0 +1,11 @@
+/* 헤더 */
+
+header {
+  margin-top: 3.75rem;
+  text-align: center;
+}
+
+.header-logo {
+  max-width: 100%;
+  width: auto;
+}
