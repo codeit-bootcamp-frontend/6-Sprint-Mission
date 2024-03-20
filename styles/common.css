@@ -68,6 +68,8 @@ nav {
   display: flex;
   justify-content: center;;
   align-items: center;
+  cursor: pointer;
+  transition: .3s;
 }
 .btn:hover {
   background-color: var(--sub-light-blue-color);

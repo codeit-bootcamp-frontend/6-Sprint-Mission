@@ -78,3 +78,7 @@
     --gray100: #F3F4F6;
     --gray50: #F3F4F6;
 }
+
+* {
+    box-sizing: border-box;
+}

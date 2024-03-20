@@ -9,18 +9,44 @@
   <link rel="stylesheet" href="/styles/reset.css">
   <link rel="stylesheet" href="/styles/global.css">
   <link rel="stylesheet" href="/styles/common.css">
+  <link rel="stylesheet" href="../src/login.css">
 </head>
 <body>
-  <header id="header"></header>
-  </header>
+  <main id="login">
+    <div class="container">
+      <div class="login-box">
+        <a href="/index.html" class="home-logo"><img src="/images/logo-big.svg"></a>
+        <form class="login-form">
+          <div>
+            <label>이메일
+              <input id="login-email" name="email" type="email" placeholder="이메일을 입력해주세요.">
+            </label>
+          </div>
+          <div>
+            <label>비밀번호
+              <input id="login-password" name="password" type="password" placeholder="비밀번호를 입력해주세요.">
+              <span class="visible-icon"></span>
+            </label>
+          </div>
 
-  <main id="main">
+          <button type="submit" class="btn login-btn">로그인</button>
+
+          <div class="sns-login-wrap">
+            <p>간편 로그인하기</p>
+            <div class="sns-login-box">
+              <a href="#" class="sns-login-icon google-icon"><img src="/images/icon-google.svg" alt="구글 간편 로그인"></a>
+              <a href="#" class="sns-login-icon kakao-icon"><img src="/images/icon-kakaotalk.svg" alt="카카오톡 간편 로그인"></a>
+            </div>
+          </div>
+
+          <div class="signup-message-box">
+            <p>판다마켓이 처음이신가요?</p>
+            <a href="/pages/signup" class="signup-link">회원가입</a>
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
 
-  <footer id="footer"></footer>
-
-  <!-- header & footer 불러오기 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/js/content-load.js"></script>
 </body>
 </html>
