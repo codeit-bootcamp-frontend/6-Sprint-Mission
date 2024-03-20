@@ -24,10 +24,11 @@ body {
 .form__block label {
   font-weight: 700;
   font-size: 18px;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .form__block input {
-  margin-top: 16px;
   min-width: 100%;
   min-height: 56px;
   border-radius: 12px;
@@ -38,6 +39,18 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-indent: 24px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-eye {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
 }
 
 .form__submit-btn {
