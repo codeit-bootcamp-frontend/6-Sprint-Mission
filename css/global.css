@@ -6,14 +6,6 @@
   padding: 0;
 }
 
-:root {
-  --main-color: #3692ff;
-  --text-color: #374151;
-  --background-color: #cfe5ff;
-  --white-color: #ffffff;
-  --black-color: #111827;
-}
-
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
@@ -37,6 +29,10 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+input {
+  border: none;
 }
 
 input:focus {
