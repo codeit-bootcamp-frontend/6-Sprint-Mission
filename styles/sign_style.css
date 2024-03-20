@@ -47,7 +47,7 @@ input:focus {
   right: 24px;
   bottom: 16px;
 }
-
+.signup-btn,
 .login-btn {
   display: block;
   width: 100%;
@@ -62,6 +62,7 @@ input:focus {
   border: none;
 }
 
+.signup-btn:hover,
 .login-btn:hover {
   cursor: pointer;
 }
@@ -99,6 +100,7 @@ input:focus {
   display: flex;
 }
 
+.fanda-customer,
 .fanda-first {
   text-align: center;
   font-size: 15px;
@@ -106,6 +108,9 @@ input:focus {
   line-height: 18px;
 }
 
+.move-signin,
 .move-signup {
   color: #3182f6;
 }
+
+/* 회원가입 */
