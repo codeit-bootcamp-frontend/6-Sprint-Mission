@@ -251,6 +251,10 @@ footer{
 }
 
 @media(max-width: 1200px) {
+    main{
+    display:grid;
+    grid-template: 540px 1fr 540px / 1fr 600px 1fr;
+}
 
 
     .banner-content {
