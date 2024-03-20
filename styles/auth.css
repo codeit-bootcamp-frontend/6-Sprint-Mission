@@ -33,12 +33,21 @@ body {
   min-height: 56px;
   border-radius: 12px;
   background-color: var(--input-bg);
-  border: none;
-  color: var(--light-gray);
+  color: var(--cool-gray800);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   text-indent: 24px;
+  border: none;
+}
+
+.form__block input::placeholder {
+  color: var(--light-gray);
+}
+
+.form__block input:focus {
+  outline: none;
+  border: 2px solid var(--blue);
 }
 
 .password-container {
@@ -63,6 +72,11 @@ body {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
+}
+
+.form__submit-btn:hover,
+.form__submit-btn:focus {
+  background-color: var(--blue);
 }
 
 .form__easy-login {
