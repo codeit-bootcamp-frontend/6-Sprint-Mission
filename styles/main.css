@@ -7,6 +7,10 @@
   align-items: center;
   background-color: white;
   padding: 0 200px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: var(--GNB);
 }
 
 .header__logo {

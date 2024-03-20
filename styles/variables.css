@@ -11,6 +11,7 @@
 /* z-index */
 
 :root {
+  --GNB: 999;
   --title-with-img: 2;
   --img: 1;
 }
