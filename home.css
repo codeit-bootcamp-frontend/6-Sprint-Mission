@@ -6,8 +6,7 @@ body {
     padding-top: 70px;
 }
 
-body header {
-    /* width: 100%; */
+header {
     position: fixed;
     top: 0;
     left: 0;
