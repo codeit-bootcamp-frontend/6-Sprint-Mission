@@ -2,13 +2,18 @@ const [password, password_confirm] = [document.getElementById("password"), docum
 
 if (password !== null && password_confirm !== null)
 {
+	function validator()
+	{
+		password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "비밀번호 불일치");
+	}
+
 	for (const element of [password, password_confirm])
 	{
 		element.addEventListener("change", (event) => {
-			password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "비밀번호 불일치");
+			validator();
 		});
 		element.addEventListener("keyup", (event) => {
-			password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "비밀번호 불일치");
+			validator();
 		});
 	}
 }

@@ -22,23 +22,23 @@
 			<form>
 				<div class="field">
 					<label for="email">이메일</label>
-					<input id="email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="email" placeholder="이메일을 입력해주세요" required>
+					<input id="email" type="email" alt="이메일" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="email" placeholder="이메일을 입력해주세요" required>
 				</div>
 				<div class="field">
 					<label for="username">닉네임</label>
-					<input id="username" type="text" minlength="5" maxlength="15" placeholder="닉네임을 입력해주세요" required>
+					<input id="username" type="text" alt="사용자명" minlength="5" maxlength="15" placeholder="닉네임을 입력해주세요" required>
 				</div>
 				<div class="field">
 					<label for="password">비밀번호</label>
 					<div class="wrapper invisible">
-						<input id="password" type="password" minlength="10" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 입력해주세요" required>
+						<input id="password" type="password" alt="비밀번호" minlength="5" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 입력해주세요" required>
 						<img src="/assets/icons/invisible.svg"><img src="/assets/icons/visible.svg">
 					</div>
 				</div>
 				<div class="field">
 					<label for="password-confirm">비밀번호 확인</label>
 					<div class="wrapper invisible">
-						<input id="password-confirm" type="password" minlength="10" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 다시 한번 입력해주세요" required>
+						<input id="password-confirm" type="password" alt="비밀번호 확인" minlength="5" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 다시 한번 입력해주세요" required>
 						<img src="/assets/icons/invisible.svg"><img src="/assets/icons/visible.svg">
 					</div>
 				</div>
@@ -48,8 +48,8 @@
 				<div class="third-party">
 					간편 로그인 하기
 					<div class="service">
-						<a href="https://www.google.com" target="_blank"><img src="/assets/icons/google.svg"></a>
-						<a href="https://www.kakaocorp.com/service/KakaoTalk" target="_blank"><img src="/assets/icons/kakaotalk.svg"></a>
+						<a href="https://www.google.com"><img src="/assets/icons/google.svg" alt="구글 계정으로 로그인"></a>
+						<a href="https://www.kakaocorp.com/service/KakaoTalk"><img src="/assets/icons/kakaotalk.svg" alt="카카오톡 계정으로 로그인"></a>
 					</div>
 				</div>
 				<p>
