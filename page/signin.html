@@ -9,12 +9,16 @@
   <!-- Favicon -->
   <link rel="icon" href="/img/panda-face.png">
   <script defer>
-    function hide() {
-        document.getElementById("user-password").setAttribute('type', 'text');
+    function show() {
+        document.getElementById('user-password').setAttribute('type', 'text');
+        document.querySelector('.on').style.display = 'inline-block';
+        document.querySelector('.off').style.display = 'none';
       };
 
-    function show() {
-      document.getElementById("user-password").setAttribute('type', 'password');
+    function hide() {
+      document.getElementById('user-password').setAttribute('type', 'password');
+      document.querySelector('.on').style.display = 'none';
+      document.querySelector('.off').style.display = 'inline-block';
     };
   </script>
 </head>
@@ -22,13 +26,13 @@
   <main class="signin-container">
     <!-- Title -->
     <a class="signin-title" href="/" >
-        <div class="title-logo">
-          <img src="/img/panda-face_title.png" alt="판다 얼굴">
-        </div>
-        <h1>판다마켓</h1>
+      <div class="title-logo">
+        <img src="/img/panda-face_title.png" alt="판다 얼굴">
+      </div>
+      <h1>판다마켓</h1>
     </a>
     <!-- Form -->
-    <form class="form-content" action="#" >
+    <form id="signin-form" class="form-content" action="#" >
       <div class="input-items">
           <label for="user-email">이메일</label>
           <input 
@@ -36,30 +40,39 @@
           name="user-email" 
           type="email"
           placeholder="이메일을 입력해주세요"
+          required
           >
       </div>
       <div class="input-items passwrod">
         <label for="user-password">비밀번호</label>
         <div class="password-item">
           <input 
-          id="user-password" 
-          name="user-password" 
-          type="password"
-          placeholder="비밀번호를 입력해주세요"
+            id="user-password" 
+            name="user-password" 
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            required
           >
           <button 
-          type="button"
-          id="hide-btn"
-          onmouseup="show()"
-          onmousedown="hide()"
+            type="button"
+            id="hide-btn"
+            onmouseup="hide()"
+            onmousedown="show()"
           >
-            <img src="/img/btn_visibility_on_24px.png" alt="비밀번호 보기 아이콘">
+            <img 
+            class="off" 
+            src="/img/btn_visibility_off_24px.png" 
+            alt="비밀번호 숨기기 아이콘">
+            <img 
+            class="on" 
+            src="/img/btn_visibility_on_24px.png" 
+            alt="비밀번호 보기 아이콘">
           </button>
         </div>
       </div>
       <!-- Login button -->
       <div class="login-btn">
-        <button type="submit">로그인</button>
+        <button form="signin-form" type="submit">로그인</button>
       </div>
       <!-- Easy Login  -->
         <div class="easylogin-content">
@@ -87,11 +100,6 @@
           </p>
       </div>
     </form>
-
-
-
-    
-
   </main>
 </body>
 </html>

@@ -3,7 +3,16 @@
 /* Reset */
 @import url(/style/reset.css);
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .signin-container {
+  width: 640px;
+  height: 664px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,6 +146,11 @@
 .password-item button img {
   width: 24px;
   height: 24px;
+}
+
+.password-item img.on {
+  position: absolute;
+  display: none;
 }
 
 
