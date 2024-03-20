@@ -112,3 +112,18 @@ main {
   display: flex;
   gap: 1rem;
 }
+
+/* 하단 텍스트 */
+
+.text-container {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.1187rem;
+  color: var(--gray-800);
+}
+
+.sign-link,
+.sign-link:visited {
+  color: var(--link-typography);
+  text-decoration: underline;
+}
