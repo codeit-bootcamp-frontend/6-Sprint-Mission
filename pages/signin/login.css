@@ -37,6 +37,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
 }
 
 label {
@@ -49,7 +50,7 @@ input {
     height: var(--desktop-input-height);
     background-color: var(--color-cool-gray100);
     border-radius: 12px;
-    padding: 0 0 0 24px;
+    padding: 16px 24px;
     font-size: 16px;
     color: var(--color-cool-gray800);
 }
@@ -75,8 +76,8 @@ button {
 
 .eye {
     position: absolute;
-    right: 0;
     bottom: 14.5px;
+    right: 24px;
 }
 
 /* Main - easy_login */
@@ -109,7 +110,15 @@ h4 {
 
 /* Footer sign-in */
 footer {
+    padding-top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-cool-gray800);
+    line-height: 17.9px;
 }
 
 footer a {
+    color: var(--color-alink-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
