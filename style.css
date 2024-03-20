@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Pretendard;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 200px;
+}
+
+.logo {
+  display: flex;
+  width: 153px;
+  height: 51px;
+}
+
+.login_container {
+  text-align: center;
+}
+
+.login {
+  width: 128px;
+  height: 48px;
+}
+
+.banner { 
+  background: #CFE5FF;
+  width: 1920px;
+  height: 540px;
+}
+
+.banner_panda {
+  width: 996px;
+  height: 447px;
+  position: absolute;
+  top: 93px;
+  left: 701px;
+  padding: 30 0 0 0;
+}
+
+.banner_head {
+  position: absolute;
+  width: 355px;
+  height: 200px;
+  top: 170px;
+  left: 360px;
+  gap: 32px;
+}
+
+.banner_description {
+  width: 295px;
+  height: 112px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.button_container {
+  text-align: center;
+}
+
+.banner_button {
+  width: 355px;
+  height: 56px;
+}
+
+.section1 {
+  width: 1920px;
+  height: 720px;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: 360px;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 955px;
+  margin-left: 0;
+  margin-top: 137.5px;
+}
+
+.image1 {
+  width: 588px;
+  height: 444px;
+}
+
+.description1_img {
+  width: 303px;
+  height: 231px;
+}
+
+.section2 {
+  width: 1920px;
+  height: 720px;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: 360px;
+}
+
+.box2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 955px;
+  margin-left: 0px;
+  margin-top: 138px;
+}
+
+.image2 {
+  width: 588px;
+  height: 444px;
+}
+
+.description2_img {
+  width: 317px;
+  height: 231px;
+}
+
+.section3 {
+  width: 1920px;
+  height: 720px;
+}
+
+.container3 {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: 360px;
+}
+
+.box3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1022px;
+  margin-left: 0px;
+  margin-top: 138px;
+}
+
+.image3 {
+  width: 588px;
+  height: 444px;
+}
+
+.description3_img {
+  width: 370px;
+  height: 231px;
+}
+
+.section4{ 
+  width: 1920px;
+  height: 720px;
+}
+
+.bottom_banner{
+  display: flex;
+  margin-bottom: 0;
+  width: 1920px;
+  height: 540px;
+}
+
+.footer_banner {
+  display: flex;
+  width: 1920px;
+  height: 160px;
+  background-color: #111827;
+  color: #E5E7EB;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1520px;
+}
+
+.sns_button {
+  width: 20px;
+  height: 20px; 
+}
