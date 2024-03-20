@@ -28,6 +28,7 @@
 					<label for="password">비밀번호</label>
 					<div class="wrapper">
 						<input id="password" type="password" maxlength="20" autocomplete="current-password" placeholder="비밀번호를 입력해주세요" required>
+						<img src="/assets/icons/visible.svg">
 						<img src="/assets/icons/invisible.svg">
 					</div>
 				</div>
@@ -52,16 +53,26 @@
 <script>
 	function toggle_visibility(event)
 	{
-		const input = event.target.parentElement.querySelector("input");
-		//
-		// 1: path
-		// 2: file name
-		// 3: file extension
-		//
-		const [$0, $1, $2, $3] = /^(.*\/)?([^\/]+)\.(\w+)$/gi.exec(event.target.src);
+		const wrapper = event.target.parentElement;
+		const input = wrapper.querySelector("input");
 
-		input.type = input.type === "password" ? "text" : "password";
-		event.target.src = `${$1}/${$2 === "invisible" ? "visible" : "invisible"}.${$3}`;
+		switch (input.type)
+		{
+			case "password":
+			{
+				input.type = "text";
+				wrapper.classList.add("visible");
+				wrapper.classList.remove("invisible");
+				break;
+			}
+			default:
+			{
+				input.type = "password";
+				wrapper.classList.add("invisible");
+				wrapper.classList.remove("visible");
+				break;
+			}
+		}
 	}
 
 	for (element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))

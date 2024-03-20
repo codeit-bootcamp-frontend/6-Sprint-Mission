@@ -39,6 +39,12 @@ main > .container > form > .field .wrapper
 {
 	position: relative;
 }
+main > .container > form > .field .wrapper.invisible img:first-of-type {
+	display: none;
+}
+main > .container > form > .field .wrapper.visible img:last-of-type {
+	display: none;
+}
 main > .container > form > .field .wrapper img {
 	top: 16px;
 	right: 16px;

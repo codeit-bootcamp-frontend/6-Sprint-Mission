@@ -30,15 +30,17 @@
 				</div>
 				<div class="field">
 					<label for="password">비밀번호</label>
-					<div class="wrapper">
+					<div class="wrapper invisible">
 						<input id="password" type="password" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 입력해주세요" required>
+						<img src="/assets/icons/visible.svg">
 						<img src="/assets/icons/invisible.svg">
 					</div>
 				</div>
 				<div class="field">
 					<label for="password-confirm">비밀번호 확인</label>
-					<div class="wrapper">
+					<div class="wrapper invisible">
 						<input id="password-confirm" type="password" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 다시 한번 입력해주세요" required>
+						<img src="/assets/icons/visible.svg">
 						<img src="/assets/icons/invisible.svg">
 					</div>
 				</div>
@@ -53,7 +55,7 @@
 					</div>
 				</div>
 				<p>
-					이미 회원이신가요? <a href="/pages/login/index.html">로그인</a>
+					이미 회원이신가요? <a href="/pages/login/index.html">회원가입</a>
 				</p>
 			</form>
 		</section>
@@ -65,7 +67,7 @@
 
 	function validate_password()
 	{
-		password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "password mismatch");
+		password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "비밀번호 불일치");
 	}
 
 	for (element of [password, password_confirm])
@@ -80,16 +82,26 @@
 
 	function toggle_visibility(event)
 	{
-		const input = event.target.parentElement.querySelector("input");
-		//
-		// 1: path
-		// 2: file name
-		// 3: file extension
-		//
-		const [$0, $1, $2, $3] = /^(.*\/)?([^\/]+)\.(\w+)$/gi.exec(event.target.src);
+		const wrapper = event.target.parentElement;
+		const input = wrapper.querySelector("input");
 
-		input.type = input.type === "password" ? "text" : "password";
-		event.target.src = `${$1}/${$2 === "invisible" ? "visible" : "invisible"}.${$3}`;
+		switch (input.type)
+		{
+			case "password":
+			{
+				input.type = "text";
+				wrapper.classList.add("visible");
+				wrapper.classList.remove("invisible");
+				break;
+			}
+			default:
+			{
+				input.type = "password";
+				wrapper.classList.add("invisible");
+				wrapper.classList.remove("visible");
+				break;
+			}
+		}
 	}
 
 	for (element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))
