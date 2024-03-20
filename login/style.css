@@ -9,3 +9,53 @@ header {
   max-width: 100%;
   width: auto;
 }
+
+/* 메인 */
+
+/* 입력 폼 */
+
+.form-container {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2.5rem auto 0;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form > label {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.3425rem;
+  color: var(--gray-800);
+}
+
+.form > input {
+  height: 56px;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: var(--gray-100);
+  padding: 1rem 1.5rem;
+  color: var(--gray-800);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.form > input:focus {
+  border-color: var(--blue-primary);
+}
+
+.form > input::placeholder {
+  color: var(--gray-400);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+}
