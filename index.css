@@ -7,8 +7,13 @@ a {
 header {
     display: flex;
     justify-content: space-between;
+    height: 4.375rem;
+    position: sticky;
+    top: 0;
     padding: 11px 200px;
     flex: 0 1 auto;
+    background-color: var(--button-font-color);
+    z-index: 1;
 }
 
 header > .login {
