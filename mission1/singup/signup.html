@@ -4,9 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" />
     <title>회원가입</title>
   </head>
   <body>
-
+    <div class="card">
+      <a href="/">
+        <img src="../logo/bigLogo.png" />
+      </a>
+      <div class="signUpTable">
+        이메일
+        <label class="emailLabel">
+          <input
+            title="이메일"
+            placeholder="이메일을 입력해주세요"
+            type="email"
+          />
+        </label>
+        닉네임
+        <label class="passwordLabel">
+          <input id="shown" type="text" placeholder="닉네임을 입력해주세요" />
+        </label>
+        비밀번호
+        <label class="passwordLabel">
+          <input
+            id="shown"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+        </label>
+        비밀번호 확인
+        <label class="">
+          <input
+            id="shown"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <img
+            id="passIcon"
+            onclick="toggleSwitch()"
+            src="/icon/hidePassword.png"
+            alt=""
+          />
+        </label>
+        <img src="" alt="" />
+        <button class="loginButton">회원가입</button>
+        <div class="simpleLoginBox">
+          <p>간편로그인하기</p>
+          <div class="simpleLoginIcons">
+            <a href="https://www.google.com/"
+              ><img src="/img/google.png" alt="구글"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/"
+              ><img src="/img/kakao.png" alt="카카오"
+            /></a>
+          </div>
+        </div>
+        <p class="signUp">
+          이미 회원이신가요? <a href="/singup/signup.html">로그인</a>
+        </p>
+      </div>
+    </div>
   </body>
 </html>
+
