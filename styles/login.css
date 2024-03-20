@@ -52,7 +52,7 @@ footer > h3 > a {
 .pandamarket-login > form > div > input
 {
     display: flex;
-    padding-inline: 20px;
+    padding-inline: 20px 50px;
     border-radius: 12px;
     width: 100%;
     height: 3.5rem;
@@ -67,11 +67,7 @@ footer > h3 > a {
 
 .pandamarket-login > form > input:focus,
 .pandamarket-login > form > div > input:focus {
-    border: 2px solid var(--brand-sky);
-}
-
-.pandamarket-login > form > input.panda-market-*:focus {
-    border: 1px solid var(--brand-blue);
+    border: 3px solid var(--brand-blue);
 }
 
 .pandamarket-login > form > div {

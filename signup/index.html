@@ -10,6 +10,29 @@
     <link href="/styles/common.css" rel="stylesheet" type="text/css">
     <link href="/styles/login.css" rel="stylesheet" type="text/css">
     <link href="/assets/fonts/index.css" rel="stylesheet" type="text/css">
+    <style>
+        .toggle-switch {
+            width: 24px;
+            height: 24px;
+            display: block;
+            position: absolute;
+            right: 20px;
+            background-image: url('/assets/images/signupPage/password-noshow.svg');
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        #password-toggle:checked + .toggle-switch,
+        #password-toggle-confirm:checked + .toggle-switch  {
+            background-image: url('/assets/images/signupPage/password-show.svg');
+        }
+
+        #password-toggle,
+        #password-toggle-confirm {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -20,7 +43,7 @@
     <form>
         <label for="panda-market-email">이메일</label>
         <input type="email" id="panda-market-email" placeholder="이메일을 입력해주세요" />
-        <label for="panda-market-email">닉네임</label>
+        <label for="panda-market-nickname">닉네임</label>
         <input type="email" id="panda-market-nickname" placeholder="닉네임을 입력해주세요" />
         <label for="panda-market-password">패스워드</label>
         <div>
