@@ -79,14 +79,13 @@ button:hover {
     background-color: var(--color-brand-blue);
 }
 
-.on {
-    background-color: var(--color-brand-blue);
-}
-
 .eye {
+    width: 24px;
+    height: 24px;
     position: absolute;
     bottom: 1.45rem;
     right: 2.4rem;
+    cursor: pointer;
 }
 
 /* Main - easy_login */

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>로그인</title>
         <link rel="stylesheet" href="./signin.css" />
+        <script defer src="./main.js"></script>
     </head>
     <body>
         <div class="container">
@@ -18,14 +19,14 @@
                 <form action="">
                     <li class="input_wrap">
                         <label for="email">이메일</label>
-                        <input id="email" type="email" placeholder="이메일을 입력해주세요" autofocus />
+                        <input id="email" type="email" placeholder="이메일을 입력해주세요" autocomplete="off" />
                     </li>
 
                     <li class="input_wrap">
                         <label for="password">비밀번호</label>
-                        <input id="password" type="password" placeholder="비밀번호를 입력해주세요" />
+                        <input id="password" type="password" autocomplete="off" placeholder="비밀번호를 입력해주세요" />
                         <div class="eye">
-                            <img src="/assets/img/icon/pw_Property=Variant2.svg" alt="눈 아이콘" />
+                            <img src="/assets/img/icon/pw_Property=Variant2.svg" alt="" />
                         </div>
                     </li>
                     <button>로그인</button>
