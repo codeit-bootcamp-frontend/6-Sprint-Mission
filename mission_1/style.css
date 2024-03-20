@@ -1,0 +1,248 @@
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 0 200px;
+}
+
+.header_container{
+  text-align: center;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+header a{
+  font-size: 16px;
+}
+
+button {
+  /* 버튼 공통 요소 */
+  background-color: #3692ff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: Pretendard;
+}
+
+button:hover {
+  background-color: #1967d6;
+}
+
+button:active {
+  background-color: #1251aa;
+}
+
+header button {
+  width: 128px; /* 해더 로그인 버튼 */
+  height: 48px; /* 해더 로그인 버튼 */
+  border-radius: 8px; /* 해더 로그인 버튼 */
+  padding: 14.5px 43px;
+}
+
+/* =========Header 영역============= */
+/* ================================= */
+/* =========Top_Banner 영역========= */
+
+.top_banner {
+  background-color: #cfe5ff;
+  display: flex;
+  justify-content: center;
+}
+
+.top_banner_container {
+  position: relative;
+  width: 1200px;
+  height: 540px;
+}
+
+.top_banner_container_look {
+  position: absolute;
+  top: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+}
+
+.top_banner_container_look h1 {
+  color: #374151;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.top_banner_container button {
+  width: 355px; /* 배너 구경하러가기 버튼 */
+  height: 56px; /* 배너 구경하러가기 버튼 */
+  border-radius: 40px; /* 배너 구경하러가기 버튼 */
+  font-size: 20px;
+}
+
+.top_banner_container img {
+  position: absolute;
+  top: 93px;
+  left: 341px;
+}
+
+/* =========Top_Banner 영역========= */
+/* ================================= */
+/* ===========Main 영역============= */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section:nth-child(odd) {
+  text-align: left;
+}
+
+main section:nth-child(even) {
+  text-align: right;
+}
+
+
+section {
+  display: flex;
+  gap: 64px;
+  margin: 138px auto;
+}
+
+.section_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section_container h3 {
+  margin: 6px 0;
+  color: #3692ff;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  /* letter-spacing: 0em; */
+}
+
+.section_container h1 {
+  margin: 6px 0;
+  color: #374151;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  /* letter-spacing: 0.02em; */
+}
+
+.section_container p {
+  margin: 12px 0;
+  color: #374151;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  /* letter-spacing: 0.08em; */
+}
+
+/* ===========Main 영역============= */
+/* ================================= */
+/* =======Bottom_Banner 영역======== */
+
+.bottom_banner {
+  background-color: #cfe5ff;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom_banner_container {
+  position: relative;
+  width: 1200px;
+  height: 540px;
+}
+
+.bottom_banner_container h1 {
+  position: absolute;
+  top: 214px;
+  color: #374151;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bottom_banner_container img {
+  position: absolute;
+  left: 341px;
+}
+
+/* =======Bottom_Banner 영역======== */
+/* ================================= */
+/* ===========Footer 영역=========== */
+
+footer {
+  background-color: #111827;
+  height: 160px;
+  /* display: flex; */
+}
+
+.footer_container {
+  width: 100%;
+  max-width: 1520px;
+  height: 20px;
+  padding: 0 200px;
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.footer_year {
+  color: #9ca3af;
+  font-family: Pretendard; /* footer 공통요소 */
+  font-size: 16px; /* footer 공통요소 */
+  font-weight: 400; /* footer 공통요소 */
+  line-height: 19px; /* footer 공통요소 */
+  letter-spacing: 0em; /* footer 공통요소 */
+  text-align: center; /* footer 공통요소 */
+  display: flex;
+  align-items: center;
+}
+
+.footer_privacy_faq {
+  color: #e5e7eb;
+  font-family: Pretendard; /* footer 공통요소 */
+  font-size: 16px; /* footer 공통요소 */
+  font-weight: 400; /* footer 공통요소 */
+  line-height: 19px; /* footer 공통요소 */
+  letter-spacing: 0em; /* footer 공통요소 */
+  text-align: center; /* footer 공통요소 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer_SNS {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+}
+/* ===========Footer 영역=========== */
+/* ================================= */
