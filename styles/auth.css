@@ -39,3 +39,18 @@ body {
   line-height: 24px;
   text-indent: 24px;
 }
+
+.form__submit-btn {
+  width: 100%;
+  cursor: pointer;
+  height: 56px;
+  border-radius: 40px;
+  background-color: #9ca3af;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.form__easy-login {
+}
