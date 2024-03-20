@@ -2,11 +2,19 @@
   #inner_container {
     width: 640px;
   }
+
+  form input {
+    width: 592px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   #inner_container {
     width: 320px;
+  }
+
+  form input {
+    width: 272px;
   }
 }
 
@@ -27,7 +35,6 @@ form label {
 }
 
 form input {
-  width: 592px;
   height: 24px;
   border-radius: 12px;
   margin-top: 16px;
