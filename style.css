@@ -6,6 +6,9 @@
 /* 헤더 */
 
 header {
+  position: fixed;
+  width: 100vw;
+  background-color: var(--white-primary);
   height: 4.375rem;
   display: flex;
   justify-content: space-between;
