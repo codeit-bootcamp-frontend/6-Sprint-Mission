@@ -31,9 +31,6 @@ header {
     padding: 1.2rem 2rem;
     background-color: var(--color-brand-blue);
     border-radius: 8px;
-}
-
-.header_button a {
     color: white;
     font-size: 16px;
 }
@@ -76,9 +73,6 @@ header {
     height: 5.6rem;
     border-radius: 40px;
     background-color: var(--color-brand-blue);
-}
-
-.main_banner_btn a {
     color: var(--color-white);
     font-size: 2rem;
     font-weight: 600;
