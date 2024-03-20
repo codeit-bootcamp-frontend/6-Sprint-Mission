@@ -11,9 +11,9 @@ body {
   background-color: #ffffff;
 }
 
-/****** header & home-top ******/
+/****** nav & home-top ******/
 
-header {
+nav {
   height: 70px;
   border-bottom: 1px solid #dfdfdf;
   padding: 10px 0;
@@ -21,6 +21,9 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
 }
 .login-btn {
   color: white;
