@@ -1,50 +1,6 @@
-* {
-    box-sizing: border-box;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+@import "reset.css";
+@import "sign.css";
+@import "common.css";
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -55,18 +11,8 @@ table {
 
 @font-face {
     font-family: 'ROKAF-Sans';
-    src: url('./font/ROKAF\ Sans\ Bold.ttf');
+    src: url('../font/ROKAF Sans Bold.ttf');
     font-weight: 700;
-}
-
-:root {
-    --primary-color: #3692FF;
-    --text-color: #374151;
-    --background-color: #CFE5FF;
-    --footer-background-color: #111827;
-    --footer-text-color: #9CA3AF;
-    --footer-link-color: #E5E7EB;
-    --button-color: #FFFFFF;
 }
 
 body {
@@ -79,9 +25,11 @@ body {
 /* header */
 
 .gnb {
+    background-color: var(--button-color);
+    position: sticky;
+    top: 0px;
     display: flex;
     align-items: center;
-    margin:9px 200px;
 }
 
 .gnb-left-box {
@@ -90,6 +38,7 @@ body {
     gap: 10px;
     flex-grow: 1;
     text-decoration: none;
+    margin:9px 200px;
 }
 
 .gnb-logo-title {
@@ -114,6 +63,7 @@ body {
     text-align: center;
     color: var(--button-color);
     text-decoration: none;
+    margin:9px 200px;
 }
 
 /* banner */
@@ -147,7 +97,6 @@ body {
     height: 56px;
     padding:16px 122px 16px 124px;
 }
-
 
 .banner-button {  
     font-weight: 600;
@@ -204,8 +153,6 @@ body {
     margin-bottom: 24px;
 }
 
-
-
 .main-odd-text3,
 .main-even-text3 {
     color: var(--text-color);
@@ -248,7 +195,7 @@ footer {
 }
 
 .footer-left-text {
-    color: var(--footer-text-color);
+    color: var(--gray400-color);
     font-size: 16px;
     font-weight: 400;
     line-height: 19.09px;
