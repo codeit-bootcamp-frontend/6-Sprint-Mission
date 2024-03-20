@@ -3,25 +3,25 @@
 
 .container {
     margin: auto;
-    width: 640px;
-    min-height: 1080px;
+    width: 64rem;
+    min-height: 108rem;
     text-align: center;
     padding-top: 60px;
 }
 
 /* Header logo */
 header {
-    height: 132px;
+    height: 13.2rem;
 }
 
 header img {
-    max-width: 396px;
+    max-width: 39.6rem;
     width: 100%;
 }
 
 /* Main - form*/
 main {
-    padding-top: 40px;
+    padding-top: 4rem;
 }
 
 form {
@@ -30,19 +30,19 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
+    gap: 2.4rem;
 }
 
 .input_wrap {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
     position: relative;
 }
 
 label {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 input {
@@ -52,13 +52,13 @@ input {
     background-color: var(--color-cool-gray100);
     border-radius: 12px;
     padding: 16px 24px;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--color-cool-gray800);
 }
 
 input::placeholder {
     color: var(color-cool-gray400);
-    line-height: 24px;
+    line-height: 2.4rem;
 }
 
 input:focus {
@@ -72,7 +72,7 @@ button {
     border-radius: 40px;
     color: white;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .on {
@@ -81,8 +81,8 @@ button {
 
 .eye {
     position: absolute;
-    bottom: 14.5px;
-    right: 24px;
+    bottom: 1.45rem;
+    right: 2.4rem;
 }
 
 /* Main - easy_login */
@@ -92,34 +92,34 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 74px;
+    height: 7.4rem;
     border-radius: 8px;
     background-color: var(--color-skyblue-btn-background);
 }
 
 h4 {
     color: var(--color-cool-gray800);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 2.4rem;
 }
 
 .easy_login_link {
     display: flex;
-    gap: 16px;
+    gap: 1.6rem;
 }
 
 .easy_login_link img {
-    max-width: 42px;
+    max-width: 4.2rem;
 }
 
 /* Footer sign-in */
 footer {
     padding-top: 24px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--color-cool-gray800);
-    line-height: 17.9px;
+    line-height: 1.79rem;
 }
 
 footer a {
