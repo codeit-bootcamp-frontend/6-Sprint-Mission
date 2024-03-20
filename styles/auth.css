@@ -65,3 +65,18 @@ body {
 .form__easy-login span {
   flex-grow: 1;
 }
+
+.form__easy-login img {
+  cursor: pointer;
+  width: 42;
+  height: 42;
+}
+
+.form__link {
+  text-align: center;
+}
+
+.form__link a {
+  text-decoration: underline;
+  color: #3182f6;
+}
