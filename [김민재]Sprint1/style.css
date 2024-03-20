@@ -140,17 +140,19 @@ body {
     color: var(--text-color)
 }
 
-.banner-button {
+.banner-button-box{
     background-color: var(--primary-color);
+    border-radius: 40px; 
     width: 355px;
     height: 56px;
-    border-radius: 40px;  
+    padding:16px 122px 16px 124px;
+}
+
+
+.banner-button {  
     font-weight: 600;
     font-size: 20px;
-    padding-left: 124px;
-    padding-right: 122px;
-    padding-bottom: 16px;
-    padding-top: 16px;
+    line-height: 24px;
     text-decoration: none;
     color: var(--button-color);
 }
