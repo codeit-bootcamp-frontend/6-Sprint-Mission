@@ -16,7 +16,7 @@
 /* mainBanner section */
 #mainBanner {
   background: var(--main-bg-color)
-    url('/images/Img_home_top.png')
+    url('/images/img-home-top.png')
     no-repeat 80% 100%;
 }
 #mainBanner .banner-text {
@@ -63,7 +63,7 @@
 /* adsBanner section */
 #adsBanner {
   background: var(--main-bg-color)
-    url('/images/Img_home_bottom.png')
+    url('/images/img-home-bottom.png')
     no-repeat 80% 100%;
   margin-top: 138px;
 }
