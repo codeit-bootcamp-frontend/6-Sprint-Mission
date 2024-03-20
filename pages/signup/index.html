@@ -5,7 +5,7 @@
 <head>
 	<title>판다마켓</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="/common.css">
+	<link rel="stylesheet" href="/core.css">
 	<link rel="stylesheet" href="./index.css">
 </head>
 
@@ -26,22 +26,20 @@
 				</div>
 				<div class="field">
 					<label for="username">닉네임</label>
-					<input id="username" type="text" maxlength="15" placeholder="닉네임을 입력해주세요" required>
+					<input id="username" type="text" minlength="5" maxlength="15" placeholder="닉네임을 입력해주세요" required>
 				</div>
 				<div class="field">
 					<label for="password">비밀번호</label>
 					<div class="wrapper invisible">
-						<input id="password" type="password" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 입력해주세요" required>
-						<img src="/assets/icons/visible.svg">
-						<img src="/assets/icons/invisible.svg">
+						<input id="password" type="password" minlength="10" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 입력해주세요" required>
+						<img src="/assets/icons/invisible.svg"><img src="/assets/icons/visible.svg">
 					</div>
 				</div>
 				<div class="field">
 					<label for="password-confirm">비밀번호 확인</label>
 					<div class="wrapper invisible">
-						<input id="password-confirm" type="password" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 다시 한번 입력해주세요" required>
-						<img src="/assets/icons/visible.svg">
-						<img src="/assets/icons/invisible.svg">
+						<input id="password-confirm" type="password" minlength="10" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 다시 한번 입력해주세요" required>
+						<img src="/assets/icons/invisible.svg"><img src="/assets/icons/visible.svg">
 					</div>
 				</div>
 				<button class="button" type="submit">
@@ -62,54 +60,6 @@
 	</main>
 </body>
 
-<script>
-	const [password, password_confirm] = [document.querySelector("#password"), document.querySelector("#password-confirm")];
-
-	function validate_password()
-	{
-		password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "비밀번호 불일치");
-	}
-
-	for (element of [password, password_confirm])
-	{
-		element.addEventListener("change", (event) => {
-			validate_password();
-		});
-		element.addEventListener("keyup", (event) => {
-			validate_password();
-		});
-	}
-
-	function toggle_visibility(event)
-	{
-		const wrapper = event.target.parentElement;
-		const input = wrapper.querySelector("input");
-
-		switch (input.type)
-		{
-			case "password":
-			{
-				input.type = "text";
-				wrapper.classList.add("visible");
-				wrapper.classList.remove("invisible");
-				break;
-			}
-			default:
-			{
-				input.type = "password";
-				wrapper.classList.add("invisible");
-				wrapper.classList.remove("visible");
-				break;
-			}
-		}
-	}
-
-	for (element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))
-	{
-		element.addEventListener("click", (event) => {
-			toggle_visibility(event);
-		});
-	}
-</script>
+<script type="module" src="./index.js"></script>
 
 </html>

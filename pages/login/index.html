@@ -5,7 +5,7 @@
 <head>
 	<title>판다마켓</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="/common.css">
+	<link rel="stylesheet" href="/core.css">
 	<link rel="stylesheet" href="./index.css">
 </head>
 
@@ -27,9 +27,8 @@
 				<div class="field">
 					<label for="password">비밀번호</label>
 					<div class="wrapper">
-						<input id="password" type="password" maxlength="20" autocomplete="current-password" placeholder="비밀번호를 입력해주세요" required>
-						<img src="/assets/icons/visible.svg">
-						<img src="/assets/icons/invisible.svg">
+						<input id="password" type="password" minlength="10" maxlength="20" autocomplete="current-password" placeholder="비밀번호를 입력해주세요" required>
+						<img src="/assets/icons/invisible.svg"><img src="/assets/icons/visible.svg">
 					</div>
 				</div>
 				<button class="button" type="submit">
@@ -50,37 +49,6 @@
 	</main>
 </body>
 
-<script>
-	function toggle_visibility(event)
-	{
-		const wrapper = event.target.parentElement;
-		const input = wrapper.querySelector("input");
-
-		switch (input.type)
-		{
-			case "password":
-			{
-				input.type = "text";
-				wrapper.classList.add("visible");
-				wrapper.classList.remove("invisible");
-				break;
-			}
-			default:
-			{
-				input.type = "password";
-				wrapper.classList.add("invisible");
-				wrapper.classList.remove("visible");
-				break;
-			}
-		}
-	}
-
-	for (element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))
-	{
-		element.addEventListener("click", (event) => {
-			toggle_visibility(event);
-		});
-	}
-</script>
+<script type="module" src="./index.js"></script>
 
 </html>

@@ -35,39 +35,42 @@ main > .container > form > .field
 	display: flex;
 	flex-direction: column;
 }
-main > .container > form > .field .wrapper 
+main > .container > form > .field > .wrapper 
 {
 	position: relative;
 }
-main > .container > form > .field .wrapper.invisible img:first-of-type {
-	display: none;
-}
-main > .container > form > .field .wrapper.visible img:last-of-type {
-	display: none;
-}
-main > .container > form > .field .wrapper img {
+main > .container > form > .field > .wrapper > img {
 	top: 16px;
 	right: 16px;
 	position: absolute;
 }
-main > .container > form > .field label
+main > .container > form > .field > .wrapper.visible > img:first-of-type {
+	display: none;
+}
+main > .container > form > .field > .wrapper.invisible > img:last-of-type {
+	display: none;
+}
+main > .container > form > .field > label
 {
 	color: #1F2937;
 	font-size: 18px;
 	font-weight: 700;
 }
-main > .container > form > .field input
+main > .container > form > .field > input,
+main > .container > form > .field > .wrapper > input
 {
 	width: 100%;
 	height: 56px;
 	border-radius: 12px;
 	background-color: #F3F4F6;
 }
-main > .container > form > .field input:focus
+main > .container > form > .field > input:focus
+main > .container > form > .field > .wrapper > input:focus
 {
 	outline: #369EFF solid thin;
 }
-main > .container > form > .field input::placeholder
+main > .container > form > .field > input::placeholder,
+main > .container > form > .field > .wrapper > input::placeholder
 {
 	font-size: 16px;
 	font-weight: 400;
