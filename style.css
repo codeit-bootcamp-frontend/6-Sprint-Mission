@@ -23,7 +23,9 @@
 
 header {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -315,7 +317,15 @@ footer .info-container .link-container img {
 @media screen and (min-width: 375px) and (max-width: 767px) {
   header {
     padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 93%;
     z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   header .logo-container img {
     width: 110px;
@@ -327,13 +337,12 @@ footer .info-container .link-container img {
     height: 540px;
     margin-top: 70px;
     display: flex;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
     overflow: hidden;
-    margin-top: 70px;
   }
   .home-top {
     text-align: center;
@@ -360,6 +369,7 @@ footer .info-container .link-container img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 450px;
   }
   .section h2 br,
   .section-reverse h2 br {
@@ -374,19 +384,26 @@ footer .info-container .link-container img {
 
   .section .section-description {
     position: relative;
-    right: 30px;
+    right: 50px;
   }
-
+  .section-reverse .section-reverse-description {
+    position: relative;
+    left: 25px;
+  }
+  main section:nth-child(4) .section-description {
+    position: relative;
+    right: 15px;
+  }
   .section .section-description p,
   .section-reverse .section-reverse-description p {
     color: var(--blue);
     font-weight: 700;
     margin-top: -20px;
-    font-size: 16px;
+    font-size: 12px;
   }
   .section .section-description h2,
   .section-reverse .section-reverse-description h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--gray600);
   }
@@ -394,7 +411,7 @@ footer .info-container .link-container img {
   .section-reverse .section-reverse-description h3 {
     color: var(--gray600);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
   }
   .bottom {
     height: 540px;
@@ -411,27 +428,45 @@ footer .info-container .link-container img {
     top: -90px;
   }
   footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 0;
     height: 160px;
-    padding: 0 100px 0 100px;
     background-color: var(--gray900);
+    padding: auto;
     color: #fff;
   }
   footer .info-container {
-    width: 100%;
-    position: relative;
-    top: -30px;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "policy link"
+      "info info";
   }
   footer .info-container,
   footer .policy-container a {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     color: var(--gray400);
   }
   footer .info-container .policy-container {
     display: flex;
     gap: 30px;
+  }
+  footer .info {
+    grid-area: "info";
+  }
+  footer .policy-container {
+    grid-area: "policy";
+    margin: 0 auto;
+  }
+  footer .info-container .link-container img {
+    width: 15px;
+  }
+  footer .link-container {
+    grid-area: "link";
+    margin: 0 auto;
   }
 }
