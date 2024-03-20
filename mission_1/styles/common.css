@@ -1,0 +1,12 @@
+:root {
+  --brand-color: #3692ff;
+  --button-hover: #1967d6;
+  --button-clicked: #1251aa;
+  --banner-background: #cfe5ff;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}

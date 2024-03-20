@@ -1,0 +1,134 @@
+@import url("common.css");
+
+* {
+  box-sizing: border-box;
+}
+
+/* ********** */
+/* Header CSS */
+/* ********** */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+header .logo_img {
+  width: 396px;
+  height: 132px;
+}
+
+/* ************** */
+/* Main Container */
+/* ************** */
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  width: 640px;
+}
+
+/* ********** */
+/* Login Form */
+/* ********** */
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+input {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--gray-100);
+  color: var(--gray-400);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+}
+input:focus {
+  outline: 2px solid var(--brand-color);
+}
+.password_wrapper {
+  position: relative;
+}
+.show_password {
+  position: absolute;
+  width: 24px;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+}
+.login_button {
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--gray-400);
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ************ */
+/* Social Login */
+/* ************ */
+.social_login_wrapper {
+  width: 100%;
+  height: 74px;
+  border-radius: 8px;
+  padding: 25px;
+  background-color: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+}
+.social_login_wrapper span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-800);
+}
+.logos {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logos img {
+  width: 42px;
+}
+
+/* ************ */
+/* SignUp Link */
+/* ************ */
+.signup_link_wrapper p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--gray-800);
+}
+.signup_link_wrapper a {
+  color: #3182f6;
+  text-decoration: underline;
+  cursor: pointer;
+}
