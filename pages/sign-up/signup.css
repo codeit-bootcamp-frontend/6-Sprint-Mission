@@ -1,0 +1,129 @@
+@import url(/styles/reset.css);
+@import url(/styles/base.css);
+
+.container {
+    margin: auto;
+    width: 640px;
+    min-height: 1080px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Header logo */
+header {
+    height: 132px;
+}
+
+header img {
+    max-width: 396px;
+    width: 100%;
+}
+
+/* Main - form*/
+main {
+    padding-top: 40px;
+}
+
+form {
+    padding-bottom: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.input_wrap {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    box-sizing: border-box;
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray100);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: var(--color-cool-gray800);
+}
+
+input::placeholder {
+    color: var(color-cool-gray400);
+    line-height: 24px;
+}
+
+input:focus {
+    border: 1.5px solid #3692ff;
+}
+
+button {
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray400);
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.on {
+    background-color: var(--color-brand-blue);
+}
+
+.eye {
+    position: absolute;
+    bottom: 14.5px;
+    right: 24px;
+}
+
+/* Main - easy_login */
+.easy_login {
+    box-sizing: border-box;
+    padding: 25px 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+    border-radius: 8px;
+    background-color: var(--color-skyblue-btn-background);
+}
+
+h4 {
+    color: var(--color-cool-gray800);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.easy_login_link {
+    display: flex;
+    gap: 16px;
+}
+
+.easy_login_link img {
+    max-width: 42px;
+}
+
+/* Footer sign-in */
+footer {
+    padding-top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-cool-gray800);
+    line-height: 17.9px;
+}
+
+footer a {
+    color: var(--color-alink-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
