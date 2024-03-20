@@ -27,6 +27,7 @@ form label {
 }
 
 form input {
+  width: 592px;
   height: 24px;
   border-radius: 12px;
   margin-top: 16px;
@@ -55,6 +56,16 @@ form button {
   border: none;
   background-color: var(--cool-gray400);
   color: #ffffff;
+}
+
+.pwd_container {
+  position: relative;
+}
+
+.pwd_container > img {
+  position: absolute;
+  top: 53px;
+  right: 16px;
 }
 
 #container {
@@ -94,6 +105,11 @@ form button {
   gap: 16px;
 }
 
+#sns_img_container > a {
+  width: 44px;
+  height: 44px;
+}
+
 #sign_container {
   display: flex;
   justify-content: center;
@@ -103,9 +119,9 @@ form button {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+}
 
-  > p {
-    color: var(--cool-gray800);
-    margin: 0;
-  }
+#sign_container > p {
+  color: var(--cool-gray800);
+  margin: 0;
 }

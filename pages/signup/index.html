@@ -30,29 +30,39 @@
             placeholder="닉네임을 입력해주세요"
             required
           />
-          <label for="pwd">비밀번호</label>
-          <input
-            type="password"
-            id="pwd"
-            name="pwd"
-            placeholder="비밀번호를 입력해주세요"
-            required
-          />
-          <label for="pwdchk">비밀번호 확인</label>
-          <input
-            type="passwordchk"
-            id="pwdchk"
-            name="pwdchk"
-            placeholder="비밀번호를 다시 한 번 입력해주세요"
-            required
-          />
+          <div class="pwd_container">
+            <label for="pwd">비밀번호</label>
+            <input
+              type="password"
+              id="pwd"
+              name="pwd"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
+            <img src="/images/btn_visibility.png" alt="controlpwd" />
+          </div>
+          <div class="pwd_container">
+            <label for="pwdchk">비밀번호 확인</label>
+            <input
+              type="passwordchk"
+              id="pwdchk"
+              name="pwdchk"
+              placeholder="비밀번호를 다시 한 번 입력해주세요"
+              required
+            />
+            <img src="/images/btn_visibility.png" alt="controlpwd" />
+          </div>
           <button type="submit">회원가입</button>
         </form>
         <div id="sns_container">
           간편 로그인하기
           <div id="sns_img_container">
-            <img src="/images/ic_google.png" alt="googlelogo" />
-            <img src="/images/ic_kakao.png" alt="kakaologo" />
+            <a href="https://www.google.com/" target="_blank"
+              ><img src="/images/ic_google.png" alt="googlelogo"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/" target="_blank"
+              ><img src="/images/ic_kakao.png" alt="kakaologo"
+            /></a>
           </div>
         </div>
         <div id="sign_container">

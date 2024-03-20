@@ -22,21 +22,28 @@
             placeholder="이메일을 입력해주세요"
             required
           />
-          <label for="pwd">비밀번호</label>
-          <input
-            type="password"
-            id="pwd"
-            name="pwd"
-            placeholder="비밀번호를 입력해주세요"
-            required
-          />
+          <div class="pwd_container">
+            <label for="pwd">비밀번호</label>
+            <input
+              type="password"
+              id="pwd"
+              name="pwd"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
+            <img src="/images/btn_visibility.png" alt="controlpwd" />
+          </div>
           <button type="submit">로그인</button>
         </form>
         <div id="sns_container">
           간편 로그인하기
           <div id="sns_img_container">
-            <img src="/images/ic_google.png" alt="googlelogo" />
-            <img src="/images/ic_kakao.png" alt="kakaologo" />
+            <a href="https://www.google.com/" target="_blank"
+              ><img src="/images/ic_google.png" alt="googlelogo"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/" target="_blank"
+              ><img src="/images/ic_kakao.png" alt="kakaologo"
+            /></a>
           </div>
         </div>
         <div id="sign_container">
