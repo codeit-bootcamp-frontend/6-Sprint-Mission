@@ -17,6 +17,8 @@ header > .login {
     height: 48px;
     border-radius: 8px;
     padding-block: 14px;
+    font-size: 1rem;
+    line-height: 1.1931rem;
     text-align: center;
     background-color: var(--header-logo-color);
     color: var(--button-font-color);
