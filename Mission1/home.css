@@ -122,7 +122,6 @@ body {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  border: 1px solid black;
 }
 
 .content_item {
@@ -143,7 +142,6 @@ body {
   align-items: center;
   width: 1200px;
   height: 720px;
-  border: 1px solid black;
 }
 
 .container1, .container3 {
