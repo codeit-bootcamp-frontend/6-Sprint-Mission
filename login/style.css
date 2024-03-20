@@ -59,3 +59,24 @@ header {
   font-size: 1rem;
   line-height: 24px;
 }
+
+.form-button {
+  width: 100%;
+  padding: 1rem 7.75rem;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--gray-400);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--white-primary);
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: var(--gray-500);
+}
+
+.form-button:active {
+  background-color: var(--gray-600);
+}
