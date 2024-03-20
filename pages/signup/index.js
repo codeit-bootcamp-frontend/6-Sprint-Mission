@@ -1,43 +1,38 @@
-const [password, password_confirm] = [document.getElementById("password"), document.getElementById("password-confirm")];
+const [password, password_confirm] = [document.querySelector(`#password`), document.querySelector(`#password-confirm`)];
 
 if (password !== null && password_confirm !== null)
 {
 	function validator()
 	{
-		password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "비밀번호 불일치");
+		password_confirm.setCustomValidity(password.value === password_confirm.value ? `` : `비밀번호 불일치`);
 	}
 
 	for (const element of [password, password_confirm])
 	{
-		element.addEventListener("change", (event) => {
+		element.addEventListener(`change`, (event) => {
 			validator();
 		});
-		element.addEventListener("keyup", (event) => {
+		element.addEventListener(`keyup`, (event) => {
 			validator();
 		});
 	}
 }
 
-for (const element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))
+for (const element of document.querySelectorAll(`form > .field > .wrapper:has(input[type="password"])`))
 {
-	element.addEventListener("click", (event) => {
-		const wrapper = event.target.parentElement;
-		const input = wrapper.querySelector("input");
-	
+	const [input, img] = [element.querySelector(`input`), element.querySelector(`img`)];
+
+	img.addEventListener(`click`, (event) => {
 		switch (input.type)
 		{
-			case "password":
+			case `password`:
 			{
-				input.type = "text";
-				wrapper.classList.add("visible");
-				wrapper.classList.remove("invisible");
+				input.type = `text`; img.src = `/assets/icons/visible.svg`;
 				break;
 			}
 			default:
 			{
-				input.type = "password";
-				wrapper.classList.add("invisible");
-				wrapper.classList.remove("visible");
+				input.type = `password`; img.src = `/assets/icons/invisible.svg`;
 				break;
 			}
 		}

@@ -20,14 +20,18 @@
 	--gray300: #E5E7EB;
 	--gray100: #E8EBED;
 	--gray50: #F7F7F8;
+}
 
-	font-family: Pretendard;
+main
+{
+	font-family: "Pretendard";
 }
 
 a[href]
 {
 	text-decoration: none;
 }
+
 .button
 {
 	display: flex;

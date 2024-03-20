@@ -44,12 +44,6 @@ main > .container > form > .field > .wrapper > img {
 	right: 16px;
 	position: absolute;
 }
-main > .container > form > .field > .wrapper.visible > img:first-of-type {
-	display: none;
-}
-main > .container > form > .field > .wrapper.invisible > img:last-of-type {
-	display: none;
-}
 main > .container > form > .field > label
 {
 	color: #1F2937;
