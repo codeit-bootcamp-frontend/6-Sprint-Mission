@@ -1,3 +1,11 @@
+:root {
+  --main-color: #3692ff;
+  --text-color: #374151;
+  --background-color: #cfe5ff;
+  --white-color: #ffffff;
+  --black-color: #111827;
+}
+
 /* Navigation */
 nav {
   position: sticky;
@@ -10,12 +18,26 @@ nav {
   z-index: 1;
 }
 
+.logo {
+  font-size: 0;
+}
+
+.logo_img {
+  width: 153px;
+  height: 51px;
+}
+
 .login_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 128px;
   height: 48px;
   border-radius: 8px;
+  background-color: var(--main-color);
   font-size: 16px;
   font-weight: 600;
+  color: var(--white-color);
   cursor: pointer;
 }
 
