@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>signin</title>
+    <link rel="stylesheet" href="styles/signin_style.css" />
+    <title>로그인</title>
+    <!-- 글꼴 CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
   </head>
   <body>
-    <h1>signin</h1>
+    <div class="wrap">
+      <a href="/6-Sprint-Mission/">
+        <img src="images/panda_market_logo.svg" alt="판다마켓 로고 이미지" />
+      </a>
+      <form>
+        <label for="email">이메일</label>
+        <input type="email" id="email" />
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" />
+        <button type="submit">로그인</button>
+      </form>
+      <div class="easy-login"></div>
+      <p>판다마켓이 처음이신가요? <a href="signup.html">회원가입</a></p>
+    </div>
   </body>
 </html>
