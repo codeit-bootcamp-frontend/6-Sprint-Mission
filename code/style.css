@@ -46,6 +46,11 @@ header{
     display:grid;
     height: 70px;
     grid-template-columns: 353px 1fr 328px;
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 1;
+
 }
 
 header a:first-child{
