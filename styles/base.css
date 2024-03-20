@@ -66,3 +66,8 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+input {
+    border: none;
+    outline: none;
+}

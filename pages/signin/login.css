@@ -24,18 +24,53 @@ main {
 }
 
 form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input_wrap {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
 }
 
 label {
+    font-size: 18px;
 }
 
 input {
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray100);
+    border-radius: 12px;
+    padding-left: 24px;
+    font-size: 16px;
+    color: var(--color-cool-gray800);
+}
+
+input::placeholder {
+    color: var(color-cool-gray400);
+    line-height: 24px;
 }
 
 button {
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray400);
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .eye {
+    position: absolute;
+    right: 0;
+    bottom: 14.5px;
 }
 
 /* Main - easy_login */
