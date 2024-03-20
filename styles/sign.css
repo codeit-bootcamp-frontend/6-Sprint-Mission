@@ -94,14 +94,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-.form-button:hover {
-  background-color: var(--gray-500);
-}
-
-.form-button:active {
-  background-color: var(--gray-600);
-}
-
 /* 소셜 로그인 */
 
 .social-login-container {
