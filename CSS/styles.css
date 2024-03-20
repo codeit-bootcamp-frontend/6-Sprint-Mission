@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+@import "reset.css";
+
+:root {
+  --blue: #3692FF; 
+  --grey900: #1b1d1f;
+  --grey700: #374151;
+  --skyblue: #cfe5ff;
+  --white: #ffffff;
+}
+
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 200px 9px 200px;
+}
+
+.signin {
+  width: 128px;
+  height: 48px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+header {
+  width: 100%;
+  background-color: var(--skyblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-button {
+  width: 355px;
+  height: 56px;
+  font-size: 20px;
+  border-radius: 40px;
+  font-weight: 500;
+}
+
+.signin, .header-button {
+  background-color: var(--blue);
+  color: var(--white);
+  border-style: none;
+}
+
+.logo, .signin, .header-button {
+  cursor: pointer;
+}
+
+h1 {
+  color: var(--grey700);
+  line-height: 1.4;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+}
+
+.keyword {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: block;
+}
+
+p {
+  color: var(--grey700);
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 24px;
+  line-height: 120%;
+}
+
+.header-slogan {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+main {
+  width:1200px;
+  margin: 0 auto;
+  padding-bottom: 138px;
+  display: flex;
+  flex-direction: column;
+  gap: 138px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-top: 138px;
+}
+
+.top-container {
+  justify-content: end;
+}
+
+.top-items {
+ text-align: right;
+}
+
+.bottom-container {
+  background-color: var(--skyblue);
+  height: 540px;
+}
+
+.content {
+display: flex;
+margin: 138px auto;
+position: relative;
+left: 40px;
+align-items: center;
+}
+
+footer {
+  background-color: var(--grey900);
+  height: 160px;
+  padding-top: 32px;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.privacy {
+  display: flex;
+  gap: 40px;
+}
+
+.privacy a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sns {
+  display: flex;
+  gap:20px;
+  align-items: center;
+}
+
+.sns a {
+  cursor: pointer;
+}
+
+.footer-items a  {
+  font-size: 16px;
+  font-weight: 200;
+  color: #ffffff;
+}
+
