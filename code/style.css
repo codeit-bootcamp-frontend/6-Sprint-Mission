@@ -24,7 +24,6 @@
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    overflow-x:hidden;
     
 }
 
@@ -244,4 +243,41 @@ footer{
 .footer-sns{
     display: flex;
     gap: 12px;
+}
+
+@media(max-width: 1200px) {
+
+
+    .banner-content {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .banner-txt p {
+        text-align: center;
+    }
+
+    .top .banner-img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .bottom .banner-img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+    .info-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-card-txt{
+        align-items: center;
+    }
+
+
 }
