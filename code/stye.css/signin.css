@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main: #3692ff;
+    --error: #f74747;
+    --gray50: #f7f7f8;
+    --gray100: #e8ebed;
+    --gray200: #e5e7eb;
+    --gray400: #9ea4a8;
+    --gray500: #72787f;
+    --gray600: #454c53;
+    --gray700: #374151;
+    --gray800: #26282b;
+    --gray900: #1b1d1f;
+    --btn1: #3692ff;
+    --btn2: #1967d6;
+    --btn3: #1251aa;
+    --btn4: #9ca3af;
+    --bannerbg: #cfe5ff;
+    --coolGray800: #1F2937;
+    --coolGray100: #F3F4F6;
+
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x:hidden;
+}
+
+/* 판다마켓 로고 */
+header{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#Panda-market-logo {
+    width: 396px;
+    height: 132px;
+   
+}
+
+/* 메인 */
+main{
+    display: flex;
+    justify-content: center;
+}
+.login-content{
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+/* 이메일 아이디 로그인 버튼 */
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-form input {
+    margin: 16px 0 24px 0;
+    background-color: var(--coolGray100);
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    border: none;
+    padding-left: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.login-form input:focus{
+    outline-color: var(--btn1);
+}
+.login-form label {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.48px;
+    text-align: left;
+    color: var(--coolGray800);
+}
+
+.login-form button {
+    padding: 16px 0 16px 0;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    background-color: var(--btn4);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.login-form button:hover{
+    background-color: var(--btn1);
+
+}
+/* 간편 로그인 */
+.login-easy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6F2FF;
+    padding: 16px 23px 16px 23px;
+    border-radius: 8px;
+}
+
+.sns-icon img{
+    width: 42px;
+    height: 42px;
+}
+.sns-icon img:first-child{
+    margin-right: 16px;
+}
+
+/* 처음이신가요? */
+.login-first{
+    text-align: center;
+}
+.login-first span {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.9px;
+    text-align: left;
+    color: var(--coolGray800);
+
+}
+.login-first span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.9px;
+    color: var(--coolGray800);
+
+}
+.login-first a {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.9px;
+    color: #3182F6;
+    
+}
