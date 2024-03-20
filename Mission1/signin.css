@@ -1,0 +1,92 @@
+#wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 396px;
+  height: 132px;
+}
+
+.header_container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header_container a img {
+  width: 100%;
+  height: 100%;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 290px;
+}
+
+.add_icon {
+  background-image: url(./img/btn_visibility_off.svg);
+  background-repeat: no-repeat;
+  background-position: 600px center;
+}
+
+.login_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 140px;
+  gap: 24px;
+}
+
+.login_simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 23px;
+  background-color: var(--color-background-blue);
+  border-radius: 8px;
+  height: 74px;
+}
+
+.login_simple p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.login_simple_button {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 42px;
+}
+
+.login_simple img {
+  width: 42px;
+  height: 42px;
+}
+
+.login_to_signup {
+  text-align: center;
+}
+
+.login_to_signup > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17.9px;
+}
