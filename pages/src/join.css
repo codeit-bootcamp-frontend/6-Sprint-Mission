@@ -1,28 +1,28 @@
-.login-box {
+.join-box {
     margin: 60px auto;
 }
-.login-box .home-logo {
+.join-box .home-logo {
     display: block;
     text-align: center;
 }
 
 /* 로그인 폼 텍스트 공통 */
-.login-form p, .login-form label {
+.join-form p, .join-form label {
     font-weight: 500;
     color: var(--gray800);
 }
 
 /* 로그인 폼 */
-.login-form {
+.join-form {
     max-width: 640px;
     margin: 40px auto;
 }
-.login-form label {
+.join-form label {
     font-size: 1.125rem;
     font-weight: 700;
     position: relative;
 }
-.login-form input {
+.join-form input {
     display: block;
     margin-top: 1rem;
     width: 100%;
@@ -30,13 +30,13 @@
     background-color: var(--gray100);
     color: var(--gray800);
     border-radius: 12px;
-    line-height: 56px;
+    height: 56px;
     padding: 0 24px;
 }
-.login-form input::placeholder {
+.join-form input::placeholder {
     color: var(--gray400);
 }
-.login-form input:focus-visible {
+.join-form input:focus-visible {
     outline: 1px solid var(--main-blue-color);
 }
 .visible-icon {
@@ -49,7 +49,7 @@
     bottom: 15%;
     cursor: pointer;
 }
-.login-btn {
+.join-btn {
     font-size: 1.25rem;
     font-weight: 600;
     background-color: var(--gray400);
@@ -60,15 +60,15 @@
     height: 56px;
     cursor: pointer;
 }
-.login-btn:hover {
+.join-btn:hover {
     background-color: var(--main-blue-color);
 }
-.login-form > div {
+.join-form > div {
     margin: 24px 0;
 }
 
 /* 간편 로그인 */
-.sns-login-wrap {
+.sns-join-wrap {
     background-color: #E6F2FF;
     border-radius: 8px;
     padding: 0 1.5rem;
@@ -77,11 +77,11 @@
     justify-content: space-between;
     align-items: center;
 }
-.sns-login-box {
+.sns-join-box {
     display: flex;
     gap: 1rem;
 }
-.sns-login-icon {
+.sns-join-icon {
     border-radius: 99px;
     background-color: #fff;
     width: 42px;
@@ -96,19 +96,19 @@
 .kakao-icon {
     background-color: #F5E14B;
 }
-.sns-login-icon:hover {
+.sns-join-icon:hover {
     opacity: 0.8;
 }
 
-/* 회원가입 안내 */
-.signup-message-box {
+/* 로그인 및 회원가입 안내 */
+.join-message-box {
     font-size: 0.95rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
-.signup-link {
+.join-link {
     color: #3182F6;
     font-weight: 500;
     border-bottom: 1px solid;
