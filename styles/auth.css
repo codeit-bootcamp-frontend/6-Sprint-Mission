@@ -20,3 +20,22 @@ body {
 .form__block {
   margin-bottom: 24px;
 }
+
+.form__block label {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.form__block input {
+  margin-top: 16px;
+  min-width: 100%;
+  min-height: 56px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  border: none;
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-indent: 24px;
+}
