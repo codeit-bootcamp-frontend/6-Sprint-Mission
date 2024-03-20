@@ -32,9 +32,9 @@ body {
   min-width: 100%;
   min-height: 56px;
   border-radius: 12px;
-  background-color: #f3f4f6;
+  background-color: var(--input-bg);
   border: none;
-  color: #9ca3af;
+  color: var(--light-gray);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -58,7 +58,7 @@ body {
   cursor: pointer;
   height: 56px;
   border-radius: 40px;
-  background-color: #9ca3af;
+  background-color: var(--light-gray);
   color: white;
   font-weight: 600;
   font-size: 20px;
@@ -67,7 +67,7 @@ body {
 
 .form__easy-login {
   height: 74px;
-  background-color: #e6f2ff;
+  background-color: var(--light-blue-100);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -91,5 +91,5 @@ body {
 
 .form__link a {
   text-decoration: underline;
-  color: #3182f6;
+  color: var(--blue);
 }
