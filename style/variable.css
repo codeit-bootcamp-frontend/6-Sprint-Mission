@@ -15,10 +15,15 @@
   --rokaf-sans: 'ROKAF Sans Bold';
 
   --cool-gray-900: #111827;
+  --cool-gray-800: #1f2937;
   --cool-gray-700: #374151;
   --cool-gray-400: #9ca3af;
+  --cool-gray-100: #F3F4F6;
 
   --brand-blue: #3692FF; 
+  --easy-login-blue: #E6F2FF;
 
   --banner-background: #CFE5FF;
+
+  --input-font_color: #9CA3AF;
 }

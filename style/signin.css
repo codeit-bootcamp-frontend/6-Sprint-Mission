@@ -1,0 +1,248 @@
+/* Variable */
+@import url(/style/variable.css);
+/* Reset */
+@import url(/style/reset.css);
+
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 60px;
+}
+
+/* Signin Title */
+.signin-title {
+  width: 396px;
+  height: 132px;
+
+  display: flex;
+  align-items: center;
+
+  /* (logo(103.53px) + title(266px)) - Total Width(396px)  */
+  gap: 26.47px;
+
+  /* (top(60px) + height(132px)) - form position top(232px) */
+  margin-bottom: 40px;
+}
+
+
+.signin-title .title-logo {
+  width: 103.53px;
+  height: 103.88px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--brand-blue);
+  border-radius: 28.93px;
+}
+
+.title-logo img {
+  width: 69.82px;
+  height: 63.3px;
+}
+
+.signin-title h1 {
+  font-family: var(--rokaf-sans);
+  font-size: 66.34px;
+  font-weight: 700;
+  line-height: 89.56px;
+
+  color: var(--brand-blue);
+}
+
+/* Form */
+.form-content {
+  width: 640px;
+  height: 430px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.form-content .input-items {
+  width: 100%;
+  height: 93px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-items label {
+  font-family: var(--pretendard);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+
+  color: var(--cool-gray-800);
+} 
+
+.input-items input {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 24px;
+  
+  background-color: var(--cool-gray-100);
+  border-radius: 12px;
+  border: 0;
+  outline: 0;
+
+  font-family: var(--pretendard);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: var(--cool-gray-400);
+}
+
+.input-items input:focus {
+  border: 2px solid var(--brand-blue);
+}
+
+/* Form > Password */
+.password-item {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.password-item button {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 24px;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.password-item button img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Login button */
+.login-btn {
+  width: 640px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn button {
+  width: 100%;
+  height: 100%;
+
+  padding: 16px 124px;
+
+  background-color: var(--cool-gray-400);
+  border-radius: 40px;
+  border: 0;
+  outline: 0;
+
+  font-family: var(--pretendard);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+
+  color: #fff;
+}
+
+.login-btn button:hover {
+  background-color: var(--brand-blue );
+}
+
+/* Easy Login */
+.easylogin-content {
+  width: 640px;
+  height: 74px;
+
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--easy-login-blue);
+  border-radius: 8px;
+}
+.easylogin-content p {
+  font-family: var(--pretendard);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: var(--cool-gray-800);
+}
+
+.easylogin-content ul {
+  width: 100px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.easylogin-content ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.easylogin-content li,
+.easylogin-content a,
+.easylogin-content img {
+  width: 44px;
+  height: 44px;
+}
+
+/* Go to Sing Up */
+.goto-signup {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.goto-signup p {
+  font-family: var(--pretendard);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.9px;
+
+  color: var(--cool-gray-800);
+}
+
+.goto-signup p > a {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+
+
+
+
