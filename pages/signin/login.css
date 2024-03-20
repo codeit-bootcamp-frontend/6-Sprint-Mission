@@ -9,12 +9,13 @@
 }
 
 /* Header logo */
-.header {
-    width: 396px;
+header {
     height: 132px;
 }
 
-.logo {
+header img {
+    max-width: 396px;
+    width: 100%;
 }
 
 /* Main - form*/
