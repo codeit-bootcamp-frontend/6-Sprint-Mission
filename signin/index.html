@@ -34,13 +34,20 @@
         </div>
         <div class="form">
           <label for="password">비밀번호</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            placeholder="비밀번호를 입력해주세요"
-          />
+          <div class="password-container">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="비밀번호를 입력해주세요"
+            />
+            <img
+              class="visible-icon"
+              alt="비밀번호 가리기 아이콘"
+              src="../assets/icons/visibility_off.svg"
+            />
+          </div>
         </div>
         <button class="form-button" type="submit">로그인</button>
       </form>

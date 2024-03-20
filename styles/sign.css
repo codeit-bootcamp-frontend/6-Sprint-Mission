@@ -44,7 +44,8 @@ main {
   color: var(--gray-800);
 }
 
-.form > input {
+input {
+  width: 100%;
   height: 56px;
   border: none;
   border-radius: 0.75rem;
@@ -56,15 +57,28 @@ main {
   line-height: 24px;
 }
 
-.form > input:focus {
+input:focus {
   border-color: var(--blue-primary);
 }
 
-.form > input::placeholder {
+input::placeholder {
   color: var(--gray-400);
   font-weight: 400;
   font-size: 1rem;
   line-height: 24px;
+}
+
+.password-container {
+  width: 100%;
+  position: relative;
+}
+
+.visible-icon {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .form-button {
