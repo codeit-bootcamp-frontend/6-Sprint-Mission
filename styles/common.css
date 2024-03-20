@@ -6,7 +6,12 @@
    --banner-bg-color: #CFE5FF;
    --copyright-font-color: #9CA3AF;
    --footer-bg-color: #111827;
-   --header-button-bg-color: #3692FF;
+   --header-logo-color: #3692FF;
    --button-font-color: #fff;
    --faq-font-color: #E5E7EB;
+   --cool-gray-100: #F3F4F6;
+   --cool-gray-800: #1F2937;
+   --brand-blue: #3692FF;
+   --brand-sky: #E6F2FF;
+   --brand-blue-100: #3182F6;
 }

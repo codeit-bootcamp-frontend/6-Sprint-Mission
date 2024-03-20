@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    gap: 10px;
+    padding-block: 60px 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1 > a {
+    font-family: "ROKAF Bold";
+    font-weight: 700;
+    font-size: 4.1463rem;
+    line-height: 5.5975rem;
+    text-decoration: none;
+    color: var(--header-logo-color);
+}
+
+footer {
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.1187rem;
+}
+
+footer > h3 > a {
+    color:var(--brand-blue-100);
+}
+
+.pandamarket-login > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40rem;
+    gap: 16px;
+}
+
+.pandamarket-login > form > label {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.3425rem;
+    color: var(--cool-gray-800);
+}
+
+.pandamarket-login > form > input,
+.pandamarket-login > form > div > input
+{
+    display: flex;
+    padding-inline: 20px;
+    border-radius: 12px;
+    width: 100%;
+    height: 3.5rem;
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    background-color: var(--cool-gray-100);
+}
+
+.pandamarket-login > form > input:focus,
+.pandamarket-login > form > div > input:focus {
+    border: 2px solid var(--brand-sky);
+}
+
+.pandamarket-login > form > input.panda-market-*:focus {
+    border: 1px solid var(--brand-blue);
+}
+
+.pandamarket-login > form > div {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+.toggle-switch {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    background-image: url('/assets/images/signupPage/password-noshow.svg');
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#password-toggle:checked + .toggle-switch,
+#password-toggle-confirm:checked + .toggle-switch  {
+    background-image: url('/assets/images/signupPage/password-show.svg');
+}
+
+#password-toggle,
+#password-toggle-confirm {
+    display: none;
+}
+
+.pandamarket-login > form > button {
+    color: var(--button-font-color);
+    background-color: var(--brand-blue);
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5rem ;
+    padding: 16px 124px;
+    border-radius: 40px;
+    border: none
+}
+
+.simple-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 23px;
+    width: 40rem;
+    margin-block: 24px;
+    background-color: var(--brand-sky);
+    border-radius: 8px;
+}
+
+.simple-login > h2 {
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color:var(--cool-gray-800);
+}
+.simple-login > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px
+}
+
+.simple-login > div > a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+}
+
+.simple-login > div > .google {
+    background-image: url('/assets/images/signupPage/google-logo.svg');
+}
+
+.simple-login > div > .kakao {
+    background-image: url('/assets/images/signupPage/kakaotalk-logo.svg');
+}
