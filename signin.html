@@ -31,12 +31,50 @@
       <!-- //로고 컨테이너 -->
 
       <!-- 폼 컨테이너 -->
-      <div class="form_container">
-        <!-- email -->
-        <!-- password -->
-        <!-- 로그인 버튼 -->
+      <div class="login-container">
+        <form class="form-container">
+          <!-- email -->
+          <label>이메일</label>
+          <input placeholder="이메일을 입력해주세요" type="email" />
+          <!-- password -->
+          <label>비밀번호</label>
+          <div class="password-contianer">
+            <input
+              class="password"
+              placeholder="비밀번호를 입력해주세요"
+              type="password"
+            />
+            <img
+              class="password-icon"
+              src="./assets/password_icon.svg"
+              alt="비밀번호 보이기 토글 버튼"
+            />
+          </div>
+
+          <!-- 로그인 버튼 -->
+          <button type="submit" class="submit">로그인</button>
+        </form>
         <!-- sns 로그인 버튼 -->
+        <div class="social-login-container">
+          <p>간편 로그인하기</p>
+          <div>
+            <a class="google-login" href="https://www.google.com/"
+              ><img
+                src="./assets/google_login_icon.svg"
+                alt="구글소셜로그인 버튼"
+            /></a>
+            <a class="kakao-login" href="https://www.kakaocorp.com/page/"
+              ><img
+                src="./assets/kakao_login_icon.svg"
+                alt="카카오소셜로그인 버튼"
+            /></a>
+          </div>
+        </div>
         <!-- 회원가입 페이지 이동 -->
+        <p class="signup-info">
+          판다마켓이 처음이신가요?
+          <a class="signup-link" href="signup.html">회원가입</a>
+        </p>
       </div>
       <!-- //폼 컨테이너 -->
     </div>

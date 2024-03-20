@@ -383,10 +383,118 @@
 /* //logo */
 
 /* form_container */
-.form_container {
-  border: 1px solid red;
-  min-width: 640px;
-  height: 430px;
+
+.form-container {
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
 }
+
+.form-container label {
+  color: var(--gray800);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.form-container input {
+  /* box */
+  width: 640px;
+  height: 56px;
+  border: 1px solid var(--gray100);
+  border-radius: 12px;
+  background-color: var(--gray100);
+  padding: 16px 24px;
+  margin-bottom: 24px;
+
+  /* text */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.form-container input::placeholder {
+  color: #9ca3af;
+}
+.form-container input:focus {
+  outline: 2px solid #3692ff;
+}
+
+.password-contianer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-icon {
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #9ca4af;
+  height: 56px;
+  border-radius: 40px;
+  border: 1px solid #9ca4af;
+  /* text */
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
 /* //form_container */
+
+/* 소셜 로그인 영역 */
+.social-login-container {
+  height: 74px;
+  background-color: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 23px;
+  border-radius: 8px;
+}
+
+.social-login-container div {
+  display: flex;
+  gap: 16px;
+}
+
+.social-login-container p {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--gray800);
+}
+
+.signup-info {
+  text-align: center;
+  margin: 24px auto;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.9px;
+}
+
+.signup-info p {
+  color: var(--gray800);
+}
+
+.signup-info a {
+  text-decoration: underline;
+  color: blue;
+}
+/* //소셜 로그인 영역 */
 /* --------------------     //signin.html     -------------------- */
