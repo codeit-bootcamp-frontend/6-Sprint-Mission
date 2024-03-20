@@ -1,0 +1,45 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+:root
+{
+	--red: #F74747;
+	--blue: #3692FF;
+
+	--gray900: #1B1D1F;
+	--gray800: #26282B;
+	--gray600: #454C53;
+	--gray500: #72787F;
+	--gray400: #9EA4A8;
+	--gray300: #E5E7EB;
+	--gray100: #E8EBED;
+	--gray50: #F7F7F8;
+
+	font-family: Pretendard;
+}
+
+a[href]
+{
+	text-decoration: none;
+}
+.button
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--blue);
+}
+.button:hover
+{
+	background-color: #1967D6 !important;
+}
+.button:focus
+{
+	background-color: #1251AA !important;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>판다마켓</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/common.css">
+	<link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+	<header>
+		<section class="container">
+			<a id="logo" href="/index.html">
+				<img src="/assets/icons/icon.svg" alt="판다마켓">
+			</a>
+		</section>
+	</header>
+	<main>
+		<section class="container">
+			<form>
+				<div class="field">
+					<label for="email">이메일</label>
+					<input id="email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="email" placeholder="이메일을 입력해주세요" required>
+				</div>
+				<div class="field">
+					<label for="username">닉네임</label>
+					<input id="username" type="text" maxlength="15" placeholder="닉네임을 입력해주세요" required>
+				</div>
+				<div class="field">
+					<label for="password">비밀번호</label>
+					<div class="wrapper">
+						<input id="password" type="password" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 입력해주세요" required>
+						<img src="/assets/icons/invisible.svg">
+					</div>
+				</div>
+				<div class="field">
+					<label for="password-confirm">비밀번호 확인</label>
+					<div class="wrapper">
+						<input id="password-confirm" type="password" maxlength="20" autocomplete="new-password" placeholder="비밀번호를 다시 한번 입력해주세요" required>
+						<img src="/assets/icons/invisible.svg">
+					</div>
+				</div>
+				<button class="button" type="submit">
+					로그인
+				</button>
+				<div class="third-party">
+					간편 로그인 하기
+					<div class="service">
+						<a href="https://www.google.com" target="_blank"><img src="/assets/icons/google.svg"></a>
+						<a href="https://www.kakaocorp.com/service/KakaoTalk" target="_blank"><img src="/assets/icons/kakaotalk.svg"></a>
+					</div>
+				</div>
+				<p>
+					이미 회원이신가요? <a href="/pages/login/index.html">로그인</a>
+				</p>
+			</form>
+		</section>
+	</main>
+</body>
+
+<script>
+	const [password, password_confirm] = [document.querySelector("#password"), document.querySelector("#password-confirm")];
+
+	function validate_password()
+	{
+		password_confirm.setCustomValidity(password.value === password_confirm.value ? "" : "password mismatch");
+	}
+
+	for (element of [password, password_confirm])
+	{
+		element.addEventListener("change", (event) => {
+			validate_password();
+		});
+		element.addEventListener("keyup", (event) => {
+			validate_password();
+		});
+	}
+
+	function toggle_visibility(event)
+	{
+		const input = event.target.parentElement.querySelector("input");
+		//
+		// 1: path
+		// 2: file name
+		// 3: file extension
+		//
+		const [$0, $1, $2, $3] = /^(.*\/)?([^\/]+)\.(\w+)$/gi.exec(event.target.src);
+
+		input.type = input.type === "password" ? "text" : "password";
+		event.target.src = `${$1}/${$2 === "invisible" ? "visible" : "invisible"}.${$3}`;
+	}
+
+	for (element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))
+	{
+		element.addEventListener("click", (event) => {
+			toggle_visibility(event);
+		});
+	}
+</script>
+
+</html>

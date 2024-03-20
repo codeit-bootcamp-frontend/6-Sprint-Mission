@@ -1,0 +1,169 @@
+header
+{
+	top: 0px;
+	position: sticky;
+	background-color: #FFFFFF;
+}
+header > .container
+{
+	height: 70px;
+	margin-left: 200px;
+	margin-right: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header > .container > a
+{
+	gap: 10px;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+}
+header > .container > a#logo
+{
+	color: var(--blue);
+	font-size: 25px;
+	font-weight: 700;
+}
+header > .container > a#login
+{
+	color: #FFFFFF;
+	font-weight: 600;
+	width: 128px;
+	height: 48px;
+	padding: 12px 20px;
+	border-radius: 8px;
+}
+
+.banner
+{
+	overflow: hidden;
+	background-color: #CFE5FF;
+}
+.banner > .container
+{
+	width: 1200px;
+	height: 540px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.banner > .container > img
+{
+	left: 340px;
+	bottom: 0px;
+	position: absolute;
+}
+.banner > .container > .wrapper
+{
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.banner:has(.button) > .container > .wrapper
+{
+	justify-content: space-between;
+}
+.banner > .container > .wrapper > h1
+{
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 56px;
+}
+.banner > .container > .wrapper > a
+{
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 600;
+	height: 56px;
+	width: 355px;
+	border-radius: 40px;
+}
+
+main
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+main > section
+{
+	gap: 64px;
+	display: flex;
+	align-items: center;
+	width: 1200px;
+	height: 720px;
+}
+main > section.left
+{
+	text-align: left;
+	flex-direction: row;
+}
+main > section.right
+{
+	text-align: right;
+	flex-direction: row-reverse;
+}
+main > section > .wrapper > p:first-of-type
+{
+	color: var(--blue);
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+main > section > .wrapper > h1
+{
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 56px;
+	margin-bottom: 24px;
+}
+main > section > .wrapper > p:last-of-type
+{
+	color: #374151;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28.8px;
+}
+
+footer
+{
+	color: #9CA3AF;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #111827;
+}
+footer > .container
+{
+	height: 160px;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+footer > .container > *
+{
+	display: flex;
+}
+footer > .container > .center
+{
+	gap: 30px;
+	color: var(--gray300);
+}
+footer > .container > .center > a 
+{
+	color: var(--gray300);
+}
+footer > .container > .right
+{
+	gap: 12px;
+}

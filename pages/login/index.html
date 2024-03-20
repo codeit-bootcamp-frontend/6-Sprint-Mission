@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>판다마켓</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/common.css">
+	<link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+	<header>
+		<section class="container">
+			<a id="logo" href="/index.html">
+				<img src="/assets/icons/icon.svg" alt="판다마켓">
+			</a>
+		</section>
+	</header>
+	<main>
+		<section class="container">
+			<form>
+				<div class="field">
+					<label for="email">이메일</label>
+					<input id="email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="email" placeholder="이메일을 입력해주세요" required>
+				</div>
+				<div class="field">
+					<label for="password">비밀번호</label>
+					<div class="wrapper">
+						<input id="password" type="password" maxlength="20" autocomplete="current-password" placeholder="비밀번호를 입력해주세요" required>
+						<img src="/assets/icons/invisible.svg">
+					</div>
+				</div>
+				<button class="button" type="submit">
+					로그인
+				</button>
+				<div class="third-party">
+					간편 로그인 하기
+					<div class="service">
+						<a href="https://www.google.com"><img src="/assets/icons/google.svg"></a>
+						<a href="https://www.kakaocorp.com/service/KakaoTalk"><img src="/assets/icons/kakaotalk.svg"></a>
+					</div>
+				</div>
+				<p>
+					판다마켓이 처음이신가요? <a href="/pages/signup/index.html">회원가입</a>
+				</p>
+			</form>
+		</section>
+	</main>
+</body>
+
+<script>
+	function toggle_visibility(event)
+	{
+		const input = event.target.parentElement.querySelector("input");
+		//
+		// 1: path
+		// 2: file name
+		// 3: file extension
+		//
+		const [$0, $1, $2, $3] = /^(.*\/)?([^\/]+)\.(\w+)$/gi.exec(event.target.src);
+
+		input.type = input.type === "password" ? "text" : "password";
+		event.target.src = `${$1}/${$2 === "invisible" ? "visible" : "invisible"}.${$3}`;
+	}
+
+	for (element of document.querySelectorAll("form > .field > .wrapper:has(input[type=\"password\"]) > img"))
+	{
+		element.addEventListener("click", (event) => {
+			toggle_visibility(event);
+		});
+	}
+</script>
+
+</html>
