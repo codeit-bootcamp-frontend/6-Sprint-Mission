@@ -10,10 +10,10 @@ body {
 
 .button {
   cursor: pointer;
-  background: #3692FF;
+  background: var(--color-blue);
   border: none;
   border-radius: 40px;
-  color: #FFFFFF;
+  color: var(--color-white);
   font-weight: 600;
   font-size: 16px;
 }
@@ -44,7 +44,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 25.2px;
-  color: #3692FF;
+  color: var(--color-blue);
 }
 
 .font_title {
@@ -64,14 +64,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 19.09px;
-  color: #9CA3AF;
+  color: var(--color-backround-blue);
 }
 
 .font_footer2 {
   font-weight: 400;
   font-size: 16px;
   line-height: 19.09px;
-  color: #E5E7EB;
+  color: var(--color-gray200)
 }
 
 
@@ -193,7 +193,7 @@ body {
   display: flex;
   height: 100%;
   gap: 30px;
-  color: #e5e7eb;
+  color: var(--color-gray200);
 }
 
 .footer_box3 {
