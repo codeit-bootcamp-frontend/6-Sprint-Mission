@@ -35,8 +35,6 @@ form input {
   padding: 16px 24px;
   border: none;
   background-color: var(--cool-gray100);
-
-  outline-color: red;
 }
 
 form input::placeholder {
@@ -56,6 +54,11 @@ form button {
   border: none;
   background-color: var(--cool-gray400);
   color: #ffffff;
+}
+
+form button:hover {
+  background-color: var(--btn-blue1);
+  cursor: pointer;
 }
 
 .pwd_container {
