@@ -64,17 +64,17 @@ footer > .codeit-footer {
 }
 
 footer > .codeit-footer.codeit-copyright {
-    color: var(--copyright-font-color);
+    color: var(--panda-gray-color);
 }
 
-footer > .codeit-footer.codeit-faq {
+footer > .codeit-footer.codeit-faqs {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 30px;
     justify-content: center;
 }
 
-footer > .codeit-footer.codeit-faq > a {
+footer > .codeit-footer.codeit-faqs > a {
     color: var(--faq-font-color);
     text-decoration: none;
 }
