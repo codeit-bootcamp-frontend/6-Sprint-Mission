@@ -183,7 +183,7 @@ footer{
   height: 160px;
   bottom: 0;
   background-color: #111827;
-  top: 70px;
+  margin-top: 70px;
 }
 .codeit{
   margin: 0 24vw 0 10vw;
