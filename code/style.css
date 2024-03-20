@@ -62,14 +62,19 @@ header a:last-child{
     height: 51px;
 }
 .login-btn{
-    width: 128px;
-    height: 48px;
-    background-color: var(--btn1);
-    text-align: center;
-    border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
+    border-radius: 8px;
+    padding: 14.5px 43px;
     line-height: 19.09px;
+    background-color: var(--btn1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
 
 }
 
@@ -118,12 +123,16 @@ main{
 
 .action-btn{
     background-color: var(--btn1);
-    width: 355px;
-    height: 56px;
+    padding: 16px 124px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 40px;
     line-height: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 .top .banner-img{
     width: 996px;
