@@ -78,10 +78,22 @@ main{
 }
 .login-form label {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 21.48px;
     text-align: left;
     color: var(--coolGray800);
+}
+.user-input{
+    position: relative;
+}
+.password-visible-btn{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 46%;
+    right: 24px;
+    cursor: pointer;
+    
 }
 
 .login-form button {
