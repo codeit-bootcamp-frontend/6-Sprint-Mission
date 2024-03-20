@@ -69,6 +69,7 @@ main > .container > form > .field input:focus
 }
 main > .container > form > .field input::placeholder
 {
+	color: #9CA3AF;
 	font-size: 16px;
 	font-weight: 400;
 }
