@@ -170,30 +170,34 @@ section {
 }
 
 /****** home-bottom & footer ******/
+.home-bottom-background-color {
+  background-color: #cfe5ff;
+  height: 540px;
+  width: 100%;
+}
+
+.home-bottom-container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .home-bottom {
   color: #374151;
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
-  margin: 0 auto;
-  width: 1200px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.home-bottom-container {
-  background-color: #cfe5ff;
-  height: 540px;
-  width: 100%;
-  position: relative;
 }
 
 .home-bottom-img {
+  display: block;
   position: absolute;
   bottom: 0;
-  left: 701px;
+  right: -137px;
 }
 
 footer {
