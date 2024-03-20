@@ -74,6 +74,10 @@ button {
     font-size: 20px;
 }
 
+.on {
+    background-color: var(--color-brand-blue);
+}
+
 .eye {
     position: absolute;
     bottom: 14.5px;
