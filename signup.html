@@ -2,8 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="/styles/variables.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <title>판다마켓</title>
   </head>
-  <body></body>
+  <body>
+    <div class="logo">
+      <img src="" alt="logo" />
+    </div>
+
+    <form method="post" class="signup-form">
+      <div class="form__block">
+        <label for="email">이메일</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="이메일을 입력해주세요"
+        />
+      </div>
+
+      <div class="form__block">
+        <label for="username">닉네임</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="닉네임을 입력해주세요"
+        />
+      </div>
+
+      <div class="form__block">
+        <label for="password">비밀번호</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+        />
+      </div>
+
+      <div class="form__block">
+        <label for="password-confirm">비밀번호 확인</label>
+        <input
+          id="password-confirm"
+          name="password-confirm"
+          type="password"
+          placeholder="비밀번호를 다시 한 번 입력해주세요"
+        />
+      </div>
+
+      <div class="form__block">
+        <button class="form__submit-btn">회원가입</button>
+      </div>
+
+      <div class="form__block">
+        <div class="easy-login">
+          <span>간편 로그인 하기</span>
+          <img src="" alt="google-logo" />
+          <img src="" alt="kakao-logo" />
+        </div>
+      </div>
+
+      <div class="form__block">
+        <span>이미 회원이신가요?</span>
+        <a href="/login.html">로그인</a>
+      </div>
+    </form>
+  </body>
 </html>
