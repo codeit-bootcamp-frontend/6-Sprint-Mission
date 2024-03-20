@@ -53,4 +53,15 @@ body {
 }
 
 .form__easy-login {
+  height: 74px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 23px;
+  gap: 16px;
+}
+
+.form__easy-login span {
+  flex-grow: 1;
 }
