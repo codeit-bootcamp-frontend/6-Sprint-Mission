@@ -12,19 +12,58 @@
     />
   </head>
   <body>
+    <a href="/6-Sprint-Mission/" class="panda-market-logo-container">
+      <img
+        src="images/panda_market_logo.svg"
+        alt="판다마켓 로고 이미지"
+        class="panda-market-logo"
+      />
+    </a>
     <div class="wrap">
-      <a href="/6-Sprint-Mission/">
-        <img src="images/panda_market_logo.svg" alt="판다마켓 로고 이미지" />
-      </a>
       <form>
         <label for="email">이메일</label>
-        <input type="email" id="email" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="이메일을 입력해주세요"
+        />
         <label for="password">비밀번호</label>
-        <input type="password" id="password" />
-        <button type="submit">로그인</button>
+        <div class="container password-container">
+          <input
+            type="password"
+            id="password"
+            placeholder="비밀번호를 입력해주세요"
+            name="password"
+          />
+          <img
+            src="images/password_eye_close.svg"
+            alt="비밀번호 눈 아이콘"
+            class="pwd-eye-icon"
+          />
+        </div>
+        <button type="submit" class="login-btn">로그인</button>
       </form>
-      <div class="easy-login"></div>
-      <p>판다마켓이 처음이신가요? <a href="signup.html">회원가입</a></p>
+      <div class="easy-login">
+        <p>간편 로그인하기</p>
+        <div class="easy-login-icon">
+          <a href="https://www.google.com/" class="easy-login-a">
+            <img src="images/icon_google.svg" alt="간편 로그인 구글 아이콘" />
+          </a>
+          <a href="https://www.kakaocorp.com/page/" class="easy-login-a">
+            <img
+              src="images/icon_kakaotalk.svg"
+              alt="간편 로그인 카카오톡 아이콘"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="fanda-first">
+        <p>
+          판다마켓이 처음이신가요?
+          <a href="signup.html" class="move-signup">회원가입</a>
+        </p>
+      </div>
     </div>
   </body>
 </html>

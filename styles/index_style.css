@@ -30,18 +30,19 @@ nav {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-}
-
-.login-btn-container {
   background-color: #3692ff;
   padding: 12px 20px;
   border-radius: 8px;
-  margin-right: 200px;
   width: 128px;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.login-btn-container {
+  margin-right: 200px;
+  display: flex;
 }
 
 .login-btn-container:hover {
