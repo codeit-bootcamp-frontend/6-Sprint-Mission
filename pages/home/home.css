@@ -2,13 +2,23 @@
 @import '/styles/base.css';
 
 /* header */
+body {
+    padding-top: 70px;
+}
 
-header {
-    margin: auto;
+body header {
+    /* width: 100%; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    margin: 0;
+    padding: 10px 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 20rem;
+    z-index: 9999;
 }
 
 .logo img {
