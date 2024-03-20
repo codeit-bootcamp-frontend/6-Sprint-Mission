@@ -1,11 +1,27 @@
+@import url(/styles/reset.css);
+@import url(/styles/base.css);
+
+.container {
+    margin: auto;
+    width: 640px;
+    text-align: center;
+    padding-top: 60px;
+}
+
 /* Header logo */
 .header {
+    width: 396px;
+    height: 132px;
 }
 
 .logo {
 }
 
 /* Main - form*/
+main {
+    padding-top: 40px;
+}
+
 form {
 }
 
