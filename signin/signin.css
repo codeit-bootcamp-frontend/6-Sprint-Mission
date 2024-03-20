@@ -75,6 +75,10 @@ button {
     font-size: 2rem;
 }
 
+button:hover {
+    background-color: var(--color-brand-blue);
+}
+
 .on {
     background-color: var(--color-brand-blue);
 }
