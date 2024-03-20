@@ -149,7 +149,7 @@ section:nth-child(even) {
 /* 푸터 */
 
 footer {
-  background-color: var(--footer-bg);
+  background-color: var(--gray-900);
   height: 10rem;
   display: flex;
   justify-content: space-around;
