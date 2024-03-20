@@ -45,14 +45,21 @@ header {
   gap: 32px;
   height: 540px;
   background-color: var(--bg-color);
+
+  padding-top: 70px;
 }
 
 nav {
+  box-sizing: border-box;
+  position: fixed;
   display: flex;
+  width: 100%;
   height: 70px;
-  margin: 10px 200px 9px;
+  padding: 0 200px;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 main {
