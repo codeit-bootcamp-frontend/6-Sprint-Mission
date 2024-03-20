@@ -95,6 +95,7 @@ ul, dl {
 .wrap {
   display: grid;
   grid-template-rows: 70px 1fr 160px;
+  overflow-x: hidden;
 }
 
 .header {
