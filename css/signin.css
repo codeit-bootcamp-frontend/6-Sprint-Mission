@@ -123,3 +123,37 @@ a.kakao {
   text-decoration: underline;
   line-height: 2rem;
 }
+
+/* 작은 타블렛(600~768) */
+@media (max-width: 768px) {
+  body {
+  }
+  form {
+    width: 80%;
+  }
+  form label {
+    margin: 12px 0 8px;
+  }
+  form input {
+    width: 100%;
+  }
+  .quick_signin {
+    width: 80%;
+  }
+}
+/* 모바일(~600) */
+@media (max-width: 600px) {
+  body {
+    min-width: 480px;
+  }
+  .wrap {
+    width: max-content;
+    margin: 0 60px;
+  }
+  form {
+    min-width: 480px;
+  }
+  .quick_signin {
+    min-width: 480px;
+  }
+}
