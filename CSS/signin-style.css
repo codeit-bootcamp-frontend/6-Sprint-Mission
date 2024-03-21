@@ -1,5 +1,20 @@
 @import "reset.css";
 
+:root {
+  --blue: #3692FF; 
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray700: #374151;
+  --gray600: #72767f;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+  --skyblue: #cfe5ff;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
