@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: Pretendard, sans-serif;
+  word-break: keep-all;
 }
 
 :root{
@@ -18,8 +20,6 @@
 }
 
 html {
-  font-family: Pretendard, sans-serif;
-  word-break: keep-all;
   font-size: 16px;
 }
 
