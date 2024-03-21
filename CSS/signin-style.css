@@ -79,6 +79,13 @@ input::placeholder {
   background-color: var(--blue);
 }
 
+.password-box {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+}
 
 .visibility {
   position: absolute;
@@ -86,7 +93,7 @@ input::placeholder {
   background-color: inherit;
   border-style: none;
   right: 30px;
-  top: 335px;
+  top: 30px;
 }
 
 .sns-signin {

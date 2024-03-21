@@ -32,17 +32,27 @@
         placeholder="닉네임을 입력해주세요"
       />
       <label>비밀번호</label>
-      <input
+      <div class="password-box">
+        <input class="password-input"
         name="password"
         type="password"
         placeholder="비밀번호를 입력해주세요"
         />
-        <label>비밀번호 확인</label>
-        <input
+        <button type="button" class="visibility">
+          <img alt="visibility" src="/assets/btn_visibility.png">
+      </button>
+      </div>
+      <label>비밀번호 확인</label>
+      <div class="password-box">
+        <button type="button" class="visibility">
+          <img alt="visibility" src="/assets/btn_visibility.png">
+      </button>
+        <input class="password-input"
           name="password"
           type="password"
           placeholder="비밀번호를 다시 한 번 입력해주세요"
           />
+      </div>
       <button class="signin-button">회원가입</button>
       <div class="sns-signin">
         <div>간편 로그인하기</div>
