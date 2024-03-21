@@ -147,10 +147,68 @@ body {
   gap: 24px;
 }
 
-.signUpTable input{
-    width: 100%;
-    height: 56px;
-    background: #F3F4F6;
-    border-radius: 12px;
-    border: none;
+.signUpTable label {
+  width: 100%;
+  height: 56px;
 }
+
+label input {
+  padding: 0px;
+  width: 640px;
+  height: 56px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  border: none;
+}
+
+input:focus {
+  background-color: #3692ff;
+}
+input::placeholder {
+  padding: 16px 24px;
+}
+
+.signUpButton {
+  cursor: pointer;
+  background-color: #9ca3af;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  width: 640px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.simpleLoginBox {
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  width: 640px;
+  height: 74px;
+  background: #e6f2ff;
+}
+.simpleLoginIcons {
+  width: 100px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.passwordLabel {
+  display: flex;
+  align-items: center;
+}
+.passwordLabel img {
+  cursor: pointer;
+  position: absolute;
+  right: 550px;
+}
+.login {
+  margin-top: 24px;
+}
+

@@ -12,8 +12,9 @@
       <a href="/">
         <img src="../logo/bigLogo.png" />
       </a>
-      
+      <div class="loginBox">
         이메일
+
         <label class="emailLabel">
           <input title="이메일" placeholder="이메일을 입력해주세요" />
         </label>
@@ -30,15 +31,14 @@
             id="passIcon"
             onclick="toggleSwitch()"
             src="/icon/hidePassword.png"
-            alt=""
+            alt="closeEyes"
           />
         </label>
+      </div>
 
-        <img src="" alt="" />
-      
       <button class="loginButton">로그인</button>
-      
-        <p>간편로그인하기</p>
+      <div class="simpleLoginBox">
+        <p>간편 로그인 하기</p>
         <div class="simpleLoginIcons">
           <a href="https://www.google.com/"
             ><img src="/img/google.png" alt="구글"
@@ -48,9 +48,10 @@
           /></a>
         </div>
       </div>
-      <p class="signUp">판다 마켓이 처음이신가요? <a href="/singup/signup.html">회원가입</a></p>
-   
-
+    </div>
+    <div class="signUp">
+      판다 마켓이 처음이신가요? <a href="/singup/signup.html">회원가입</a>
+    </div>
     <script src="../scripts/switch.js"></script>
   </body>
 </html>

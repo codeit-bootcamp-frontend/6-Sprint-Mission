@@ -129,15 +129,14 @@ table {
 }
 
 /*  */
-body{
+body {
   box-sizing: border-box;
 }
-
 .card {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 24px;
   align-items: center;
 }
 .card > img {
@@ -147,7 +146,7 @@ body{
 .card .loginBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: left;
   font-size: 18px;
   font-weight: 700;
   color: #1f2937;
@@ -160,26 +159,22 @@ body{
   border-radius: 12px;
   width: 640px;
 }
-
 .card input:focus {
   background-color: #3692ff;
 }
 .card input::placeholder {
   padding: 16px 24px;
 }
-
 .passwordLabel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .passwordLabel img {
   cursor: pointer;
   position: absolute;
   right: 550px;
 }
-
 .loginButton {
   cursor: pointer;
   width: 640px;
@@ -202,11 +197,10 @@ body{
   border-radius: 8px;
   justify-content: space-between;
 }
-
 .simpleLoginBox p {
   padding-left: 24px;
 }
-.simpleLoginBox .simpleLoginIcons {
+.simpleLoginIcons {
   width: 100px;
   margin-right: 16px;
   display: flex;
@@ -214,8 +208,9 @@ body{
   justify-content: space-between;
 }
 
-.card .signUp {
-  display: inline-block;
+.signUp {
+  display: flex;
+  justify-content: center;
   margin-top: 30px;
 }
 
