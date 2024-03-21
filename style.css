@@ -1,8 +1,11 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
-    box-sizing: border-box;
 }
 main {
     margin: 0px auto;
@@ -11,9 +14,14 @@ main {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 200px;
     height: 70px;
     background-color: #ffffff;
+}
+
+a {
+    cursor: pointer;
 }
 
 .button {
@@ -25,7 +33,6 @@ nav {
     text-align: center;
     color: #ffffff;
     text-decoration-line: none;
-    cursor: pointer;
 }
 
 #landing {
