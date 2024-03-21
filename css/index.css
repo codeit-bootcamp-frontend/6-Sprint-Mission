@@ -4,14 +4,11 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   /* width: 1920px; */
   height: 100vh;
   margin: 0;
   background-color: #ffffff;
-  
 }
 
 /* 헤더 */
@@ -22,6 +19,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+main {
+  margin-top: 70px;
 }
 
 .logo_home {
@@ -94,7 +97,6 @@ header {
 }
 .banner_top .text_box,
 .banner_bottom .text_box {
-
 }
 .banner_top .text1 {
   font-family: pretendard;
