@@ -43,13 +43,13 @@ a {
 }
 
 .header-contents {
-  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   padding: 10px 200px;
+  max-width: 1920px;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .h-100 {
@@ -58,9 +58,9 @@ a {
 
 .button {
   border: 0;
+  padding: 12px 20px;
   background: var(--primary500);
   color: white;
-  padding: 12px 20px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -79,38 +79,38 @@ a {
 }
 
 .button.small {
+  border-radius: 8px;
   width: 128px;
   height: 48px;
-  border-radius: 8px;
   font-size: 16px;
 }
 
 .button.large {
+  border-radius: 28px;
   width: 355px;
   height: 56px;
-  border-radius: 28px;
   font-size: 20px;
 }
 
 .banner {
-  background: var(--primary300);
   height: 540px;
+  background: var(--primary300);
   overflow: hidden;
 }
 
 .banner-contents {
-  position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 32px;
+  position: relative;
+  height: 100%;
 }
 
 .banner-title {
-  font-weight: 700;
   color: var(--gray700);
   font-size: 40px;
+  font-weight: 700;
 }
 
 .banner-contents *:not(.banner-image) {
@@ -118,15 +118,15 @@ a {
 }
 
 .banner-image {
-  width: 996px;
   position: absolute;
-  bottom: 0;
   right: -135px;
+  bottom: 0;
+  width: 996px;
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .topics {
@@ -134,11 +134,11 @@ a {
 }
 
 .topic {
-  padding: 138px 0;
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 64px;
+  padding: 138px 0;
   color: var(--gray700);
 }
 
@@ -152,36 +152,36 @@ a {
 }
 
 .topic-label {
-  font-weight: 700;
-  font-size: 18px;
   color: var(--primary500);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .topic-title {
   margin-top: 12px;
-  font-weight: 700;
   font-size: 40px;
+  font-weight: 700;
 }
 
 .topic-description {
   margin-top: 24px;
-  font-weight: 500;
   font-size: 24px;
+  font-weight: 500;
 }
 
 .footer {
-  background: var(--gray900);
   height: 160px;
+  background: var(--gray900);
 }
 
 .footer-contents {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 32px 200px;
   display: flex;
   justify-content: space-between;
-  font-weight: 400;
+  margin: 0 auto;
+  padding: 32px 200px;
+  max-width: 1920px;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .footer-copyright {
