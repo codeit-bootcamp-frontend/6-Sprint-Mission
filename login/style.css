@@ -131,6 +131,13 @@ form {
   .con label {
     font-size: 16px;
   }
+  .pw img {
+    position: absolute;
+    width: 24px;
+    right: 17px;
+    top: 53px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 399px) {
@@ -143,8 +150,21 @@ form {
   }
   form {
     width: 100%;
+    gap: 16px;
   }
   .con label {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .con input {
+    font-size: 14px;
+    margin-top: 8px;
+    padding: 0 15px;
+  }
+  .pw img {
+    position: absolute;
+    width: 18px;
+    right: 14px;
+    top: 48px;
+    cursor: pointer;
   }
 }
