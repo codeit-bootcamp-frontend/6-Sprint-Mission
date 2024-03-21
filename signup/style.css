@@ -119,3 +119,56 @@ form {
 .go-login-container a {
   color: var(--hover-bluebtn);
 }
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 400px;
+  }
+  .con label {
+    font-size: 16px;
+  }
+  .pw img,
+  .re-pw img {
+    position: absolute;
+    right: 18px;
+    top: 53px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 100%;
+    gap: 16px;
+  }
+  .con label {
+    font-size: 14px;
+  }
+  .con input {
+    margin-top: 8px;
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  .pw img,
+  .re-pw img {
+    position: absolute;
+    width: 18px;
+    right: 14px;
+    top: 48px;
+    cursor: pointer;
+  }
+}
