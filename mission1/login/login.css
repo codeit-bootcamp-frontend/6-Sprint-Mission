@@ -128,9 +128,13 @@ table {
   border-spacing: 0;
 }
 
-/*  */
+/* start */
+
 body {
   box-sizing: border-box;
+  --inputColor:#3692ff;
+  --fontColor:#1f2937;
+
 }
 .card {
   margin-top: 60px;
@@ -149,18 +153,21 @@ body {
   text-align: left;
   font-size: 18px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--fontColor);
   gap: 24px;
 }
 .card input {
-  background-color: #f3f4f6;
+  background: #F3F4F6;
+
+ 
   height: 56px;
   border: none;
   border-radius: 12px;
   width: 640px;
 }
 .card input:focus {
-  background-color: #3692ff;
+  background-color: #ffffff;
+  border-color: var(--inputColor);
 }
 .card input::placeholder {
   padding: 16px 24px;

@@ -129,6 +129,7 @@ table {
 }
 
 body {
+  --inputColor:#3692ff;
   box-sizing: border-box;
 }
 
@@ -162,7 +163,8 @@ label input {
 }
 
 input:focus {
-  background-color: #3692ff;
+  background-color: #ffffff;
+  border-color: var(--inputColor);
 }
 input::placeholder {
   padding: 16px 24px;
