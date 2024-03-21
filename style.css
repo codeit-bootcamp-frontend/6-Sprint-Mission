@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #cfe5ff;
+  --brand-blue: #3692ff;
+  --deep-blue: #1967d6; 
+  --white-color: #ffffff;
+  --cool-grey: #e5e7eb;
+  --grey-color: #dfdfdf;
+  --deep-grey: #9ca3af;
+  --font-color: #374151;
+  --dark-color: #111827;
+}
+body {
+  color: var(--font-color);
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
+}
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--grey-color);
+}
+footer {
+  background-color: var(--dark-color);
+  color: var(--deep-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 200px 32px 200px;
+  font-size: 16px;
+}
+#footerMenu {
+  display: flex;
+  gap: 30px;
+  color: var(--cool-grey);
+}
+#socialMedia {
+  display: flex;
+  gap: 12px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: bottom;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.button {
+  background-color: var(--brand-blue);
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.button:hover {
+  background-color: var(--deep-blue);
+}
+.pill-button {
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 40px;
+  padding: 16px 124px;
+}
+.banner {
+  background-color: var(--main-color);
+  height: 540px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
+}
+#banner-top {
+  background-image: url("/image/top_img.png");
+}
+#contents {
+  padding-bottom: 138px; 
+}
+#banner-bottom {
+  background-image: url("image/bottom_img.png");
+}
+#login-button {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14px 40px;
+}
+.main-img {
+  padding: 138px 0;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.main-img:nth-child(2) {
+  text-align: right;
+}
+.info{
+  flex: 1;
+}
+.img-tag {
+  color: var(--brand-blue);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.img-description {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.08em;
+  margin-top: 24px;
+}
+
+
