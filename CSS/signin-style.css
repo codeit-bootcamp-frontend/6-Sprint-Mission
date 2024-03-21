@@ -27,6 +27,7 @@ body {
 
 .signin-box {
   width: 100%; 
+  position: relative;
 }
 
 .logo {
@@ -64,7 +65,7 @@ input::placeholder {
   color: var(--gray400)
 }
 
-button {
+.signin-button {
   height: 56px;
   border-style: none;
   border-radius: 40px;
@@ -74,8 +75,18 @@ button {
   font-size: 20px;
 }
 
-button:hover {
+.signin-button:hover {
   background-color: var(--blue);
+}
+
+
+.visibility {
+  position: absolute;
+  width: 24px;
+  background-color: inherit;
+  border-style: none;
+  right: 30px;
+  top: 335px;
 }
 
 .sns-signin {
