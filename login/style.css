@@ -116,3 +116,35 @@ form {
 .go-signup-container a {
   color: #3182f6;
 }
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 400px;
+  }
+  .con label {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 100%;
+  }
+  .con label {
+    font-size: 16px;
+  }
+}
