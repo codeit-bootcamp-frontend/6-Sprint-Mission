@@ -9,3 +9,8 @@ body {
 .signin-box {
   width: 100%; 
 }
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
