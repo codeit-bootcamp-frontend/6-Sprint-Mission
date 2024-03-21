@@ -19,24 +19,22 @@
       <div class="signin_form_layout">
         <form class="signin_form_container">
           <div>
-            <label for="username">이메일</label>
+            <label for="email">이메일</label>
             <input
-              id="username"
-              name="username"
-              type="text"
+              type="email"
+              id="email"
+              name="email"
               placeholder="이메일을 입력해주세요"
-              required
             />
           </div>
           <div>
             <label for="password">비밀번호</label>
             <input
+              type="password"
               id="password"
               name="password"
-              type="password"
               placeholder="비밀번호를 입력해주세요"
               class="password_container"
-              required
             />
           </div>
           <button type="submit" class="signin_button">로그인</button>
@@ -64,9 +62,10 @@
       <div class="siginup_link_layout">
         <p class="signup_link_text">
           판다마켓이 처음이신가요?
-          <a href="/signup" target="_blank">회원가입</a>
+          <a href="/html/signup.html" target="_blank">회원가입</a>
         </p>
       </div>
     </div>
+    <script src="/js/signin.js"></script>>
   </body>
 </html>
