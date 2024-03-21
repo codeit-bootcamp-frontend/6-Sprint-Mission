@@ -1,71 +1,10 @@
-:root {
-    /* 색상 팔레트 ---------------------------------------- */
-    /* BLUE */
-    --blue: #3692ff;
-    --blue-100: #1967d6;
-    --blue-200: #1251aa;
-    --blue-50: #9ca3af;
-
-    /* error/RED */
-    --red: #f74747;
-
-    /* GRAY */
-    --gray-900: #1b1d1f;
-    --gray-800: #26282b;
-    --gray-700: #374151;
-    --gray-600: #454c53;
-    --gray-500: #72787f;
-    --gray-400: #9ea4a8;
-    --gray-200: #e5e7eb;
-    --gray-100: #e8ebed;
-    --gray-50: #f7f7f8;
-
-    /* 글자 크기 ------------------------------------------- */
-    font-size: 16px;
-    --font-size-lg: clamp(2rem, 4vw, 3.5rem);
-    --font-size-md: clamp(1rem, 3vw, 2.5rem);
-    --font-size-sm: clamp(0.8rem, 2vw, 1.5rem);
-    --font-size-lt: clamp(0.5rem, 1vw, 1rem);
-}
-
-/* 버튼 색변경 */
-a.blue {
-    background-color: var(--blue);
-}
-a:hover.blue {
-    background-color: var(--blue-100);
-}
-a:active.blue {
-    background-color: var(--blue-200);
-}
-
-/* @media screen and (max-width: 1000px) {
-    body {
-        background-color: red;
-    }
-} */
 /* ------------------------------------------------- */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-family: Pretendard, sans-serif;
-    word-break: keep-all;
-}
-
-body {
-    margin: 0;
-    height: 100vh;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
 
 /* 상단 판다 마켓 로고, 로그인 버튼 */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #dfdfdf;
     height: 70px;
@@ -80,6 +19,9 @@ header {
 
 .header_logo {
     margin-left: 200px;
+}
+.header_logo img {
+    width: 200px;
 }
 
 .header_login_btn {
@@ -101,6 +43,7 @@ main {
 }
 
 .container {
+    margin-top: 70px;
 }
 
 /* 상단 배너 */
