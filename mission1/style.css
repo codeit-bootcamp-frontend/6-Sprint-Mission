@@ -4,15 +4,25 @@
 
 html {
     margin: 0;
+    font-family: "Pretendard";
+    color: #374151;
 }
 
 body {
-    max-width: 1920px;
     margin: 0;
     background-color: #ffffff;
 }
 
+.button {
+    background-color: #3692FF;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
 header {
+    max-width: 1920px;
     margin: 10px 200px 9px;
     background-color: #ffffff;
     display: flex;
@@ -35,17 +45,142 @@ header {
 .logo { 
     width: 153px;
     height: 51px;
-    padding: 0;
-    margin: 0; 
 }
 
 .loginButton {
     width: 128px;
     height: 48px;
+    padding: 12px 20px 12px 20px;
+    gap: 10px;
     border-radius: 8px;
-    padding: 12px 20px;
+    opacity: 0px;
     border: none;
-    background-color: #3692FF;
-    color: #ffffff;
 }
 
+.bannerbox {
+    background-color: #CFE5FF;
+    height: 540px;
+}
+
+.banner {
+    position: relative;
+    width: 1920px;
+    height: 540px;
+}
+
+.bannerImage {
+    position: absolute;
+}
+
+.bannerImage.top {
+    top: 93px;
+    left: 701px;
+}
+
+.bannerImage.bottom {
+    top: 0;
+    left: 701px;
+}
+
+.introbox {
+    width: 357px;
+    height: 200px;
+    position: absolute;
+    top: 170px;
+    left: 360px;
+}
+
+.intro {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: left;
+}
+
+.bannerButton {
+    font-size: 20px;
+    line-height: 24px;
+    width: 357px;
+    height: 56px;
+    padding: 16px 100px;
+    border-radius: 40px;
+    border-style: none;
+}
+
+.container {
+    width: 1920px;
+    padding: 0 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 64px;
+    margin-top: 138px;
+    margin-bottom: 138px;
+}
+
+.content:nth-child(2n) {
+    justify-content: right;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.contentImage {
+    width: 598px;
+    height: 444px;
+}
+
+.content .keyword {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    color: #3692FF;
+}
+
+.content .message {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+}
+
+.content .description {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    letter-spacing: 0.08em;
+}
+
+footer {
+    background-color: #111827;
+    height: 160px;
+}
+
+.footerbox {
+    padding: 32px 200px;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between
+}
+
+.rights {
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    text-align: center;
+}
+
+.support {
+    color: #E5E7EB;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    width: 159px;
+    display: flex;
+    gap: 30px;
+}
