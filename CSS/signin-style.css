@@ -2,4 +2,10 @@
 
 body {
   font-family: "Pretendard", sans-serif;
+  width: 640px;
+  margin: 60px auto;
+}
+
+.signin-box {
+  width: 100%; 
 }
