@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="login_style.css" />
     <link
@@ -27,6 +27,8 @@
           name="email"
           placeholder="이메일을 입력해주세요"
         />
+        <label for="name"><p>닉네임</p></label>
+        <input id="name" name="name" placeholder="닉네임을 입력해주세요" />
         <label for="password"><p>비밀번호</p></label>
         <input
           id="password"
@@ -34,8 +36,17 @@
           type="password"
           placeholder="비밀번호를 입력해주세요"
         />
-        <i class="fa-regular fa-eye-slash"></i>
-        <button>로그인</button>
+        <i id="pass-eye1" class="fa-regular fa-eye-slash"></i>
+
+        <label for="password"><p>비밀번호 확인</p></label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="비밀번호를 다시 한 번 입력해주세요"
+        />
+        <i id="pass-eye2" class="fa-regular fa-eye-slash"></i>
+        <button>회원가입</button>
       </form>
       <div class="fast-login">
         <p>간편 로그인하기</p>
@@ -49,8 +60,8 @@
         </div>
       </div>
       <p class="go-signuppage">
-        판다마켓이 처음이신가요?
-        <a href="/6-Sprint-Mission/signup.html">회원가입</a>
+        이미 회원이신가요?
+        <a href="/6-Sprint-Mission/login.html">로그인</a>
       </p>
     </div>
   </body>
