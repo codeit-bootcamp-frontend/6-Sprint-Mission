@@ -38,6 +38,9 @@ a:hover.blue {
 a:active.blue {
     background-color: var(--blue-200);
 }
+a:disabled.blue {
+    background-color: var(--blue-50);
+}
 * {
     box-sizing: border-box;
 }

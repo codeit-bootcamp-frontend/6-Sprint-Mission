@@ -28,29 +28,25 @@
             <!-- 로그인 폼 -->
             <form
                 class="signin"
-                action="/signin/"
+                action="/pages/signin/"
                 method="get"
-                oninput="signin_btn.disabled = !signin_email.validity.valid || !signin_psw.validity.valid"
+                oninput="btn.disabled = !email.validity.valid || !psw.validity.valid"
             >
                 <!-- 로고 버튼 -->
-                <a class="signin_logo_btn" href="/">
+                <a class="logo_btn" href="/">
                     <!-- 로고 이미지 -->
-                    <img
-                        class="signin_logo_img"
-                        src="/images/logo.png"
-                        alt=""
-                    />
+                    <img class="logo_img" src="/images/logo.png" alt="" />
                 </a>
-                <ul class="signin_content">
+                <ul class="content">
                     <!-- 로그인 이메일 라벨 -->
                     <li class="user_email_label">
-                        <label for="signin_email">이메일</label>
+                        <label for="email">이메일</label>
                     </li>
 
                     <!-- 로그인 이메일 작성 -->
                     <li>
                         <input
-                            id="signin_email"
+                            id="email"
                             class="user_email_input"
                             type="email"
                             name="user_email"
@@ -62,13 +58,13 @@
 
                     <!-- 로그인 비밀번호 라벨 -->
                     <li class="user_psw_label">
-                        <label for="signin_psw">비밀번호</label>
+                        <label for="psw">비밀번호</label>
                     </li>
 
                     <!-- 로그인 비밀번호 작성 -->
                     <li class="user_psw_content">
                         <input
-                            id="signin_psw"
+                            id="psw"
                             class="user_psw_input"
                             type="password"
                             name="user_psw"
@@ -87,8 +83,8 @@
                     <li>
                         <!-- 로그인 버튼 -->
                         <button
-                            id="signin_btn"
-                            class="signin_submit_btn"
+                            id="btn"
+                            class="submit_btn"
                             type="submit"
                             value="submit"
                             disabled
@@ -134,7 +130,9 @@
                             판다마켓이 처음이신가요?
 
                             <!-- 회원가입 이동 버튼 -->
-                            <a class="signup_btn" href="/signup"> 회원가입</a>
+                            <a class="signup_btn" href="/pages/signup">
+                                회원가입
+                            </a>
                         </p>
                     </li>
                 </ul>

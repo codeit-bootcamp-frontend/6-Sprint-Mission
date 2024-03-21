@@ -20,7 +20,162 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
         />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/styles/root.css" />
+        <link rel="stylesheet" href="/styles/sign_style.css" />
     </head>
-    <body></body>
+    <body>
+        <main class="main_signup">
+            <!-- 로그인 폼 -->
+            <form
+                class="signup"
+                action="/pages/signup/"
+                method="get"
+                oninput="btn.disabled = !email.validity.valid || !psw.validity.valid || !psw_chk.validity.valid"
+            >
+                <!-- 로고 버튼 -->
+                <a class="logo_btn" href="/">
+                    <!-- 로고 이미지 -->
+                    <img class="logo_img" src="/images/logo.png" alt="" />
+                </a>
+                <ul class="content">
+                    <!-- 로그인 이메일 라벨 -->
+                    <li class="user_email_label">
+                        <label for="email">이메일</label>
+                    </li>
+
+                    <!-- 로그인 이메일 작성 -->
+                    <li>
+                        <input
+                            id="email"
+                            class="user_email_input"
+                            type="email"
+                            name="user_email"
+                            placeholder="이메일을 입력해주세요"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            required
+                        />
+                    </li>
+
+                    <li class="user_name_label">
+                        <label for="name">닉네임</label>
+                    </li>
+
+                    <!-- 로그인 이메일 작성 -->
+                    <li>
+                        <input
+                            id="name"
+                            class="user_name_input"
+                            type="text"
+                            name="user_name"
+                            placeholder="닉네임을 입력해주세요"
+                            required
+                        />
+                    </li>
+
+                    <!-- 로그인 비밀번호 라벨 -->
+                    <li class="user_psw_label">
+                        <label for="psw">비밀번호</label>
+                    </li>
+
+                    <!-- 로그인 비밀번호 작성 -->
+                    <li class="user_psw_content">
+                        <input
+                            id="psw"
+                            class="user_psw_input"
+                            type="password"
+                            name="user_psw"
+                            placeholder="비밀번호를 입력해주세요"
+                            pattern=".{8,}"
+                            required
+                        />
+                        <button type="button" class="psw_chk_btn">
+                            <img
+                                src="/images/psw_eye/eye_close.png"
+                                alt="psw_chk"
+                            />
+                        </button>
+                    </li>
+
+                    <!-- 로그인 비밀번호 라벨 -->
+                    <li class="user_psw_chk_label">
+                        <label for="psw">비밀번호 확인</label>
+                    </li>
+
+                    <li class="user_psw_chk_content">
+                        <input
+                            id="psw_chk"
+                            class="user_psw_chk_input"
+                            type="password"
+                            name="user_psw_chk"
+                            placeholder="비밀번호를 입력해주세요"
+                            pattern=".{8,}"
+                            required
+                        />
+                        <button type="button" class="psw_chk_btn">
+                            <img
+                                src="/images/psw_eye/eye_close.png"
+                                alt="psw_chk"
+                            />
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- 로그인 버튼 -->
+                        <button
+                            id="btn"
+                            class="submit_btn"
+                            type="submit"
+                            value="submit"
+                            disabled
+                        >
+                            회원가입
+                        </button>
+                    </li>
+
+                    <!-- 소셜 간편 로그인 -->
+                    <li class="social_signin">
+                        <h1>간편 로그인하기</h1>
+
+                        <div class="social_btns">
+                            <!-- 구글 로그인 버튼-->
+                            <a
+                                href="https://www.google.com/"
+                                class="signin_google"
+                            >
+                                <!-- 구글 로그인 이미지 -->
+                                <img
+                                    src="/images/social_signin/google.png"
+                                    alt="구글 간편 로그인"
+                                />
+                            </a>
+
+                            <!-- 카카오 로그인 버튼 -->
+                            <a
+                                href="https://www.kakaocorp.com/page/"
+                                class="signin_kakao"
+                            >
+                                <!-- 카카오 로그인 이미지 -->
+                                <img
+                                    src="/images/social_signin/kakao.png"
+                                    alt="카카오 간편 로그인"
+                                />
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- 회원가입으로 이동 -->
+                    <li class="to_signin">
+                        <p class="signin_text">
+                            이미 회원이신가요?
+
+                            <!-- 회원가입 이동 버튼 -->
+                            <a class="signin_btn" href="/pages/signin">
+                                로그인
+                            </a>
+                        </p>
+                    </li>
+                </ul>
+            </form>
+        </main>
+    </body>
 </html>
