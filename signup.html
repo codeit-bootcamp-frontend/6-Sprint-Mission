@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="icon" href="images/logo/favicon.ico">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/sign.css">
+</head>
+
+<body>
+    <div>
+        <a id="home-icon" href="/">
+            <img src="images/logo/panda-market-logo.png" alt="판다마켓 홈" width="396" />
+        </a>
+        <div class="signup-frame">
+            <p class="email-p">이메일</p>
+            <input id="email" type="text" placeholder="이메일을 입력해주세요">
+            <p class="nickname-p">닉네임</p>
+            <input id="nickname" type="text" placeholder="닉네임을 입력해주세요">
+            <p class="pwd-p">비밀번호</p>
+            <div id="pwd-div">
+                <input id="pwd-01" type="password" placeholder="비밀번호를 입력해주세요">
+                <img src="images/etc/btn_visibility.png" id="eye-icon" alt="show written-password">
+            </div>
+            <p class="pwd-p">비밀번호 확인</p>
+            <div id="pwd-div">
+                <input id="pwd-02" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                <img src="images/etc/btn_visibility.png" id="eye-icon" alt="show re-written-password">
+            </div>
+            <button class="sign-button">회원가입</button>
+            <div class="sns-login">
+                <p class="sns-p">간편 로그인하기</p>
+                <div class="sns-icons">
+                    <a id="google-icon" href="https://www.google.com/" target="_blank">
+                        <img src="images/social/google1x.png"></a>
+                    <a id="kakao-icon" href="https://www.kakaocorp.com/page/" target="_blank">
+                        <img src="images/social/kakao1x.png"></a>
+                </div>
+            </div>
+            <div class="signtext-div">
+                <p id="to-signup-01">
+                    이미 회원이신가요?
+                </p>
+                <a id="to-signup-02" href="signin.html">
+                    로그인
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
