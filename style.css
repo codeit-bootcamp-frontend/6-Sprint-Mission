@@ -443,7 +443,7 @@ footer .info-container .link-container img {
     grid-template-rows: auto;
     grid-template-areas:
       "policy link"
-      "info info";
+      "info .";
   }
   footer .info-container,
   footer .policy-container a {
@@ -453,20 +453,20 @@ footer .info-container .link-container img {
   }
   footer .info-container .policy-container {
     display: flex;
-    gap: 30px;
+    gap: 10px;
   }
   footer .info {
-    grid-area: "info";
+    grid-area: info;
   }
   footer .policy-container {
-    grid-area: "policy";
+    grid-area: policy;
     margin: 0 auto;
   }
   footer .info-container .link-container img {
     width: 15px;
   }
   footer .link-container {
-    grid-area: "link";
+    grid-area: link;
     margin: 0 auto;
   }
 }
