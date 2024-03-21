@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Pretendard;
+}
+
+header{
+}
+
+.panda_logo {
+  width: 396px;
+  height: 132px;
+  margin-top: 60px;
+  margin-left: 762px;
+  margin-right: 762px;
+}
+
+.container {
+  width: 640px; 
+  height: 430px;
+  margin-left: 640px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px; 
+  padding: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.login_button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  padding: 16px 124px;
+  background-color: #9ca3af;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
