@@ -1,5 +1,9 @@
 @import "reset.css";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Pretendard", sans-serif;
   width: 640px;
@@ -13,4 +17,38 @@ body {
 .logo {
   display: flex;
   justify-content: center;
+}
+
+form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 56px;
+  padding: 16px 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+button {
+  height: 56px;
+}
+
+.sns-signin {
+  height: 74px;
+  padding: 0 23px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sns :first-child {
+  margin-right: 16px; 
+}
+
+.btm {
+  text-align: center;
 }
