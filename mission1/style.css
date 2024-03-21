@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    margin: 0;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+header {
+    margin: 10px 200px 9px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logobox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.buttonbox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo { 
+    width: 153px;
+    height: 51px;
+    padding: 0;
+    margin: 0; 
+}
+
+.loginButton {
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #3692FF;
+    color: #ffffff;
+}
+
