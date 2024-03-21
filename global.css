@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --maincolor: #cfe5ff;
+
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+  --brandblue: #3692ff;
+
+}
+
+html {
+  font-family: Pretendard, sans-serif;
+  word-break: keep-all;
+  font-size: 16px;
+}
+
