@@ -5,6 +5,7 @@
   /*basic colours*/
   --gray900: #1b1d1f;
   --gray800: #26282b;
+  --gray700: #374151;
   --gray600: #454c53;
   --gray500: #72787f;
   --gray400: #9ea4a8;
@@ -17,7 +18,7 @@
 a:hover {
   cursor: pointer;
 }
-.btn {
+.btn--primary {
   color: #ffffff;
   background-color: var(--primary-color);
 }
