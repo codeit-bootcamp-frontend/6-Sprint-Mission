@@ -175,15 +175,16 @@ header {
 
 .footer_banner {
   display: flex;
+  justify-content: space-between;
   width: 1920px;
   height: 160px;
   background-color: #111827;
   color: #E5E7EB;
+  font-size: 16px;
 }
 
 .footer_container {
   display: flex;
-  justify-content: space-between;
   width: 1520px;
 }
 
