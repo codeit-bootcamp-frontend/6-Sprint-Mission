@@ -4,7 +4,6 @@
     --gray600 : #454C53;
     --gray500 : #72787F;
     --gray400 : #9EA4A8;
-    --gray300 : #9CA3AF;
     --gray200 : #E5E7EB;
     --gray100 : #E8EBED;
     --gray50 : #F7F7F8;
@@ -12,6 +11,7 @@
     --Cool-Gray900 : #111827;
     --Cool-Gray800: #1F2937;
     --Cool-Gray700 : #374151;
+    --Cool-Gray400 : #9CA3AF;
     --Cool-Gray100 : #F3F4F6;
     --color-white : #FFFFFF;
     --blue800 : #3182F6;
@@ -90,8 +90,20 @@ main {
     outline: solid var(--brand-blue);
 }
 
+.login-password {
+    position: relative;
+}
+
+.login-password img {
+    position: absolute;
+    width: 24px;
+    right: 20px;
+    top: 65px;
+    cursor: pointer;
+}
+
 .login-btn {
-    background-color: var(--gray300);
+    background-color: var(--Cool-Gray400);
     color: var(--color-white);
     font-size: 20px;
     font-weight: 600;
