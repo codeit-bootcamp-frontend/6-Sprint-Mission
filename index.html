@@ -12,70 +12,83 @@
     />
   </head>
   <body>
-    <header>
-      <div>
-        <a class="logo" href="/">
-          <img src="/assets/logo.png" alt="판다마켓 로고" />
+    <header class="header">
+      <div class="header-contents">
+        <a class="h-100" href="/">
+          <img class="h-100" src="/assets/logo.png" alt="판다마켓 로고" />
         </a>
-        <button class="small" onclick="location.href='/login.html'">
+        <button class="small button" onclick="location.href='/login.html'">
           로그인
         </button>
       </div>
     </header>
     <main>
       <div class="banner">
-        <div class="container contents">
-          <h1>
+        <div class="banner-contents container">
+          <h1 class="banner-title">
             일상의 모든 물건을<br />
             거래해 보세요
           </h1>
-          <button class="large" onclick="location.href='/items.html'">
+          <button class="large button" onclick="location.href='/items.html'">
             구경하러 가기
           </button>
-          <img src="/assets/img_home_top.png" alt="판다가 인사하는 모습" />
+          <img
+            class="banner-image"
+            src="/assets/img_home_top.png"
+            alt="판다가 인사하는 모습"
+          />
         </div>
       </div>
-      <article class="container">
-        <section>
+      <article class="topics container">
+        <section class="topic">
           <img
+            class="topic-image"
             src="/assets/img_home_01.png"
             alt="인기 상품을 보고 있는 판다들"
           />
           <div>
-            <p class="label">Hot item</p>
-            <h1 class="title">
+            <p class="topic-label">Hot item</p>
+            <h1 class="topic-title">
               인기 상품을<br />
               확인해 보세요
             </h1>
-            <p class="desc">
+            <p class="topic-description">
               가장 HOT한 중고거래 물품을<br />
               판다 마켓에서 확인해 보세요
             </p>
           </div>
         </section>
-        <section class="reverse">
+        <section class="topic reverse">
           <div>
-            <p class="label">Search</p>
-            <h1 class="title">
+            <p class="topic-label">Search</p>
+            <h1 class="topic-title">
               구매를 원하는<br />
               상품을 검색하세요
             </h1>
-            <p class="desc">
+            <p class="topic-description">
               구매하고 싶은 물품은 검색해서<br />
               쉽게 찾아보세요
             </p>
           </div>
-          <img src="/assets/img_home_02.png" alt="상품을 검색하는 모습" />
+          <img
+            class="topic-image"
+            src="/assets/img_home_02.png"
+            alt="상품을 검색하는 모습"
+          />
         </section>
-        <section>
-          <img src="/assets/img_home_03.png" alt="여러 상품이 나열된 모습" />
+        <section class="topic">
+          <img
+            class="topic-image"
+            src="/assets/img_home_03.png"
+            alt="여러 상품이 나열된 모습"
+          />
           <div>
-            <p class="label">Register</p>
-            <h1 class="title">
+            <p class="topic-label">Register</p>
+            <h1 class="topic-title">
               판매를 원하는<br />
               상품을 등록하세요
             </h1>
-            <p class="desc">
+            <p class="topic-description">
               어떤 물건이든 판매하고 싶은 상품을<br />
               쉽게 등록하세요
             </p>
@@ -83,26 +96,27 @@
         </section>
       </article>
       <div class="banner">
-        <div class="container contents">
-          <h1>
+        <div class="banner-contents container">
+          <h1 class="banner-title">
             믿을 수 있는<br />
             판다마켓 중고거래
           </h1>
           <img
+            class="banner-image"
             src="/assets/img_home_bottom.png"
             alt="판다가 중고거래하는 모습"
           />
         </div>
       </div>
     </main>
-    <footer>
-      <div>
-        <div class="copyright">©codeit - 2024</div>
-        <div class="links">
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/faq.html">FAQ</a>
+    <footer class="footer">
+      <div class="footer-contents">
+        <div class="footer-copyright">©codeit - 2024</div>
+        <div class="footer-links">
+          <a class="footer-link" href="/privacy.html">Privacy Policy</a>
+          <a class="footer-link" href="/faq.html">FAQ</a>
         </div>
-        <div class="social-icons">
+        <div class="footer-socials">
           <a href="https://www.facebook.com/" target="_blank">
             <img src="/assets/ic_facebook.svg" alt="페이스북 아이콘" />
           </a>

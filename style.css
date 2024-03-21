@@ -38,11 +38,11 @@ a {
   text-decoration: none;
 }
 
-header {
+.header {
   height: 70px;
 }
 
-header > div {
+.header-contents {
   max-width: 1920px;
   margin: 0 auto;
   padding: 10px 200px;
@@ -52,15 +52,11 @@ header > div {
   justify-content: space-between;
 }
 
-.logo {
+.h-100 {
   height: 100%;
 }
 
-.logo img {
-  height: 100%;
-}
-
-button {
+.button {
   border: 0;
   background: var(--primary500);
   color: white;
@@ -69,27 +65,27 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   background: var(--primary600);
 }
 
-button:active {
+.button:active {
   background: var(--primary700);
 }
 
-button:disabled {
+.button:disabled {
   background: var(--gray400);
   cursor: default;
 }
 
-button.small {
+.button.small {
   width: 128px;
   height: 48px;
   border-radius: 8px;
   font-size: 16px;
 }
 
-button.large {
+.button.large {
   width: 355px;
   height: 56px;
   border-radius: 28px;
@@ -102,7 +98,7 @@ button.large {
   overflow: hidden;
 }
 
-.banner .contents {
+.banner-contents {
   position: relative;
   height: 100%;
   display: flex;
@@ -111,17 +107,17 @@ button.large {
   gap: 32px;
 }
 
-.banner .contents h1 {
+.banner-title {
   font-weight: 700;
   color: var(--gray700);
   font-size: 40px;
 }
 
-.banner .contents *:not(img) {
+.banner-contents *:not(.banner-image) {
   z-index: 1;
 }
 
-.banner .contents img {
+.banner-image {
   width: 996px;
   position: absolute;
   bottom: 0;
@@ -133,11 +129,11 @@ button.large {
   margin: 0 auto;
 }
 
-article {
+.topics {
   padding-bottom: 138px;
 }
 
-section {
+.topic {
   padding: 138px 0;
   display: flex;
   justify-content: left;
@@ -146,39 +142,39 @@ section {
   color: var(--gray700);
 }
 
-section.reverse {
+.topic.reverse {
   justify-content: right;
   text-align: right;
 }
 
-section img {
+.topic-image {
   max-height: 444px;
 }
 
-section .label {
+.topic-label {
   font-weight: 700;
   font-size: 18px;
   color: var(--primary500);
 }
 
-section .title {
+.topic-title {
   margin-top: 12px;
   font-weight: 700;
   font-size: 40px;
 }
 
-section .desc {
+.topic-description {
   margin-top: 24px;
   font-weight: 500;
   font-size: 24px;
 }
 
-footer {
+.footer {
   background: var(--gray900);
   height: 160px;
 }
 
-footer > div {
+.footer-contents {
   max-width: 1920px;
   margin: 0 auto;
   padding: 32px 200px;
@@ -188,33 +184,28 @@ footer > div {
   font-size: 16px;
 }
 
-footer .copyright {
+.footer-copyright {
   color: var(--gray400);
 }
 
-footer .links {
+.footer-links {
   display: flex;
   gap: 30px;
 }
 
-footer .links a {
+.footer-link {
   color: var(--gray200);
 }
 
-footer .links a:visited {
+.footer-link:visited {
   color: var(--gray200);
 }
 
-footer .links a:active {
+.footer-link:active {
   color: var(--primary500);
 }
 
-footer .social-icons {
+.footer-socials {
   display: flex;
   gap: 12px;
-}
-
-footer .social-icons a {
-  width: 20px;
-  height: 20px;
 }
