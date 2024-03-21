@@ -23,6 +23,7 @@ ul, dl {
 :root {
   --brand-blue:#3692FF;
   --grey700: #374151;
+  font-size: 62.5%;
 }
 
 .blind {
@@ -68,11 +69,11 @@ ul, dl {
   border: 0;
   border-radius: 40px;
   font-family: Pretendard, sans-serif;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   color: #fff;
   text-align: center;
-  line-height: 24px;
+  line-height: 2.4rem;
 }
 
 .btn-small {
@@ -85,10 +86,10 @@ ul, dl {
   border-radius: 8px;
   text-align: center;
   font-family: Pretendard, sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #fff;
-  line-height: 20px;
+  line-height: 2rem;
 }
 
 /* layout */
@@ -133,9 +134,9 @@ ul, dl {
 }
 .footer__tit {
   font-family: Pretendard, sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.9rem;
 }
 .footer__nav {
   display: flex;
@@ -178,9 +179,9 @@ ul, dl {
 .section-banner__tit {
   max-width: 355px;
   font-family: Pretendard, sans-serif;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 5.6rem;
   word-break: keep-all;
   color: var(--grey700);
 }
@@ -220,24 +221,24 @@ ul, dl {
 }
 .section-desc .topic {
   font-family: Pretendard, sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 2.5rem;
   color: var(--brand-blue);
 }
 .section-desc .tit {
   margin: 12px 0 24px;
   font-family: Pretendard, sans-serif;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 5.6rem;
   letter-spacing: 0.02em;
   max-width: 300px;
 }
 .section-desc .content {
   font-family: Pretendard, sans-serif;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 2.9rem;
   letter-spacing: 0.08em;
 }
