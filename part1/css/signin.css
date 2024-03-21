@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    font-family: Pretendard;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.login-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.login-logo {
+    position: relative;
+    width: 396px;
+    height: 132px;
+    top: 60px;
+    left: 122px;
+}
+
