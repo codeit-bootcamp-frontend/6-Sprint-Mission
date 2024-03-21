@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.header-title {
+  width: 396px;
+  height: 132px;
+  position: absolute;
+  top: 60px;
+  left: 600px;
+}
