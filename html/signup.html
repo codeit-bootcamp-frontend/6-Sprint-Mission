@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/signin.css" />
+</head>
+<body>
+  <div class="signin_container_layout">
+    <a href="/">
+      <img 
+        src="/images/Img_logo.png" 
+        alt="logo image" 
+        class="logo_img" 
+      />
+    </a>
+    <div class="signin_form_layout">
+      <form class="signin_form_container">
+        <div>
+          <label for="email">이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일을 입력해주세요"
+            required
+          />
+        </div>
+        <div>
+          <label for="username">닉네임</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="닉네임을 입력해주세요"
+            required
+          />
+        </div>
+        <div>
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력해주세요"
+            class="password_container"
+            required
+          />
+        </div>
+        <div>
+          <label for="confirm_password">비밀번호 확인</label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            placeholder="비밀번호를 다시 입력해주세요"
+            class="password_container"
+            required
+          />
+        </div>
+        <button type="submit" class="signin_button">로그인</button>
+      </form>
+      <div class="social_signin_layout">
+        <p>간편 로그인하기</p>
+        <div class="social_signin_icon">
+          <a href="https://www.google.com/" target="_blank">
+            <img
+              src="/images/Icon_google.png"
+              alt="google icon"
+              class="sns_icon"
+            />
+          </a>
+          <a href="https://www.kakaocorp.com/page/" target="_blank">
+            <img
+              src="/images/Icon_kakaotalk.png"
+              alt="kakaotalk icon"
+              class="sns_icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="siginup_link_layout">
+      <p class="signup_link_text">
+        판다마켓이 처음이신가요?
+        <a href="/signup" target="_blank">회원가입</a>
+      </p>
+    </div>
+  </div>
+  <script src="/js/signup.js"></script>>
+</body>
+</html>
