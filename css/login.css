@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+main {
+  width: 640px;
+  height: 100%;
+  margin: 60px auto 0;
+}
+.logo_home_box {
+  text-align: center;
+}
+.logo_home {
+  width: 396px;
+  height: 132px;
+}
+
+.wrapper {
+  width: 640px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input {
+  width: 100%;
+  height: 93px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+input {
+  width: 100%;
+  height: 56px;
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  border: none;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline-color: #3692ff;
+}
+
+label {
+  color: #1f2937;
+  font-family: Pretendard;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+form button {
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+  background-color: #9ca3af;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Pretendard;
+}
+.easy_login,
+.signup {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.easy_login {
+  box-sizing: border-box;
+  height: 74px;
+  background-color: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 25px 23px;
+  font-weight: 500;
+}
+
+.easy_login_logos {
+  display: flex;
+  gap: 16px;
+}
+
+.signup {
+  display: flex;
+  gap: 4px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.pwd {
+  width: 100%;
+  position: relative;
+}
+
+.mark_unvisible {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+.link_signup {
+  color: #3182f6;
+}
