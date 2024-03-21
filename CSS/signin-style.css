@@ -56,6 +56,10 @@ input {
   border-radius: 12px;
 }
 
+input:focus {
+  outline:2px solid var(--blue);
+}
+
 input::placeholder {
   color: var(--gray400)
 }
