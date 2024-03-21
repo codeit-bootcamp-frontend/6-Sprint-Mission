@@ -30,7 +30,7 @@
 .email:focus,
 .password:focus
 .nickname:focus{
-  border-color:#3692ff ;
+  outline-color:#3692ff ;
 }
 .eyeoff{
   position: absolute;
