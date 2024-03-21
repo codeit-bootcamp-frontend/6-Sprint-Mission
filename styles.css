@@ -32,7 +32,7 @@
   display: block;
   width: 100%;
   height: 56px;
-  border: 1px solid #f3f4f6;
+  border: 0px solid #f3f4f6;
   border-radius: 12px;
   background-color: #f3f4f6;
   position: relative;
@@ -50,5 +50,5 @@
 }
 
 .input:focus {
-  outline: 1px solid#3692ff;
+  outline: 1px solid #3692ff;
 }
