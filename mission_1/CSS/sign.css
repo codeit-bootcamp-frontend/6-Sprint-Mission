@@ -6,8 +6,8 @@ body {
 .logo {
   display: flex;
   justify-content: center;
-
   padding-top: 60px;
+  margin-bottom: 40px;
 }
 
 .logo img {
