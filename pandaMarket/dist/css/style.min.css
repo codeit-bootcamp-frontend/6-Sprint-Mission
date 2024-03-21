@@ -122,6 +122,11 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   font-weight: 400;
   line-height: 2.4rem;
 }
+@media screen and (max-width: 744px) {
+  .input-theme {
+    width: 100%;
+  }
+}
 .input-theme + .alert {
   display: none;
   padding: 8px 16px;
@@ -163,6 +168,16 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   padding: 0 10.42vw;
   background: #fff;
 }
+@media screen and (max-width: 744px) {
+  .header {
+    padding: 0 3.23vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    padding: 0 4.27vw;
+  }
+}
 .header .img-logo {
   display: flex;
 }
@@ -182,24 +197,53 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   display: flex;
   box-sizing: border-box;
   width: 100vw;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
   padding: 32px 10.42vw 0;
   background: #111827;
   color: #fff;
+}
+@media screen and (max-width: 744px) {
+  .footer {
+    padding: 32px 3.23vw 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer {
+    align-items: flex-start;
+    padding: 32px 4.27vw 0;
+    gap: 24px 0;
+  }
 }
 .footer__tit {
   font-family: Pretendard, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.9rem;
+  color: var(--cool-grey400);
+}
+@media screen and (max-width: 375px) {
+  .footer__tit {
+    order: 3;
+    flex: 1 0 100%;
+  }
 }
 .footer__nav {
   display: flex;
+  height: -moz-min-content;
+  height: min-content;
   gap: 3.07vw;
+  font-family: Pretendard, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.9rem;
 }
 .footer__sns {
   display: flex;
-  gap: 0.625vw;
+  height: -moz-min-content;
+  height: min-content;
+  gap: 12px;
 }
 .footer .link:visited {
   color: #fff;
@@ -307,6 +351,11 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   padding: 60px 0;
   margin: 0 auto;
 }
+@media screen and (max-width: 744px) {
+  .section-form {
+    padding: 60px 20px;
+  }
+}
 .section-form__header {
   display: flex;
   justify-content: center;
@@ -323,9 +372,9 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 .section-form__label {
   display: block;
   font-family: Pretendard, sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 21.6px;
+  line-height: 2.16rem;
   margin-bottom: 16px;
 }
 .section-form__input-box {
@@ -346,9 +395,9 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 .section-form__info .content {
   text-align: center;
   font-family: Pretendard, sans-serif;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 17.9px;
+  line-height: 1.8rem;
 }
 .section-form__info .link {
   text-decoration: underline;
@@ -365,9 +414,9 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 .section-other__tit {
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 2.4rem;
 }
 .section-other__content {
   display: flex;

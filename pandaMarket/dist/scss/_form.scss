@@ -7,6 +7,9 @@
   max-width:640px;
   padding:60px 0;
   margin:0 auto;
+  @media screen and (max-width:$size-t){
+    padding:60px 20px;
+  }
   &__header {
     display:flex;
     justify-content:center;
@@ -23,9 +26,9 @@
   &__label {
     display:block;
     font-family: Pretendard, sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 21.6px;
+    line-height: 2.16rem;
     margin-bottom:16px;
   }
   &__input-box {
@@ -47,9 +50,9 @@
     .content {
       text-align:center;
       font-family: Pretendard, sans-serif;
-      font-size: 15px;
+      font-size: 1.5rem;
       font-weight: 500;
-      line-height: 17.9px;
+      line-height: 1.8rem;
     }
     .link {
       text-decoration:underline;
@@ -68,9 +71,9 @@
 
   &__tit {
     font-family: Pretendard;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 2.4rem;
   }
   &__content {
     display:flex;
