@@ -9,3 +9,42 @@
   top: 60px;
   left: 600px;
 }
+
+#login-form {
+  width: 640px;
+  height: 430px;
+  position: absolute;
+  top: 232px;
+  left: 490px;
+  gap: 24px;
+}
+
+.label {
+  color: #1f2937;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.2;
+  margin-top: 6px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  border: 1px solid #f3f4f6;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  position: relative;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  font-family: Pretendard;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 16px 24px;
+}
