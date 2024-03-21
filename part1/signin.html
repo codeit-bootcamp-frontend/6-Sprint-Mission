@@ -13,23 +13,31 @@
     />
 </head>
 <body>
-    <div class="login-wrapper">
+    <div class="login-form">
         <img class="login-logo" src="./img/login_logo.png" alt="로고">
-        <div>
-            <div></div>
-            <input>
+        <div class="login-email">
+            <p class="input-text">이메일<br/></p>
+            <input type="email" id="loginid" name="id" placeholder="이메일을 입력하세요">
         </div>
-        <div>
-            <div></div>
-            <input>
+        <div class="login-password">
+            <p class="input-text">비밀번호<br/></p>
+            <input type="password" id="loginpw" name="pw" placeholder="비밀번호을 입력하세요">
         </div>
-        <button></button>
-        <div>
-            <p></p>
-            <div>
-                <img src="./img/ic_google.png" alt="구글">
-                <img src="./img/ic_kakaotalk.png" alt="카카오톡">
+        <button type="submit" class="login-btn">로그인</button>
+        <div class="login-simple">
+            <p class="simple-text">간편 로그인하기</p>
+            <div class="login-social">
+                <a href="https://www.google.com/" target="_blank">
+                    <img src="./img/ic_google.png" alt="구글">
+                </a>
+                <a href="https://www.kakaocorp.com/page/" target="_blank">
+                    <img src="./img/ic_kakaotalk.png" alt="카카오톡">
+                </a>
             </div>
+        </div>
+        <div class="bottom">
+            <div class="join-text">판다마켓이 처음이신가요?</div>
+            <a id="join-page" href="./signup.html">회원가입</a>
         </div>
     </div>
 </body>
