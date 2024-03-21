@@ -97,6 +97,10 @@ main > .container > form > .third-party > .service
 	gap: 16px;
 	display: flex;
 }
+main > .container > form > .third-party > .service > a
+{
+	display: inline-flex;
+}
 main > .container > form > p
 {
 	text-align: center;
