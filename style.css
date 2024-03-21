@@ -57,12 +57,13 @@ a {
 }
 
 .button {
-  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 20px;
   background: var(--primary500);
   color: white;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .button:hover {
@@ -87,7 +88,7 @@ a {
 
 .button.large {
   border-radius: 28px;
-  width: 355px;
+  width: 356px;
   height: 56px;
   font-size: 20px;
 }
