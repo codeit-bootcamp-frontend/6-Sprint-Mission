@@ -84,23 +84,30 @@ body {
 
 
 .benner {
-  width: 996px;
-  height: 447px;
-  background-image: url(img/png/Img_home_top.png);
-  background-repeat: no-repeat;
-  background-size: 80%;
+  width: 1920px;
+  height: 540px;
+  margin: 0 auto;
   position: relative;
-  left: 223px;
-  top: 93px
 }
 
-.title {
+.benner-img {
+  position: absolute;
+  right: 223px;
+  bottom: 0;
+}
 
+.title, .serve {
   font-size: 40px;
   font-weight: 700;
   color: #374151;
   margin: 0;
   margin-bottom: 32px;
+}
+
+.benner-text {
+  position: absolute;
+  left: 360px;
+  top: 170px
 }
 
 .mini-text {
@@ -119,26 +126,64 @@ body {
 .promotion-type1 {
   text-align: left;
   margin-left: 64px;
-  flex-shrink: 0
+  display: inline-block;
 }
 
 .promotion-type2 {
   text-align: right;
   margin-right: 64px;
-  flex-shrink: 0
+  display: inline-block;
 }
 
 .promotion {
   background-color: #fff;
   max-width: 1920px;
   min-width: 370px;
-  /* display: grid;
-  max-width: 1200px;
-  max-height: 2838px;
-  grid-template-rows: repeat(3, 720px); */
+  margin: 0 auto;
 }
+
+.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .container {
   width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(3, 720px);
+}
+
+.footer {
+  color: #9CA3AF;
+  background: #111827;
+}
+
+.network-icon {
+  margin-right: 12px;
+  width: 20px;
+  display: inline-block;
+}
+
+.bottom-title {
+  background-image: url('img/Img_home_bottom.png');
+  background-repeat: no-repeat;
+  background-size: 996px 447px;
+}
+
+.site {
+  color: #E5E7EB;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.botton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 200px 65px;
+  min-width: 375px;
+  gap: 68px;
 }
