@@ -101,6 +101,7 @@ button:hover {
     line-height: 24px;
     padding : 25px 23px 25px 23px;
 }
+
 .login-social a {
     text-decoration-line: none;
 }
@@ -110,6 +111,25 @@ button:hover {
     height: 42px;
     margin-left: 16px;
 }
+
+.bottom {
+    width: 210px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.9px;
+    margin: 24px auto 0; 
+}
+
+#join-page {
+    color: #3182F6;
+    text-decoration-color : #3182F6;
+}
+
+
 
 
 
