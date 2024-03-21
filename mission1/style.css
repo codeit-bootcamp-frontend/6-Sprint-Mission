@@ -23,7 +23,7 @@ body {
 
 header {
     max-width: 1920px;
-    margin: 10px 200px 9px;
+    padding: 10px 200px 9px;
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -175,6 +175,10 @@ footer {
     text-align: center;
 }
 
+.support > a {
+    text-decoration: none;
+    color: #E5E7EB
+}
 .support {
     color: #E5E7EB;
     font-size: 16px;

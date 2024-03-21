@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>판다마켓</title>
 </head>
+
 <body>
     <header>
         <div class="logobox">
-            <img class="logo" src="images/Group 19.png">
+            <a href="/">
+                <img class="logo" src="images/Group 19.png">
+            </a>
         </div>
         <div class="buttonbox">
-            <button class="loginButton button">
-                로그인
-            </button>
+            <a href="/signin">
+                <button class="loginButton button">
+                    로그인
+                </button>
+            </a>
         </div>
     </header>
     <section class="bannerbox">
@@ -24,9 +30,11 @@
                     일상의 모든 물건을<br>
                     거래해 보세요
                 </h1>
-                <button class="bannerButton button">
-                    구경하러 가기
-                </button>
+                <a href="/items">
+                    <button class="bannerButton button">
+                        구경하러 가기
+                    </button>
+                </a>
             </div>
             <img class="bannerImage top" src="images/Img_home_top.png">
         </div>
@@ -99,20 +107,29 @@
                 </span>
             </div>
             <div class="support">
-                <a>
+                <a href="/privacy">
                     Privacy Policy
                 </a>
-                <a>
+                <a href="/faq">
                     FAQ
                 </a>
             </div>
             <div>
-                <img class="shortcuts" src="images/ic_facebook.png">
-                <img class="shortcuts" src="images/ic_twitter.png">
-                <img class="shortcuts" src="images/ic_youtube.png">
-                <img class="shortcuts" src="images/ic_instagram.png">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="shortcuts" src="images/ic_facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img class="shortcuts" src="images/ic_twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img class="shortcuts" src="images/ic_youtube.png" alt="Youtube">                   
+                </a>
+                <a href="https://www.instagram.com">
+                    <img class="shortcuts" src="images/ic_instagram.png" alt="Instagram">
+                </a>
             </div>
         </div>
-    </footer>
+    </footer> 
 </body>
+
 </html>
