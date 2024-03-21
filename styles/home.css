@@ -1,43 +1,3 @@
-:root {
-  --gray900: #111827;
-  --gray800: #1f2937;
-  --gray700: #374151;
-  --gray600: #4b5563;
-  --gray500: #6b7280;
-  --gray400: #9ca3af;
-  --gray200: #e5e7eb;
-  --gray100: #f3f4f6;
-  --gray50: #f3f4f6;
-
-  --primary700: #1251aa;
-  --primary600: #1967d6;
-  --primary500: #3692ff;
-  --primary300: #cfe5ff;
-  --primary200: #e6f2ff;
-
-  --error: #f74747;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
-
-img {
-  display: block;
-  user-select: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 .header {
   height: 70px;
 }
@@ -50,33 +10,6 @@ a {
   padding: 10px 200px;
   max-width: 1920px;
   height: 100%;
-}
-
-.h-100 {
-  height: 100%;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 20px;
-  background: var(--primary500);
-  color: white;
-  font-weight: 600;
-}
-
-.button:hover {
-  background: var(--primary600);
-}
-
-.button:active {
-  background: var(--primary700);
-}
-
-.button:disabled {
-  background: var(--gray400);
-  cursor: default;
 }
 
 .button.small {
