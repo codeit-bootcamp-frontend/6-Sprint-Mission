@@ -7,48 +7,52 @@
     <title>signup</title>
 </head>
 <body>
-  <!-- 배너 -->
-	<a class="sign-banner" href="/" alt="랜딩페이지">
-		<img class="sign-banner-img" src="./image/sign-panda.png" alt="sign-logo">
-		<h2 class="sign-title">판다마켓</h2>
-	</a>
+  <!-- 헤더 -->
+	<header>
+		<a class="sign-banner" href="/" alt="랜딩페이지">
+			<img class="sign-banner-img" src="./image/sign-panda.png" alt="sign-logo">
+			<h2 class="sign-title">판다마켓</h2>
+		</a>
+	</header>
 	<!-- 메인 -->
-	<form class="sign-form">
-		<div>
-			<label for="e-mail">이메일</label>
-			<input id="e-mail" name="e-mail" placeholder="이메일을 입력해주세요"  type = email>
-		</div>
-		<div>
-      <label for="nick-name">닉네임</label>
-        <input id="nick-name" name="nick-name" placeholder="닉네임을 입력해주세요">
-        </div>
-    <div>
-      <label for="password">비밀번호</label>
-      <div class="password-box">
-        <input id="password" name="password" placeholder="비밀번호를 입력해주세요"  type="password">
-        <span id="togglePassword" onclick="Visibility('password')"><img src="./image/icon/invisible.svg"></span>
-      </div>
-    </div>
-        <div>
-      <label for="re-password">비밀번호 확인</label>
-      <div class="password-box">
-        <input id="re-password" name="re-password" placeholder="비밀번호를 다시 한 번 입력해주세요"  type="password">
-        <span id="toggleRePassword" onclick="Visibility2('re-password')"><img src="./image/icon/invisible.svg"></span>
-      </div>
-    </div>
-		<button>회원가입</button>
-		<div class="sign-social">
-			<p class="text">간편 로그인하기</p>
-			<div class="icon">
-				<a href="https://www.google.com/"><img src="./image/icon/google.svg" alt="구글-로그인"></a>
-				<a href="https://www.kakaocorp.com/page/"><img src="./image/icon/kakao.png" alt="카카오-로그인"></a>
+	<main>
+		<form class="sign-form">
+			<div>
+				<label for="e-mail">이메일</label>
+				<input id="e-mail" name="e-mail" placeholder="이메일을 입력해주세요"  type = email>
 			</div>
-		</div>
-		<div class="sign-footer">
-			<p>이미 회원이신가요?</p>
-			<a href="/signin.html" alt="회원가입-페이지">로그인</a>
-		</div>	
-	</form>
+			<div>
+				<label for="nick-name">닉네임</label>
+					<input id="nick-name" name="nick-name" placeholder="닉네임을 입력해주세요">
+					</div>
+			<div>
+				<label for="password">비밀번호</label>
+				<div class="password-box">
+					<input id="password" name="password" placeholder="비밀번호를 입력해주세요"  type="password">
+					<span id="togglePassword" onclick="Visibility('password')"><img src="./image/icon/invisible.svg"></span>
+				</div>
+			</div>
+					<div>
+				<label for="re-password">비밀번호 확인</label>
+				<div class="password-box">
+					<input id="re-password" name="re-password" placeholder="비밀번호를 다시 한 번 입력해주세요"  type="password">
+					<span id="toggleRePassword" onclick="Visibility2('re-password')"><img src="./image/icon/invisible.svg"></span>
+				</div>
+			</div>
+			<button>회원가입</button>
+			<div class="sign-social">
+				<p class="text">간편 로그인하기</p>
+				<div class="icon">
+					<a href="https://www.google.com/"><img src="./image/icon/google.svg" alt="구글-로그인"></a>
+					<a href="https://www.kakaocorp.com/page/"><img src="./image/icon/kakao.png" alt="카카오-로그인"></a>
+				</div>
+			</div>
+			<div class="sign-footer">
+				<p>이미 회원이신가요?</p>
+				<a href="/signin.html" alt="회원가입-페이지">로그인</a>
+			</div>	
+		</form>
+	</main>
 	<script src="./signup.js"></script>
 </body>
 </html>
