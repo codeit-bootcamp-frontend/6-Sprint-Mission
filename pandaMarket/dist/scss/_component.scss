@@ -22,9 +22,9 @@
 }
 .btn-large {
   display:inline-block;
-  width:355px;
-  height:24px;
-  padding:16px 0;
+  box-sizing:border-box;
+  height:56px;
+  padding:16px 124px;
   background:var(--brand-blue);
   border:0;
   border-radius:40px;
@@ -38,9 +38,9 @@
 
 .btn-small {
   display:inline-block;
-  width: 128px;
-  height:20px;
-  padding:14px 0;
+  box-sizing:border-box;
+  height:48px;
+  padding:14px 43px;
   background:var(--brand-blue);
   border:0;
   border-radius: 8px;
@@ -50,4 +50,39 @@
   font-weight: 600;
   color:#fff;
   line-height:2rem;
+}
+
+.input-theme {
+  box-sizing:border-box;
+  width: 640px;
+  height: 56px;
+  padding:16px 24px;
+  background:var(--cool-grey100);
+  border:none;
+  border-radius:12px;
+  font-family: Pretendard, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  & + .alert {
+    display:none;
+    padding:8px 16px;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.79rem;
+    color:#BF010A;
+  }
+  &:focus {
+    outline:1px solid var(--brand-blue);
+  }
+  &::placeholder {
+    color:var(--cool-grey400);
+  }
+  &:invalid + .alert {
+    display:block;
+  }
+  &[type="password"] {
+    padding:16px 56px 16px 24px;
+  }
 }

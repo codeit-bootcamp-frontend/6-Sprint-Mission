@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>판다마켓</title>
+  <link rel="stylesheet" href="/dist/css/style.min.css">
+</head>
+<body>
+<div class="wrap">
+  <section class="section-form">
+    <header class="section-form__header">
+      <h1 class="blind">로그인 페이지</h1>
+      <a href="/index.html" class="link-home">
+        <img src="/dist/img/logo-big.png" alt="판다마켓 로고 이미지">
+        <span class="blind">홈 바로가기</span>
+      </a>
+    </header>
+    <div class="section-form__content">
+      <form action="">
+      <fieldset class="section-form__form">  
+        <legend class="blind">로그인 폼</legend>
+        <div class="section-form__box">
+          <label for="login-email" class="section-form__label">이메일</label>
+          <span class="section-form__input-box">
+            <input type="email" id="login-email" class="input-theme section-form__input" placeholder="이메일을 입력해주세요">
+            <strong class="alert">잘못된 주소입니다.</strong>
+          </span>
+        </div>
+        <div class="section-form__box">
+          <label for="login-pw" class="section-form__label">비밀번호</label>
+          <span class="section-form__input-box">
+            <input type="password" id="login-pw" class="input-theme section-form__input" placeholder="비밀번호를 입력해주세요">
+            <input type="checkbox" id="login-pw-show" class="blind chk-visibility">
+            <label for="login-pw-show" class="spr visibility-off"><span class="blind">비밀번호 보기/숨기기</span></label>
+          </span>
+        </div>
+        <div class="section-form__box">
+          <button type="submit" class="section-form__btn btn-large" disabled>로그인</button>
+        </div>
+      </fieldset>
+      </form>
+    </div>
+    <section class="section-other">
+      <h2 class="section-other__tit">간편 로그인하기</h2>
+      <ul class="section-other__content">
+        <li class="section-other__list">
+          <a href="https://www.google.com" class="link">
+            <img src="/dist/img/ic_google.svg" alt="구글 로그인 바로가기">
+          </a>
+        </li>
+        <li class="section-other__list">
+          <a href="https://www.kakaocorp.com/page/" class="link">
+            <img src="/dist/img/ic_kakao.svg" alt="카카오 로그인 바로가기">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="section-form__info">
+      <p class="content">판다마켓이 처음이신가요? <a href="/join.html" class="link">회원가입</a></p>
+    </section>
+  </section>
+</div>
+</body>
+</html>

@@ -12,3 +12,20 @@ ul, dl {
   padding:0;
   list-style:none;
 }
+
+fieldset {
+  margin:0;
+  padding:0;
+  border:none;
+}
+
+button {
+  cursor:pointer;
+}
+
+input[type="password"] {
+  &::-ms-reveal,
+  &::-ms-clear {
+    display:none;
+  }
+}

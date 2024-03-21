@@ -1,0 +1,13 @@
+{
+   "style_name": "spr",
+   "folder": "../img/spr",
+   "orientation": "vertical",
+   "padding": 5,
+   "custom_styles": {
+      "display": "inline-block"
+   },
+   "stylesheet": "scss",
+   "path_prefix": "/dist/img/",
+   "output": "png",
+   "enable_cache_busting": true
+}
