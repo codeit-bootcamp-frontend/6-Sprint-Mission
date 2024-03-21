@@ -48,3 +48,7 @@
   line-height: 24px;
   padding: 16px 24px;
 }
+
+.input:focus {
+  outline: 1px solid#3692ff;
+}
