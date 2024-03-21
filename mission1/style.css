@@ -21,6 +21,13 @@ body {
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: #1967D6;
+}
+.button:active {
+    background-color: #1251AA;
+}
+
 header {
     max-width: 1920px;
     padding: 10px 200px 9px;
@@ -34,6 +41,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+
 }
 
 .buttonbox {
