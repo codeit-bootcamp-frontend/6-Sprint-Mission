@@ -61,8 +61,6 @@ input:focus {
 .password_container {
   background: url(/images/visible.svg) no-repeat 590px;
   background-color: var(--cool-gray-100);
-           
-
 }
 
 .signin_button {
@@ -78,7 +76,7 @@ input:focus {
   margin-bottom: 24px;
 }
 
-.signin_button:hover {
+.btn_abled {
   background-color: var(--button-abled);
 }
 
