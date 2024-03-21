@@ -173,22 +173,44 @@ header {
   height: 540px;
 }
 
-.footer_banner {
-  display: flex;
-  justify-content: space-between;
+footer {
   width: 1920px;
   height: 160px;
   background-color: #111827;
   color: #E5E7EB;
   font-size: 16px;
+  text-align: center;
 }
 
 .footer_container {
   display: flex;
+  justify-content: space-between;
+  text-align: center;
   width: 1520px;
+  height: 20px;
+}
+
+.company {
+  display: flex;
+  width: 112px;
+  height:19px;
+}
+
+.policy_FAQ {
+  display: flex;
+  width: 159px;
+  height: 19px;
 }
 
 .sns_button {
+  display: flex;
+  justify-content: space-between;
+  width: 116px;
+  height: 20px;
+}
+
+.sns {
+  display: flex;
   width: 20px;
   height: 20px; 
 }
