@@ -91,6 +91,7 @@ input:focus {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  color: #1f2937;
 }
 
 .email-input-container {
@@ -100,7 +101,7 @@ input:focus {
 .password-input-container {
   position: relative;
 }
-
+#toggle-password-verify,
 #toggle-password {
   position: absolute;
   top: 32px;
