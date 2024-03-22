@@ -87,6 +87,13 @@
 
 .icon-login {
   margin-left: 450px;
-  padding-bottom: 180px;
+  margin-bottom: 16px;
   padding-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  bottom: 30px;
+  left: 30px;
+  gap: 16px;
 }
