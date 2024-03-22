@@ -79,6 +79,11 @@
   margin-top: 12px;
 }
 
+.signup-btn:hover,
+.login-btn:hover {
+  background-color: #3692FF;
+}
+
 .sns-login-box {
   width: 100%;
   height: 74px;
