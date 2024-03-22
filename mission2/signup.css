@@ -52,8 +52,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
 }
-
 .inputs > label {
     font-size: 18px;
     font-weight: 700;
@@ -63,15 +63,16 @@ main {
     width: 640px;
     height: 56px;
     padding-left: 24px;
+    padding-right: 24px;
     border-radius: 12px;
     gap: 10px;
     border-style: none;
     background-color: #F3F4F6;
 }
-.inputs.show-off > input {
-    background-image: url("/mission2/images/btn_visibility_off_24px.svg");
-    background-repeat: no-repeat;
-    background-position: right center;
+.show-off > img {
+    position: absolute;
+    right: 24px;
+    bottom: 16px;
 }
 input:focus {
     outline-color: #3692FF;
