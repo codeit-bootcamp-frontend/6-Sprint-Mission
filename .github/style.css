@@ -46,6 +46,9 @@ header {
 .top {
   background-image: url("../image/Img_home_top.png");
 }
+.bottom {
+  background-image: url("../image/Img_home_bottom.png");
+}
 .intro {
   margin-left: 40px;
   font-family: Pretendard;
