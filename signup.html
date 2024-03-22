@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="account.css">
 </head>
 <body>
@@ -16,7 +16,13 @@
             <label for="email">이메일</label>
             <input id="email" name="email" type="email" placeholder="이메일을 입력해 주세요">
         </div>
-        <div class="login-input"> 
+
+        <div class="login-input">
+            <label for="nickname">닉네임</label>
+            <input id="nickname" name="nickname" type="text" placeholder="닉네임을 입력해 주세요">
+        </div>
+
+        <div class="login-input">
             <label for="password">비밀번호</label>
             <div class="password-text">   
                 <input id="password" name="password" type="password" placeholder="비밀번호를 입력해 주세요">
@@ -24,7 +30,15 @@
             </div>
         </div>
 
-        <button class="login-btn">로그인</button>
+        <div class="login-input">
+            <label for="password-confirm">비밀번호 확인</label>
+            <div class="password-text">   
+                <input id="password-confirm" name="password-confirm" type="password" placeholder="비밀번호를 다시 한 번 입력해 주세요">
+                <img src="image/invisible.png" alt="비밀번호 숨김" class="password-invisible">
+            </div>
+        </div>
+
+        <button class="signup-btn">회원가입</button>
 
         <div class="social-login">
             <h4>간편 로그인하기</h4>
@@ -38,7 +52,7 @@
             </div>
         </div>
         <div class="login-signup">
-            판다마켓이 처음이신가요?<a href="signup.html">회원가입</a>
+            이미 회원이신가요?<a href="login.html">로그인</a>
         </div>
     </div>
 
