@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/css/global.css" />
-  <link rel="stylesheet" href="/css/auth.css" />
+  <link rel="stylesheet" href="/global.css" />
+  <link rel="stylesheet" href="/pages/auth/auth.css" />
 </head>
 <body>
   <div class="signin_container_layout">
@@ -25,7 +25,6 @@
             id="email"
             name="email"
             placeholder="이메일을 입력해주세요"
-            required
           />
         </div>
         <div>
@@ -35,7 +34,6 @@
             id="username"
             name="username"
             placeholder="닉네임을 입력해주세요"
-            required
           />
         </div>
         <div>
@@ -46,7 +44,6 @@
             name="password"
             placeholder="비밀번호를 입력해주세요"
             class="password_container"
-            required
           />
         </div>
         <div>
@@ -57,7 +54,6 @@
             name="confirm_password"
             placeholder="비밀번호를 다시 입력해주세요"
             class="password_container"
-            required
           />
         </div>
         <button type="submit" class="signin_button">로그인</button>
@@ -84,11 +80,11 @@
     </div>
     <div class="siginup_link_layout">
       <p class="signup_link_text">
-        판다마켓이 처음이신가요?
-        <a href="/signup" target="_blank">회원가입</a>
+        이미 회원이신가요?
+        <a href="/pages/auth/signin/signin.html">로그인</a>
       </p>
     </div>
   </div>
-  <script src="/js/signup.js"></script>
+  <script src="/pages/auth/signup/signup.js"></script>
 </body>
 </html>
