@@ -30,7 +30,7 @@
   font-weight: 600;
   font-size: 6.7rem;
   margin-bottom: 40px;
-  cursor: default;
+  cursor: pointer;
 }
 .logo img {
   width: 103px;
@@ -66,6 +66,9 @@ form input::placeholder {
   color: var(--gray400);
   font-weight: 400;
   font-family: var(--font-main);
+}
+form input:focus {
+  outline: 2px solid var(--main);
 }
 form button {
   cursor: pointer;
