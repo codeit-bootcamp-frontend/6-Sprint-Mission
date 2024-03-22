@@ -3,6 +3,7 @@
   padding: 0;
   text-decoration: none;
 }
+
 .head {
   margin: 0 auto;
   width: 100%;
@@ -27,7 +28,6 @@
   width: 1200px;
   margin: 0 auto;
 }
-
 .gnb-login {
   background-color: #3692ff;
   border-radius: 8px;
@@ -90,6 +90,7 @@ section img {
   color: #3692ff;
   margin-bottom: 12px;
 }
+
 .section_text-box {
   /* border: solid 1px; */
   margin: 64px;
@@ -99,6 +100,7 @@ section img {
   font-weight: 700;
   /* margin-bottom: 24px; */
 }
+
 .section_text-box__description {
   margin-top: 24px;
   font-size: 24px;
