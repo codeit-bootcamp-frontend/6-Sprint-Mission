@@ -70,3 +70,31 @@ header {
   color: #ffffff;
   cursor: pointer;
 }
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  gap: 40px;
+  text-align: left;
+  font-family: Pretendard;
+}
+.image-home {
+  width: 40%;
+}
+.home h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3692ff;
+}
+.home h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #374151;
+}
+.home span {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
