@@ -88,7 +88,7 @@
   line-height: 24px;
   text-align: center;
   color: var(--form-btn);
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .signup-btn:hover,
@@ -107,7 +107,7 @@
   font-size: 16px;
   line-height: 24px;
   padding: 25px 23px;
-  margin-top: 544px;
+  margin-top: 564px;
   margin-bottom: 24px;
   margin-left: -50px;
 }
