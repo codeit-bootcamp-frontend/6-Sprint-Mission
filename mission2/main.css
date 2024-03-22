@@ -19,6 +19,7 @@ body {
     font-weight: 600;
     text-align: center;
     cursor: pointer;
+    border-style: none;
 }
 
 .button:hover {
@@ -76,7 +77,6 @@ nav {
     gap: 10px;
     border-radius: 8px;
     opacity: 0px;
-    border: none;
 }
 
 .bannerbox {
@@ -127,7 +127,6 @@ nav {
     height: 56px;
     padding: 16px 100px;
     border-radius: 40px;
-    border-style: none;
 }
 
 .container {
