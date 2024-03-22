@@ -63,7 +63,7 @@ button{
   width:100%;
   height:540px;
   background-color:var(--brand_sky);
-  background-image:url(.././images/Img_home_top.png);
+  background-image:url(../images/Img_home_top.png);
   background-repeat:no-repeat;
   background-position:74% bottom;
 }
