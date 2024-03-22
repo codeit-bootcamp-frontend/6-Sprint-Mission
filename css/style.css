@@ -1,0 +1,304 @@
+@import "reset.css";
+
+* {
+  box-sizing: boarder-box;
+}
+
+body {
+  width: 1920px;
+  font-family: Pretendard, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 200px 9px 200px;
+}
+
+.header-btn {
+  width: 128px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3692FF;
+  position: relative;
+}
+
+.header-btn-word {
+  width: 42px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  top: 14.5px;
+  left: 43px;
+}
+
+.main1-container {
+  background-color: #CFE5FF;
+  margin-bottom: 137.5px;
+  width: 1920px;
+  height: 540px;
+  position: relative;
+}
+
+.main1-banner img {
+  width: 996px;
+  height: 447px;
+  position: absolute;
+  top: 93px;
+  right: 223px;
+  left: 701px;
+  bottom: 0px;
+}
+
+.main1-info {
+  position: absolute;
+  right: 1203px;
+  bottom: 170px;
+  left: 360px;
+}
+
+.main1-word {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.main1-info button {
+  font-size: 20px;
+  font-weight: 600;
+  width: 357px;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background-color: #3692FF;
+}
+
+.main2-container {
+  width: 1920px;
+  height: 444px;
+  margin-bottom: 138.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main2-info {
+  width: 1200px;
+  display: flex;
+}
+
+.main2-img {
+  width: 588px;
+  height: 444px;
+}
+
+.main2-word {
+  width: 303px;
+  height: 231px;
+  position: relative;
+  top: 106.5px;
+  left: 64px;
+  right: 245px;
+}
+
+.main2-info span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3692FF;
+}
+
+.main2-info h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.main2-info p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main3-container {
+  width: 1920px;
+  height: 444px;
+  margin-bottom: 138.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main3-info {
+  width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main3-img {
+  width: 588px;
+  height: 444px;
+}
+
+.main3-word {
+  width: 303px;
+  height: 231px;
+  position: relative;
+  top: 106.5px;
+  right: 64px;
+}
+
+.main3-info span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3692FF;
+}
+
+.main3-info h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.main3-info p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main4-container {
+  width: 1920px;
+  height: 444px;
+  margin-bottom: 138.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main4-info {
+  width: 1200px;
+  display: flex;
+}
+
+.main4-img {
+  width: 588px;
+  height: 444px;
+}
+
+.main4-word {
+  width: 303px;
+  height: 231px;
+  position: relative;
+  top: 106.5px;
+  left: 64px;
+  right: 245px;
+}
+
+.main4-info span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3692FF;
+}
+
+.main4-info h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.main4-info p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main5-container {
+  background-color: #CFE5FF;
+  width: 1920px;
+  height: 540px;
+  position: relative;
+}
+
+.main5-banner img {
+  width: 996px;
+  height: 447px;
+  position: absolute;
+  top: 93px;
+  right: 223px;
+  left: 701px;
+  bottom: 0px;
+}
+
+.main5-info {
+  position: absolute;
+  right: 1203px;
+  bottom: 170px;
+  left: 360px;
+}
+
+.main5-word {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.main5-info button {
+  font-size: 20px;
+  font-weight: 600;
+  width: 357px;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background-color: #3692FF;
+}
+
+.footer-container {
+  width: 1920px;
+  height: 160px;
+  background-color: #111827;
+}
+
+.footer-bar {
+  position: relative;
+  padding: 32px 200px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bar span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9CA3AF;
+}
+
+.footer-center1{
+  font-size: 16px;
+  font-weight: 400;
+  color: #E5E7EB;
+  text-decoration: none;
+}
+
+.footer-center2{
+  font-size: 16px;
+  font-weight: 400;
+  color: #E5E7EB;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.footer-ic a {
+  width: 18px;
+  height: 18px;
+  color: #FFFFFF;
+  margin-left: 12px;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
