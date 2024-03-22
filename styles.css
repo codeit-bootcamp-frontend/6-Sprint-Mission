@@ -58,6 +58,7 @@
 
 .input:focus {
   outline: 1px solid #3692ff;
+  padding-left: 24px;
 }
 
 .signup-btn,
