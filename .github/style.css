@@ -101,3 +101,23 @@ header {
   font-weight: 500;
   letter-spacing: 0.08em;
 }
+footer {
+  height: 160px;
+  padding: 32px 200px;
+  background: #111827;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+footer img {
+  cursor: pointer;
+}
+footer div:first-child {
+  color: #9ca3af;
+}
