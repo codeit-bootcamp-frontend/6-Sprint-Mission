@@ -180,3 +180,8 @@ input {
   border-radius: 8px;
   padding: 16px 23px;
 }
+
+.social-logins-logo {
+  display: flex;
+  gap: 16px;
+}
