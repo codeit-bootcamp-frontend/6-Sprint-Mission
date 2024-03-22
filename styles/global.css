@@ -129,6 +129,11 @@ h1 {
   padding: 16px 124px;
 }
 
+.login-container {
+  margin: 0 auto;
+  width: 640px;
+}
+
 .login-header {
   text-align: center;
   margin: 60px 0 40px;
