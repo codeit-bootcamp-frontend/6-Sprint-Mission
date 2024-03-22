@@ -1,31 +1,22 @@
+@import "./reset.css";
+
+:root {
+
+  /* font color */
+  --color-blue: #3692FF;
+  --color-gray50: #F7F7F8;
+  --color-gray100: #E8EBED;
+  --color-gray200: #E5E7EB;
+  --color-gray400: #9CA3AF;
+  --color-gray500: #72787F;
+  --color-gray600: #454C53; 
+  --color-gray700: #374151; 
+  --color-gray800: #26282B;
+  --color-gray900: #1B1D1F;
+
+}
+
 /* 기본 셋팅 */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-	box-sizing: border-box;
-}
-body {
-	font-family: 'Pretendard';
-  line-height: 1.6em;
-  font-weight: 400;
-}
-ol, ul {
-	list-style: none;
-}
-img {
-  max-width: 100%;
-  vertical-align: top;
-}
-button {
-  cursor: pointer;
-  border: 0;
-	outline: 0;
-	font-family: 'Pretendard';
-}
-a {
-  text-decoration: none;
-}
 #wrap {
 	width:100%;
 	min-width: 320px;
@@ -36,38 +27,6 @@ a {
 	max-width:1200px;
 	margin: 0 auto;
   position: relative;
-}
-
-/* font color */
-.color_blue {
-  color: #3692FF;
-}
-.color_gray50 {
-  color: #F7F7F8;
-}
-.color_gray100 {
-  color: #E8EBED;
-}
-.color_gray200 {
-  color: #E5E7EB;
-}
-.color_gray400 {
-  color: #9CA3AF;
-}
-.color_gray500 {
-  color: #72787F;
-}
-.color_gray600 {
-  color: #454C53; 
-}
-.color_gray700 {
-  color: #374151; 
-}
-.color_gray800 {
-  color: #26282B;
-}
-.color_gray900 {
-  color: #1B1D1F;
 }
 
 /* header */
@@ -104,6 +63,7 @@ header {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
+  color: var(--color-gray700);
 }
 .mv_txt button {
   width: 355px;
@@ -125,6 +85,7 @@ header {
 }
 .panda_content li .txt {
   margin-left: 60px;
+  color: var(--color-gray700);
 }
 .panda_content li:nth-child(2) .txt {
   text-align: right;
@@ -134,6 +95,7 @@ header {
 .panda_content li .blue_txt {
   font-size: 18px;
   font-weight: 700;
+  color: var(--color-blue);
 }
 .panda_content li .tit {
   font-size: 40px;
@@ -160,6 +122,9 @@ footer {
   justify-content: space-between;
   font-size: 16px;
 }
+footer .year {
+  color: var(--color-gray400);
+}
 footer .link,
 footer .sns {
   display: flex;
@@ -167,6 +132,9 @@ footer .sns {
 }
 footer .link {
   gap: 30px;
+}
+footer .link a {
+  color: var(--color-gray200);
 }
 footer .sns {
   gap: 13px;
