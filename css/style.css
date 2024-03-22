@@ -14,12 +14,12 @@
   --white: #fff;
 
   /* font-size */
-  --font-16: 1rem;
-  --font-18: 1.125rem;
-  --font-20: 1.25rem;
-  --font-24: 1.5rem;
-  --font-26: 1.625rem;
-  --font-40: 2.5rem;
+  --font-16: 1.6rem;
+  --font-18: 1.8rem;
+  --font-20: 2rem;
+  --font-24: 2.4rem;
+  --font-26: 2.6rem;
+  --font-40: 4rem;
 }
 
 @font-face {
@@ -47,9 +47,14 @@
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
+  line-height: 1.2;
 }
 
 .fontRokaf {
@@ -68,7 +73,7 @@ a {
 
 .inner {
   max-width: 1920px;
-  width: calc(100% - 400px);
+  padding: 0 200px;
   margin: 0 auto;
 }
 
@@ -83,7 +88,6 @@ a {
   background-color: var(--blue);
   font-size: var(--font-16);
   font-weight: 600;
-  line-height: 19px;
   color: var(--white);
   display: flex;
   justify-content: center;
@@ -113,7 +117,7 @@ header .logoText {
   color: var(--blue);
   font-size: var(--font-26);
   font-weight: 700;
-  line-height: 35px;
+  line-height: 1.4;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -141,7 +145,7 @@ header .button {
 .banner .mainText p.description {
   font-size: var(--font-40);
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.4;
   color: var(--cool-gray);
   text-wrap: nowrap;
   margin: 0;
@@ -164,21 +168,21 @@ header .button {
   margin: 32px 0 0;
   font-size: var(--font-20);
   font-weight: 600;
-  line-height: 24px;
   padding: 16px 0;
   border-radius: 40px;
 }
 
 /* 메인 영역 */
 main.introduceSection {
-  padding: 0 0 138px;
+  padding: 138px 0;
+  display: grid;
+  gap: 138px;
 }
 
 main.introduceSection > article {
   display: flex;
   gap: 0 64px;
   align-items: center;
-  padding: 138px 0;
 }
 
 main.introduceSection > article.reverse {
@@ -187,20 +191,21 @@ main.introduceSection > article.reverse {
 
 main.introduceSection > article .imgArea {
   max-width: 588px;
+  flex: 1;
 }
 
 main.introduceSection .textArea .keyword {
   color: var(--blue);
   font-size: var(--font-18);
   font-weight: 700;
-  line-height: 25.2px;
+  line-height: 1.4;
 }
 
 main.introduceSection .textArea .title {
   color: var(--cool-gray);
   font-size: var(--font-40);
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.4;
   letter-spacing: 0.02em;
   margin: 12px 0 24px;
 }
@@ -209,7 +214,6 @@ main.introduceSection .textArea .detail {
   color: var(--cool-gray);
   font-size: var(--font-24);
   font-weight: 500;
-  line-height: 29px;
   letter-spacing: 0.08em;
   text-align: left;
 }
@@ -234,20 +238,19 @@ footer .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer .copyright {
   color: #9ca3af;
   font-size: var(--font-16);
   font-weight: 400;
-  line-height: 19px;
   flex: 1;
 }
 
 footer .pageLink {
   font-size: var(--font-16);
   font-weight: 400;
-  line-height: 19px;
 }
 
 footer .pageLink a {
@@ -261,6 +264,7 @@ footer .pageLink a:not(:last-of-type) {
 footer .snsLink {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 12px;
   flex: 1;
 }
