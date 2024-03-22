@@ -6,7 +6,7 @@
 
 :root {
   --blue: #3692FF; 
-  --gray900: #1b1d1f;
+  --gray900: #111827;
   --gray700: #374151;
   --skyblue: #cfe5ff;
   --white: #ffffff;
@@ -21,6 +21,10 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 10px 200px 9px 200px;
+  background-color: var(--white);
+  height: 70px;
+  position: fixed;
+  inset: 0;
 }
 
 .signin {
@@ -37,6 +41,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 70px;
 }
 
 .header-button {
@@ -125,7 +130,7 @@ align-items: center;
 }
 
 footer {
-  background-color: var(--grey900);
+  background-color: var(--gray900);
   height: 160px;
   padding-top: 32px;
 }
