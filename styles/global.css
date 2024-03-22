@@ -133,3 +133,9 @@ h1 {
   text-align: center;
   margin: 60px 0 40px;
 }
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
