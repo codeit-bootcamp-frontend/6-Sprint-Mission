@@ -179,6 +179,8 @@ button{
     }
     .bottom_banner{
       height:927px;
+      background-position:center bottom;
+      background-size:100%;
     }
     .bottom_banner .bt_container{
       position:relative;
@@ -214,6 +216,16 @@ footer .footer_wrap .sns_link ul{
   display:flex;
   gap:20px;
 }
+  @media screen and (max-width: 1200px) {
+    footer {
+      padding:16px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    footer .footer_wrap {
+      flex-direction:column;
+    }
+  }
 /****************** signin *********************/
 .form_header{
   padding:60px 0 0 0;
