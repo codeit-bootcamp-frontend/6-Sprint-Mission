@@ -311,17 +311,24 @@ footer .footer_wrap .sns_link ul{
   color:#3182F6;
 }
   @media screen and (max-width: 1200px) {
-    footer {
-      padding:16px;
+    .user_form_wrap{
+      padding:20px;
     }
   }
   @media screen and (max-width: 768px) {
     .form_header h1{
+      margin:0 auto;
       width:60%;
     }
+    .form_header h1 a img{
+     display:block;
+     width:100%;
+    }
     .user_form_wrap{
-      padding:16px;
       max-width:400px;
+    }
+    .sns_login_wrap{
+      max-width:360px;
     }
   }
 /****************** signinup *********************/
