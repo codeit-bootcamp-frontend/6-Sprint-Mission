@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 1920px;
+}
+
+.nav-primary {
+  display: flex;
+  justify-content: space-around;
+  margin: 11.5px 0px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+  
+  /* for guideline
+  border: 1px solid; */
+}
+
+
+.background {
+  background-color: #CFE5FF;
+  background-image: url(/images/Img_home_top.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.background.footer {
+  background-image: url(/images/Img_home_bottom.png);
+}
+
+
+.banner {
+
+  /* element positioning */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  height: 540px;
+}
+
+.btn {
+  background-color: #3692FF;
+  color: #FFF;
+  border: none;
+}
+
+.btn.large {
+  width: 357px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 40px;
+  /* padding: 16px, 124px, 16px, 124px; */
+}
+
+.btn.small {
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px, 20px, 12px, 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* main */
+
+section:nth-child(odd) {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+
+  padding: 138px 0;
+}
+
+
+section:nth-child(even) {
+  display: flex;
+  gap: 64px;
+  padding: 138px 0;
+
+  align-items: center;
+  justify-content: right;
+
+  text-align: right;
+}
+
+
+
+.cards .keyword {
+  color: #3692FF;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+
+
+.cards h1 {
+  color: #374151;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.cards .description {
+  counter-reset: #374151;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* banner & footer */ 
+
+.banner h1,
+.footer h1 {
+  font-size: 40px;
+  font-weight: 700px;
+  line-height: 56px;
+}
+
+/* bottom */
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 32px;
+
+
+  border: 1px solid;
+  background-color:  #111827;
+  height: 160px;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+.bottom-left {
+  color: #9CA3AF;
+}
+
+.bottom-center {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.bottom-sns-wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
