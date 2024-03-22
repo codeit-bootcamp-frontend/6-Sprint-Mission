@@ -14,6 +14,7 @@ header{
   align-items:center;
   background-color:#fff;
   border-bottom:1px solid #dfdfdf;
+  z-index:9999;
 }
 header button{
   padding:120x 20px;
@@ -139,13 +140,13 @@ button{
   background-repeat:no-repeat;
   background-position:74% bottom;
 }
-.bottom_banner .container{
+.bottom_banner .bt_container{
   display:flex;
   flex-direction:column;
   justify-content:center;
   height:100%;
 }
-.bottom_banner .container p{
+.bottom_banner .bt_container p{
   font-size:40px;
   font-weight:700;
   color:var(--cool_gray);
@@ -156,6 +157,8 @@ button{
       background-position:center bottom;
     }
     .main_banner .banner_wrap .banner_txt{
+      position:relative;
+      bottom:100px;
       width:100%;
       text-align:center;
     }
@@ -177,8 +180,15 @@ button{
     .bottom_banner{
       height:927px;
     }
-    .bottom_banner .container{
+    .bottom_banner .bt_container{
+      position:relative;
+      bottom:100px;
       text-align:center;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bottom_banner{
+      height:540px;
     }
   }
 /****************** footer *********************/
