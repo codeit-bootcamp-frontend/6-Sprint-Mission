@@ -1,63 +1,83 @@
 /* common */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  word-break: keep-all;
+  --color-gray900 : #111827;
+  --color-gray800 : #1F2937;
+  --color-gray600 : #4B5563;
+  --color-gray500 : #6B7280;
+  --color-gray400 : #9CA3AF;
+  --color-gray200 : #E5E7EB;
+  --color-gray100 : #F3F4F6;
+  --color-gray50 : #F3F4F6;
+  --color-blue : #3692FF;
+  --color-red : #F74747;
 }
 body {
-  margin: 0;
-}
-img {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  word-break: keep-all;
+  color: #374151;
 }
 section {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
-.btn_large {
-  width: 355px;
-  height: 56px;
-  top: 20px;
-  left: 20px;
-  border-radius: 40px;
-  color: #FFFFFF;
-  background-color: #3692FF;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
-  border: none;
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-.btn_small {
+.button {
+  background-color: #3692ff;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.button:hover {
+  background-color: #1967d6;
+}
+
+.button:focus {
+  background-color: #1251aa;
+}
+
+.button:disabled {
+  background-color: #9ca3af;
+  cursor: default;
+  pointer-events: none;
+}
+#loginLinkButton {
   width: 128px;
   height: 48px;
-  padding: 12px 20px;
-  gap: 10px;
-  color: #FFFFFF;
-  border-radius: 8px;
-  background-color: #3692FF;
   font-size: 16px;
   font-weight: 600;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: center;
-  border: none;
-  cursor: pointer;
+  border-radius: 8px;
+  padding: 12px 23px;
+}
+.banner .pill-button {
+  margin-top: 32px;
+}
+.pill-button {
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 16px 124px;
 }
 
-
 /* header */
-
 header {
   display: flex;
   justify-content: space-between;
-  margin: 10px 200px;
+  padding: 0 200px;
   align-items: center;
   height: 70px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 .logo {
   display: flex;
@@ -73,6 +93,7 @@ header {
   line-height: 35px;
   letter-spacing: 0em;
   text-align: left;
+  cursor: pointer;
 }
 
 
@@ -80,27 +101,22 @@ header {
 
 .banner-back {
   background-color: #CFE5FF;
-  height: 540px;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
 }
 .banner {
   height: 540px;
   display: flex;
   align-items: center;
 }
-.banner-img-top {
-  position: absolute;
-  top: 93px;
-  left: 701px;
-  background-color: #CFE5FF;
+.top {
+  background-image: url('./images/home/banner-top.png');
 }
-.banner-img-bottom {
-  position: absolute;
-  left: 701px;
-  background-color: #CFE5FF;
+.bottom {
+  background-image: url('./images/home/banner-bottom.png');
 }
+
 .banner-text {
   font-size: 40px;
   font-weight: 700;
@@ -112,7 +128,6 @@ header {
 .banner-area {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 
 
@@ -196,4 +211,17 @@ footer {
 .privacy > a {
   color: #E5E7EB;
   text-decoration: none;
+}
+.sns-area {
+  display: flex;
+  gap: 12px;
+}
+.footer-codeit {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #9CA3AF;
 }

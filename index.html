@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다 마켓</title>
+    <link rel="icon" href="./images/logo/favicon.ico.png" />
     <link
       rel="stylesheet"
       as="style"
@@ -16,30 +17,27 @@
     <!-- title -->
     <header>
       <div class="logo">
-        <img src="/images/판다 얼굴.png" alt="" />
+        <img src="/images/logo/favicon.ico.png" alt="panda-logo" />
         <a class="panda-btn" href="/">판다마켓</a>
       </div>
-      <button onclick="location.href='/login'" class="btn_small">로그인</button>
+      <a href="/signin.html" id="loginLinkButton" class="button">로그인</a>
     </header>
     <!-- top-banner -->
-    <article class="banner-back">
+    <article class="banner-back top">
       <section class="banner">
         <div class="banner-area">
           <div class="banner-text">
             일상의 모든 물건을<br />
             거래해 보세요
           </div>
-          <button onclick="location.href='/items'" class="btn_large">
-            구경하러 가기
-          </button>
+          <a href="/items.html" class="button pill-button">구경하러 가기</a>
         </div>
-        <img class="banner-img-top" src="/images/Img_home_top.png" alt="" />
       </section>
     </article>
     <main>
       <!-- card1 -->
       <section class="card">
-        <img src="/images/Img_home_01.png" alt="" />
+        <img src="/images/home/card1.png" alt="card1-image" />
         <div class="card-area">
           <div class="card-logo">Hot item</div>
           <div class="card-main">
@@ -69,11 +67,11 @@
             </div>
           </div>
         </div>
-        <img src="/images/Img_home_02.png" alt="" />
+        <img src="/images/home/card2.png" alt="card2-image" />
       </section>
       <!-- card3 -->
       <section class="card mg-footer">
-        <img src="/images/Img_home_03.png" alt="" />
+        <img src="/images/home/card3.png" alt="card3-image" />
         <div class="card-area">
           <div class="card-logo">Register</div>
           <div class="card-title">
@@ -88,39 +86,34 @@
       </section>
     </main>
     <!-- footer-banner -->
-    <article class="banner-back">
+    <article class="banner-back bottom">
       <section class="banner">
         <div class="banner-area banner-text">
           믿을 수 있는 <br />
           판다마켓 중고거래
         </div>
-        <img
-          class="banner-img-bottom"
-          src="/images/Img_home_bottom.png"
-          alt=""
-        />
       </section>
     </article>
     <!-- footer -->
     <footer>
       <section class="footer-area">
-        <img src="/images/©codeit - 2024.png" alt="" />
+        <span class="footer-codeit">©codeit - 2024</span>
         <div class="privacy">
           <a href="/privacy">Privacy Policy</a>
           <a href="/faq">FAQ</a>
         </div>
-        <div>
+        <div class="sns-area">
           <a target="_blank" href="https://www.facebook.com/"
-            ><img src="/images/ic_facebook.png" alt=""
+            ><img src="/images/home/facebook.png" alt="facebook-image"
           /></a>
           <a target="_blank" href="https://www.twitter.com/"
-            ><img src="/images/ic_twitter.png" alt=""
+            ><img src="/images/home/twitter.png" alt="twitter-image"
           /></a>
           <a target="_blank" href="https://www.youtube.com/"
-            ><img src="/images/ic_youtube.png" alt=""
+            ><img src="/images/home/youtube.png" alt="youtube-image"
           /></a>
           <a target="_blank" href="https://www.instagram.com/"
-            ><img src="/images/ic_instagram.png" alt=""
+            ><img src="/images/home/instagram.png" alt="instagram-image"
           /></a>
         </div>
       </section>
