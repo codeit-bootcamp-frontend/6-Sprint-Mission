@@ -114,12 +114,17 @@ a {
 #header {
   height: 70px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 10;
+}
+
+#header .inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #header .logo {
