@@ -47,7 +47,7 @@
   height: 51px;
   justify-content: space-between;
   align-items: center;
-  margin: 0 200px;
+  margin-left: 200px;
 }
 
 .logo_icon {
@@ -79,7 +79,7 @@
   font-weight: 600;
   line-height: 19.09px;
   color: #ffffff;
-  margin: 0 200px;
+  margin-right: 200px;
 }
 /* --------------------     //헤더     -------------------- */
 
@@ -385,7 +385,6 @@
 /* form_container */
 
 .form-container {
-  height: 290px;
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
@@ -440,7 +439,7 @@
 }
 
 .submit {
-  background-color: #9ca4af;
+  background-color: var(--blue);
   height: 56px;
   border-radius: 40px;
   border: 1px solid #9ca4af;
@@ -452,7 +451,6 @@
   text-align: center;
   color: #ffffff;
 }
-
 /* //form_container */
 
 /* 소셜 로그인 영역 */
@@ -479,7 +477,7 @@
   color: var(--gray800);
 }
 
-.signup-info {
+.sign-info {
   text-align: center;
   margin: 24px auto;
   font-family: Pretendard;
@@ -488,11 +486,11 @@
   line-height: 17.9px;
 }
 
-.signup-info p {
+.sign-info p {
   color: var(--gray800);
 }
 
-.signup-info a {
+.sign-info a {
   text-decoration: underline;
   color: blue;
 }
