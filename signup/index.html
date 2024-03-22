@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/member.css"/>
-    <title>판다마켓 - 로그인</title>
+    <title>판다마켓 - 회원가입</title>
 </head>
 <body>
     <a id="logo" href="/"></a>
@@ -15,10 +15,18 @@
                 <input id="email" type="email" placeholder="이메일을 입력해주세요"/>
             </div>
             <div class="input-block">
+                <label for="nickname">닉네임</label>
+                <input id="nickname" type="text" placeholder="닉네임을 입력해주세요"/>
+            </div>
+            <div class="input-block">
                 <label for="password">비밀번호</label>
                 <input id="password" type="password" placeholder="비밀번호를 입력해주세요"/>
             </div>
-            <button type="submit">로그인</button>
+            <div class="input-block">
+                <label for="password-confirmation">비밀번호 확인</label>
+                <input id="password-confirmation" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요"/>
+            </div>
+            <button type="submit">회원가입</button>
         </div>
     </form>
     <div id="special-login">
@@ -28,8 +36,8 @@
             <img src="/images/kakao_logo.png">
         </div>
     </div>
-    <div id="signup-link">
-        판다마켓이 처음이신가요? <a href="/signup">회원가입</a>
+    <div id="link">
+        이미 회원이신가요? <a href="/login">로그인</a>
     </div>
 </body>
 </html>
