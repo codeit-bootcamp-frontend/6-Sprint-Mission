@@ -33,7 +33,7 @@ body {
   align-items: center;
   padding: 10px 200px;
   min-width: 375px;
-
+  gap: 150px;
 }
 
 .signin, .button {
@@ -51,7 +51,6 @@ body {
   background-color: #1251AA;
   padding: 14.5px 43px;
   border-radius: 8px;
-  /* display: block; */
   cursor: pointer;
 }
 
