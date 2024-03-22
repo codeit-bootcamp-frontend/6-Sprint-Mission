@@ -4,6 +4,18 @@
   padding: 0;
 }
 
+:root {
+  --form-label: #1f2937;
+  --form-placeholder: #9ca3af;
+  --form-input: #f3f4f6;
+  --form-btn-background: #9CA3AF;
+  --form-btn: #ffffff;
+  --form-btn-hover: #3692FF;
+  --sns-login-box: #E6F2FF;
+  --question-signup-box: #1f2937;
+  --signup-or-signin: #3182f6;
+}
+
 .signin-container {
   max-width: 640px;
   margin: 0 auto;
@@ -27,7 +39,7 @@
 }
 
 .label {
-  color: #1f2937;
+  color: var(--form-label);
   font-family: Pretendard;
   font-size: 18px;
   font-weight: 700;
@@ -41,14 +53,14 @@
   height: 56px;
   border: 0px solid #f3f4f6;
   border-radius: 12px;
-  background-color: #f3f4f6;
+  background-color: var(--form-input);
   position: relative;
   gap: 10px;
   margin-bottom: 16px;
 }
 
 .input::placeholder {
-  color: #9ca3af;
+  color: var(--form-placeholder);
   font-family: Pretendard;
   font-weight: 400;
   font-size: 16px;
@@ -60,10 +72,9 @@
   outline: 1px solid #3692ff;
   padding-left: 24px;
 }
-
 .signup-btn,
 .login-btn {
-  background-color: #9CA3AF;
+  background-color: var(--form-btn-background);
   width: 100%;
   height: 56px;
   border-radius: 40px;
@@ -76,13 +87,13 @@
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  color: #ffffff;
+  color: var(--form-btn);
   margin-top: 12px;
 }
 
 .signup-btn:hover,
 .login-btn:hover {
-  background-color: #3692FF;
+  background-color: var(--form-btn-hover);
 }
 
 .sns-login-box {
@@ -90,7 +101,7 @@
   height: 74px;
   border-radius: 8px;
   border: none;
-  background-color: #E6F2FF; 
+  background-color: var(--sns-login-box); 
   font-family: Pretendard;
   font-weight: 500;
   font-size: 16px;
@@ -124,7 +135,7 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 17.9px;
-  color: #1f2937;
+  color: var(--question-signup-box);
   margin-bottom: 50px;
   padding-right: 215px;
   margin-left: 50px;
@@ -132,16 +143,16 @@
 
 .signup,
 .signin {
-  color: #3182f6;
+  color: var(--signup-or-signin);
 }
 
 .sns-login-box.signup {
-  color: #1F2937;
+  color: var(--question-signup-box);
   width: 100%;
   height: 74px;
   border-radius: 8px;
   border: none;
-  background-color: #E6F2FF; 
+  background-color: var(--sns-login-box); 
   font-family: Pretendard;
   font-weight: 500;
   font-size: 16px;
