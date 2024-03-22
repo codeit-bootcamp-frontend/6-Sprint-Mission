@@ -78,7 +78,19 @@ form button {
   padding: 16px;
   border-radius: 40px;
 }
-
+/* 눈 아이콘 */
+.ico_hide {
+  width: 10%;
+  height: 51px;
+  margin: -51px 0 0 auto;
+  text-align: center;
+  line-height: 51px;
+  cursor: pointer;
+}
+.ico_hide > img {
+  width: 24px;
+  height: 24px;
+}
 /* 간편 로그인 */
 .quick_signin {
   background-color: var(--quick-bg);
