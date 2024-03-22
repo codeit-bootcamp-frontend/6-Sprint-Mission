@@ -110,6 +110,10 @@ a {
   position: absolute;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 /* 헤더 */
 #header {
   height: 70px;
@@ -316,7 +320,7 @@ footer .snsLink a.instagram {
 .signInup {
   max-width: 640px;
   margin: 0 auto;
-  padding: 60px 0 0;
+  padding: 60px 0;
 }
 
 .signInup .logo {
