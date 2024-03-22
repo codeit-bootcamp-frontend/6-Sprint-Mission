@@ -76,9 +76,19 @@ body {
 
 
 /* header */
-.header {
-  height: 70px;
+header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
   padding: 0 200px;
+  z-index: 1;
+  background-color: var(--color-white);
+}
+
+.header_container {
+  width: 1520px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
