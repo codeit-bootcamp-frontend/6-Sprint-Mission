@@ -58,11 +58,11 @@ img {
 }
 button {
   cursor: pointer;
-  border: 0;
 }
 button, input {
 	box-sizing: border-box;
 	outline: 0;
+	border: 0;
 	font-family: 'Pretendard';
 }
 a {
