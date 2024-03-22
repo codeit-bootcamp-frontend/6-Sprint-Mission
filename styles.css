@@ -1,5 +1,12 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.signin-container {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .header-title {
@@ -77,12 +84,14 @@
   border-radius: 8px;
   border: none;
   background-color: #E6F2FF; 
-  margin-top: 24px;
   font-family: Pretendard;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   padding: 25px 23px;
+  margin-top: 544px;
+  margin-bottom: 24px;
+  margin-left: -50px;
 }
 
 .icon-login {
@@ -96,4 +105,22 @@
   bottom: 30px;
   left: 30px;
   gap: 16px;
+}
+
+.question-signup-box {
+  width: 100%;
+  height: 18px;
+  position: relative;
+  gap: 4px;
+  text-align: center;
+  font-family: Pretendard;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17.9px;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+.signup {
+  color: #3182f6;
 }
