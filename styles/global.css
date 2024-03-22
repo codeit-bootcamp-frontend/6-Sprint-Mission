@@ -185,3 +185,16 @@ input {
   display: flex;
   gap: 16px;
 }
+
+.login-bottom {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1F2937;
+  margin-right: 4px;
+  text-align: center;
+}
+
+.login-bottom > a {
+  text-decoration: underline;
+  color: #3182F6;
+}
