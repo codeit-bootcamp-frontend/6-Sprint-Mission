@@ -123,7 +123,8 @@
   margin-left: 50px;
 }
 
-.signup {
+.signup,
+.signin {
   color: #3182f6;
 }
 
