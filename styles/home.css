@@ -96,7 +96,7 @@
 }
 
 .topic-label {
-  color: var(--primary500);
+  color: var(--primary400);
   font-size: 18px;
   font-weight: 700;
 }
@@ -146,7 +146,7 @@
 }
 
 .footer-link:active {
-  color: var(--primary500);
+  color: var(--primary400);
 }
 
 .footer-socials {

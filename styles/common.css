@@ -11,7 +11,8 @@
 
   --primary700: #1251aa;
   --primary600: #1967d6;
-  --primary500: #3692ff;
+  --primary500: #3182f6;
+  --primary400: #3692ff;
   --primary300: #cfe5ff;
   --primary200: #e6f2ff;
 
@@ -43,9 +44,10 @@ a {
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
-  background: var(--primary500);
+  background: var(--primary400);
   color: white;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .button:hover {

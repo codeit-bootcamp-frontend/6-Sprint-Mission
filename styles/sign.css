@@ -1,0 +1,115 @@
+.body {
+  padding: 60px;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.big-logo {
+  display: block;
+  width: 396px;
+  height: 132px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 640px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  color: var(--gray800);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form-input {
+  margin-top: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 24px;
+  width: 100%;
+  height: 56px;
+  background: var(--gray100);
+  color: var(--gray800);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-input::placeholder {
+  color: var(--gray400);
+}
+
+.form-input:focus {
+  outline-color: var(--primary400);
+}
+
+.form-input.password {
+  padding-right: 60px;
+}
+
+.form-input-icon {
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.button.form {
+  border: none;
+  border-radius: 40px;
+  padding: 16px 24px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.easy-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 16px 24px;
+  background: var(--primary200);
+  color: var(--gray800);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.easy-login-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.easy-login-social {
+  width: 42px;
+  height: 42px;
+}
+
+.form-helper {
+  color: var(--gray800);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-helper-link {
+  color: var(--primary500);
+  text-decoration: underline;
+}
