@@ -12,8 +12,11 @@
   --gray200: #e5e7eb;
   --gray100: #e8ebed;
   --gray50: #f7f7f8;
+  --cool-gray-100: #f3f4f6;
+  --cool-gray-400: #9ca3af;
   --primary-color: #3692ff;
   --error-color: #f74747;
+  --Brand-blue: #3182f6;
 }
 a:hover {
   cursor: pointer;
@@ -21,6 +24,10 @@ a:hover {
 .btn--primary {
   color: #ffffff;
   background-color: var(--primary-color);
+}
+.btn--secondary {
+  color: #ffffff;
+  background-color: var(--cool-gray-400);
 }
 .btn:hover {
   background-color: #1967d6;
