@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white-color: #ffffff;
+  --soft-blue: #E6F2FF;
+  --blue-color: #3182F6;
+  --brand-blue: #3692ff;
+  --deep-blue: #1967d6; 
+  --grey-color: #F3F4F6;
+  --deep-grey: #9ca3af;
+  --text-color: #374151;
+  --font-color: #1F2937;
+}
+body {
+  color: var(--text-color);
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
+}
+div{
+  margin-bottom:24px;
+}
+a{
+  text-decoration: none;
+  color:var(--blue-color);
+}
+h3{
+  font-weight:500;
+}
+.check a{
+  text-decoration: underline;
+}
+.login-title{
+  display: flex;
+  justify-content: center;
+  margin-top:60px;
+}
+form {
+  margin: 40px auto;
+  width: 640px;
+}
+label {
+  color:var(--font-color);
+  font-weight: 700;
+  font-size:18px;
+  line-height: 21.48px;
+  margin-bottom:16px;
+  display: block;
+}
+input {
+  border:none;
+  border-radius: 12px;
+  background-color: var(--grey-color);
+  display: block;
+  font-weight:400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 16px 24px;
+  width: 100%;
+}
+input::placeholder {
+  color: var(--deep-grey);
+}
+input:focus {
+  outline-color:var(--brand-blue);
+}
+.wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.visibility_off{
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+}
+button {
+  background:var(--deep-grey);
+  border: none;
+  color:var(--white-color);
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 16px 124px 16px 124px;
+  width: 100%;
+  border-radius: 40px;
+}
+#Form:valid button {
+  background-color: var(--brand-blue);
+}
+#Form:valid button:hover {
+  background: var(--deep-blue);
+}
+.bottom-bar{
+  background-color:var(--soft-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius:8px;
+  padding:8px 16px;
+  margin:24px 0;
+  height:74px;
+}
+
+.quick-login h3{
+  font-size:16px;
+  font-weight:500;
+  line-height: 24px;
+  color:var(--font-color);
+}
+.sns-link{
+  display: flex;
+  gap: 16px;
+  margin:0;
+}
+.check{
+  text-align: center;
+}
+.check h3{
+  font-weight:500;
+  color:var(--font-color);
+}
