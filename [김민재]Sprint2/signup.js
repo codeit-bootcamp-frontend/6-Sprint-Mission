@@ -1,7 +1,7 @@
 // 비밀번호
 function Visibility() {
-  var passwordField = document.getElementById("password");
-  var toggleButton = document.getElementById("togglePassword");
+  const passwordField = document.getElementById("password");
+  const toggleButton = document.getElementById("togglePassword");
 
   if (passwordField.type === "password") {
     passwordField.type = "text";
@@ -14,8 +14,8 @@ function Visibility() {
 }
 
 function Visibility2(passwordFieldId) {
-  var passwordField = document.getElementById(passwordFieldId);
-  var toggleButton = document.getElementById("toggleRePassword");
+  const passwordField = document.getElementById(passwordFieldId);
+  const toggleButton = document.getElementById("toggleRePassword");
 
   if (passwordField.type === "password") {
     passwordField.type = "text";
