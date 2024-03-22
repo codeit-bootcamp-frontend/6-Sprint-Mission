@@ -19,14 +19,14 @@
 
 /* 기본 셋팅 */
 #wrap {
-	width:100%;
-	min-width: 320px;
-	position:relative; 
-	margin:0 auto;
+  width: 100%;
+  min-width: 320px;
+  position: relative;
+  margin: 0 auto;
 }
 .inner {
-	max-width:1200px;
-	margin: 0 auto;
+  max-width:1200px;
+  margin: 0 auto;
   position: relative;
 }
 
