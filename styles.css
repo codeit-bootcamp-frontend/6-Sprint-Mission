@@ -60,6 +60,7 @@
   outline: 1px solid #3692ff;
 }
 
+.signup-btn,
 .login-btn {
   background-color: #9CA3AF;
   width: 100%;
