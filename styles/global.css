@@ -170,3 +170,13 @@ input {
 .login-pill-button:hover {
   background-color: #3692ff;
 }
+
+.social-logins {
+  background-color: #E6F2FF;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 16px 23px;
+}
