@@ -95,25 +95,29 @@ a {
 }
 
 /* 헤더 */
-header {
+#header {
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
 }
 
-header .logo {
+#header .logo {
   display: flex;
   align-items: center;
   gap: 0 8.59px;
 }
 
-header .logoImg {
+#header .logoImg {
   width: 40px;
   height: 40px;
 }
 
-header .logoText {
+#header .logoText {
   color: var(--blue);
   font-size: var(--font-26);
   font-weight: 700;
@@ -122,7 +126,7 @@ header .logoText {
   text-align: left;
 }
 
-header .button {
+#header .button {
   width: 128px;
   height: 48px;
 }
