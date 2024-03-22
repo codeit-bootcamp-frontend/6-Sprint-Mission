@@ -33,3 +33,40 @@ header {
   text-decoration: none;
   cursor: pointer;
 }
+.banner {
+  height: 540px;
+  background-color: rgb(210, 227, 252);
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top {
+  background-image: url("../image/Img_home_top.png");
+}
+.intro {
+  margin-left: 40px;
+  font-family: Pretendard;
+}
+.intro h1 {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #374151;
+  letter-spacing: 0.02em;
+}
+.search-btn {
+  width: 357px;
+  height: 56px;
+  padding: 16px 124px 16px 124px;
+  gap: 10px;
+  border-radius: 40px;
+  background: #3692ff;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
