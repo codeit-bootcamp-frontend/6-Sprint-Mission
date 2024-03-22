@@ -225,6 +225,9 @@ footer .footer_wrap .sns_link ul{
     footer .footer_wrap {
       flex-direction:column;
     }
+    footer .footer_wrap .page_link{
+      margin:16px 0;
+    }
   }
 /****************** signin *********************/
 .form_header{
@@ -307,6 +310,20 @@ footer .footer_wrap .sns_link ul{
 .sign_in_ask a{
   color:#3182F6;
 }
+  @media screen and (max-width: 1200px) {
+    footer {
+      padding:16px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .form_header h1{
+      width:60%;
+    }
+    .user_form_wrap{
+      padding:16px;
+      max-width:400px;
+    }
+  }
 /****************** signinup *********************/
 
 
