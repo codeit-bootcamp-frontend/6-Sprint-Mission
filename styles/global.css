@@ -128,3 +128,8 @@ h1 {
   border-radius: 999px;
   padding: 16px 124px;
 }
+
+.login-header {
+  text-align: center;
+  margin: 60px 0 40px;
+}
