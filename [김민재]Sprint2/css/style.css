@@ -5,197 +5,196 @@
 /* header */
 
 .gnb {
-    background-color: var(--button-color);
-    position: sticky;
-    top: 0px;
-    display: flex;
-    align-items: center;
+  background-color: var(--button-color);
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
 }
 
 .gnb-left-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-grow: 1;
-    text-decoration: none;
-    margin:9px 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  text-decoration: none;
+  margin: 9px 200px;
 }
 
 .gnb-logo-title {
-    font-size: 25.63px;
-    font-weight: 700;
-    color: var(--primary-color);
-    font-family: 'ROKAF-Sans';
-    line-height: 34.6px;
+  font-size: 25.63px;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: "ROKAF-Sans";
+  line-height: 34.6px;
 }
 
 .button-login {
-    display: block;
-    width: 128px;
-    height: 48px;
-    border: 0;
-    border-radius: 8px;
-    padding: 14px 20px;
-    background-color: var(--primary-color);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: var(--button-color);
-    text-decoration: none;
-    margin:9px 200px;
+  display: block;
+  width: 128px;
+  height: 48px;
+  border: 0;
+  border-radius: 8px;
+  padding: 14px 20px;
+  background-color: var(--primary-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--button-color);
+  text-decoration: none;
+  margin: 9px 200px;
 }
 
 /* banner */
 
 .banner {
-    background-color: var(--background-color);
-    height: 540px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--background-color);
+  height: 540px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner-box {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .banner-text {
-    font-size: 40px;  
-    font-weight: 700;
-    line-height: 56px;
-    color: var(--text-color)
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--text-color);
 }
 
-.banner-button-box{
-    background-color: var(--primary-color);
-    border-radius: 40px; 
-    width: 355px;
-    height: 56px;
-    padding:16px 122px 16px 124px;
+.banner-button-box {
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  width: 355px;
+  height: 56px;
+  padding: 16px 122px 16px 124px;
 }
 
-.banner-button {  
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    text-decoration: none;
-    color: var(--button-color);
+.banner-button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--button-color);
 }
 
 .banner-image {
-    margin-top: 96px;   
+  margin-top: 96px;
 }
 
 /* main */
 
 .main-odd,
 .main-even {
-    display: flex;
-    margin: 138px auto;
-    width: 1200px;
-    gap: 64px;
-    align-items: center;
+  display: flex;
+  margin: 138px auto;
+  width: 1200px;
+  gap: 64px;
+  align-items: center;
 }
 
 .main-even {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .main-odd-textbox,
 .main-even-textbox {
-    display: flex;
-    flex-direction: column;  
+  display: flex;
+  flex-direction: column;
 }
 
 .main-even-textbox {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .main-basis-text1 {
-    color: var(--primary-color);
-    font-size: 18px;
-    line-height: 25.2px;
-    font-weight: 700;
+  color: var(--primary-color);
+  font-size: 18px;
+  line-height: 25.2px;
+  font-weight: 700;
 }
 
 .main-odd-text2,
 .main-even-text2 {
-    color: var(--text-color);
-    font-size: 40px;
-    line-height: 56px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    margin-top: 12px;
-    margin-bottom: 24px;
+  color: var(--text-color);
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
 .main-odd-text3,
 .main-even-text3 {
-    color: var(--text-color);
-    font-size: 24px;
-    line-height: 28.8px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+  color: var(--text-color);
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
 .main-even-text2,
 .main-even-text3 {
-    text-align: right;
+  text-align: right;
 }
 
 /* bottom banner*/
 
 .banner-bottom {
-    background-color: var(--background-color);
-    height: 540px;
-    width: 100%;
-    margin-top: 276px;    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 55px;
+  background-color: var(--background-color);
+  height: 540px;
+  width: 100%;
+  margin-top: 276px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
 }
 
 /* footer */
 
 footer {
-    background-color: var(--footer-background-color);
-    height: 160px;
-    width: 100%;
+  background-color: var(--footer-background-color);
+  height: 160px;
+  width: 100%;
 }
 
 .footer-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 200px;
 }
 
 .footer-left-text {
-    color: var(--gray400-color);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.09px;
+  color: var(--gray400-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
 }
 
 .footer-center-box {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .footer-center-text {
-    color: var(--footer-link-color);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.09px;
-    text-decoration: none;
+  color: var(--footer-link-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
+  text-decoration: none;
 }
 
 .footer-right-box {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
-
