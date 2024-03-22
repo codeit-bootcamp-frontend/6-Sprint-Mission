@@ -1,0 +1,130 @@
+/* 
+  전체 선택자(*) 및 a, button, img 태그에 대한 CSS는 새로운 웹 개발 프로젝트를 시작할 때 전역 스타일에 기본적으로 넣어주면 좋은 내용들입니다. 
+  브라우저 간의 스타일 차이를 최소화하고 예측 가능한 레이아웃을 위해 브라우저 기본 세팅을 일부 리셋해 준다고 생각하면 됩니다. 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 링크가 상위 요소 또는 설정된 기본 텍스트 색상과 동일하게 표현되길 원한다면 a 태그에 명시적으로 color: inherit을 지정해 줘야 합니다. */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/* 
+  - 이미지는 기본적으로 inline 요소로 취급되기 때문에 텍스트의 baseline에 맞춰서 정렬됩니다. 
+    브라우저가 이미지를 텍스트와 같은 라인에 배치할 때 g, j, p 등 아래로 치우치는 알파벳의 descender 공간을 예약해 놓기 때문에 이미지와 주변 텍스트 사이에 의도하지 않은 작은 간격이 생기는 경우가 많습니다. 
+    <img> 태그에 vertical-align: bottom;을 설정해 주면 이미지가 텍스트 라인의 가장 아래쪽에 맞춰서 정렬되어, 불필요한 공간 없이 배치할 수 있습니다.
+  - 전역적으로 <img>의 display 유형을 inline이 아닌 block으로 바꿔 해당 이슈를 해결하는 경우도 있습니다.
+*/
+img {
+  vertical-align: bottom;
+}
+
+/* 
+  프로젝트 전체에 일관된 텍스트 스타일을 적용합니다. 
+  word-break: keep-all 속성을 사용하면 띄어쓰기를 기준으로 줄바꿈하도록 설정하여 어절 기반의 한국어 특성에 적합한 읽기 편한 레이아웃을 제공할 수 있습니다.
+*/
+body {
+  color: #374151;
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 여러 요소가 나란히 배열되어 있을 때는 티가 나지 않아 보여도 항상 잊지 말고 display: flex; align-items: center;로 세로 중앙 정렬을 맞춰주세요. */
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+footer {
+  background-color: #111827;
+  color: #9ca3af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 200px 108px 200px;
+  font-size: 16px;
+}
+
+#footerMenu {
+  display: flex;
+  gap: 30px;
+  color: #e5e7eb;
+}
+
+#socialMedia {
+  display: flex;
+  gap: 12px;
+}
+
+/* 요소의 최대 너비를 1200px로 제한하고, 요소가 그보다 큰 경우에는 가로 중앙 정렬해 주는 inner container */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+}
+
+/* 위에서 스타일링해준 <button> 태그와 달리 버튼 모양이지만 <a> 태그를 사용한 class='button' 요소들을 지칭하는 부분이니 혼동하지 않도록 주의하세요. */
+.button {
+  background-color: #3692ff;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+  가상 클래스(pseudo-class)를 사용해 특정 상태에 맞는 스타일을 적용하세요. 
+  버튼 역할을 하는 요소에는 hover 또는 disabled 시의 스타일을 지정해 주는 것이 사용자 경험에 도움이 됩니다. 
+*/
+.button:hover {
+  background-color: #1967d6;
+}
+
+.button:focus {
+  background-color: #1251aa;
+}
+
+.button:disabled {
+  background-color: #9ca3af;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* 
+  - 알약 모양의 버튼을 'pill button'이라고 부릅니다. 
+  - border-radius에 큰 값을 넣어주면 모서리가 원형으로 둥글려지는 효과가 있습니다. 
+  - 고정된 width나 height을 부여하는 것보다 내부 콘텐츠에 padding을 적용해서 요소의 전체 크기를 유동적으로 조정하는 방법이 반응형 웹 디자인과 접근성(accessibility) 측면에서 더 적합합니다.
+*/
+.pill-button {
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 16px 124px;
+}
