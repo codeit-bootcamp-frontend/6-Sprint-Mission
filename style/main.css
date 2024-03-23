@@ -1,0 +1,287 @@
+@import url(./style.css);
+
+.logo {
+  height: 51px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 1rem 200px;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.s1 {
+  background-color: var(--bannerbg);
+  height: 540px;
+  padding-top: 93px;
+}
+
+.s2 {
+  background-color: var(--bannerbg);
+}
+
+.bannertext {
+  z-index: 100;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.banner2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.home_img1 {
+  width: 996px;
+  height: 447px;
+  object-fit: scale-down;
+}
+.home_img2 {
+  width: 996px;
+  height: 447px;
+  object-fit: scale-down;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.imgs {
+  width: 588px;
+  height: 444px;
+  object-fit: scale-down;
+}
+
+.para {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10rem 0;
+  gap: 5rem;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text_left {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge {
+  color: var(--main);
+  font-size: 18px;
+}
+
+.des {
+  color: var(--gray700);
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+footer {
+  background-color: var(--gray900);
+  height: 160px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav {
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sub_nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.p {
+  color: var(--gray400);
+  font-size: 16px;
+}
+
+.year {
+  font-size: 16px;
+  color: var(--gray400);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40rem;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  header {
+    padding: 0 24px;
+    gap: 1rem;
+  }
+  .s1 {
+    height: 40rem;
+  }
+  .banner {
+    margin: 0 500px;
+    flex-direction: column;
+  }
+  .banner2 {
+    margin-top: 3rem;
+    padding: 0 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .home_img1 {
+    width: 600px;
+    position: relative;
+    top: -29px;
+  }
+  .imgs {
+    width: 888px;
+    height: 744px;
+  }
+  .home_img2 {
+    width: 700px;
+    position: relative;
+    bottom: -33px;
+  }
+  .para {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .para.left {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .nav2 {
+    gap: 15rem;
+  }
+  .text {
+    display: flex;
+    justify-content: left;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  header {
+    padding: 0 24px;
+    gap: 3rem;
+  }
+  #btn_small {
+    width: 100px;
+  }
+  .banner {
+    flex-direction: column;
+  }
+  .home_img1 {
+    width: 400px;
+    position: relative;
+    top: -83px;
+  }
+  .home_img2 {
+    width: 500px;
+    position: relative;
+    bottom: -6rem;
+  }
+  .banner2 h1 {
+    font-size: 30px;
+    position: relative;
+    top: 8rem;
+  }
+  .para {
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+  }
+  .para.left {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .imgs {
+    width: 400px;
+  }
+  .banner2 {
+    padding: 0 100px;
+    flex-direction: column;
+  }
+  footer {
+    padding: 1rem 0;
+    height: 100%;
+  }
+  .nav {
+    flex-direction: column-reverse;
+  }
+  .nav2 {
+    gap: 3rem;
+  }
+  .sub_nav {
+    gap: 1rem;
+  }
+  .year {
+    position: relative;
+    left: -105px;
+  }
+  #btn_small {
+    width: auto;
+    white-space: nowrap;
+  }
+}

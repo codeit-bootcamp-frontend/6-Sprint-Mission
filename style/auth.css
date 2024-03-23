@@ -1,0 +1,131 @@
+@import url(./style.css);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 30rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 20rem;
+}
+
+form {
+  width: 35rem;
+}
+
+.form_label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+label {
+  font-size: 18px;
+  color: var(--gray700);
+  font-weight: 700;
+}
+
+input {
+  background-color: var(--coolgray100);
+  border: none;
+  color: #9ca3af;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+input:focus {
+  outline-color: var(--btn1);
+}
+
+.login {
+  width: 100% !important;
+  background-color: var(--btn4);
+}
+
+.login:hover {
+  background-color: var(--main) !important;
+}
+
+.passwordicon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 43px;
+  left: 32rem;
+  cursor: pointer;
+}
+
+.easylogin {
+  display: flex;
+  flex-direction: row;
+  width: 35rem;
+  background-color: var(--loginbg);
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.icons img {
+  width: 42px;
+  height: 42px;
+}
+
+.signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.signup a {
+  color: var(--main);
+}
+
+.signup p {
+  display: inline-block;
+  width: max-content;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 10rem auto;
+  }
+  .signup {
+    flex-direction: column;
+  }
+  p {
+    display: inline-block;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .logo {
+    width: 15rem;
+  }
+  .container {
+    padding: 10rem 16px;
+  }
+  form {
+    width: 25rem;
+  }
+  .easylogin {
+    width: 25rem;
+  }
+  .passwordicon {
+    left: 22rem;
+  }
+}
