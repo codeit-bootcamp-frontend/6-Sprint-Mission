@@ -70,6 +70,12 @@ form label {
   width: 100%;
 }
 
+.input:focus {
+  /* border-color: var(--blue); border로 안되고 outline으로 됨
+  border: 1px solid var(--blue); */ /*border는 테두리가 바깥쪽에 생기고 outline은 안쪽에 생김*/
+  outline-color: var(--blue); 
+}
+
 .password-container {
   position: relative;
 }
@@ -133,14 +139,15 @@ form label {
   height: 42px;
 }
 
-.first-user-link {
+.ask-whether-user {
   text-align: center;
   font-size: 15px;
   font-weight: 500;
   line-height: 17.9px;
   color: #1f2937;
+  margin-bottom: 60px;
 }
 
-.register-link {
+.user-link {
   color: #3182f6;
 }
