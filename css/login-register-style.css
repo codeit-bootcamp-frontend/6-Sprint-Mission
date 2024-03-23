@@ -1,22 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --blue: #3692FF;
-  --gray900: #1b1d1f;
-  --gray800: #26282b;
-  --gray600: #454c53;
-  --gray500: #72787f;
-  --gray400: #9ea4a8;
-  --gray200: #e5e7eb;
-  --gray100: #e8ebed;
-  --gray50: #f7f7f8;
-}
-
-html {
-  font-family: 'Pretendard';
-}
 
 header {
   display: flex;
@@ -55,7 +36,7 @@ form label {
   /* height: 56px;필요없었음 */
   border-radius: 12px;
   border: none;
-  background-color: #f3f4f6;
+  background-color: var(--gray100);
   padding: 16px 24px;
   box-shadow: none;
   margin-bottom: 8px;
@@ -88,7 +69,7 @@ form label {
 }
 
 .input::placeholder {
-  color: #9ca3af;
+  color: var(--gray400);
   /* line-height: 24px; */
 }
 
@@ -98,11 +79,11 @@ form label {
   border-radius: 40px;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: #9ca3af;
+  background-color: var(--gray400);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -140,7 +121,7 @@ form label {
   font-size: 15px;
   font-weight: 500;
   line-height: 17.9px;
-  color: #1f2937;
+  color: var(--gray800);
   margin-bottom: 60px;
   word-break: keep-all; /*글자가 단어단위로 잘림*/
 }
