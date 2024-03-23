@@ -1,4 +1,10 @@
-@mixin direction-center($direction){
-  flex-direction: $direction;
+@mixin flex-center{
+  display:flex;
   justify-content: center;
+  align-items: center;
 }
+
+@mixin direction-center($direction){
+  display: flex;
+  justify-content: center;
+};

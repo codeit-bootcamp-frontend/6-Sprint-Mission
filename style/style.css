@@ -1,136 +1,133 @@
 @import 'https://meyerweb.com/eric/tools/css/reset/reset.css';
-* {
-  box-sizing: border-box;
-}
-
 .button {
   border-radius: 8px;
   border: none;
-  font-weight: 600;
   cursor: pointer;
 }
-.button--background-color-blue {
+.button__login {
+  font-size: 16px;
+  padding: 12px 20px;
+  width: 128px;
+}
+.button--border-radius-40px {
+  border-radius: 40px;
+}
+.button--theme-blue {
   background-color: #3692ff;
   color: #ffffff;
+  font-weight: 600;
 }
-.button--background-color-blue:hover {
+.button--theme-blue:hover {
   background-color: #1967d6;
 }
-.button--background-color-blue:focus {
+.button--theme-blue:focus {
   background-color: #1251aa;
 }
-.button--background-color-blue:disabled {
+.button--theme-blue:disabled {
   background-color: #9ca3af;
 }
 
 .link {
-  color: inherit;
   text-decoration: none;
 }
 
-.main-header {
+.header-main {
   height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #ffffff;
 }
-.main-header--position-fixed-top {
+.header-main--fixed-top {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 1;
 }
-.main-header--padding-inline-200px {
-  padding-inline: 200px;
+.header-main__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.main-header--background-color-white {
-  background-color: #ffffff;
+.header-main__content {
+  margin: 10px 200px 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sign-in-header {
+.header-sign-in {
   margin-top: 30px;
   margin-bottom: 40px;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-}
-.header-content--gap-8px {
-  gap: 8px;
-}
-
-.main-header_login {
-  font-size: 16px;
-  padding: 14.5px 43px;
-}
-
-.main-main {
+.main--margin-top {
   margin-top: 70px;
 }
 
-footer {
+.main__content {
+  width: 1200px;
+}
+
+.footer--theme-black {
   background-color: #111827;
 }
 
-figure {
-  margin: 0;
-}
-
-.blueContent {
-  background-color: #cfe5ff;
-  position: relative;
-  z-index: 0;
+.content-card {
   height: 540px;
+  width: 100%;
 }
-
-#mainContentContainer {
+.content-card--flex-center {
   display: flex;
   justify-content: center;
-}
-
-#mainContent {
-  width: 1200px;
-  margin-inline: auto;
-}
-
-#mainContent figure {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 720px;
   align-items: center;
-  gap: 64px;
+}
+.content-card--position-relative {
+  position: relative;
+  z-index: 0;
+}
+.content-card--background-color-blue {
+  background-color: #cfe5ff;
+}
+.content-card--margin-top-180px {
+  margin-top: 180px;
+}
+.content-card__description {
+  margin-right: auto;
+}
+.content-card--margin-top-138px {
+  margin-top: 138px;
 }
 
-#topContent .blueButton {
-  padding: 16px 122px;
-  border-radius: 40px;
-  display: block;
-}
-
-#topContent a {
-  display: inline-block;
-}
-
-#topContent {
+.content-figure--width-1920px {
   width: 1920px;
 }
-
-#topDescriptionContainer {
-  position: absolute;
-  top: 170px;
-  left: 360px;
-  z-index: 2;
-}
-
-.pandaImage {
+.content-figure__image {
   position: absolute;
   bottom: 0;
-  right: 223px;
-  z-index: 1;
+  right: 200px;
+}
+
+.content-description {
+  font-weight: 700;
+  font-size: 40px;
+  color: #374151;
+  line-height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.content-description__link {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 124px;
+  height: 56px;
+  line-height: 24px;
+}
+.content-description--position-relative {
+  position: relative;
+  z-index: 2;
 }
 
 .reverse {
@@ -141,14 +138,6 @@ figure {
 
 .reverse > * {
   text-align: right;
-}
-
-.topDescription {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
-  color: #374151;
-  margin-bottom: 32px;
 }
 
 .contentCategory {
@@ -173,21 +162,16 @@ figure {
   color: #374151;
 }
 
-.marginContent {
-  margin-top: 180px;
+* {
+  box-sizing: border-box;
 }
 
-#bottomContent {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
+figure {
+  margin: 0;
 }
 
-#bottomContent div {
-  position: absolute;
-  top: 214px;
-  left: 360px;
-  z-index: 2;
+footer {
+  background-color: #111827;
 }
 
 footer {

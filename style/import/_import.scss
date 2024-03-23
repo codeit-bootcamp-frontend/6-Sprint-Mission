@@ -4,3 +4,11 @@
 @import '../common/link';
 @import '../header/header';
 @import '../main/main';
+@import '../footer/footer';
+@import '../content/content';
+* {
+  box-sizing: border-box;
+}
+figure {
+  margin: 0;
+}

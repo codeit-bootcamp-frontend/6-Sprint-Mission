@@ -1,40 +1,28 @@
-@import "../mixin/mixin";
-
-.main-header {
+.header-main {
   height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &--position-fixed-top {
+  background-color: #ffffff;
+  &--fixed-top {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 1;
   }
-  &--padding-inline-200px {
-    padding-inline: 200px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
-  &--background-color-white {
-    background-color: #ffffff;
+  &__content {
+    margin: 10px 200px 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.sign-in-header {
+.header-sign-in {
   margin-top: 30px;
   margin-bottom: 40px;
   @include direction-center(row);
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  &--gap-8px {
-    gap: 8px;
-  }
-}
-
-.main-header_login{
-  font-size: 16px;
-  padding: 14.5px 43px;
 }
