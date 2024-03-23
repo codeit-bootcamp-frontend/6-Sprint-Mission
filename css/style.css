@@ -12,11 +12,6 @@ html {
   font-family: 'Pretendard', 'sans-serif';
 }
 
-body {
-  margin: 0;
-  word-break: keep-all; /*글자가 단어단위로 잘림*/
-}
-
 img {
   display: inline-block;
 }
@@ -111,6 +106,7 @@ section > div {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
 }
 
 
@@ -161,6 +157,7 @@ figure {
   letter-spacing: 0.02em;
   color: var(--coolgray);
   margin: 12px 0 24px;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
 }
 
 .main-descriptions {
@@ -170,6 +167,7 @@ figure {
   letter-spacing: 0.08em;
   color: var(--coolgray);
   margin: 0;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
 }
 
 footer {
@@ -189,7 +187,7 @@ footer {
 
 .footer-info {
   color: #9CA3AF;
-
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
 }
 
 .footer-buttons {
@@ -200,6 +198,7 @@ footer {
 .footer-button {
   color: #E5E7EB;
   text-decoration: none;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
 }
 
 .footer-links {
