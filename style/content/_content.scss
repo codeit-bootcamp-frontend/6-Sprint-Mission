@@ -34,20 +34,13 @@
 }
 
 .content-description {
-  font-weight: 700;
-  font-size: 40px;
-  color: #374151;
-  line-height: 56px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
   &__link {
-    font-size: 20px;
-    font-weight: 600;
     padding: 16px 124px;
     height: 56px;
-    line-height: 24px;
   }
   &--position-relative {
     position: relative;
