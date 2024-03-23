@@ -52,6 +52,7 @@
         name="user-email" 
         type="email"
         placeholder="이메일을 입력해주세요"
+        autocomplete="user-email"
         required
           >
       </div>
@@ -62,6 +63,7 @@
         name="user-name" 
         type="text"
         placeholder="닉네임을 입력해주세요"
+        autocomplete="user-name"
         required
           >
       </div>
@@ -73,11 +75,12 @@
             name="user-password" 
             type="password"
             placeholder="비밀번호를 입력해주세요"
+            autocomplete="new-password"
             required
           >
           <button 
             type="button"
-            id="hide-btn"
+            id="signup-hide-btn"
             onmouseup="hide()"
             onmousedown="show()"
           >
@@ -102,11 +105,12 @@
             name="user-password-reconfirm" 
             type="password"
             placeholder="비밀번호를 다시 한 번 입력해주세요"
+            autocomplete="new-password"
             required
           >
             <button 
               type="button"
-              id="hide-btn"
+              id="signup-reconfirm-btn"
               onmouseup="reConFirmHide()"
               onmousedown="reConFirmShow()"
             >
