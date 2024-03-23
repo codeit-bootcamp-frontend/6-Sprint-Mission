@@ -1,7 +1,18 @@
 .content-card {
   height: 540px;
   width: 100%;
-  &--flex-center{
+  &__content {
+    width: 1200px;
+    display: flex;
+    > * {
+      // flex: 1;
+    }
+  }
+  &__description{
+    @include flex-direction-center(column);
+    margin:auto;
+  }
+  &--flex-center {
     @include flex-center;
   }
   &--position-relative {
@@ -14,9 +25,7 @@
   &--margin-top-180px {
     margin-top: 180px;
   }
-  &__description {
-    margin-right: auto;
-  }
+
   &--margin-top-138px {
     margin-top: 138px;
   }
@@ -46,36 +55,4 @@
     position: relative;
     z-index: 2;
   }
-}
-
-.reverse {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-
-.reverse > * {
-  text-align: right;
-}
-
-.contentCategory {
-  color: #3692ff;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.contentHeader {
-  padding-block: 12px 24px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
-  color: #374151;
-}
-
-.contentDescription {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  color: #374151;
 }

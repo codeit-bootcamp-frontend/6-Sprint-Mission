@@ -31,7 +31,15 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
+}
+.description-head--text-align-left {
   text-align: left;
+}
+.description-head--text-align-right {
+  text-align: right;
+}
+.description-head--color-374151 {
+  color: #374151;
 }
 
 .description-detail {
@@ -41,12 +49,26 @@
   letter-spacing: 0.08em;
   text-align: left;
 }
+.description-detail--color-374151 {
+  color: #374151;
+}
+.description-detail--text-align-right {
+  text-align: right;
+}
 
 .description-tip {
   font-size: 18px;
   font-weight: 700;
   line-height: 25.2px;
+}
+.description-tip--text-align-left {
   text-align: left;
+}
+.description-tip--text-align-right {
+  text-align: right;
+}
+.description-tip--color-3692ff {
+  color: #3692ff;
 }
 
 .description-footer {
@@ -100,16 +122,12 @@
   margin-top: 30px;
   margin-bottom: 40px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
 .main--margin-top {
   margin-top: 70px;
-}
-
-.main__content {
-  width: 1200px;
-  display: flex;
 }
 
 .footer--theme-black {
@@ -119,6 +137,16 @@
 .content-card {
   height: 540px;
   width: 100%;
+}
+.content-card__content {
+  width: 1200px;
+  display: flex;
+}
+.content-card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }
 .content-card--flex-center {
   display: flex;
@@ -134,9 +162,6 @@
 }
 .content-card--margin-top-180px {
   margin-top: 180px;
-}
-.content-card__description {
-  margin-right: auto;
 }
 .content-card--margin-top-138px {
   margin-top: 138px;
@@ -164,38 +189,6 @@
 .content-description--position-relative {
   position: relative;
   z-index: 2;
-}
-
-.reverse {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-
-.reverse > * {
-  text-align: right;
-}
-
-.contentCategory {
-  color: #3692ff;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.contentHeader {
-  padding-block: 12px 24px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
-  color: #374151;
-}
-
-.contentDescription {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  color: #374151;
 }
 
 * {

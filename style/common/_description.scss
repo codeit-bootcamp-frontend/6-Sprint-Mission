@@ -2,7 +2,15 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
-  text-align: left;
+  &--text-align-left {
+    text-align: left;
+  }
+  &--text-align-right {
+    text-align: right;
+  }
+  &--color-374151 {
+    color: #374151;
+  }
 }
 .description-detail {
   font-size: 24px;
@@ -10,12 +18,26 @@
   line-height: 28.8px;
   letter-spacing: 0.08em;
   text-align: left;
+  &--color-374151{
+  color: #374151;
+  }
+  &--text-align-right{
+    text-align: right;
+  }
 }
 .description-tip {
   font-size: 18px;
   font-weight: 700;
   line-height: 25.2px;
-  text-align: left;
+  &--text-align-left {
+    text-align: left;
+  }
+  &--text-align-right {
+    text-align: right;
+  }
+  &--color-3692ff {
+    color: #3692ff;
+  }
 }
 .description-footer {
   font-size: 16px;
