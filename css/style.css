@@ -4,12 +4,12 @@
 
 :root {
   --skyblue: #3692FF;
-  --white: #ffffff;
+  --white: #fff;
   --coolgray: #374151;
 }
 
 html {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard', 'sans-serif';
 }
 
 body {
@@ -39,7 +39,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 9.5px 200px;
-  flex-shrink: 0;
 }
 
 .logo, .logo-image {
