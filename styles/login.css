@@ -9,7 +9,8 @@ header {
   color: var(--cool-gray800);
 }
 
-#login-form {
+#login-form,
+#signup-form {
   width: 640px;
   margin: 0 auto;
 }
@@ -42,7 +43,8 @@ header {
   border: 2px solid var(--point-blue);
 }
 
-#login-form button {
+#login-form button,
+#signup-form button {
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
@@ -66,7 +68,8 @@ header {
   align-items: center;
 }
 
-.signup {
+.signup,
+.login {
   display: flex;
   justify-content: center;
   gap: 4px;
@@ -76,7 +79,8 @@ header {
   line-height: 17.9px;
 }
 
-.signup a {
+.signup a,
+.login a {
   color: #3182F6;
   text-decoration: underline;
 }
