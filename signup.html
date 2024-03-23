@@ -3,8 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>판다마켓</title>
+    <title>판다마켓 회원가입</title>
     <link rel="stylesheet" href="./style/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header-big">
+      <a href="/"
+        ><img
+          class="header-big__logo"
+          src="../image/signin-page/logo@3x.png"
+          alt="panda-market-logo"
+      /></a>
+    </header>
+    <main class="main-signup">
+      <div class="main-signup__wrap">
+        <form action="server" method="get" class="content-form">
+          <fieldset class="content-form__fieldset">
+            <div class="container--gap-16px container--position-relative">
+              <label for="email" class="content-form__label">이메일</label>
+              <input
+                class="content-form__input description-input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="이메일을 입력해주세요"
+              /><label for="nickname" class="content-form__label">닉네임</label>
+              <input
+                class="content-form__input description-input"
+                type="text"
+                name="nickname"
+                id="nickname"
+                placeholder="닉네임을 입력해주세요"
+              /><label for="password" class="content-form__label"
+                >비밀번호</label
+              >
+              <div class="container--position-relative">
+                <input
+                  class="content-form__input description-input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="비밀번호를 입력해주세요"
+                />
+                <img
+                  src="image/signin-page/btn_visibility_off_24px.png"
+                  alt="reveal password"
+                  class="content-form__icon"
+                />
+              </div>
+              <label for="password2" class="content-form__label"
+                >비밀번호 확인
+              </label>
+              <div class="container--position-relative">
+                <input
+                  class="content-form__input description-input"
+                  type="password"
+                  name="password2"
+                  id="password2"
+                  placeholder="비밀번호를 다시 입력해주세요"
+                />
+                <img
+                  src="image/signin-page/btn_visibility_on_24px.png"
+                  alt="reveal password"
+                  class="content-form__icon"
+                />
+              </div>
+            </div>
+
+            <button
+              class="button button--theme-blue button__wide button--border-radius-40px"
+            >
+              로그인
+            </button>
+          </fieldset>
+        </form>
+        <div class="content-easy-login">
+          <p class="content-easy-login__description">간편 로그인하기</p>
+          <nav class="content-easy-login__nav">
+            <a href="https://www.google.com/"
+              ><img
+                class="content-easy-login__image"
+                src="./image/signin-page/Component 2@3x-1.png"
+                alt="google page"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/"
+              ><img
+                class="content-easy-login__image"
+                src="./image/signin-page/Component 3@3x-1.png"
+                alt="kakaotalk page"
+            /></a>
+          </nav>
+        </div>
+        <p class="main-login__description">
+          판다마켓이 처음이신가요? <a href="/signup.html">회원가입</a>
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
