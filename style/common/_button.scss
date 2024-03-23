@@ -1,0 +1,19 @@
+.button {
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  &--background-color-blue {
+    background-color: #3692ff;
+    color: #ffffff;
+    &:hover {
+      background-color: #1967d6;
+    }
+    &:focus {
+      background-color: #1251aa;
+    }
+    &:disabled {
+      background-color: #9ca3af;
+    }
+  }
+}

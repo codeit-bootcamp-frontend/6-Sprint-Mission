@@ -5,26 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>판다마켓</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style/style.css" />
 </head>
 
 <body>
-  <header>
-    <div class="mainLogoContainer">
-      <img src="./image/mainLogo.jpg" alt="Panda Market Main Logo" />
-      <a href="/" class="link mainLogo"><img src="./image/판다마켓.jpg" alt="Panda Market Logo"></a>
+  <header class="main-header main-header--position-fixed-top main-header--padding-inline-200px main-header--background-color-white">
+    <div class="header-content header-content--gap-8px">
+      <img src="./image/main-page/mainLogo.jpg" alt="Panda Market Main Logo" />
+      <a href="/" class="image-link"><img src="./image/main-page/판다마켓.jpg" alt="Panda Market Logo"></a>
     </div>
-    <div class="loginContainer">
-      <a href="/signin"><button class="blueButton" type="button">로그인</button></a>
+    <div>
+      <a href="./signin.html"><button class="button button--background-color-blue main-header_login" type="button">로그인</button></a>
     </div>
   </header>
 
-  <main>
+  <main class="main-main">
     <div class="blueContent">
       <figure id="topContent">
         <div id="topDescriptionContainer">
           <p class="topDescription">일상의 모든 물건을<br />거래해 보세요.</p>
-          <a href="/items" class="link"><button class="blueButton" type="button">구경하러 가기</button></a>
+          <a href="/items" class="link"><button class="button--background-color-blue" type="button">구경하러 가기</button></a>
         </div>
         <img src="image/Img_home_top.png" class="pandaImage" alt="Panda on the ground with a bag saying hi" />
       </figure>
