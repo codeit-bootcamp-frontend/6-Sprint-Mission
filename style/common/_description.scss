@@ -28,7 +28,12 @@
 .description-tip {
   font-size: 18px;
   font-weight: 700;
-  line-height: 25.2px;
+  &--line-height-21-48px {
+    line-height: 21.48px;
+  }
+  &--line-height-25-2px {
+    line-height: 25.2px;
+  }
   &--text-align-left {
     text-align: left;
   }

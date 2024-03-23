@@ -4,6 +4,10 @@
   border: none;
   cursor: pointer;
 }
+.button__wide {
+  padding: 16px 124px;
+  height: 56px;
+}
 .button__login {
   padding: 12px 20px;
   width: 128px;
@@ -58,6 +62,11 @@
 .description-tip {
   font-size: 18px;
   font-weight: 700;
+}
+.description-tip--line-height-21-48px {
+  line-height: 21.48px;
+}
+.description-tip--line-height-25-2px {
   line-height: 25.2px;
 }
 .description-tip--text-align-left {
@@ -100,6 +109,13 @@
   text-decoration: none;
 }
 
+.container-easy-login {
+  width: 640px;
+  height: 74px;
+  border-radius: 8px;
+  background: #E6F2FF;
+}
+
 .header-main {
   height: 70px;
   background-color: #ffffff;
@@ -123,11 +139,11 @@
   align-items: center;
 }
 
-.header-login {
+.header-big {
   display: flex;
   justify-content: center;
 }
-.header-login__logo {
+.header-big__logo {
   margin-top: 60px;
   margin-bottom: 40px;
   width: 396px;
@@ -144,6 +160,13 @@
 .main-login {
   display: flex;
   justify-content: center;
+}
+.main-login__wrap {
+  width: 640px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .footer {
@@ -218,13 +241,42 @@
   align-items: flex-start;
   gap: 32px;
 }
-.content-description__link {
-  padding: 16px 124px;
-  height: 56px;
-}
 .content-description--position-relative {
   position: relative;
   z-index: 2;
+}
+
+.content-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.content-easy-login {
+  width: 640px;
+  height: 74px;
+  gap: 0px;
+  padding-inline: 23px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  background: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-easy-login__nav {
+  display: flex;
+  gap: 16px;
+}
+.content-easy-login__image {
+  width: 42px;
+  height: 42px;
+}
+.content-easy-login__description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
 }
 
 * {

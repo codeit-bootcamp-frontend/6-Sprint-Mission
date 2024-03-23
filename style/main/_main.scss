@@ -4,7 +4,14 @@
   }
 }
 
-.main-login{
+.main-login {
   display: flex;
   justify-content: center;
+  &__wrap {
+    width: 640px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+  }
 }

@@ -2,6 +2,10 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  &__wide{
+    padding: 16px 124px;
+    height: 56px;
+  }
   &__login {
     padding: 12px 20px;
     width:128px;

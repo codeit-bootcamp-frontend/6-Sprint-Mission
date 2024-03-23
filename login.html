@@ -7,22 +7,57 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <header class="header-login">
+    <header class="header-big">
       <a href="/"
         ><img
-          class="header-login__logo"
+          class="header-big__logo"
           src="../image/signin-page/logo@3x.png"
           alt="panda-market-logo"
       /></a>
     </header>
     <main class="main-login">
-      <div class="content-form__wrap">
+      <div class="main-login__wrap">
         <form action="server" method="get" class="content-form">
           <fieldset class="content-form__fieldset">
-            <label for=""></label><input type="text" /> <label for=""></label>
-            <input type="text" /> <button></button>
+            <label for="email">이메일</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="이메일을 입력해주세요"
+            />
+            <label for="password">비밀번호</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="비밀번호를 입력해주세요"
+            />
+            <button
+              class="button button--theme-blue button__wide button--border-radius-40px"
+            >
+              로그인
+            </button>
           </fieldset>
         </form>
+        <div class="content-easy-login">
+          <p class="content-easy-login__description">간편 로그인하기</p>
+          <nav class="content-easy-login__nav">
+            <a href="https://www.google.com/"
+              ><img
+                class="content-easy-login__image"
+                src="./image/signin-page/Component 2@3x-1.png"
+                alt="google page"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/"
+              ><img
+                class="content-easy-login__image"
+                src="./image/signin-page/Component 3@3x-1.png"
+                alt="kakaotalk page"
+            /></a>
+          </nav>
+        </div>
+        <p>판다마켓이 처음이신가요? <a href="/signup.html">회원가입</a></p>
       </div>
     </main>
   </body>
