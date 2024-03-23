@@ -69,11 +69,11 @@ header {
 }
 
 #main-top {
-  background-image: url(./assets/home_top.png);
+  background-image: url(../assets/images/home_top.png);
 }
 
 #main-bottom {
-  background-image: url(./assets/home_bottom.png);
+  background-image: url(../assets/images/home_bottom.png);
 }
 
 section {
