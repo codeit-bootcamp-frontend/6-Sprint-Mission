@@ -54,7 +54,6 @@ header {
 }
 
 .banner-text {
-  /* Q1. absolute로 배치하는 게 맞을까요? */
   position: absolute;
   left: 0px;
 }
@@ -64,7 +63,6 @@ header {
 }
 
 .banner-content img {
-  /* Q1. absolute로 배치하는 게 맞을까요? */
   position: absolute;
   bottom: 0;
   right: -137px;
