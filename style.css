@@ -1,20 +1,5 @@
 @import "reset.css";
-
-:root {
-  --blue: #3692ff;
-  --hover-blue: #1967d6;
-  --click-blue: #1251aa;
-  --inactive-color: #9ca3af;
-  --background-blue: #cfe5ff;
-  --gray900: #1b1d1f;
-  --gray800: #26282b;
-  --gray600: #454c53;
-  --gray500: #72787f;
-  --gray400: #9ea4a8;
-  --gray200: #e5e7eb;
-  --gray100: #e8ebed;
-  --gray50: #f7f7f8;
-}
+@import "root.css";
 
 .container {
   width: 1200px;
@@ -320,7 +305,7 @@ footer .info-container .link-container img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 93%;
+    width: 100%;
     z-index: 1;
     position: fixed;
     top: 0;

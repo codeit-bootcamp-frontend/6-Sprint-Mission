@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #3692ff;
+  --hover-blue: #1967d6;
+  --hover-bluebtn: #3692ff;
+  --click-blue: #1251aa;
+  --inactivecolor: #9ca3af;
+  --background-blue: #cfe5ff;
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+}
