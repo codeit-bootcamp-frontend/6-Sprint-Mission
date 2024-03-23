@@ -8,6 +8,38 @@
 </head>
 
 <body>
+  <header>
+    <a  href = "index.html">
+      <img class = "panda_logo" src = "panda_logo.png">
+    </a>
+  </header>
 
+  <main>
+    <div class = "container">
+      <form class = "input_container">
+        <label for = "email">이메일</label>
+        <input id = "email" name = "email" type = "email" placeholder = "이메일을 입력해주세요">
+        <label for = "nickname">닉네임</label>
+        <input id = "nickname" name = "nickname" placeholder = "닉네임을 입력해주세요">
+        <label for = "password">비밀번호</label>
+        <input id = "password" name = "password" type = "password" placeholder ="비밀번호를 입력해주세요">
+        <label for = "password_confirm">비밀번호 확인</label>
+        <input id = "password_confirm" name = "password_confirm" type = "password" placeholder ="비밀번호를 다시 한 번 입력해주세요">
+        <button class = "signup_button">회원가입</button>
+      </form>
+      <div class = "easy_signin_container">
+        <div class = "easy_signin">간편 로그인하기</div>
+        <div class = "easy_signin_logo">
+          <a href = "https://www.google.com/">
+            <img class = "logo google" src = "google.png">
+          </a>
+          <a href = "https://www.kakaocorp.com/page/">
+            <img class = "logo kakao" src = "kakao.png">
+          </a>
+        </div>
+      </div>
+      <div class = "for_signin">이미 회원이신가요?<a class = "link" href = "signin.html">로그인</a></div>
+    </div>
+  </main>
 </body>
 </html>

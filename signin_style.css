@@ -68,7 +68,7 @@ input {
   height: 24px;
 }
 
-.login_button {
+.signin_button {
   display: block;
   width: 100%;
   height: 56px;
@@ -84,7 +84,7 @@ input {
   margin-bottom: 24px;
 }
 
-.easy_login_container {
+.easy_signin_container {
   border: none;
   height: 74px;
   border-radius: 8px;
@@ -97,7 +97,7 @@ input {
   margin-bottom: 24px;
 }
 
-.easy_login {
+.easy_signin {
   display: flex;
   width: 101px;
   font-weight: 500;
@@ -105,7 +105,7 @@ input {
   line-height: 24px;
 }
 
-.easy_login_logo {
+.easy_signin_logo {
   display: flex;
   justify-content: space-between;
   width: 100px;
