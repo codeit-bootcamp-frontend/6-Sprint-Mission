@@ -14,12 +14,17 @@ body {
 
 .main-bar {
   background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 200px;
   min-width: 375px;
   gap: 150px;
+}
+
+.main-bar-size {
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .signin, .button {
@@ -130,7 +135,13 @@ body {
 
 .sort {
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  align-items: center;
+}
+
+.sort1 {
+  display: flex;
+  justify-content: left;
   align-items: center;
 }
 
@@ -163,6 +174,11 @@ body {
   color: #E5E7EB;
   text-decoration: none;
   margin-right: 30px;
+}
+
+.size {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .botton {
