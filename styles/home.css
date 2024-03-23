@@ -54,6 +54,7 @@ header {
 }
 
 .banner-text {
+  width: 357px;
   position: absolute;
   left: 0px;
 }
