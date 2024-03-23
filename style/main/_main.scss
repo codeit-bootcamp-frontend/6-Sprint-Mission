@@ -12,6 +12,16 @@
     height: 430px;
     display: flex;
     flex-direction: column;
-    gap:24px;
+    align-items: center;
+    gap: 24px;
+    > * {
+      width: 640px;
+    }
+  }
+  &__description {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.9px;
+    text-align: center;
   }
 }

@@ -55,6 +55,22 @@
     flex-direction: column;
     gap: 24px;
   }
+  &__input {
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px 16px 24px;
+    gap: 10px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #f3f4f6;
+    border: none;
+  }
+  &__label {
+    font-size: 18;
+    font-weight: 700;
+    line-height: 21.48px;
+    text-align: left;
+  }
 }
 
 .content-easy-login {
