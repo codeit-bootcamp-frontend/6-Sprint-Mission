@@ -29,6 +29,9 @@ header {
   background-color: var(--white);
   border-bottom: 1px solid #dfdfdf;
   height: 70px;
+
+  position: sticky;
+  top: 0;
 }
 
 .logo-login {
