@@ -18,10 +18,10 @@
   line-height: 28.8px;
   letter-spacing: 0.08em;
   text-align: left;
-  &--color-374151{
-  color: #374151;
+  &--color-374151 {
+    color: #374151;
   }
-  &--text-align-right{
+  &--text-align-right {
     text-align: right;
   }
 }
@@ -57,4 +57,10 @@
   font-weight: 600;
   line-height: 24px;
   text-align: center;
+}
+
+.description-login {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.09px;
 }

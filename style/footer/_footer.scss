@@ -1,5 +1,23 @@
 .footer {
+  padding-inline: 200px;
+  height: 160px;
+  font-size: 16px;
+  padding-top: 32px;
   &--theme-black {
     background-color: #111827;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+    &--gap-12px {
+      gap: 12px;
+    }
+    &--gap-30px {
+      gap: 30px;
+    }
   }
 }
