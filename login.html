@@ -11,23 +11,23 @@
   <body>
     <div class="main-container">
       <div class="img-container">
-        <a href="/"><img class="logo" src="./login/assets/logo.png" alt="판다마켓 로고" /></a>
+        <a href="./"><img class="logo" src="./login/assets/logo.png" alt="판다마켓 로고" /></a>
       </div>
 
-      <form action="#">
+      <form action="#" method="post">
         <div class="email con">
           <label for="email">이메일</label>
-          <input type="email" placeholder="이메일을 입력해주세요" />
+          <input type="email" id="email" placeholder="이메일을 입력해주세요" />
         </div>
         <div class="pw con">
           <label for="pw">비밀번호</label>
-          <input type="password" placeholder="비밀번호를 입력해주세요" />
+          <input type="password" id="pw" placeholder="비밀번호를 입력해주세요" />
           <img src="./login/assets/show-pw.png" alt="비밀번호 보이기" />
         </div>
         <button class="login-btn">로그인</button>
-        <div class="easy-login">
+        <div class="social-login">
           <p>간편 로그인하기</p>
-          <div class="easy-login-logo">
+          <div class="social-login-logo">
             <a
               href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&hl=ko&theme=glif&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
               taget="_blank"
@@ -42,7 +42,7 @@
         </div>
         <div class="go-signup-container">
           <p>판다마켓이 처음이신가요?</p>
-          <a href="/signup.html">회원가입</a>
+          <a href="./signup.html">회원가입</a>
         </div>
       </form>
     </div>

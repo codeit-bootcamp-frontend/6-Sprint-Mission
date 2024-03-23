@@ -67,7 +67,7 @@ form {
 .login-btn:hover {
   background-color: var(--blue);
 }
-.easy-login {
+.social-login {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,7 +81,7 @@ form {
   color: var(--gray800);
 }
 
-.easy-login-logo img {
+.social-login-logo img {
   width: 42px;
   margin-left: 16px;
 }
