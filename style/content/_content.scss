@@ -4,13 +4,10 @@
   &__content {
     width: 1200px;
     display: flex;
-    > * {
-      // flex: 1;
-    }
   }
-  &__description{
+  &__description {
     @include flex-direction-center(column);
-    margin:auto;
+    margin: auto;
   }
   &--flex-center {
     @include flex-center;
@@ -25,7 +22,6 @@
   &--margin-top-180px {
     margin-top: 180px;
   }
-
   &--margin-top-138px {
     margin-top: 138px;
   }
@@ -55,4 +51,7 @@
     position: relative;
     z-index: 2;
   }
+}
+
+.content-form{
 }

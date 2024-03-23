@@ -123,9 +123,15 @@
   align-items: center;
 }
 
-.header-sign-in {
-  margin-top: 30px;
+.header-login {
+  display: flex;
+  justify-content: center;
+}
+.header-login__logo {
+  margin-top: 60px;
   margin-bottom: 40px;
+  width: 396px;
+  height: 132px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -133,6 +139,11 @@
 
 .main--margin-top {
   margin-top: 70px;
+}
+
+.main-login {
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
