@@ -3,5 +3,14 @@
   height: 74px;
   border-radius: 8px;
   background: #E6F2FF;
-  
 }
+
+.container{
+  &--position-relative{
+    position: relative;
+  }
+  &--gap-16px{
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+}}

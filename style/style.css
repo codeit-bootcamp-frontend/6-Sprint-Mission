@@ -25,6 +25,7 @@
 }
 .button--theme-blue:focus {
   background-color: #1251aa;
+  border-color: #3692FF;
 }
 .button--theme-blue:disabled {
   background-color: #9ca3af;
@@ -121,6 +122,15 @@
   height: 74px;
   border-radius: 8px;
   background: #E6F2FF;
+}
+
+.container--position-relative {
+  position: relative;
+}
+.container--gap-16px {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .header-main {
@@ -268,6 +278,16 @@
   flex-direction: column;
   gap: 24px;
 }
+.content-form__icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+}
+.content-form__icon:hover {
+  cursor: pointer;
+}
 .content-form__input {
   width: 640px;
   height: 56px;
@@ -279,7 +299,7 @@
   border: none;
 }
 .content-form__label {
-  font-size: 18;
+  font-size: 18px;
   font-weight: 700;
   line-height: 21.48px;
   text-align: left;

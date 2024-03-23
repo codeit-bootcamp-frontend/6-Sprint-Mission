@@ -55,6 +55,16 @@
     flex-direction: column;
     gap: 24px;
   }
+  &__icon{
+    position:absolute;
+    bottom:(56px-24px)/2;
+    right:16px;
+    width:24px;
+    height:24px;
+    &:hover{
+      cursor:pointer;
+    }
+  }
   &__input {
     width: 640px;
     height: 56px;
@@ -66,7 +76,7 @@
     border: none;
   }
   &__label {
-    font-size: 18;
+    font-size: 18px;
     font-weight: 700;
     line-height: 21.48px;
     text-align: left;
