@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    margin: 0;
+    font-family: "Pretendard";
+    color: #374151;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background-color: #3692FF;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border-style: none;
+}
+
+.button:hover {
+    background-color: #1967D6;
+}
+.button:active {
+    background-color: #1251AA;
+}
+
+.logo {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+main {
+    width: 640px;
+    height: 664px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+.inputs > label {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.48px;
+}
+.inputs > input {
+    width: 640px;
+    height: 56px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 12px;
+    gap: 10px;
+    border-style: none;
+    background-color: #F3F4F6;
+}
+.show-off > img {
+    position: absolute;
+    right: 24px;
+    bottom: 16px;
+}
+input:focus {
+    outline-color: #3692FF;
+}
+
+.inputs > input::placeholder {
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.signup-button {
+    margin: 0;
+    width: 640px;
+    height: 56px;
+    border-radius: 40px;
+    padding: 16px 124px;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+}
+
+.easy-box {
+    width: 640px;
+    height: 74px;
+    background-color: #E6F2FF;
+    padding-left: 23px;
+    padding-right: 23px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.easy-box > p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.shortcuts {
+    display: flex;
+    column-gap: 16px;
+}
+.shortcuts img {
+    width: 42px;
+    height: 42px;
+}
+
+.signin-box {
+    width: 210px;
+    height: 18px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.signin-box > a {
+    text-decoration: underline;
+    color: #3182F6;
+}
