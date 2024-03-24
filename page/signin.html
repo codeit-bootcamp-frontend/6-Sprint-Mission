@@ -4,8 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>로그인 페이지</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="/style/signin.css">
+  <!-- Favicon -->
+  <link rel="icon" href="/img/panda-face.png">
+  <script defer>
+    function show() {
+        document.getElementById('user-password').setAttribute('type', 'text');
+        document.querySelector('.on').style.display = 'inline-block';
+        document.querySelector('.off').style.display = 'none';
+      };
+
+    function hide() {
+      document.getElementById('user-password').setAttribute('type', 'password');
+      document.querySelector('.on').style.display = 'none';
+      document.querySelector('.off').style.display = 'inline-block';
+    };
+  </script>
 </head>
 <body>
-  <h1>로그인 페이지</h1>
+  <main class="signin-container">
+    <!-- Title -->
+    <a class="signin-title" href="/" >
+      <div class="title-logo">
+        <img src="/img/panda-face_title.png" alt="판다 얼굴">
+      </div>
+      <h1>판다마켓</h1>
+    </a>
+    <!-- Form -->
+    <form id="signin-form" class="form-content" action="#" >
+      <div class="input-items">
+          <label for="user-email">이메일</label>
+          <input 
+          id="user-email" 
+          name="user-email" 
+          type="email"
+          placeholder="이메일을 입력해주세요"
+          autocomplete="user-name"
+          required
+          >
+      </div>
+      <div class="input-items passwrod">
+        <label for="user-password">비밀번호</label>
+        <div class="password-item">
+          <input 
+            id="user-password" 
+            name="user-password" 
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            autocomplete="current-password"
+            required
+          >
+          <button 
+            type="button"
+            id="signin-hide-btn"
+            onmouseup="hide()"
+            onmousedown="show()"
+          >
+            <img 
+            class="off" 
+            src="/img/btn_visibility_off_24px.png" 
+            alt="비밀번호 숨기기 아이콘">
+            <img 
+            class="on" 
+            src="/img/btn_visibility_on_24px.png" 
+            alt="비밀번호 보기 아이콘">
+          </button>
+        </div>
+      </div>
+      <!-- Login button -->
+      <div class="login-btn">
+        <button form="signin-form" type="submit">로그인</button>
+      </div>
+      <!-- Easy Login  -->
+        <div class="easylogin-content">
+            <p>간편 로그인하기</p>
+            <ul>
+              <li>
+                <a href="https://www.google.com/" target="_blank">
+                  <img src="/img/ic_Google.png" alt="구글 아이콘">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kakaocorp.com/page/" target="_blank">
+                  <img src="/img/ic_Kakaotalk.png" alt="카카오톡 아이콘">
+                </a>
+              </li>
+            </ul>
+        </div>
+        <!-- Go to Signup -->
+        <div class="goto-signup">
+          <p>
+            판다마켓이 처음이신가요?
+            <a href="/page/signup.html">
+              회원가입
+            </a>
+          </p>
+      </div>
+    </form>
+  </main>
 </body>
 </html>
