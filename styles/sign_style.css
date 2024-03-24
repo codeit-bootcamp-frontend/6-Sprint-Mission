@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Pretendard", sans-serif;
+}
+
+.wrap {
+  width: 640px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+input {
+  display: block;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 59px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 16px 24px;
+  border: none;
+}
+
+input:focus {
+  outline-color: #3182f6;
+}
+
+.password-container {
+  position: relative;
+}
+
+.pwd-eye-icon {
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+}
+.signup-btn,
+.login-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 16px 124px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #9ca3af;
+  border: none;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+  cursor: pointer;
+}
+
+.panda-market-logo {
+  width: 396px;
+  height: 132px;
+}
+
+.panda-market-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.easy-login {
+  width: 100%;
+  height: 74px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px;
+  margin-bottom: 24px;
+}
+
+.easy-login-icon {
+  display: flex;
+  gap: 16px;
+}
+
+.easy-login-a {
+  display: flex;
+}
+
+.fanda-customer,
+.fanda-first {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.move-signin,
+.move-signup {
+  color: #3182f6;
+}
+
+/* 회원가입 */

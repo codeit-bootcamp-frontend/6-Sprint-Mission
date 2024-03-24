@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/index_style.css" />
     <title>판다마켓</title>
+    <!-- 파비콘 -->
+    <link rel="icon" href="images/panda_favicon.png" />
     <!-- 글꼴 CDN -->
     <link
       rel="stylesheet"
@@ -12,42 +14,50 @@
     />
   </head>
   <body>
-    <!-- header 시작 -->
-    <header>
-      <div onclick="location.href = '/'">
-        <img class="logo" src="img/logo.png" alt="판다마켓 로고" />
+    <!-- nav 시작 -->
+    <nav>
+      <div onclick="location.href = '/6-Sprint-Mission/'">
+        <img
+          class="logo"
+          src="images/panda_market_logo.svg"
+          alt="판다마켓 로고"
+        />
       </div>
       <div class="login-btn-container">
         <a href="signin.html" class="login-btn">로그인</a>
       </div>
-    </header>
-    <!-- header 끝 -->
+    </nav>
+    <!-- nav 끝 -->
     <!-- 베너 시작 -->
-    <div class="home-top-container">
+    <header class="home-top-container">
       <div class="home-top">
-        <p class="home-top-title">일상의 모든 물건을<br />거래해 보세요</p>
-        <div class="home-top-btn">
+        <div class="home-top-title-btn">
+          <h1 class="home-top-title">일상의 모든 물건을<br />거래해 보세요</h1>
           <a href="items.html" class="items-btn">구경하러 가기</a>
         </div>
+        <img
+          src="images/Img_home_top.png"
+          alt="상단 베너 판다 이미지"
+          class="home-top-img"
+        />
       </div>
-      <img
-        src="img/Img_home_top.png"
-        alt="상단 베너 판다 이미지"
-        class="home-top-img"
-      />
-    </div>
+    </header>
     <!-- 베너 끝 -->
     <!-- 메인 시작 -->
     <main>
       <!-- 1 -->
       <section>
-        <img src="img/Img_home_01.png" href="메인 이미지1" class="main-img" />
+        <img
+          src="images/main_Hot_Item.png"
+          alt="메인 이미지1"
+          class="main-img"
+        />
         <div class="main-container">
-          <p class="main-topic">Hot Item</p>
-          <p class="main-title">
+          <h3 class="main-topic">Hot Item</h3>
+          <h2 class="main-title">
             인기 상품을<br />
             확인해 보세요
-          </p>
+          </h2>
           <p class="main-content">
             가장 HOT한 중고거래 물품을<br />
             판다 마켓에서 확인해 보세요
@@ -56,29 +66,32 @@
       </section>
       <!-- 2 -->
       <section class="right">
-        <!-- <img src="img/Img_home_02.png" href="메인 이미지2" class="main-img" /> -->
         <div class="main-container-right">
-          <p class="main-topic">Search</p>
-          <p class="main-title">
+          <h3 class="main-topic">Search</h3>
+          <h2 class="main-title">
             구매를 원하는<br />
             상품을 검색하세요
-          </p>
+          </h2>
           <p class="main-content">
             구매하고 싶은 물품은 검색해서<br />
             쉽게 찾아보세요
           </p>
         </div>
-        <img src="img/Img_home_02.png" href="메인 이미지2" class="main-img" />
+        <img src="images/main_search.png" alt="메인 이미지2" class="main-img" />
       </section>
       <!-- 3 -->
       <section>
-        <img src="img/Img_home_03.png" href="메인 이미지3" class="main-img" />
+        <img
+          src="images/main_register.png"
+          alt="메인 이미지3"
+          class="main-img"
+        />
         <div class="main-container">
-          <p class="main-topic">Register</p>
-          <p class="main-title">
+          <h3 class="main-topic">Register</h3>
+          <h2 class="main-title">
             판매를 원하는<br />
             상품을 등록하세요
-          </p>
+          </h2>
           <p class="main-content">
             어떤 물건이든 판매하고 싶은 상품을<br />
             쉽게 등록하세요
@@ -87,13 +100,15 @@
       </section>
     </main>
     <!-- 메인 끝 -->
-    <div class="home-bottom-container">
-      <p class="home-bottom">믿을 수 있는<br />판다마켓 중고거래</p>
-      <img
-        class="home-bottom-img"
-        src="img/Img_home_bottom.png"
-        alt="판다 중고거래 이미지"
-      />
+    <div class="home-bottom-background-color">
+      <div class="home-bottom-container">
+        <h2 class="home-bottom">믿을 수 있는<br />판다마켓 중고거래</h2>
+        <img
+          class="home-bottom-img"
+          src="images/Img_home_bottom.png"
+          alt="판다 중고거래 이미지"
+        />
+      </div>
     </div>
     <footer>
       <div class="footer-container">
@@ -104,16 +119,16 @@
         </div>
         <div class="footer-ic">
           <a href="https://www.facebook.com" target="_blank"
-            ><img src="img/ic_facebook.png" alt="페이스북"
+            ><img src="images/icon_facebook.png" alt="페이스북 로고 아이콘"
           /></a>
           <a href="https://twitter.com" target="_blank"
-            ><img src="img/ic_twitter.png" alt="트위터"
+            ><img src="images/icon_twitter.png" alt="트위터 로고 아이콘"
           /></a>
           <a href="https://www.youtube.com" target="_blank"
-            ><img src="img/ic_youtube.png" alt="유튜브"
+            ><img src="images/icon_youtube.png" alt="유튜브 로고 아이콘"
           /></a>
           <a href="https://www.instagram.com" target="_blank">
-            <img src="img/ic_instagram.png" alt="인스타그램"
+            <img src="images/icon_instagram.png" alt="인스타그램 로고 아이콘"
           /></a>
         </div>
       </div>

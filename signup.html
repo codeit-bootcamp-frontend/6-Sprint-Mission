@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles/sign_style.css" />
-    <title>로그인</title>
+    <title>회원가입</title>
     <!-- 파비콘 -->
     <link rel="icon" href="images/panda_favicon.png" />
     <!-- 글꼴 CDN -->
@@ -30,6 +30,13 @@
           name="email"
           placeholder="이메일을 입력해주세요"
         />
+        <label for="nickname">닉네임</label>
+        <input
+          type="text"
+          id="nickname"
+          name="nickname"
+          placeholder="닉네임을 입력해주세요"
+        />
         <label for="password">비밀번호</label>
         <div class="container password-container">
           <input
@@ -44,7 +51,21 @@
             class="pwd-eye-icon"
           />
         </div>
-        <button type="submit" class="login-btn">로그인</button>
+        <label for="password-check">비밀번호 확인</label>
+        <div class="container password-container">
+          <input
+            type="password"
+            id="password-check"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+            name="password-check"
+          />
+          <img
+            src="images/password_eye_close.svg"
+            alt="비밀번호 확인 눈 아이콘"
+            class="pwd-eye-icon"
+          />
+        </div>
+        <button type="submit" class="signup-btn">회원가입</button>
       </form>
       <div class="easy-login">
         <p>간편 로그인하기</p>
@@ -60,10 +81,10 @@
           </a>
         </div>
       </div>
-      <div class="fanda-first">
+      <div class="fanda-customer">
         <p>
-          판다마켓이 처음이신가요?
-          <a href="signup.html" class="move-signup">회원가입</a>
+          이미 회원이신가요?
+          <a href="signin.html" class="move-signin">로그인</a>
         </p>
       </div>
     </div>
