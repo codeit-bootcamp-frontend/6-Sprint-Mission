@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,14 @@
   <title>판다마켓</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
   <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/global.css">
   <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="/styles/index.css">
   <link rel="stylesheet" href="/styles/media.css">
   
 </head>
 <body>
-  <header id="header">
-    <div class="container">
-      <nav id="nav">
-        <a href="/" id="logo"><img src="/images/logo_icon.png" alt="판다마켓 로고"><img src="/images/logo_text.png" alt="판다마켓 로고"></a>
-        <div class="login-box">
-          <a href="/login" class="btn login-btn">로그인</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <header id="header"></header>
 
   <main id="main">
     <section id="mainBanner" class="banner">
@@ -36,7 +28,7 @@
     <section id="hotItem">
       <div class="container flex-container">
         <div class="img-box">
-          <img src="/images/Img_home_01.png" alt="인기 상품 이미지">
+          <img src="/images/img-home-01.png" alt="인기 상품 이미지">
         </div>
         <div class="text-box">
           <p class="blue-text">Hot Item</p>
@@ -48,7 +40,7 @@
     <section id="search">
       <div class="container flex-container">
         <div class="img-box">
-          <img src="/images/Img_home_02.png" alt="상품 검색 이미지">
+          <img src="/images/img-home-02.png" alt="상품 검색 이미지">
         </div>
         <div class="text-box">
           <p class="blue-text">Search</p>
@@ -60,7 +52,7 @@
     <section id="register">
       <div class="container flex-container">
         <div class="img-box">
-          <img src="/images/Img_home_03.png" alt="상품 등록 이미지">
+          <img src="/images/img-home-03.png" alt="상품 등록 이미지">
         </div>
         <div class="text-box">
           <p class="blue-text">Register</p>
@@ -78,17 +70,9 @@
     </div>
   </main>
 
-  <Footer id="footer">
-    <div class="container">
-      <div class="copy"><p>&copy;codeit - 2024</p></div>
-      <div class="foot-menu"><a href="/privacy">Privacy Policy</a><a href="/faq">FAQ</a></div>
-      <div class="sns-links">
-        <a href="https://www.facebook.com/" target="_blank"><img src="/images/ic_facebook.png" alt="facebook icon"></a>
-        <a href="https://twitter.com/" target="_blank"><img src="/images/ic_twitter.png" alt="twitter icon"></a>
-        <a href="https://www.youtube.com/" target="_blank"><img src="/images/ic_youtube.png" alt="youtube icon"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="/images/ic_instagram.png" alt="instagram icon"></a>
-      </div>
-    </div>
-  </Footer>
+  <footer id="footer"></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/js/include.js"></script>
 </body>
 </html>

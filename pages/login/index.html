@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +7,46 @@
   <title>판다마켓</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
   <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/global.css">
   <link rel="stylesheet" href="/styles/common.css">
+  <link rel="stylesheet" href="../src/join.css">
 </head>
 <body>
-  <header id="header">
+  <main id="login">
     <div class="container">
-      <nav id="nav">
-        <a href="/" id="logo"><img src="/images/logo_icon.png" alt="판다마켓 로고"><img src="/images/logo_text.png" alt="판다마켓 로고"></a>
-        <div class="login-box">
-          <a href="/login" class="btn login-btn">로그인</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+      <div class="join-box login-box">
+        <a href="/index.html" class="home-logo"><img src="/images/logo-big.svg"></a>
+        <form class="join-form login-form">
+          <div>
+            <label>이메일
+              <input id="login-email" name="email" type="email" placeholder="이메일을 입력해주세요.">
+            </label>
+          </div>
+          <div>
+            <label>비밀번호
+              <input id="login-password" name="password" type="password" placeholder="비밀번호를 입력해주세요.">
+              <span class="visible-icon"></span>
+            </label>
+          </div>
 
-  <main id="main">
-  </main>
+          <button type="submit" class="btn join-btn login-btn">로그인</button>
 
-  <Footer id="footer">
-    <div class="container">
-      <div class="copy"><p>&copy;codeit - 2024</p></div>
-      <div class="foot-menu"><a href="/privacy">Privacy Policy</a><a href="/faq">FAQ</a></div>
-      <div class="sns-links">
-        <a href="https://www.facebook.com/" target="_blank"><img src="/images/ic_facebook.png" alt="facebook icon"></a>
-        <a href="https://twitter.com/" target="_blank"><img src="/images/ic_twitter.png" alt="twitter icon"></a>
-        <a href="https://www.youtube.com/" target="_blank"><img src="/images/ic_youtube.png" alt="youtube icon"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="/images/ic_instagram.png" alt="instagram icon"></a>
+          <div class="sns-join-wrap">
+            <p>간편 로그인하기</p>
+            <div class="sns-join-box">
+              <a href="https://www.google.com/" class="sns-join-icon google-icon"><img src="/images/icon-google.svg" alt="구글 간편 로그인"></a>
+              <a href="https://www.kakaocorp.com/page/" class="sns-join-icon kakao-icon"><img src="/images/icon-kakaotalk.svg" alt="카카오톡 간편 로그인"></a>
+            </div>
+          </div>
+
+          <div class="join-message-box">
+            <p>판다마켓이 처음이신가요?</p>
+            <a href="/pages/signup" class="join-link">회원가입</a>
+          </div>
+        </form>
       </div>
     </div>
-  </Footer>
+  </main>
+
 </body>
 </html>
