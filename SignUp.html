@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./loginStyle.css" />
+    <link rel="icon" href="./images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+
+      function checkPassword() {
+        var password = document.querySelector(".password-input").value;
+        var checkPassword = document.querySelector(
+          ".check-password-input"
+        ).value;
+        var errorText = document.querySelector(".error-text");
+
+        if (password !== checkPassword) {
+          errorText.innerHTML = "비밀번호가 일치하지 않습니다.";
+          errorText.style.color = "red";
+        } else {
+          errorText.innerHTML = "";
+        }
+      }
+    </script>
+    <title>판다마켓</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="./images/logo.png" class="pandamarket"
+        /></a>
+      </div>
+    </header>
+    <main>
+      <div class="login-container">
+        <div class="email-container">
+          <div class="email">이메일</div>
+          <input
+            class="email-input"
+            placeholder="이메일을 입력해주세요"
+            type="email"
+          />
+        </div>
+        <div class="nickname-container">
+          <div class="nickname">닉네임</div>
+          <input
+            class="nickname-input"
+            placeholder="닉네임을 입력하세요"
+            type="text"
+          />
+        </div>
+        <div class="password-container">
+          <div class="password">비밀번호</div>
+          <input
+            class="password-input"
+            placeholder="비밀번호를 입력해주세요"
+            type="password"
+          />
+        </div>
+
+        <div class="check-password-container">
+          <div class="check-password">비밀번호 확인</div>
+          <input
+            class="check-password-input"
+            placeholder="비밀번호를 다시 한번 입력해주세요"
+            type="password"
+            oninput="checkPassword()"
+          />
+          <div class="error-text"></div>
+        </div>
+        <div class="button">
+          <button class="login-button" onclick="navigateTo('/index.html')">
+            회원가입
+          </button>
+        </div>
+        <div class="social-login-container">
+          <div id="log">간편로그인</div>
+          <div class="social-login">
+            <a
+              class="kakao-login"
+              href="https://www.kakaocorp.com/page/"
+              alt="kakaotalk"
+              ><img class="kakao" src="./images/kakao.png"
+            /></a>
+            <a class="google-login" href="https://www.google.com" alt="google"
+              ><img class="google" src="./images/google.png"
+            /></a>
+          </div>
+        </div>
+        <div class="go-Login">
+          이미 회원이신가요? <a href="./LogIn.html">로그인</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
