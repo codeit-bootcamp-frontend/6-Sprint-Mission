@@ -2,6 +2,7 @@
 .wrap {
   display:grid;
   grid-template-rows:70px 1fr 160px;
+  overflow-x:hidden;
 }
 .header {
   display:flex;
@@ -12,6 +13,12 @@
   padding:0 10.42vw;
   background:#fff;
   
+  @media screen and (max-width:$size-t){
+    padding: 0 3.23vw;
+  }
+  @media screen and (max-width:$size-m){
+    padding: 0 4.27vw;
+  }
   .img-logo {
     display:flex;
   }
@@ -30,23 +37,45 @@
   display:flex;
   box-sizing:border-box;
   width:100vw;
+  flex-wrap:wrap;
   justify-content:space-between;
+  align-content:flex-start;
   padding:32px 10.42vw 0;
   background:#111827;
   color:#fff;
-  .footer-tit {
+
+  @media screen and (max-width:$size-t){
+    padding: 32px 3.23vw 0;
+  }
+  @media screen and (max-width:$size-m){
+    align-items:flex-start;
+    padding: 32px 4.27vw 0;
+    gap:24px 0;
+  }
+  &__tit {
     font-family: Pretendard, sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 19px;
+    line-height: 1.9rem;
+    color:var(--cool-grey400);
+    @media screen and (max-width:$size-m){
+      order:3;
+      flex:1 0 100%;
+    }
   }
-  .footer-nav {
+  &__nav {
     display:flex;
+    height:min-content;
     gap:3.07vw;
+    font-family: Pretendard, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.9rem;
   }
-  .footer-sns {
+  &__sns {
     display:flex;
-    gap:0.625vw;
+    height:min-content;
+    gap:12px;
   }
   .link {
     &:visited {

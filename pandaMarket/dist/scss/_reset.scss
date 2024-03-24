@@ -1,0 +1,31 @@
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p {
+  margin:0;
+}
+
+a {
+  text-decoration:none;
+}
+
+ul, dl {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+fieldset {
+  margin:0;
+  padding:0;
+  border:none;
+}
+
+button {
+  cursor:pointer;
+}
+
+input[type="password"] {
+  &::-ms-reveal,
+  &::-ms-clear {
+    display:none;
+  }
+}
