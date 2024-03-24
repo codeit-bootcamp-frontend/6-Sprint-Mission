@@ -1,9 +1,8 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-
-/* .text1 {
-    font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    font-weight: 600;
-} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   /* width: 1920px; */
@@ -14,17 +13,18 @@ body {
 
 /* 헤더 */
 header {
-  /* width: 1920px; */
-  height: 70px;
-  display: flex;
-  align-items: center;
-}
-.header {
   width: 100%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 200px;
+  padding: 0 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+main {
+  margin-top: 70px;
 }
 
 .logo_home {
@@ -32,17 +32,18 @@ header {
   height: 51px;
 }
 
-.login {
+.login.button {
   font-family: pretendard;
   font-weight: 600;
   font-size: 16px;
-  line-height: 19.09px;
+  padding: 12px 20px;
   width: 128px;
   height: 48px;
   background-color: #3692ff;
   color: #ffffff;
   border-radius: 8px;
   border: none;
+  text-align: center;
 }
 
 .button {
@@ -62,11 +63,24 @@ header {
   height: 540px;
   background-color: #cfe5ff;
   display: flex;
-  justify-content: center;
-  align-items: end;
+  align-items: center;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+}
+.banner_top {
+  background-image: url("../images/Img_home_top.png");
 }
 
+.banner_bottom {
+  background-image: url("../images/Img_home_bottom.png");
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
 .contents {
   width: 1200px;
   padding-bottom: 138px;
@@ -83,15 +97,13 @@ header {
 }
 .banner_top .text_box,
 .banner_bottom .text_box {
-  position: relative;
-  top: -170px;
-  left: 40px;
 }
 .banner_top .text1 {
   font-family: pretendard;
   font-weight: 700;
   font-size: 40px;
   line-height: 56px;
+  margin-bottom: 32px;
 
   color: #374151;
 }
@@ -109,8 +121,7 @@ header {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  width: 355px;
-  height: 56px;
+  padding: 16px 124px;
   background-color: #3692ff;
   color: #ffffff;
   border-radius: 40px;
