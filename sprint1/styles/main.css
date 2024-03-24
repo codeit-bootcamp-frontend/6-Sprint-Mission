@@ -1,0 +1,63 @@
+.banner {
+  background-color: #cfe5ff;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
+}
+
+#hero {
+  background-image: url("../images/home/hero-image.png");
+}
+
+#features {
+  padding-bottom: 138px;
+}
+
+#bottomBanner {
+  background-image: url("../images/home/bottom-banner-image.png");
+}
+
+#signinButton {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14.5px 43px;
+}
+
+.banner .pill-button {
+  margin-top: 32px;
+}
+
+.feature {
+  padding: 138px 0;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.feature:nth-child(2) {
+  text-align: right;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-tag {
+  color: var(--blue);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.feature-description {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.08em;
+  margin-top: 24px;
+}
