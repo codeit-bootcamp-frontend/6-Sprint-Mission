@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style/signin.css">
   <!-- Favicon -->
   <link rel="icon" href="/img/panda-face.png">
-  <script defer>
+  <script>
     function show() {
         document.getElementById('user-password').setAttribute('type', 'text');
         document.querySelector('.on').style.display = 'inline-block';
@@ -40,7 +40,7 @@
           name="user-email" 
           type="email"
           placeholder="이메일을 입력해주세요"
-          autocomplete="user-name"
+          autocomplete="username"
           required
           >
       </div>
@@ -93,10 +93,10 @@
             </ul>
         </div>
         <!-- Go to Signup -->
-        <div class="goto-signup">
-          <p>
+        <div class="goto-signup-items">
+          <p class="goto-signup-title">
             판다마켓이 처음이신가요?
-            <a href="/page/signup.html">
+            <a class="goto-signup" href="/page/signup.html">
               회원가입
             </a>
           </p>

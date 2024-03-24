@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style/signup.css">
   <!-- Favicon -->
   <link rel="icon" href="/img/panda-face.png">
-  <script defer>
+  <script>
     function show() {
       document.getElementById('user-password').setAttribute('type', 'text');
       document.querySelector('.off').style.display = 'none';
@@ -48,24 +48,24 @@
       <div class="input-items">
         <label for="user-email">이메일</label>
         <input 
-        id="user-email" 
-        name="user-email" 
-        type="email"
-        placeholder="이메일을 입력해주세요"
-        autocomplete="user-email"
-        required
-          >
+          id="user-email" 
+          name="user-email" 
+          type="email"
+          placeholder="이메일을 입력해주세요"
+          autocomplete="email"
+          required
+        >
       </div>
       <div class="input-items">
         <label for="user-name">닉네임</label>
         <input 
-        id="user-name" 
-        name="user-name" 
-        type="text"
-        placeholder="닉네임을 입력해주세요"
-        autocomplete="user-name"
-        required
-          >
+          id="user-name" 
+          name="user-name" 
+          type="text"
+          placeholder="닉네임을 입력해주세요"
+          autocomplete="nickname"
+          required
+        >
       </div>
       <div class="input-items passwrod">
         <label for="user-password">비밀번호</label>
@@ -148,10 +148,10 @@
         </ul>
       </div>
       <!-- Go to Signup -->
-      <div class="goto-signin">
-        <p>
+      <div class="goto-signin-items">
+        <p class="goto-signin-title">
           이미 회원이신가요?
-          <a href="/page/signin.html">
+          <a class="goto-signin" href="/page/signin.html">
             로그인
           </a>
         </p>
