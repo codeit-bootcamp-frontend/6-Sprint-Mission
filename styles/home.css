@@ -24,7 +24,12 @@ body {
 /* CSS for header */
 
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
+  background-color: var(--white);
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
   padding: 10px 200px 9px;
@@ -49,7 +54,7 @@ header {
 }
 
 .banner-text {
-  /* Q1. absolute로 배치하는 게 맞을까요? */
+  width: 357px;
   position: absolute;
   left: 0px;
 }
@@ -59,7 +64,6 @@ header {
 }
 
 .banner-content img {
-  /* Q1. absolute로 배치하는 게 맞을까요? */
   position: absolute;
   bottom: 0;
   right: -137px;

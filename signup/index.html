@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>판다마켓 로그인</title>
+  <title>판다마켓 회원가입</title>
   <link rel="icon" href="/images/logo/favicon.ico">
   <link rel="stylesheet" href="/styles/global.css">
   <link rel="stylesheet" href="/styles/login.css">
@@ -15,14 +15,20 @@
     </a>
   </header>
   <main>
-    <form id="login-form">
+    <form id="signup-form">
       <label class="label" for="email">이메일</label>
       <input class="input" type="email" id="email" placeholder="이메일을 입력해주세요">
+
+      <label class="label" for="nickname">닉네임</label>
+      <input class="input" type="text" id="nickname" placeholder="닉네임을 입력해주세요">
 
       <label class="label" for="password">비밀번호</label>
       <input class="input" type="password" id="password" placeholder="비밀번호를 입력해주세요">
 
-      <button class="button button-large">로그인</button>
+      <label class="label" for="password-check">비밀번호 확인</label>
+      <input class="input" type="password" id="password-check" placeholder="비밀번호를 다시 한 번 입력해주세요">
+
+      <button class="button button-large">회원가입</button>
 
       <div class="quick-login">
         <p>간편 로그인하기</p>
@@ -36,9 +42,9 @@
         </div>
       </div>
 
-      <div class="signup">
-        <span>판다마켓이 처음이신가요?</span>
-        <a href="/signup">회원가입</a>
+      <div class="login"> 
+        <span>이미 회원이신가요?</span>
+        <a href="/login">로그인</a>
       </div>
     </form>
   </main>
