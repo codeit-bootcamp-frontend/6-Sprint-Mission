@@ -24,7 +24,6 @@
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    overflow-x:hidden;
     
 }
 
@@ -47,6 +46,11 @@ header{
     display:grid;
     height: 70px;
     grid-template-columns: 353px 1fr 328px;
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 1;
+
 }
 
 header a:first-child{
@@ -62,14 +66,19 @@ header a:last-child{
     height: 51px;
 }
 .login-btn{
-    width: 128px;
-    height: 48px;
-    background-color: var(--btn1);
-    text-align: center;
-    border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
+    border-radius: 8px;
+    padding: 14.5px 43px;
     line-height: 19.09px;
+    background-color: var(--btn1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
 
 }
 
@@ -118,12 +127,16 @@ main{
 
 .action-btn{
     background-color: var(--btn1);
-    width: 355px;
-    height: 56px;
+    padding: 16px 124px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 40px;
     line-height: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 .top .banner-img{
     width: 996px;
@@ -235,4 +248,49 @@ footer{
 .footer-sns{
     display: flex;
     gap: 12px;
+}
+
+@media(max-width: 1200px) {
+    .banner{
+      
+        grid-template-columns:  100px 1fr 100px;
+    
+    }
+    main{
+    grid-template: 540px 1fr 540px / 100px 1fr 100px;
+}
+
+
+    .banner-content {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .banner-txt p {
+        text-align: center;
+    }
+
+    .top .banner-img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .bottom .banner-img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+    .info-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-card-txt{
+        align-items: center;
+    }
+
+
 }
