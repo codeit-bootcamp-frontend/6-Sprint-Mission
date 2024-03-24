@@ -1,16 +1,30 @@
 /* color */
 
 :root {
-  --main-color: #3692ff;
-  --light-sky-blue: #cfe5ff;
+  --blue: #3692ff;
+
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+
+  --cool-gray800: #1f2937;
+
+  --light-blue-200: #cfe5ff;
+  --light-blue-100: #e6f2ff;
   --footer-bg: #111827;
-  --text-gray: #9ca3af;
-  --text-white: #e5e7eb;
+  --light-gray: #9ca3af;
+  --input-bg: #f3f4f6;
 }
 
 /* z-index */
 
 :root {
+  --GNB: 999;
   --title-with-img: 2;
   --img: 1;
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/variables.css" />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/auth.css" />
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -27,7 +28,7 @@
       /></a>
     </div>
 
-    <form class="login-form">
+    <form class="signup-form">
       <div class="form__block">
         <label for="email">이메일</label>
         <input
@@ -35,6 +36,16 @@
           name="email"
           type="email"
           placeholder="이메일을 입력해주세요"
+        />
+      </div>
+
+      <div class="form__block">
+        <label for="username">닉네임</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="닉네임을 입력해주세요"
         />
       </div>
 
@@ -56,7 +67,24 @@
       </div>
 
       <div class="form__block">
-        <button class="form__submit-btn">로그인</button>
+        <label for="password-confirm">비밀번호 확인</label>
+        <div class="password-container">
+          <input
+            id="password-confirm"
+            name="password-confirm"
+            type="password"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
+          <img
+            class="password-eye"
+            src="assets/icon/password_eye.svg"
+            alt="password-eye"
+          />
+        </div>
+      </div>
+
+      <div class="form__block">
+        <button class="form__submit-btn">회원가입</button>
       </div>
 
       <div class="form__block">
@@ -80,8 +108,8 @@
       </div>
 
       <div class="form__block form__link">
-        <span>판다마켓이 처음이신가요?</span>
-        <a href="/signup.html">회원가입</a>
+        <span>이미 회원이신가요?</span>
+        <a href="/login.html">로그인</a>
       </div>
     </form>
   </body>

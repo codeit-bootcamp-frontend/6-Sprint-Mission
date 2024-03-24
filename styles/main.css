@@ -7,6 +7,10 @@
   align-items: center;
   background-color: white;
   padding: 0 200px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: var(--GNB);
 }
 
 .header__logo {
@@ -15,7 +19,7 @@
 
 .header__login-btn {
   cursor: pointer;
-  background-color: var(--main-color);
+  background-color: var(--blue);
   padding: 12px 20px;
   border-radius: 8px;
   color: white;
@@ -32,7 +36,7 @@
 
 .home-top,
 .home-bottom {
-  background-color: var(--light-sky-blue);
+  background-color: var(--light-blue-200);
 }
 
 .home-top__container,
@@ -65,7 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--blue);
   height: 56px;
   border-radius: 40px;
   font-weight: 600;
@@ -115,7 +119,7 @@
 }
 
 .section__badge {
-  color: var(--main-color);
+  color: var(--blue);
   font-weight: 700;
   font-size: 18px;
   line-height: 25.2px;
@@ -160,7 +164,7 @@
 }
 
 .footer__copyright {
-  color: var(--text-gray);
+  color: var(--light-gray);
   cursor: pointer;
 }
 
@@ -171,7 +175,7 @@
 
 .footer__info a {
   cursor: pointer;
-  color: var(--text-white);
+  color: var(--gray200);
 }
 
 .footer__sns {
