@@ -1,0 +1,149 @@
+/* Section: Banner */
+.banner-top-wrap, .banner-bottom-wrap {
+  height: 540px;
+  background-color: var(--blue-50);
+  display: flex;
+  justify-content: center;
+}
+
+.banner-container {
+  display: flex;
+}
+
+.banner-container:hover {
+  cursor: default;
+}
+
+.banner-container:nth-child(odd) {
+  align-items: center;
+}
+
+.banner-container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #374151;
+}
+
+.banner-top-wrap img {
+  width: 996px;
+  height: 447px;
+  margin-top: 93px;
+}
+
+.banner-bottom-wrap img {
+  width: 996px;
+  height: 540px;
+}
+
+.banner-bottom-wrap h2 {
+  display: inline-block;
+  width: 355px;
+}
+
+.btn-items {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  width: 355px;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--blue-500);
+}
+
+.btn-items a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn-items:hover {
+  cursor: pointer;
+}
+
+/* Section: promotion */
+.promotion-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promotion-wrap:hover {
+  cursor: default;
+}
+
+.promotion-container {
+  height: 720px;
+  display: flex;
+  align-items: center;
+  gap: 10%
+}
+
+.promotion-container:nth-child(odd) {
+  justify-content: right;
+}
+
+.promotion-container img {
+  width: 588px;
+  height: 444px;
+}
+
+.promotion-title span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  color: var(--blue-500);
+}
+
+.promotion-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--gray-600);
+}
+
+.promotion-title p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--gray-600);
+}
+
+/* Footer */
+footer {
+  height: 160px;
+  padding: 32px 200px;
+  background-color: var(--blue-800);
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.footer-container:nth-child(odd) {
+  color: var(--gray-200);
+}
+
+.footer-container:nth-child(even) {
+  display: flex;
+  gap: 30px;
+}
+
+#footerMenu a {
+  color: var(--gray-50);
+  text-decoration: none;
+}
+
+.footer-container span:hover, .footer-container img:hover {
+  cursor: pointer;
+}
+
+.footer-container:last-child {
+  display: flex;
+  gap: 12px;
+}
