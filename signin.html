@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="color.css" />
-    <link rel="stylesheet" href="component.css" />
-    <link rel="stylesheet" href="./sign.css" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="./public/stylesheets/reset.css" />
+    <link rel="stylesheet" href="./public/stylesheets/common.css" />
+    <link rel="stylesheet" href="./public/stylesheets/component.css" />
+    <link rel="stylesheet" href="./public/stylesheets/sign.css" />
   </head>
   <body>
     <div class="signin-container">
       <div class="logo">
-        <a href="/"> <img src="./logo/panda-logo.svg" alt="판다마켓" /></a>
+        <a href="/">
+          <img src="./assets/img/panda-logo.svg" alt="판다마켓"
+        /></a>
       </div>
 
       <form action="" class="user-form">
@@ -33,29 +35,29 @@
             type="password"
             id="password"
             class="input-primary"
-            placeholder="비밀번호를 입력해주세요."
+            placeholder="비밀번호를 입력해주세요"
           />
           <!-- <i>
-            <img src="./icon/eye.svg" alt="비밀번호 보기" />
+            <img src="./assets/icon/eye.svg" alt="비밀번호 보기" />
           </i> -->
           <i>
-            <img src="./icon/eye-off.svg" alt="비밀번호 보기" />
+            <img src="./assets/icon/eye-off.svg" alt="비밀번호 보기" />
           </i>
 
           <!-- <span class="input--caption-red">비밀번호가 일치하지 않습니다.</span> -->
           <!-- <span class="input--caption-olive">8자 이상 입력해주세요.</span> -->
         </div>
-        <button>로그인</button>
+        <button class="btn">로그인</button>
       </form>
 
       <div class="easy-signin">
         <span>간편 로그인 하기</span>
         <div>
           <a href="https://www.google.com/">
-            <i><img src="./icon/google-round.svg" alt="구글" /></i>
+            <i><img src="./assets/icon/google-round.svg" alt="구글" /></i>
           </a>
           <a href="https://www.kakaocorp.com/page/">
-            <i><img src="./icon/kakao-round.svg" alt="카카오" /></i>
+            <i><img src="./assets/icon/kakao-round.svg" alt="카카오" /></i>
           </a>
         </div>
       </div>

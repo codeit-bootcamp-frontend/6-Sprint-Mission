@@ -1,40 +1,31 @@
 /* button */
 
-.btn-small {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 128px;
-  height: 48px;
-  padding: 12px 20px;
   background-color: var(--color-blue);
-  border-radius: 8px;
   font-weight: 600;
-  font-size: 16px;
   color: #fff;
   text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #1967d6;
+}
+
+.btn-small {
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 .btn-large {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 355px;
   height: 56px;
-  background-color: var(--color-blue);
   border-radius: 40px;
-  font-weight: 600;
   font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.btn-small:hover {
-  background-color: #1967d6;
-}
-
-.btn-large:hover {
-  background-color: #1967d6;
 }
 
 .btn--click {
@@ -60,11 +51,6 @@ input::placeholder {
   margin-bottom: 8px;
   font-weight: 400;
   font-size: 16px;
-}
-
-/* todo 적용안됨 수정 예정 */
-.input i {
-  fill: currentColor;
 }
 
 /* input */
@@ -105,7 +91,7 @@ input::placeholder {
   left: 16px;
   width: 24px;
   height: 24px;
-  background-image: url(/icon/search.svg);
+  background-image: url(./assets/icon/search.svg);
 }
 
 .icon-toggle::before {
@@ -115,7 +101,7 @@ input::placeholder {
   right: 20px;
   width: 24px;
   height: 24px;
-  background-image: url(/icon/toggle.svg);
+  background-image: url(./assets/icon/toggle.svg);
 }
 
 /* input option */
@@ -245,7 +231,7 @@ input::placeholder {
   margin-bottom: 16px;
   width: 24px;
   height: 24px;
-  background-image: url(/icon/check.svg);
+  background-image: url(./assets/icon/check.svg);
 }
 
 .modal p {
