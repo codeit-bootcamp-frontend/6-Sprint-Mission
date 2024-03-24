@@ -14,6 +14,7 @@ header{
   align-items:center;
   background-color:#fff;
   border-bottom:1px solid #dfdfdf;
+  z-index:9999;
 }
 header button{
   padding:120x 20px;
@@ -22,6 +23,16 @@ header button{
   height:48px;
   border-radius:8px;
 }
+  @media screen and (max-width: 1200px) {
+    header{
+      padding:10px 24px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    header{
+      padding:16px;
+    }
+  }
 /****************** CSS seting *********************/
 .container{
   margin:0 auto;
@@ -53,7 +64,7 @@ button{
   width:100%;
   height:540px;
   background-color:var(--brand_sky);
-  background-image:url(.././images/Img_home_top.png);
+  background-image:url(../images/Img_home_top.png);
   background-repeat:no-repeat;
   background-position:74% bottom;
 }
@@ -98,8 +109,13 @@ button{
   justify-content:center;
   flex-basis:50%;
 }
+.introduction:nth-child(2n) img {
+  text-align:right;
+  order:2;
+}
 .introduction:nth-child(2n) .intro_txt {
   text-align:right;
+  order:1;
 }
 .introduction .intro_txt span{
   font-size:18px;
@@ -124,17 +140,59 @@ button{
   background-repeat:no-repeat;
   background-position:74% bottom;
 }
-.bottom_banner .container{
+.bottom_banner .bt_container{
   display:flex;
   flex-direction:column;
   justify-content:center;
   height:100%;
 }
-.bottom_banner .container p{
+.bottom_banner .bt_container p{
   font-size:40px;
   font-weight:700;
   color:var(--cool_gray);
 }
+  @media screen and (max-width: 1200px) {
+    .main_banner{
+      height:770px;
+      background-position:center bottom;
+    }
+    .main_banner .banner_wrap .banner_txt{
+      position:relative;
+      bottom:100px;
+      width:100%;
+      text-align:center;
+    }
+    .introduction{
+      padding:16px;
+      flex-direction:column;
+    }
+    .introduction .intro_txt{
+      padding:16px 0 0 0;
+    }
+    .introduction:nth-child(2n) img {
+      text-align:right;
+      order:1;
+    }
+    .introduction:nth-child(2n) .intro_txt {
+      text-align:right;
+      order:2;
+    }
+    .bottom_banner{
+      height:927px;
+      background-position:center bottom;
+      background-size:100%;
+    }
+    .bottom_banner .bt_container{
+      position:relative;
+      bottom:100px;
+      text-align:center;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bottom_banner{
+      height:540px;
+    }
+  }
 /****************** footer *********************/
 footer{
   padding:32px 200px;
@@ -158,6 +216,19 @@ footer .footer_wrap .sns_link ul{
   display:flex;
   gap:20px;
 }
+  @media screen and (max-width: 1200px) {
+    footer {
+      padding:16px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    footer .footer_wrap {
+      flex-direction:column;
+    }
+    footer .footer_wrap .page_link{
+      margin:16px 0;
+    }
+  }
 /****************** signin *********************/
 .form_header{
   padding:60px 0 0 0;
@@ -184,11 +255,6 @@ footer .footer_wrap .sns_link ul{
   font-weight:700;
   color:#1F2937;
 }
-.user_form_wrap .form_wrap input{
-  padding:20px;
-  border-radius:12px;
-  background-color:var(--cool_tray_lignt);
-}
 
 .user_form_wrap .form_wrap button{
   padding:20px 0;
@@ -212,6 +278,21 @@ footer .footer_wrap .sns_link ul{
   max-width:600px;
   background-color:var(--brand_sky_light);
 }
+.user_form_wrap .form_wrap .input_wrap{
+  padding:20px;
+  display:flex;
+  flex-direction:space-between;
+  align-items:center;
+  border-radius:12px;
+  background-color:var(--cool_tray_lignt);
+}
+.user_form_wrap .form_wrap .input_wrap input{
+  flex-grow:1;
+  background:none;
+}
+.user_form_wrap .form_wrap .input_wrap input:focus{
+  border-bottom:1px solid var(--brand_blue);
+}
 .sns_login_wrap p{
   font-weight:500;
   color:#1F2937;
@@ -229,6 +310,27 @@ footer .footer_wrap .sns_link ul{
 .sign_in_ask a{
   color:#3182F6;
 }
+  @media screen and (max-width: 1200px) {
+    .user_form_wrap{
+      padding:20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .form_header h1{
+      margin:0 auto;
+      width:60%;
+    }
+    .form_header h1 a img{
+     display:block;
+     width:100%;
+    }
+    .user_form_wrap{
+      max-width:400px;
+    }
+    .sns_login_wrap{
+      max-width:360px;
+    }
+  }
 /****************** signinup *********************/
 
 
