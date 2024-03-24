@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Pretendard-Regular';
-  background-color: #dcecff;
+  background-color: #cfe5ff;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -17,6 +17,9 @@ body {
   padding: 10px 200px;
   min-width: 375px;
   gap: 150px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .main-bar-size {
@@ -46,7 +49,7 @@ body {
 }
 
 .button {
-  border-radius: 9999px;
+  border-radius: 40px;
   width: 355px;
   text-align: center;
 }
@@ -74,15 +77,18 @@ body {
 
 
 .banner {
-  max-width: 1920px;
+  max-width: 1200px;
   height: 540px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
 .banner-img {
+  width: 75%;
   position: absolute;
-  right: 223px;
+  right: -50px;
   bottom: 0;
   z-index: -1;
 }
@@ -95,11 +101,6 @@ body {
   margin-bottom: 32px;
 }
 
-.banner-text {
-  position: absolute;
-  left: 360px;
-  top: 170px
-}
 
 .mini-text {
   color: #3692FF;
