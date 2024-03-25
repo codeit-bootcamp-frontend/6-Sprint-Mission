@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    margin:0;
+}
+
+.sign-banner {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 60px auto; 
+}
+
+.sign-banner-img {
+    width: 369px;
+    height: 132px;
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    margin: 40px auto;
+    gap: 24px;
+}
+
+.sign-form label {
+    display: block;
+    color: #1F2937;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.sign-form input {
+    background-color: #F3F4F6;
+    color: #9CA3AF;
+    font-size: 16px;
+    width: 640px;
+    height: 56px;
+    padding: 16px;
+    padding-left: 24px;
+    border-radius: 12px;
+    border: none;
+}
+
+.sign-form input:focus {
+    border: 2px solid #3692FF;
+    outline: none;
+}
+
+.pw-box {
+    position: relative;
+}
+
+button {
+    background-color: #9CA3AF;
+    width: 100%;
+    height: 56px;
+    border-radius: 40px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sign-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f2ff;
+    border-radius: 8px;
+    width: 100%;
+    height: 74px;
+    padding: 25px 23px;
+}
+
+.sign-social .social-icon {
+    display: flex;
+    gap:16px
+}
+
+.sign-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1F2937;
+    font-size: 15px;
+    font-weight: 500;
+    gap: 4px;
+}
+
+.sign-footer a {
+    text-decoration: underline;
+    color: #3182F6;
+}
+
+
