@@ -1,0 +1,68 @@
+.sign-conrainer {
+  max-width: 640;
+  margin: 0 auto;
+}
+
+.logo-home {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.user-info {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  display: block;
+}
+
+label {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+input {
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  color: #9ca3af;
+  outline-color: #3692ff;
+  width: 100%;
+}
+
+.social-login {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6f2ff;
+  padding: 16px 23px;
+  margin: 24px;
+}
+
+.social-login h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.social-login-btn {
+  gap: 16px;
+  display: flex;
+}
+
+.sign-ㅡmember {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.sign-ㅡmember a {
+  color: #3182f6;
+  text-decoration: underline;
+}
