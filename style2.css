@@ -1,0 +1,119 @@
+
+* {
+    box-sizing: border-box;
+} 
+
+body{
+    color: #374151;
+    width: 100%;
+    font-family: "Pretendard", sans-serif;
+}
+
+.header{
+    margin: 0 auto ;
+    display: flex;
+    /* top : 60px; */
+    width: 396px;
+    height: 132px;
+    justify-content: left;
+    /* align-items: center; */
+    /* gap: 1%; */
+} 
+.header #logo {
+
+    margin: 0 auto;
+    width: 103.53px;
+    height: 103.88px;
+    /* gap : 1%; */
+}
+.name {
+    color : #3692FF;
+    font-family: ROKAF Sans;
+    font-size: 66.34px;
+    font-weight: 700;
+    width: 266px;
+    height: 90px;
+}
+
+
+form{
+    display: block;
+    margin : 0 auto;
+    width: 640px;
+}
+label {
+    display: block;
+    /* margin: 2.5rem auto; */
+    gap: 16px;
+    margin: 24px 0;
+
+}
+
+input{
+    display:block;
+    width: 640px;
+    background-color : #F3F4F6;
+    height: 56px;
+    gap: 10px;
+    border-radius: 12px;
+    opacity: 0px;
+    margin-top: 16px;
+
+}
+.pw_input{
+    background-color : #F3F4F6;
+    width: 640px;
+    /* height: 56px; */
+    gap: 10px;
+    border-radius: 12px;
+    opacity: 0px;
+    margin-top: 16px;
+}
+.loginButton{
+    background-color:#9CA3AF;
+    width:640px;
+    height:56px;
+    padding: 16px 124px;
+    gap: 10px;
+    border-radius: 40px;
+    font-weight: 600;
+    color:#FFFFFF;
+    text-align:center;
+    margin-top: 24px;
+
+}
+.easyloginbox{
+    background-color: #E6F2FF;
+    width:640px;
+    height:74px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+   
+}
+.easylogin_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.easylogin{ 
+    color :#1F2937;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+
+}
+
+.images{
+    width: 100px;
+    height:42px;
+    display: flex;
+    /* gap: 16px; */
+}
+.signin{
+    display: flex;
+    justify-content: center ;
+    margin-top: 24px;
+}
