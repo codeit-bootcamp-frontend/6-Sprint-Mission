@@ -1,79 +1,18 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-
-*
+header
 {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-}
-
-body {
-	overflow-x: hidden;
-}
-
-:root
-{
-	--red: #F74747;
-	--blue: #3692FF;
-
-	--gray900: #1B1D1F;
-	--gray800: #26282B;
-	--gray600: #454C53;
-	--gray500: #72787F;
-	--gray400: #9EA4A8;
-	--gray300: #E5E7EB;
-	--gray100: #E8EBED;
-	--gray50: #F7F7F8;
-
-	font-family: Pretendard;
-}
-
-a[href]
-{
-	text-decoration: none;
-}
-a[href]:hover
-{
-	cursor: pointer;
-}
-
-.button
-{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.button:hover
-{
-	background-color: #1967D6 !important;
-}
-.button:focus
-{
-	background-color: #1251AA !important;
-}
-.button.inactive
-{
-	background-color: #9CA3AF !important;
-}
-
-header > .container,
-footer > .container
-{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-left: 200px;
-	margin-right: 200px;
+	top: 0px;
+	position: sticky;
+	background-color: #FFFFFF;
 }
 header > .container
 {
 	height: 70px;
+	margin-left: 200px;
+	margin-right: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
-footer > .container
-{
-	height: 160px;
-}
-
 header > .container > a
 {
 	gap: 10px;
@@ -95,7 +34,6 @@ header > .container > a#login
 	height: 48px;
 	padding: 12px 20px;
 	border-radius: 8px;
-	background-color: var(--blue);
 }
 
 .banner
@@ -145,7 +83,6 @@ header > .container > a#login
 	height: 56px;
 	width: 355px;
 	border-radius: 40px;
-	background-color: var(--blue);
 }
 
 main
@@ -154,6 +91,7 @@ main
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	overflow-x: hidden;
 }
 main > section
 {
@@ -204,9 +142,14 @@ footer
 }
 footer > .container
 {
+	height: 160px;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-top: 30px;
+	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	padding-top: 30px;
+	justify-content: space-between;
 }
 footer > .container > *
 {
@@ -217,7 +160,6 @@ footer > .container > .center
 	gap: 30px;
 	color: var(--gray300);
 }
-
 footer > .container > .center > a 
 {
 	color: var(--gray300);
