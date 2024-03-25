@@ -1,0 +1,113 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+  margin: 60px auto 0px;
+}
+.logo-box {
+  margin: 0px auto 40px;
+}
+.logo-box > img {
+  width: 396px;
+  height: 132px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-form p {
+  font-size: 18px;
+}
+label {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+}
+input {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9ca3af;
+  background-color: #f3f4f6;
+  border: none;
+}
+input:focus {
+  outline: solid 1px #3182f6;
+}
+
+label,
+.fast-login > p,
+.go-signuppage {
+  color: #1f2937;
+}
+#email,
+#password,
+#name,
+button {
+  margin-bottom: 24px;
+  height: 56px;
+  padding: 0px 24px;
+  border-radius: 12px;
+  border: none;
+}
+button {
+  border-radius: 40px;
+  background-color: #9ca3af;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+form {
+  position: relative;
+}
+.fa-regular {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: 116px;
+  right: 24px;
+  cursor: pointer;
+}
+#pass-eye1 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: 236px;
+  right: 24px;
+  cursor: pointer;
+}
+#pass-eye2 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: 116px;
+  right: 24px;
+  cursor: pointer;
+}
+.fast-login {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 24px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 23px;
+}
+.fast-login img {
+  width: 42px;
+  height: 42px;
+}
+.go-signuppage {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+.go-signuppage a {
+  text-decoration: underline;
+  color: #3182f6;
+}
+.go-signuppage img {
+  margin-left: 16px;
+}
