@@ -1,17 +1,17 @@
 .main-container {
   position: relative;
-  background-color: var(--skyblue);
   height: 540px;
+  background-color: var(--skyblue);
 }
 
 .main-section {
+  display: flex;
+  align-items: center;
   position: relative;
+  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
   height: 540px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
 }
 
 .main-box {
@@ -22,7 +22,6 @@
 }
 
 .main-text {
-  font-family: pretendard;
   font-weight: 700;
   font-size: 40px;
   line-height: 56px;
@@ -31,32 +30,31 @@
 .main-btn {
   width: 355px;
   height: 56px;
-  background-color: var(--blue);
   border: none;
   border-radius: 80px;
-  color: white;
   font-size: 20px;
-  font-family: pretendard;
   font-weight: 600;
   line-height: 24px;
+  color: white;
+  background-color: var(--blue);
   cursor: pointer;
 }
 
 .main-panda {
-  width: 996px;
   position: absolute;
   bottom: 0;
   left: 355px;
+  width: 996px;
 }
 
 .main-section2 {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 138px 0;
   display: flex;
   align-items: center;
   gap: 64px;
+  margin: 0 auto;
+  padding: 138px 0;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .main-section2.middle {
@@ -69,24 +67,21 @@
 
 .main-sec2-category {
   font-size: 18px;
-  font-family: pretendard;
   font-weight: 700;
   line-height: 25.2px;
   color: var(--blue);
 }
 
 .main-text {
+  margin-top: 12px;
   font-size: 40px;
-  font-family: pretendard;
   font-weight: 700;
   line-height: 56px;
-  margin-top: 12px;
 }
 
 .text {
+  margin-top: 24px;
   font-size: 24px;
-  font-family: pretendard;
   font-weight: 400;
   line-height: 28.8px;
-  margin-top: 24px;
 }

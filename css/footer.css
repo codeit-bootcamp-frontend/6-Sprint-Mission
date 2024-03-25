@@ -3,13 +3,12 @@ footer {
 }
 
 .footer {
-  padding-top: 32px;
-  height: 160px;
   display: flex;
   justify-content: space-between;
   margin: 0 200px;
+  padding-top: 32px;
+  height: 160px;
   font-size: 16px;
-  font-family: pretendard;
   font-weight: 400;
   color: white;
 }
@@ -24,7 +23,7 @@ footer {
 }
 
 .icons {
-  height: 20px;
   display: flex;
+  height: 20px;
   gap: 12px;
 }
