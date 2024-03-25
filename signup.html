@@ -20,30 +20,34 @@
       </a>
     </header>
     <form>
-      <label>이메일</label>
+      <label for="email-input">이메일</label>
       <input 
         name="email"
         type="text"
         placeholder="이메일을 입력해주세요"
+        id="email-input"
       />
-      <label>닉네임</label>
+      <label for="nickname-input">닉네임</label>
       <input 
         name="nickname"
         type="text"
         placeholder="닉네임을 입력해주세요"
+        id="nickname-input"
       />
-      <label>비밀번호</label>
+      <label for="password">비밀번호</label>
       <div class="password-box">
-        <input class="password-input"
+        <input 
+        class="password-input"
         name="password"
         type="password"
         placeholder="비밀번호를 입력해주세요"
+        id="password"
         />
         <button type="button" class="visibility">
           <img alt="visibility" src="/assets/btn_visibility.png">
       </button>
       </div>
-      <label>비밀번호 확인</label>
+      <label for="password-check">비밀번호 확인</label>
       <div class="password-box">
         <button type="button" class="visibility">
           <img alt="visibility" src="/assets/btn_visibility.png">
@@ -52,6 +56,7 @@
           name="password"
           type="password"
           placeholder="비밀번호를 다시 한 번 입력해주세요"
+          id="password-check"
           />
       </div>
       <button class="signin-button">회원가입</button>
