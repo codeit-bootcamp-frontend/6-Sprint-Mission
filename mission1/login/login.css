@@ -1,0 +1,223 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* start */
+
+body {
+  box-sizing: border-box;
+  --inputColor:#3692ff;
+  --fontColor:#1f2937;
+
+}
+.card {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.card > img {
+  width: 396px;
+  height: 132px;
+}
+.card .loginBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fontColor);
+  gap: 24px;
+}
+.card input {
+  background: #F3F4F6;
+
+ 
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  width: 640px;
+}
+.card input:focus {
+  background-color: #ffffff;
+  border-color: var(--inputColor);
+}
+.card input::placeholder {
+  padding: 16px 24px;
+}
+.passwordLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.passwordLabel img {
+  cursor: pointer;
+  position: absolute;
+  right: 550px;
+}
+.loginButton {
+  cursor: pointer;
+  width: 640px;
+  height: 56px;
+  border-radius: 40px;
+  background: #9ca3af;
+  border: #9ca3af;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.simpleLoginBox {
+  margin-top: 24px;
+  background: #e6f2ff;
+  display: flex;
+  align-items: center;
+  width: 640px;
+  height: 74px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.simpleLoginBox p {
+  padding-left: 24px;
+}
+.simpleLoginIcons {
+  width: 100px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signUp {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+

@@ -1,255 +1,355 @@
-html,body{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FFFFFF;
-    
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* header */
 
-.wrap{
-    height: 70px;
-    width: 100%;    
-    background-color: #FFFFFF;
-    position: relative;
-    display: flex;
-    justify-content: space-between;   
+header {
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.wrap a{
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 200px;
+#home {
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.loginBtn{
-    cursor: pointer;
-    position: absolute;
-    border:none;
-    background-color: #3692ff;
-    border-radius: 8px;
-    padding: 12px 20px;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 600;
-    width: 128px;
-    height: 48px;
-    top: 10px;
-    right: 200px;
+#login {
+  cursor: pointer;
+  border: none;
+  background-color: #3692ff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  width: 128px;
+  height: 48px;
+  margin-right: 10px;
 }
 
 /* main */
 
-main{
-    background-color: skyblue;  
-}
- 
-.card{
-    
-    position: relative;
-    height: 540px;
-    width: 100%;
+main {
+  background-color: skyblue;
 }
 
-.card .box{
-    position: absolute;
-    top: 170px;
-    left: 360px;
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 540px;
+  width: 100%;
 }
 
-
-.box h1{
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 56px;
-    color: #374151;
+.card .box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.box button{
-    width: 355px;
-    height: 56px;
-    border-radius: 40px;
-    background-color: #3692ff;
-    border: none;
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
+.box h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
 }
 
-.card img{
-    width: 996px;
-    height: 447px;
-    margin-top: 93px;
-    margin-left: 680px;
-
+.box button {
+  width: 355px;
+  height: 56px;
+  border-radius: 40px;
+  background-color: #3692ff;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
 }
 
-.card2{
-    background-color: #FFFFFF;
-    height: 720px;
-    position: relative;
+.card img {
+  width: 996px;
+  height: 447px;
 }
 
-.card2 .confirmBox{
-    position: absolute;
-    top: 137.5px;
-    left: 360px;
-    display: flex;
-    align-items: center;
+.card2 {
+  background-color: #ffffff;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.confirmBox .specific{
-   padding-left: 50px;
-   text-align: left;
-   
-
+.card2 .confirmBox {
+  top: 137.5px;
+  left: 360px;
+  display: flex;
+  align-items: center;
 }
 
-.specific h1{
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 56px;
-    color: #374151;
+.confirmBox .specific {
+  padding-left: 50px;
+  text-align: left;
 }
 
-.specific p{
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 28.8px;
-    color: #374151;
+.specific h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
 }
 
-.card3{
-    background-color: #FFFFFF;
-    height: 720px;
-    position: relative;
+.specific p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  color: #374151;
 }
 
-.card3 .searchBox{
-    position: absolute;
-    top: 138px;
-    left: 591px;
-    display: flex;
-    align-items: center;
+.card3 {
+  background-color: #ffffff;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.searchBox .specific2{
-   
-    padding-right: 50px;
-    text-align: right;
+.card3 .searchBox {
+  display: flex;
+  align-items: center;
 }
 
-.specific2 h1{
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 56px;
-    color: #374151;
+.searchBox .specific2 {
+  padding-right: 50px;
+  text-align: right;
 }
 
-.specific2 p{
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28.8px;
-    color: #374151;
+.specific2 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
 }
 
-
-.card4{
-    background-color: #FFFFFF;
-    height: 720px;
-    position: relative;
+.specific2 p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #374151;
 }
 
-.card4 .registerBox{
-    position: absolute;
-    top: 138px;
-    left: 360px;
-    display: flex;
-    align-items: center;
+.card4 {
+  background-color: #ffffff;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.registerBox .specific3{
-    padding-left: 50px;
+.card4 .registerBox {
+  display: flex;
+  align-items: center;
 }
 
-.specific3 h2{
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 56px;
-    color: #374151;
+.registerBox .specific3 {
+  padding-left: 50px;
 }
 
-.specific3 p{
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28.8px;
-    color: #374151;
+.specific3 h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
 }
 
-
-
-.card5{
-    height: 540px;
-    position: relative;
+.specific3 p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #374151;
 }
 
-.card5 .pandaTrade{
-    position: absolute;
-    top: 214px;
-    left: 360px;
-    
+.card5 {
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card5 h2{
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 56px;
-    color: #374151;
-
+.card5 h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
 }
 
-.card5 img{
-    display: inline-block;
-    margin-left: 680px;
-    height: 540px;
+.card5 img {
+  height: 540px;
 }
 
-footer{
-    height: 160px;
-    background-color: #111827;
-    position: relative;
+footer {
+  height: 160px;
+  background-color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-footer .tag{
-    display: flex;
-    justify-content: space-around;
+footer .tag {
+  display: flex;
+  justify-content: space-around;
 }
 
-.tag .codeit{
-    color: #9CA3AF;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
+.tag .codeit {
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
 }
 
-.tag .privacy{
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: #E5E7EB;
+.tag .privacy {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #e5e7eb;
 }
 
-.social{
-    width: 116px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.social {
+  width: 116px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
