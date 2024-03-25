@@ -12,3 +12,22 @@ body {
   height: 132px;
   margin: 60px auto;
 }
+
+.login {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 640px;
+  height: 56px;
+  background-color: #9CA3AF;
+  border-radius: 40px;
+  border: 0 solid #fff;
+  gap: 10px;
+  cursor: pointer;
+  margin: 24px auto;
+}
