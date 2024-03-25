@@ -1,3 +1,4 @@
+
 body {
   display: flex;
   align-items: center;
@@ -14,6 +15,10 @@ form {
   flex-direction: column;
   gap: 24px;
   width: 640px;
+}
+
+form input:focus {
+  border: solid 2px var(--blue);
 }
 .img-container {
   display: flex;
@@ -146,5 +151,10 @@ form {
     right: 14px;
     top: 48px;
     cursor: pointer;
+  }
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 500px;
   }
 }
