@@ -1,26 +1,6 @@
 @import "reset.css";
 
-:root {
-  --blue: #3692FF; 
-  --gray900: #1b1d1f;
-  --gray800: #26282b;
-  --gray700: #374151;
-  --gray600: #72767f;
-  --gray500: #72787f;
-  --gray400: #9ca3af;
-  --gray200: #e5e7eb;
-  --gray100: #f3f4f6;
-  --gray50: #f7f7f8;
-  --skyblue: #E6F2FF;
-  --white: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Pretendard", sans-serif;
   width: 640px;
   margin: 60px auto;
 }

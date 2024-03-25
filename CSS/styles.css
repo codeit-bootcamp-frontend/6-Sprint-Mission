@@ -1,17 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
 @import "reset.css";
-
-:root {
-  --blue: #3692FF; 
-  --gray900: #111827;
-  --gray700: #374151;
-  --skyblue: #cfe5ff;
-  --white: #ffffff;
-}
-
 
 body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
