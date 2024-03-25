@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>판다마켓</title>
+  <link rel="icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="header_container">
+        <a href="./home.html"><img src="./img/logo.png" alt="로고"></a>
+      </div>
+    </header>
+    <main>
+      <div class="main_container">
+        <form class="login_form" action="/" method="post">
+          <label for="email">이메일</label>
+          <input type="email" id="email" placeholder="이메일을 입력해주세요">
+          <label for="nickName">닉네임</label>
+          <input type="text" id="nickName" placeholder="닉네임을 입력해주세요">
+          <label for="password">비밀번호</label>
+          <input class="add_icon" id="password" type="password" placeholder="비밀번호를 입력해주세요">
+          <label for="password">비밀번호 확인</label>
+          <input class="add_icon" id="password" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+          <button type="submit">회원가입</button>
+        </form>
+        <div class="login_menu">
+          <div class="login_simple">
+            <p>간편 로그인하기</p>
+            <div class="login_simple_button">
+              <a href="https://www.google.com/"><img src="./img/ic_google.svg" alt="구글 간편로그인"></a>
+              <a href="https://www.kakaocorp.com/page/"><img src="./img/ic_kakao.svg" alt="카카오톡 간편로그인"></a>
+            </div>
+          </div>
+          <div class="login_to_signin">
+            <p>이미 회원이신가요? <a href="./signin.html">로그인</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --color-gray900: #1B1D1F;
+  --color-gray800: #26282B;
+  --color-gray600: #454C53;
+  --color-gray500: #72787F;
+  --color-gray400: #9EA4A8;
+  --color-gray200: #E5E7EB;
+  --color-gray100: #E8E8ED;
+  --color-gray50: #F7F7F8;
+  --color-blue: #3692FF;
+  --color-basic: #1F2937;
+  --color-input-background: #F3F4F6;
+  --color-button-backgound: #9CA3AF;
+  --color-white: #FFFFFF;
+  --color-background-blue: #E6F2FF;
+}
+
+/* ---- 태그 ---- */
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--color-blue);
+}
+
+p {
+  color: var(--color-basic);
+}
+
+label {
+  font-weight: 700;;
+  font-size: 18px;
+  line-height: 21.48px;
+  color: var(--color-basic);
+}
+
+input {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-input-background);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+input:focus {
+  outline-color: var(--color-blue);
+}
+
+form > button {
+  height: 56px;
+  padding: 16px 124px;
+  border-radius: 40px;
+  background-color: var(--color-button-backgound);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
