@@ -234,7 +234,7 @@ body {
 }
 
 /* Go to Sing Up */
-.goto-signup {
+.goto-signup-items {
   width: 100%;
 
   display: flex;
@@ -242,7 +242,7 @@ body {
   align-items: flex-end;
 }
 
-.goto-signup p {
+.goto-signup-items .goto-signup-title {
   font-family: var(--pretendard);
   font-size: 15px;
   font-weight: 500;
@@ -251,7 +251,7 @@ body {
   color: var(--cool-gray-800);
 }
 
-.goto-signup p > a {
+.goto-signup-title .goto-signup {
   color: var(--brand-blue);
   text-decoration: underline;
 }

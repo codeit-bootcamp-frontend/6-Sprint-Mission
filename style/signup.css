@@ -232,7 +232,7 @@ body {
 }
 
 /* Go to Sing In */
-.goto-signin {
+.goto-signin-items {
   width: 100%;
 
   display: flex;
@@ -240,7 +240,7 @@ body {
   align-items: flex-end;
 }
 
-.goto-signin p {
+.goto-signin-items .goto-signin-title {
   font-family: var(--pretendard);
   font-size: 15px;
   font-weight: 500;
@@ -249,7 +249,7 @@ body {
   color: var(--cool-gray-800);
 }
 
-.goto-signin p > a {
+.goto-signin-title .goto-signin {
   color: var(--brand-blue);
   text-decoration: underline;
 }
