@@ -5,99 +5,74 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>판다마켓</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="main.css" />
-        <!-- Font -->
-        <script>
-            (function (d) {
-                var config = {
-                        kitId: 'tya5wfu',
-                        scriptTimeout: 3000,
-                        async: true,
-                    },
-                    h = d.documentElement,
-                    t = setTimeout(function () {
-                        h.className = h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
-                    }, config.scriptTimeout),
-                    tk = d.createElement('script'),
-                    f = false,
-                    s = d.getElementsByTagName('script')[0],
-                    a;
-                h.className += ' wf-loading';
-                tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-                tk.async = true;
-                tk.onload = tk.onreadystatechange = function () {
-                    a = this.readyState;
-                    if (f || (a && a != 'complete' && a != 'loaded')) return;
-                    f = true;
-                    clearTimeout(t);
-                    try {
-                        Typekit.load(config);
-                    } catch (e) {}
-                };
-                s.parentNode.insertBefore(tk, s);
-            })(document);
-        </script>
+        <link rel="stylesheet" href="./home.css" />
     </head>
     <body>
         <!-- header -->
         <header>
-            <div class="header_wrap">
-                <a href="http://#"><div class="logo"></div></a>
-                <a href="/signin/"><button>로그인</button></a>
+            <div class="logo">
+                <a href="#"><img src="/assets/img/logo/img_logo.svg" alt="" /></a>
             </div>
+            <button class="header_button" onclick="location.href='/signin'">로그인</button>
         </header>
         <main>
             <!-- Main banner -->
-            <section class="main_banner_bg">
-                <div class="main_banner">
-                    <div class="main_banner wrap">
-                        <span>일상의 모든 물건을<br />거래해 보세요</span>
-                        <a href="/items/"><button>구경하러 가기</button></a>
+            <section class="main_banner_container">
+                <div class="main_banner_wrap">
+                    <div class="main_banner_text">
+                        <h3 class="title">일상의 모든 물건을<br />거래해 보세요</h3>
+                        <button class="main_banner_btn" onclick='location.href="/items/"'>구경하러 가기</button>
                     </div>
-                    <div class="main_banner_img"><img src="./img/Img_home_top.png" alt="구경가는 판다" /></div>
+                    <div class="main_banner_img"><img src="/assets/img/home_imgs/Img_home_top.svg" alt="" /></div>
                 </div>
             </section>
 
             <!-- Main info -->
-            <section class="main_info_wrap">
+            <section class="main_info_container">
                 <div class="main_info_background">
                     <div class="main_info">
-                        <div class="img_wrap"><img src="./img/Img_home_hot-item.png" alt="hot-item" /></div>
+                        <div class="img_wrap">
+                            <img src="/assets/img/home_imgs/Img_home_hot_item.png" alt="핫 아이템 이미지" />
+                        </div>
                         <div class="text_wrap">
-                            <div class="blue-title">Hot item</div>
-                            <div class="title">인기 상품을<br />확인해 보세요</div>
-                            <div class="description">가장 HOT한 중고거래 물품을<br />판다 마켓에서 확인해 보세요</div>
+                            <h4 class="blue-title">Hot item</h4>
+                            <h2 class="title">인기 상품을<br />확인해 보세요</h2>
+                            <h3 class="description">가장 HOT한 중고거래 물품을<br />판다 마켓에서 확인해 보세요</h3>
                         </div>
                     </div>
 
                     <div class="main_info_second">
-                        <div class="img_wrap"><img src="./img/Img_home_search.png" alt="hot-item" /></div>
+                        <div class="img_wrap">
+                            <img src="/assets/img/home_imgs/Img_home_search.png" alt="검색 이미지" />
+                        </div>
                         <div class="text_wrap">
-                            <div class="blue-title">Search</div>
-                            <div class="title">구매를 원하는<br />상품을 검색하세요</div>
-                            <div class="description">구매하고 싶은 물품은 검색해서<br />쉽게 찾아보세요</div>
+                            <h4 class="blue-title">Search</h4>
+                            <h2 class="title">구매를 원하는<br />상품을 검색하세요</h2>
+                            <h3 class="description">구매하고 싶은 물품은 검색해서<br />쉽게 찾아보세요</h3>
                         </div>
                     </div>
 
                     <div class="main_info">
-                        <div class="img_wrap"><img src="./img/Img_home_register.png" alt="hot-item" /></div>
+                        <div class="img_wrap">
+                            <img src="/assets/img/home_imgs/Img_home_register.png" alt="등록 이미지" />
+                        </div>
                         <div class="text_wrap">
-                            <div class="blue-title">Register</div>
-                            <div class="title">판매를 원하는<br />상품을 등록하세요</div>
-                            <div class="description">어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요</div>
+                            <h4 class="blue-title">Register</h4>
+                            <h2 class="title">판매를 원하는<br />상품을 등록하세요</h2>
+                            <h3 class="description">어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요</h3>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Bottom banner -->
-            <section class="bottom_banner">
+            <section class="bottom_banner_container">
                 <div class="bottom_banner_wrap">
-                    <div class="title_wrap">
-                        <div class="title">믿을 수 있는<br />판다마켓 중고거래</div>
+                    <div class="bottom_banner_text">
+                        <h3 class="title">믿을 수 있는<br />판다마켓 중고거래</h3>
                     </div>
-                    <div class="img_wrap">
-                        <img src="./img/Img_home_bottom.png" alt="믿을 수 있는 판다마켓" />
+                    <div class="bottom_banner_img">
+                        <img src="/assets/img/home_imgs/Img_home_bottom.svg" alt="믿을 수 있는 판다마켓" />
                     </div>
                 </div>
             </section>
@@ -105,18 +80,16 @@
 
         <!-- Footer -->
         <footer>
-            <div class="footer_wrap">
-                <div class="codeit_footer">©codeit - 2024</div>
-                <div class="privacy_footer">
-                    <a href="/privacy/">Privacy Policy</a>
-                    <a href="/faq/">FAQ</a>
-                </div>
-                <div class="codeit_footer">
-                    <a href="http://facebook.com"><img src="./img/icon/ic_facebook.svg" alt="facebook" /></a>
-                    <a href="http://twitter.com"><img src="./img/icon/ic_twitter.svg" alt="twitter" /></a>
-                    <a href="http://youtube.com"><img src="./img/icon/ic_youtube.svg" alt="youtube" /></a>
-                    <a href="http://instagram.com"><img src="./img/icon/ic_instagram.svg" alt="instagram" /></a>
-                </div>
+            <div class="codeit_footer">©codeit - 2024</div>
+            <div class="privacy_footer">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/faq">FAQ</a>
+            </div>
+            <div class="codeit_footer">
+                <a href="http://facebook.com"><img src="/assets/img/icon/ic_facebook.svg" alt="facebook" /></a>
+                <a href="http://twitter.com"><img src="/assets/img/icon/ic_twitter.svg" alt="twitter" /></a>
+                <a href="http://youtube.com"><img src="/assets/img/icon/ic_youtube.svg" alt="youtube" /></a>
+                <a href="http://instagram.com"><img src="/assets/img/icon/ic_instagram.svg" alt="instagram" /></a>
             </div>
         </footer>
     </body>

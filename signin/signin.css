@@ -1,0 +1,132 @@
+@import url(/styles/reset.css);
+@import url(/styles/base.css);
+
+.container {
+    margin: auto;
+    width: 64rem;
+    min-height: 108rem;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Header logo */
+header {
+    height: 13.2rem;
+}
+
+header img {
+    max-width: 39.6rem;
+    width: 100%;
+}
+
+/* Main - form*/
+main {
+    padding-top: 40px;
+}
+
+form {
+    padding-bottom: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.input_wrap {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+label {
+    font-size: 1.8rem;
+}
+
+input {
+    box-sizing: border-box;
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray100);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 1.6rem;
+    color: var(--color-cool-gray800);
+}
+
+input::placeholder {
+    color: var(color-cool-gray400);
+    line-height: 2.4rem;
+}
+
+input:focus {
+    border: 1.5px solid #3692ff;
+}
+
+button {
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray400);
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: var(--color-brand-blue);
+}
+
+.eye {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 1.45rem;
+    right: 2.4rem;
+    cursor: pointer;
+}
+
+/* Main - easy_login */
+.easy_login {
+    box-sizing: border-box;
+    padding: 25px 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.4rem;
+    border-radius: 8px;
+    background-color: var(--color-skyblue-btn-background);
+}
+
+h4 {
+    color: var(--color-cool-gray800);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+}
+
+.easy_login_link {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.easy_login_link img {
+    max-width: 4.2rem;
+}
+
+/* Footer sign-in */
+footer {
+    padding-top: 24px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-cool-gray800);
+    line-height: 1.79rem;
+}
+
+footer a {
+    color: var(--color-alink-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}

@@ -1,3 +1,5 @@
+@import url(/assets/fonts/font.css);
+
 :root {
     /* background-color */
     --color-background: #cfe5ff;
@@ -50,8 +52,13 @@
     --input-font-size: 16px;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: 'pretendard', sans-serif;
+    box-sizing: border-box;
 }
 
 button {
@@ -60,4 +67,9 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
 }
