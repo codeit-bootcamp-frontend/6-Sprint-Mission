@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>판다마켓</title>
+  <link rel="icon" href="../assets/icons/ic_pandamarket.png">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/login-register-style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">
+      <img class="logo-image" src="../assets/images/logo-image.png" alt="판다마켓 로고">
+    </a>
+  </header>
+  <main>
+    <form>
+      <label for="eamil">이메일</label>
+      <input class="input" id="email" name="email" type="email" placeholder="이메일을 입력해주세요">
+      <label for="nickname">닉네임</label>
+      <input class="input" id="nickname" name="nickname" placeholder="닉네임을 입력해주세요">
+      <label for="password">비밀번호</label>
+      <div class="password-container">
+        <input class="input" id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요">
+        <a class="invisible-button"><img src="../assets/icons/ic_invisible.png" alt="invisible-icon"></a>
+      </div>
+      <label for="password">비밀번호 확인</label>
+      <div class="password-container">
+        <input class="input" id="password" name="password" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+        <a class="invisible-button"><img src="../assets/icons/ic_invisible.png" alt="invisible-icon"></a>
+      </div>
+      <button class="button">회원가입</button>
+    </form>
+    <div class="simple-login">
+      <div class="text">간편 로그인하기</div>
+      <div class="icon-sns">
+        <a href="https://www.google.com/" target="_blank"><img class="img-icn" src="../assets/icons/ic_google.png" alt="google-icon"></a>
+        <a href="https://www.kakaocorp.com/page/" target="_blank"><img class="img-icn" src="../assets/icons/ic_kakaotalk.png" alt="kakaotalk-icon"></a>
+      </div>
+    </div>
+    <div class="ask-whether-user">
+      이미 회원이신가요?
+      <a class="user-link" href="/login.html">로그인</a>
+    </div>
+  </main>
+</body>
+</html>

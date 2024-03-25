@@ -1,0 +1,196 @@
+
+img {
+  display: inline-block;
+}
+
+a {
+  cursor: pointer;
+}
+
+header {
+  background-color: var(--white);
+  border-bottom: 1px solid #dfdfdf;
+  height: 70px;
+
+  position: sticky;
+  top: 0;
+}
+
+.logo-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9.5px 200px;
+}
+
+.logo, .logo-image {
+  width: 153px;
+  height: 51px;
+  display: inline-block;
+}
+
+.login {
+  background-color: var(--blue);
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.09px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.login:hover, .visit-button:hover {
+  background-color: #1251AA;
+}
+
+#main-top {
+  background-image: url(../assets/images/home_top.png);
+}
+
+#main-bottom {
+  background-image: url(../assets/images/home_bottom.png);
+}
+
+section {
+  height: 540px;
+  background-color: #CFE5FF;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: 80% bottom;
+
+  display: flex;
+  align-items: center;
+}
+
+section > div {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.visit-button {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  padding: 16px 126px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 40px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.description {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
+}
+
+
+.home-panda {
+  max-width: 996px;
+  height: 447px;
+  margin-top: 93px;
+}
+
+.container {
+  background-color: var(--white);
+}
+
+figure {
+  max-width: 1200px;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin: 0 auto;
+}
+
+.figure-right {
+  justify-content: flex-end;
+}
+
+.box-right {
+  text-align: right;
+}
+
+.home-img {
+  width: 50%;
+}
+
+.small-sticker {
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  color: var(--blue);
+}
+
+.main-introductions {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+  color: var(--gray700);
+  margin: 12px 0 24px;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
+}
+
+.main-descriptions {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.08em;
+  color: var(--gray700);
+  margin: 0;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
+}
+
+footer {
+  background-color: var(--gray900);
+}
+
+.footer-container {
+  margin: 0 auto;
+  padding: 32px 200px 108px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+
+.footer-info {
+  color: var(--gray400);
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-button {
+  color: var(--gray200);
+  text-decoration: none;
+  word-break: keep-all; /*글자가 단어단위로 잘림*/
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
