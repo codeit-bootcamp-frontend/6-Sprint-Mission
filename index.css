@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 
 a {
     cursor: pointer;
@@ -9,9 +7,13 @@ a {
 header {
     display: flex;
     justify-content: space-between;
+    height: 4.375rem;
+    position: sticky;
+    top: 0;
     padding: 11px 200px;
     flex: 0 1 auto;
-    /*gap: calc();*/
+    background-color: var(--button-font-color);
+    z-index: 1;
 }
 
 header > .login {
@@ -20,9 +22,11 @@ header > .login {
     height: 48px;
     border-radius: 8px;
     padding-block: 14px;
+    font-size: 1rem;
+    line-height: 1.1931rem;
     text-align: center;
-    background-color: #3692FF;
-    color: #fff;
+    background-color: var(--header-logo-color);
+    color: var(--button-font-color);
     text-decoration: none;
     flex-shrink: 0;
 }
@@ -39,48 +43,50 @@ header > .title > .name > a {
     font-size: 1.6em;
     font-weight: 700;
     line-height: 34.6px;
-    color: #3692FF;
+    color: var(--header-logo-color);
     text-decoration: none;
 }
 
 main {
-    display: grid;
-    grid-template: 540px 720px 720px 720px 540px / 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer {
+footer {
     width: inherit;
     height: 160px;
     display: grid;
-    background-color: #111827;
+    background-color: var(--footer-bg-color);
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     padding: 32px 200px;
 }
 
-.footer > .codeit {
+footer > .codeit-footer {
     font-family: "Pretendard";
     font-size: 1em;
     line-height: 19.09px;
 }
 
-.footer > .codeit.copyright {
-    color: #9CA3AF;
+footer > .codeit-footer.codeit-copyright {
+    color: var(--panda-gray-color);
 }
 
-.footer > .codeit.faqs {
+footer > .codeit-footer.codeit-faqs {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 30px;
     justify-content: center;
 }
 
-.footer > .codeit.faqs > a {
-    color: #E5E7EB;
+footer > .codeit-footer.codeit-faqs > a {
+    color: var(--faq-font-color);
     text-decoration: none;
 }
 
-.footer > .codeit.sns {
+footer > .codeit-footer.codeit-sns {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-auto-columns: 20px;
@@ -88,37 +94,51 @@ main {
     gap: 9px;
 }
 
-.panda {
-    background-color: #CFE5FF;
+.panda-banner {
+    background-color: var(--banner-bg-color);
     display: flex;
     width: 100%;
-    gap: 10px;
+    height: 33.75rem;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
-.panda.intro {
-    padding-inline: 404px 195px;
-}
-
-.panda.banner {
-    padding-inline: 329px 270px;
-}
-
-.panda.intro > div,
-.panda.banner > h2
-{
-    display: flex;
-    font-family: "pretendard";
+.panda-banner.top-banner > img {
     position: relative;
-    flex-direction: column;
-    justify-content: center;
-    bottom: 35%;
-    /*gap: calc();*/
+    width: 62.25rem;
+    height: 27.9375rem;
+    top: 2.875rem;
+    left: 6.25rem;
 }
 
-.panda.intro > div > h2,
-.panda.banner > h2 {
+.panda-banner.top-banner > div {
+    font-family: "pretendard";
+    display: flex;
+    flex-direction: column;
+    width: 22.5rem;
+    height: 3.75rem;
+    position: relative;
+    left: 6.25rem;
+    bottom: 4rem;
+}
+
+.panda-banner.bottom-banner > h2
+{
+    font-family: "pretendard";
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    left: 3.125rem;
+}
+
+.panda-banner.bottom-banner > img {
+    position: relative;
+    left: 3.125rem;
+}
+
+.panda-banner.top-banner > div > h2,
+.panda-banner.bottom-banner > h2 {
     font-size: 2.5em;
     font-weight: 700;
     line-height: 56px;
@@ -128,12 +148,12 @@ main {
 /*
 *이렇게 클래스 이름이 아닌 규칙 준 이유는 CSS 내 0-0-0 규칙 상 때문에 클래스 이름을 되도록 주지 않았습니다.
 */
-.panda.intro > div > a {
+.panda-banner.top-banner > div > a {
     width: 356px;
     height: 56px;
     border-radius: 40px;
-    background-color: #3692FF;
-    color: #fff;
+    background-color: var(--header-logo-color);
+    color: var(--button-font-color);
     text-decoration: none;
     text-align: center;
     padding-block: 16px;
@@ -141,14 +161,9 @@ main {
     font-weight: 600;
 }
 
-.panda.intro > img {
-    width: 996px;
-    height: 447px;
-    background-size: 996px 447px;
-}
-
 .panda-section {
     display: flex;
+    max-width: 1200px;
     justify-content: center;
     padding-block: 138px;
     gap: 0px 64px;
@@ -170,7 +185,7 @@ main {
 .panda-section > div > h2 {
     font-size: 1.125em;
     line-height: 25.2px;
-    color: #3692FF;
+    color: var(--header-logo-color);
     letter-spacing: 1px;
 }
 

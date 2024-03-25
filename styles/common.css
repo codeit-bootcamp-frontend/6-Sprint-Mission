@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+   --banner-bg-color: #CFE5FF;
+   --panda-gray-color: #9CA3AF;
+   --footer-bg-color: #111827;
+   --header-logo-color: #3692FF;
+   --button-font-color: #fff;
+   --faq-font-color: #E5E7EB;
+   --cool-gray-100: #F3F4F6;
+   --cool-gray-800: #1F2937;
+   --brand-blue: #3692FF;
+   --brand-sky: #E6F2FF;
+   --brand-blue-100: #3182F6;
+}
