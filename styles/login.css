@@ -4,15 +4,10 @@ header {
   justify-content: center;
 }
 
-.main {
-  width: 100%;
-  color: var(--cool-gray800);
-}
-
-#login-form,
-#signup-form {
+main {
   width: 640px;
   margin: 0 auto;
+  color: var(--cool-gray800);
 }
 
 .label {
