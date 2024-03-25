@@ -11,13 +11,15 @@
     - [사용한것](#사용한것)
     - [배운점](#배운점)
   - [작성자](#작성자)
-  - [참고](#참고)
 
 ## 개요
 
 ### 페이지 스크린샷
 
-![메인 이미지](images/thumbnail.jpg)
+![메인 이미지](images/thumbnail2.jpg)
+
+- 코드잇 스프린트에서 진행한 두 번째 스프린트 미션
+  - 로그인 및 회원가입 페이지 제작
 
 ### 링크
 
@@ -30,13 +32,11 @@
 
 - Semantic HTML5 markup
 - css 변수
-- css : flexbox
-- css : grid
+- css : input
 
 ### 배운점
 
-- z-index 사용 시 쌓임 맥락을 주의해야 할 것 같다.
-- Netlify 배포 시 한글이 깨지는 현상이 있었는데, 주의해야 할 것 같다.
+- input[type=password] 태그에는 after 및 before 등 가상 선택자가 적용이 되지 않는다!!
 
 ## 작성자
 
@@ -44,5 +44,3 @@
 
 - [github](https://github.com/User850413)
 - [velog](https://velog.io/@user850413)
-
-## 참고

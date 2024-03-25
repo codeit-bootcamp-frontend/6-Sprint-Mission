@@ -16,10 +16,17 @@
       <form>
         <label for="email">이메일</label>
         <input
-          type="text"
+          type="email"
           name="email"
           id="email"
           placeholder="이메일을 입력해 주세요"
+        />
+        <label for="nickname">닉네임</label>
+        <input
+          type="text"
+          name="nickname"
+          id="nickname"
+          placeholder="닉네임을 입력해 주세요"
         />
         <label for="pwd">비밀번호</label>
         <input
@@ -31,8 +38,17 @@
         <div class="ico_hide">
           <img src="../images/ico_hide_pwd.svg" alt="" />
         </div>
-
-        <button type="submit">로그인</button>
+        <label for="re_pwd">비밀번호 확인</label>
+        <input
+          type="password"
+          name="re_pwd"
+          id="re_pwd"
+          placeholder="비밀번호를 다시 한 번 입력해 주세요"
+        />
+        <div class="ico_hide">
+          <img src="../images/ico_hide_pwd.svg" alt="" />
+        </div>
+        <button type="submit">회원가입</button>
       </form>
       <div class="quick_signin">
         <span>간편 로그인하기</span>
@@ -43,7 +59,7 @@
           target="_blanks"
         ></a>
       </div>
-      <p>판다마켓이 처음이신가요? <a href="signup.html">회원가입</a></p>
+      <p>이미 회원이신가요? <a href="signin.html">로그인</a></p>
     </main>
   </body>
 </html>
