@@ -1,16 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-:root{
-  --maincolor: #cfe5ff;
-  --maintextcolor_blue: #3692ff;
-  --footlinkcolor : #e5e7eb;
-  --footcopyright : #9ca3af;
-}
-
 span{
-  color: var(--maintextcolor_blue);
+  color: var(--brandblue);
   font-weight: 700;
 }
 
@@ -23,13 +12,6 @@ a{
   text-decoration: none;
 }
 
-html {
-  font-family: Pretendard, sans-serif;
-  word-break: keep-all;
-  font-size: 0.83vw;
-}
-
-
 body {
   background-color: #ffffff;
   color: #374151;
@@ -37,7 +19,7 @@ body {
   margin: 0;
 }
 
-header{
+nav{
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -45,16 +27,11 @@ header{
   width: 100%;
   height: 3.65vw;
   background-color: #ffffff;
-  padding: 0.52vw 10.42vw 0.52vw;
-  margin-top: -3.65vw;
+  padding: 0.5vw 10vw 0.5vw;
 }
 
-header img{
+nav img{
   width: 8vw;
-}
-
-main{
-  margin-top: 3.65vw;
 }
 
 footer{
@@ -62,7 +39,7 @@ footer{
   justify-content: space-between ;
   background-color: #111827;
   padding: 1.67vw 10.42vw 5.63vw 10.42vw;
-  color: var(--footcopyright);
+  color: #9ca3af;
   gap: 0.52vw;
   width: 100%;
   font-size: 0.83vw;
@@ -70,15 +47,18 @@ footer{
 
 .panda-login{
   cursor: pointer;
-  background-color: var(--maintextcolor_blue);
-  color: #ffffff;
-  font-size: 0.83vw;
-  font-weight: 600;
-  text-align: center;
+  background-color: var(--brandblue);
   border-radius: 0.42vw;
   padding: 0.63vw 1.04vw;
   width: 6.67vw;
   height: 2.50vw;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.83vw;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .panda-banner{
@@ -89,6 +69,7 @@ footer{
   line-height: 2.92vw;
 }
 
+
 .panda-banner img{
   width: 51.88vw;
   height: 23.33vw;
@@ -98,7 +79,7 @@ footer{
   cursor: pointer;
   display: flex;
   justify-content: center;
-  background-color: var(--maintextcolor_blue);
+  background-color: var(--brandblue);
   color: #ffffff;
   border-radius: 2.08vw;
   font-weight: 600;
@@ -139,7 +120,7 @@ footer{
 }
 
 .footer-link{
-  color: var(--footcopyright)
+  color: #9ca3af;
 }
 
 .footer-link, .footer-sns{

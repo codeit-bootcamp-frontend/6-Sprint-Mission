@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,28 +7,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <nav>
         <a href="/">
           <img src="img/img_pandalogo_1.png" alt="판다마켓 로고" />
         </a>
       <div class="panda-login">
         <a href="/signin.html">로그인</a>
       </div>
-    </header>
+    </nav>
+    <section class="panda-banner">
+      <div>
+        <h1>일상의 모든 물건을<br />거래해 보세요</h1>
+        <a href="/items.html" class="item-button">구경하러 가기</a>
+      </div>
+      <img src="img/img_header_1.png" alt="판다마켓 구경하러 가기" />
+    </section>
     <main>
-      <section class="panda-banner">
-        <div>
-          <h1>일상의 모든 물건을<br />거래해 보세요</h1>
-          <a href="/items.html" class="item-button">구경하러 가기</a>
-        </div>
-        <img src="img/img_header_1.png" alt="판다마켓 구경하러 가기" />
-      </section>
       <section class="pander-main">
         <img class="pander-img" src="img/img_main_1.png" />
         <div class="pander-info">
@@ -68,16 +74,16 @@
       </div>
       <div class="footer-sns">
         <a target="_blank" href="https://www.facebook.com/">
-          <img src="img/social/ic_facebook.png" alt="페이스북" />
+          <img src="img/social/none_color/ic_facebook.png" alt="페이스북" />
         </a>
         <a target="_blank" href="https://twitter.com/">
-          <img src="img/social/ic_twitter.png" alt="트위터" />
+          <img src="img/social/none_color/ic_twitter.png" alt="트위터" />
         </a>
         <a target="_blank" href="https://www.youtube.com/">
-          <img src="img/social/ic_youtube.png" alt="유튜브" />
+          <img src="img/social/none_color/ic_youtube.png" alt="유튜브" />
         </a>
         <a target="_blank" href="https://www.instagram.com/">
-          <img src="img/social/ic_instagram.png" alt="인스타그램" />
+          <img src="img/social/none_color/ic_instagram.png" alt="인스타그램" />
         </a>
       </div>
     </footer>

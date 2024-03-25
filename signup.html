@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인</title>
+    <title>회원가입</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,7 +35,7 @@
         <label>이메일</label>
         <div>
           <input
-            type="email"
+            type="text"
             name="userName"
             placeholder="이메일을 입력해주세요"
             class="input-email"
@@ -44,20 +44,45 @@
           />
         </div>
       </section>
+      <section>
+        <label>닉네임</label>
+        <div>
+          <input
+            type="text"
+            name="userName"
+            placeholder="닉네임을 입력해주세요"
+            class="input-name"
+            required
+          />
+        </div>
+      </section>
       <section class="password-section">
-        <label class="login-form__label">비밀번호</label>
+        <label>비밀번호</label>
         <div>
           <input
             type="password"
             name="userPassword"
             placeholder="비밀번호를 입력해주세요"
-            required
             class="input-password"
+            required
           />
+          <img src="/img/Property 1=Default.png" alt="" class="password-img" />
         </div>
-        <img src="/img/Property 1=Default.png" alt="" class="password-img" />
       </section>
-      <button type="submit">로그인</button>
+      <section class="password-section">
+        <label>비밀번호 확인</label>
+        <div>
+          <input
+            type="password"
+            name="userPassword"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+            class="input-password"
+            required
+          />
+          <img src="/img/Property 1=Default.png" alt="" class="password-img" />
+        </div>
+      </section>
+      <button class="button-join" type="submit">회원가입</button>
       <div class="social">
         <span>간편 로그인하기</span>
         <div>
@@ -78,10 +103,9 @@
         </div>
       </div>
     </form>
-    <div class="link-join">
-      판다마켓이 처음이신가요?
-      <a href="/signup.html">회원가입</a>
+    <div class="link-login">
+      이미 회원이신가요?
+      <a href="/signin.html">로그인</a>
     </div>
-    <script src="login.js"></script>
   </body>
 </html>
