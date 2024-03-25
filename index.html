@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
+    <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <a href="/" class="img_logo">
-        <img src="images/Img_logo.png" alt="logo image" />
+    <nav>
+      <a href="/" class="logo">
+        <img src="/images/Img_logo.png" alt="logo image" class="logo_img"/>
       </a>
-      <button onclick="location.href='/signin'" class="login_button">
-        로그인
-      </button>
-    </header>
+      <div class="login_button">
+        <a href="/pages/auth/signin/signin.html">
+          로그인
+        </a>
+      </div>
+    </nav>
     <main>
       <section class="banner">
         <div class="banner_container">
@@ -23,21 +26,23 @@
               일상의 모든 물건을 <br />
               거래해 보세요
             </h1>
-            <button onclick="location.href='/items'" class="look_button">
-              구경하러 가기
-            </button>
+            <div class="look_button">
+              <a href="/items'">
+                구경하러 가기
+              </a>
+            </div>
           </div>
           <img
-            src="images/Img_home_top.png"
+            src="/images/Img_home_top.png"
             alt="top image"
             class="banner_img"
           />
         </div>
       </section>
-      <section class="second_section">
+      <section class="info_section">
         <div class="info_content">
           <img
-            src="images/Img_home_01.png"
+            src="/images/Img_home_01.png"
             alt="first home image"
             class="img_home_01"
           />
@@ -54,7 +59,7 @@
           </div>
         </div>
         <div class="info_content reverse">
-          <img src="images/Img_home_02.png" alt="first home image" />
+          <img src="/images/Img_home_02.png" alt="first home image" />
           <div class="info_description text_end">
             <p class="info_badge">Search</p>
             <h1 class="info-title">
@@ -68,10 +73,10 @@
           </div>
         </div>
         <div class="info_content">
-          <img src="images/Img_home_03.png" alt="third home image" />
+          <img src="/images/Img_home_03.png" alt="third home image" />
           <div class="info_description">
             <p class="info_badge">Register</p>
-            <h1 class="info-title">
+            <h1 class="info_title">
               판매를 원하는 <br />
               상품을 등록하세요
             </h1>
@@ -91,7 +96,7 @@
             </h1>
           </div>
           <img
-            src="images/Img_home_bottom.png"
+            src="/images/Img_home_bottom.png"
             alt="top image"
             class="banner_img"
           />
@@ -107,28 +112,28 @@
       <div class="footer_icons">
         <a href="https://www.facebook.com" target="_blank">
           <img
-            src="images/Icon_facebook.png"
+            src="/images/Icon_facebook.png"
             alt="facebook icon"
             class="sns_icon"
           />
         </a>
         <a href="https://www.twitter.com" target="_blank">
           <img
-            src="images/Icon_twitter.png"
+            src="/images/Icon_twitter.png"
             alt="twitter icon"
             class="sns_icon"
           />
         </a>
         <a href="https://www.youtube.com" target="_blank">
           <img
-            src="images/Icon_youtube.png"
+            src="/images/Icon_youtube.png"
             alt="youtube icon"
             class="sns_icon"
           />
         </a>
         <a href="https://www.instagram.com" target="_blank">
           <img
-            src="images/Icon_instagram.png"
+            src="/images/Icon_instagram.png"
             alt="instagram icon"
             class="sns_icon"
           />

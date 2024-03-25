@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/global.css" />
+  <link rel="stylesheet" href="/pages/auth/auth.css" />
+</head>
+<body>
+  <div class="signin_container_layout">
+    <a href="/">
+      <img 
+        src="/images/Img_logo.png" 
+        alt="logo image" 
+        class="logo_img" 
+      />
+    </a>
+    <div class="signin_form_layout">
+      <form class="signin_form_container">
+        <div>
+          <label for="email">이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일을 입력해주세요"
+          />
+        </div>
+        <div>
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력해주세요"
+            class="password_container"
+          />
+        </div>
+        <button type="submit" class="signin_button">로그인</button>
+      </form>
+      <div class="social_signin_layout">
+        <p>간편 로그인하기</p>
+        <div class="social_signin_icon">
+          <a href="https://www.google.com/" target="_blank">
+            <img
+              src="/images/Icon_google.png"
+              alt="google icon"
+              class="sns_icon"
+            />
+          </a>
+          <a href="https://www.kakaocorp.com/page/" target="_blank">
+            <img
+              src="/images/Icon_kakaotalk.png"
+              alt="kakaotalk icon"
+              class="sns_icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="siginup_link_layout">
+      <p class="signup_link_text">
+        판다마켓이 처음이신가요?
+        <a href="/pages/auth/signup/signup.html">회원가입</a>
+      </p>
+    </div>
+  </div>
+  <script src="/pages/auth/signin/signin.js"></script>
+</body>
+</html>
