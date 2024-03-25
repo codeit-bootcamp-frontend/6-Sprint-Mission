@@ -17,7 +17,7 @@
   --white: #fff;
 }
 
-html {
+html, input, textarea, button, select {
   font-family: 'Pretendard', 'sans-serif';
 }
 
