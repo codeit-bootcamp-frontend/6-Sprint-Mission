@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #3692ff;
+  --text-color: #374151;
+  --background-color: #cfe5ff;
+  --footer-background-color: #111827;
+  --gray400-color: #9ca3af;
+  --footer-link-color: #e5e7eb;
+  --button-color: #ffffff;
+  --sign-color: #1f2937;
+  --input-color: #f3f4f6;
+  --sign-button-color: #9ca3af;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ROKAF-Sans";
+  src: url("../font/ROKAF Sans Bold.ttf");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

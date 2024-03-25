@@ -1,0 +1,145 @@
+/* 배너 */
+
+.sign-banner {
+  display: flex;
+  gap: 1.15vw;
+  margin: 3.12vw auto;
+  width: 20.6vw;
+  padding: 0.676vw 0 0.789vw;
+}
+
+.sign-banner-img {
+  width: 5.4vw;
+  height: 5.4vw;
+}
+
+.sign-title {
+  font-family: "ROKAF-Sans";
+  color: var(--primary-color);
+  font-weight: 36.46vw;
+  font-size: 3.45vw;
+  line-height: 4.66vw;
+  padding: 0.572vw 0 0.15vw;
+}
+
+/* 메인 */
+
+.sign-form {
+  width: 640px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sign-form label {
+  color: var(--sign-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.sign-form input {
+  background-color: var(--input-color);
+  color: var(--gray400-color);
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 640px;
+  height: 56px;
+  padding: 16px;
+  padding-left: 24px;
+}
+
+.sign-form input:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
+.password-box {
+  position: relative;
+}
+
+#togglePassword,
+#toggleRePassword {
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.sign-form button {
+  background-color: var(--sign-button-color);
+  width: 640px;
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+  padding: 16px, 124px;
+  color: var(--button-color);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sign-form button.active {
+  background-color: var(--primary-color);
+}
+
+.sign-form button.disabled {
+  background-color: var(--sign-button-color);
+}
+
+.sign-form button:hover {
+  background-color: var(--primary-color);
+}
+
+.sign-social {
+  background-color: #e6f2ff;
+  width: 640px;
+  height: 74px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 393px;
+}
+
+.sign-social text {
+  color: var(--sign-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  flex-grow: 1;
+}
+
+.sign-social .icon {
+  display: flex;
+  gap: 16px;
+}
+
+.sign-social .icon > a {
+  width: 42px;
+  height: 42px;
+}
+
+.sign-footer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--sign-color);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.9px;
+  justify-content: center;
+}
+
+.sign-footer a {
+  color: #3182f6;
+  text-decoration: underline;
+}
