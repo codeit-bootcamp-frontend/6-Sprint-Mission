@@ -1,87 +1,84 @@
-@import "reset.css";
+body {
+    background-color: var(--color-bg);
+}
 
-/* TODO: 반응형 크기 조정 */
-
-/* 배너 및 컨텐츠 헤드라인 글귀 */
+/* 배너 및 컨텐츠 헤드라인 폰트 */
 .headline {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 56px;
     color: #374151;
 }
 
-/* header */
-nav {
+.header__fixed {
+    width: 100vw;
     height: 70px;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-nav h1 {
-    margin-left: 200px;
+    position: fixed;
+    z-index: 1;
 }
 
 .logo {
-    display: block;
     width: 153px;
     height: 51px;
-    font-size: 0;
+    margin-left: 200px;
 }
 
-.logo-img {
+.logo__img {
     width: 100%;
 }
 
-.login-button {
-    margin-right: 200px;
-    display: inline-block;
+.login__button {
+    width: 128px;
+    height: 48px;
     border-radius: 8px;
-    padding: 12px 20px;
-    background-color: #3692ff;
+    background-color: var(--color-blue);
     font-size: 16px;
     font-weight: 600;
     color: #fff;
+    text-align: center;
+    line-height: 48px;
+    margin-right: 200px;
 }
 
-.head-banner {
-    height: 540px;
+.header-banner {
     width: 100vw;
+    height: 610px;
     background-color: #cfe5ff;
     border-top: 1px solid #dfdfdf;
 }
 
-.head-banner-wrap {
+.header-banner__wrap {
     width: 1200px;
     height: 100%;
     position: relative;
 }
 
-.head-banner-contents {
+.header-banner__contents {
     position: absolute;
-    top: 170px;
+    top: 240px;
     left: 0;
 }
 
-.head-banner p {
-    width: 100%;
-}
-
-.head-banner-button {
-    /* TODO: 버튼 크기 조정 */
-    display: inline-block;
-    padding: 16px 124px;
+.header-banner__button {
+    display: block;
     margin-top: 32px;
+    width: 355px;
+    height: 56px;
     border-radius: 40px;
-    background-color: #3692ff;
+    background-color: var(--color-blue);
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
     color: #fff;
     text-align: center;
+    line-height: 56px;
 }
 
-.head-banner-img {
+.header-banner__img {
     width: 996px;
     height: 447px;
     position: absolute;
@@ -89,39 +86,38 @@ nav h1 {
     bottom: 0;
 }
 
-/* main */
 main, .wrap {
-    width: 120rem;
+    width: 1200px;
     margin: 0 auto;
 }
 
 section {
     height: 720px;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 64px;
 }
 
-section img {
+.section__img {
     width: 588px;
+    height: 444px;
 }
 
-section h2 {
+.section__title {
     font-size: 18px;
     font-weight: 700;
     line-height: 25px;
-    color: #3692ff;
+    color: var(--color-blue);
 }
 
-section p {
+.section__desc {
     font-size: 24px;
     font-weight: 500;
     line-height: 28.8px;
     color: #374151;
 }
 
-section p span {
+.section__headline {
     display: block;
     font-size: 40px;
     font-weight: 700;
@@ -130,30 +126,29 @@ section p span {
     margin: 24px 0;
 }
 
-.flex-reverse {
+.section__search__flex-reverse {
     flex-direction: row-reverse;
 }
 
-/* aside */
-aside {
+.bottom-banner {
     width: 100vw;
     height: 540px;
     background-color: #cfe5ff;
     margin-top: 241px;
 }
 
-aside > div {
+.bottom-banner__wrap {
     height: 540px;
     position: relative;
 }
 
-aside .headline {
+.bottom-banner__headline {
     position: absolute;
     top: 214px;
     left: 0;
 }
 
-aside img {
+.bottom-banner__img {
     width: 996px;
     height: 540px;
     position: absolute;
@@ -161,7 +156,6 @@ aside img {
     right: -150px;
 }
 
-/* footer */
 footer {
     width: 100vw;
     height: 160px;
@@ -169,30 +163,28 @@ footer {
     background-color: #111827;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* TODO: 위치 조정 */
 }
 
-footer p {
+.footer__info {
     font-size: 16px;
     font-weight: 400;
     color: #9ca3af;
 }
 
-footer nav ul {
+.footer__list {
     display: flex;
 }
 
-.policy-list {
+.footer__policy-list {
     gap: 30px;
 }
 
-.policy-list a {
+.footer__privacy-link {
     font-size: 16px;
     font-weight: 400;
     color: #e5e7eb;
 }
 
-.sns-list {
+.footer__sns-list {
     gap: 12px;
 }
