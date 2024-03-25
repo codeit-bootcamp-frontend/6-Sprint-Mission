@@ -1,0 +1,25 @@
+body {
+  font-family: 'Pretendard-Regular';
+  color: #2b2b2b;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+div {
+  background-color: #f7f7fa;
+  width: 300px;
+  padding: 20px;
+  margin: 150px auto;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 10px 1px 20px 3px #d3dbe6;
+}
+
+div a {
+  color: #5da3d1;
+  font-weight: 900;
+}
+
+div span {
+  color: #d3dbe6;
+}
