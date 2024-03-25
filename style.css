@@ -11,24 +11,30 @@
   --gray50: #f7f7f8;
   --blue: #3692ff;
 }
-/* --------------------     //palette     -------------------- */
 
 /* --------------------     font     -------------------- */
 @font-face {
   font-family: "ROKAF Sans";
   src: url("/font/ROKAF\ Sans.ttf") format("truetype");
 }
-/* --------------------     //font     -------------------- */
 
+/* --------------------     index.html     -------------------- */
 /* --------------------     헤더     -------------------- */
 .header {
-  height: 70px;
   border-bottom: 1px solid #dfdfdf;
   background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-container {
+  width: 100%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 200px;
 }
 
 .logo {
@@ -37,6 +43,7 @@
   height: 51px;
   justify-content: space-between;
   align-items: center;
+  margin-left: 200px;
 }
 
 .logo_icon {
@@ -68,8 +75,8 @@
   font-weight: 600;
   line-height: 19.09px;
   color: #ffffff;
+  margin-right: 200px;
 }
-/* --------------------     //헤더     -------------------- */
 
 /* --------------------     상단 배너     -------------------- */
 .hero_section {
@@ -114,7 +121,6 @@
   padding: 16px 122px;
   display: inline-block;
 }
-/* --------------------     //상단 배너     -------------------- */
 
 /* --------------------     본문     -------------------- */
 
@@ -123,7 +129,6 @@
   width: 1200px;
   margin: 0 auto;
 }
-/* //본문 공통 */
 
 /* Hot item */
 .hot_item_contnet {
@@ -165,7 +170,6 @@
   line-height: 29px;
   color: var(--gray700);
 }
-/* //Hot item */
 
 /* Search item */
 .item_container_right {
@@ -215,15 +219,11 @@
   text-align: right;
   color: var(--gray700);
 }
-/* //Search item */
 
 /* Register item */
 .item_description.register {
   width: 370px;
 }
-/* //Register item */
-
-/* --------------------     //본문     -------------------- */
 
 /* --------------------     하단 배너     -------------------- */
 
@@ -249,8 +249,6 @@
   line-height: 56px;
   color: var(--gray700);
 }
-
-/* --------------------     //하단 배너     -------------------- */
 
 /* --------------------     footer     -------------------- */
 .footer_container {
@@ -304,20 +302,174 @@
   justify-content: space-between;
   width: 116px;
 }
-/* --------------------     //footer     -------------------- */
 
 /* --------------------     미디어 쿼리     -------------------- */
 
 /* 뷰포트 가로 1920px 이상일 때 */
 @media (min-width: 1920px) {
   /* 넓이 고정, 중앙 배치 */
-  .header {
+  .header-container {
     width: 1520px;
     margin: 0 auto;
+  }
+  .login_btn,
+  .logo {
+    margin: 0;
   }
   /* 넓이 고정 */
   .footer_menu_container {
     width: 1520px;
   }
 }
-/* --------------------     //미디어 쿼리     -------------------- */
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* --------------------     signin.html     -------------------- */
+
+/* guide_container */
+.guide_container {
+  width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* logo */
+
+.logo.login {
+  display: flex;
+  width: 396px;
+  height: 132px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0 40px;
+}
+
+.logo_icon.login {
+  width: 103.53px;
+  height: 103.88px;
+  border-radius: 11.18px;
+}
+
+.logo_title.login {
+  width: 266px;
+  font-family: ROKAF Sans;
+  font-size: 66.34px;
+  font-weight: 700;
+  line-height: 34.6px;
+  color: var(--blue);
+}
+
+/* form_container */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form-container label {
+  color: var(--gray800);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.form-container input {
+  /* box */
+  width: 640px;
+  height: 56px;
+  border: 1px solid var(--gray100);
+  border-radius: 12px;
+  background-color: var(--gray100);
+  padding: 16px 24px;
+  margin-bottom: 24px;
+
+  /* text */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.form-container input::placeholder {
+  color: #9ca3af;
+}
+.form-container input:focus {
+  outline: 2px solid #3692ff;
+}
+
+.password-contianer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-icon {
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: var(--blue);
+  height: 56px;
+  border-radius: 40px;
+  border: 1px solid #9ca4af;
+  /* text */
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* 소셜 로그인 영역 */
+.social-login-container {
+  height: 74px;
+  background-color: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 23px;
+  border-radius: 8px;
+}
+
+.social-login-container div {
+  display: flex;
+  gap: 16px;
+}
+
+.social-login-container p {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--gray800);
+}
+
+.sign-info {
+  text-align: center;
+  margin: 24px auto;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.9px;
+}
+
+.sign-info p {
+  color: var(--gray800);
+}
+
+.sign-info a {
+  text-decoration: underline;
+  color: blue;
+}

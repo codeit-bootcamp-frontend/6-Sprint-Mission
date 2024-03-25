@@ -36,6 +36,9 @@
           <!-- email -->
           <label>이메일</label>
           <input placeholder="이메일을 입력해주세요" type="email" />
+          <!-- 닉네임 -->
+          <label>닉네임</label>
+          <input placeholder="닉네임을 입력해주세요" type="text" />
           <!-- password -->
           <label>비밀번호</label>
           <div class="password-contianer">
@@ -50,9 +53,23 @@
               alt="비밀번호 보이기 토글 버튼"
             />
           </div>
+          <!-- password 재확인-->
+          <label>비밀번호 확인</label>
+          <div class="password-contianer">
+            <input
+              class="password"
+              placeholder="비밀번호를 다시 한 번 입력해주세요"
+              type="password"
+            />
+            <img
+              class="password-icon"
+              src="./assets/password_icon.svg"
+              alt="비밀번호 보이기 토글 버튼"
+            />
+          </div>
 
-          <!-- 로그인 버튼 -->
-          <button type="submit" class="submit">로그인</button>
+          <!-- 회원가입 버튼 -->
+          <button type="submit" class="submit">회원가입</button>
         </form>
         <!-- sns 로그인 버튼 -->
         <div class="social-login-container">
@@ -70,10 +87,10 @@
             /></a>
           </div>
         </div>
-        <!-- 회원가입 페이지 이동 -->
+        <!-- 로그인 페이지 이동 -->
         <p class="sign-info">
           판다마켓이 처음이신가요?
-          <a href="signup.html">회원가입</a>
+          <a href="signin.html">로그인</a>
         </p>
       </div>
       <!-- //폼 컨테이너 -->
