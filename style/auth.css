@@ -16,7 +16,7 @@ form {
   width: 35rem;
 }
 
-.form_label {
+.field-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -52,7 +52,7 @@ input:focus {
   background-color: var(--main) !important;
 }
 
-.passwordicon {
+.password-visibility-off-icon {
   width: 24px;
   height: 24px;
   position: absolute;
@@ -125,7 +125,7 @@ input:focus {
   .easylogin {
     width: 25rem;
   }
-  .passwordicon {
+  .password-visibility-off-icon {
     left: 22rem;
   }
 }
