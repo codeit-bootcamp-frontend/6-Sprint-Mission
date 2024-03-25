@@ -27,10 +27,14 @@
       </div>
       <div class="login-container">
         <form class="form-container">
-          <label>이메일</label>
-          <input placeholder="이메일을 입력해주세요" type="email" />
-          <label>닉네임</label>
-          <input placeholder="닉네임을 입력해주세요" type="text" />
+          <label for="email">이메일</label>
+          <input id="email" placeholder="이메일을 입력해주세요" type="email" />
+          <label for="nickname">닉네임</label>
+          <input
+            id="nickname"
+            placeholder="닉네임을 입력해주세요"
+            type="text"
+          />
           <label>비밀번호</label>
           <div class="password-contianer">
             <input
@@ -44,10 +48,11 @@
               alt="비밀번호 보이기 토글 버튼"
             />
           </div>
-          <label>비밀번호 확인</label>
+          <label for="password_check">비밀번호 확인</label>
           <div class="password-contianer">
             <input
               class="password"
+              id="password_check"
               placeholder="비밀번호를 다시 한 번 입력해주세요"
               type="password"
             />
