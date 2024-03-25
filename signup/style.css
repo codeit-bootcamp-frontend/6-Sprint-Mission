@@ -1,24 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-:root {
-  --blue: #3692ff;
-  --hover-blue: #1967d6;
-  --hover-bluebtn: #3692ff;
-  --click-blue: #1251aa;
-  --inactivecolor: #9ca3af;
-  --background-blue: #cfe5ff;
-  --gray900: #1b1d1f;
-  --gray800: #26282b;
-  --gray600: #454c53;
-  --gray500: #72787f;
-  --gray400: #9ea4a8;
-  --gray200: #e5e7eb;
-  --gray100: #e8ebed;
-  --gray50: #f7f7f8;
-}
 body {
   display: flex;
   align-items: center;
@@ -78,25 +57,25 @@ form input:focus {
   top: 55px;
   cursor: pointer;
 }
-.login-btn {
+.signup-btn {
   width: 100%;
   height: 56px;
   border-radius: 40px;
   border: none;
   color: #fff;
   font-size: 20px;
-  background-color: #9ca3af;
+  background-color: var(--inactive-color);
   cursor: pointer;
 }
-.login-btn:hover {
+.signup-btn:hover {
   background-color: var(--hover-bluebtn);
 }
-.easy-login {
+.social-login {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #e6f2ff;
+  background-color: var(--social-login-background-color);
   height: 74px;
   border-radius: 8px;
   padding: 0 24px;
@@ -105,7 +84,7 @@ form input:focus {
   color: var(--gray800);
 }
 
-.easy-login-logo img {
+.social-login-logo img {
   width: 42px;
   margin-left: 16px;
 }
@@ -120,8 +99,60 @@ form input:focus {
   font-weight: 550;
 }
 .go-login-container a {
-  color: var(--hover-bluebtn);
+  color: var(--go-login-signup-color);
 }
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 400px;
+  }
+  .con label {
+    font-size: 16px;
+  }
+  .pw img,
+  .re-pw img {
+    position: absolute;
+    right: 18px;
+    top: 53px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 100%;
+    gap: 16px;
+  }
+  .con label {
+    font-size: 14px;
+  }
+  .con input {
+    margin-top: 8px;
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  .pw img,
+  .re-pw img {
+    position: absolute;
+    width: 18px;
+    right: 14px;
+    top: 48px;
+    cursor: pointer;
+  }
 
 @media screen and (max-width: 768px) {
   form {

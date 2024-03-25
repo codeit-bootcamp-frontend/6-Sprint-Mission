@@ -1,23 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-:root {
-  --blue: #3692ff;
-  --hover-blue: #1967d6;
-  --click-blue: #1251aa;
-  --inactivecolor: #9ca3af;
-  --background-blue: #cfe5ff;
-  --gray900: #1b1d1f;
-  --gray800: #26282b;
-  --gray600: #454c53;
-  --gray500: #72787f;
-  --gray400: #9ea4a8;
-  --gray200: #e5e7eb;
-  --gray100: #e8ebed;
-  --gray50: #f7f7f8;
-}
+
 body {
   display: flex;
   align-items: center;
@@ -35,6 +16,7 @@ form {
   gap: 24px;
   width: 640px;
 }
+
 form input:focus {
   border: solid 2px var(--blue);
 }
@@ -82,18 +64,18 @@ form input:focus {
   border: none;
   color: #fff;
   font-size: 20px;
-  background-color: #9ca3af;
+  background-color: var(--inactive-color);
   cursor: pointer;
 }
 .login-btn:hover {
   background-color: var(--blue);
 }
-.easy-login {
+.social-login {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #e6f2ff;
+  background-color: var(--social-login-background-color);
   height: 74px;
   border-radius: 8px;
   padding: 0 24px;
@@ -102,7 +84,7 @@ form input:focus {
   color: var(--gray800);
 }
 
-.easy-login-logo img {
+.social-login-logo img {
   width: 42px;
   margin-left: 16px;
 }
@@ -117,8 +99,59 @@ form input:focus {
   font-weight: 550;
 }
 .go-signup-container a {
-  color: #3182f6;
+  color: var(--go-login-signup-color);
 }
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 400px;
+  }
+  .con label {
+    font-size: 16px;
+  }
+  .pw img {
+    position: absolute;
+    width: 24px;
+    right: 17px;
+    top: 53px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+  .main-contaienr {
+    padding: 0 16px;
+  }
+  .img-container .logo {
+    width: 198px;
+    height: 66px;
+  }
+  form {
+    width: 100%;
+    gap: 16px;
+  }
+  .con label {
+    font-size: 14px;
+  }
+  .con input {
+    font-size: 14px;
+    margin-top: 8px;
+    padding: 0 15px;
+  }
+  .pw img {
+    position: absolute;
+    width: 18px;
+    right: 14px;
+    top: 48px;
+    cursor: pointer;
+  }
 
 @media screen and (max-width: 768px) {
   form {

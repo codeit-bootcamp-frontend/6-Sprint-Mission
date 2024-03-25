@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓 로그인</title>
+    <link rel="stylesheet" href="./login/style.css" />
+    <link rel="stylesheet" href="root.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>판다마켓 로그인</title>
-  <link rel="stylesheet" href="./login/style.css">
-</head>
-
-<body>
-  <div class="main-container">
-    <div class="img-container">
-      <a href="/"><img class="logo" src="./login/assets/logo.png" alt="판다마켓 로고"></a>
-    </div>
-
-    <form action="#">
-      <div class="email con">
-        <label for="email">이메일</label>
-        <input type="email" placeholder="이메일을 입력해주세요">
+  <body>
+    <div class="main-container">
+      <div class="img-container">
+        <a href="./"><img class="logo" src="./login/assets/logo.png" alt="판다마켓 로고" /></a>
       </div>
-      <div class="pw con">
-        <label for="pw">비밀번호</label>
-        <input type="password" placeholder="비밀번호를 입력해주세요">
-        <img src="./login/assets/show-pw.png" alt="비밀번호 보이기">
-      </div>
-      <button class="login-btn">로그인</button>
-      <div class="easy-login">
-        <p>간편 로그인하기</p>
-        <div class="easy-login-logo">
-          <a href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&hl=ko&theme=glif&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-            target="_blank"><img src="./login/assets/google-logo.png" alt="구글 로고"></a>
-          <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fproxy%3DeasyXDM_Kakao_9iyy5od3l29_provider%26ka%3Dsdk%252F1.43.2%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.epis.or.kr%26origin%3Dhttps%253A%252F%252Fwww.epis.or.kr%26response_type%3Dcode%26redirect_uri%3Dkakaojs%26state%3Dlgo6gi4qr2byw694fiizh%26through_account%3Dtrue%26client_id%3D950f3ae1f2f550e5ba7ff7d9fffc7781&talk_login=hidden#login"
-            target="_blank"><img src="./login/assets/kakao-logo.png" alt="카카오 로고"></a>
+
+      <form action="#" method="post">
+        <div class="email con">
+          <label for="email">이메일</label>
+          <input type="email" id="email" placeholder="이메일을 입력해주세요" />
         </div>
-      </div>
-      <div class="go-signup-container">
-        <p>판다마켓이 처음이신가요?</p>
-        <a href="/signup.html">회원가입</a>
-      </div>
-    </form>
-  </div>
-</body>
-
+        <div class="pw con">
+          <label for="pw">비밀번호</label>
+          <input type="password" id="pw" placeholder="비밀번호를 입력해주세요" />
+          <img src="./login/assets/show-pw.png" alt="비밀번호 보이기" />
+        </div>
+        <button class="login-btn">로그인</button>
+        <div class="social-login">
+          <p>간편 로그인하기</p>
+          <div class="social-login-logo">
+            <a
+              href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&hl=ko&theme=glif&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+              taget="_blank"
+              ><img src="./login/assets/google-logo.png" alt="구글 로고"
+            /></a>
+            <a
+              href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fproxy%3DeasyXDM_Kakao_9iyy5od3l29_provider%26ka%3Dsdk%252F1.43.2%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.epis.or.kr%26origin%3Dhttps%253A%252F%252Fwww.epis.or.kr%26response_type%3Dcode%26redirect_uri%3Dkakaojs%26state%3Dlgo6gi4qr2byw694fiizh%26through_account%3Dtrue%26client_id%3D950f3ae1f2f550e5ba7ff7d9fffc7781&talk_login=hidden#login"
+              target="_blank"
+              ><img src="./login/assets/kakao-logo.png" alt="카카오 로고"
+            /></a>
+          </div>
+        </div>
+        <div class="go-signup-container">
+          <p>판다마켓이 처음이신가요?</p>
+          <a href="./signup.html">회원가입</a>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
