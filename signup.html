@@ -21,6 +21,13 @@
           id="email"
           placeholder="이메일을 입력해주세요"
         />
+        <label for="nickname">닉네임</label>
+        <input
+          type="text"
+          name="nickname"
+          id="nickname"
+          placeholder="닉네임을 입력해주세요"
+        />
         <label for="password">비밀번호</label>
         <div class="pw-box">
           <input
@@ -34,8 +41,21 @@
             alt="button btn_visibility_off"
           />
         </div>
+        <label for="password-check">비밀번호 확인</label>
+        <div class="pw-box">
+          <input
+            type="password"
+            name="password-check"
+            id="password-check"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
+          <img
+            src="/images/btn_visibility_off.png"
+            alt="button btn_visibility_off"
+          />
+        </div>
 
-        <button class="btn--secondary" id="btn-login">로그인</button>
+        <button class="btn--secondary" id="btn-signup">회원가입</button>
       </form>
       <div class="social-login">
         <p>간편로그인하기</p>
@@ -47,10 +67,10 @@
         </a>
       </div>
       <p class="signup">
-        판다마켓이 처음이신가요?
-        <a href="/signup.html">회원가입</a>
+        이미 회원이신가요?
+        <a href="/login.html">로그인</a>
       </p>
+      <script src="javascript/signup.js"></script>
     </section>
-    <script src="javascript/login.js"></script>
   </body>
 </html>
