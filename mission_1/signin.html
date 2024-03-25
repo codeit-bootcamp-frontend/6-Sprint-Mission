@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로그인_페이지</title>
-</head>
-<body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/sign.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <title>로그인_페이지</title>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/sign_logo.png" alt="판다마켓_메인페이지_이동"/>
+      </a>
+    </div>
+    
+    <!-- ================================================================= -->
+
+    <div class="signin_container">
+      <form>
+
+        <div>
+          <label for="signin-email">이메일</label>
+          <input id="signin-email" type="email" placeholder="이메일을 입력해주세요" required/>
+        </div>
+
+        <div>
+          <label for="signin-pw">비밀번호</label>
+          <div class="input_pw">
+            <input id="signin-pw" type="password" placeholder="비밀번호를 입력해주세요" required/>
+            <img class="pw_eye" src="images/see_pw.png" alt="비밀번화_표시_활성화">
+          </div>
+          
+          <button type="submit">로그인</button>
+        </div>
+        
+        <div>
+          
+        </div>
+      </form>
+
+      <div class="sso_container">
+        간편 로그인하기
   
-</body>
+        <div class="sso_container_icon" style="margin: 0;">
+          <a href="https://www.google.com/"><img src="images/ic_google.png" alt=""></a>
+          <a href="https://www.kakaocorp.com/page/"><img src="images/ic_kakao.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    
+
+  <div class="go_signup">
+    판다 마켓은 처음이신가요? <a href="signup.html">회원가입</a>
+  </div>
+  </body>
 </html>

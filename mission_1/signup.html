@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/sign.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <title>회원가입_페이지</title>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/sign_logo.png" alt="판다마켓_메인페이지_이동"/>
+      </a>
+    </div>
+    
+    <div class="signin_container">
+      <form>
+
+        <div>
+          <label for="signup-email">이메일</label>
+          <input id="signup-email" type="email" placeholder="이메일을 입력해주세요" required/>
+        </div>
+
+        <div>
+          <label for="signup-name">닉네임</label>
+          <input id="signup-name" placeholder="이메일을 입력해주세요" required/>
+        </div>
+
+        <div>
+          <label for="signup-pw">비밀번호</label>
+          <div class="input_pw">
+            <input id="signup-pw" type="password" placeholder="비밀번호를 입력해주세요" required/>
+            <img class="pw_eye" src="images/see_pw.png" alt="비밀번화_표시_활성화">
+          </div>
+        </div>
+
+        <div>
+          <label for="signup-check-pw">비밀번호 확인</label>
+          <div class="input_pw">
+            <input id="signup-check-pw" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" required/>
+            <img class="pw_eye" src="images/see_pw.png" alt="비밀번화_표시_활성화">
+          </div>
+        </div>
+  
+        <div>
+          <button type="submit">로그인</button>
+        </div>
+      </form>
+
+      <div class="sso_container">
+        간편 로그인하기
+  
+        <div class="sso_container_icon" style="margin: 0;">
+          <a href="https://www.google.com/"><img src="images/ic_google.png" alt="구글_이동"></a>
+          <a href="https://www.kakaocorp.com/page/"><img src="images/ic_kakao.png" alt="카카오톡_이동"></a>
+        </div>
+      </div>
+    </div>
+    
+
+  <div class="go_signup">
+    이미 회원이신가요? <a href="signin.html">로그인</a>
+  </div>
+  </body>
+</html>

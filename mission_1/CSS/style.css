@@ -1,29 +1,32 @@
-
 body {
   padding: 0;
   margin: 0;
 }
 
 header {
+  background-color: #ffffff;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
   padding: 0 200px;
 }
 
-.header_container{
+.header_container {
   text-align: center;
   width: 100%;
   max-width: 1920px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
-header a{
+header a {
   font-size: 16px;
 }
 
 button {
-  /* 버튼 공통 요소 */
   background-color: #3692ff;
   color: #ffffff;
   border: none;
@@ -42,9 +45,9 @@ button:active {
 }
 
 header button {
-  width: 128px; /* 해더 로그인 버튼 */
-  height: 48px; /* 해더 로그인 버튼 */
-  border-radius: 8px; /* 해더 로그인 버튼 */
+  height: 48px;
+  width: 128px;
+  border-radius: 8px;
   padding: 14.5px 43px;
 }
 
@@ -56,6 +59,7 @@ header button {
   background-color: #cfe5ff;
   display: flex;
   justify-content: center;
+  padding-top: 70px;
 }
 
 .top_banner_container {
@@ -114,7 +118,6 @@ main section:nth-child(even) {
   text-align: right;
 }
 
-
 section {
   display: flex;
   gap: 64px;
@@ -134,7 +137,6 @@ section {
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;
-  /* letter-spacing: 0em; */
 }
 
 .section_container h1 {
@@ -144,7 +146,6 @@ section {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
-  /* letter-spacing: 0.02em; */
 }
 
 .section_container p {
@@ -154,7 +155,6 @@ section {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  /* letter-spacing: 0.08em; */
 }
 
 /* ===========Main 영역============= */
@@ -197,7 +197,12 @@ section {
 footer {
   background-color: #111827;
   height: 160px;
-  /* display: flex; */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .footer_container {
@@ -214,28 +219,21 @@ footer {
 
 .footer_year {
   color: #9ca3af;
-  font-family: Pretendard; /* footer 공통요소 */
-  font-size: 16px; /* footer 공통요소 */
-  font-weight: 400; /* footer 공통요소 */
-  line-height: 19px; /* footer 공통요소 */
-  letter-spacing: 0em; /* footer 공통요소 */
-  text-align: center; /* footer 공통요소 */
   display: flex;
   align-items: center;
 }
 
 .footer_privacy_faq {
   color: #e5e7eb;
-  font-family: Pretendard; /* footer 공통요소 */
-  font-size: 16px; /* footer 공통요소 */
-  font-weight: 400; /* footer 공통요소 */
-  line-height: 19px; /* footer 공통요소 */
-  letter-spacing: 0em; /* footer 공통요소 */
-  text-align: center; /* footer 공통요소 */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+}
+
+.footer_privacy_faq a {
+  color: #e5e7eb;
+  text-decoration: none;
 }
 
 .footer_SNS {
