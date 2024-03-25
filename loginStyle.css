@@ -4,61 +4,67 @@
   padding: 0;
 }
 
-.logo {
-  display: flex;
-  margin-top: 20px;
-  margin-left: 550px;
-}
-.pandamarket {
-  width: 310px;
-  height: 110px;
+body {
+  color: #374151;
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
 }
 
-.login-container {
-  display: flex;
-  width: auto;
+.auth-container {
   max-width: 640px;
-  height: 664px;
-  margin-top: 20px;
-  margin-left: 400px;
+  margin: 0 auto;
+}
+.logo {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.email-container,
+.password-container,
+.check-password-container,
+.nickname-container {
+  margin-bottom: 24px;
+  display: flex;
   flex-direction: column;
 }
-.email,
-.password,
-.nickname,
-.check-password {
-  font-family: Pretendard;
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+label {
+  display: block;
+  margin-bottom: 16px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
-.email-input,
-.password-input,
-.check-password-input,
-.nickname-input {
-  width: 640px;
-  height: 56px;
-  gap: 10px;
-  border: 1px;
+input {
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  border: none;
   border-radius: 12px;
-  background: #f3f4f6;
-  padding-left: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
 }
 
-.button {
-  width: 640px;
-  height: 56px;
-  margin-top: 15px;
+input::placeholder {
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input:focus {
+  outline-color: #3692ff;
 }
 
 .login-button {
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 56px;
   border: 1px;
   border-radius: 40px;
   background: #9ca3af;
@@ -69,6 +75,7 @@
   letter-spacing: 0em;
   text-align: center;
   color: #ffffff;
+  margin-top: 15px;
 }
 
 .login-button:hover {
@@ -76,7 +83,7 @@
 }
 .social-login-container {
   display: flex;
-  width: 640px;
+  width: 100%;
   height: 74px;
   margin-top: 20px;
   background: #e6f2ff;

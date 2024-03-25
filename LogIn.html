@@ -18,18 +18,18 @@
     <link rel="stylesheet" href="./loginStyle.css" />
     <link rel="icon" href="./images/favicon.ico" />
   </head>
+
   <body>
-    <header>
+    <div class="auth-container">
       <div class="logo">
         <a href="index.html"
-          ><img src="./images/logo.png" class="pandamarket" />
+          ><img src="./images/logo.png" class="pandamarket" width="396" />
         </a>
       </div>
-    </header>
-    <main>
-      <div class="login-container">
+
+      <form method="post">
         <div class="email-container">
-          <div class="email">이메일</div>
+          <label for="email">이메일</label>
           <input
             class="email-input"
             placeholder="이메일을 입력해주세요"
@@ -37,38 +37,40 @@
           />
         </div>
         <div class="password-container">
-          <div class="password">비밀번호</div>
-          <input
-            class="password-input"
-            placeholder="비밀번호를 입력해주세요"
-            type="password"
-          />
-        </div>
-        <div class="button">
-          <button class="login-button" onclick="navigateTo('/index.html')">
-            로그인
-          </button>
-        </div>
-        <div class="social-login-container">
-          <div id="log">간편로그인</div>
-          <div class="social-login">
-            <a
-              class="kakao-login"
-              href="https://www.kakaocorp.com/page/"
-              alt="kakaotalk"
-            >
-              <img class="kakao" src="./images/kakao.png" />
-            </a>
-            <a class="google-login" href="https://www.google.com" alt="google">
-              <img class="google" src="./images/google.png" />
-            </a>
+          <label for="password">비밀번호</label>
+          <div class="input-wrapper">
+            <input
+              class="password-input"
+              name="password"
+              placeholder="비밀번호를 입력해주세요"
+              type="password"
+            />
           </div>
         </div>
-        <div class="go-Signup">
-          판다마켓이 처음이신가요?
-          <a href="./SignUp.html">회원가입</a>
+
+        <button class="login-button" onclick="navigateTo('/index.html')">
+          로그인
+        </button>
+      </form>
+      <div class="social-login-container">
+        <div id="log">간편 로그인하기</div>
+        <div class="social-login">
+          <a
+            class="kakao-login"
+            href="https://www.kakaocorp.com/page/"
+            alt="kakaotalk"
+          >
+            <img class="kakao" src="./images/kakao.png" />
+          </a>
+          <a class="google-login" href="https://www.google.com" alt="google">
+            <img class="google" src="./images/google.png" />
+          </a>
         </div>
       </div>
-    </main>
+      <div class="go-Signup">
+        판다마켓이 처음이신가요?
+        <a href="./SignUp.html">회원가입</a>
+      </div>
+    </div>
   </body>
 </html>
