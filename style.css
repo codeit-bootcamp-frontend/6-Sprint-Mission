@@ -201,10 +201,13 @@ footer .info-container .link-container img {
   .home-top br {
     display: none;
   }
-  .home-top {
+  .top .home-top {
     text-align: center;
     position: relative;
     top: -80px;
+  }
+  .top .home-top button {
+    margin: 0 auto;
   }
   .top .img-top img {
     width: 996px;
