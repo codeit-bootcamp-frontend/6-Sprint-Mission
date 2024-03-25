@@ -15,11 +15,11 @@
       <form action="/register-form" method="POST">
         <div class="form_label">
           <label for="email">이메일</label>
-          <input type="email" placeholder="이메일을 입력해주세요" />
+          <input id="email" placeholder="이메일을 입력해주세요" />
         </div>
         <div class="form_label">
           <label for="nickname">닉네임</label>
-          <input type="text" placeholder="닉네임을 입력해주세요" />
+          <input id="nickname" placeholder="닉네임을 입력해주세요" />
         </div>
         <div class="form_label">
           <label for="password">비밀번호</label>
@@ -27,6 +27,7 @@
             type="password"
             placeholder="비밀번호를 입력해주세요"
             class="password"
+            id="password"
           />
           <img
             src="../img/icon_visibility.png"
@@ -35,11 +36,12 @@
           />
         </div>
         <div class="form_label">
-          <label for="password">비밀번호 확인</label>
+          <label for="confirm_password">비밀번호 확인</label>
           <input
             type="password"
             placeholder="비밀번호를 다시 한 번 입력해주세요"
             class="password"
+            id="confirm_password"
           />
           <img
             src="../img/icon_visibility.png"
