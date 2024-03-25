@@ -54,25 +54,25 @@ form {
   top: 55px;
   cursor: pointer;
 }
-.login-btn {
+.signup-btn {
   width: 100%;
   height: 56px;
   border-radius: 40px;
   border: none;
   color: #fff;
   font-size: 20px;
-  background-color: #9ca3af;
+  background-color: var(--inactive-color);
   cursor: pointer;
 }
-.login-btn:hover {
+.signup-btn:hover {
   background-color: var(--hover-bluebtn);
 }
-.easy-login {
+.social-login {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #e6f2ff;
+  background-color: var(--social-login-background-color);
   height: 74px;
   border-radius: 8px;
   padding: 0 24px;
@@ -81,7 +81,7 @@ form {
   color: var(--gray800);
 }
 
-.easy-login-logo img {
+.social-login-logo img {
   width: 42px;
   margin-left: 16px;
 }
@@ -96,7 +96,7 @@ form {
   font-weight: 550;
 }
 .go-login-container a {
-  color: var(--hover-bluebtn);
+  color: var(--go-login-signup-color);
 }
 
 @media screen and (min-width: 400px) and (max-width: 767px) {

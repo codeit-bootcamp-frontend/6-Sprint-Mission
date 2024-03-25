@@ -59,7 +59,7 @@ form {
   border: none;
   color: #fff;
   font-size: 20px;
-  background-color: #9ca3af;
+  background-color: var(--inactive-color);
   cursor: pointer;
 }
 .login-btn:hover {
@@ -70,7 +70,7 @@ form {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #e6f2ff;
+  background-color: var(--social-login-background-color);
   height: 74px;
   border-radius: 8px;
   padding: 0 24px;
@@ -94,7 +94,7 @@ form {
   font-weight: 550;
 }
 .go-signup-container a {
-  color: #3182f6;
+  color: var(--go-login-signup-color);
 }
 
 @media screen and (min-width: 400px) and (max-width: 767px) {
