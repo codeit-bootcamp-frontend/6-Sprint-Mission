@@ -8,12 +8,18 @@ body {
     margin: 0;
 }
 
+header {
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 99;
+}
 
 .header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 200px
+    margin: 10px 200px;
 }
 
 .login_btn {
@@ -34,7 +40,7 @@ body {
     height: 540px;
 }
 
-.container.diss {
+.container.space {
     margin-top: 138px;
 }
 

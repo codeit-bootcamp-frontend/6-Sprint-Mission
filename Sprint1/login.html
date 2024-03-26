@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <link rel="stylesheet" href="css/login.css" >
+    <!-- 폰트 참고 사이트 (https://github.com/orioncactus/pretendard) -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="icon" href="imgs/favicon.png" >
+</head>
+<body>
+    <header>   
+        <a href="/">
+            <img src="imgs/logo.png" class="logo">
+        </a>
+    </header>
+    <main>
+        <form class="form_container">
+            <div class="form_section">
+                <label for="email">이메일</label> 
+                <input it="email" type="email" name="user_email" placeholder="이메일을 입력해주세요">
+            </div>
+            <div class="form_section ">
+                <label for="pwd">비밀번호</label> 
+                <div class="form_merge">
+                    <input id="pwd" type="password" name="user_pwd" placeholder="비밀번호를 입력해주세요">
+                    <img src="imgs/eyes.png" id="eyeslogo">
+                </div>
+            </div>
+            <div class="form_section">
+                <button>로그인</button>
+            </div>
+            <div class="form_section">
+                <div class="easy_login">
+                    <p>간편 로그인하기</p>
+                    <a href="https://www.google.co.kr/" target="_blank"><img src="imgs/googlelogo.png" id="googlelogo"></a>
+                    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_blank"><img src="imgs/kakaologo.png" id="kakaologo"></a>
+                </div>
+            </div>
+            <div class="form_section p_span">
+                <p>판다마켓이 처음이신가요? <span><a href="./signin.html">회원가입</a></span></p>
+            </div>
+
+        </form>
+    </main>
+    
+</body>
+</html>

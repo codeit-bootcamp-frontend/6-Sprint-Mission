@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pretendard';
+}
+
+body {
+    width: 640px;
+    margin: 0 auto;
+}
+
+
+.logo {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+
+.form_tag label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form_tag input {
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 10px;
+    background-color: #F3F4F6;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 24px;
+}
+
+input:focus {
+    outline: none;
+    border: 4px solid;
+    border-color: #3692FF;
+}
+
+
+.form_tag button {
+    background-color: #9CA3AF;
+    color: #ffffff;
+    padding: 16px 124px;
+    border: none;
+    border-radius: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #3692FF;
+}
+
+.form_section {
+    margin-bottom: 16px;
+}
+
+
+
+.form_merge {
+    position: relative;
+}
+
+#eyelogo {
+    position: absolute;
+    top: 27px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.easy_login {
+    height: 74px;
+    border-radius: 8px;
+    background-color: #E6F2FF;
+    display: flex;
+    padding: 25px 23px;
+    gap: 16px;
+    align-items: center;
+}
+
+.easy_login p {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form_section.p_span {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}

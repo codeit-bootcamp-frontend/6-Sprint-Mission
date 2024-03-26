@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "pretendard";
+}
+
+
+body {
+    width: 640px;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+header .logo{
+    display: block;
+    margin: 0 auto;
+}
+
+.form_container label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form_container input {
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    background-color: #F3F4F6;
+    border: none;
+}
+
+.form_section {
+    margin-bottom: 24px;
+}
+
+input:focus {
+    border: 4px solid;
+    outline:none;
+    border-color: #3692FF;
+}
+
+.form_section input {
+    padding: 16px 24px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+
+.form_section button:hover {
+    background-color: #3692FF;
+}
+
+
+.form_merge {
+    position: relative;
+}
+
+#eyeslogo {
+    position: absolute;
+    right: 26px;
+    top: 26px;
+    cursor: pointer;
+}
+
+.form_section button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 40px;
+    padding: 16px 124px;
+    background-color: #9CA3AF;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.form_section.p_span {
+    text-align: center;
+}
+
+.easy_login {
+    background-color: #E6F2FF;
+    height: 74px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+    gap: 16px;
+    padding: 25px 23px;
+}
+.easy_login p{
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
