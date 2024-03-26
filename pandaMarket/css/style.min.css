@@ -432,7 +432,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 	Author: Güray Yarar (https://github.com/gurayyarar)
 */
 .spr {
-  background-image: url("/dist/img/spr.sprite.png?v=DdT66XuCwbbWnz282MIIfJpQcTsyJdLhD0qtt");
+  background-image: url("/img/spr.sprite.png?v=DdT66XuCwbbWnz282MIIfJpQcTsyJdLhD0qtt");
   background-repeat: no-repeat;
   display: inline-block;
 }
