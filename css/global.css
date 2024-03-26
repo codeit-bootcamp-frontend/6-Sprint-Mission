@@ -1,0 +1,125 @@
+:root {
+  /* color */
+  --gray-50: #f3f4f6;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --cool-gray: #374151;
+  --red: #f74747;
+  --blue: #3692ff;
+  --white: #fff;
+
+  /* font-size */
+  --font-15: 1.5rem;
+  --font-16: 1.6rem;
+  --font-18: 1.8rem;
+  --font-20: 2rem;
+  --font-24: 2.4rem;
+  --font-26: 2.6rem;
+  --font-40: 4rem;
+  --font-66: 6.6rem;
+}
+
+@font-face {
+  font-family: 'ROKAF Sans';
+  src: url('../font/ROKAF\ Sans\ Medium.ttf') format('truetype'),
+  url('../font/ROKAF\ Sans\ Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ROKAF Sans';
+  src: url('../font/ROKAF\ Sans\ Bold.ttf') format('truetype'),
+  url('../font/ROKAF\ Sans\ Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 1.2;
+}
+
+.font-rokaf {
+  font-family: 'ROKAF Sans';
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  max-width: 1920px;
+  padding: 0 200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 8px;
+  background-color: var(--blue);
+  font-size: var(--font-16);
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* 판다마켓 로고 텍스트 */
+.logo-text {
+  color: var(--blue);
+  font-size: var(--font-26);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  text-align: left;
+}

@@ -1,126 +1,10 @@
-:root {
-  /* color */
-  --gray-50: #F3F4F6;
-  --gray-100: #F3F4F6;
-  --gray-200: #E5E7EB;
-  --gray-400: #9CA3AF;
-  --gray-500: #6B7280;
-  --gray-600: #4B5563;
-  --gray-800: #1F2937;
-  --gray-900: #111827;
-  --cool-gray: #374151;
-  --red: #f74747;
-  --blue: #3692ff;
-  --white: #fff;
-
-  /* font-size */
-  --font-15: 1.5rem;
-  --font-16: 1.6rem;
-  --font-18: 1.8rem;
-  --font-20: 2rem;
-  --font-24: 2.4rem;
-  --font-26: 2.6rem;
-  --font-40: 4rem;
-  --font-66: 6.6rem;
-}
-
-@font-face {
-  font-family: 'ROKAF Sans';
-  src: url('../font/ROKAF\ Sans\ Medium.ttf') format('truetype'),
-  url('../font/ROKAF\ Sans\ Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ROKAF Sans';
-  src: url('../font/ROKAF\ Sans\ Bold.ttf') format('truetype'),
-  url('../font/ROKAF\ Sans\ Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  line-height: 1.2;
-}
-
-.fontRokaf {
-  font-family: 'ROKAF Sans';
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-}
-
-.inner {
-  max-width: 1920px;
-  padding: 0 200px;
-  margin: 0 auto;
-}
-
-.container {
-  max-width: 1200px;
-  width: calc(100% - 60px);
-  margin: 0 auto;
-}
-
-.button {
-  border-radius: 8px;
-  background-color: var(--blue);
-  font-size: var(--font-16);
-  font-weight: 600;
-  color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
 /* 헤더 */
 #header {
   height: 70px;
   display: flex;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: var(--white);
   z-index: 10;
 }
 
@@ -135,18 +19,9 @@ a {
   gap: 0 8px;
 }
 
-#header .logoImg {
+#header .logo-img {
   width: 40px;
   height: 40px;
-}
-
-.logoText {
-  color: var(--blue);
-  font-size: var(--font-26);
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 #header .button {
@@ -166,7 +41,7 @@ a {
   max-width: calc(1920px - 442px);
 }
 
-.banner .mainText p.description {
+.banner .main-text p.description {
   font-size: var(--font-40);
   font-weight: 700;
   line-height: 1.4;
@@ -175,19 +50,19 @@ a {
   margin: 0;
 }
 
-.banner .bannerImg {
+.banner .banner-img {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.banner .mainText {
+.banner .main-text {
   z-index: 1;
   width: 1200px;
 }
 
 /* 구경하러 가기 배너 */
-.itemBanner .mainText a.button {
+.item-banner .main-text a.button {
   width: 355px;
   margin: 32px 0 0;
   font-size: var(--font-20);
@@ -197,35 +72,35 @@ a {
 }
 
 /* 메인 영역 */
-main.introduceSection {
+main.introduce-section {
   padding: 138px 0;
   display: grid;
   gap: 138px;
 }
 
-main.introduceSection > article {
+main.introduce-section > article {
   display: flex;
   gap: 0 64px;
   align-items: center;
 }
 
-main.introduceSection > article.reverse {
+main.introduce-section > article.reverse {
   flex-direction: row-reverse;
 }
 
-main.introduceSection > article .imgArea {
+main.introduce-section > article .img-area {
   max-width: 588px;
   flex: 1;
 }
 
-main.introduceSection .textArea .keyword {
+main.introduce-section .text-area .keyword {
   color: var(--blue);
   font-size: var(--font-18);
   font-weight: 700;
   line-height: 1.4;
 }
 
-main.introduceSection .textArea .title {
+main.introduce-section .text-area .title {
   color: var(--cool-gray);
   font-size: var(--font-40);
   font-weight: 700;
@@ -234,7 +109,7 @@ main.introduceSection .textArea .title {
   margin: 12px 0 24px;
 }
 
-main.introduceSection .textArea .detail {
+main.introduce-section .text-area .detail {
   color: var(--cool-gray);
   font-size: var(--font-24);
   font-weight: 500;
@@ -243,12 +118,12 @@ main.introduceSection .textArea .detail {
 }
 
 /* 하단 배너 */
-.bottomBanner .container {
+.bottom-banner .container {
   padding: 214px 0;
 }
 
-.bottomBanner .container .bannerImg,
-.bottomBanner .container .bannerImg img {
+.bottom-banner .container .banner-img,
+.bottom-banner .container .banner-img img {
   max-height: 540px;
 }
 
@@ -272,20 +147,20 @@ footer .copyright {
   flex: 1;
 }
 
-footer .pageLink {
+footer .page-link {
   font-size: var(--font-16);
   font-weight: 400;
 }
 
-footer .pageLink a {
+footer .page-link a {
   color: var(--gray-200);
 }
 
-footer .pageLink a:not(:last-of-type) {
+footer .page-link a:not(:last-of-type) {
   margin-right: 30px;
 }
 
-footer .snsLink {
+footer .sns-link {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -293,71 +168,70 @@ footer .snsLink {
   flex: 1;
 }
 
-footer .snsLink > a {
+footer .sns-link > a {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
 
-footer .snsLink a.facebook {
+footer .sns-link a.facebook {
   background-image: url(../img/ic_facebook.svg);
 }
 
-footer .snsLink a.twitter {
+footer .sns-link a.twitter {
   background-image: url(../img/ic_twitter.png);
 }
 
-footer .snsLink a.youtube {
+footer .sns-link a.youtube {
   background-image: url(../img/ic_youtube.png);
 }
 
-footer .snsLink a.instagram {
+footer .sns-link a.instagram {
   background-image: url(../img/ic_instagram.svg);
 }
 /* 메인페이지 완성 */
 
 /* 로그인, 회원가입 페이지 공통 */
-.signInup {
+.authentication-page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 60px 30px;
+  box-sizing: content-box;
 }
 
-.signInup .logo {
+.authentication-page .logo {
   gap: 22px;
 }
 
-.signInup .logoImg {
+.authentication-page .logo-img {
   width: 103px;
   height: 103px;
 }
 
-.signInup .logoText {
+.authentication-page .logo-text {
   font-size: var(--font-66);
   line-height: 1.4;
 }
 
-.signInup .signInUpForm {
+.authentication-page .auth-form {
   margin: 40px 0 0;
   display: grid;
   gap: 24px;
 }
 
-.signInup .inputWrapper {
-  display: flex;
-  flex-direction: column;
+.authentication-page .input-wrapper {
+  display: grid;
 }
 
-.signInup .inputWrapper label {
+.authentication-page .input-wrapper label {
   font-size: var(--font-18);
   color: var(--gray-800);
   font-weight: 700;
   margin: 0 0 16px;
 }
 
-.signInup .inputWrapper input {
+.authentication-page .input-wrapper input {
   width: 100%;
-  height: 56px;
   padding: 16px 24px;
   border-radius: 12px;
   background-color: var(--gray-100);
@@ -365,43 +239,42 @@ footer .snsLink a.instagram {
   font-weight: 400;
   color: var(--gray-800);
   line-height: 1.5;
+  outline: 1px solid rgba(0, 0, 0, 0);
+  transition: 0.3s;
 }
 
-.signInup .inputWrapper input::placeholder {
+.authentication-page .input-wrapper input[type="password"] {
+  padding-right: 60px;
+}
+
+.authentication-page .input-wrapper input::placeholder {
   color: var(--gray-400);
 }
 
-.signInup .inputWrapper input:focus-visible {
-  outline: 0;
+.authentication-page .input-wrapper input:focus-visible {
+  outline-color: var(--blue);
 }
 
-.signInup .inputWrapper input:focus {
-  border: 1px solid var(--blue);
-}
-
-.signInup .passwordGroup .inputIcon {
+.authentication-page .password-group .input-icon {
   top: 50%;
   right: 24px;
   transform: translate(0, -50%);
 }
 
-.signInup .signInUpForm .button {
-  width: 100%;
-  height: 56px;
-  border-radius: 40px;
-  padding: 16px 0;
-  color: #fff;
+.authentication-page .auth-form button {
+  padding: 14px 16px;
+  border-radius: 28px;
+  color: var(--white);
   font-size: var(--font-20);
   line-height: 1.4;
   font-weight: 600;
 }
 
-.signInup .signInUpForm .button.off {
+.authentication-page .auth-form button.off {
   background-color: #9CA3AF;
 }
 
-.signInup .socialLogin {
-  height: 74px;
+.authentication-page .social-login {
   border-radius: 8px;
   margin: 24px 0;
   padding: 16px 24px;
@@ -411,35 +284,35 @@ footer .snsLink a.instagram {
   align-items: center;
 }
 
-.signInup .socialLoginText {
+.authentication-page .social-login-text {
   color: var(--gray-800);
   font-size: var(--font-16);
   font-weight: 500;
   line-height: 1.5;
 }
 
-.signInup .socialLoginIcon {
+.authentication-page .social-login-icon {
   display: flex;
   align-items: center;
 }
 
-.signInup .socialLoginIcon .icon {
+.authentication-page .social-login-icon .icon {
   width: 42px;
   height: 42px;
 }
 
-.signInup .socialLoginIcon .icon:not(:last-of-type) {
+.authentication-page .social-login-icon .icon:not(:last-of-type) {
   margin-right: 16px;
 }
 
-.signInup .link {
+.authentication-page .link {
   font-size: var(--font-15);
   font-weight: 500;
   color: var(--gray-800);
   text-align: center;
 }
 
-.signInup .link a {
+.authentication-page .link a {
   margin-left: 4px;
   color: #3182F6;
   text-decoration: underline;
