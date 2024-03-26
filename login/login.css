@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Pretendard Variable", "Noto Sans KR", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 640px;
+}
+label {
+  margin: 20px 0;
+  text-align: left;
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+}
+input {
+  margin: 10px 0;
+  padding: 20px;
+  width: 100%;
+  height: 56px;
+  background-color: #f3f4f6;
+  border: 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9ca3af;
+  line-height: 24px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #3692ff;
+}
+.logo {
+  margin: auto;
+  width: 396px;
+  height: 132px;
+}
+.passwordInput {
+  position: relative;
+}
+.passwordInput > img {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+.loginBtn {
+  background-color: #9ca3af;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  line-height: 24px;
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  gap: 10px;
+  padding: 16px auto;
+  border: 0;
+}
+.loginBtn:hover {
+  background-color: #3692ff;
+}
+.easyLogin {
+  margin: 20px 0;
+  position: relative;
+  padding: 10px;
+  background-color: #e6f2ff;
+  width: 100%;
+  height: 74px;
+  border-radius: 8px;
+}
+.easyLogin > p {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.easyLoginImg {
+  margin-top: 8px;
+  width: 42px;
+  height: 42px;
+}
+.easyLoginLogo {
+  position: absolute;
+  right: 20px;
+}
+.joinText > p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2937;
+}
+.joinText > a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #3182f6;
+}
