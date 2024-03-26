@@ -53,7 +53,7 @@ header {
   color: var(--white);
 }
 
-.button {
+.btn-primary {
     border: none;
     background-color: var(--blue-500);
     color: var(--white);
