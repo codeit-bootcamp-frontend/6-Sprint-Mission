@@ -1,0 +1,101 @@
+body {
+  width: 640px;
+  margin: 60px auto;
+}
+
+.signin-box {
+  width: 100%; 
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray800);
+}
+
+input {
+  height: 56px;
+  padding: 16px 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  border-style: none;
+  background-color: var(--gray100);
+  border-radius: 12px;
+}
+
+input:focus {
+  outline:2px solid var(--blue);
+}
+
+input::placeholder {
+  color: var(--gray400)
+}
+
+.signin-button {
+  height: 56px;
+  border-style: none;
+  border-radius: 40px;
+  background-color: var(--gray400);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.signin-button:hover {
+  background-color: var(--blue);
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+}
+
+.visibility {
+  position: absolute;
+  width: 24px;
+  background-color: inherit;
+  border-style: none;
+  right: 30px;
+  top: 30px;
+}
+
+.sns-signin {
+  height: 74px;
+  padding: 0 23px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--skyblue);
+  border-radius: 8px;
+  color: var(--gray800);
+  font-weight: 500;
+}
+
+
+.sns a:first-child {
+  margin-right: 16px; 
+  text-decoration: none;
+}
+
+.btm {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+

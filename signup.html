@@ -1,0 +1,84 @@
+<html lang="ko">
+<head>
+  <title>회원가입-판다마켓</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/CSS/reset.css">
+  <link rel="stylesheet" href="/CSS/global.css">
+  <link rel="stylesheet" href="/CSS/signin-style.css">
+  
+  <link
+  rel="stylesheet"
+  as="style"
+  crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+  />  
+</head>
+<body>
+  <div class="signup-box">
+    <header>
+      <a class="logo" href="/index.html">
+        <img alt="logo" src="/assets/logo-signin.png">        
+      </a>
+    </header>
+    <form>
+      <label for="email-input">이메일</label>
+      <input 
+        name="email"
+        type="text"
+        placeholder="이메일을 입력해주세요"
+        id="email-input"
+        autofocus
+      />
+      <label for="nickname-input">닉네임</label>
+      <input 
+        name="nickname"
+        type="text"
+        placeholder="닉네임을 입력해주세요"
+        id="nickname-input"
+      />
+      <label for="password">비밀번호</label>
+      <div class="password-box">
+        <input 
+        class="password-input"
+        name="password"
+        type="password"
+        placeholder="비밀번호를 입력해주세요"
+        id="password"
+        />
+        <button type="button" class="visibility">
+          <img alt="visibility" src="/assets/btn_visibility.png">
+      </button>
+      </div>
+      <label for="password-check">비밀번호 확인</label>
+      <div class="password-box">
+        <button type="button" class="visibility">
+          <img alt="visibility" src="/assets/btn_visibility.png">
+      </button>
+        <input class="password-input"
+          name="password"
+          type="password"
+          placeholder="비밀번호를 다시 한 번 입력해주세요"
+          id="password-check"
+          />
+      </div>
+      <button class="signin-button">회원가입</button>
+      <div class="sns-signin">
+        <div>간편 로그인하기</div>
+        <div class="sns">
+          <a href="https://www.google.com/">
+            <img alt="google" src="/assets/google.png">  
+          </a>
+          <a href="https://www.kakaocorp.com/">
+            <img alt="kakao" src="assets/kakao.png">
+          </a>
+        </div>
+      </div>
+      <div class="btm">
+        이미 회원이신가요?
+        <a href="signin.html">로그인</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
