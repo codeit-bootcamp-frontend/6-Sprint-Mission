@@ -1,0 +1,145 @@
+.header {
+  height: 70px;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 200px;
+  max-width: 1920px;
+  height: 100%;
+}
+
+.button.small {
+  border-radius: 8px;
+  width: 128px;
+  height: 48px;
+  font-size: 16px;
+}
+
+.button.large {
+  border-radius: 28px;
+  width: 356px;
+  height: 56px;
+  font-size: 20px;
+}
+
+.banner {
+  height: 540px;
+  background: var(--primary300);
+  overflow: hidden;
+}
+
+.banner-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+  height: 100%;
+}
+
+.banner-title {
+  color: var(--gray700);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.banner-contents *:not(.banner-image) {
+  z-index: 1;
+}
+
+.banner-image {
+  position: absolute;
+  right: -135px;
+  bottom: 0;
+  width: 996px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.topics {
+  padding-bottom: 138px;
+}
+
+.topic {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 64px;
+  padding: 138px 0;
+  color: var(--gray700);
+}
+
+.topic.reverse {
+  justify-content: right;
+  text-align: right;
+}
+
+.topic-image {
+  max-height: 444px;
+}
+
+.topic-label {
+  color: var(--primary500);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.topic-title {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.topic-description {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.footer {
+  height: 160px;
+  background: var(--gray900);
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 32px 200px;
+  max-width: 1920px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer-copyright {
+  color: var(--gray400);
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-link {
+  color: var(--gray200);
+}
+
+.footer-link:visited {
+  color: var(--gray200);
+}
+
+.footer-link:active {
+  color: var(--primary500);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
