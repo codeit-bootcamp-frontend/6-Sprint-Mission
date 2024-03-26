@@ -1,0 +1,14 @@
+@import "reset.css";
+@import "variables.css";
+
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: pretendard;
+}
