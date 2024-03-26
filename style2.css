@@ -88,14 +88,17 @@ input{
     height:74px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 24px;
+    
    
 }
 .easylogin_wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    height : 42px;
+    width: 594px;
 }
 .easylogin{ 
     color :#1F2937;
@@ -105,12 +108,13 @@ input{
     display: flex;
 
 }
-
-.images{
-    width: 100px;
+.image{
     height:42px;
-    display: flex;
-    /* gap: 16px; */
+}
+img{
+    width: 42px;
+    height: 42px;
+
 }
 .signin{
     display: flex;

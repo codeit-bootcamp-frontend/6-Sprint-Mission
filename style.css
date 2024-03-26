@@ -24,44 +24,34 @@
 }
 
 
-.header-content{
+.header{
     background-color: #CFE5FF;
-    height : 540px;
-    position: relative;
-
-    
-}
-.header-content #home_top {
-    position: absolute;
-    right: 223px;
-    left : 701px;
-    top: 93px;
-    
-}
-.header-content .header-description{
-    /* display : block; */
-    top:170px;
-    left:190px;
-    right : 1205px;
-    bottom : 170px;
-    width: 355px;
-    height:200px;
-    position : absolute;
+    display: flex;
+    justify-content: center;    
 }
 
-.headerSaying{
+.header #home_top {
+    display: flex;
+    align-self:flex-end;
+    
+    
+}
+.header .header-description{
+    display:flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+    gap: 32px;
+}
+
+h1{
     color : #374151;
     font-family: "Pretendard";
     font-weight: 700;
     font-size:40px;
     line-height: 56px;
 }
-#header_click{
-    width: 355px;
-    height: 56px;
-    margin-top: 32px;
 
-}
 
 .section{
     background-color :#FFFFFF;
@@ -77,10 +67,11 @@
   }
 
 .section-box{
-    padding: 138px 360px 138px 360px;
+    max-width : 1022px;
+    margin: 138px auto;
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 64px;
     
 }
 
@@ -101,13 +92,21 @@
 
 
 .section-small{
+    margin-top: 24px;
+    color: #374151;
     font-size: 24px;
     font-weight: 500;
-    line-height: 120%;
+    line-height: 28.8px;
     letter-spacing: 0.08em;
-    margin-top: 24px;
-}
 
+
+}
+#section2 {
+    margin-right:360px;
+}
+#section3 {
+    margin-left:360px;
+}
 #home-02{
     width: 588px ;
     height: 444px;
@@ -125,19 +124,6 @@
     letter-spacing: 0em;
 }
 
-.section-small{
-    font-family: "Pretendard";
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0.08em;
-    text-align: left;
-    color: #374151;
-}
-
-
-
-
 .Register{
     color: #3692FF;
     font-family: "Pretendard";
@@ -151,37 +137,33 @@
 
 .section4{
     background-color: #CFE5FF;
-    height : 540px;
-    position : relative;
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+    
 }
 .section4 #home_bottom{
-    right: 223px;
-    left : 701px;
-    position: absolute;
+    width: 996px;
+    display: flex;
+    align-self: flex-end;
 }
 
 .section4-description{
     color :#374151;
-    height: 112px;
-    position : absolute;
-    top: 214px;
-    left : 360px;
+    display: flex;
+    align-items: center;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 0em;
 }
 .footer{
-    /* width: 1,920px; */
     height: 160px;
-    top: 3448px;
-    gap: 10px;
     background-color :#111827;
 }
 .footerFrame{
     display : flex;
-    width: 1,520px;
-    height: 20px;
     justify-content: space-between; 
+    padding: 32px 200px 108px;
 }
 .codeit{
     color : #9CA3AF;
