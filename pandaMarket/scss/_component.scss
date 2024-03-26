@@ -23,7 +23,7 @@
 .btn-large {
   display:inline-block;
   box-sizing:border-box;
-  height:56px;
+  height:60px;
   padding:16px 124px;
   background:var(--brand-blue);
   border:0;
@@ -34,6 +34,12 @@
   color:#fff;
   text-align:center;
   line-height:2.4rem;
+  @media screen and (max-width : $size-tablet){
+    padding:14.5px 33.5px;
+    height:48px;
+    font-size: 1.6rem;
+    line-height:1.9rem;
+  }
 }
 
 .btn-small {
@@ -65,7 +71,7 @@
   font-weight: 400;
   line-height: 2.4rem;
 
-  @media screen and (max-width:$size-t) {
+  @media screen and (max-width:$size-tablet) {
     width:100%;
   }
 
