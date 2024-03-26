@@ -2,16 +2,11 @@
 @import '/styles/base.css';
 
 /* header */
-body {
-    padding-top: 70px;
-}
-
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
+    position: sticky;
+    inset: 0;
+    height: 72.5px;
+    background-color: #fff;
     margin: 0;
     padding: 10px 200px;
     display: flex;
