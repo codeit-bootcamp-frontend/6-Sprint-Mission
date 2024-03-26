@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(255, 255, 255);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.logo-image {
+  width: 153px;
+  cursor: pointer;
+}
+
+.login-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #3692ff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.banner {
+  height: 540px;
+  background-color: rgb(210, 227, 252);
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top {
+  background-image: url("../image/Img_home_top.png");
+}
+.bottom {
+  background-image: url("../image/Img_home_bottom.png");
+}
+.intro {
+  margin-left: 40px;
+  font-family: Pretendard;
+}
+.intro h1 {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #374151;
+  letter-spacing: 0.02em;
+}
+.search-btn {
+  width: 357px;
+  height: 56px;
+  padding: 16px 124px 16px 124px;
+  gap: 10px;
+  border-radius: 40px;
+  background: #3692ff;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  gap: 40px;
+  text-align: left;
+  font-family: Pretendard;
+}
+.image-home {
+  width: 40%;
+}
+.home h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3692ff;
+}
+.home h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #374151;
+}
+.home span {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+footer {
+  height: 160px;
+  padding: 32px 200px;
+  background: #111827;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+footer img {
+  cursor: pointer;
+}
+footer div:first-child {
+  color: #9ca3af;
+}
