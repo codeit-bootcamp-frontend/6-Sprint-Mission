@@ -64,7 +64,7 @@
 /* 구경하러 가기 배너 */
 .item-banner .main-text a.button {
   width: 355px;
-  margin: 32px 0 0;
+  margin: var(--margin-32) 0 0;
   font-size: var(--font-20);
   font-weight: 600;
   padding: 16px 0;
@@ -106,7 +106,7 @@ main.introduce-section .text-area .title {
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.02em;
-  margin: 12px 0 24px;
+  margin: var(--margin-12) 0 var(--margin-24);
 }
 
 main.introduce-section .text-area .detail {
@@ -157,7 +157,7 @@ footer .page-link a {
 }
 
 footer .page-link a:not(:last-of-type) {
-  margin-right: 30px;
+  margin-right: 3rem;
 }
 
 footer .sns-link {
@@ -214,7 +214,7 @@ footer .sns-link a.instagram {
 }
 
 .authentication-page .auth-form {
-  margin: 40px 0 0;
+  margin: 4rem 0 0;
   display: grid;
   gap: 24px;
 }
@@ -227,7 +227,7 @@ footer .sns-link a.instagram {
   font-size: var(--font-18);
   color: var(--gray-800);
   font-weight: 700;
-  margin: 0 0 16px;
+  margin: 0 0 var(--margin-16);
 }
 
 .authentication-page .input-wrapper input {
@@ -276,12 +276,13 @@ footer .sns-link a.instagram {
 
 .authentication-page .social-login {
   border-radius: 8px;
-  margin: 24px 0;
+  margin: var(--margin-24) 0;
   padding: 16px 24px;
   background-color: #E6F2FF;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .authentication-page .social-login-text {
@@ -302,7 +303,7 @@ footer .sns-link a.instagram {
 }
 
 .authentication-page .social-login-icon .icon:not(:last-of-type) {
-  margin-right: 16px;
+  margin-right: var(--margin-16);
 }
 
 .authentication-page .link {
@@ -313,7 +314,7 @@ footer .sns-link a.instagram {
 }
 
 .authentication-page .link a {
-  margin-left: 4px;
+  margin-left: 0.4rem;
   color: #3182F6;
   text-decoration: underline;
 }
