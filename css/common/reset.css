@@ -1,28 +1,30 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 10px;
-	line-height: 1;
+  font-size: 10px;
+  line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
-button, input {
-	border: 0;
-	background-color: inherit;
-    cursor: pointer;
+button,
+input {
+  border: 0;
+  background-color: inherit;
+  cursor: pointer;
 }
