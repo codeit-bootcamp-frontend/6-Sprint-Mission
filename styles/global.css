@@ -1,0 +1,33 @@
+:root {
+  --gray900: #1b1d1f;
+  --gray800: #26282b;
+  --gray600: #454c53;
+  --gray500: #72787f;
+  --gray400: #9ea4a8;
+  --gray200: #e5e7eb;
+  --gray100: #e8ebed;
+  --gray50: #f7f7f8;
+
+  --cool-gray800: #1f2937;
+  --cool-gray700: #374151;
+  --cool-gray400: #9ca3af;
+  --cool-gray100: #f3f4f6;
+
+  --btn-blue1: #3692ff;
+  --btn-blue2: #1967d6;
+  --btn-blue3: #1251aa;
+
+  --error-red: #f74747;
+
+  --bg-color: #cfe5ff;
+  --footer-bg-color: #111827;
+  --sns-bg-color: #e6f2ff;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

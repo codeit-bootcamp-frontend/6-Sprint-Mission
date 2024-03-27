@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 @media screen and (min-width: 1024px) {
   main {
     width: 1200px;
@@ -13,11 +5,6 @@
 
   section {
     height: 720px;
-  }
-
-  .section_img {
-    width: 588px;
-    height: 444px;
   }
 
   .section_title {
@@ -44,22 +31,6 @@
     font-size: 24px;
     line-height: 33px;
   }
-
-  #headerimg {
-    display: none;
-  }
-
-  #bottomimg {
-    display: none;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
 }
 
 a {
@@ -67,18 +38,28 @@ a {
 }
 
 header {
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
   height: 540px;
-  background-color: #cfe5ff;
+  background-color: var(--bg-color);
+
+  padding-top: 70px;
 }
 
 nav {
+  box-sizing: border-box;
+  position: fixed;
   display: flex;
+  width: 100%;
   height: 70px;
-  margin: 10px 200px 9px;
+  padding: 0 200px;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 main {
@@ -97,7 +78,7 @@ main > section:nth-child(even) {
 
 footer {
   height: 160px;
-  background-color: #111827;
+  background-color: var(--footer-bg-color);
 }
 
 .section_text {
@@ -107,14 +88,19 @@ footer {
 .section_title {
   font-family: "Pretendard-Regular";
   font-weight: 700;
-  color: #374151;
+  color: var(--cool-gray700);
 }
 
 .section_tag {
   font-family: "Pretendard-Regular";
   font-size: 18px;
   font-weight: 700;
-  color: #3692ff;
+  color: var(--btn-blue1);
+}
+
+.section_img {
+  max-width: 50%;
+  max-height: 62%;
 }
 
 .section_detail {
@@ -122,30 +108,22 @@ footer {
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
-  color: #374151;
+  color: var(--cool-gray700);
 }
 
 #loginbtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 128px;
+  min-width: 128px;
   height: 48px;
-  background-color: #3692ff;
+  background-color: var(--btn-blue1);
   border-radius: 8px;
 
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-}
-
-#header_container {
-  position: absolute;
-  width: 355px;
-  top: 170px;
-  bottom: 170px;
-  left: 200px;
 }
 
 #header_container h1 {
@@ -161,7 +139,7 @@ footer {
   display: flex;
   width: 100%;
   height: 56px;
-  background-color: #3692ff;
+  background-color: var(--btn-blue1);
   border-radius: 40px;
   justify-content: center;
   align-items: center;
@@ -175,31 +153,32 @@ footer {
 }
 
 #headerimg {
-  position: absolute;
-  top: 93px;
-  right: 223px;
-  left: 701px;
+  display: flex;
+  align-self: flex-end;
+  max-width: 60%;
 }
 
 #bottom_banner {
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   height: 540px;
-  background-color: #cfe5ff;
+  background-color: var(--bg-color);
 }
 
 #bottom_banner h1 {
-  margin: 214px 0 214px 360px;
   font-family: "Pretendard-Regular";
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
-  color: #374151;
+  color: var(--cool-gray700);
 }
 
 #bottomimg {
-  position: absolute;
-  left: 701px;
+  display: flex;
+  align-self: flex-end;
+  max-width: 60%;
 }
 
 #footer_container {
@@ -208,7 +187,7 @@ footer {
   justify-content: space-between;
   align-items: center;
 
-  color: #9ca3af;
+  color: var(--cool-gray400);
 }
 
 #policy_container {
@@ -223,7 +202,7 @@ footer {
 
 #policy_container a:link,
 #policy_container a:visited {
-  color: #e5e7eb;
+  color: var(--gray200);
 }
 
 #sns_container {
