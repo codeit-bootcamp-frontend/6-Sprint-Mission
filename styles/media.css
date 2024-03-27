@@ -8,7 +8,7 @@
 @media (max-width: 1023px) {
   /** tablet **/
   /* 전체 공통 */
-  .tbtb {
+  .tablet-hide {
     display: none;
   }
   .container h2 {

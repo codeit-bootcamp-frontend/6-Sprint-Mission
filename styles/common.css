@@ -63,9 +63,8 @@ nav {
 }
 
 /* 버튼 공통 */
-.btn {
+.btn-primary {
   background-color: var(--main-blue-color);
-  border-radius: 999px;
   color: #fff;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -74,16 +73,15 @@ nav {
   align-items: center;
   cursor: pointer;
   transition: 0.3s;
+  border: 0px;
 }
-.btn:hover {
+.btn-primary:hover {
   background-color: var(--sub-light-blue-color);
 }
-.btn-large {
-  width: 355px;
+.btn-lg {
+  width: 100%;
   height: 56px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
-}
-.login-btn {
-  border-radius: 8px;
+  color: #fff;
 }

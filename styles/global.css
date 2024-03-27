@@ -82,3 +82,13 @@
 * {
   box-sizing: border-box;
 }
+
+.rounded-sm {
+  border-radius: 8px;
+}
+.rounded-lg {
+  border-radius: 40px;
+}
+.bg-color-gray400 {
+  background-color: var(--gray400);
+}

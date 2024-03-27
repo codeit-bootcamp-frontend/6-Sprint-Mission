@@ -11,59 +11,51 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
     />
     <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="../src/join.css" />
   </head>
   <body>
     <main id="signup">
       <div class="container">
         <div class="join-box signup-box">
-          <a href="/index.html" class="home-logo"><img src="/images/logo-big.svg" /></a>
+          <a href="/index.html" class="home-logo"><img src="/images/logo-big.svg" alt="판다마켓 로고" /></a>
           <form class="join-form signup-form">
-            <div>
-              <label
-                >이메일
-                <input id="signup-email" name="email" type="email" placeholder="이메일을 입력해주세요." />
-              </label>
+            <div class="input-group">
+              <label for="signup-email">이메일</label>
+              <input id="signup-email" name="email" type="email" placeholder="이메일을 입력해주세요." />
             </div>
-            <div>
-              <label
-                >닉네임
-                <input id="nick-name" name="nick-name" type="text" placeholder="닉네임을 입력해주세요." />
-              </label>
+            <div class="input-group">
+              <label for="nick-name">닉네임</label>
+              <input id="nick-name" name="nick-name" type="text" placeholder="닉네임을 입력해주세요." />
             </div>
-            <div>
-              <label
-                >비밀번호
-                <input id="signup-password" name="password" type="password" placeholder="비밀번호를 입력해주세요." />
-                <span class="visible-icon"></span>
-              </label>
+            <div class="input-group">
+              <label for="signup-password">비밀번호</label>
+              <input id="signup-password" name="password" type="password" placeholder="비밀번호를 입력해주세요." />
+              <span class="visible-icon"></span>
             </div>
-            <div>
-              <label
-                >비밀번호 확인
-                <input
-                  id="signup-password-check"
-                  name="password"
-                  type="password"
-                  placeholder="비밀번호를 다시 한 번 입력해주세요."
-                />
-                <span class="visible-icon"></span>
-              </label>
+            <div class="input-group">
+              <label for="signup-password-check">비밀번호 확인</label>
+              <input
+                id="signup-password-check"
+                name="password"
+                type="password"
+                placeholder="비밀번호를 다시 한 번 입력해주세요."
+              />
+              <span class="visible-icon"></span>
             </div>
 
-            <button type="submit" class="btn join-btn signup-btn">회원가입</button>
+            <button type="submit" class="btn-primary btn-lg rounded-lg bg-color-gray400">회원가입</button>
 
             <div class="sns-join-wrap">
               <p>간편 로그인하기</p>
               <div class="sns-join-box">
-                <a href="https://www.google.com/" class="sns-join-icon google-icon"
-                  ><img src="/images/icon-google.svg" alt="구글 간편 로그인"
-                /></a>
-                <a href="https://www.kakaocorp.com/page/" class="sns-join-icon kakao-icon"
-                  ><img src="/images/icon-kakaotalk.svg" alt="카카오톡 간편 로그인"
-                /></a>
+                <a href="https://www.google.com/" class="sns-join-icon google-icon">
+                  <img src="/images/icon-google.svg" alt="구글 간편 로그인" />
+                </a>
+                <a href="https://www.kakaocorp.com/page/" class="sns-join-icon kakao-icon">
+                  <img src="/images/icon-kakaotalk.svg" alt="카카오톡 간편 로그인" />
+                </a>
               </div>
             </div>
 
