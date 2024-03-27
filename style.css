@@ -1,0 +1,183 @@
+.body{ 
+    width:100%;
+    margin:0 0 0 0;
+    font-family:"Pretendard",sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.header-frame{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfdfdf;
+    
+}
+
+
+.header{
+    background-color: #CFE5FF;
+    display: flex;
+    justify-content: center;    
+}
+
+.header #home_top {
+    display: flex;
+    align-self:flex-end;
+    
+    
+}
+.header .header-description{
+    display:flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+    gap: 32px;
+}
+
+h1{
+    color : #374151;
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-size:40px;
+    line-height: 56px;
+}
+
+
+.section{
+    background-color :#FFFFFF;
+    padding-bottom: 138px ;
+
+    
+
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+.section-box{
+    max-width : 1022px;
+    margin: 138px auto;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    
+}
+
+.section-description {
+    flex: 1px;
+    
+}
+.section-tag{
+    color: #3692FF;
+    font-family: "Pretendard";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom:12px;
+    
+
+}
+
+
+.section-small{
+    margin-top: 24px;
+    color: #374151;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    letter-spacing: 0.08em;
+
+
+}
+#section2 {
+    margin-right:360px;
+}
+#section3 {
+    margin-left:360px;
+}
+#home-02{
+    width: 588px ;
+    height: 444px;
+    right : 0px;
+    bottom : 0px;
+    left : 381px
+    /* position: absolute; */
+}
+.search{
+    color: #3692FF;
+    font-family: "Pretendard";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+}
+
+.Register{
+    color: #3692FF;
+    font-family: "Pretendard";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+}
+
+
+
+.section4{
+    background-color: #CFE5FF;
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+    
+}
+.section4 #home_bottom{
+    width: 996px;
+    display: flex;
+    align-self: flex-end;
+}
+
+.section4-description{
+    color :#374151;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0em;
+}
+.footer{
+    height: 160px;
+    background-color :#111827;
+}
+.footerFrame{
+    display : flex;
+    justify-content: space-between; 
+    padding: 32px 200px 108px;
+}
+.codeit{
+    color : #9CA3AF;
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+
+}
+.faq{
+    color:#E5E7EB;
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
