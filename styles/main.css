@@ -189,3 +189,19 @@
   width: 20px;
   height: 20px;
 }
+
+/* Tablet */
+
+@media (max-width: 1199px) {
+  .header {
+    padding: 0 24px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0 16px;
+  }
+}
