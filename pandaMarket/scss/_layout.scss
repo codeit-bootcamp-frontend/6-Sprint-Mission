@@ -1,22 +1,26 @@
 /* layout */
-.wrap {
-  display:grid;
-  grid-template-rows:70px 1fr 160px;
-  
-}
+
 .header {
-  display:flex;
-  box-sizing:border-box;
-  align-items:center;
-  justify-content:space-between;;
-  padding:0 10.42vw;
-  background:#fff;
-  
-  @media screen and (max-width : $size-desktop){
-    padding: 0 24px;
-  }
-  @media screen and (max-width : $size-tablet){
-    padding: 0 16px;
+  height:70px;
+  .header-wrap {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1;
+    height:69px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;;
+    padding:0 10.42vw;
+    background:#fff;
+    border-bottom:1px solid #DFDFDF;
+    @media screen and (max-width : $size-desktop){
+      padding: 0 24px;
+    }
+    @media screen and (max-width : $size-tablet){
+      padding: 0 16px;
+    }
   }
   .img-logo {
     display:flex;
@@ -38,6 +42,7 @@
   display:flex;
   box-sizing:border-box;
   width:100vw;
+  height:160px;
   flex-wrap:wrap;
   justify-content:space-between;
   align-content:flex-start;
@@ -54,7 +59,7 @@
     gap:24px 0;
   }
   &__tit {
-    font-family: Pretendard, sans-serif;
+    font-family: Abel, sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.9rem;
@@ -68,7 +73,7 @@
     display:flex;
     height:min-content;
     gap:3.07vw;
-    font-family: Pretendard, sans-serif;
+    font-family: Abel, sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.9rem;

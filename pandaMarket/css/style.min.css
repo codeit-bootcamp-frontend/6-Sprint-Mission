@@ -35,6 +35,12 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: Abel;
+  src: url("https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   --brand-blue:#3692FF;
   --cool-grey100: #F3F4F6;
@@ -161,26 +167,30 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 
 /* layout */
-.wrap {
-  display: grid;
-  grid-template-rows: 70px 1fr 160px;
-}
-
 .header {
+  height: 70px;
+}
+.header .header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 69px;
   display: flex;
-  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
   padding: 0 10.42vw;
   background: #fff;
+  border-bottom: 1px solid #DFDFDF;
 }
 @media screen and (max-width: 1200px) {
-  .header {
+  .header .header-wrap {
     padding: 0 24px;
   }
 }
 @media screen and (max-width: 768px) {
-  .header {
+  .header .header-wrap {
     padding: 0 16px;
   }
 }
@@ -205,6 +215,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   display: flex;
   box-sizing: border-box;
   width: 100vw;
+  height: 160px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
@@ -225,7 +236,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   }
 }
 .footer__tit {
-  font-family: Pretendard, sans-serif;
+  font-family: Abel, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.9rem;
@@ -242,7 +253,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   height: -moz-min-content;
   height: min-content;
   gap: 3.07vw;
-  font-family: Pretendard, sans-serif;
+  font-family: Abel, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.9rem;
@@ -272,7 +283,17 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 @media screen and (max-width: 768px) {
   .section-banner.top {
-    background-size: 133.87% auto;
+    background-size: 626.12px auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-banner.top .section-wrap {
+    height: 771px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner.top .section-wrap {
+    height: 540px;
   }
 }
 .section-banner.bottom {
@@ -286,7 +307,17 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 @media screen and (max-width: 768px) {
   .section-banner.bottom {
-    background-size: 133.87% auto;
+    background-size: 497.91px auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-banner.bottom .section-wrap {
+    height: 927px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner.bottom .section-wrap {
+    height: 540px;
   }
 }
 .section-banner .section-wrap {
@@ -298,15 +329,9 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 @media screen and (max-width: 1200px) {
   .section-banner .section-wrap {
-    height: 771px;
     justify-content: flex-start;
     align-items: center;
     gap: 18px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section-banner .section-wrap {
-    height: 540px;
   }
 }
 .section-banner__img {
@@ -326,11 +351,22 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   color: var(--grey700);
 }
 @media screen and (max-width: 1200px) {
+  .section-banner__tit:only-child {
+    margin-top: 201px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner__tit:only-child {
+    margin-top: 121px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .section-banner__tit {
     max-width: initial;
     margin-top: 84px;
     font-size: 4rem;
     line-height: 5.6rem;
+    text-align: center;
   }
 }
 @media screen and (max-width: 768px) {
@@ -338,7 +374,6 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
     margin: 48px 0 0;
     font-size: 3.2rem;
     line-height: 4.48rem;
-    text-align: center;
   }
 }
 
@@ -415,12 +450,14 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 @media screen and (max-width: 1200px) {
   .section-desc .tit {
     max-width: initial;
+    margin: 12px 0 20px;
     font-size: 3.2rem;
     line-height: 4.48rem;
   }
 }
 @media screen and (max-width: 768px) {
   .section-desc .tit {
+    margin: 8px 0 14px;
     font-size: 2.4rem;
     line-height: 2.52rem;
   }
@@ -443,10 +480,6 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
     font-size: 1.8rem;
     line-height: 2.52rem;
   }
-}
-
-.wrap-form {
-  display: block;
 }
 
 .section-form {

@@ -7,7 +7,15 @@
       background-position:center bottom;
     }
     @media screen and (max-width : $size-tablet){
-      background-size:133.87% auto;
+      background-size:626.12px auto;
+    }
+    .section-wrap {
+      @media screen and (max-width : $size-desktop){
+        height:771px;
+      }
+      @media screen and (max-width : $size-tablet){
+        height:540px;
+      }
     }
   }
   &.bottom {
@@ -17,7 +25,15 @@
       background-position:center bottom;
     }
     @media screen and (max-width : $size-tablet){
-      background-size:133.87% auto;
+      background-size:497.91px auto;
+    }
+    .section-wrap {
+      @media screen and (max-width : $size-desktop){
+        height:927px;
+      }
+      @media screen and (max-width : $size-tablet){
+        height:540px;
+      }
     }
   }
   .section-wrap {
@@ -27,13 +43,9 @@
     justify-content:center;
     gap:32px;
     @media screen and (max-width : $size-desktop) {
-      height:771px;
       justify-content:flex-start;
       align-items:center;
       gap:18px;
-    }
-    @media screen and (max-width : $size-tablet) {
-      height:540px;
     }
   }
   &__img {
@@ -51,17 +63,25 @@
     line-height: 5.6rem;
     word-break: keep-all;
     color:var(--grey700);
+    &:only-child {
+      @media screen and (max-width : $size-desktop) {
+        margin-top:201px;
+      }
+      @media screen and (max-width : $size-tablet) {
+        margin-top:121px;
+      }
+    }
     @media screen and (max-width : $size-desktop) {
       max-width:initial;
       margin-top:84px;
       font-size: 4rem;
       line-height: 5.6rem;
+      text-align:center;
     }
     @media screen and (max-width : $size-tablet) {
       margin:48px 0 0;
       font-size: 3.2rem;
       line-height: 4.48rem;
-      text-align:center;
     }
   }
 }
@@ -130,10 +150,12 @@
     max-width:300px;
     @media screen and (max-width : $size-desktop) {
       max-width:initial;
+      margin:12px 0 20px;
       font-size: 3.2rem;
       line-height: 4.48rem;
     }
     @media screen and (max-width : $size-tablet) {
+      margin:8px 0 14px;
       font-size: 2.4rem;
       line-height: 2.52rem;
     }

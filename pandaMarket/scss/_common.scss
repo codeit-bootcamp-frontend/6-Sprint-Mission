@@ -11,6 +11,13 @@ $size-mobile : 375px;
   font-style: normal;
 }
 
+@font-face {
+  font-family: Abel ;
+  src: url('https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --brand-blue:#3692FF;
   --cool-grey100: #F3F4F6;
