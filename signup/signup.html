@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="signup.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓</title>
+  </head>
+  <body>
+    <form>
+      <div class="logo">
+        <a href="../main/index.html" style="text-decoration-line: none">
+          <img src="/logo.png" alt="판다마켓로고" />
+        </a>
+      </div>
+      <label
+        >이메일
+        <input
+          name="useremail"
+          type="email"
+          placeholder="이메일을 입력해주세요"
+        />
+      </label>
+      <label
+        >닉네임
+        <input
+          name="username"
+          type="text"
+          placeholder="닉네임을 입력해주세요"
+        />
+      </label>
+      <label
+        >비밀번호
+        <div class="passwordInput">
+          <input
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <img src="/eye.png" />
+        </div>
+      </label>
+      <label
+        >비밀번호 확인
+        <div class="passwordInput">
+          <input
+            name="passwordretry"
+            type="password"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
+          <img src="/eye.png" />
+        </div>
+      </label>
+      <button class="signupBtn">회원가입</button>
+    </form>
+    <div class="easyLogin">
+      <p>간편 로그인하기</p>
+      <div class="easyLoginLogo">
+        <a href="https://www.google.com/" style="text-decoration-line: none">
+          <img class="easyLoginImg" src="/google.png" />
+        </a>
+        <a
+          href="https://www.kakaocorp.com/page/"
+          style="text-decoration-line: none"
+        >
+          <img class="easyLoginImg" src="/kakaotalk.png" />
+        </a>
+      </div>
+    </div>
+    <div class="joinText">
+      <p>이미 회원이신가요? <a href="../login/login.html">로그인</a></p>
+    </div>
+  </body>
+</html>
