@@ -1,7 +1,11 @@
-#header, #footer, main, .container {
-  width:100%; 
+#header,
+#footer,
+main,
+.container {
+  width: 100%;
 }
-#header .container, #footer .container {
+#header .container,
+#footer .container {
   max-width: 1520px;
   width: 90%;
   padding: 15px 0;
@@ -9,7 +13,7 @@
 #header {
   background: #fff;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 5;
 }
 #logo {
@@ -66,10 +70,10 @@ nav {
   padding: 12px 20px;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 .btn:hover {
   background-color: var(--sub-light-blue-color);

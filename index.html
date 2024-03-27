@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>판다마켓</title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
-  <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/common.css">
-  <link rel="stylesheet" href="/styles/index.css">
-  <link rel="stylesheet" href="/styles/media.css">
-  
-</head>
-<body>
-  <header id="header"></header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>판다마켓</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
+    />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/media.css" />
+  </head>
+  <body>
+    <header id="header"></header>
 
-  <main id="main">
-    <section id="mainBanner" class="banner">
-      <div class="container">
-        <div class="banner-text">
-          <h2>일상의 모든 물건을 <br>거래해 보세요</h2>
-          <a href="/items" class="btn btn-large">구경하러 가기</a>
+    <main id="main">
+      <section id="mainBanner" class="banner">
+        <div class="container">
+          <div class="banner-text">
+            <h2>일상의 모든 물건을 <br />거래해 보세요</h2>
+            <a href="/items" class="btn btn-large">구경하러 가기</a>
+          </div>
+        </div>
+      </section>
+      <section id="hotItem">
+        <div class="container flex-container">
+          <div class="img-box">
+            <img src="/images/img-home-01.png" alt="인기 상품 이미지" />
+          </div>
+          <div class="text-box">
+            <p class="blue-text">Hot Item</p>
+            <h2>인기 상품을 <br class="tbtb" />확인해 보세요</h2>
+            <p>가장 HOT한 중고거래 물품을 <br />판다 마켓에서 확인해 보세요</p>
+          </div>
+        </div>
+      </section>
+      <section id="search">
+        <div class="container flex-container">
+          <div class="img-box">
+            <img src="/images/img-home-02.png" alt="상품 검색 이미지" />
+          </div>
+          <div class="text-box">
+            <p class="blue-text">Search</p>
+            <h2>구매를 원하는 <br class="tbtb" />상품을 검색하세요</h2>
+            <p>구매하고 싶은 물품을 검색해서 <br />쉽게 찾아보세요</p>
+          </div>
+        </div>
+      </section>
+      <section id="register">
+        <div class="container flex-container">
+          <div class="img-box">
+            <img src="/images/img-home-03.png" alt="상품 등록 이미지" />
+          </div>
+          <div class="text-box">
+            <p class="blue-text">Register</p>
+            <h2>판매를 원하는 <br class="tbtb" />상품을 등록하세요</h2>
+            <p>어떤 물건이든 판매하고 싶은 상품을 <br />쉽게 등록하세요</p>
+          </div>
+        </div>
+      </section>
+      <div id="adsBanner" class="banner">
+        <div class="container">
+          <div class="banner-text">
+            <h2>믿을 수 있는 <br />판다마켓 중고거래</h2>
+          </div>
         </div>
       </div>
-    </section>
-    <section id="hotItem">
-      <div class="container flex-container">
-        <div class="img-box">
-          <img src="/images/img-home-01.png" alt="인기 상품 이미지">
-        </div>
-        <div class="text-box">
-          <p class="blue-text">Hot Item</p>
-          <h2>인기 상품을 <br class="tbtb">확인해 보세요</h2>
-          <p>가장 HOT한 중고거래 물품을 <br>판다 마켓에서 확인해 보세요</p>
-        </div>
-      </div>
-    </section>
-    <section id="search">
-      <div class="container flex-container">
-        <div class="img-box">
-          <img src="/images/img-home-02.png" alt="상품 검색 이미지">
-        </div>
-        <div class="text-box">
-          <p class="blue-text">Search</p>
-          <h2>구매를 원하는 <br class="tbtb">상품을 검색하세요</h2>
-          <p>구매하고 싶은 물품을 검색해서 <br>쉽게 찾아보세요</p>
-        </div>
-      </div>
-    </section>
-    <section id="register">
-      <div class="container flex-container">
-        <div class="img-box">
-          <img src="/images/img-home-03.png" alt="상품 등록 이미지">
-        </div>
-        <div class="text-box">
-          <p class="blue-text">Register</p>
-          <h2>판매를 원하는 <br class="tbtb">상품을 등록하세요</h2>
-          <p>어떤 물건이든 판매하고 싶은 상품을 <br>쉽게 등록하세요</p>
-        </div>
-      </div>
-    </section>
-    <div id="adsBanner" class="banner">
-      <div class="container">
-        <div class="banner-text">
-          <h2>믿을 수 있는 <br>판다마켓 중고거래</h2>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <footer id="footer"></footer>
+    <footer id="footer"></footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/js/include.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/include.js"></script>
+  </body>
 </html>

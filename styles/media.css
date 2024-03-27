@@ -2,7 +2,7 @@
   /** desktop **/
   #mainBanner {
     background-position: 70% 100% !important;
-  } 
+  }
 }
 
 @media (max-width: 1023px) {
@@ -36,7 +36,7 @@
     grid-row: 2/3;
   }
   #footer .sns-links {
-     grid-column: 3/4;
+    grid-column: 3/4;
   }
   .btn-large {
     width: 260px;
