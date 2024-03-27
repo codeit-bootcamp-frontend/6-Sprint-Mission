@@ -1,7 +1,16 @@
+body {
+  height: 1080px;
+}
+
 header {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+header .logo-big {
+  width: 396px;
+  margin: 60px auto 40px;
 }
 
 main {
@@ -94,13 +103,27 @@ main {
 
 
 @media (max-width: 767px) {
+  body {
+    height: 884px;
+  }
+
   main {
     width: 100%;
     max-width: 432px;
     padding: 0 16px;
   }
 
-  .logo-big {
+  header .logo-big {
     width: 198px;
+    margin: 24px auto;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  #login-form button,
+  #signup-form button {
+    font-size: 16px;
   }
 }
