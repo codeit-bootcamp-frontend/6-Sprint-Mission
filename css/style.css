@@ -341,6 +341,10 @@ footer .sns-link a.instagram {
     padding: 85px 0 100px;
   }
 
+  .banner .main-text p.description {
+    text-align: center;
+  }
+
   .item-banner .main-text a.button {
     padding: 18px 0;
     margin: var(--margin-24) 0 0;
@@ -408,7 +412,6 @@ footer .sns-link a.instagram {
   }
 
   .banner .main-text p.description {
-    text-align: center;
     font-size: var(--font-32);
   }
 
