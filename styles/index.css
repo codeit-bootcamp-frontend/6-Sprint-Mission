@@ -27,7 +27,7 @@ nav {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  background-color: #3692ff;
+  background-color: var(--blue);
   padding: 12px 20px;
   border-radius: 8px;
   width: 128px;
@@ -55,7 +55,7 @@ nav {
 }
 
 .home-top-container {
-  background-color: #cfe5ff;
+  background-color: var(--background-blue);
   height: 540px;
   width: 100%;
   display: flex;
@@ -92,7 +92,7 @@ nav {
 }
 
 .items-btn {
-  background-color: #3692ff;
+  background-color: var(--blue);
   padding: 12px 20px;
   border-radius: 40px;
   border: none;
@@ -147,7 +147,7 @@ section {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
-  color: #3692ff;
+  color: var(--blue);
 }
 
 .main-title {
@@ -168,7 +168,7 @@ section {
 
 /****** home-bottom & footer ******/
 .home-bottom-background-color {
-  background-color: #cfe5ff;
+  background-color: var(--background-blue);
   height: 540px;
   width: 100%;
 }
@@ -211,7 +211,7 @@ footer {
 .footer-codeit {
   display: block;
   margin: 0;
-  color: #e5e7eb;
+  color: var(--gray200);
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
