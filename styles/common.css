@@ -44,21 +44,21 @@ a {
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
-  background: var(--primary400);
+  background-color: var(--primary400);
   color: white;
   font-weight: 600;
   cursor: pointer;
 }
 
 .button:hover {
-  background: var(--primary600);
+  background-color: var(--primary600);
 }
 
 .button:active {
-  background: var(--primary700);
+  background-color: var(--primary700);
 }
 
 .button:disabled {
-  background: var(--gray400);
+  background-color: var(--gray400);
   cursor: default;
 }

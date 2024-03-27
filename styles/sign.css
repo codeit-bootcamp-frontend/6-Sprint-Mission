@@ -44,7 +44,7 @@
   padding: 16px 24px;
   width: 100%;
   height: 56px;
-  background: var(--gray100);
+  background-color: var(--gray100);
   color: var(--gray800);
   font-size: 16px;
   font-weight: 400;
@@ -86,7 +86,7 @@
   align-items: center;
   border-radius: 8px;
   padding: 16px 24px;
-  background: var(--primary200);
+  background-color: var(--primary200);
   color: var(--gray800);
   font-size: 16px;
   font-weight: 500;
