@@ -44,7 +44,7 @@
 }
 .flex-container .text-box .blue-text {
   color: var(--main-blue-color);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 .flex-container .text-box p {
