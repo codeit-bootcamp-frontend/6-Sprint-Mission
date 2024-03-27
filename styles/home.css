@@ -1,5 +1,6 @@
 /* Section: Banner */
-.banner-top-wrap, .banner-bottom-wrap {
+.banner-top-wrap,
+.banner-bottom-wrap {
   height: 540px;
   background-color: var(--blue-50);
   display: flex;
@@ -77,7 +78,7 @@
   height: 720px;
   display: flex;
   align-items: center;
-  gap: 10%
+  gap: 10%;
 }
 
 .promotion-container:nth-child(odd) {
@@ -139,7 +140,8 @@ footer {
   text-decoration: none;
 }
 
-.footer-container span:hover, .footer-container img:hover {
+.footer-container span:hover,
+.footer-container img:hover {
   cursor: pointer;
 }
 

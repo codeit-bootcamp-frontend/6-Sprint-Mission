@@ -29,7 +29,7 @@ input {
   border: none;
   border-radius: 12px;
   background-color: var(--gray-100);
-  }
+}
 
 input::placeholder {
   color: var(--gray-200);

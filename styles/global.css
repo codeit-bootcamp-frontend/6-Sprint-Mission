@@ -12,9 +12,9 @@
   --blue-500: #3692ff;
   --blue-100: #e6f2ff;
   --blue-50: #cfe5ff;
-    
+
   /* Primary color */
-   --white: #ffffff;
+  --white: #ffffff;
 }
 
 * {
@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: "Pretendard", sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 /* Header */
@@ -54,11 +54,11 @@ header {
 }
 
 .btn-primary {
-    border: none;
-    background-color: var(--blue-500);
-    color: var(--white);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  border: none;
+  background-color: var(--blue-500);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
