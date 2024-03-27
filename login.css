@@ -8,8 +8,11 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 640px;
   margin: 0 auto;
+  gap: 24px;
 }
 
 .logo {
@@ -28,9 +31,11 @@ body {
 .input {
   width: 100%;
   height: 56px;
+  padding: 16px 24px;
   background-color: #F3F4F6;
   border-radius: 12px;
   border: none;
+  margin: 16px auto;
 }
 
 button {
@@ -40,10 +45,13 @@ button {
   width: 100%;
   height: 56px;
   background-color: #9CA3AF;
+  margin-top: 24px;
 }
 
 .social_login {
   background-color: #E6F2FF;
+  border-radius: 8px;
+  padding: 16px 24px;
   height: 74px;
   width: 100%;
   display: flex;
@@ -74,12 +82,3 @@ button {
   text-decoration: underline;
 }
 
-/* .email {
-  width: 100%;
-  height: 56px;
-}
-
-.password {
-  width: 100%;
-  height: 56px;
-} */
