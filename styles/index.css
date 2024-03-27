@@ -235,3 +235,11 @@ footer {
   font-weight: 400;
   line-height: 19px;
 }
+
+/* 반응형 */
+@media (min-width: 375px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1200px) {
+}
