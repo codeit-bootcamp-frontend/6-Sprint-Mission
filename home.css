@@ -226,11 +226,19 @@ footer {
     padding-top: 3.2rem;
 }
 
+.codeit_footer_link {
+    height: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 20px);
+    gap: 12px;
+}
+
 footer a {
     color: var(--color-cool-gray200);
 }
 
 footer img {
+    width: 100%;
     color: var(--color-white);
 }
 
