@@ -344,6 +344,10 @@
   .login_btn {
     margin-right: 24px;
   }
+  .footer_menu_container {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 /* 뷰포트 가로 1920px 이상일 때 */
