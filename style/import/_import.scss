@@ -1,0 +1,16 @@
+@import 'https://meyerweb.com/eric/tools/css/reset/reset.css';
+@import '../mixin/mixin';
+@import '../common/button';
+@import '../common/description';
+@import '../common/link';
+@import '../common/container';
+@import '../header/header';
+@import '../main/main';
+@import '../footer/footer';
+@import '../content/content';
+* {
+  box-sizing: border-box;
+}
+figure {
+  margin: 0;
+}

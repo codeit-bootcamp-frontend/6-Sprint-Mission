@@ -1,90 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>판다마켓</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    <div class="mainLogoContainer">
-      <img src="./image/mainLogo.jpg" alt="Panda Market Main Logo" />
-      <a href="/" class="link mainLogo"><img src="./image/판다마켓.jpg" alt="Panda Market Logo"></a>
-    </div>
-    <div class="loginContainer">
-      <a href="/signin"><button class="blueButton" type="button">로그인</button></a>
-    </div>
-  </header>
-
-  <main>
-    <div class="blueContent">
-      <figure id="topContent">
-        <div id="topDescriptionContainer">
-          <p class="topDescription">일상의 모든 물건을<br />거래해 보세요.</p>
-          <a href="/items" class="link"><button class="blueButton" type="button">구경하러 가기</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="wonderful panda market main page">
+    <title>판다마켓</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header class="header-main header-main--fixed-top">
+      <div class="header-main__content">
+        <div class="header-main__logo">
+          <img
+            src="./image/main-page/mainLogo.jpg"
+            alt="Panda Market Main Logo"
+          />
+          <a href="/"
+            ><img src="./image/main-page/판다마켓.jpg" alt="Panda Market Logo"
+          /></a>
         </div>
-        <img src="image/Img_home_top.png" class="pandaImage" alt="Panda on the ground with a bag saying hi" />
+        <a href="./login.html"
+          ><button
+            class="button button--theme-blue button__login description-login"
+            type="button"
+          >
+            로그인
+          </button></a
+        >
+      </div>
+    </header>
+    <main class="main--margin-top">
+      <figure
+        class="content-card content-card--flex-center content-card--background-color-blue content-card--position-relative"
+      >
+        <div class="content-card__content">
+          <div
+            class="content-description description-head content-description--position-relative"
+          >
+            <p>일상의 모든 물건을<br />거래해 보세요.</p>
+            <a
+              href="/items.html"
+              class="link button__wide description-button button button--border-radius-40px button--theme-blue"
+            >
+              구경하러 가기
+            </a>
+          </div>
+          <img
+            src="./image/main-page/Img_home_top.png"
+            class="content-figure__image"
+            alt="Panda on the ground with a bag saying hi"
+          />
+        </div>
       </figure>
-    </div>
-    <div id="mainContentContainer">
-      <div id="mainContent">
-        <figure>
-          <img src="image/Img_home_01.png" alt="" class="contentImg" />
-          <div class="content">
-            <div class="contentCategory">Hot item</div>
-            <div class="contentHeader">인기 상품을<br>확인해 보세요</div>
-            <div class="contentDescription">가장 HOT한 중고거래 물품을<br>판다 마켓에서 확인해 보세요</div>
+
+      <figure class="content-card content-card--flex-center">
+        <div class="content-card__content">
+          <img src="./image/main-page/Img_home_01.png" alt="" class="" />
+          <div class="content-card__description">
+            <div
+              class="description-tip description-tip--color-3692ff description-tip--text-align-left"
+            >
+              Hot item
+            </div>
+            <div class="description-head description--color-374151">
+              인기 상품을<br />확인해 보세요
+            </div>
+            <div class="description-detail description-detail--color-374151">
+              가장 HOT한 중고거래 물품을<br />판다 마켓에서 확인해 보세요
+            </div>
           </div>
-        </figure>
-        <figure>
-          <div class="content reverse">
-            <div class="contentCategory">Search</div>
-            <div class="contentHeader">구매를 원하는<br>상품을 검색하세요</div>
-            <div class="contentDescription">구매하고 싶은 물품은 검색해서<br>쉽게 찾아보세요</div>
-          </div>
-          <img src="image/Img_home_02.png" alt="" class="contentImg" />
-        </figure>
-        <figure>
-          <img src="image/Img_home_03.png" alt="" class="contentImg" />
-          <div class="content">
-            <div class="contentCategory">Register</div>
-            <div class="contentHeader">판매를 원하는<br>상품을 등록하세요</div>
-            <div class="contentDescription">어떤 물건이든 판매하고 싶은 상품을<br>쉽게 등록하세요</div>
-          </div>
-        </figure>
-      </div>
-    </div>
-      <div class="blueContent marginContent">
-        <div id="bottomContent" class="blueContent">
-          <figure>
-            <div>믿을 수 있는<br />판다마켓 중고거래</div>
-            <img src="image/Img_home_bottom.png" class="pandaImage" alt="two pandas talk each other with a bag" />
-          </figure>
         </div>
+      </figure>
+
+      <figure class="content-card content-card--flex-center">
+        <div class="content-card__content">
+          <div class="content-card__description">
+            <div
+              class="description-tip description-tip--color-3692ff description-tip--text-align-right"
+            >
+              Search
+            </div>
+            <div
+              class="description-head description--color-374151 description-head--text-align-right"
+            >
+              구매를 원하는<br />상품을 검색하세요
+            </div>
+            <div
+              class="description-detail description-detail--color-374151 description-detail--text-align-right"
+            >
+              구매하고 싶은 물품은 검색해서<br />쉽게 찾아보세요
+            </div>
+          </div>
+          <img src="./image/main-page/Img_home_02.png" alt="" />
+        </div>
+      </figure>
+
+      <figure class="content-card content-card--flex-center">
+        <div class="content-card__content">
+          <img src="./image/main-page/Img_home_03.png" alt="" />
+          <div class="content-card__description">
+            <div
+              class="description-tip description-tip--line-height-25-2px description-tip--color-3692ff description-tip--text-align-left"
+            >
+              Register
+            </div>
+            <div class="description-head description--color-374151">
+              판매를 원하는<br />상품을 등록하세요
+            </div>
+            <div class="description-detail description-detail--color-374151">
+              어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요
+            </div>
+          </div>
+        </div>
+      </figure>
+
+      <figure
+        class="content-card content-card--flex-center content-card--background-color-blue content-card--position-relative content-card--margin-top-138px"
+      >
+        <div class="content-card__content">
+          <div
+            class="content-description description-head content-description--position-relative"
+          >
+            <p>믿을 수 있는<br />판다마켓 중고거래</p>
+          </div>
+          <img
+            src="./image/main-page/Img_home_bottom.png"
+            class="content-figure__image"
+            alt="Two Panda on the ground with a bag saying hi"
+          />
+        </div>
+      </figure>
+    </main>
+    <footer class="footer footer--theme-black">
+      <div class="footer__content">
+        <span class="description-footer description-footer--color-9ca3af">@codeit - 2024</span>
+
+        <div class="footer__nav footer__nav--gap-30px">
+          <a href="/privacy" class="link description-footer--color-e5e7eb">Privacy Policy</a>
+          <a href="/faq" class="link description-footer--color-e5e7eb">FAQ</a>
+        </div>
+
+        <nav class="footer__nav footer__nav--gap-12px">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img src="./image/main-page/ic_facebook.png" alt="facebookLogo"
+          /></a>
+          <a href="https://twitter.com/" target="_blank"
+            ><img src="./image/main-page/ic_twitter.png" alt="twitterLogo"
+          /></a>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><img src="./image/main-page/ic_youtube.png" alt="youtubeLogo"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img src="./image/main-page/ic_instagram.png" alt="instagramLogo"
+          /></a>
+        </nav>
       </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footerContainer">
-      <span>@codeit - 2024</span>
-
-      <div class="policyContent">
-        <a href="/privacy" class="link">Privacy Policy</a>
-        <a href="/faq" class="link">FAQ</a>
-      </div>
-
-      <nav class="footerContent">
-        <a href="https://www.facebook.com/" target="_blank"><img src="image/ic_facebook.png" alt="facebookLogo" /></a>
-        <a href="https://twitter.com/" target="_blank"><img src="image/ic_twitter.png" alt="twitterLogo" /></a>
-        <a href="https://www.youtube.com/" target="_blank"><img src="image/ic_youtube.png" alt="youtubeLogo" /></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="image/ic_instagram.png" alt="instagramLogo" /></a>
-      </nav>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
