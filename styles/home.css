@@ -35,6 +35,18 @@ header {
   padding: 10px 200px 9px;
 }
 
+@media (max-width: 1199px) {
+  header {
+    padding: 10px 24px 9px;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 10px 16px 9px;
+  }
+}
+
 .logo {
   width: 153px;
 }
