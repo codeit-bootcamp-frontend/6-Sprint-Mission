@@ -260,6 +260,10 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   height: min-content;
   gap: 12px;
 }
+.footer__sns .img-sns {
+  width: 2rem;
+  height: 2rem;
+}
 .footer .link:visited {
   color: #fff;
 }

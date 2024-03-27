@@ -82,6 +82,10 @@
     display:flex;
     height:min-content;
     gap:12px;
+    .img-sns {
+      width:2rem;
+      height:2rem;
+    }
   }
   .link {
     &:visited {
