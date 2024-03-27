@@ -64,7 +64,7 @@
     font-weight: 400;
     line-height: 1.9rem;
     color:var(--cool-grey400);
-    @media screen and (min-width : $size-mobile){
+    @media screen and (max-width : $size-tablet){
       order:3;
       flex:1 0 100%;
     }

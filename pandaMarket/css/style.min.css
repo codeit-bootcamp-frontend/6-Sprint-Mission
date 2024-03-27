@@ -242,7 +242,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   line-height: 1.9rem;
   color: var(--cool-grey400);
 }
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 768px) {
   .footer__tit {
     order: 3;
     flex: 1 0 100%;
