@@ -305,6 +305,29 @@
 
 /* --------------------     미디어 쿼리     -------------------- */
 
+/* --------------------- 모 바 일 뷰 --------------------------- */
+@media (min-width: 375px) {
+  .logo {
+    margin-left: 16px;
+  }
+  .login_btn {
+    margin-right: 16px;
+  }
+  .footer_container {
+    padding: 32px;
+  }
+}
+
+/* ---------------------- 태 블 릿 뷰 ------------------------- */
+@media (min-width: 768px) {
+  .logo {
+    margin-left: 24px;
+  }
+  .login_btn {
+    margin-right: 24px;
+  }
+}
+
 /* 뷰포트 가로 1920px 이상일 때 */
 @media (min-width: 1920px) {
   /* 넓이 고정, 중앙 배치 */
