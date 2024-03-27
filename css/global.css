@@ -49,6 +49,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Abel';
+  src: url('../font/Abel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -70,7 +77,11 @@ body {
 }
 
 .font-rokaf {
-  font-family: 'ROKAF Sans';
+  font-family: 'ROKAF Sans', sans-serif;
+}
+
+.abel {
+  font-family: 'Abel', sans-serif;
 }
 
 img {
