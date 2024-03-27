@@ -10,18 +10,6 @@ main {
   color: var(--cool-gray800);
 }
 
-@media (max-width: 767px) {
-  main {
-    width: 100%;
-    max-width: 432px;
-    padding: 0 16px;
-  }
-
-  .logo-big {
-    width: 198px;
-  }
-}
-
 .label {
   font-size: 18px;
   font-weight: 700;
@@ -102,4 +90,17 @@ main {
 .login a {
   color: #3182F6;
   text-decoration: underline;
+}
+
+
+@media (max-width: 767px) {
+  main {
+    width: 100%;
+    max-width: 432px;
+    padding: 0 16px;
+  }
+
+  .logo-big {
+    width: 198px;
+  }
 }

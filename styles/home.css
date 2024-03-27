@@ -35,18 +35,6 @@ header {
   padding: 10px 200px 9px;
 }
 
-@media (max-width: 1199px) {
-  header {
-    padding: 10px 24px 9px;
-  }
-}
-
-@media (max-width: 767px) {
-  header {
-    padding: 10px 16px 9px;
-  }
-}
-
 .logo {
   width: 153px;
 }
@@ -137,25 +125,6 @@ footer {
   justify-content: space-between;
 }
 
-@media (max-width: 1199px) {
-  footer {
-    padding: 32px 104px;
-  }
-}
-
-@media (max-width: 767px) {
-  footer {
-    position: relative;
-    padding: 32px 32px;
-  }
-
-  .copyright {
-    position: absolute;
-    bottom: 32px;
-    left: 32px;
-  }
-}
-
 .copyright {
   color: var(--cool-gray400);
 }
@@ -176,4 +145,32 @@ footer {
 
 .sns-link img {
   width: 18px;
+}
+
+
+@media (max-width: 1199px) {
+  header {
+    padding: 10px 24px 9px;
+  }
+
+  footer {
+    padding: 32px 104px;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 10px 16px 9px;
+  }
+
+  footer {
+    position: relative;
+    padding: 32px 32px;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+  }
 }
