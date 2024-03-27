@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+body {
+  padding: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  margin: 40px auto;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 396px;
+  height: 132px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  padding: 16px 24px;
+  color: #1F2937;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  border: none;
+  margin: 20px auto;
+}
+
+.password {
+  position: relative;
+}
+
+.password_check {
+  position: relative;
+}
+
+.password_icon {
+  position: absolute;
+  right: 24px;
+  top: 56px;
+}
+
+.password_icon2 { 
+  position: absolute;
+  right: 24px;
+  top: 56px;
+}
+
+button {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  width: 100%;
+  height: 56px;
+  background-color: #3692FF;
+}
+
+.social_login {
+  background-color: #E6F2FF;
+  border-radius: 8px;
+  padding: 16px 24px;
+  height: 74px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_text {
+  color: #1F2937;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.social_icon {
+  display: flex;
+  height: 42px;
+  gap: 16px;
+}
+
+.signup {
+  text-align: center;
+  font-size: 15px;
+}
+
+.login_link {
+  color: #3182F6;
+  text-decoration: underline;
+}
+

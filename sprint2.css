@@ -9,9 +9,13 @@
 
 header {
   display: flex;
+  position: sticky;
+  z-index: 1;
+  top: 0;
   height: 70px;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .login {
