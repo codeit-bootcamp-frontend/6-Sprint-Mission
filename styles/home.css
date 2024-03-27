@@ -137,6 +137,25 @@ footer {
   justify-content: space-between;
 }
 
+@media (max-width: 1199px) {
+  footer {
+    padding: 32px 104px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    position: relative;
+    padding: 32px 32px;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+  }
+}
+
 .copyright {
   color: var(--cool-gray400);
 }
