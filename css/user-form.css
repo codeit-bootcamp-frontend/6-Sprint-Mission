@@ -54,8 +54,8 @@ body {
   height: 24px;
   background-image: url('../assets/images/icon/btn_visibility_off.png');
   position: absolute;
-  top: calc((56px - 24px) / 2);
-  right: calc((56px - 24px) / 2);
+  top: calc((var(--input-height) - var(--button-height)) / 2);
+  right: calc((var(--input-height) - var(--button-height)) / 2);
 }
 
 .visibility {
