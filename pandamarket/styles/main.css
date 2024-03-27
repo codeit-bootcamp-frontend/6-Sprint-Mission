@@ -1,5 +1,5 @@
 * {
-  border-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,15 +17,11 @@ h1 {
 }
 
 p {
-  margin: 24 0 px;
+  margin: 24px 0;
   font-family: 'Pretendard';
   font-weight: 500;
   font-size: 24px;
   line-height: 28.8px;
-}
-
-button {
-  text-decoration: none;
 }
 
 .container {
@@ -76,7 +72,6 @@ button {
 }
 
 .logo {
-  text-decoration: none;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -102,6 +97,7 @@ button {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .banner {
@@ -173,7 +169,7 @@ button {
 }
 
 
-.blue-text {
+.tag {
   margin-bottom: 12px;
   line-height: 25.2px;
   font-size: 18px;
