@@ -316,6 +316,24 @@
   .footer_container {
     padding: 32px;
   }
+  .footer_menu_container {
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "c c";
+    align-content: space-between;
+    height: 96px;
+  }
+  .footer_menu_left {
+    grid-area: c;
+    text-align: left;
+  }
+  .footer_menu_center {
+    grid-area: a;
+  }
+  .footer_menu_right {
+    grid-area: b;
+  }
 }
 
 /* ---------------------- 태 블 릿 뷰 ------------------------- */
