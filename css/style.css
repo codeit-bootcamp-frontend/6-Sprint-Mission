@@ -464,6 +464,7 @@ footer .sns-link a.instagram {
   /* 로그인, 회원가입 */
   .authentication-page {
     padding: 24px 16px;
+    max-width: 400px;
   }
 
   .authentication-page .logo {
