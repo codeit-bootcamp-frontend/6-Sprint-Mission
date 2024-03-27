@@ -146,7 +146,7 @@ footer {
   gap: 30px;
 }
 
-.footer-nav * {
+.footer-nav a {
   color: var(--cool-gray200);
 }
 
