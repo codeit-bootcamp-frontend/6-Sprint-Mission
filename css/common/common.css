@@ -1,16 +1,16 @@
 .sr-only {
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    clip-path: polygon(0 0, 0 0, 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 :root {
-    --color-blue: #3692ff;
-    --color-red: #f74747;
-    --color-gray: #9ca3af;
-    --color-bg: #fcfcfc;
+  --color-blue: #3692ff;
+  --color-red: #f74747;
+  --color-gray: #9ca3af;
+  --color-bg: #fcfcfc;
 }
