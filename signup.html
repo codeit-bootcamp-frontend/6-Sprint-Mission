@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -36,6 +36,7 @@
           name="email"
           type="email"
           placeholder="이메일을 입력해주세요"
+          required
         />
       </div>
 
@@ -46,6 +47,7 @@
           name="username"
           type="text"
           placeholder="닉네임을 입력해주세요"
+          required
         />
       </div>
 
@@ -57,11 +59,14 @@
             name="password"
             type="password"
             placeholder="비밀번호를 입력해주세요"
+            required
           />
           <img
             class="password-eye"
             src="assets/icon/password_eye.svg"
             alt="password-eye"
+            width="24"
+            height="24"
           />
         </div>
       </div>
@@ -74,6 +79,7 @@
             name="password-confirm"
             type="password"
             placeholder="비밀번호를 다시 한 번 입력해주세요"
+            required
           />
           <img
             class="password-eye"
@@ -84,7 +90,7 @@
       </div>
 
       <div class="form__block">
-        <button class="form__submit-btn">회원가입</button>
+        <button type="submit" class="form__submit-btn">회원가입</button>
       </div>
 
       <div class="form__block">
