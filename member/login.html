@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판다마켓 - 로그인</title>
+    <link rel="stylesheet" href="../custom.css">
+</head>
+<body>
+    <main id="login">
+        <article>
+            <section>
+                <a href="/" class="login_logo">
+                    <img src="../image/login/logo.png" alt="로고 이미지">
+                </a>
+                <form action="" name="login" method="post">
+                    <div class="input_area">
+                        <label for="login_ID">
+                            이메일
+                            <input type="email" id="login_ID" placeholder="이메일을 입력해주세요.">
+                        </label>
+                    </div>
+                    <div class="input_area">
+                        <label for="login_PWD">
+                            비밀번호
+                            <input type="password" id="login_PWD" placeholder="비밀번호를 입력해주세요.">
+                        </label>
+                        <img class="pwd_icon" src="../image/login/eye.png" alt="비밀번호 표시 여부 아이콘"/>
+                    </div>
+                    <button type="submit" class="submit_btn">로그인</button>
+                </form>
+                <!--
+                    간편로그인은 form안에 작성하나요?
+                    아님 다른 form을 만들어서 로그인 api와는 다른 api를 만들어서 연결하는건가요?
+                    카카오톡 연동의 경우 인가 코드를 발급하고 redirect URI로 리다이렉한다는데 해당 기능을 사용한 적이 없어서 모르겠네요
+                -->
+                <div class="login_sns">
+                    <p>간편 로그인하기</p>
+                    <div class="sns_area">
+                        <a href="https://www.google.com/" target="_blank">
+                            <img src="../image/login/google.png" alt="구글 로그인 아이콘">
+                        </a>
+                        <a href="https://www.kakaocorp.com/page" target="_blank">
+                            <img src="../image/login/kakao.png" alt="카카오톡 로그인 아이콘">
+                        </a>
+                    </div>
+                </div>
+                <div class="login_btm">
+                    <span>판다마켓이 처음이신가요?</span>
+                    <a href="join.html">회원가입</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

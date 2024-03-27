@@ -1,0 +1,72 @@
+/*로그인*/
+#login section, #join section{
+    max-width: 640px;
+    margin: 60px auto 0;
+}
+.login_logo{
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.pwd_icon{
+    position: absolute;
+    right: 24px;
+    bottom: 17px;
+    cursor: pointer;
+}
+.login_sns{
+    background: #e6f2ff;
+    border-radius: 8px;
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 23px;
+}
+.login_sns p{
+    font-weight: 500;
+}
+.login_btm{
+    text-align: center;
+    font-size: 15px;
+}
+.login_btm a{
+    color: #3182f6;
+}
+
+.input_area{
+    margin-bottom: 24px;
+    position: relative;
+}
+.input_area label{
+    font-size: 18px;
+    font-weight: 700;
+}
+.input_area input{
+    display: block;
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    background: var(--coolGray);
+    border: none;
+    margin-top: 16px;
+}
+.input_area input:focus{
+    border:1px solid var(--blue);
+}
+.submit_btn{
+    display: block;
+    width: 100%;
+    background: var(--gray);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 40px;
+    padding: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.submit_btn:hover{
+    background: var(--blue);
+}

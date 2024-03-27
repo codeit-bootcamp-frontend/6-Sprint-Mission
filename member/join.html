@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판다마켓 - 회원가입</title>
+    <link rel="stylesheet" href="../custom.css">
+</head>
+<body>
+    <main id="join">
+        <article>
+            <section>
+                <a href="/" class="login_logo">
+                    <img src="../image/login/logo.png" alt="로고 이미지">
+                </a>
+                <form action="" name="join" method="post">
+                    <div class="input_area">
+                        <label for="login_ID">
+                            이메일
+                            <input type="email" id="login_ID" placeholder="이메일을 입력해주세요.">
+                        </label>
+                    </div>   
+                    <div class="input_area">
+                        <label for="login_Name">
+                            닉네임
+                            <input type="text" id="login_Name" placeholder="닉네임을 입력해주세요.">
+                        </label>
+                    </div>
+                    <div class="input_area">
+                        <label for="login_PWD">
+                            비밀번호
+                            <input type="password" id="login_PWD" placeholder="비밀번호를 입력해주세요.">
+                        </label>
+                        <img class="pwd_icon" src="../image/login/eye.png" alt="비밀번호 표시 여부 아이콘"/>
+                    </div>
+                    <div class="input_area">
+                        <label for="login_PWD2">
+                            비밀번호 확인
+                            <input type="password" id="login_PWD2" placeholder="비밀번호를 다시 한 번 입력해주세요.">
+                        </label>
+                        <img class="pwd_icon" src="../image/login/eye.png" alt="비밀번호 표시 여부 아이콘"/>
+                    </div>
+                    <button type="submit" class="submit_btn">회원가입</button>
+                </form>
+                <div class="login_sns">
+                    <p>간편 로그인하기</p>
+                    <div class="sns_area">
+                        <a href="https://www.google.com/" target="_blank">
+                            <img src="../image/login/google.png" alt="구글 로그인 아이콘">
+                        </a>
+                        <a href="https://www.kakaocorp.com/page" target="_blank">
+                            <img src="../image/login/kakao.png" alt="카카오톡 로그인 아이콘">
+                        </a>
+                    </div>
+                </div>
+                <div class="login_btm">
+                    <span>이미 회원이신가요?</span>
+                    <a href="login.html">로그인</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
