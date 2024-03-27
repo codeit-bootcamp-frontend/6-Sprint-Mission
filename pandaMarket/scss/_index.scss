@@ -115,7 +115,7 @@
   }
   .section-wrap {
     display:flex;
-    gap:5.3vw;
+    gap:64px;
     @media screen and (max-width : $size-desktop) {
       flex-direction:column;
     }

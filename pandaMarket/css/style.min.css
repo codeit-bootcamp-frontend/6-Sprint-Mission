@@ -407,7 +407,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 .section-desc .section-wrap {
   display: flex;
-  gap: 5.3vw;
+  gap: 64px;
 }
 @media screen and (max-width: 1200px) {
   .section-desc .section-wrap {
