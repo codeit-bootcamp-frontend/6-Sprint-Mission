@@ -23,10 +23,16 @@
       <input class="input" type="text" id="nickname" placeholder="닉네임을 입력해주세요" autocomplete="off">
 
       <label class="label" for="password">비밀번호</label>
-      <input class="input" type="password" id="password" placeholder="비밀번호를 입력해주세요" autocomplete="new-password">
+      <div class="password-wrapper">
+        <input class="input" type="password" id="password" placeholder="비밀번호를 입력해주세요" autocomplete="new-password">
+        <img class="see-or-not-icon" alt="비밀번호 보기" src="/images/icon/see-or-not.svg">
+      </div>
 
       <label class="label" for="password-check">비밀번호 확인</label>
-      <input class="input" type="password" id="password-check" placeholder="비밀번호를 다시 한 번 입력해주세요" autocomplete="new-password">
+      <div class="password-wrapper">
+        <input class="input" type="password" id="password-check" placeholder="비밀번호를 다시 한 번 입력해주세요" autocomplete="new-password">
+        <img class="see-or-not-icon" alt="비밀번호 확인 보기" src="/images/icon/see-or-not.svg">
+      </div>
 
       <button class="button button-large" type="submit">회원가입</button>
     </form>

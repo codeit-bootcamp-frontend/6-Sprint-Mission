@@ -38,6 +38,18 @@ main {
   border: 2px solid var(--point-blue);
 }
 
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .see-or-not-icon {
+  width: 24px;
+
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+
 #login-form button,
 #signup-form button {
   font-size: 20px;
