@@ -2,8 +2,7 @@ body {
   background-color: var(--color-bg);
 }
 
-.logo {
-  display: block;
+.header {
   width: 396px;
   height: 132px;
   margin: 60px auto;
