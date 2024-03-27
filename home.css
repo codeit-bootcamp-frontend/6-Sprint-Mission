@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 9999;
+    z-index: var(--nav-z-index);
 }
 
 .logo img {
@@ -53,7 +53,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-    z-index: 999;
+    z-index: var(--banner-z-index);
 }
 
 .main_banner_text .title {
@@ -192,7 +192,7 @@ header {
 .bottom_banner_text {
     display: flex;
     gap: 3.2rem;
-    z-index: 999;
+    z-index: var(--banner-z-index);
 }
 
 .bottom_banner_text .title {

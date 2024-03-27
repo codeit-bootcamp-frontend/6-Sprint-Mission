@@ -50,6 +50,10 @@
     --input-font-color-gray400: var(--color-cool-gray400);
     --input-font-color-black: var(--color-gray800);
     --input-font-size: 16px;
+
+    /* z-index */
+    --nav-z-index: 2;
+    --banner-z-index: 1;
 }
 
 html {
