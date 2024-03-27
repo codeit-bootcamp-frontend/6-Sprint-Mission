@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +22,15 @@
         />
       </div>
       <div class="label-input-div">
+        <label for="nickname">닉네임</label>
+        <input
+          type="text"
+          id="nickname"
+          name="nickname"
+          placeholder="닉네임을 입력해주세요"
+        />
+      </div>
+      <div class="label-input-div">
         <label for="password">비밀번호</label>
         <div class="password-input-div">
           <input
@@ -35,7 +44,21 @@
           </a>
         </div>
       </div>
-      <button type="submit">로그인</button>
+      <div class="label-input-div">
+        <label for="password-check">비밀번호 확인</label>
+        <div class="password-input-div">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
+          <a>
+            <img class="visibility-button" src="image/btn_visibility_off.png" />
+          </a>
+        </div>
+      </div>
+      <button type="submit">회원가입</button>
 
       <div class="simple-login">
         <span>간편 로그인하기</span>
@@ -54,7 +77,7 @@
       </div>
 
       <span class="signup-span"
-        >판다마겟이 처음이신가요? <a href="signup.html">회원가입</a></span
+        >이미 회원이신가요? <a href="signin.html">로그인</a></span
       >
     </form>
   </body>

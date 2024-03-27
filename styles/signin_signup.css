@@ -1,0 +1,156 @@
+button {
+  cursor: pointer;
+}
+
+body {
+  padding-bottom: 420px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Pretendard;
+}
+
+.logo-image {
+  display: block;
+  margin: 60px auto 40px;
+
+  width: 396px;
+  height: 132px;
+}
+
+.signin-signup-form {
+  margin: 40px auto;
+  width: 640px;
+  height: 430px;
+}
+
+.label-input-div {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  text-align: left;
+  height: 37px;
+}
+
+input {
+  display: block;
+  width: 640px;
+  height: 56px;
+  background-color: #f3f4f6;
+  padding: 16px 24px 16px 24px;
+  gap: 10px;
+  border-radius: 12px;
+  opacity: 0px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.password-input-div {
+  position: relative;
+}
+
+.visibility-button {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 24px;
+  top: 16px;
+}
+
+input:focus {
+  border-color: #3692ff;
+}
+
+.signin-signup-form button {
+  display: block;
+  width: 640px;
+  height: 56px;
+  padding: 16px 124px 16px 124px;
+  gap: 10px;
+  border-radius: 40px;
+  opacity: 0px;
+  border: none;
+  background-color: #9ca3af;
+
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+
+.signin-signup-form button:hover {
+  background-color: #3692ff;
+}
+
+.simple-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 23px;
+  padding-right: 23px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  width: 640px;
+  height: 74px;
+  gap: 0px;
+  border-radius: 8px;
+  opacity: 0px;
+  background-color: #e6f2ff;
+}
+
+.simple-login span {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #1F2937;
+}
+
+.logos {
+  display: flex;
+  width: 100px;
+  height: 42px;
+  justify-content: space-between;
+}
+.logo-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+.logo-circle.google {
+  background-color: #ffffff;
+}
+.logo-circle.talk {
+  background-color: #f5e14b;
+}
+.signup-span {
+  display: block;
+  margin: 24px auto;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.9px;
+  text-align: center;
+  color: #1F2937;
+}
+.signup-span a{
+  color: #3182F6;
+}
