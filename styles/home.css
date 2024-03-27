@@ -216,6 +216,41 @@ footer {
     width: 355px;
   }
 
+  main {
+    padding: 24px;
+    margin-bottom: 0;
+  }
+
+  .main-content {
+    height: fit-content;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-content:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+
+  .main-content img {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .main-content .content-text {
+    margin: 20px 0 64px;
+    width: 100%;
+  }
+
+  .main-content .content-title {
+    margin-bottom: 20px;
+  }
+
+  .main-content .content-title br {
+    display: inline-block;
+    content: " ";
+  }
+
+
   footer {
     padding: 32px 104px;
   }
@@ -259,6 +294,15 @@ footer {
 
   .button-large {
     width: 154px;
+  }
+
+  main {
+    padding: 16px;
+    margin-top: 35px;
+  }
+
+  .main-content .content-title {
+    margin-top: 8px;
   }
 
   footer {
