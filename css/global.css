@@ -6,9 +6,9 @@
   --gray-400: #9ca3af;
   --gray-500: #6b7280;
   --gray-600: #4b5563;
+  --gray-700: #374151;
   --gray-800: #1f2937;
   --gray-900: #111827;
-  --cool-gray: #374151;
   --red: #f74747;
   --blue: #3692ff;
   --white: #fff;
@@ -20,6 +20,7 @@
   --font-20: 2rem;
   --font-24: 2.4rem;
   --font-26: 2.6rem;
+  --font-32: 3.2rem;
   --font-40: 4rem;
   --font-66: 6.6rem;
 
@@ -28,6 +29,7 @@
   --margin-14: 1.4rem;
   --margin-16: 1.6rem;
   --margin-24: 2.4rem;
+  --margin-20: 2rem;
   --margin-32: 3.2rem;
 }
 
@@ -64,6 +66,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   line-height: 1.2;
+  word-break: keep-all;
 }
 
 .font-rokaf {
@@ -121,6 +124,8 @@ a {
   cursor: pointer;
 }
 
+
+
 /* 판다마켓 로고 텍스트 */
 .logo-text {
   color: var(--blue);
@@ -129,4 +134,40 @@ a {
   line-height: 1.4;
   letter-spacing: 0em;
   text-align: left;
+}
+
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .pc-show {
+    display: none;
+  }
+
+  .inner {
+    padding: 0 24px;
+  }
+
+  .container {
+    width: calc(100% - 48px);
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 16px;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
 }
