@@ -199,12 +199,13 @@ footer .sns-link a.instagram {
 .authentication-page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 60px 30px;
+  padding: 60px 50px;
   box-sizing: content-box;
 }
 
 .authentication-page .logo {
   gap: 22px;
+  padding: 14px 0;
 }
 
 .authentication-page .logo-img {
@@ -390,6 +391,12 @@ footer .sns-link a.instagram {
   footer .inner {
     padding: 0 104px;
   }
+
+
+  /* 로그인, 회원가입 */
+  .authentication-page {
+    padding: 50px;
+  }
 }
 
 
@@ -451,5 +458,35 @@ footer .sns-link a.instagram {
     display: flex;
     flex-direction: column-reverse;
     gap: 60px;
+  }
+
+
+  /* 로그인, 회원가입 */
+  .authentication-page {
+    padding: 24px 16px;
+  }
+
+  .authentication-page .logo {
+    gap: 10px;
+    padding: 7px 0;
+  }
+
+  .authentication-page .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .authentication-page .logo-text {
+    font-size: 3.3rem;
+  }
+
+  .authentication-page .auth-form {
+    margin: 2.4rem 0 0;
+    gap: 1.6rem;
+  }
+
+  .authentication-page .input-wrapper label {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
   }
 }
