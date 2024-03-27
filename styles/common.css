@@ -1,15 +1,18 @@
-#header, #footer, main, .container {
-  width:100%; 
+#header,
+#footer,
+main,
+.container {
+  width: 100%;
 }
-#header .container, #footer .container {
+#header .container,
+#footer .container {
   max-width: 1520px;
-  width: 90%;
   padding: 15px 0;
 }
 #header {
   background: #fff;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 5;
 }
 #logo {
@@ -59,27 +62,31 @@ nav {
 }
 
 /* 버튼 공통 */
-.btn {
+.btn-primary {
   background-color: var(--main-blue-color);
-  border-radius: 999px;
   color: #fff;
   padding: 12px 20px;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
+  border: 0px;
+  width: 128px;
 }
-.btn:hover {
+.btn-primary:hover {
   background-color: var(--sub-light-blue-color);
 }
-.btn-large {
+.btn-sm {
+  width: 154px;
+}
+.btn-md {
   width: 355px;
   height: 56px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
 }
-.login-btn {
-  border-radius: 8px;
+.btn-lg {
+  width: 100%;
 }

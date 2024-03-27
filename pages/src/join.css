@@ -1,115 +1,103 @@
 .join-box {
-    margin: 60px auto;
+  margin: 60px auto;
 }
 .join-box .home-logo {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
-/* 로그인 폼 텍스트 공통 */
-.join-form p, .join-form label {
-    font-weight: 500;
-    color: var(--gray800);
-}
-
-/* 로그인 폼 */
-.join-form {
-    max-width: 640px;
-    margin: 40px auto;
-}
+/* 로그인 및 회원가입 폼 텍스트 공통 */
+.join-form p,
 .join-form label {
-    font-size: 1.125rem;
-    font-weight: 700;
-    position: relative;
+  font-weight: 500;
+  color: var(--gray800);
 }
-.join-form input {
-    display: block;
-    margin-top: 1rem;
-    width: 100%;
-    border: 0px;
-    background-color: var(--gray100);
-    color: var(--gray800);
-    border-radius: 12px;
-    height: 56px;
-    padding: 0 24px;
+
+/* 로그인 및 회원가입 폼 */
+.join-form {
+  max-width: 640px;
+  margin: 40px auto;
 }
-.join-form input::placeholder {
-    color: var(--gray400);
+.input-group label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  position: relative;
 }
-.join-form input:focus-visible {
-    outline: 1px solid var(--main-blue-color);
+.input-group input {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  border: 0px;
+  background-color: var(--gray100);
+  color: var(--gray800);
+  border-radius: 12px;
+  height: 56px;
+  padding: 0 24px;
+}
+.input-group input::placeholder {
+  color: var(--gray400);
+}
+.input-group input:focus-visible {
+  outline: 1px solid var(--main-blue-color);
 }
 .visible-icon {
-    content: '';
-    width: 24px;
-    height: 24px;
-    background: url('/images/btn-visibility-off.svg') no-repeat;
-    position: absolute;
-    right: 20px;
-    bottom: 15%;
-    cursor: pointer;
-}
-.join-btn {
-    font-size: 1.25rem;
-    font-weight: 600;
-    background-color: var(--gray400);
-    color: #fff;
-    border: 0px;
-    border-radius: 40px;
-    width: 100%;
-    height: 56px;
-    cursor: pointer;
-}
-.join-btn:hover {
-    background-color: var(--main-blue-color);
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url('/images/btn-visibility-off.svg') no-repeat;
+  position: absolute;
+  right: 20px;
+  bottom: 15%;
+  cursor: pointer;
 }
 .join-form > div {
-    margin: 24px 0;
+  margin: 24px 0;
+  position: relative;
 }
 
 /* 간편 로그인 */
 .sns-join-wrap {
-    background-color: #E6F2FF;
-    border-radius: 8px;
-    padding: 0 1.5rem;
-    height: 74px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .sns-join-box {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 .sns-join-icon {
-    border-radius: 99px;
-    background-color: #fff;
-    width: 42px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 99px;
+  background-color: #fff;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .google-icon {
-    border: 1px solid #F9FAFB;
+  border: 1px solid #f9fafb;
 }
 .kakao-icon {
-    background-color: #F5E14B;
+  background-color: #f5e14b;
 }
 .sns-join-icon:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* 로그인 및 회원가입 안내 */
 .join-message-box {
-    font-size: 0.95rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 .join-link {
-    color: #3182F6;
-    font-weight: 500;
-    border-bottom: 1px solid;
+  color: #3182f6;
+  font-weight: 500;
+  border-bottom: 1px solid;
 }
