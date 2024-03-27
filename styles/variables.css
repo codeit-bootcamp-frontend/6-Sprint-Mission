@@ -28,3 +28,18 @@
   --title-with-img: 2;
   --img: 1;
 }
+
+/* media width */
+
+:root {
+  /* PC */
+  --PC-min: 1200px;
+
+  /* Tablet */
+  --Tablet-min: 768px;
+  --Tablet-max: 1199px;
+
+  /* Mobile */
+  --Mobile-min: 375px;
+  --Mobile-max: 767px;
+}
