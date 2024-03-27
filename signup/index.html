@@ -27,16 +27,23 @@
 
                     <li class="input_wrap">
                         <label for="password">비밀번호</label>
-                        <input id="password" type="password" placeholder="비밀번호를 입력해주세요" />
-                        <div class="eye">
-                            <img src="/assets/img/icon/pw_Property=Variant2.svg" alt="눈 아이콘" />
+                        <input id="password" type="password" autocomplete="off" placeholder="비밀번호를 입력해주세요" />
+                        <div class="password_eye_wrap">
+                            <input type="checkbox" id="password_eye_toggle" />
+                            <label for="password_eye_toggle" class="eye_btn"></label>
                         </div>
                     </li>
+
                     <li class="input_wrap">
-                        <label for="check-password">비밀번호 확인</label>
-                        <input id="check-password" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" />
-                        <div class="eye">
-                            <img src="/assets/img/icon/pw_Property=Variant2.svg" alt="눈 아이콘" />
+                        <label for="password-check">비밀번호 확인</label>
+                        <input
+                            id="password-check"
+                            type="password"
+                            autocomplete="off"
+                            placeholder="비밀번호를 다시 한 번 입력해주세요" />
+                        <div class="pw_check_eye_wrap">
+                            <input type="checkbox" id="pw_eye_toggle" />
+                            <label for="pw_eye_toggle" class="eye_btn"></label>
                         </div>
                     </li>
                     <button>회원가입</button>
