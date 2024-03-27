@@ -1,13 +1,17 @@
 /* Section: Banner */
-.banner-top-wrap, .banner-bottom-wrap {
+.banner-top-wrap,
+.banner-bottom-wrap {
+  width: 100%;
   height: 540px;
   background-color: var(--blue-50);
   display: flex;
   justify-content: center;
 }
 
-.banner-container {
+.banner-container,
+.promotion-container {
   display: flex;
+  align-items: center;
 }
 
 .banner-container:hover {
@@ -28,7 +32,6 @@
 .banner-top-wrap img {
   width: 996px;
   height: 447px;
-  margin-top: 93px;
 }
 
 .banner-bottom-wrap img {
@@ -36,30 +39,12 @@
   height: 540px;
 }
 
-.banner-bottom-wrap h2 {
-  display: inline-block;
-  width: 355px;
-}
-
 .btn-items {
   font-size: 20px;
   font-weight: 600;
-  line-height: 24px;
-  text-align: center;
   width: 355px;
   height: 56px;
-  border: none;
   border-radius: 40px;
-  background-color: var(--blue-500);
-}
-
-.btn-items a {
-  text-decoration: none;
-  color: var(--white);
-}
-
-.btn-items:hover {
-  cursor: pointer;
 }
 
 /* Section: promotion */
@@ -77,7 +62,7 @@
   height: 720px;
   display: flex;
   align-items: center;
-  gap: 10%
+  gap: 10%;
 }
 
 .promotion-container:nth-child(odd) {
@@ -110,40 +95,74 @@
   color: var(--gray-600);
 }
 
-/* Footer */
-footer {
-  height: 160px;
-  padding: 32px 200px;
-  background-color: var(--blue-800);
+/* Mobile */
+@media (min-width: 375px) {
 }
 
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
+/* Tablet */
+@media (min-width: 768px) {
+  /* 상단&하단 배너 */
+  .banner-top-wrap,
+  .banner-bottom-wrap {
+    height: 840px;
+  }
+
+  .banner-top-wrap img {
+    margin-top: 76px;
+  }
+
+  .banner-bottom-wrap img {
+    margin-top: 40px;
+  }
+
+  .banner-container,
+  .promotion-container {
+    flex-direction: column;
+  }
+
+  .banner-container h2 {
+    text-align: center;
+    margin: 180px auto 24px;
+  }
+
+  .banner-container br,
+  .promotion-title h2 br {
+    display: none;
+  }
+
+  .btn-items {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.footer-container:nth-child(odd) {
-  color: var(--gray-200);
-}
+/* Desktop */
+@media (min-width: 1280px) {
+  /* 상단&하단 배너 */
+  .banner-top-wrap,
+  .banner-bottom-wrap {
+    height: 540px;
+  }
 
-.footer-container:nth-child(even) {
-  display: flex;
-  gap: 30px;
-}
+  .banner-top-wrap img {
+    margin-top: 92px;
+  }
 
-#footerMenu a {
-  color: var(--gray-50);
-  text-decoration: none;
-}
+  .banner-bottom-wrap img {
+    margin-top: 0;
+  }
 
-.footer-container span:hover, .footer-container img:hover {
-  cursor: pointer;
-}
+  .banner-container,
+  .promotion-container {
+    flex-direction: row;
+  }
 
-.footer-container:last-child {
-  display: flex;
-  gap: 12px;
+  .banner-container h2 {
+    text-align: left;
+    margin: 32px 0;
+  }
+
+  .banner-container br {
+    display: inline;
+  }
 }
