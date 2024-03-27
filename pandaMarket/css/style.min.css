@@ -86,8 +86,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 .btn-large {
   display: inline-block;
   box-sizing: border-box;
-  height: 60px;
-  padding: 16px 124px;
+  padding: 1.8rem 124px;
   background: var(--brand-blue);
   border: 0;
   border-radius: 40px;
@@ -100,8 +99,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 @media screen and (max-width: 768px) {
   .btn-large {
-    padding: 14.5px 33.5px;
-    height: 48px;
+    padding: 1.4rem 33.5px;
     font-size: 1.6rem;
     line-height: 1.9rem;
   }
@@ -109,9 +107,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 
 .btn-small {
   display: inline-block;
-  box-sizing: border-box;
-  height: 48px;
-  padding: 14px 43px;
+  padding: 1.5rem 43px;
   background: var(--brand-blue);
   border: 0;
   border-radius: 8px;
