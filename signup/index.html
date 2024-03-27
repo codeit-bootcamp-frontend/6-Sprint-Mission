@@ -33,6 +33,16 @@
           />
         </div>
         <div class="input-container">
+          <label for="nickname">닉네임</label>
+          <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            required
+            placeholder="닉네임을 입력해주세요"
+          />
+        </div>
+        <div class="input-container">
           <label for="password">비밀번호</label>
           <div class="password-container">
             <input
@@ -49,7 +59,24 @@
             />
           </div>
         </div>
-        <button class="form-button" type="submit">로그인</button>
+        <div class="input-container">
+          <label for="password-check">비밀번호 확인</label>
+          <div class="password-container">
+            <input
+              type="password"
+              id="password-check"
+              name="password-check"
+              required
+              placeholder="비밀번호를 다시 한 번 입력해주세요"
+            />
+            <img
+              class="visible-icon"
+              alt="비밀번호 확인 가리기 아이콘"
+              src="/assets/icons/visibility_off.svg"
+            />
+          </div>
+        </div>
+        <button class="form-button" type="submit">회원가입</button>
       </form>
 
       <section class="social-login-container">
@@ -67,8 +94,8 @@
       <footer class="text-container">
         <nav>
           <p>
-            판다마켓이 처음이신가요?
-            <a href="/signup" class="sign-link">회원가입</a>
+            이미 회원이신가요?
+            <a href="/login" class="sign-link">로그인</a>
           </p>
         </nav>
       </footer>

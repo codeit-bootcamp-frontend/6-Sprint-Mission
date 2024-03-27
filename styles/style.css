@@ -1,11 +1,9 @@
-.link {
-  cursor: pointer;
-  text-decoration: none;
-}
-
 /* 헤더 */
 
 header {
+  position: fixed;
+  width: 100vw;
+  background-color: var(--white-primary);
   height: 4.375rem;
   display: flex;
   justify-content: space-between;
@@ -151,7 +149,7 @@ section:nth-child(even) {
 /* 푸터 */
 
 footer {
-  background-color: var(--footer-bg);
+  background-color: var(--gray-900);
   height: 10rem;
   display: flex;
   justify-content: space-around;
