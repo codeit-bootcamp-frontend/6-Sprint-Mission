@@ -252,7 +252,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   display: flex;
   height: -moz-min-content;
   height: min-content;
-  gap: 3.07vw;
+  gap: 30px;
   font-family: Abel, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
