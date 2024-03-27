@@ -1,18 +1,22 @@
+body {
+  height: 1080px;
+}
+
 header {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.main {
-  width: 100%;
-  color: var(--cool-gray800);
+header .logo-big {
+  width: 396px;
+  margin: 60px auto 40px;
 }
 
-#login-form,
-#signup-form {
+main {
   width: 640px;
   margin: 0 auto;
+  color: var(--cool-gray800);
 }
 
 .label {
@@ -41,6 +45,18 @@ header {
 
 .input:focus-visible, input:focus {
   border: 2px solid var(--point-blue);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .see-or-not-icon {
+  width: 24px;
+
+  position: absolute;
+  top: 32px;
+  right: 24px;
 }
 
 #login-form button,
@@ -83,4 +99,31 @@ header {
 .login a {
   color: #3182F6;
   text-decoration: underline;
+}
+
+
+@media (max-width: 767px) {
+  body {
+    height: 884px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 432px;
+    padding: 0 16px;
+  }
+
+  header .logo-big {
+    width: 198px;
+    margin: 24px auto;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  #login-form button,
+  #signup-form button {
+    font-size: 16px;
+  }
 }

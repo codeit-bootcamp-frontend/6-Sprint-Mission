@@ -6,7 +6,7 @@
   <title>판다마켓 로그인</title>
   <link rel="icon" href="/images/logo/favicon.ico">
   <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/auth.css">
 </head>
 <body>
   <header>
@@ -17,30 +17,33 @@
   <main>
     <form id="login-form">
       <label class="label" for="email">이메일</label>
-      <input class="input" type="email" id="email" placeholder="이메일을 입력해주세요">
+      <input class="input" type="email" id="email" placeholder="이메일을 입력해주세요" autocomplete="email" autofocus>
 
       <label class="label" for="password">비밀번호</label>
-      <input class="input" type="password" id="password" placeholder="비밀번호를 입력해주세요">
-
-      <button class="button button-large">로그인</button>
-
-      <div class="quick-login">
-        <p>간편 로그인하기</p>
-        <div class="quick-login-sns">
-          <a href="https://www.google.com/">
-            <img class="quick-login-sns-icon" src="/images/social/google-icon.png">
-          </a>
-          <a href="https://www.kakaocorp.com/page/">
-            <img class="quick-login-sns-icon" src="/images/social/kakaotalk-icon.png">
-          </a>
-        </div>
+      <div class="password-wrapper">
+        <input class="input" type="password" id="password" placeholder="비밀번호를 입력해주세요" autocomplete="current-password">
+        <img class="see-or-not-icon" alt="비밀번호 보기" src="/images/icon/see-or-not.svg">
       </div>
 
-      <div class="signup">
-        <span>판다마켓이 처음이신가요?</span>
-        <a href="/signup">회원가입</a>
-      </div>
+      <button class="button button-large" type="submit">로그인</button>
     </form>
+
+    <div class="quick-login">
+      <p>간편 로그인하기</p>
+      <div class="quick-login-sns">
+        <a href="https://www.google.com/">
+          <img class="quick-login-sns-icon" alt="google 아이콘" src="/images/social/google-icon.png">
+        </a>
+        <a href="https://www.kakaocorp.com/page/">
+          <img class="quick-login-sns-icon" alt="kakao 아이콘" src="/images/social/kakaotalk-icon.png">
+        </a>
+      </div>
+    </div>
+
+    <div class="signup">
+      <p>판다마켓이 처음이신가요?</p>
+      <a href="/signup">회원가입</a>
+    </div>
   </main>
 </body>
 </html>
