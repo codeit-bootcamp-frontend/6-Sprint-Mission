@@ -1,4 +1,4 @@
-/* 메인 배너 공통 */
+/* 배너 공통 */
 .banner .container {
   height: 540px;
 }
@@ -13,11 +13,11 @@
   align-items: baseline;
 }
 
-/* mainBanner section */
-#mainBanner {
+/* 메인페이지 배너 */
+#main-banner {
   background: var(--main-bg-color) url('/images/img-home-top.png') no-repeat 80% 100%;
 }
-#mainBanner .banner-text {
+#main-banner .banner-text {
   gap: 2rem;
 }
 
@@ -58,8 +58,8 @@
   text-align: right;
 }
 
-/* adsBanner section */
-#adsBanner {
+/* 메인페이지 하단 배너 */
+#ads-banner {
   background: var(--main-bg-color) url('/images/img-home-bottom.png') no-repeat 80% 100%;
   margin-top: 138px;
 }

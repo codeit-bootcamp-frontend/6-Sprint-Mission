@@ -1,33 +1,122 @@
+/* pc: 1921px 이상 */
 @media (min-width: 1921px) {
-  /** desktop **/
-  #mainBanner {
+  /** pc **/
+  #main-banner {
     background-position: 70% 100% !important;
   }
 }
 
-@media (max-width: 1023px) {
+/* tablet: 768px 이상 ~ 1199px 이하 */
+@media (max-width: 1199px) {
   /** tablet **/
   /* 전체 공통 */
   .tablet-hide {
     display: none;
   }
-  .container h2 {
-    font-size: 2rem;
+  .container {
+    width: 92%;
+  }
+
+  /* 메인페이지 배너 공통 */
+  .banner .container {
+    height: 770px;
+  }
+  .banner .banner-text {
+    top: -50%;
+    right: 0;
+    align-items: center;
+    text-align: center;
   }
 
   /* section 공통 */
+  .flex-container {
+    flex-wrap: wrap;
+    padding: 64px 0 0;
+    gap: 20px;
+  }
+  .flex-container div {
+    flex-basis: auto;
+    width: 100%;
+  }
   .flex-container .text-box h2 {
-    font-size: 32px;
-    margin: 8px 0 16px;
+    font-size: 2rem;
+    margin: 12px 0 20px;
   }
   .flex-container .text-box p {
-    font-size: 18px;
+    font-size: 1.125rem;
+  }
+
+  /* hot-item section */
+  #hot-item .flex-container {
+    padding-top: 24px;
+  }
+
+  /* search section */
+  #search .text-box {
+    order: 1;
+  }
+
+  /* 메인페이지 하단 배너 */
+  #ads-banner.banner .container {
+    height: 930px;
   }
 }
 
+/* mobile: 767px 이하 */
 @media (max-width: 767px) {
   /** mobile **/
   /* 전체 공통 */
+  .btn-primary {
+    font-size: 1rem;
+  }
+  .mobile-show {
+    display: block;
+  }
+  .container {
+    width: 94%;
+  }
+
+  /* 메인 배너 공통 */
+  .banner {
+    background-size: contain !important;
+  }
+  .banner .container,
+  #ads-banner.banner .container {
+    height: 540px;
+  }
+  .banner .banner-text {
+    top: -40%;
+  }
+
+  /* 메인페이지 배너 */
+  #main-banner .btn-md {
+    width: 156px;
+  }
+
+  /* section 공통 */
+  .container h2 {
+    font-size: 2rem;
+  }
+  .flex-container .text-box h2 {
+    font-size: 1.5rem;
+  }
+  .flex-container {
+    padding: 58px 0 0;
+  }
+  .flex-container .text-box p,
+  .flex-container .text-box .blue-text {
+    font-size: 1rem;
+  }
+
+  /* 메인페이지 하단 배너 */
+  #ads-banner {
+    margin-top: 64px;
+  }
+  #ads-banner .banner-text {
+    top: -40%;
+  }
+
+  /* 푸터 */
   #footer .foot-menu {
     justify-content: flex-start;
     grid-column: 1/3;
@@ -37,57 +126,5 @@
   }
   #footer .sns-links {
     grid-column: 3/4;
-  }
-  .btn-large {
-    width: 260px;
-    font-size: 18px;
-  }
-
-  /* 메인 배너 공통 */
-  .banner {
-    background-size: contain !important;
-  }
-  .banner .banner-text {
-    top: -20%;
-    right: 0;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* section 공통 */
-  .container h2 {
-    font-size: 30px;
-  }
-  .flex-container {
-    flex-wrap: wrap;
-    padding: 64px 0;
-    gap: 44px;
-  }
-  .flex-container div {
-    flex-basis: auto;
-    width: 100%;
-  }
-  .flex-container .text-box h2 {
-    margin: 4px 0 8px;
-    font-size: 24px;
-  }
-  .flex-container .text-box p {
-    font-size: 16px;
-  }
-
-  /* search section */
-  #search .text-box {
-    order: 1;
-  }
-
-  /* adsBanner section */
-  #adsBanner {
-    margin-top: 64px;
-  }
-  #adsBanner.banner .container {
-    height: 450px;
-  }
-  #adsBanner .banner-text {
-    top: -40%;
   }
 }

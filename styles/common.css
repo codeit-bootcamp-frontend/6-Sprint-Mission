@@ -7,7 +7,6 @@ main,
 #header .container,
 #footer .container {
   max-width: 1520px;
-  width: 90%;
   padding: 15px 0;
 }
 #header {
@@ -74,14 +73,20 @@ nav {
   cursor: pointer;
   transition: 0.3s;
   border: 0px;
+  width: 128px;
 }
 .btn-primary:hover {
   background-color: var(--sub-light-blue-color);
 }
-.btn-lg {
-  width: 100%;
+.btn-sm {
+  width: 154px;
+}
+.btn-md {
+  width: 355px;
   height: 56px;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #fff;
+}
+.btn-lg {
+  width: 100%;
 }
