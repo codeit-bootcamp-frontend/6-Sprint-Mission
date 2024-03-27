@@ -7,7 +7,7 @@
       "display": "inline-block"
    },
    "stylesheet": "scss",
-   "path_prefix": "/dist/img/",
+   "path_prefix": "/img/",
    "output": "png",
    "enable_cache_busting": true
 }

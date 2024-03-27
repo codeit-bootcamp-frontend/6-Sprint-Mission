@@ -3,26 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" property="og:image" content="/img/img_meta.png">
+  <meta name="twitter:title" property="og:title" content="판다마켓">
+  <meta name="twitter:description" property="og:description" content="일상의 모든 물건을 거래해보세요">
+  <meta property="og:url" content="https://youl.netlify.app/">
   <title>판다마켓</title>
-  <link rel="stylesheet" href="/dist/css/style.min.css">
+  <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
-<div class="wrap">
+<div class="wrap wrap-index">
   <header class="header">
-    <h1 class="header__logo">
-      <a href="/" class="link">
-        <img src="/dist/img/logo.png" alt="로고 이미지" class="img-logo">
-        <span class="blind">판다마켓</span>
-      </a>
-    </h1>
-    <div class="header__btn">
-      <a href="/signin.html" class="btn-small">로그인</a>
+    <div class="header-wrap">
+      <h1 class="header__logo">
+        <a href="/" class="link">
+          <picture class="img-logo">
+            <source srcset="/img/logo_typo.png" media="(max-width: 768px)" width="103">
+            <source srcset="/img/logo_img.png" media="(min-width: 769px)" width="153">
+            <img src="/img/logo_img.png" alt="판다마켓 로고">
+          </picture>
+          <span class="blind">판다마켓</span>
+        </a>
+      </h1>
+      <div class="header__btn">
+        <a href="/signin.html" class="btn-small">로그인</a>
+      </div>
     </div>
   </header>
   <div class="view">
     <section class="section-banner top">
       <div class="section-wrap">
-        <h2 class="section-banner__tit">일상의 모든 물건을 거래해 보세요</h2>
+        <h2 class="section-banner__tit">일상의 모든 물건을 거래해보세요</h2>
         <div class="section-banner__btn">
           <a href="/items.html" class="btn-large">구경하러 가기</a>
         </div>
@@ -32,7 +43,7 @@
       <section class="section-desc">
         <div class="section-wrap">
           <div class="section-desc__img">
-            <img src="/dist/img/Img_home_01.png" alt="인기 상품 이미지">
+            <img src="/img/Img_home_01.png" alt="인기 상품 이미지">
           </div>
           <div class="section-desc__content">
             <strong class="topic">Hot item</strong>
@@ -47,14 +58,14 @@
       <section class="section-desc right">
         <div class="section-wrap">
           <div class="section-desc__img">
-            <img src="/dist/img/Img_home_02.png" alt="상품 검색 이미지">
+            <img src="/img/Img_home_02.png" alt="상품 검색 이미지">
           </div>
           <div class="section-desc__content">
             <strong class="topic">Search</strong>
             <h3 class="tit">구매를 원하는 상품을 검색하세요</h3>
             <div class="content">
-              <p>구매하고 싶은 물품은</p>
-              <p>검색해서 쉽게 찾아보세요</p> 
+              <p>구매하고 싶은 물품은 검색해서</p>
+              <p>쉽게 찾아보세요</p> 
             </div>
           </div>
         </div>
@@ -62,7 +73,7 @@
       <section class="section-desc">
         <div class="section-wrap">
           <div class="section-desc__img">
-            <img src="/dist/img/Img_home_03.png" alt="상품 등록 이미지">
+            <img src="/img/Img_home_03.png" alt="상품 등록 이미지">
           </div>
           <div class="section-desc__content">
             <strong class="topic">Register</strong>
@@ -88,10 +99,10 @@
       <li><a href="/faq.htmnl" class="link">FAQ</a></li>
     </ul>
     <ul class="footer__sns">
-      <li><a href="https://facebook.com" target="_blank"><img src="/dist/img/ic_facebook.svg" alt="facebook 아이콘"></a></li>
-      <li><a href="https://twitter.com" target="_blank"><img src="/dist/img/ic_twitter.svg" alt="twitter 아이콘"></a></li>
-      <li><a href="https://youtube.com" target="_blank"><img src="/dist/img/ic_youtube.svg" alt="youtube 아이콘"></a></li>
-      <li><a href="https://instagram.com" target="_blank"><img src="/dist/img/ic_instagram.svg" alt="instagram 아이콘"></a></li>
+      <li><a href="https://facebook.com" target="_blank"><img src="/img/ic_facebook.svg" alt="facebook 아이콘" class="img-sns"></a></li>
+      <li><a href="https://twitter.com" target="_blank"><img src="/img/ic_twitter.svg" alt="twitter 아이콘" class="img-sns"></a></li>
+      <li><a href="https://youtube.com" target="_blank"><img src="/img/ic_youtube.svg" alt="youtube 아이콘" class="img-sns"></a></li>
+      <li><a href="https://instagram.com" target="_blank"><img src="/img/ic_instagram.svg" alt="instagram 아이콘" class="img-sns"></a></li>
     </ul>
   </footer>
 </div>

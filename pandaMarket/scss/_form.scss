@@ -1,21 +1,26 @@
-
 .section-form {
-  grid-row:1/4;
   display:flex;
   flex-direction:column;
   gap:24px;
   max-width:640px;
   padding:60px 0;
   margin:0 auto;
-  @media screen and (max-width:$size-t){
-    padding:60px 20px;
+  @media screen and (max-width : $size-tablet){
+    max-width:400px;
+    padding:24px 16px;
   }
+  
   &__header {
     display:flex;
     justify-content:center;
     padding-bottom:16px;
     .link-home {
       display:flex;
+    }
+    .img-home {
+      @media screen and (max-width : $size-tablet){
+        width:198px;
+      }
     }
   }
   &__form {

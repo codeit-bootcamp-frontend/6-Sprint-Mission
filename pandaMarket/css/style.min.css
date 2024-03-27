@@ -35,6 +35,12 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: Abel;
+  src: url("https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   --brand-blue:#3692FF;
   --cool-grey100: #F3F4F6;
@@ -80,8 +86,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 .btn-large {
   display: inline-block;
   box-sizing: border-box;
-  height: 56px;
-  padding: 16px 124px;
+  padding: 1.8rem 124px;
   background: var(--brand-blue);
   border: 0;
   border-radius: 40px;
@@ -92,12 +97,17 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   text-align: center;
   line-height: 2.4rem;
 }
+@media screen and (max-width: 768px) {
+  .btn-large {
+    padding: 1.4rem 33.5px;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
 
 .btn-small {
   display: inline-block;
-  box-sizing: border-box;
-  height: 48px;
-  padding: 14px 43px;
+  padding: 1.5rem 43px;
   background: var(--brand-blue);
   border: 0;
   border-radius: 8px;
@@ -122,7 +132,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   font-weight: 400;
   line-height: 2.4rem;
 }
-@media screen and (max-width: 744px) {
+@media screen and (max-width: 768px) {
   .input-theme {
     width: 100%;
   }
@@ -153,29 +163,31 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 
 /* layout */
-.wrap {
-  display: grid;
-  grid-template-rows: 70px 1fr 160px;
-  overflow-x: hidden;
-}
-
 .header {
+  height: 70px;
+}
+.header .header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 69px;
   display: flex;
-  box-sizing: border-box;
-  width: 100vw;
   align-items: center;
   justify-content: space-between;
   padding: 0 10.42vw;
   background: #fff;
+  border-bottom: 1px solid #DFDFDF;
 }
-@media screen and (max-width: 744px) {
-  .header {
-    padding: 0 3.23vw;
+@media screen and (max-width: 1200px) {
+  .header .header-wrap {
+    padding: 0 24px;
   }
 }
-@media screen and (max-width: 375px) {
-  .header {
-    padding: 0 4.27vw;
+@media screen and (max-width: 768px) {
+  .header .header-wrap {
+    padding: 0 16px;
   }
 }
 .header .img-logo {
@@ -189,7 +201,9 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 @media screen and (max-width: 1200px) {
   .section-wrap {
-    max-width: 100vw;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0 24px;
   }
 }
 
@@ -197,6 +211,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   display: flex;
   box-sizing: border-box;
   width: 100vw;
+  height: 160px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
@@ -204,12 +219,12 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   background: #111827;
   color: #fff;
 }
-@media screen and (max-width: 744px) {
+@media screen and (min-width: 768px) {
   .footer {
     padding: 32px 3.23vw 0;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
   .footer {
     align-items: flex-start;
     padding: 32px 4.27vw 0;
@@ -217,13 +232,13 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   }
 }
 .footer__tit {
-  font-family: Pretendard, sans-serif;
+  font-family: Abel, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.9rem;
   color: var(--cool-grey400);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .footer__tit {
     order: 3;
     flex: 1 0 100%;
@@ -233,8 +248,8 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   display: flex;
   height: -moz-min-content;
   height: min-content;
-  gap: 3.07vw;
-  font-family: Pretendard, sans-serif;
+  gap: 30px;
+  font-family: Abel, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.9rem;
@@ -244,6 +259,10 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   height: -moz-min-content;
   height: min-content;
   gap: 12px;
+}
+.footer__sns .img-sns {
+  width: 2rem;
+  height: 2rem;
 }
 .footer .link:visited {
   color: #fff;
@@ -257,9 +276,49 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   background: url("../img/Img_home_top.png") no-repeat #CFE5FF;
   background-position: left calc(50% + 238px) bottom 0;
 }
+@media screen and (max-width: 1200px) {
+  .section-banner.top {
+    background-position: center bottom;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner.top {
+    background-size: 626.12px auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-banner.top .section-wrap {
+    height: 771px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner.top .section-wrap {
+    height: 540px;
+  }
+}
 .section-banner.bottom {
   background: url("../img/Img_home_bottom.png") no-repeat #CFE5FF;
   background-position: left calc(50% + 238px) bottom 0;
+}
+@media screen and (max-width: 1200px) {
+  .section-banner.bottom {
+    background-position: center bottom;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner.bottom {
+    background-size: 497.91px auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-banner.bottom .section-wrap {
+    height: 927px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner.bottom .section-wrap {
+    height: 540px;
+  }
 }
 .section-banner .section-wrap {
   display: flex;
@@ -267,6 +326,13 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   flex-direction: column;
   justify-content: center;
   gap: 32px;
+}
+@media screen and (max-width: 1200px) {
+  .section-banner .section-wrap {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+  }
 }
 .section-banner__img {
   position: relative;
@@ -284,12 +350,57 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   word-break: keep-all;
   color: var(--grey700);
 }
+@media screen and (max-width: 1200px) {
+  .section-banner__tit:only-child {
+    margin-top: 201px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner__tit:only-child {
+    margin-top: 121px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-banner__tit {
+    max-width: initial;
+    margin-top: 84px;
+    font-size: 4rem;
+    line-height: 5.6rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-banner__tit {
+    margin: 48px 0 0;
+    font-size: 3.2rem;
+    line-height: 4.48rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrap-index .main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 24px 0 80px;
+  }
+}
 
 .section-desc {
   padding: 138px 0;
 }
+@media screen and (max-width: 1200px) {
+  .section-desc {
+    padding: 0;
+  }
+}
 .section-desc.right .section-desc__img {
   order: 2;
+}
+@media screen and (max-width: 1200px) {
+  .section-desc.right .section-desc__img {
+    order: initial;
+  }
 }
 .section-desc.right .section-wrap {
   justify-content: flex-end;
@@ -300,14 +411,16 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 .section-desc .section-wrap {
   display: flex;
-  gap: 5.3vw;
+  gap: 64px;
 }
-.section-desc__img {
-  flex: 0 0;
+@media screen and (max-width: 1200px) {
+  .section-desc .section-wrap {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 1200px) {
   .section-desc__img img {
-    max-width: 49vw;
+    width: 100%;
   }
 }
 .section-desc__content {
@@ -334,6 +447,21 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   letter-spacing: 0.02em;
   max-width: 300px;
 }
+@media screen and (max-width: 1200px) {
+  .section-desc .tit {
+    max-width: initial;
+    margin: 12px 0 20px;
+    font-size: 3.2rem;
+    line-height: 4.48rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-desc .tit {
+    margin: 8px 0 14px;
+    font-size: 2.4rem;
+    line-height: 2.52rem;
+  }
+}
 .section-desc .content {
   font-family: Pretendard, sans-serif;
   font-size: 2.4rem;
@@ -341,9 +469,20 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   line-height: 2.9rem;
   letter-spacing: 0.08em;
 }
+@media screen and (max-width: 1200px) {
+  .section-desc .content {
+    font-size: 1.8rem;
+    line-height: 2.16rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-desc .content {
+    font-size: 1.8rem;
+    line-height: 2.52rem;
+  }
+}
 
 .section-form {
-  grid-row: 1/4;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -351,9 +490,10 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   padding: 60px 0;
   margin: 0 auto;
 }
-@media screen and (max-width: 744px) {
+@media screen and (max-width: 768px) {
   .section-form {
-    padding: 60px 20px;
+    max-width: 400px;
+    padding: 24px 16px;
   }
 }
 .section-form__header {
@@ -363,6 +503,11 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 }
 .section-form__header .link-home {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .section-form__header .img-home {
+    width: 198px;
+  }
 }
 .section-form__form {
   display: flex;
@@ -432,7 +577,7 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 	Author: Güray Yarar (https://github.com/gurayyarar)
 */
 .spr {
-  background-image: url("/dist/img/spr.sprite.png?v=DdT66XuCwbbWnz282MIIfJpQcTsyJdLhD0qtt");
+  background-image: url("/img/spr.sprite.png?v=DdT66XuCwbbWnz282MIIfJpQcTsyJdLhD0qtt");
   background-repeat: no-repeat;
   display: inline-block;
 }
