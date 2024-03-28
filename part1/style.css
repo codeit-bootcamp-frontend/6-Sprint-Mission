@@ -8,11 +8,11 @@
     --gray100 : #E8EBED;
     --gray50 : #F7F7F8;
     
-    --Cool-Gray900 : #111827;
-    --Cool-Gray800: #1F2937;
-    --Cool-Gray700 : #374151;
-    --Cool-Gray400 : #9CA3AF;
-    --Cool-Gray100 : #F3F4F6;
+    --cool-gray900 : #111827;
+    --cool-gray800: #1F2937;
+    --cool-gray700 : #374151;
+    --cool-gray400 : #9CA3AF;
+    --cool-gray100 : #F3F4F6;
     --color-white : #FFFFFF;
     --blue800 : #3182F6;
     --blue100 :#CFE5FF;
@@ -65,13 +65,13 @@ button {
 }
 
 main h1 {
-    color:var(--Cool-Gray700);
+    color:var(--cool-gray700);
     font-weight: 700;
     font-size: 40px;
 }
 
 main h2 {
-    color:var(--Cool-Gray700);
+    color:var(--cool-gray700);
     font-weight: 500;
     font-size: 24px;
 }
@@ -191,7 +191,7 @@ section h2 {
 
 
 footer {
-    background-color: var(--Cool-Gray900);
+    background-color: var(--cool-gray900);
     width: 100%;
     height: 160px;
     position: absolute;
