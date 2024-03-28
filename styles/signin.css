@@ -95,3 +95,7 @@ input::placeholder {
 .signup-link,.signin-link {
     color: #3182F6;
 }
+
+/* Mobile : 375px 이상 ~ 767px 이하 */
+/* Tablet : 768px 이상 ~ 1199px 이하 */
+/* PC : 1200px 이상 */
