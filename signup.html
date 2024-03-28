@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <form id="Form">
+    <a class="login-title" href="/signup.html">
+      <img src="image/login-panda.png" alt="판다마켓로고">
+    </a>
+    <div>
+      <label for="email">이메일</label>
+      <input id="email" name="eamil" type="email" placeholder="이메일을 입력해 주세요" required>
+    </div>
+    <div>
+      <label for="nickname">닉네임</label>
+      <input id="nickname" name="nickname" type="text" placeholder="닉네임을 입력해 주세요" required>
+    </div>
+    <label for="password">비밀번호</label>
+    <div class="wrapper"> 
+      <input id="password" name="password"  placeholder="비밀번호를 입력해 주세요" required>
+      <img class="visibility_off" src="image/visibility_off_btn.png" alt="안보이게하는버튼">
+    </div>
+    <label for="password-repeat">비밀번호 확인</label>
+    <div class="wrapper">
+      <input id="password-repeat" name="password-repeat" placeholder="비밀번호를 다시 한 번 입력해 주세요" required>
+      <img class="visibility_off" src="image/visibility_off_btn.png" alt="안보이게하는버튼">
+    </div>
+    <button>회원가입</button>
+    <div class="bottom-bar">
+      <h3 class="quick-login">간편로그인하기</h3>
+      <div class="sns-link">
+        <a href="https://www.google.com/" target="_blank">
+          <img src="image/google_logo.png" alt="구글" width="42">
+        </a>
+        <a href="https://www.kakaocorp.com/page/" target="_blank">
+          <img src="image/kakaotalk_logo.png" alt="카카오" width="42">
+        </a>
+      </div>
+    </div>
+    <h3 class="check">이미 회원이신가요? <a href="/login.html">로그인</a></h3>
+  </form>
+</body>
+</html>
