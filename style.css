@@ -20,6 +20,7 @@
 
 /* --------------------     index.html     -------------------- */
 /* --------------------     헤더     -------------------- */
+
 .header {
   z-index: 1;
   border-bottom: 1px solid #dfdfdf;
@@ -83,6 +84,7 @@
 .hero_section {
   background-color: #cfe5ff;
   overflow: hidden;
+  margin-bottom: 51px;
 }
 
 .hero_container {
@@ -184,7 +186,7 @@
   justify-content: flex-end;
 }
 
-.search_contnet {
+.search_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -263,7 +265,8 @@
   justify-content: center;
   height: 160px;
   padding: 32px 200px 32px 200px;
-  background-color: var(--gray900);
+  /* background-color: var(--gray900); */
+  background-color: #111322;
 }
 
 .footer_menu_container {
@@ -280,7 +283,7 @@
   font-weight: 400;
   line-height: 19.09px;
   text-align: center;
-  color: var(--gray400);
+  color: #676767;
 }
 
 .footer_menu_center {
@@ -313,11 +316,14 @@
 
 /* --------------------     미디어 쿼리     -------------------- */
 
-/* --------------------- 모 바 일 뷰 --------------------------- */
+/* --------------------- 모바일 뷰 --------------------------- */
 @media (min-width: 375px) {
   /* header */
   .logo {
     margin-left: 16px;
+  }
+  .logo_icon {
+    display: none;
   }
   .login_btn {
     margin-right: 16px;
@@ -334,6 +340,7 @@
   }
 
   .hero_info_text {
+    width: 236px;
     text-align: center;
     font-size: 32px;
     line-height: 140%;
@@ -363,11 +370,6 @@
   .hero_img {
     margin: 0;
     width: 170%;
-    /* width: 100%; */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
   }
 
   /* 본문 */
@@ -407,7 +409,7 @@
     margin-bottom: 60px;
   }
 
-  .hot_item_contnet img {
+  .hot_item_content img {
     width: 100%;
   }
 
@@ -419,12 +421,12 @@
     justify-content: flex-end;
   }
 
-  .search_contnet {
+  .search_content {
     flex-direction: column-reverse;
     margin: 0;
     align-items: flex-end;
   }
-  .search_contnet img {
+  .search_content img {
     width: 100%;
   }
 
@@ -478,11 +480,14 @@
   }
 }
 
-/* ---------------------- 태 블 릿 뷰 ------------------------- */
+/* ---------------------- 태블릿 뷰 ------------------------- */
 @media (min-width: 768px) {
   /* 헤더 */
   .logo {
     margin-left: 24px;
+  }
+  .logo_icon {
+    display: block;
   }
   .login_btn {
     margin-right: 24px;
@@ -490,6 +495,7 @@
 
   /* 상단 배너 */
   .hero_info_text {
+    width: 100%;
     margin-top: 84px;
     font-size: 40px;
     line-height: 140%;
@@ -514,7 +520,10 @@
   .item_description {
     font-size: 18px;
   }
-  .search_contnet img {
+  .search_content {
+    width: 100%;
+  }
+  .search_content img {
     width: 100%;
   }
   .search_call_to_action {
@@ -537,6 +546,10 @@
   }
 
   /* 하단배너 */
+  .bottom_banner {
+    flex-direction: column;
+    margin-top: 201px;
+  }
   .bottom_banner_text {
     font-size: 40px;
   }
@@ -550,6 +563,75 @@
   }
 }
 
+/* 1200px 이상 PC(피씨) 화면 */
+@media (min-width: 1200px) {
+  /* 헤더 */
+  .logo_icon {
+    display: block;
+  }
+  /* 상단배너 */
+  .hero_container {
+    flex-direction: row;
+    width: 1200px;
+  }
+  .hero_info {
+    width: auto;
+    align-items: flex-start;
+  }
+  .hero_info_text {
+    width: 295px;
+    text-align: left;
+  }
+  .hero_img_container {
+    overflow: visible;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  /* 본문 */
+  .main_guideline {
+    width: 1200px;
+  }
+  .hot_item_content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 64px;
+    margin-top: 138px;
+  }
+  .hot_item_content img {
+    width: 588px;
+  }
+  .item_call_to_action {
+    width: 232px;
+    font-size: 40px;
+  }
+  .hot_item_text {
+    width: 303px;
+  }
+  .item_container_right {
+    margin: 276px 0;
+  }
+  .search_content {
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+  /* 하단배너 */
+  .bottom_banner_container {
+    margin-top: 257px;
+  }
+  .bottom_banner {
+    flex-direction: row;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  .bottom_banner_text {
+    width: 295px;
+    text-align: left;
+  }
+  /* 푸터 */
+}
 /* 뷰포트 가로 1920px 이상일 때 */
 @media (min-width: 1920px) {
   /* 넓이 고정, 중앙 배치 */
