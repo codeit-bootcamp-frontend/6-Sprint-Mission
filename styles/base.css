@@ -55,6 +55,9 @@
     --nav-z-index: 2;
     --banner-z-index: 1;
 }
+* {
+    transition: all 0.5s ease;
+}
 
 html {
     font-size: 10px;

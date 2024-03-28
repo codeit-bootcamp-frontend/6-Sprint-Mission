@@ -10,9 +10,17 @@
     <body>
         <!-- header -->
         <header>
-            <div class="logo">
-                <a href="#"><img src="/assets/img/logo/img_logo_big.webp" alt="판다마켓 로고" /></a>
-            </div>
+            <a href="#">
+                <picture class="logo">
+                    <source
+                        srcset="/assets/img/logo/logo.webp"
+                        media="(max-width: 767px)"
+                        width="103"
+                        type="image/webp" />
+                    <img src="/assets/img/logo/img_logo_big.webp" alt="판다마켓 로고" />
+                </picture>
+            </a>
+
             <button class="header_button" onclick="location.href='/signin'">로그인</button>
         </header>
         <main>
@@ -82,10 +90,12 @@
 
         <!-- Footer -->
         <footer>
-            <div class="codeit_footer">©codeit - 2024</div>
-            <div class="privacy_footer">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/faq">FAQ</a>
+            <div class="footer_wrap">
+                <div class="codeit_footer">©codeit - 2024</div>
+                <div class="privacy_footer">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/faq">FAQ</a>
+                </div>
             </div>
             <div class="codeit_footer_link">
                 <a href="http://facebook.com" target="_blank"
