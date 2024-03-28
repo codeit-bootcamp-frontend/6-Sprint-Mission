@@ -6,9 +6,7 @@
 
 body {
     margin: 0px;
-}
-main {
-    margin: 0px auto;
+    font-family: 'Pretendard';
 }
 
 nav {
@@ -22,6 +20,8 @@ nav {
 
 a {
     cursor: pointer;
+    color: #ffffff;
+    text-decoration-line: none;
 }
 
 .button {
@@ -31,62 +31,44 @@ a {
     padding: 12px 20px;
     background-color: #3692ff;
     text-align: center;
-    color: #ffffff;
-    text-decoration-line: none;
+    padding: auto 0;
 }
 
 #landing {
-    position: relative;
-    width: 1920px;
-    height: 540px;
-    margin: 0 auto;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: #cfe5ff;
-}
-
-#intro {
-    position: absolute;
-    width: 355px;
-    height: 200px;
-    top: 170px;
-    left: 360px;
-    font-family: 'pretendard';
-    color: #374151;
 }
 
 #intro > #intro-text {
     display: block;
-    
+    margin-bottom: 2%;
     font-size: 40px;
     font-weight: 700;
     line-height: 56px;
+    color: #374151;
+    
 }
 
 #intro > a {
     display: block;
-    width: 355px;
-    height: 56px;
+    width: 100%;
     border-radius: 40px;
+    padding: 12px 20px;
     background-color: #3692ff;
+    color: #ffffff;
+    text-align: center;
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
-    margin: auto;
-    text-align: center;
-}
-
-#landing > img {
-    position: relative;
-    width: 996px;
-    height: 447px;
-    top: 93px;
-    left: 701px;
 }
 
 .container {
-    position: relative;
-    width: 1200px;
     margin: 0 auto;
-    border: 1px solid #3692ff;
+    width: min(100%, 1200px);
 }
 
 .container > article {
@@ -111,18 +93,13 @@ a {
     text-align: right;
 }
 
-.container:nth-child(2n+1) > div > .desc > * {
+.container > article:nth-child(2n+1) > div > .desc > * {
     text-align: left;
-}
-
-.container > article > div > .desc {
-    font-family: 'Pretendard';
 }
 
 .container > article > div > img {
     width: 588px;
     height: 444px;
-    display: inline;
 }
 
 .subtitle {
@@ -148,10 +125,12 @@ a {
 }
 
 .bottom-container {
+    padding-top: 2%;
     background-color: #cfe5ff;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -173,7 +152,6 @@ footer {
 }
 
 #copyright {
-    font-family: "Pretendard";
     font-weight: 400;
     font-size: 16px;
     line-height: 19.09px;
