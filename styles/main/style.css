@@ -207,33 +207,6 @@ footer {
     display: table-footer-group;
   }
 
-  #header_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-  }
-
-  #header_container a {
-    width: 355px;
-  }
-
-  #headerimg {
-    max-width: none;
-  }
-
-  #bottom_banner {
-    height: 927px;
-  }
-
-  #bottomimg {
-    max-width: none;
-  }
-
-  #footer_container {
-    padding: 12px 24px;
-  }
-
   .main_content {
     display: block;
   }
@@ -245,10 +218,152 @@ footer {
     max-height: none;
   }
 
+  .section_title br {
+    display: none;
+  }
+
   .section_text {
     margin: 0;
+  }
+
+  #header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  #header_container a {
+    width: 355px;
+  }
+
+  #header_container br {
+    display: none;
+  }
+
+  #headerimg {
+    max-width: none;
+  }
+
+  #bottom_banner {
+    height: 927px;
+    text-align: center;
+  }
+
+  #bottomimg {
+    max-width: none;
+  }
+
+  #footer_container {
+    padding: 12px 100px;
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  header {
+    padding-top: 160px;
+    margin-bottom: 160px;
+  }
+
+  main {
+    width: 350px;
+  }
+
+  main > section:nth-child(even) {
+    display: table;
+  }
+
+  main > section:nth-child(even) > .section_text {
+    display: table-footer-group;
+  }
+
+  section {
+    height: 540px;
+  }
+
+  footer {
+    position: relative;
+  }
+
+  .main_content {
+    display: block;
+  }
+
+  .section_tag {
+    font-size: 16px;
+  }
+
+  .section_title {
+    font-size: 24px;
+  }
+
+  .section_title br {
+    display: none;
+  }
+
+  .section_detail {
+    font-size: 16px;
+  }
+
+  .section_img {
+    width: 344px;
+    height: 259px;
+    max-width: none;
+    max-height: none;
+  }
+
+  .section_text {
+    margin: 0;
+  }
+
+  #header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  #header_container h1 {
+    font-size: 32px;
+    width: 250px;
+    text-align: center;
+  }
+
+  #header_container a {
+    width: 154px;
+    font-size: 16px;
+  }
+
+  #headerimg {
+    max-width: none;
+  }
+
+  #bottomimg {
+    max-width: none;
+    width: 540px;
+    height: 270px;
+  }
+
+  #bottom_banner h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #footer_container {
+    padding: 12px 24px;
+  }
+
+  #footer_container p {
+    position: absolute;
+    bottom: 0;
+  }
+
+  #sns_container {
+    width: 160px;
+    justify-content: center;
+  }
 }
