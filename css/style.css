@@ -12,7 +12,7 @@ header {
 }
 
 header .login {
-    background: var(--blue1);
+    background-color: var(--blue1);
     width: 128px;
     height: 48px;
     /* padding: auto auto; */
@@ -52,7 +52,7 @@ main {
     font-weight: 700;
 }
 
-.btn_items {
+.btn-items {
     width: 355px;
     height: 56px;
     border-radius: 40px;
@@ -60,7 +60,7 @@ main {
     font-size: 20px;
     text-align: center;
     color: white;
-    background: var(--blue1);
+    background-color: var(--blue1);
     display: flex;
     justify-content: center;
     align-items: center;
