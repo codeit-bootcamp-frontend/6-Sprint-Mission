@@ -296,7 +296,12 @@ footer {
     .banner_floor_content {
         padding-bottom: 8rem;
     }
-    .banner_floor_content br {
+
+    .banner_floor_text {
+        width: 100%;
+    }
+
+    .banner_floor_text br {
         display: none;
     }
 
