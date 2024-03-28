@@ -22,7 +22,7 @@
 .email,.password{
   width: 640px;
   height: 56px;
-  background: #F3F4F6;
+  background-color: #F3F4F6;
   border-radius: 12px;
   border: none;
   padding-left: 20px;
