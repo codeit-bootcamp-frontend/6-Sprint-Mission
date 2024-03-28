@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>판다마켓: 로그인</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/sign.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+  </head>
+  <body class="body">
+    <a class="big-logo m-auto" href="/">
+      <img class="full-height" src="/assets/logo.png" alt="판다마켓 로고" />
+    </a>
+    <div class="form-container m-auto">
+      <form class="form">
+        <div class="form-item">
+          <label class="form-label" for="email">이메일</label>
+          <input
+            class="form-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="이메일을 입력해주세요"
+          />
+        </div>
+        <div class="form-item">
+          <label class="form-label" for="password">비밀번호</label>
+          <input
+            class="form-input password"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <img
+            class="form-input-icon"
+            src="assets/ic_invisible.png"
+            alt="눈 아이콘"
+          />
+        </div>
+        <button class="form button">로그인</button>
+      </form>
+      <div class="easy-login">
+        <p>간편 로그인하기</p>
+        <div class="easy-login-socials">
+          <a class="easy-login-social" href="https://www.google.com/">
+            <img
+              class="full-height"
+              src="assets/ic_google.png"
+              alt="구글 아이콘"
+            />
+          </a>
+          <a class="easy-login-social" href="https://www.kakaocorp.com/page/">
+            <img
+              class="full-height"
+              src="assets/ic_kakaotalk.png"
+              alt="카카오톡 아이콘"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="form-helper">
+        <span>판다마켓이 처음이신가요?</span>
+        <a class="form-helper-link" href="/signup.html">회원가입</a>
+      </div>
+    </div>
+  </body>
+</html>

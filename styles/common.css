@@ -11,7 +11,8 @@
 
   --primary700: #1251aa;
   --primary600: #1967d6;
-  --primary500: #3692ff;
+  --primary500: #3182f6;
+  --primary400: #3692ff;
   --primary300: #cfe5ff;
   --primary200: #e6f2ff;
 
@@ -43,20 +44,21 @@ a {
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
-  background: var(--primary500);
+  background-color: var(--primary400);
   color: white;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .button:hover {
-  background: var(--primary600);
+  background-color: var(--primary600);
 }
 
 .button:active {
-  background: var(--primary700);
+  background-color: var(--primary700);
 }
 
 .button:disabled {
-  background: var(--gray400);
+  background-color: var(--gray400);
   cursor: default;
 }

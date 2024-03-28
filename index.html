@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>판다마켓</title>
+    <link rel="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/home.css" />
@@ -19,10 +20,10 @@
         <a class="full-height" href="/">
           <img class="full-height" src="/assets/logo.png" alt="판다마켓 로고" />
         </a>
-        <a class="small button" href="/login.html">로그인</a>
+        <a class="small button" href="/signin.html">로그인</a>
       </div>
     </header>
-    <main>
+    <main class="main">
       <section class="banner">
         <div class="banner-contents container">
           <h1 class="banner-title">
@@ -56,7 +57,12 @@
             </p>
           </div>
         </section>
-        <section class="topic reverse">
+        <section class="topic">
+          <img
+            class="topic-image"
+            src="/assets/img_home_02.png"
+            alt="상품을 검색하는 모습"
+          />
           <div>
             <p class="topic-label">Search</p>
             <h1 class="topic-title">
@@ -68,11 +74,6 @@
               쉽게 찾아보세요
             </p>
           </div>
-          <img
-            class="topic-image"
-            src="/assets/img_home_02.png"
-            alt="상품을 검색하는 모습"
-          />
         </section>
         <section class="topic">
           <img

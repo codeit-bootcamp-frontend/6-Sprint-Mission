@@ -1,5 +1,11 @@
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #dfdfdf;
+  width: 100%;
   height: 70px;
+  background-color: white;
 }
 
 .header-contents {
@@ -26,9 +32,13 @@
   font-size: 20px;
 }
 
+.main {
+  padding-top: 70px;
+}
+
 .banner {
   height: 540px;
-  background: var(--primary300);
+  background-color: var(--primary300);
   overflow: hidden;
 }
 
@@ -76,7 +86,8 @@
   color: var(--gray700);
 }
 
-.topic.reverse {
+.topic:nth-child(even) {
+  flex-direction: row-reverse;
   justify-content: right;
   text-align: right;
 }
@@ -86,7 +97,7 @@
 }
 
 .topic-label {
-  color: var(--primary500);
+  color: var(--primary400);
   font-size: 18px;
   font-weight: 700;
 }
@@ -105,7 +116,7 @@
 
 .footer {
   height: 160px;
-  background: var(--gray900);
+  background-color: var(--gray900);
 }
 
 .footer-contents {
@@ -136,7 +147,7 @@
 }
 
 .footer-link:active {
-  color: var(--primary500);
+  color: var(--primary400);
 }
 
 .footer-socials {
