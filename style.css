@@ -653,10 +653,37 @@
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* --------------------     signin.html     -------------------- */
+/* 로그인 모바일 뷰 */
+@media (min-width: 375px) {
+  .logo_icon {
+    display: block;
+  }
+  .guide_container {
+    width: 100%;
+    max-width: 400px;
+  }
+  .login-container {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .form-container input {
+    width: 100%;
+  }
+}
+
+/* 로그인 태블릿 뷰 */
+@media (min-width: 768px) {
+  .logo_icon {
+    display: block;
+  }
+  .guide_container {
+    width: 100%;
+  }
+}
 
 /* guide_container */
 .guide_container {
-  width: 640px;
+  max-width: 640px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -709,7 +736,7 @@
 
 .form-container input {
   /* box */
-  width: 640px;
+  width: 100%;
   height: 56px;
   border: 1px solid var(--gray100);
   border-radius: 12px;
