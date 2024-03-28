@@ -1,0 +1,403 @@
+/* 헤더부분 */
+header {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+header .login {
+    background-color: var(--blue1);
+    width: 128px;
+    height: 48px;
+    /* padding: auto auto; */
+    border-radius: 8px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* 헤더부분 */
+
+main {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.section-1 {
+    background-color: var(--bgcolor);
+    width: 100%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/img_home_top.svg');
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+}
+
+.section-1>div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 40px;
+    color: var(--cool_gray700);
+    font-weight: 700;
+}
+
+.btn-items {
+    width: 355px;
+    height: 56px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: var(--blue1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-index img {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.main-index {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-index:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.main-text {
+    flex-basis: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-text.right {
+    text-align: right;
+}
+
+.text1 {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--blue1);
+    margin-bottom: 12px;
+}
+
+.text2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--cool_gray700);
+}
+
+.text3 {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--cool_gray700);
+    margin-top: 24px;
+}
+
+.section-3 {
+    background-color: var(--bgcolor);
+    height: 540px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/img_home_bottom.svg');
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+}
+
+.section-3>div {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--cool_gray700);
+}
+
+/* 푸터부분 */
+footer {
+    padding-top: 15px;
+    height: 160px;
+    background: var(--gray900);
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer>div {
+    padding-top: 20px;
+    flex-basis: 350px;
+    text-align: center;
+}
+
+.codeit {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9CA3AF;
+    margin-top: 0;
+}
+
+.FAQ {
+    font-size: 16px;
+    font-weight: 400;
+    gap: 255px;
+}
+
+footer>.FAQ>a {
+    background: none;
+    color: var(--gray200);
+}
+
+/* 푸터부분 */
+
+/* 버튼 속성 */
+.btn:hover {
+    background: var(--blue2);
+}
+
+.btn:focus {
+    background: var(--blue3);
+}
+
+.btn:disabled {
+    background-color: var(--blue4);
+    cursor: default;
+    pointer-events: none;
+}
+
+/* singin.html */
+.signin-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.signin-logo {
+    display: block;
+    text-align: center;
+    width: 396px;
+    margin: 60px auto 40px auto;
+}
+
+.signin-logo img {
+    width: 100%;
+}
+
+.signin-label {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 16px 24px;
+    border: none;
+    background-color: var(--bg_label);
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.signin-form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-pwd {
+    position: relative;
+}
+
+.signin-btn {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 15px 100px;
+    background-color: var(--blue1);
+    border: none;
+    color: white;
+}
+
+.pwd-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 24px 0;
+    background-color: var(--bg_social);
+    color: var(--cool_gray800);
+    border-radius: 8px;
+}
+
+.social-login-img {
+    display: flex;
+    gap: 20px;
+}
+
+.switch-signup {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+
+.switch-signup>a {
+    color: var(--signup-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.break-on-desktop {
+    display: inline;
+}
+
+/* 반응형 디자인 */
+
+@media (max-width: 1279px) {
+    header {
+        padding: 0 24px;
+    }
+
+    .section-1 {
+        height: 771px;
+        background-size: 120%;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 84px;
+    }
+
+    .section-2 {
+        padding: 24px 24px 16px 24px;
+    }
+
+    .main-index {
+        display: block;
+    }
+
+    .main-index img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-3 {
+        height: 927px;
+        display: block;
+        text-align: center;
+        background-size: 120%;
+        padding-top: 84px;
+    }
+
+    .text1 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .text2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .text3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .break-on-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 0 16px;
+    }
+
+    .section-1 {
+        height: 540px;
+        background-position: bottom;
+        background-size: 130%;
+    }
+
+    .btn-items {
+        padding: 14px 33px;
+        width: auto;
+    }
+
+    .text1 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .text2 {
+        font-size: 24px;
+    }
+
+    .text3 {
+        font-size: 16px;
+    }
+
+    .section-3 {
+        height: 540px;
+        display: block;
+        text-align: center;
+        background-size: 130%;
+        padding: 48px 16px 0 0;
+    }
+
+    .signin-container {
+        max-width: 400px;
+        padding: 0 16px;
+    }
+
+    .signin-logo {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        width: 198px
+    }
+}
+
+/* .section-1 {
+    background-color: var(--bgcolor);
+    width: 100%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/img_home_top.svg');
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+} */

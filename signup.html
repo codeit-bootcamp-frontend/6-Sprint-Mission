@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <title>판다마켓</title>
+</head>
+
+<body>
+    <div class="signin-container">
+        <div class="signin-logo">
+            <a href="/">
+                <img src="img/panda_logo.svg" alt="판다마켓" width="396px">
+            </a>
+        </div>
+
+        <div class="signin-form">
+            <div>
+                <label for="email" class="signin-label">이메일</label>
+                <input id="email" name="email" type="email" placeholder="이메일을 입력해 주세요." class="signin-input">
+            </div>
+            <div>
+                <label for="nickname" class="signin-label">닉네임</label>
+                <input id="nickname" name="nickname" type="text" placeholder="닉네임을 입력해 주세요." class="signin-input">
+            </div>
+            <div class="signin-pwd">
+                <label for="pwd" class="signin-label">비밀번호</label>
+                <input id="pwd" name="pwd" type="password" placeholder="비밀번호를 입력해 주세요." class="signin-input">
+                <img src="img/eye.svg" class="pwd-toggle">
+            </div>
+            <div class="signin-pwd">
+                <label for="pwd2" class="signin-label">비밀번호 확인</label>
+                <input id="pwd2" name="pwd2" type="password" placeholder="비밀번호를 다시 한 번 입력해 주세요." class="signin-input">
+                <img src="img/eye.svg" class="pwd-toggle">
+            </div>
+            <button class="signin-btn btn">회원가입</button>
+        </div>
+
+        <div class="social-login">
+            <div>
+                <p>간편 로그인하기</p>
+            </div>
+            <div class="social-login-img">
+                <div>
+                    <a href="https://www.google.com" target="_blank">
+                        <img src="img/google-logo.png" alt="구글로그인" width="42px">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.kakaocorp.com/page" target="_blank">
+                        <img src="img/kakao-logo.png" alt="카카오로그인" width="42px">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="switch-signup">
+            이미 회원이신가요? <a href="signin.html">로그인</a>
+        </div>
+    </div>
+</body>
+
+</html>
