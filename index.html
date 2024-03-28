@@ -3,7 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- open graph -->
+    <meta property="og:image" content="img/og_img.png" />
+    <meta property="og:title" content="판다마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta property="og:url" content="https://eunbinpanda.netlify.app/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="img/og_img.png" />
+    <meta name="twitter:title" content="판다마켓" />
+    <meta name="twitter:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta property="twitter:url" content="https://eunbinpanda.netlify.app/" />
+
     <title>판다마켓</title>
+    <link rel="icon" href="img/판다 얼굴.svg">
 
     <link
       rel="stylesheet"
@@ -13,6 +27,7 @@
     />
 
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -21,10 +36,10 @@
     <header id="header" class="header">
       <div class="inner">
         <a class="logo flex-center" href="/">
-          <div class="logoImg">
+          <div class="logo-img mobile-hidden">
             <img src="img/판다 얼굴.svg" alt="판다마켓 로고 이미지" />
           </div>
-          <span class="logoText fontRokaf">판다마켓</span>
+          <span class="logo-text font-rokaf">판다마켓</span>
         </a>
   
         <a class="button" href="login.html">로그인</a>
@@ -32,32 +47,32 @@
     </header>
 
     <!-- 구경하러 가기 배너 -->
-    <section class="banner itemBanner">
+    <section class="banner item-banner">
       <div class="container flex-center">
-        <div class="mainText">
+        <div class="main-text">
           <p class="description">
-            일상의 모든 물건을<br />
+            일상의 모든 물건을<br class="pc-show mobile-show" />
             거래해 보세요
           </p>
   
           <a href="items.html" class="button">구경하러 가기</a>
         </div>
   
-        <div class="bannerImg"><img src="img/Img_home_top.png" alt="판다 이미지" /></div>
+        <div class="banner-img"><img src="img/Img_home_top.png" alt="판다 이미지" /></div>
       </div>
     </section>
 
     <!-- 소개 영역 -->
-    <main class="container introduceSection">
+    <main class="container introduce-section">
       <article class="introduce">
-        <div class="imgArea">
+        <div class="img-area">
           <img src="img/main1.png" alt="hot item 이미지" />
         </div>
 
-        <div class="textArea">
+        <div class="text-area">
           <p class="keyword">Hot item</p>
           <p class="title">
-            인기 상품을<br>
+            인기 상품을<br class="pc-show">
             확인해 보세요
           </p>
           <p class="detail">
@@ -68,14 +83,14 @@
       </article>
 
       <article class="introduce reverse">
-        <div class="imgArea">
+        <div class="img-area">
           <img src="img/main2.png" alt="검색 이미지" />
         </div>
 
-        <div class="textArea">
+        <div class="text-area">
           <p class="keyword">Search</p>
           <p class="title">
-            구매를 원하는<br>
+            구매를 원하는<br class="pc-show">
             상품을 검색하세요
           </p>
           <p class="detail">
@@ -86,14 +101,14 @@
       </article>
 
       <article class="introduce">
-        <div class="imgArea">
+        <div class="img-area">
           <img src="img/main3.png" alt="상품 등록 이미지" />
         </div>
 
-        <div class="textArea">
+        <div class="text-area">
           <p class="keyword">Register</p>
           <p class="title">
-            판매를 원하는<br>
+            판매를 원하는<br class="pc-show">
             상품을 등록하세요
           </p>
           <p class="detail">
@@ -105,35 +120,39 @@
     </main>
 
     <!-- 하단 배너 -->
-    <section class="banner bottomBanner">
+    <section class="banner bottom-banner">
       <div class="container flex-center">
-        <div class="mainText">
+        <div class="main-text">
           <p class="description">
             믿을 수 있는<br />
             판다마켓 중고거래
           </p>
         </div>
   
-        <div class="bannerImg"><img src="img/Img_home_bottom.png" alt="판다 두마리 이미지" /></div>
+        <div class="banner-img"><img src="img/Img_home_bottom.png" alt="판다 두마리 이미지" /></div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="inner">
-        <p class="copyright">
-          &copy;codeit - 2024
-        </p>
-
-        <div class="pageLink">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="faq.html">FAQ</a>
+        <div class="left">
+          <p class="copyright abel">
+            &copy;codeit - 2024
+          </p>
+  
+          <div class="page-link">
+            <a href="privacy.html" class="abel">Privacy Policy</a>
+            <a href="faq.html" class="abel">FAQ</a>
+          </div>
         </div>
 
-        <div class="snsLink">
-          <a href="https://www.facebook.com/" target="_blank" class="facebook"></a>
-          <a href="https://twitter.com/" target="_blank" class="twitter"></a>
-          <a href="https://www.youtube.com/" target="_blank" class="youtube"></a>
-          <a href="https://www.instagram.com/" target="_blank" class="instagram"></a>
+        <div class="right">
+          <div class="sns-link">
+            <a href="https://www.facebook.com/" target="_blank" class="facebook"></a>
+            <a href="https://twitter.com/" target="_blank" class="twitter"></a>
+            <a href="https://www.youtube.com/" target="_blank" class="youtube"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="instagram"></a>
+          </div>
         </div>
       </div>
     </footer>

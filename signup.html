@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>판다마켓</title>
+    <title>판다마켓: 회원가입</title>
+    <link rel="icon" href="img/판다 얼굴.svg">
 
     <link
       rel="stylesheet"
@@ -13,60 +14,61 @@
     />
 
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div class="signInup login">
+    <div class="authentication-page login">
       <!-- 로고 -->
       <a href="/" class="logo flex-center">
-        <div class="logoImg">
+        <div class="logo-img">
           <img src="img/판다 얼굴.svg" alt="판다마켓 로고 이미지" />
         </div>
 
-        <h1 class="logoText fontRokaf">판다마켓</h1>
+        <h1 class="logo-text font-rokaf">판다마켓</h1>
       </a>
 
       <!-- 회원가입 폼 -->
-      <form action="" class="signInUpForm">
-        <div class="inputWrapper">
+      <form action="" class="auth-form">
+        <div class="input-wrapper">
           <label for="email">이메일</label>
           <input type="email" id="email" name="email" placeholder="이메일을 입력해주세요" />
         </div>
 
-        <div class="inputWrapper">
+        <div class="input-wrapper">
           <label for="name">닉네임</label>
           <input type="text" id="name" name="name" placeholder="닉네임을 입력해주세요" />
         </div>
 
-        <div class="inputWrapper">
+        <div class="input-wrapper">
           <label for="password">비밀번호</label>
-          <div class="passwordGroup relative">
+          <div class="password-group relative">
             <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요" />
-            <div class="inputIcon absolute cursor">
+            <div class="input-icon absolute cursor-pointer">
               <img src="img/visibility_off.png" alt="비밀번호 가리기 아이콘" />
             </div>
           </div>
         </div>
 
-        <div class="inputWrapper">
-          <label for="passwordCheck">비밀번호 확인</label>
-          <div class="passwordGroup relative">
-            <input type="password" id="passwordCheck" name="passwordCheck" placeholder="비밀번호를 다시 한 번 입력해주세요" />
-            <div class="inputIcon absolute cursor">
+        <div class="input-wrapper">
+          <label for="password-check">비밀번호 확인</label>
+          <div class="password-group relative">
+            <input type="password" id="password-check" name="passwordCheck" placeholder="비밀번호를 다시 한 번 입력해주세요" />
+            <div class="input-icon absolute cursor-pointer">
               <img src="img/visibility_off.png" alt="비밀번호 가리기 아이콘" />
             </div>
           </div>
         </div>
 
-        <button class="button off">회원가입</button>
+        <button class="off">회원가입</button>
       </form>
 
       <!-- 간편 로그인하기 -->
-      <div class="socialLogin">
-        <span class="socialLoginText">간편 로그인하기</span>
+      <div class="social-login">
+        <span class="social-login-text">간편 로그인하기</span>
 
-        <div class="socialLoginIcon">
+        <div class="social-login-icon">
           <a href="https://www.google.com/" target="_blank" class="icon"><img src="img/google_login.svg" alt="구글 로그인하기"></a>
           <a href="https://www.kakaocorp.com/page/" target="_blank" class="icon"><img src="img/kakao_login.svg" alt="카카오 로그인하기"></a>
         </div>
