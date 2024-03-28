@@ -1,5 +1,3 @@
-/* ------------------------------------------------- */
-
 /* 상단 판다 마켓 로고, 로그인 버튼 */
 header {
     position: fixed;
@@ -21,7 +19,7 @@ header {
     margin-left: 200px;
 }
 .header_logo img {
-    width: 200px;
+    width: 10rem;
 }
 
 .header_login_btn {
@@ -60,6 +58,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 20rem;
     height: 100%;
     gap: 32px;
 }
@@ -87,10 +86,10 @@ main {
 
 /* 상단 배너 이미지 */
 .banner_top_img {
-    width: 830px;
+    width: 880px;
 }
 
-/* 메인 콘텐츠 */
+/* 메인 콘텐츠 =========================================================================================================== */
 .container_content {
     display: flex;
     flex-direction: column;
@@ -109,6 +108,7 @@ main {
 
 /* 오른쪽 정렬 */
 .right_item {
+    flex-direction: row-reverse;
     text-align: right;
 }
 
@@ -150,7 +150,7 @@ main {
     color: var(--gray-700);
 }
 
-/* 하단 배너 */
+/* 하단 배너 ========================================================================================================================= */
 .banner_floor {
     display: flex;
     background-color: #cfe5ff;
@@ -165,7 +165,8 @@ main {
     justify-content: center;
     height: 100%;
 }
-/* <!-- 하단 배너 텍스트 --> */
+
+/* 하단 배너 텍스트 */
 .banner_floor_text {
     width: 286px;
     font-weight: 700;
@@ -222,4 +223,155 @@ footer {
 .twitter,
 .youtube,
 .instagram {
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Tablet Size================================================================================================================================= */
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+    .header_logo {
+        margin-left: 24px;
+    }
+
+    .header_login_btn {
+        margin-right: 24px;
+    }
+
+    .banner_top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+        height: 100%;
+    }
+
+    .banner_top_content {
+        align-items: center;
+        width: 40rem;
+        padding-bottom: 8rem;
+    }
+
+    .banner_top_content br {
+        display: none;
+    }
+
+    /* 상단 배너 이미지 */
+    .banner_top_img {
+        width: 120dvw;
+    }
+
+    /* 메인 콘텐츠 */
+    .container_content {
+        width: 100%;
+    }
+
+    /* 콘텐츠 내부 */
+    .content_item {
+        flex-direction: column;
+    }
+
+    /* 콘텐츠 이미지 */
+    .content_item_img {
+        width: 95dvw;
+    }
+
+    /* 콘텐츠 내용 */
+    .content_item_sub {
+        width: 95dvw;
+    }
+    /* 콘텐츠 내용 br 제거 */
+    .content_item_sub br {
+        display: none;
+    }
+
+    /* 하단 배너 */
+    .banner_floor {
+        flex-direction: column;
+        padding-top: 80px;
+        height: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner_floor_content {
+        padding-bottom: 8rem;
+    }
+
+    /* 하단 배너 이미지 */
+    .banner_floor_img {
+        width: 120dvw;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Mobile Size================================================================================================================================= */
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+    .header_logo {
+        margin-left: 24px;
+    }
+
+    .header_login_btn {
+        margin-right: 24px;
+    }
+
+    .banner_top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+        height: 100%;
+    }
+
+    .banner_top_content {
+        align-items: center;
+        width: 40rem;
+    }
+
+    .banner_top_content br {
+        display: inline;
+    }
+
+    /* 상단 배너 이미지 */
+    .banner_top_img {
+        width: 180dvw;
+    }
+
+    /* 메인 콘텐츠 */
+    .container_content {
+        width: 100%;
+    }
+
+    /* 콘텐츠 내부 */
+    .content_item {
+        flex-direction: column;
+    }
+
+    /* 콘텐츠 이미지 */
+    .content_item_img {
+        width: 95dvw;
+    }
+
+    /* 콘텐츠 내용 */
+    .content_item_sub {
+        width: 95dvw;
+    }
+    /* 콘텐츠 내용 br 제거 */
+    .content_item_sub br {
+        display: none;
+    }
+
+    /* 하단 배너 */
+    .banner_floor {
+        flex-direction: column;
+        padding-top: 80px;
+        height: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 하단 배너 이미지 */
+    .banner_floor_img {
+        width: 120dvw;
+    }
 }

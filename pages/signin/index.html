@@ -25,6 +25,12 @@
     </head>
     <body>
         <main class="main_signin">
+            <!-- 로고 버튼 -->
+            <a class="logo_btn" href="/">
+                <!-- 로고 이미지 -->
+                <img class="logo_img" src="/images/logo.png" alt="" />
+            </a>
+
             <!-- 로그인 폼 -->
             <form
                 class="signin"
@@ -32,19 +38,14 @@
                 method="get"
                 oninput="btn.disabled = !email.validity.valid || !psw.validity.valid"
             >
-                <!-- 로고 버튼 -->
-                <a class="logo_btn" href="/">
-                    <!-- 로고 이미지 -->
-                    <img class="logo_img" src="/images/logo.png" alt="" />
-                </a>
-                <ul class="content">
+                <fieldset class="content">
                     <!-- 로그인 이메일 라벨 -->
-                    <li class="user_email_label">
+                    <div class="user_email_label">
                         <label for="email">이메일</label>
-                    </li>
+                    </div>
 
                     <!-- 로그인 이메일 작성 -->
-                    <li>
+                    <div>
                         <input
                             id="email"
                             class="user_email_input"
@@ -54,15 +55,15 @@
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             required
                         />
-                    </li>
+                    </div>
 
                     <!-- 로그인 비밀번호 라벨 -->
-                    <li class="user_psw_label">
+                    <div class="user_psw_label">
                         <label for="psw">비밀번호</label>
-                    </li>
+                    </div>
 
                     <!-- 로그인 비밀번호 작성 -->
-                    <li class="user_psw_content">
+                    <div class="user_psw_content">
                         <input
                             id="psw"
                             class="user_psw_input"
@@ -78,9 +79,9 @@
                                 alt="psw_chk"
                             />
                         </button>
-                    </li>
+                    </div>
 
-                    <li>
+                    <div>
                         <!-- 로그인 버튼 -->
                         <button
                             id="btn"
@@ -91,52 +92,47 @@
                         >
                             로그인
                         </button>
-                    </li>
-
-                    <!-- 소셜 간편 로그인 -->
-                    <li class="social_signin">
-                        <h1>간편 로그인하기</h1>
-
-                        <div class="social_btns">
-                            <!-- 구글 로그인 버튼-->
-                            <a
-                                href="https://www.google.com/"
-                                class="signin_google"
-                            >
-                                <!-- 구글 로그인 이미지 -->
-                                <img
-                                    src="/images/social_signin/google.png"
-                                    alt="구글 간편 로그인"
-                                />
-                            </a>
-
-                            <!-- 카카오 로그인 버튼 -->
-                            <a
-                                href="https://www.kakaocorp.com/page/"
-                                class="signin_kakao"
-                            >
-                                <!-- 카카오 로그인 이미지 -->
-                                <img
-                                    src="/images/social_signin/kakao.png"
-                                    alt="카카오 간편 로그인"
-                                />
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- 회원가입으로 이동 -->
-                    <li class="to_signup">
-                        <p class="signup_text">
-                            판다마켓이 처음이신가요?
-
-                            <!-- 회원가입 이동 버튼 -->
-                            <a class="signup_btn" href="/pages/signup">
-                                회원가입
-                            </a>
-                        </p>
-                    </li>
-                </ul>
+                    </div>
+                </fieldset>
             </form>
+
+            <!-- 소셜 간편 로그인 -->
+            <div class="social_signin">
+                <h1>간편 로그인하기</h1>
+
+                <div class="social_btns">
+                    <!-- 구글 로그인 버튼-->
+                    <a href="https://www.google.com/" class="signin_google">
+                        <!-- 구글 로그인 이미지 -->
+                        <img
+                            src="/images/social_signin/google.png"
+                            alt="구글 간편 로그인"
+                        />
+                    </a>
+
+                    <!-- 카카오 로그인 버튼 -->
+                    <a
+                        href="https://www.kakaocorp.com/page/"
+                        class="signin_kakao"
+                    >
+                        <!-- 카카오 로그인 이미지 -->
+                        <img
+                            src="/images/social_signin/kakao.png"
+                            alt="카카오 간편 로그인"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <!-- 회원가입으로 이동 -->
+            <div class="to_signup">
+                <p class="signup_text">
+                    판다마켓이 처음이신가요?
+
+                    <!-- 회원가입 이동 버튼 -->
+                    <a class="signup_btn" href="/pages/signup"> 회원가입 </a>
+                </p>
+            </div>
         </main>
     </body>
 </html>
