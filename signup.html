@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>판다마켓 회원가입</title>
   <link rel="icon" href="images/home/favicon.ico" />
-  <link rel="stylesheet" href="sup.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="common.css" />
 
 </head>
 
 <body>
 
-  <header>
+  <header class="header">
     <a href="/">
-      <img src="images/home/로그인판다.png" width="396"/>
+      <img class="header__logo" src="images/home/판다마켓.png"/>
     </a>
   </header>
 
@@ -24,54 +25,58 @@
 
       <form method="login" action="/" id="login-form">
 
-        <div class="input-box">
-          <label id="user">이메일</label>
-          <input type="email" name="userEmail" id="userEmail" placeholder="이메일을 입력해주세요">
+        <div class="logbox__input-box">
+          <label class="user">이메일</label>
+          <input type="email" name="userEmail" class="logbox__input-box-txt" placeholder="이메일을 입력해주세요">
         </div>
 
-        <div class="input-box">
-          <label id="user">닉네임</label>
-          <input type="nickname" name="userNickname" id="userNickname" placeholder="닉네임을 입력해주세요">
+        <div class="logbox__input-box">
+          <label class="user" for="nickname">닉네임</label>
+          <input type="text" name="nickname" class="logbox__input-box-txt" placeholder="닉네임을 입력해주세요">
         </div>
 
-        <div class="input-box password-input">
-          <label id="user">비밀번호</label>
+        <div class="logbox__input-box password-input">
+          <label class="user">비밀번호</label>
           <div class="password-wrapper">
-            <input type="password" name="userPassword" id="userPassword" placeholder="비밀번호를 입력해주세요">
-            <div class="password-toggle">
+            <input type="password" name="password" class="logbox__input-box-txt" placeholder="비밀번호를 입력해주세요">
+            <div class="password-wrapper__toggle">
               <img src="images/home/눈.png" id="passwordToggle">
             </div>
           </div>
         </div>
 
-        <div class="input-box password-input">
-          <label id="user">비밀번호 확인</label>
+        <div class="logbox__input-box password-input">
+          <label class="user">비밀번호 확인</label>
           <div class="password-wrapper">
-            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="비밀번호를 다시 한 번 입력해주세요">
-            <div class="password-toggle">
+            <input type="password" name="confirmPassword" class="logbox__input-box-txt" placeholder="비밀번호를 다시 한 번 입력해주세요">
+            <div class="password-wrapper__toggle">
               <img src="images/home/눈.png" id="passwordToggle">
             </div>
           </div>
         </div>
 
-        <input type="submit" value="회원가입">
+        <button type="submit" class="logbox__submit">회원가입</button>
 
-        <div class="easy">
-          <p class="easy-login">간편 로그인하기</p>
-          <div class="social-login">
-            <a href="https://www.google.com/"><img src="images/social/구글.png"></a>
-            <a href="https://www.kakaocorp.com/page/"><img src="images/social/카톡.png"></a>
+        <div class="social-login">
+          <p class="social-login__txt">간편 로그인하기</p>
+          <div class="social-login__btn-group">
+            <a class="social-login__btn-group social-btn" href="https://www.google.com/">
+              <i><img src="images/social/구글.png" alt="구글" /></i>
+            </a>
+            <a class="social-login__btn-group social-btn" href="https://www.kakaocorp.com/page/">
+              <i><img src="images/social/카톡.png" alt="카카오" /></i>
+            </a>
           </div>
         </div>
 
-        <p class="signup">이미 회원이신가요?<a href="signin.html">로그인</a></p>
+        <p class="signup">이미 회원이신가요?<a href="signin.html" class="signup__link">로그인</a></p>
 
       </form>
 
     </section>
     
   </main>
-
+  <script src="signup.js"></script>
 </body>
 
 </html>
