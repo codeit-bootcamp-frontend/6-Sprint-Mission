@@ -32,12 +32,7 @@
             </a>
 
             <!-- 로그인 폼 -->
-            <form
-                class="signup"
-                action="/pages/signup/"
-                method="get"
-                oninput="btn.disabled = !email.validity.valid || !psw.validity.valid || !psw_chk.validity.valid"
-            >
+            <form class="signup" action="/pages/signup/" method="get">
                 <fieldset class="content">
                     <!-- 로그인 이메일 라벨 -->
                     <div class="user_email_label">
@@ -52,7 +47,6 @@
                             type="email"
                             name="user_email"
                             placeholder="이메일을 입력해주세요"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             required
                         />
                     </div>
@@ -109,7 +103,6 @@
                             type="password"
                             name="user_psw_chk"
                             placeholder="비밀번호를 다시 한 번 입력해주세요"
-                            pattern=".{8,}"
                             required
                         />
                         <button type="button" class="psw_chk_btn">
@@ -173,5 +166,6 @@
                 </div>
             </form>
         </main>
+        <script src="/js/sign/signup.js"></script>
     </body>
 </html>
