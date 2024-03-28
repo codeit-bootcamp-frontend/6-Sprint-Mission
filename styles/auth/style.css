@@ -135,3 +135,26 @@ form button:hover {
   color: var(--cool-gray800);
   margin: 0;
 }
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  form input {
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+  }
+
+  #container {
+    margin: 24px 16px;
+  }
+
+  #logo_l {
+    width: 198px;
+    height: 66px;
+  }
+
+  #inner_container {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 24px;
+  }
+}
