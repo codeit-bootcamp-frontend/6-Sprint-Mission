@@ -13,7 +13,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 200px;
     height: 70px;
     background-color: #ffffff;
 }
@@ -173,4 +172,22 @@ footer {
     width: 20px;
     height: 20px;
     margin-right: 20px;
+}
+
+@media (min-width: 1200px) {
+    nav {
+        padding: 0 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    nav {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    nav {
+        padding: 0 16px;
+    }
 }
