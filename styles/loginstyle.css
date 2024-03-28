@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 60px;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  width: 396px;
+  height: 132px;
+  margin: 0 auto;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  margin: 40px auto;
+  gap: 24px;
+}
