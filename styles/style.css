@@ -304,24 +304,11 @@ footer {
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 @media (max-width: 767px) {
     .header_logo {
-        margin-left: 24px;
+        margin-left: 16px;
     }
 
     .header_login_btn {
-        margin-right: 24px;
-    }
-
-    .banner_top {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 80px;
-        height: 100%;
-    }
-
-    .banner_top_content {
-        align-items: center;
-        width: 40rem;
+        margin-right: 16px;
     }
 
     .banner_top_content br {
@@ -331,43 +318,5 @@ footer {
     /* 상단 배너 이미지 */
     .banner_top_img {
         width: 180dvw;
-    }
-
-    /* 메인 콘텐츠 */
-    .container_content {
-        width: 100%;
-    }
-
-    /* 콘텐츠 내부 */
-    .content_item {
-        flex-direction: column;
-    }
-
-    /* 콘텐츠 이미지 */
-    .content_item_img {
-        width: 95dvw;
-    }
-
-    /* 콘텐츠 내용 */
-    .content_item_sub {
-        width: 95dvw;
-    }
-    /* 콘텐츠 내용 br 제거 */
-    .content_item_sub br {
-        display: none;
-    }
-
-    /* 하단 배너 */
-    .banner_floor {
-        flex-direction: column;
-        padding-top: 80px;
-        height: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* 하단 배너 이미지 */
-    .banner_floor_img {
-        width: 120dvw;
     }
 }
