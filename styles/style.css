@@ -296,6 +296,9 @@ footer {
     .banner_floor_content {
         padding-bottom: 8rem;
     }
+    .banner_floor_content br {
+        display: none;
+    }
 
     /* 하단 배너 이미지 */
     .banner_floor_img {
