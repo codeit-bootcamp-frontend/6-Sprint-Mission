@@ -92,3 +92,25 @@ button {
     margin: 16px auto;
     text-align: center;
 }
+
+@media (min-width: 1200px) {
+    nav {
+        padding: 0 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    nav {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    body {
+        padding: 0 16px;
+        width: max(100%, 400px);
+    }
+    nav {
+        padding: 0 16px;
+    }
+}

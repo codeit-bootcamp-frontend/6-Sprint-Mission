@@ -23,7 +23,7 @@ a {
     text-decoration-line: none;
 }
 
-.button {
+#login-button {
     width: 128px;
     height: 48px;
     border-radius: 8px;
@@ -38,7 +38,6 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
     background-color: #cfe5ff;
 }
 
@@ -67,6 +66,7 @@ a {
 
 .container {
     margin: 0 auto;
+    padding: 16px;
     width: min(100%, 1200px);
 }
 
@@ -84,6 +84,7 @@ a {
     width: 955px;
     height: 444px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -97,8 +98,7 @@ a {
 }
 
 .container > article > div > img {
-    width: 588px;
-    height: 444px;
+    width: 60%;
 }
 
 .subtitle {
@@ -178,16 +178,49 @@ footer {
     nav {
         padding: 0 200px;
     }
+
+    .banner {
+        width: 768px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
     nav {
         padding: 0 24px;
     }
+
+    .banner {
+        width: 100%;
+    }
+
+    #landing {
+        flex-wrap: wrap;
+    }
+
+    #intro-text > br {
+        display: none;
+    }
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
+    body {
+        padding: 0 16px;
+        width: max(100%, 400px);
+    }
+
     nav {
         padding: 0 16px;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    #landing {
+        flex-wrap: wrap;
+    }
+    
+    #intro-text > br {
+        display: none;
     }
 }
