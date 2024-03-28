@@ -157,12 +157,10 @@ a {
 footer {
     height: 160px;
     background-color: #111827;
-
 }
 
 #footer-content > * {
     display: inline;
-    
 }
 
 #footer-content {
