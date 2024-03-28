@@ -86,7 +86,8 @@
   color: var(--gray700);
 }
 
-.topic.reverse {
+.topic:nth-child(even) {
+  flex-direction: row-reverse;
   justify-content: right;
   text-align: right;
 }
