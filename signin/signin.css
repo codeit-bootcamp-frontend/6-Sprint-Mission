@@ -43,6 +43,8 @@ form {
 
 label {
     font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-cool-gray800);
 }
 
 input {
@@ -53,6 +55,7 @@ input {
     border-radius: 12px;
     padding: 16px 24px;
     font-size: 1.6rem;
+    font-weight: 400;
     color: var(--color-cool-gray800);
 }
 
@@ -163,4 +166,61 @@ footer a {
     color: var(--color-alink-blue);
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 500px;
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    header {
+        margin: 0 auto;
+        max-width: 396px;
+    }
+
+    form {
+        gap: 16px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 400px;
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    header {
+        margin: 0 auto;
+        max-width: 198px;
+        max-height: 66px;
+    }
+
+    form {
+        gap: 16px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .password_eye_wrap,
+    .pw_check_eye_wrap {
+        top: 40px;
+    }
 }
