@@ -176,6 +176,8 @@ footer .sns-link > a {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 footer .sns-link a.facebook {
@@ -183,11 +185,11 @@ footer .sns-link a.facebook {
 }
 
 footer .sns-link a.twitter {
-  background-image: url(../img/ic_twitter.png);
+  background-image: url(../img/ic_twitter.svg);
 }
 
 footer .sns-link a.youtube {
-  background-image: url(../img/ic_youtube.png);
+  background-image: url(../img/ic_youtube.svg);
 }
 
 footer .sns-link a.instagram {
