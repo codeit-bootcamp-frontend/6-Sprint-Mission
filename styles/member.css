@@ -66,14 +66,6 @@ button {
     height: 132px;
 }
 
-#login {
-    display: block;
-}
-
-#login > * {
-    display: block;
-}
-
 #special-login {
     margin-top: 16px;
     display: flex;
@@ -86,17 +78,39 @@ button {
     background-color: #ebf2ff;
 }
 
-#icons > img {
+#icons > a > img {
     width: 24px;
     height: 24px;
     margin-right: 4px;
 }
 
-#icons > img:last-child {
+#icons > a:last-child > img {
     margin-right: 0;
 }
 
 #signup-link {
     margin: 16px auto;
     text-align: center;
+}
+
+@media (min-width: 1200px) {
+    nav {
+        padding: 0 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    nav {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    body {
+        padding: 0 16px;
+        width: max(100%, 400px);
+    }
+    nav {
+        padding: 0 16px;
+    }
 }
