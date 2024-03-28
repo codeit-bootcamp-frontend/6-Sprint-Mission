@@ -325,41 +325,13 @@ footer {
     text-align: center;
   }
   footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    padding: 32px 0;
-    gap: 10px;
-    height: 160px;
-    bottom: 0;
-    background-color: #111827;
-    margin-top: 70px;
+    margin-top: -30px;
   }
   .codeit {
-    margin: 0 24vw 0 10vw;
-    width: 112px;
-    height: 19px;
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #9ca3af;
+    margin: 0 17vw 0 5vw;
   }
   .footer-text {
-    display: flex;
-    margin: 0;
-    width: 112px;
-    height: 19px;
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #e5e7eb;
-    cursor: pointer;
-    text-decoration: none;
+    
   }
   .icon-img {
     display: flex;
@@ -368,11 +340,13 @@ footer {
   .footer-text-group {
     display: flex;
     gap: 20px;
+    width: auto;
   }
   .img-group {
     display: flex;
     gap: 5px;
     width: 20px;
     height: 20px;
+    margin-right: 10vw;
   }
 }
