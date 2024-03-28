@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+.logo{
+  width: 396px;
+  height: 132px;
+  margin-left: calc(50% - 396px/2);
+  margin-top: 60px;
+}
+.login{
+  margin-left: 640px;
+  margin-top: 30px;
+}
+.login>p{
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1F2937;
+}
+.email,.password{
+  width: 640px;
+  height: 56px;
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  border: none;
+  padding-left: 20px;
+}
+.email:focus,
+.password:focus{
+  border-color:#3692ff ;
+}
+.eyeoff{
+  position: absolute;
+  left: 600px;
+  top: 15px;
+}
+.login-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 124px;
+  gap: 10px;
+  margin: 20px 0 20px 0;
+  width: 640px;
+  height: 56px;
+  background: #9CA3AF;
+  border-radius: 40px;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.easy-login{
+  display: flex;
+  box-sizing: border-box;
+  width: 640px;
+  height: 74px;
+  top: 0px;
+  background: #E6F2FF;
+  border-radius: 8px;
+  padding: 0 23px 0 23px;
+  align-items: center;
+}
+.easy-login>p{
+  width: 120px;
+  height: 24px;
+}
+.google-logo{
+  width: 42px;
+  height: 42px;
+  margin: 0 8px 0 380px;
+}
+.kakao-logo{
+  width: 42px;
+  height: 42px;
+  margin-left: 8px;
+}
+.signup-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Pretendard;
+  font-size: 15px;
+  gap: 5px;
+}
+.signup{
+  color: #3182F6;
+}
