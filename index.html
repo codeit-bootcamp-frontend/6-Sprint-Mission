@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>판다마켓</title>
+
+        <!-- Primary Meta Tags -->
+        <title>판다마켓</title>
+        <meta name="title" content="판다마켓" />
+        <meta name="description" content="일상의 모든 물건을 거래해보세요" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hyunjipandamarket.netlify.app/" />
+        <meta property="og:title" content="판다마켓" />
+        <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+        <meta property="og:image" content="/assets/img/logo/preview.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://hyunjipandamarket.netlify.app/" />
+        <meta property="twitter:title" content="판다마켓" />
+        <meta property="twitter:description" content="일상의 모든 물건을 거래해보세요" />
+        <meta property="twitter:image" content="/assets/img/logo/preview.png" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./home.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <a href="#">
+                <picture class="logo">
+                    <source
+                        srcset="/assets/img/logo/logo.webp"
+                        media="(max-width: 767px)"
+                        width="103"
+                        type="image/webp" />
+                    <img src="/assets/img/logo/img_logo_big.webp" alt="판다마켓 로고" />
+                </picture>
+            </a>
+
+            <button class="header_button" onclick="location.href='/signin'">로그인</button>
+        </header>
+        <main>
+            <!-- Main banner -->
+            <section class="main_banner_container">
+                <div class="main_banner_wrap">
+                    <div class="main_banner_text">
+                        <h3 class="title">일상의 모든 물건을 거래해 보세요</h3>
+                        <button class="main_banner_btn" onclick='location.href="/items/"'>구경하러 가기</button>
+                    </div>
+                    <div class="main_banner_img">
+                        <img src="/assets/img/home_imgs/Img_home_top.webp" alt="구경가는 판다 이미지" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main info -->
+            <section class="main_info_container">
+                <div class="main_info_background">
+                    <div class="main_info">
+                        <div class="img_wrap">
+                            <img src="/assets/img/home_imgs/Img_home_hot_item.webp" alt="핫 아이템 이미지" />
+                        </div>
+                        <div class="text_wrap">
+                            <h4 class="blue-title">Hot item</h4>
+                            <h2 class="title">인기 상품을 확인해 보세요</h2>
+                            <h3 class="description">가장 HOT한 중고거래 물품을 판다 마켓에서 확인해 보세요</h3>
+                        </div>
+                    </div>
+
+                    <div class="main_info_second">
+                        <div class="img_wrap">
+                            <img src="/assets/img/home_imgs/Img_home_search.webp" alt="검색 이미지" />
+                        </div>
+                        <div class="text_wrap">
+                            <h4 class="blue-title">Search</h4>
+                            <h2 class="title">구매를 원하는 상품을 검색하세요</h2>
+                            <h3 class="description">구매하고 싶은 물품은 검색해서 쉽게 찾아보세요</h3>
+                        </div>
+                    </div>
+
+                    <div class="main_info">
+                        <div class="img_wrap">
+                            <img src="/assets/img/home_imgs/Img_home_register.webp" alt="등록 이미지" />
+                        </div>
+                        <div class="text_wrap">
+                            <h4 class="blue-title">Register</h4>
+                            <h2 class="title">판매를 원하는 상품을 등록하세요</h2>
+                            <h3 class="description">어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom banner -->
+            <section class="bottom_banner_container">
+                <div class="bottom_banner_wrap">
+                    <div class="bottom_banner_text">
+                        <h3 class="title">믿을 수 있는<br />판다마켓 중고거래</h3>
+                    </div>
+                    <div class="bottom_banner_img">
+                        <img src="/assets/img/home_imgs/Img_home_bottom.webp" alt="믿을 수 있는 판다마켓" />
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer_wrap">
+                <div class="codeit_footer">©codeit - 2024</div>
+                <div class="privacy_footer">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/faq">FAQ</a>
+                </div>
+            </div>
+            <div class="codeit_footer_link">
+                <a href="http://facebook.com" target="_blank"
+                    ><img src="/assets/img/icon/ic_facebook.webp" alt="facebook"
+                /></a>
+                <a href="http://twitter.com" target="_blank"
+                    ><img src="/assets/img/icon/ic_twitter.webp" alt="twitter"
+                /></a>
+                <a href="http://youtube.com" target="_blank"
+                    ><img src="/assets/img/icon/ic_youtube.webp" alt="youtube"
+                /></a>
+                <a href="http://instagram.com" target="_blank"
+                    ><img src="/assets/img/icon/ic_instagram.webp" alt="instagram"
+                /></a>
+            </div>
+        </footer>
+    </body>
+</html>

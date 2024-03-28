@@ -1,0 +1,236 @@
+@import url(/styles/reset.css);
+@import url(/styles/base.css);
+
+.container {
+    margin: auto;
+    width: 64rem;
+    min-height: 108rem;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Header logo */
+header {
+    height: 13.2rem;
+}
+
+header img {
+    max-width: 39.6rem;
+    width: 100%;
+}
+
+/* Main - form*/
+main {
+    padding-top: 4rem;
+}
+
+form {
+    padding-bottom: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.input_wrap {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+label {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-cool-gray800);
+}
+
+input {
+    box-sizing: border-box;
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray100);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--color-cool-gray800);
+}
+
+input::placeholder {
+    color: var(color-cool-gray400);
+    line-height: 2.4rem;
+}
+
+input:focus {
+    border: 1.5px solid #3692ff;
+}
+
+button {
+    width: var(--desktop-input-width);
+    height: var(--desktop-input-height);
+    background-color: var(--color-cool-gray400);
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: var(--color-brand-blue);
+}
+
+.on {
+    background-color: var(--color-brand-blue);
+}
+
+/* Password Toggle Btn */
+.password_eye_wrap,
+.pw_check_eye_wrap {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 45px;
+    right: 20px;
+}
+
+.password_eye_wrap input[type='checkbox'],
+.pw_check_eye_wrap input[type='checkbox'] {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.password_eye_wrap label::after,
+.pw_check_eye_wrap label::after {
+    background-image: url(/assets/img/icon/closed-eye.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+}
+
+.password_eye_wrap label::before,
+.pw_check_eye_wrap label::before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+}
+
+.password_eye_wrap input[type='checkbox']:checked + label::after,
+.pw_check_eye_wrap input[type='checkbox']:checked + label::after {
+    background-image: url(/assets/img/icon/open-eye.webp);
+}
+.password_eye_wrap input[type='checkbox']:checked + label::before,
+.pw_check_eye_wrap input[type='checkbox']:checked + label::before {
+    display: none;
+}
+
+/* Main - easy_login */
+.easy_login {
+    box-sizing: border-box;
+    padding: 25px 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.4rem;
+    border-radius: 8px;
+    background-color: var(--color-skyblue-btn-background);
+}
+
+h4 {
+    color: var(--color-cool-gray800);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+}
+
+.easy_login_link {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.easy_login_link img {
+    max-width: 4.2rem;
+}
+
+/* Footer sign-in */
+footer {
+    padding-top: 24px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-cool-gray800);
+    line-height: 1.79rem;
+}
+
+footer a {
+    color: var(--color-alink-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 500px;
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    header {
+        margin: 0 auto;
+        max-width: 396px;
+    }
+
+    form {
+        gap: 16px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 400px;
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    header {
+        margin: 0 auto;
+        max-width: 198px;
+        max-height: 66px;
+    }
+
+    form {
+        gap: 16px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .password_eye_wrap,
+    .pw_check_eye_wrap {
+        top: 40px;
+    }
+}

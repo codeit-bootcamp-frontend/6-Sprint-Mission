@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입</title>
+        <link rel="stylesheet" href="./signup.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header logo -->
+            <header>
+                <a href="/"><img src="/assets/img/logo/img_logo_big.webp" alt="판다마켓 로고" /></a>
+            </header>
+
+            <!-- Main -->
+            <main>
+                <form action="">
+                    <li class="input_wrap">
+                        <label for="email">이메일</label>
+                        <input id="email" type="email" placeholder="이메일을 입력해주세요" autofocus />
+                    </li>
+                    <li class="input_wrap">
+                        <label for="nickname">닉네임</label>
+                        <input id="nickname" type="text" placeholder="닉네임을 입력해주세요" autofocus />
+                    </li>
+
+                    <li class="input_wrap">
+                        <label for="password">비밀번호</label>
+                        <input id="password" type="password" autocomplete="off" placeholder="비밀번호를 입력해주세요" />
+                        <div class="password_eye_wrap">
+                            <input type="checkbox" id="password_eye_toggle" />
+                            <label for="password_eye_toggle" class="eye_btn"></label>
+                        </div>
+                    </li>
+
+                    <li class="input_wrap">
+                        <label for="password-check">비밀번호 확인</label>
+                        <input
+                            id="password-check"
+                            type="password"
+                            autocomplete="off"
+                            placeholder="비밀번호를 다시 한 번 입력해주세요" />
+                        <div class="pw_check_eye_wrap">
+                            <input type="checkbox" id="pw_eye_toggle" />
+                            <label for="pw_eye_toggle" class="eye_btn"></label>
+                        </div>
+                    </li>
+                    <button>회원가입</button>
+                </form>
+                <div class="easy_login">
+                    <h4>간편 로그인하기</h4>
+                    <div class="easy_login_link">
+                        <a href="http://www.google.com"><img src="/assets/img/icon/google.webp" alt="구글" /></a>
+                        <a href="http://kakaocorp.com/page/"
+                            ><img src="/assets/img/icon/kakao.webp" alt="카카오톡"
+                        /></a>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer sign-in -->
+            <footer>이미 회원이신가요? <a href="/signin">로그인</a></footer>
+        </div>
+    </body>
+</html>
