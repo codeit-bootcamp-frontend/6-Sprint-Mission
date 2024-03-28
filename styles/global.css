@@ -1,0 +1,110 @@
+/* 
+  전체 선택자(*) 및 a, button, img 태그에 대한 CSS는 새로운 웹 개발 프로젝트를 시작할 때 전역 스타일에 기본적으로 넣어주면 좋은 내용들입니다. 
+  브라우저 간의 스타일 차이를 최소화하고 예측 가능한 레이아웃을 위해 브라우저 기본 세팅을 일부 리셋해 준다고 생각하면 됩니다. 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 링크가 상위 요소 또는 설정된 기본 텍스트 색상과 동일하게 표현되길 원한다면 a 태그에 명시적으로 color: inherit을 지정해 줘야 합니다. */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+
+img {
+  vertical-align: bottom;
+}
+
+
+body {
+  color: #374151;
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+footer {
+  background-color: #111827;
+  color: #9ca3af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 200px 108px 200px;
+  font-size: 16px;
+}
+
+#footerMenu {
+  display: flex;
+  gap: 30px;
+  color: #e5e7eb;
+}
+
+#socialMedia {
+  display: flex;
+  gap: 12px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+}
+
+.button {
+  background-color: #3692ff;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #1967d6;
+}
+
+.button:focus {
+  background-color: #1251aa;
+}
+
+.button:disabled {
+  background-color: #9ca3af;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pill-button {
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 16px 124px;
+}
