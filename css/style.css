@@ -200,8 +200,12 @@ footer>.FAQ>a {
 .signin-logo {
     display: block;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    width: 396px;
+    margin: 60px auto 40px auto;
+}
+
+.signin-logo img {
+    width: 100%;
 }
 
 .signin-label {
@@ -372,6 +376,17 @@ footer>.FAQ>a {
         text-align: center;
         background-size: 130%;
         padding: 48px 16px 0 0;
+    }
+
+    .signin-container {
+        max-width: 400px;
+        padding: 0 16px;
+    }
+
+    .signin-logo {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        width: 198px
     }
 }
 
