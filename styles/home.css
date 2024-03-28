@@ -4,16 +4,28 @@
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
-  background-position: 80% bottom;
-  background-size: 55%;
+  background-position: bottom;
+  background-size: 120%;
 }
 
 #hero {
   background-image: url("../images/home/hero-image.png");
 }
 
-#features {
-  padding-bottom: 138px;
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -150px;
+  gap: 10px;
+}
+
+.banner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+  text-align: center;
 }
 
 #bottomBanner {
@@ -27,15 +39,26 @@
   padding: 14.5px 43px;
 }
 
-.banner .pill-button {
-  margin-top: 32px;
+#features {
+  padding-top: 51px;
 }
 
 .feature {
-  padding: 138px 0;
+  padding: 24px 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 5%;
+}
+
+#features h1 br {
+  display: none;
+}
+
+.feature img {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .feature:nth-child(2) {
@@ -44,20 +67,145 @@
 
 .feature-content {
   flex: 1;
+  padding: 12px;
 }
 
 .feature-tag {
   color: #3692ff;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 12px;
+  line-height: 22.4px;
+  margin-bottom: 8px;
+}
+
+.feature-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
 }
 
 .feature-description {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 120%;
+  line-height: 25.2px;
   letter-spacing: 0.08em;
-  margin-top: 24px;
+  margin-top: 20px;
+}
+
+
+/* Tablet : 768px 이상 ~ 1199px 이하 */
+@media (min-width: 768px) {
+
+  header {
+    padding: 10px 24px;
+  }
+
+  .banner {
+    height: 771px;
+    line-height: 56px;
+    padding-top: 84px;
+    padding-bottom: 24px;
+    background-size: 120%;
+  }
+
+  .banner-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    top: -300px;
+    gap: 20px;
+  }
+
+  #hero h1 br {
+    display: none;
+  }
+
+  #features {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  .feature img {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .feature-tag {
+    font-size: 18px;
+    line-height: 25.2px;
+    margin-bottom: 12px;
+  }
+
+  .feature-content h1 {
+    font-size: 32px;
+    line-height: 44.8px;
+  }
+
+  .feature-content h1 br{
+    display: none;
+  }
+
+  .feature-description {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  
+}
+
+/* PC : 1200px 이상 */
+@media (min-width: 1200px){
+
+  header {
+    padding: 10px 200px;
+  }
+
+  .banner {
+    text-align: left;
+    height: 540px;
+    display: flex;
+    background-position: 80% bottom;
+    background-size: 55%;
+  }
+
+  .banner-wrapper {
+    gap: 32px;
+    align-items: start;
+    position: static;
+
+  }
+
+  .banner-wrapper h1 {
+    text-align: left;
+  }
+
+  #hero h1 br {
+    display: block;
+  }
+
+  #features {
+    padding: 138px 0;
+  }
+
+  .feature {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feature img {
+    width: 50%;
+  }
+
+  .feature:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .feature-content h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .feature-description {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
 }

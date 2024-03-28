@@ -95,3 +95,35 @@ input::placeholder {
 .signup-link,.signin-link {
     color: #3182F6;
 }
+
+/* Mobile : 375px 이상 ~ 767px 이하 */
+@media (max-width: 767px) {
+
+    .header-logo {
+        width: 198px;
+        height: 66px;
+    }
+
+    body {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .signup-button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .simple-login {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+    /* Tablet : 768px 이상 ~ 1199px 이하 */
+/* PC : 1200px 이상 */

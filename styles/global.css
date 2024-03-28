@@ -20,9 +20,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 200px;
+  padding: 0 16px;
   background-color: #ffffff;
   border-bottom: 1px solid #dfdfdf;
+}
+
+main {
+  margin-top: 70px;
 }
 
 footer {
@@ -31,7 +35,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 200px 108px 200px;
+  padding: 32px;
   font-size: 16px;
 }
 
@@ -99,8 +103,30 @@ button {
 }
 
 .pill-button {
-  font-size: 20px;
-  font-weight: 700;
+  width: 154px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.09px;
   border-radius: 999px;
-  padding: 16px 126px;
+}
+
+/* Tablet : 768px 이상 ~ 1199px 이하 */
+@media (min-width: 768px) {
+  .pill-button {
+    width: 355px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+}
+
+/* PC : 1200px 이상 */
+@media (min-width: 1200px){
+  .pill-button {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
 }
