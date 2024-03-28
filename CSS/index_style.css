@@ -1,15 +1,16 @@
 * {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
-header{
-  height:70px;
+header {
+  height: 70px;
   width: 100%;
-  display: flex;;
+  display: flex;
   flex-direction: row;
   align-items: center;
   position: fixed;
@@ -17,12 +18,12 @@ header{
   background-color: white;
   margin-top: -30px;
 }
-.logo{
+.logo {
   margin: 0 200px;
   flex: none;
   cursor: pointer;
 }
-.login{
+.login {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,10 +34,10 @@ header{
   width: 128px;
   height: 48px;
   border: none;
-  background: #3692FF;
+  background: #3692ff;
   border-radius: 8px;
-  color:#ffffff;
-  font-family: 'Pretendard';
+  color: #ffffff;
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -44,16 +45,16 @@ header{
   cursor: pointer;
   text-decoration: none;
 }
-.banner{
-  top:70px;
+.banner {
+  top: 70px;
   background-color: #cfe5ff;
   height: 540px;
   width: 100%;
   position: relative;
   padding-left: 360px;
 }
-.promo-text{
-  font-family: 'Pretendard';
+.promo-text {
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -62,21 +63,20 @@ header{
   align-items: center;
   color: #374151;
   padding-top: 170px;
-
 }
-.looking-button{
-  background: #3692FF;
+.looking-button {
+  background: #3692ff;
   border-radius: 40px;
   width: 357px;
   height: 56px;
   border: none;
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   text-decoration: none;
   display: flex;
@@ -84,32 +84,31 @@ header{
   justify-content: center;
   align-items: center;
 }
-.banner-img{
+.banner-img {
   position: absolute;
   bottom: 0px;
-  left:701px;
+  left: 701px;
 }
-main{
+main {
   width: 1200px;
   margin-left: 18.5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
 }
-.main-image{
+.main-image {
   width: 588px;
   height: 444px;
   margin-bottom: 20vh;
   margin-top: 10vh;
 }
-.main-content{
+.main-content {
   margin-bottom: 20vh;
   margin-top: 10vh;
   height: 25vw;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
-.right-align{
+.right-align {
   margin-bottom: 20vh;
   margin-top: 10vh;
   height: 25vw;
@@ -118,25 +117,24 @@ main{
   flex-direction: column;
   justify-content: flex-end;
   text-align: right;
-  
 }
 .right-align .blue-text,
 .right-align .main-text1,
 .right-align .main-text2 {
   margin-left: auto;
 }
-.blue-text{
-  font-family: 'Pretendard';
+.blue-text {
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 1vwx;
   display: flex;
   align-items: center;
-  color: #3692FF;
-  margin: 5vw 3vw 0vw 3vw ;
+  color: #3692ff;
+  margin: 5vw 3vw 0vw 3vw;
 }
-.main-text1{
-  font-family: 'Pretendard';
+.main-text1 {
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 2.5vw;
@@ -145,10 +143,10 @@ main{
   align-items: center;
   letter-spacing: 0.02em;
   color: #374151;
-  margin: 0vw 3vw 0vw 3vw ;
+  margin: 0vw 3vw 0vw 3vw;
 }
-.main-text2{
-  font-family: 'Pretendard';
+.main-text2 {
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 500;
   font-size: 1.5vw;
@@ -157,15 +155,15 @@ main{
   align-items: center;
   letter-spacing: 0.08em;
   color: #374151;
-  margin: -3vw 3vw 0vw 3vw ;
+  margin: -3vw 3vw 0vw 3vw;
 }
-.banner-img2{
+.banner-img2 {
   position: absolute;
   bottom: 0px;
-  left:701px;
+  left: 701px;
 }
-.promo-text2{
-  font-family: 'Pretendard';
+.promo-text2 {
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -175,7 +173,7 @@ main{
   color: #374151;
   padding-top: 214px;
 }
-footer{
+footer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 32px 0;
@@ -185,42 +183,42 @@ footer{
   background-color: #111827;
   margin-top: 70px;
 }
-.codeit{
+.codeit {
   margin: 0 24vw 0 10vw;
   width: 112px;
   height: 19px;
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #9CA3AF;
+  color: #9ca3af;
 }
-.footer-text{
+.footer-text {
   display: flex;
   margin: 0;
   width: 112px;
   height: 19px;
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #E5E7EB;
+  color: #e5e7eb;
   cursor: pointer;
   text-decoration: none;
 }
-.icon-img{
+.icon-img {
   display: flex;
   margin: 0 5px;
 }
-.footer-text-group{
+.footer-text-group {
   display: flex;
   gap: 20px;
 }
-.img-group{
+.img-group {
   display: flex;
   gap: 5px;
   width: 20px;

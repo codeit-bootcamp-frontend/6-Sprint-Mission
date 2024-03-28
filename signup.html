@@ -1,48 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>판다마켓</title>
-  <link rel="stylesheet" href="./CSS/signup-style.css">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-</head>
-<header>
-  <a href="./index.html">
-    <img class="logo" src="./images/logo.svg"alt="logo image">
-  </a>
-</header>
-<body>
-  <div class="signup">
-    <p>이메일</p>
-    <input class="email" type="email" id="email" placeholder="이메일을 입력해주세요">
-    <p>닉네임</p>
-    <input class="nickname" type="text" id="nickname" placeholder="닉네임을 입력해주세요">
-    <p>비밀번호</p>
-    <div style="position: relative;">
-      <input class="password" type="password" id="password" placeholder="비밀번호를 입력해주세요">
-      <img class="eyeoff" src="./images/eyeoff.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓</title>
+    <link rel="stylesheet" href="./CSS/signup-style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+  </head>
+  <header>
+    <a href="./index.html">
+      <img class="logo" src="./images/logo.svg" alt="logo image" />
+    </a>
+  </header>
+  <body>
+    <div class="signup">
+      <p>이메일</p>
+      <input
+        class="email"
+        type="email"
+        id="email"
+        placeholder="이메일을 입력해주세요"
+      />
+      <p>닉네임</p>
+      <input
+        class="nickname"
+        type="text"
+        id="nickname"
+        placeholder="닉네임을 입력해주세요"
+      />
+      <p>비밀번호</p>
+      <div style="position: relative">
+        <input
+          class="password"
+          type="password"
+          id="password"
+          placeholder="비밀번호를 입력해주세요"
+        />
+        <img class="eyeoff" src="./images/eyeoff.svg" />
+      </div>
+      <p>비밀번호 확인</p>
+      <div style="position: relative">
+        <input
+          class="password"
+          type="password"
+          id="passwordcheck"
+          placeholder="비밀번호를 다시 한 번 입력해주세요"
+        />
+        <img class="eyeoff" src="./images/eyeoff.svg" />
+      </div>
+      <button type="submit" class="login-button" id="loginButton">
+        회원가입
+      </button>
+      <div class="easy-login">
+        <p>간편 로그인하기</p>
+        <a href="https://www.google.com/">
+          <img
+            class="google-logo"
+            src="./images/social/google-logo.svg"
+            alt="google-logo"
+          />
+        </a>
+        <a href="https://www.kakaocorp.com/page/">
+          <img
+            class="kakao-logo"
+            src="./images/social/kakao-logo.svg"
+            alt="Kakao Logo"
+          />
+        </a>
+      </div>
     </div>
-    <p>비밀번호 확인</p>
-    <div style="position: relative;">
-      <input class="password" type="password" id="passwordcheck" placeholder="비밀번호를 다시 한 번 입력해주세요">
-      <img class="eyeoff" src="./images/eyeoff.svg">
+    <div class="signup-box">
+      <p>이미 회원이신가요?</p>
+      <a href="./signin.html" class="signin">로그인</a>
     </div>
-    <button type="submit" class="login-button"id="loginButton">회원가입</button>
-    <div class="easy-login">
-      <p>간편 로그인하기</p>
-      <a href= "https://www.google.com/">
-        <img class="google-logo" src="./images/social/google-logo.svg"alt="google-logo">
-      </a>
-      <a href="https://www.kakaocorp.com/page/">
-        <img class="kakao-logo" src="./images/social/kakao-logo.svg" alt="Kakao Logo">
-      </a>
-    </div>
-</div>
-<div class="signup-box">
-  <p>이미 회원이신가요?</p>
-  <a href="./signin.html" class="signin">로그인</a>
-</div>
-  
-</body>
+  </body>
 </html>
