@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>판다마켓 로그인</title>
-    <link rel="stylesheet" href="./css/signin.css" />
+    <title>판다마켓 회원가입</title>
+    <link rel="stylesheet" href="./css/signup.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -13,28 +13,37 @@
     />
 </head>
 <body>
-    <div class="login-form">
+    <div class="join-form">
         <header>
             <a href="/">
-                <img class="login-logo" src="./img/login_logo.png" alt="로고">
+                <img class="join-logo" src="./img/login_logo.png" alt="로고">
             </a>
         </header>
 
         <main>
             <form>
-                <div class="login-email">
+                <div class="join-email">
                     <p class="input-text">이메일<br/></p>
-                    <input type="email" id="loginid" name="id" placeholder="이메일을 입력하세요">
+                    <input type="email" class="joinid" name="id" placeholder="이메일을 입력하세요">
                 </div>
-                <div class="login-password">
+                <div class="join-email">
+                    <p class="input-text">닉네임<br/></p>
+                    <input type="text" class="joinid" name="name" placeholder="닉네임을 입력하세요">
+                </div>
+                <div class="join-password">
                     <p class="input-text">비밀번호<br/></p>
-                    <input type="password" id="loginpw" name="pw" placeholder="비밀번호를 입력하세요">
+                    <input type="password" class="joinpw" name="pw" placeholder="비밀번호를 입력하세요">
+                    <img src="./img/ic-eye.png" alt="비밀번호 안보이게">
+                </div>
+                <div class="join-password">
+                    <p class="input-text">비밀번호<br/></p>
+                    <input type="password" class="joinpw" name="pw-check" placeholder="비밀번호를 다시 한 번 입력하세요">
                     <img src="./img/ic-eye.png" alt="비밀번호 안보이게">
                 </div>
             </form>
-            <button type="submit" class="login-btn">로그인</button>
+            <button type="submit" class="join-btn">회원가입</button>
             <section>
-                <div class="login-simple">
+                <div class="join-simple">
                     <p class="simple-text">간편 로그인하기</p>
                     <div class="login-social">
                         <a href="https://www.google.com/" target="_blank">
@@ -46,8 +55,8 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <div class="join-text">판다마켓이 처음이신가요?</div>
-                    <a id="join-page" href="./signup.html">회원가입</a>
+                    <div class="login-text">이미 회원이신가요?</div>
+                    <a id="login-page" href="./signin.html">로그인</a>
                 </div>
             </section>
         </main>
