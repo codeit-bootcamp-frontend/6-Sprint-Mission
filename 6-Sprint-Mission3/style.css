@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.logo-banner{
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panda-market-logo{
+  width: 153px;
+}
+
+.signin {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14.5px 43px;
+}
+
+.signin:hover{
+  background-color: #1967D6;
+}
+
+.button{
+  background-color: #3692ff;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.banner {
+  background-color: #cfe5ff;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
+  background-image: url("images/top-panda-image.png");
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.more{
+  margin-top: 32px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 40px;
+  padding: 16px 126px;
+}
+
+.more:hover{
+  background-color: #1967D6;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.middle{
+  padding-bottom: 138px;
+}
+
+.bottom {
+  background-image: url("images/bottom-panda-image.png");
+}
+
+.mainpage {
+  padding: 138px 0;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.mainpage:nth-child(2) {
+  text-align: right;
+}
+
+.mainpage-content {
+  flex: 1;
+}
+
+.mainpage-tag {
+  color: #3692ff;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mainpage-description {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  margin-top: 24px;
+}
+
+.bottom-wrapper-text{
+  font-size: 40px;
+  font-weight: 700;
+  color: #374151;
+}
+
+footer{
+  background-color: #111827;
+  color: #9ca3af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 200px 108px 200px;
+  font-size: 16px;
+}
+
+.footerMenu{
+  display: flex;
+  gap: 30px;
+  color: #e5e7eb;
+}
+
+.footerMenu a{
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+.footerIcons a{
+  margin-left: 12px;
+}

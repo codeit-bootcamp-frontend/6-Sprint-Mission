@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+.login{
+    width: 640px;
+    height: 430px;
+    margin: 60px auto;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.user-input{
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+label {
+    display: block;
+    margin: 16px 0;
+}
+  
+input {
+    display: block;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #9CA3AF; /* 아이디 입력 전 색 */
+    color: #1F2937; /* 아이디 입력 후 색 */
+    border: 0;
+    width: 100%;
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #3692FF; /* 포커스 시 테두리 색상 */
+}
+
+.password-icon {
+    position: relative;
+}
+
+.password-icon img {
+    position: absolute;
+    right: 24px; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.login-button {
+    border: none;
+    display: block;
+    padding: 16px;
+    background: #9CA3AF;
+    color: #ffffff;
+    margin: 24px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.login-button:hover{
+    background-color: #3692FF;
+}
+
+.simple-login{
+    border: none;
+    display: flex;
+    padding: 25px 23px;
+    background-color: #E6F2FF;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 24px 0;
+    align-items: center;
+    height: 74px;
+}
+
+.simple-text{
+    margin-right: auto;
+}
+
+.icon{
+    width: 42px;
+    text-align: right;
+}
+
+.google{
+    margin-right: 16px;
+}
+
+.signup{
+    font-size: 15px;
+    text-align: center;
+}
+
+.nav-signup{
+    color: #3182F6;
+}
