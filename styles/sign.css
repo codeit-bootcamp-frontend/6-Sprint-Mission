@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-family: "Pretendard", sans-serif;
 }
@@ -113,4 +107,21 @@ input:focus {
   color: #3182f6;
 }
 
-/* 회원가입 */
+@media (min-width: 375px) and (max-width: 767px) {
+  .wrap {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  .panda-market-logo {
+    width: 198px;
+    height: 66px;
+  }
+  .panda-market-logo-container {
+    margin: 24px 0 24px;
+  }
+  label {
+    font-size: 14px;
+  }
+}
