@@ -1,176 +1,622 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* PC 화면에 대한 스타일 */
+@media screen and (min-width: 1200px) {
+  body {
+    color: #374151;
+    word-break: keep-all;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+  }
+  
+  img {
+    vertical-align: bottom;
+  }
+
+  .header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  
+  .header__logo {
+    width: 153px;
+  }
+  
+  .header__btn {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14.5px 43px;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .footer {
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 200px 108px 200px;
+    font-size: 16px;
+  }
+  
+  .footer__menu {
+    display: flex;
+    gap: 30px;
+    color: #e5e7eb;
+  }
+  
+  .feature__social-media-image {
+    width: 20;
+  }
+  
+  .footer__social-media {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn {
+    background-color: #3692ff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn:hover {
+    background-color: #1967d6;
+  }
+  
+  .btn:focus {
+    background-color: #1251aa;
+  }
+  
+  .btn:disabled {
+    background-color: #9ca3af;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .banner {
+    background-color: #cfe5ff;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+  }
+  
+  #hero {
+    background-image: url("../images/home/판다1.png");
+  }
+  
+  #bottomBanner {
+    background-image: url("../images/home/판다2.png");
+  }
+  
+  .banner .main_banner-btn {
+    margin-top: 32px;
+  }
+  
+  .main_banner-btn {
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 16px 126px;
+  }
+  
+  #features {
+    padding-bottom: 138px;
+  }
+  
+  .feature {
+    padding: 138px 0;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+  
+  .feature__image {
+    width: 50%;
+  }
+  
+  .feature:nth-child(2) {
+    text-align: right;
+  }
+  
+  .feature__frame {
+    flex: 1;
+  }
+  
+  .feature__tag {
+    color: #3692ff;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .feature__description {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    margin-top: 24px;
+  }
 }
 
-btn {
-  background: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  cursor: pointer;
+/* Tablet 화면에 대한 스타일 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    color: #374151;
+    word-break: keep-all;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+  }
+  
+  img {
+    vertical-align: bottom;
+  }
+
+  .header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .header__logo {
+    width: 153px;
+    margin-right: 24px;
+  }
+  
+  .header__btn {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14.5px 43px;
+    margin-left: 24px; 
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 400px auto;
+    width: 100%;
+  }
+  
+  .footer {
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 200px 108px 200px;
+    font-size: 16px;
+  }
+  
+  .footer__menu {
+    display: flex;
+    gap: 30px;
+    color: #e5e7eb;
+  }
+  
+  .feature__social-media-image {
+    width: 20;
+  }
+  
+  .footer__social-media {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn {
+    background-color: #3692ff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn:hover {
+    background-color: #1967d6;
+  }
+  
+  .btn:focus {
+    background-color: #1251aa;
+  }
+  
+  .btn:disabled {
+    background-color: #9ca3af;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .banner {
+    background-color: #cfe5ff;
+    height: 771px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+  }
+
+  .banner__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+    color: #374151;
+  }
+
+  .banner__title br {
+    display: none;
+  }
+
+  .banner .wrapper {
+    margin-top: 100px;
+  }
+  
+  #hero {
+    background-image: url("../images/home/판다1.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  
+  #bottomBanner {
+    background-image: url("../images/home/판다2.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  
+  .banner .main_banner-btn {
+    margin-top: 32px;
+  }
+  
+  .main_banner-btn {
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 16px 126px;
+  }
+  
+  #features {
+    padding-bottom: 138px;
+  }
+  
+  .feature {
+    padding: 138px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+  }
+
+  .feature__title br {
+    display: none;
+  }
+  
+  .feature__image {
+    width: 90%;
+    height: 90%;
+    margin-top: -500px;
+    margin-bottom: 20px;
+  }
+
+  .feature__image.img-mid {
+    order: -1;
+    width: 90%;
+    height: 90%;
+    margin-top: -270px;
+    margin-bottom: 20px;
+  }
+
+  .feature__image.img-btm {
+    order: -1;
+    width: 90%;
+    height: 90%;
+    margin-top: -270px;
+  }
+  
+  .feature:nth-child(2) {
+    text-align: right;
+  }
+  
+  .feature__frame {
+    flex: 1;
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+
+  .feature__frame.txt-right {
+    position: relative;
+    margin-top: 20px; 
+    text-align: right;
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  
+  .feature__tag {
+    color: #3692ff;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .feature__description {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    margin-top: 24px;
+  }
+
+  #bottomBanner {
+    margin-top: -600px;
+  }
 }
 
-body {
-  color: #374151;
-  word-break: keep-all;
-  font-family: "Pretendard", sans-serif;
-}
+/* Mobile 화면에 대한 스타일 */
+@media screen and (max-width: 767px) {
+  body {
+    color: #374151;
+    word-break: keep-all;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+  }
+  
+  img {
+    vertical-align: bottom;
+  }
 
-header {
-  position: fixed;
-  z-index: 9999;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 200px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dfdfdf;
-}
+  .header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfdfdf;
+  }
 
-footer {
-  background-color: #111827;
-  color: #9ca3af;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px 200px 108px 200px;
-  font-size: 16px;
-}
+  .header__logo {
+    width: 153px;
+    margin-right: 24px;
+  }
+  
+  .header__btn {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14.5px 43px;
+    margin-left: 24px; 
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  .wrapper {
+    max-width: 1200px;
+    margin: 400px auto;
+    width: 100%;
+  }
+  
+  .footer {
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 200px 108px 200px;
+    font-size: 16px;
+  }
+  
+  .footer__menu {
+    display: flex;
+    gap: 30px;
+    color: #e5e7eb;
+  }
+  
+  .feature__social-media-image {
+    width: 20;
+  }
+  
+  .footer__social-media {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn {
+    background-color: #3692ff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn:hover {
+    background-color: #1967d6;
+  }
+  
+  .btn:focus {
+    background-color: #1251aa;
+  }
+  
+  .btn:disabled {
+    background-color: #9ca3af;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .banner {
+    background-color: #cfe5ff;
+    height: 771px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+  }
 
-h1 {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 56px;
-  letter-spacing: 0.02em;
-}
+  .banner__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+    color: #374151;
+  }
 
-img {
-  vertical-align: bottom;
-}
+  .banner .wrapper {
+    margin-top: 100px;
+  }
+  
+  #hero {
+    background-image: url("../images/home/판다1.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  
+  #bottomBanner {
+    background-image: url("../images/home/판다2.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  
+  .banner .main_banner-btn {
+    margin-top: 32px;
+  }
+  
+  .main_banner-btn {
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 16px 126px;
+  }
+  
+  #features {
+    padding-bottom: 138px;
+  }
+  
+  .feature {
+    padding: 138px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+  }
 
-#header-right {
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 14.5px 43px;
-}
+  .feature__title,
+  .banner__title {
+    color: #374151;
+    font-size: 24px;
+    line-height: 33.6px;
+    font-weight: 700;
+  }
 
-.btn {
-  background-color: #3692ff;
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+  .feature__title br {
+    display: none;
+  }
+  
+  .feature__image {
+    width: 90%;
+    height: 90%;
+    margin-top: -500px;
+    margin-bottom: 20px;
+  }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
+  .feature__image.img-mid {
+    order: -1;
+    width: 90%;
+    height: 90%;
+    margin-top: -270px;
+    margin-bottom: 20px;
+  }
 
-.banner .main_banner-btn {
-  margin-top: 32px;
-}
+  .feature__image.img-btm {
+    order: -1;
+    width: 90%;
+    height: 90%;
+    margin-top: -270px;
+  }
+  
+  .feature:nth-child(2) {
+    text-align: right;
+  }
+  
+  .feature__frame {
+    flex: 1;
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
 
-.main_banner-btn {
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 999px;
-  padding: 16px 126px;
-}
+  .feature__frame.txt-right {
+    position: relative;
+    margin-top: 20px; 
+    text-align: right;
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  
+  .feature__tag {
+    color: #3692ff;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .feature__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    letter-spacing: 0.08em;
+    margin-top: 24px;
+  }
 
-#hero {
-  background-image: url("../images/home/판다1.png");
-}
-
-#bottomBanner {
-  background-image: url("../images/home/판다2.png");
-}
-
-#features {
-  padding-bottom: 138px;
-}
-
-.feature {
-  padding: 138px 0;
-  display: flex;
-  align-items: center;
-  gap: 5%;
-}
-
-.banner {
-  background-color: #cfe5ff;
-  height: 540px;
-  display: flex;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-position: 80% bottom;
-  background-size: 55%;
-}
-
-.btn {
-  background-color: #3692ff;
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn:hover {
-  background-color: #1967d6;
-}
-
-.btn:focus {
-  background-color: #1251aa;
-}
-
-.btn:disabled {
-  background-color: #9ca3af;
-  cursor: default;
-  pointer-events: none;
-}
-
-.feature:nth-child(2) {
-  text-align: right;
-}
-
-.feature-frame {
-  flex: 1;
-}
-
-.feature-tag {
-  color: #3692ff;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.feature-description {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 0.08em;
-  margin-top: 24px;
-}
-
-#footerMenu {
-  display: flex;
-  gap: 30px;
-  color: #e5e7eb;
-}
-
-#socialMedia {
-  display: flex;
-  gap: 12px;
+  #bottomBanner {
+    margin-top: -600px;
+  }
 }

@@ -5,25 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
+    <meta property="og:title" content="판다 마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요." />
+    <meta property="og:image" content="images/home/판다마켓.png" />
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="images/home/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="common.css" />
 
   </head>
   
   <body>
 
-    <header>
+    <header class="header">
       <a href="/">
-        <img src="images/home/로그인판다.png" width="153"/>
+        <img class="header__logo" src="images/home/판다마켓.png"/>
       </a>
-      <a href="signin.html" id="header-right" class="btn">로그인</a>
+      <a class="header__btn btn" href="signin.html">로그인</a>
     </header>
 
     <main>
 
       <section id="hero" class="banner">
         <div class="wrapper">
-          <h1>
+          <h1 class="banner__title">
             일상의 모든 물건을<br>
             거래해 보세요
           </h1>
@@ -33,14 +39,14 @@
 
       <section id="features" class="wrapper">
         <div class="feature">
-          <img src="images/home/옷판다.png" width="50%"/>
-          <div class="feature-frame">
-            <h2 class="feature-tag">Hot item</h2>
-            <h1>
+          <img class="feature__image" src="images/home/옷판다.png"/>
+          <div class="feature__frame">
+            <h2 class="feature__tag">Hot item</h2>
+            <h1 class="feature__title">
               인기 상품을<br> 
               확인해 보세요
             </h1>
-            <p class="feature-description">
+            <p class="feature__description">
               가장 HOT한 중고거래 물품을<br>
               판다 마켓에서 확인해 보세요
             </p>
@@ -48,29 +54,29 @@
         </div>
 
         <div class="feature">
-          <div class="feature-frame">
-            <h2 class="feature-tag">Search</h2>
-            <h1>
+          <div class="feature__frame txt-right">
+            <h2 class="feature__tag">Search</h2>
+            <h1 class="feature__title">
               구매를 원하는<br>
               상품을 검색하세요
             </h1>
-            <p class="feature-description">
+            <p class="feature__description">
               구매하고 싶은 물품은 검색해서<br>
               쉽게 찾아보세요
             </p>
           </div>
-          <img src="images/home/검색판다.png" width="50%"/>
+          <img class="feature__image img-mid" src="images/home/검색판다.png"/>
         </div>
 
         <div class="feature">
-          <img src="images/home/물건판다.png" width="50%"/>
-          <div class="feature-frame">
-            <h2 class="feature-tag">Register</h2>
-            <h1>
+          <img class="feature__image img-btm" src="images/home/물건판다.png"/>
+          <div class="feature__frame">
+            <h2 class="feature__tag">Register</h2>
+            <h1 class="feature__title">
               판매를 원하는<br>
               상품을 등록하세요
             </h1>
-            <p class="feature-description">
+            <p class="feature__description">
               어떤 물건이든 판매하고 싶은 상품을<br>
               쉽게 등록하세요
             </p>
@@ -89,25 +95,25 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
 
       <div>©codeit - 2024</div>
-      <div id="footerMenu">
+      <div class="footer__menu">
         <a href="/privacy">Privacy Policy</a>
         <a href="/html">FAQ</a>
       </div>
-      <div id="socialMedia">
+      <div class="footer__social-media">
         <a href="https://www.facebook.com/" target="_blank">
-          <img src="images/social/페이스북.png" width="20"/>
+          <img class="feature__social-media-image" src="images/social/페이스북.png"/>
         </a>
         <a href="https://twitter.com/" target="_blank">
-          <img src="images/social/트위터.png" width="20"/>
+          <img class="feature__social-media-image" src="images/social/트위터.png"/>
         </a>
         <a href="https://www.youtube.com/" target="_blank">
-          <img src="images/social/유튜브.png" width="20"/>
+          <img class="feature__social-media-image" src="images/social/유튜브.png"/>
         </a>
         <a href="https://www.instagram.com/" target="_blank">
-          <img src="images/social/인스타그램.png" width="20"/>
+          <img class="feature__social-media-image" src="images/social/인스타그램.png"/>
         </a>
       </div>
 
