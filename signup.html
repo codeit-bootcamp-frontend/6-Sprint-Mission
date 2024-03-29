@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓 - 회원가입</title>
+    <link rel="icon" href="images/logo/favicon.ico" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/auth.css" />
+  </head>
+
+  <body>
+    <div class="auth-container">
+      <div class="logo-home-button-wrapper">
+        <a href="/"
+          ><img src="images/logo/logo.svg" alt="판다마켓 홈" width="396"
+        /></a>
+      </div>
+
+      <form method="post">
+        <div class="input-item">
+          <label for="email">이메일</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해 주세요"
+          />
+        </div>
+        <div class="input-item">
+          <label for="nickname">닉네임</label>
+          <input
+            id="nickname"
+            name="nickname"
+            type="text"
+            placeholder="닉네임을 입력해 주세요"
+          />
+        </div>
+        <div class="input-item">
+          <label for="password">비밀번호</label>
+          <div class="input-wrapper">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력해 주세요"
+            />
+            <img
+              src="images/icons/eye-invisible.svg"
+              alt="비밀번호 숨김"
+              class="toggle-password"
+            />
+          </div>
+        </div>
+        <div class="input-item">
+          <label for="passwordConfirmation">비밀번호 확인</label>
+          <div class="input-wrapper">
+            <input
+              id="passwordConfirmation"
+              name="passwordConfirmation"
+              type="password"
+              placeholder="비밀번호를 다시 한 번 입력해 주세요"
+            />
+            <img
+              src="images/icons/eye-invisible.svg"
+              alt="비밀번호 숨김"
+              class="toggle-password"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="button pill-button full-width">
+          회원가입
+        </button>
+      </form>
+
+      <div class="social-login-container">
+        <h3>간편 로그인하기</h3>
+        <div class="social-login-buttons-container">
+          <a href="https://www.google.com/" target="_blank"
+            ><img
+              src="images/social/google-logo.png"
+              alt="구글 로그인"
+              width="42"
+          /></a>
+          <a href="https://www.kakaocorp.com/page/" target="_blank"
+            ><img
+              src="images/social/kakao-logo.png"
+              alt="카카오톡 로그인"
+              width="42"
+          /></a>
+        </div>
+      </div>
+
+      <div class="auth-switch">
+        이미 회원이신가요? <a href="signin.html">로그인</a>
+      </div>
+    </div>
+  </body>
+</html>
