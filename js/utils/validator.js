@@ -40,6 +40,23 @@ export function validateInput(input, validationFunction, errorMessage) {
   }
 }
 
+export function validatePasswordMatchInput(
+  pswInput,
+  pswMatchInput,
+  errorMessage
+) {
+  const isPasswordMatch = validatePasswordMatch(
+    pswInput.value,
+    pswMatchInput.value
+  );
+
+  if (!isPasswordMatch) {
+    showErrorMessage(pswMatchInput, errorMessage);
+  } else {
+    hideErrorMessage(pswMatchInput);
+  }
+}
+
 // 비밀번호 가리기/표시
 export function togglePasswordVisibility(input) {
   input.type = input.type === "text" ? "password" : "text";

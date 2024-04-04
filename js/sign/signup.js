@@ -4,6 +4,7 @@ import {
   validatePassword,
   validatePasswordMatch,
   validateInput,
+  validatePasswordMatchInput,
   togglePasswordVisibility,
 } from "/js/utils/validator.js";
 
@@ -48,19 +49,6 @@ function validateSubmitButton() {
   );
 }
 
-function validatePasswordMatchInput() {
-  const isPasswordMatch = validatePasswordMatch(
-    passwordInput.value,
-    passwordMatchInput.value
-  );
-
-  if (!isPasswordMatch) {
-    showErrorMessage(passwordMatchInput, errorMessages.password.match);
-  } else {
-    hideErrorMessage(passwordMatchInput);
-  }
-}
-
 // 입력값이 변경될 때마다 유효성 검사 실행
 emailInput.addEventListener("input", () => {
   validateInput(emailInput, validateEmail, errorMessages.email),
@@ -75,7 +63,12 @@ passwordInput.addEventListener("input", () => {
     validateSubmitButton();
 });
 passwordMatchInput.addEventListener("input", () => {
-  validatePasswordMatchInput(), validateSubmitButton();
+  validatePasswordMatchInput(
+    passwordInput,
+    passwordMatchInput,
+    errorMessages.password.match
+  ),
+    validateSubmitButton();
 });
 
 // 포커스를 잃었을 때 유효성 검사 실행
@@ -88,7 +81,13 @@ nicknameInput.addEventListener("blur", () =>
 passwordInput.addEventListener("blur", () =>
   validateInput(passwordInput, validatePassword, errorMessages.password)
 );
-passwordMatchInput.addEventListener("blur", () => validatePasswordMatchInput());
+passwordMatchInput.addEventListener("blur", () =>
+  validatePasswordMatchInput(
+    passwordInput,
+    passwordMatchInput,
+    errorMessages.password.match
+  )
+);
 
 // 비밀번호 가리기/표시 버튼 클릭 시 비밀번호 가리기/표시 기능 토글
 const passwordToggleButtons = document.querySelectorAll(".psw_chk_btn");
