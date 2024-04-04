@@ -208,10 +208,6 @@
   .user_psw_chk_input {
     font-size: 0.8rem;
   }
-  .user_psw_input,
-  .user_psw_chk_input {
-    letter-spacing: 10rem;
-  }
 
   .user_email_input::placeholder,
   .user_nickname_input::placeholder,
