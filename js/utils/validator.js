@@ -39,18 +39,6 @@ export function validateInput(input, validationFunction, errorMessage) {
     return true;
   }
 }
-export function validatePasswordMatchInput() {
-  const isPasswordMatch = validatePasswordMatch(
-    passwordInput.value,
-    passwordMatchInput.value
-  );
-
-  if (!isPasswordMatch) {
-    showErrorMessage(passwordMatchInput, errorMessages.password.match);
-  } else {
-    hideErrorMessage(passwordMatchInput);
-  }
-}
 
 // 비밀번호 가리기/표시
 export function togglePasswordVisibility(input) {

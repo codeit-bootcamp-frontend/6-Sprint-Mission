@@ -4,7 +4,6 @@ import {
   validatePassword,
   validatePasswordMatch,
   validateInput,
-  validatePasswordMatchInput,
   togglePasswordVisibility,
 } from "/js/utils/validator.js";
 
@@ -47,6 +46,19 @@ function validateSubmitButton() {
     isValidPassword &&
     isValidPasswordMatch
   );
+}
+
+function validatePasswordMatchInput() {
+  const isPasswordMatch = validatePasswordMatch(
+    passwordInput.value,
+    passwordMatchInput.value
+  );
+
+  if (!isPasswordMatch) {
+    showErrorMessage(passwordMatchInput, errorMessages.password.match);
+  } else {
+    hideErrorMessage(passwordMatchInput);
+  }
 }
 
 // 입력값이 변경될 때마다 유효성 검사 실행
