@@ -13,3 +13,46 @@ export function validatePassword(password) {
 export function validatePasswordMatch(password, confirmPassword) {
   return password === confirmPassword;
 }
+
+function showErrorMessage(input, message) {
+  const errorMessageElement = input.parentNode.querySelector(".error_msg");
+  errorMessageElement.innerText = message;
+  errorMessageElement.classList.remove("hide");
+  input.classList.add("error_line");
+}
+
+function hideErrorMessage(input) {
+  const errorMessageElement = input.parentNode.querySelector(".error_msg");
+  errorMessageElement.classList.add("hide");
+  input.classList.remove("error_line");
+}
+
+export function validateInput(input, validationFunction, errorMessage) {
+  if (input.value === "") {
+    showErrorMessage(input, errorMessage.empty);
+    return false;
+  } else if (!validationFunction(input.value)) {
+    showErrorMessage(input, errorMessage.invalid);
+    return false;
+  } else {
+    hideErrorMessage(input);
+    return true;
+  }
+}
+export function validatePasswordMatchInput() {
+  const isPasswordMatch = validatePasswordMatch(
+    passwordInput.value,
+    passwordMatchInput.value
+  );
+
+  if (!isPasswordMatch) {
+    showErrorMessage(passwordMatchInput, errorMessages.password.match);
+  } else {
+    hideErrorMessage(passwordMatchInput);
+  }
+}
+
+// 비밀번호 가리기/표시
+export function togglePasswordVisibility(input) {
+  input.type = input.type === "text" ? "password" : "text";
+}

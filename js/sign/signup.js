@@ -3,6 +3,9 @@ import {
   validateNickname,
   validatePassword,
   validatePasswordMatch,
+  validateInput,
+  validatePasswordMatchInput,
+  togglePasswordVisibility,
 } from "/js/utils/validator.js";
 
 const emailInput = document.getElementById("email");
@@ -27,45 +30,6 @@ const errorMessages = {
     match: "비밀번호가 일치하지 않습니다.",
   },
 };
-
-function showErrorMessage(input, message) {
-  const errorMessageElement = input.parentNode.querySelector(".error_msg");
-  errorMessageElement.innerText = message;
-  errorMessageElement.classList.remove("hide");
-  input.classList.add("error_line");
-}
-
-function hideErrorMessage(input) {
-  const errorMessageElement = input.parentNode.querySelector(".error_msg");
-  errorMessageElement.classList.add("hide");
-  input.classList.remove("error_line");
-}
-
-function validateInput(input, validationFunction, errorMessage) {
-  if (input.value === "") {
-    showErrorMessage(input, errorMessage.empty);
-    return false;
-  } else if (!validationFunction(input.value)) {
-    showErrorMessage(input, errorMessage.invalid);
-    return false;
-  } else {
-    hideErrorMessage(input);
-    return true;
-  }
-}
-
-function validatePasswordMatchInput() {
-  const isPasswordMatch = validatePasswordMatch(
-    passwordInput.value,
-    passwordMatchInput.value
-  );
-
-  if (!isPasswordMatch) {
-    showErrorMessage(passwordMatchInput, errorMessages.password.match);
-  } else {
-    hideErrorMessage(passwordMatchInput);
-  }
-}
 
 // 버튼 활성화를 위한 유효성 검사
 function validateSubmitButton() {
@@ -114,31 +78,22 @@ passwordInput.addEventListener("blur", () =>
 );
 passwordMatchInput.addEventListener("blur", () => validatePasswordMatchInput());
 
-// 비밀번호 가리기/표시
-function togglePasswordVisibility(input) {
-  if (input.type === "text") {
-    input.type = "password";
-  } else {
-    input.type = "text";
-  }
-}
-
 // 비밀번호 가리기/표시 버튼 클릭 시 비밀번호 가리기/표시 기능 토글
 const passwordToggleButtons = document.querySelectorAll(".psw_chk_btn");
 passwordToggleButtons.forEach((button) => {
   if (button.parentNode.querySelector("input") === passwordInput) {
     button.addEventListener("click", () => {
       togglePasswordVisibility(passwordInput);
-      const associatedImage = button.querySelector(".psw_chk_img");
-      associatedImage.classList.toggle("eye_open");
-      associatedImage.classList.toggle("eye_close");
+      const eyeImages = button.querySelector(".psw_chk_img");
+      eyeImages.classList.toggle("eye_open");
+      eyeImages.classList.toggle("eye_close");
     });
   } else if (button.parentNode.querySelector("input") === passwordMatchInput) {
     button.addEventListener("click", () => {
       togglePasswordVisibility(passwordMatchInput);
-      const associatedImage = button.querySelector(".psw_chk_img");
-      associatedImage.classList.toggle("eye_open");
-      associatedImage.classList.toggle("eye_close");
+      const eyeImages = button.querySelector(".psw_chk_img");
+      eyeImages.classList.toggle("eye_open");
+      eyeImages.classList.toggle("eye_close");
     });
   }
 });

@@ -1,4 +1,9 @@
-import { validateEmail, validatePassword } from "/js/utils/validator.js";
+import {
+  validateEmail,
+  validatePassword,
+  validateInput,
+  togglePasswordVisibility,
+} from "/js/utils/validator.js";
 
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("psw");
@@ -16,32 +21,6 @@ const errorMessages = {
     match: "비밀번호가 일치하지 않습니다.",
   },
 };
-
-function showErrorMessage(input, message) {
-  const errorMessageElement = input.parentNode.querySelector(".error_msg");
-  errorMessageElement.innerText = message;
-  errorMessageElement.classList.remove("hide");
-  input.classList.add("error_line");
-}
-
-function hideErrorMessage(input) {
-  const errorMessageElement = input.parentNode.querySelector(".error_msg");
-  errorMessageElement.classList.add("hide");
-  input.classList.remove("error_line");
-}
-
-function validateInput(input, validationFunction, errorMessage) {
-  if (input.value === "") {
-    showErrorMessage(input, errorMessage.empty);
-    return false;
-  } else if (!validationFunction(input.value)) {
-    showErrorMessage(input, errorMessage.invalid);
-    return false;
-  } else {
-    hideErrorMessage(input);
-    return true;
-  }
-}
 
 // 버튼 활성화를 위한 유효성 검사
 function validateSubmitButton() {
@@ -68,15 +47,6 @@ emailInput.addEventListener("blur", () =>
 passwordInput.addEventListener("blur", () =>
   validateInput(passwordInput, validatePassword, errorMessages.password)
 );
-
-// 비밀번호 가리기/표시
-function togglePasswordVisibility(input) {
-  if (input.type === "text") {
-    input.type = "password";
-  } else {
-    input.type = "text";
-  }
-}
 
 // 비밀번호 가리기/표시 버튼 클릭 시 비밀번호 가리기/표시 기능 토글
 const passwordToggleButtons = document.querySelectorAll(".psw_chk_btn");
