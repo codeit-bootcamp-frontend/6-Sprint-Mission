@@ -1,300 +1,188 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>판다마켓 회원가입</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓 회원가입</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
-        />
-        <link rel="stylesheet" href="/styles/root.css" />
-        <link rel="stylesheet" href="/styles/sign_style.css" />
-    </head>
-    <body>
-        <main class="main_signup">
-<<<<<<< HEAD
-            <!-- 로그인 폼 -->
-            <form
-                class="signup"
-                action="/pages/signup/"
-                method="get"
-                oninput="btn.disabled = !email.validity.valid || !psw.validity.valid || !psw_chk.validity.valid"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/sign_style.css" />
+  </head>
+  <body>
+    <main class="main_signup">
+      <!-- 로고 버튼 -->
+      <a class="logo_btn" href="/">
+        <!-- 로고 이미지 -->
+        <img class="logo_img" src="/images/logo/logo.svg" alt="" />
+      </a>
+
+      <!-- 회원가입 폼 -->
+      <form class="signup_form" method="get">
+        <fieldset class="content">
+          <!-- 회원가입 이메일 라벨 -->
+          <div class="user_email_label">
+            <label for="email">이메일</label>
+          </div>
+
+          <!-- 회원가입 이메일 작성 -->
+          <div>
+            <input
+              id="email"
+              class="user_email_input"
+              type="email"
+              maxlength="40"
+              name="user_email"
+              placeholder="이메일을 입력해주세요"
+              required
+            />
+
+            <!-- 에러 메세지 -->
+            <span class="error_msg email_error_msg hide">
+              이메일을 입력해주세요.
+            </span>
+          </div>
+
+          <duv class="user_nickname_label">
+            <label for="nickname">닉네임</label>
+          </duv>
+
+          <!-- 회원가입 닉네임 작성 -->
+          <div>
+            <input
+              id="nickname"
+              class="user_nickname_input"
+              type="text"
+              maxlength="12"
+              name="user_nickname"
+              placeholder="닉네임을 입력해주세요"
+              required
+            />
+
+            <!-- 에러 메세지 -->
+            <span class="error_msg nickname_error_msg hide">
+              닉네임을 입력해주세요.
+            </span>
+          </div>
+
+          <!-- 회원가입 비밀번호 라벨 -->
+          <div class="user_psw_label">
+            <label for="psw">비밀번호</label>
+          </div>
+
+          <!-- 회원가입 비밀번호 작성 -->
+          <div class="user_psw_content">
+            <input
+              id="psw"
+              class="user_psw_input"
+              type="password"
+              maxlength="30"
+              name="user_psw"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
+            <button type="button" class="psw_chk_btn">
+              <img
+                class="psw_chk_img eye_close"
+                src="/images/psw_eye/eye_close.svg"
+                alt="psw_chk"
+              />
+            </button>
+
+            <!-- 에러 메세지 -->
+            <span class="error_msg psw_error_msg hide">
+              비밀번호를 입력해주세요.
+            </span>
+          </div>
+
+          <!-- 회원가입 비밀번호 라벨 -->
+          <div class="user_psw_chk_label">
+            <label for="psw">비밀번호 확인</label>
+          </div>
+
+          <div class="user_psw_chk_content">
+            <input
+              id="psw_chk"
+              class="user_psw_chk_input"
+              type="password"
+              maxlength="30"
+              name="user_psw_chk"
+              placeholder="비밀번호를 다시 한 번 입력해주세요"
+              required
+            />
+            <button type="button" class="psw_chk_btn">
+              <img
+                class="psw_chk_img eye_close"
+                src="/images/psw_eye/eye_close.svg"
+                alt="psw_chk"
+              />
+            </button>
+
+            <!-- 에러 메세지 -->
+            <span class="error_msg psw_chk_error_msg hide">
+              비밀번호가 일치하지 않습니다.
+            </span>
+          </div>
+
+          <div>
+            <!-- 회원가입 버튼 -->
+            <button
+              id="btn"
+              class="submit_btn"
+              type="button"
+              value="submit"
+              disabled
             >
-                <!-- 로고 버튼 -->
-                <a class="logo_btn" href="/">
-                    <!-- 로고 이미지 -->
-                    <img class="logo_img" src="/images/logo.png" alt="" />
-                </a>
-                <ul class="content">
-                    <!-- 로그인 이메일 라벨 -->
-                    <li class="user_email_label">
-                        <label for="email">이메일</label>
-                    </li>
+              회원가입
+            </button>
+          </div>
+        </fieldset>
 
-                    <!-- 로그인 이메일 작성 -->
-                    <li>
-=======
-            <!-- 로고 버튼 -->
-            <a class="logo_btn" href="/">
-                <!-- 로고 이미지 -->
-                <img class="logo_img" src="/images/logo/logo.png" alt="" />
+        <!-- 소셜 간편 로그인 -->
+        <div class="social_signin">
+          <h1>간편 로그인하기</h1>
+
+          <div class="social_btns">
+            <!-- 구글 로그인 버튼-->
+            <a href="https://www.google.com/" class="signin_google">
+              <!-- 구글 로그인 이미지 -->
+              <img src="/images/social/ic_google.svg" alt="구글 간편 로그인" />
             </a>
 
-            <!-- 회원가입 폼 -->
-            <form class="signup_form" action="/pages/signup/" method="get">
-                <fieldset class="content">
-                    <!-- 회원가입 이메일 라벨 -->
-                    <div class="user_email_label">
-                        <label for="email">이메일</label>
-                    </div>
+            <!-- 카카오 로그인 버튼 -->
+            <a href="https://www.kakaocorp.com/page/" class="signin_kakao">
+              <!-- 카카오 로그인 이미지 -->
+              <img src="/images/social/ic_kakao.svg" alt="카카오 간편 로그인" />
+            </a>
+          </div>
+        </div>
 
-                    <!-- 회원가입 이메일 작성 -->
-                    <div>
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <input
-                            id="email"
-                            class="user_email_input"
-                            type="email"
-                            name="user_email"
-                            placeholder="이메일을 입력해주세요"
-<<<<<<< HEAD
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            required
-                        />
-                    </li>
+        <!-- 로그인으로 이동 -->
+        <div class="to_signin">
+          <p class="signin_text">
+            이미 회원이신가요?
 
-                    <li class="user_name_label">
-                        <label for="name">닉네임</label>
-                    </li>
-
-                    <!-- 로그인 이메일 작성 -->
-                    <li>
-                        <input
-                            id="name"
-                            class="user_name_input"
-                            type="text"
-                            name="user_name"
-                            placeholder="닉네임을 입력해주세요"
-                            required
-                        />
-                    </li>
-
-                    <!-- 로그인 비밀번호 라벨 -->
-                    <li class="user_psw_label">
-                        <label for="psw">비밀번호</label>
-                    </li>
-
-                    <!-- 로그인 비밀번호 작성 -->
-                    <li class="user_psw_content">
-=======
-                            required
-                        />
-                    </div>
-
-                    <duv class="user_nickname_label">
-                        <label for="nickname">닉네임</label>
-                    </duv>
-
-                    <!-- 회원가입 닉네임 작성 -->
-                    <div>
-                        <input
-                            id="nickname"
-                            class="user_nickname_input"
-                            type="text"
-                            name="user_nickname"
-                            placeholder="닉네임을 입력해주세요"
-                            required
-                        />
-                    </div>
-
-                    <!-- 회원가입 비밀번호 라벨 -->
-                    <div class="user_psw_label">
-                        <label for="psw">비밀번호</label>
-                    </div>
-
-                    <!-- 회원가입 비밀번호 작성 -->
-                    <div class="user_psw_content">
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <input
-                            id="psw"
-                            class="user_psw_input"
-                            type="password"
-                            name="user_psw"
-                            placeholder="비밀번호를 입력해주세요"
-                            pattern=".{8,}"
-                            required
-                        />
-                        <button type="button" class="psw_chk_btn">
-                            <img
-                                src="/images/psw_eye/eye_close.png"
-                                alt="psw_chk"
-                            />
-                        </button>
-<<<<<<< HEAD
-                    </li>
-
-                    <!-- 로그인 비밀번호 라벨 -->
-                    <li class="user_psw_chk_label">
-                        <label for="psw">비밀번호 확인</label>
-                    </li>
-
-                    <li class="user_psw_chk_content">
-=======
-                    </div>
-
-                    <!-- 회원가입 비밀번호 라벨 -->
-                    <div class="user_psw_chk_label">
-                        <label for="psw">비밀번호 확인</label>
-                    </div>
-
-                    <div class="user_psw_chk_content">
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <input
-                            id="psw_chk"
-                            class="user_psw_chk_input"
-                            type="password"
-                            name="user_psw_chk"
-                            placeholder="비밀번호를 다시 한 번 입력해주세요"
-<<<<<<< HEAD
-                            pattern=".{8,}"
-=======
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                            required
-                        />
-                        <button type="button" class="psw_chk_btn">
-                            <img
-                                src="/images/psw_eye/eye_close.png"
-                                alt="psw_chk"
-                            />
-                        </button>
-<<<<<<< HEAD
-                    </li>
-
-                    <li>
-                        <!-- 로그인 버튼 -->
-=======
-                    </div>
-
-                    <div>
-                        <!-- 회원가입 버튼 -->
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <button
-                            id="btn"
-                            class="submit_btn"
-                            type="submit"
-                            value="submit"
-                            disabled
-                        >
-                            회원가입
-                        </button>
-<<<<<<< HEAD
-                    </li>
-
-                    <!-- 소셜 간편 로그인 -->
-                    <li class="social_signin">
-                        <h1>간편 로그인하기</h1>
-
-                        <div class="social_btns">
-                            <!-- 구글 로그인 버튼-->
-                            <a
-                                href="https://www.google.com/"
-                                class="signin_google"
-                            >
-                                <!-- 구글 로그인 이미지 -->
-                                <img
-                                    src="/images/social_signin/google.png"
-                                    alt="구글 간편 로그인"
-                                />
-                            </a>
-
-                            <!-- 카카오 로그인 버튼 -->
-                            <a
-                                href="https://www.kakaocorp.com/page/"
-                                class="signin_kakao"
-                            >
-                                <!-- 카카오 로그인 이미지 -->
-                                <img
-                                    src="/images/social_signin/kakao.png"
-                                    alt="카카오 간편 로그인"
-                                />
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- 회원가입으로 이동 -->
-                    <li class="to_signin">
-                        <p class="signin_text">
-                            이미 회원이신가요?
-
-                            <!-- 회원가입 이동 버튼 -->
-                            <a class="signin_btn" href="/pages/signin">
-                                로그인
-                            </a>
-                        </p>
-                    </li>
-                </ul>
-            </form>
-        </main>
-=======
-                    </div>
-                </fieldset>
-
-                <!-- 소셜 간편 회원가입 -->
-                <div class="social_signin">
-                    <h1>간편 회원가입하기</h1>
-
-                    <div class="social_btns">
-                        <!-- 구글 회원가입 버튼-->
-                        <a href="https://www.google.com/" class="signin_google">
-                            <!-- 구글 회원가입 이미지 -->
-                            <img
-                                src="/images/social_signin/google.png"
-                                alt="구글 간편 회원가입"
-                            />
-                        </a>
-
-                        <!-- 카카오 회원가입 버튼 -->
-                        <a
-                            href="https://www.kakaocorp.com/page/"
-                            class="signin_kakao"
-                        >
-                            <!-- 카카오 회원가입 이미지 -->
-                            <img
-                                src="/images/social_signin/kakao.png"
-                                alt="카카오 간편 회원가입"
-                            />
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 회원가입으로 이동 -->
-                <div class="to_signin">
-                    <p class="signin_text">
-                        이미 회원이신가요?
-
-                        <!-- 회원가입 이동 버튼 -->
-                        <a class="signin_btn" href="/pages/signin">
-                            회원가입
-                        </a>
-                    </p>
-                </div>
-            </form>
-        </main>
-        <script type="module" src="/js/utils/validator.js"></script>
-        <script type="module" src="/js/sign/signup.js"></script>
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-    </body>
+            <!-- 로그인 이동 버튼 -->
+            <a class="signin_btn" href="/pages/signin"> 로그인 </a>
+          </p>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="/js/utils/validator.js"></script>
+    <script type="module" src="/js/sign/signup.js"></script>
+  </body>
 </html>

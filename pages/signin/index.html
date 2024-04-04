@@ -1,231 +1,137 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>판다마켓 로그인</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓 로그인</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
-        />
-        <link rel="stylesheet" href="/styles/root.css" />
-        <link rel="stylesheet" href="/styles/sign_style.css" />
-    </head>
-    <body>
-        <main class="main_signin">
-<<<<<<< HEAD
-            <!-- 로그인 폼 -->
-            <form
-                class="signin"
-                action="/pages/signin/"
-                method="get"
-                oninput="btn.disabled = !email.validity.valid || !psw.validity.valid"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/sign_style.css" />
+  </head>
+  <body>
+    <main class="main_signin">
+      <!-- 로고 버튼 -->
+      <a class="logo_btn" href="/">
+        <!-- 로고 이미지 -->
+        <img class="logo_img" src="/images/logo/logo.svg" alt="" />
+      </a>
+
+      <!-- 로그인 폼 -->
+      <form class="signin_form">
+        <fieldset class="content">
+          <!-- 로그인 이메일 라벨 -->
+          <div class="user_email_label">
+            <label for="email">이메일</label>
+          </div>
+
+          <!-- 로그인 이메일 작성 -->
+          <div class="user_email_content">
+            <input
+              id="email"
+              class="user_email_input"
+              type="email"
+              name="user_email"
+              maxlength="40"
+              placeholder="이메일을 입력해주세요"
+              required
+            />
+
+            <!-- 에러 메세지 -->
+            <span class="error_msg email_error_msg hide">
+              이메일을 입력해주세요.
+            </span>
+          </div>
+
+          <!-- 로그인 비밀번호 라벨 -->
+          <div class="user_psw_label">
+            <label for="psw">비밀번호</label>
+          </div>
+
+          <!-- 로그인 비밀번호 작성 -->
+          <div class="user_psw_content">
+            <input
+              id="psw"
+              class="user_psw_input"
+              type="password"
+              maxlength="30"
+              name="user_psw"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
+            <button type="button" class="psw_chk_btn">
+              <img
+                class="psw_chk_img eye_close"
+                src="/images/psw_eye/eye_close.svg"
+                alt="psw_chk"
+              />
+            </button>
+
+            <!-- 에러 메세지 -->
+            <span class="error_msg psw_error_msg hide">
+              비밀번호를 입력해주세요.
+            </span>
+          </div>
+
+          <div>
+            <!-- 로그인 버튼 -->
+            <button
+              id="btn"
+              class="submit_btn"
+              type="button"
+              value="submit"
+              disabled
             >
-                <!-- 로고 버튼 -->
-                <a class="logo_btn" href="/">
-                    <!-- 로고 이미지 -->
-                    <img class="logo_img" src="/images/logo.png" alt="" />
-                </a>
-                <ul class="content">
-                    <!-- 로그인 이메일 라벨 -->
-                    <li class="user_email_label">
-                        <label for="email">이메일</label>
-                    </li>
+              로그인
+            </button>
+          </div>
+        </fieldset>
+      </form>
 
-                    <!-- 로그인 이메일 작성 -->
-                    <li>
-=======
-            <!-- 로고 버튼 -->
-            <a class="logo_btn" href="/">
-                <!-- 로고 이미지 -->
-                <img class="logo_img" src="/images/logo/logo.png" alt="" />
-            </a>
+      <!-- 소셜 간편 로그인 -->
+      <div class="social_signin">
+        <h1>간편 로그인하기</h1>
 
-            <!-- 로그인 폼 -->
-            <form class="signin_form" action="/pages/signin/" method="get">
-                <fieldset class="content">
-                    <!-- 로그인 이메일 라벨 -->
-                    <div class="user_email_label">
-                        <label for="email">이메일</label>
-                    </div>
+        <div class="social_btns">
+          <!-- 구글 로그인 버튼-->
+          <a href="https://www.google.com/" class="signin_google">
+            <!-- 구글 로그인 이미지 -->
+            <img src="/images/social/ic_google.svg" alt="구글 간편 로그인" />
+          </a>
 
-                    <!-- 로그인 이메일 작성 -->
-                    <div>
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <input
-                            id="email"
-                            class="user_email_input"
-                            type="email"
-                            name="user_email"
-                            placeholder="이메일을 입력해주세요"
-<<<<<<< HEAD
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            required
-                        />
-                    </li>
+          <!-- 카카오 로그인 버튼 -->
+          <a href="https://www.kakaocorp.com/page/" class="signin_kakao">
+            <!-- 카카오 로그인 이미지 -->
+            <img src="/images/social/ic_kakao.svg" alt="카카오 간편 로그인" />
+          </a>
+        </div>
+      </div>
 
-                    <!-- 로그인 비밀번호 라벨 -->
-                    <li class="user_psw_label">
-                        <label for="psw">비밀번호</label>
-                    </li>
+      <!-- 회원가입으로 이동 -->
+      <div class="to_signup">
+        <p class="signup_text">
+          판다마켓이 처음이신가요?
 
-                    <!-- 로그인 비밀번호 작성 -->
-                    <li class="user_psw_content">
-=======
-                            required
-                        />
-                    </div>
-
-                    <!-- 로그인 비밀번호 라벨 -->
-                    <div class="user_psw_label">
-                        <label for="psw">비밀번호</label>
-                    </div>
-
-                    <!-- 로그인 비밀번호 작성 -->
-                    <div class="user_psw_content">
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <input
-                            id="psw"
-                            class="user_psw_input"
-                            type="password"
-                            name="user_psw"
-                            placeholder="비밀번호를 입력해주세요"
-<<<<<<< HEAD
-                            pattern=".{8,}"
-=======
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                            required
-                        />
-                        <button type="button" class="psw_chk_btn">
-                            <img
-                                src="/images/psw_eye/eye_close.png"
-                                alt="psw_chk"
-                            />
-                        </button>
-<<<<<<< HEAD
-                    </li>
-
-                    <li>
-=======
-                    </div>
-
-                    <div>
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <!-- 로그인 버튼 -->
-                        <button
-                            id="btn"
-                            class="submit_btn"
-                            type="submit"
-                            value="submit"
-                            disabled
-                        >
-                            로그인
-                        </button>
-<<<<<<< HEAD
-                    </li>
-
-                    <!-- 소셜 간편 로그인 -->
-                    <li class="social_signin">
-                        <h1>간편 로그인하기</h1>
-
-                        <div class="social_btns">
-                            <!-- 구글 로그인 버튼-->
-                            <a
-                                href="https://www.google.com/"
-                                class="signin_google"
-                            >
-                                <!-- 구글 로그인 이미지 -->
-                                <img
-                                    src="/images/social_signin/google.png"
-                                    alt="구글 간편 로그인"
-                                />
-                            </a>
-
-                            <!-- 카카오 로그인 버튼 -->
-                            <a
-                                href="https://www.kakaocorp.com/page/"
-                                class="signin_kakao"
-                            >
-                                <!-- 카카오 로그인 이미지 -->
-                                <img
-                                    src="/images/social_signin/kakao.png"
-                                    alt="카카오 간편 로그인"
-                                />
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- 회원가입으로 이동 -->
-                    <li class="to_signup">
-                        <p class="signup_text">
-                            판다마켓이 처음이신가요?
-
-                            <!-- 회원가입 이동 버튼 -->
-                            <a class="signup_btn" href="/pages/signup">
-                                회원가입
-                            </a>
-                        </p>
-                    </li>
-                </ul>
-            </form>
-        </main>
-=======
-                    </div>
-                </fieldset>
-            </form>
-
-            <!-- 소셜 간편 로그인 -->
-            <div class="social_signin">
-                <h1>간편 로그인하기</h1>
-
-                <div class="social_btns">
-                    <!-- 구글 로그인 버튼-->
-                    <a href="https://www.google.com/" class="signin_google">
-                        <!-- 구글 로그인 이미지 -->
-                        <img
-                            src="/images/social_signin/google.png"
-                            alt="구글 간편 로그인"
-                        />
-                    </a>
-
-                    <!-- 카카오 로그인 버튼 -->
-                    <a
-                        href="https://www.kakaocorp.com/page/"
-                        class="signin_kakao"
-                    >
-                        <!-- 카카오 로그인 이미지 -->
-                        <img
-                            src="/images/social_signin/kakao.png"
-                            alt="카카오 간편 로그인"
-                        />
-                    </a>
-                </div>
-            </div>
-
-            <!-- 회원가입으로 이동 -->
-            <div class="to_signup">
-                <p class="signup_text">
-                    판다마켓이 처음이신가요?
-
-                    <!-- 회원가입 이동 버튼 -->
-                    <a class="signup_btn" href="/pages/signup"> 회원가입 </a>
-                </p>
-            </div>
-        </main>
-        <script type="module" src="/js/utils/validator.js"></script>
-        <script type="module" src="/js/sign/signin.js"></script>
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-    </body>
+          <!-- 회원가입 이동 버튼 -->
+          <a class="signup_btn" href="/pages/signup"> 회원가입 </a>
+        </p>
+      </div>
+    </main>
+    <script type="module" src="/js/utils/validator.js"></script>
+    <script type="module" src="/js/sign/signin.js"></script>
+  </body>
 </html>

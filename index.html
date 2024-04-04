@@ -1,268 +1,238 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
 
-        <meta property="og:title" content="판다마켓" />
-        <meta
-            property="og:url"
-            content="https://pandamarket-jmj.netlify.app/"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:description"
-            content="일상의 모든 물건을 거래해 보세요"
-        />
-        <meta property="og:image" content="./images/logo/og-image.png" />
+    <meta property="og:title" content="판다마켓" />
+    <meta property="og:url" content="https://pandamarket-jmj.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="일상의 모든 물건을 거래해 보세요"
+    />
+    <meta property="og:image" content="./images/logo/og-image.png" />
 
-        <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
 
-        <title>판다마켓</title>
+    <title>판다마켓</title>
 
-        <!-- --------------------------------------------------------------------------------------------- -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
-        />
-<<<<<<< HEAD
-=======
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+    />
 
-        <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- 상단 판다마켓 로고, 로그인 버튼 ============================================================================================= -->
+    <header>
+      <article class="header_content">
+        <!-- 로고, 클릭 시 메인 화면으로 -->
+        <a class="header_logo" href="/">
+          <img src="./images/logo/logo.svg" alt="로고" />
+        </a>
 
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-        <link rel="stylesheet" href="/styles/root.css" />
-        <link rel="stylesheet" href="/styles/style.css" />
-    </head>
-    <body>
-        <!-- 상단 판다마켓 로고, 로그인 버튼 ============================================================================================= -->
-        <header>
-            <article class="header_content">
-                <!-- 로고, 클릭 시 메인 화면으로 -->
-                <a class="header_logo" href="/">
-                    <img src="./images/logo/logo.png" alt="로고" />
-                </a>
+        <!-- 로그인 버튼, 클릭 시 로그인 창으로 -->
+        <a class="header_login_btn blue" href="/pages/signin">로그인</a>
+      </article>
+    </header>
 
-                <!-- 로그인 버튼, 클릭 시 로그인 창으로 -->
-                <a class="header_login_btn blue" href="/pages/signin">로그인</a>
-            </article>
-        </header>
+    <!-- 배너, 메인 콘텐츠 =========================================================================================================== -->
+    <main>
+      <article class="container">
+        <!-- 상단 배너 =========================================================================================================== -->
+        <section class="banner_top">
+          <!-- 상단 배너 텍스트, 버튼 -->
+          <div class="banner_top_content">
+            <!-- 상단 배너 텍스트 -->
+            <h1 class="banner_top_text">
+              일상의 모든 물건을<br />
+              거래해 보세요
+            </h1>
 
-        <!-- 배너, 메인 콘텐츠 =========================================================================================================== -->
-        <main>
-            <article class="container">
-                <!-- 상단 배너 =========================================================================================================== -->
-                <section class="banner_top">
-                    <!-- 상단 배너 텍스트, 버튼 -->
-                    <div class="banner_top_content">
-                        <!-- 상단 배너 텍스트 -->
-                        <h1 class="banner_top_text">
-                            일상의 모든 물건을<br />
-                            거래해 보세요
-                        </h1>
+            <!-- 상단 배너 버튼 -->
+            <a class="banner_top_btn blue" href="/pages/items">
+              구경하러 가기
+            </a>
+          </div>
 
-                        <!-- 상단 배너 버튼 -->
-                        <a class="banner_top_btn blue" href="/pages/items">
-                            구경하러 가기
-                        </a>
-                    </div>
+          <!-- 상단 배너 이미지 -->
+          <img
+            class="banner_top_img"
+            src="./images/home/Img_home_top.svg"
+            alt="상단 배너"
+          />
+        </section>
 
-                    <!-- 상단 배너 이미지 -->
-                    <img
-                        class="banner_top_img"
-                        src="./images/banner/banner_top.png"
-                        alt="상단 배너"
-                    />
-                </section>
+        <!-- 메인 콘텐츠 ========================================================================================================= -->
+        <section class="container_content">
+          <!-- 콘텐츠 내부 첫 번째 | 텍스트 오른쪽, 그림 왼쪽 -->
+          <div class="content_item">
+            <!-- 콘텐츠 이미지 -->
+            <img
+              class="content_item_img"
+              src="./images/home/Img_home_01.svg"
+              alt=""
+            />
 
-                <!-- 메인 콘텐츠 ========================================================================================================= -->
-                <section class="container_content">
-                    <!-- 콘텐츠 내부 첫 번째 | 텍스트 오른쪽, 그림 왼쪽 -->
-                    <div class="content_item">
-                        <!-- 콘텐츠 이미지 -->
-                        <img
-                            class="content_item_img"
-                            src="./images/home/Img_home_01.png"
-                            alt=""
-                        />
+            <!-- 콘텐츠 내용 -->
+            <div class="content_item_sub">
+              <!-- 콘텐츠 태그 -->
+              <h2 class="content_tag">Hot item</h2>
 
-                        <!-- 콘텐츠 내용 -->
-                        <div class="content_item_sub">
-                            <!-- 콘텐츠 태그 -->
-                            <h2 class="content_tag">Hot item</h2>
+              <!-- 콘텐츠 제목 -->
+              <h1 class="content_title">
+                인기 상품을<br />
+                확인해보세요
+              </h1>
 
-                            <!-- 콘텐츠 제목 -->
-                            <h1 class="content_title">
-                                인기 상품을<br />
-                                확인해보세요
-                            </h1>
+              <!-- 콘텐츠 설명 -->
+              <p class="content_description">
+                가장 HOT한 중고거래 물품을<br />
+                판다 마켓에서 확인해 보세요
+              </p>
+            </div>
+          </div>
 
-                            <!-- 콘텐츠 설명 -->
-                            <p class="content_description">
-                                가장 HOT한 중고거래 물품을<br />
-                                판다 마켓에서 확인해 보세요
-                            </p>
-                        </div>
-                    </div>
+          <!-- 콘텐츠 내부 두 번째 | 텍스트 왼쪽, 그림 오른쪽 -->
+          <div class="content_item right_item">
+            <!-- 콘텐츠 이미지 -->
+            <img
+              class="content_item_img"
+              src="./images/home/Img_home_02.svg"
+              alt=""
+            />
+            <!-- 콘텐츠 내용 -->
+            <div class="content_item_sub right_item">
+              <!-- 콘텐츠 태그 -->
+              <h2 class="content_tag">Search</h2>
 
-                    <!-- 콘텐츠 내부 두 번째 | 텍스트 왼쪽, 그림 오른쪽 -->
-<<<<<<< HEAD
-                    <div class="content_item">
-=======
-                    <div class="content_item right_item">
-                        <!-- 콘텐츠 이미지 -->
-                        <img
-                            class="content_item_img"
-                            src="./images/home/Img_home_02.png"
-                            alt=""
-                        />
+              <!-- 콘텐츠 제목 -->
+              <h1 class="content_title">
+                구매를 원하는<br />
+                상품을 검색하세요
+              </h1>
 
->>>>>>> 59a0ba8f579c81152190d283dbf778dbc2034510
-                        <!-- 콘텐츠 내용 -->
-                        <div class="content_item_sub right_item">
-                            <!-- 콘텐츠 태그 -->
-                            <h2 class="content_tag">Search</h2>
+              <!-- 콘텐츠 설명 -->
+              <p class="content_description">
+                구매하고 싶은 물품은 검색해서<br />
+                쉽게 찾아보세요
+              </p>
+            </div>
+          </div>
 
-                            <!-- 콘텐츠 제목 -->
-                            <h1 class="content_title">
-                                구매를 원하는<br />
-                                상품을 검색하세요
-                            </h1>
+          <!-- 콘텐츠 내부 세 번째 | 텍스트 오른쪽, 그림 왼쪽 -->
+          <div class="content_item">
+            <!-- 콘텐츠 이미지 -->
+            <img
+              class="content_item_img"
+              src="./images/home/Img_home_03.svg"
+              alt=""
+            />
 
-                            <!-- 콘텐츠 설명 -->
-                            <p class="content_description">
-                                구매하고 싶은 물품은 검색해서<br />
-                                쉽게 찾아보세요
-                            </p>
-                        </div>
-                    </div>
+            <!-- 콘텐츠 내용 -->
+            <div class="content_item_sub">
+              <!-- 콘텐츠 태그 -->
+              <h2 class="content_tag">Register</h2>
 
-                    <!-- 콘텐츠 내부 세 번째 | 텍스트 오른쪽, 그림 왼쪽 -->
-                    <div class="content_item">
-                        <!-- 콘텐츠 이미지 -->
-                        <img
-                            class="content_item_img"
-                            src="./images/home/Img_home_03.png"
-                            alt=""
-                        />
+              <!-- 콘텐츠 제목 -->
+              <h1 class="content_title">
+                판매를 원하는<br />
+                상품을 등록하세요
+              </h1>
 
-                        <!-- 콘텐츠 내용 -->
-                        <div class="content_item_sub">
-                            <!-- 콘텐츠 태그 -->
-                            <h2 class="content_tag">Register</h2>
+              <!-- 콘텐츠 설명 -->
+              <p class="content_description">
+                어떤 물건이든 판매하고 싶은 상품을<br />
+                쉽게 등록하세요
+              </p>
+            </div>
+          </div>
+        </section>
 
-                            <!-- 콘텐츠 제목 -->
-                            <h1 class="content_title">
-                                판매를 원하는<br />
-                                상품을 등록하세요
-                            </h1>
+        <!-- 하단 배너 =========================================================================================================== -->
+        <section class="banner_floor">
+          <div class="banner_floor_content">
+            <!-- 하단 배너 텍스트 -->
+            <h1 class="banner_floor_text">
+              믿을 수 있는 <br />
+              판다마켓 중고거래
+            </h1>
+          </div>
 
-                            <!-- 콘텐츠 설명 -->
-                            <p class="content_description">
-                                어떤 물건이든 판매하고 싶은 상품을<br />
-                                쉽게 등록하세요
-                            </p>
-                        </div>
-                    </div>
-                </section>
+          <!-- 하단 배너 이미지 -->
+          <img
+            class="banner_floor_img"
+            src="./images/home/Img_home_bottom.svg"
+            alt="하단 배너"
+          />
+        </section>
+      </article>
+    </main>
+    <!-- 하단 ======================================================================================================================== -->
+    <footer>
+      <!-- 하단 내부  -->
+      <article class="footer_content">
+        <!-- copyright  -->
+        <section class="footer_copyright">©codeit - 2024</section>
 
-                <!-- 하단 배너 =========================================================================================================== -->
-                <section class="banner_floor">
-                    <div class="banner_floor_content">
-                        <!-- 하단 배너 텍스트 -->
-                        <h1 class="banner_floor_text">
-                            믿을 수 있는 <br />
-                            판다마켓 중고거래
-                        </h1>
-                    </div>
+        <!-- privacy, faq 이동 버튼  -->
+        <section class="footer_middle">
+          <!-- Privacy Policy 버튼 -->
+          <a class="privacy" href="/pages/privacy">Privacy Policy</a>
 
-                    <!-- 하단 배너 이미지 -->
-                    <img
-                        class="banner_floor_img"
-                        src="./images/banner/banner_bottom.png"
-                        alt="하단 배너"
-                    />
-                </section>
-            </article>
-        </main>
-        <!-- 하단 ======================================================================================================================== -->
-        <footer>
-            <!-- 하단 내부  -->
-            <article class="footer_content">
-                <!-- copyright  -->
-                <section class="footer_copyright">©codeit - 2024</section>
+          <!-- FAQ 버튼 -->
+          <a class="faq" href="/pages/faq">FAQ</a>
+        </section>
 
-                <!-- privacy, faq 이동 버튼  -->
-                <section class="footer_middle">
-                    <!-- Privacy Policy 버튼 -->
-                    <a class="privacy" href="/pages/privacy">Privacy Policy</a>
+        <!-- sns 이동 버튼  -->
+        <section class="footer_social">
+          <!-- 페이스북 -->
+          <a class="facebook" href="https://www.facebook.com/" target="_blank">
+            <img src="/images/social/ic_facebook.svg" alt="페이스북" />
+          </a>
 
-                    <!-- FAQ 버튼 -->
-                    <a class="faq" href="/pages/faq">FAQ</a>
-                </section>
+          <!-- 트위터 -->
+          <a class="twitter" href="https://twitter.com/" target="_blank">
+            <img src="/images/social/ic_twitter.svg" alt="트위터" />
+          </a>
 
-                <!-- sns 이동 버튼  -->
-                <section class="footer_social">
-                    <!-- 페이스북 -->
-                    <a
-                        class="facebook"
-                        href="https://www.facebook.com/"
-                        target="_blank"
-                    >
-                        <img
-                            src="/images/social/ic_facebook.png"
-                            alt="페이스북"
-                        />
-                    </a>
+          <!-- 유튜브 -->
+          <a class="youtube" href="https://www.youtube.com/" target="_blank">
+            <img src="/images/social/ic_youtube.svg" alt="유튜브" />
+          </a>
 
-                    <!-- 트위터 -->
-                    <a
-                        class="twitter"
-                        href="https://twitter.com/"
-                        target="_blank"
-                    >
-                        <img src="/images/social/ic_twitter.png" alt="트위터" />
-                    </a>
-
-                    <!-- 유튜브 -->
-                    <a
-                        class="youtube"
-                        href="https://www.youtube.com/"
-                        target="_blank"
-                    >
-                        <img src="/images/social/ic_youtube.png" alt="유튜브" />
-                    </a>
-
-                    <!-- 인스타그램 -->
-                    <a
-                        class="instagram"
-                        href="https://www.instagram.com/"
-                        target="_blank"
-                    >
-                        <img
-                            src="/images/social/ic_instagram.png"
-                            alt="인스타그램"
-                        />
-                    </a>
-                </section>
-            </article>
-        </footer>
-    </body>
+          <!-- 인스타그램 -->
+          <a
+            class="instagram"
+            href="https://www.instagram.com/"
+            target="_blank"
+          >
+            <img src="/images/social/ic_instagram.svg" alt="인스타그램" />
+          </a>
+        </section>
+      </article>
+    </footer>
+  </body>
 </html>
