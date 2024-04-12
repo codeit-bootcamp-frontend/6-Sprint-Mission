@@ -1,0 +1,14 @@
+.bestProducts {
+  display: flex;
+  gap: 24px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.bestProductsSection {
+  max-width: 1200px;
+  margin: 24px auto;
+}

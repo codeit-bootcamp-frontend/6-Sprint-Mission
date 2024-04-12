@@ -1,0 +1,24 @@
+.allProducts {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 43px;
+  column-gap: 18px;
+}
+
+.allProductsSection {
+  max-width: 1200px;
+  margin: 6px auto;
+}
+
+.productsToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.tool-container {
+  display: flex;
+  gap: 12px;
+}

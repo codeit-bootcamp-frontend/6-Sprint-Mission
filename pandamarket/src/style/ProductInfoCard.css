@@ -1,0 +1,36 @@
+.productInfoCard {
+  color: #1f2937;
+  margin: 16px 0;
+}
+
+.productInfoCard > h2 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 6px 0;
+}
+
+.productInfoCard > p {
+  font-size: 16px;
+}
+
+.productInfoCard > .favoriteCount {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.productInfoCard > img {
+  border-radius: 16px;
+  object-fit: cover;
+  margin: 6px;
+}
+
+.favorite-container {
+  display: flex;
+  align-items: center;
+  width: 13px;
+  height: 12px;
+  gap: 5.27px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 6px 0;
+}

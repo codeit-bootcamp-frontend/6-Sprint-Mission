@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+#nav {
+  display: flex;
+}
+
+#nav > li {
+  list-style: none;
+  font-size: 18px;
+  padding: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:link,
+a:hover,
+a:visited {
+  color: #4b5563;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  cursor: pointer;
+}
+
+hr {
+  border-color: #dfdfdf;
+}
