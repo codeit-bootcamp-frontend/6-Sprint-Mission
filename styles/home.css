@@ -1,0 +1,164 @@
+.banner {
+  background-color: #cfe5ff;
+  height: 60vh;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 130%;
+}
+
+#hero {
+  background-image: url("../images/home/hero-image.png");
+}
+
+.banner h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44.8px;
+  padding-top: 48px;
+  padding-bottom: 18px;
+}
+
+#bottomBanner {
+  background-image: url("../images/home/bottom-banner-image.png");
+}
+
+#signinLinkButton {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14.5px 43px;
+}
+
+#features {
+  padding-top: 51px;
+}
+
+.feature {
+  margin-bottom: 64px;
+}
+
+.feature img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.feature:nth-child(2) {
+  text-align: right;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-content h2 {
+  color: var(--blue);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-content h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.feature-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 0.08em;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 90vh;
+    background-size: 120%;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+    line-height: 56px;
+    padding-top: 84px;
+    padding-bottom: 24px;
+  }
+
+  #hero h1 br {
+    display: none;
+  }
+
+  #features {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  .feature-content h2 {
+    font-size: 18px;
+    line-height: 25.2px;
+    margin-bottom: 12px;
+  }
+
+  .feature-content h1 {
+    font-size: 32px;
+    line-height: 44.8px;
+  }
+
+  .feature-description {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .banner {
+    text-align: left;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    background-position: 80% bottom;
+    background-size: 55%;
+  }
+
+  .banner h1 {
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  #hero h1 br {
+    display: inline;
+  }
+
+  #features {
+    padding: 138px 0;
+  }
+
+  .feature {
+    margin-bottom: 138px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+
+  .feature:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .feature img {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .feature-content h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .feature-description {
+    font-size: 24px;
+    line-height: 28.8px;
+    margin-top: 24px;
+  }
+}

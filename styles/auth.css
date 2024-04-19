@@ -1,0 +1,119 @@
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logo-home-button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 198px;
+}
+
+.logo-home-button img {
+  width: 100%;
+}
+
+.input-item {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input:focus {
+  outline-color: var(--blue);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+}
+
+.social-login-container {
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 23px;
+  margin: 24px 0;
+}
+
+.social-login-container h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.social-login-buttons-container {
+  display: flex;
+  gap: 16px;
+}
+
+.auth-switch {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: #3182f6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .auth-container {
+    max-width: 640px;
+  }
+
+  .logo-home-button {
+    width: 396px;
+    margin-top: 48px;
+    margin-bottom: 40px;
+  }
+
+  label {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logo-home-button {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+}

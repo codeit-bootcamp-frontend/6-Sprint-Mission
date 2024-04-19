@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+/* 상품 등록하기 상단 문구와 버튼 */
+.regis-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.regis-text {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.regis-button {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0px 10px;
+  display: block;
+  line-height: 42px;
+  width: 88px;
+  height: 42px;
+  background-color: #9CA3AF;
+  color: #FFFFFF;
+  text-align: center
+}
+
+/* 상품 이미지 업로드 */
+.image-div {
+  margin-top: 16px;
+  width: 100%;
+  height: 310px;
+  display: flex;
+}
+
+.image-text {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.upload-btn {
+  position: relative;
+  margin-top: 12px;
+  width: 282px;
+  height: 282px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #F3F4F6;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.upload-btn:hover {
+  background-color: #3692FF;
+}
+
+.input-file {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.upload-btn-plus {
+  font-size: 40px;
+  color: #9CA3AF;
+  transform: translate(0, 180%)
+}
+
+.upload-btn-regis {
+  margin-top: 18px;
+  color: #9CA3AF;
+  font-size: 16px;
+  transform: translate(0, 390%)
+}
+
+/* 업로드한 이미지 미리보기 */
+.image-preview {
+  position: relative;
+  width: 282px;
+  height: 282px;
+}
+
+.preview-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image-preview button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  background-color: #3692FF;
+  border-radius: 9999px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* 상품명, 상품소개, 판매가격, 태그 div*/
+.name-div, .price-div, .tag-div {
+  margin-top: 24px;
+  width: 1200px;
+  height: 89px;
+}
+.desc-div {
+  margin-top: 24px;
+  width: 1200px;
+  height: 233px;
+}
+
+.name-text, .desc-text, .price-text, .tag-text {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* 상품명, 상품소개, 판매가격, 태그 input */
+.name-input, .price-input, .tag-input {
+  width: 100%;
+  height: 56px;
+  margin-top: 12px;
+  font-size: 16px;
+  color: #9CA3AF;
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  border: none;
+}
+
+.desc-input {
+  width: 100%;
+  height: 200px;
+  margin-top: 12px;
+  font-size: 16px;
+  color: #9CA3AF;
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  border: none;
+}
+
+.desc-input:focus, .name-input:focus {outline: 2px solid #3692FF;}
+.price-input:focus, .tag-input:focus {outline: 2px solid #3692FF;}

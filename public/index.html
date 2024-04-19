@@ -1,43 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+    <!-- 
+      Font preloading
+      - 페이지가 처음 로딩될 때 텍스트가 순간적으로 깜빡이거나 바뀌는 듯한 현상을 보신 적이 있으신가요? (Flash of Unstyled Text, FOUT)
+        브라우저가 지정된 폰트를 다운로드 받는 동안 임시로 대체 폰트("fallback font")를 사용하기 때문인데요, 폰트를 preload하면 텍스트 렌더링을 보다 매끄럽게 할 수 있습니다.
+      - 브라우저는 rel="preload"로 지정된 리소스를 우선적으로 준비합니다.
+      - 폰트, 페이지 상단의 이미지, 가장 먼저 실행되어야 하는 스크립트 등에 preload 속성을 사용하는 경우가 많아요.
+      - href의 리소스 유형에 따라 <link>의 `as` 속성값을 정해야 해요. 일반적인 폰트 파일(예: .woff, .ttf 등)이라면 as="font"겠지만, 우리가 사용하는 웹폰트는 css 형식이기 때문에 as="style"을 사용합니다.
     -->
-    <title>React App</title>
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <!-- 간혹 보안 등의 이슈로 자바스크립트를 지원하지 않는 브라우저 환경에서도 최소한의 스타일이 로딩될 수 있도록 합니다. -->
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    /></noscript>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

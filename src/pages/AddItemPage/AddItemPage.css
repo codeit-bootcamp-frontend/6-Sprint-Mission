@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  width: 1200px;
+  height: 100%;
+}
