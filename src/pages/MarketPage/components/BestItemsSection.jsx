@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import { getProducts } from "../../../api/itemApi";
+import { Link } from 'react-router-dom';
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -46,7 +47,9 @@ function BestItemsSection() {
 
       <div className="bestItemsCardSection">
         {itemList?.map((item) => (
-          <ItemCard item={item} key={`best-item-${item.id}`} />
+          <Link to={`/items/${item.id}`} key={`best-item-${item.id}`}>
+            <ItemCard item={item} key={`best-item-${item.id}`} />
+          </Link>
         ))}
       </div>
     </div>

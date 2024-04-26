@@ -1,0 +1,188 @@
+#brr {
+  margin-top: 24px;
+}
+
+.desc-info {
+  margin: auto;
+  width: 1200px;
+  height: 1229px;
+  box-sizing: border-box;
+  color: #1F2937;
+}
+
+.desc-info-top {
+  height: 486;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
+}
+
+.product-page-image {
+  width: 486px;
+  height: 486px;
+  border-radius: 16px;
+}
+
+.desc-info-top-right {
+  position: relative;
+  width: 690px;
+  height: 486;
+}
+
+.product-page-name {
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.product-page-price {
+  font-size: 40px;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.hr1,
+.hr2,
+.hr3 {
+  background: #E5E7EB;
+  height: 1px;
+  border: 0;
+}
+
+.hr1,
+.hr3 {
+  margin: 16px 0;
+}
+
+.product-page-sogae {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.product-page-sogattext {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.product-page-tag {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.product-page-favoriteCount {
+  position: absolute;
+  bottom: 0px;
+}
+
+.product-page-hr2 {
+  margin: 16px 0;
+  background-color: #E5E7EB;
+  height: 1px;
+  border: 0;
+}
+
+.product-page-inquire {
+  margin-top: 24px;
+}
+
+.product-tag {
+  background-color: #F3F4F6;
+  border-radius: 26px;
+  padding: 7px 14px;
+  margin: 8px 8px 8px 0;
+  display: inline-block;
+}
+
+.product-page-favoriteCount {
+  width: 87px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid #F3F4F6;
+  border-radius: 26px;
+  padding: 7px 14px;
+  margin: 8px 8px 8px 0;
+  display: inline-block;
+}
+
+.heartIcon {
+  width: auto;
+  height: auto;
+}
+
+.product-page-inquire {
+  margin-top: 24px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inq {
+  position: relative;
+  width: 1200px;
+  height: 197px;
+}
+
+.textt {
+  margin-top: 16px;
+  width: 100%;
+  height: 104px;
+  padding: 16px 24px;
+  background-color: #F3F4F6;
+  color: #1F2937;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.regis-button {
+  width: 74px;
+  height: 42px;
+  background-color: #9CA3AF;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 8px;
+  right: 220px;
+  bottom: 440px;
+}
+
+.ment {
+  margin-top: 24px;
+  font-size: 16px;
+
+}
+
+
+.ava {
+  width: 100%;
+  height: 100%;
+
+}
+
+.nickname {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.ago {
+  font-size: 14px;
+  color: #9CA3AF;
+}
+
+.return-bottom {
+  text-align: center;
+}
+
+.return-button {
+  margin-top: 40px;
+  width: 240px;
+  height: 48px;
+  background-color: #3692ff;
+  color: #ffffff;
+  border-radius: 40px;
+}

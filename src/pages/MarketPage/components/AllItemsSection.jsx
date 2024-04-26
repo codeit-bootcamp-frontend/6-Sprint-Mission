@@ -79,7 +79,9 @@ function AllItemsSection() {
 
       <div className="allItemsCardSection">
         {itemList?.map((item) => (
+                    <Link to={`/items/${item.id}`} key={`best-item-${item.id}`}>
           <ItemCard item={item} key={`market-item-${item.id}`} />
+          </Link>
         ))}
       </div>
 
