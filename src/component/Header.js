@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import LogoImg from "../images/logo.png";
 import "../css/common.css";
 
-function getLink({ isActive }) {
+function getLinkStyle({ isActive }) {
   return {
     color: isActive ? "#3182f6" : undefined,
   };
@@ -17,10 +17,10 @@ function Header() {
             <img src={LogoImg} alt="로고 이미지" />
           </Link>
           <nav>
-            <NavLink to="/Board" style={getLink}>
+            <NavLink to="/Board" style={getLinkStyle}>
               자유게시판
             </NavLink>
-            <NavLink to="/Product" style={getLink}>
+            <NavLink to="/Product" style={getLinkStyle}>
               중고마켓
             </NavLink>
           </nav>

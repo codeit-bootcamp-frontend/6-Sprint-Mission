@@ -1,4 +1,4 @@
-import { getItems } from "../../Api.js";
+import { getItems } from "../../api/Api.js";
 import Select from "react-select";
 import { useState, useEffect, React } from "react";
 import ProductList from "./ProductList.js";
@@ -16,25 +16,21 @@ function BasicProducts() {
     { value: "favorite", label: "좋아요순", className: "order-value-favorite" },
   ];
   const customStyles = {
-    control: (styles) => ({
-      ...styles,
+    control: (provided) => ({
       borderRadius: "10px",
       border: "1px solid #ddd",
       boxShadow: "none",
       padding: "5px 6px",
-    }),
-    option: (styles, { isFocused, isSelected }) => ({
-      ...styles,
       "&:hover": {
         color: "#7db4f4",
       },
-      color: isSelected ? "#3182f6" : undefined,
+    }),
+    option: (styles, { isFocused, isSelected }) => ({
+      ...styles,
+      color: isSelected ? "#3182f6" : "inherit",
+      boderBottom: "1px solid #ddd",
       zIndex: 1,
       background: isFocused ? "#fff" : isSelected ? "#fff" : undefined,
-    }),
-    input: (styles) => ({
-      ...styles,
-      color: "transparent",
     }),
   };
   const handlePage = (pageNumber) => {
@@ -47,8 +43,7 @@ function BasicProducts() {
   };
 
   const productsLoad = async (orderBy, page) => {
-    const { list } = await getItems({ orderBy, page });
-    const { totalCount } = await getItems({ pageSize: 12 });
+    const { list, totalCount } = await getItems({ orderBy, page });
     setTotalCount(totalCount);
     setItems(list);
   };
@@ -61,7 +56,7 @@ function BasicProducts() {
       <div className="basic-product-header">
         <h2>전체 상품</h2>
         <input placeholder="검색할 상품을 입력해주세요" />
-        <Link to="addItem">
+        <Link to="/Product/addItem">
           <button>상품 등록하기</button>
         </Link>
         <div className="selectBox">

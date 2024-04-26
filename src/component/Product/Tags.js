@@ -37,7 +37,7 @@ function Tags({ name, value, onChange }) {
       />
       <ul>
         {addTags &&
-          addTags.map((tag, index) => (
+          addTags?.map((tag, index) => (
             <li key={index} className="tag">
               <span className="tagText">{tag}</span>
               <img

@@ -1,6 +1,6 @@
 import ProductList from "./ProductList.js";
 import { useState, useEffect, React } from "react";
-import { getItems } from "../../Api.js";
+import { getItems } from "../../api/Api.js";
 
 function BestProducts() {
   const [items, setItems] = useState([]);

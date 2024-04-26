@@ -52,12 +52,13 @@ function FormInput({ name, value, onChange }) {
 
   return (
     <div className="FileInput">
-      <img
-        src={imgPlaceHolder}
-        alt="이미지 등록 이미지"
-        onClick={() => inputRef.current?.click()} //useRef 사용해서 이미지 클릭시 input 태그가 클릭
-        className="img_placeholder"
-      />
+      <label htmlFor="imgInput">
+        <img
+          src={imgPlaceHolder}
+          alt="이미지 등록 이미지"
+          className="img_placeholder"
+        />
+      </label>
       {preview && (
         <div className="preview_area">
           <img
@@ -76,6 +77,7 @@ function FormInput({ name, value, onChange }) {
         type="file"
         name={name}
         onChange={handleChange}
+        id="imgInput"
         ref={inputRef}
         style={{ display: "none" }}
       />

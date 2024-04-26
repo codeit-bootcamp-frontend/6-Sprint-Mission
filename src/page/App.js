@@ -7,6 +7,7 @@ import NotFound from "./NotFound";
 import Join from "../component/member/Join";
 import Footer from "../component/Footer";
 import HomePage from "./HomePage";
+import ProductDetail from "./ProductDetail";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="Product">
             <Route index element={<Product />} />
+            <Route path=":id" element={<ProductDetail />} />
             <Route path="addItem" element={<AddItem />} />
           </Route>
           <Route path="login" element={<Login />} />
