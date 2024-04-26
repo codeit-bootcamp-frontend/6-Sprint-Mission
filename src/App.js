@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -19,12 +18,12 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="items" element={<MarketPage />} />
+          <Route path="items" element={<MarketPage />} />
           <Route path="additem" element={<AddItemPage />} />
           <Route path="community" element={<CommunityFeedPage />} />
         </Routes>
       </div>
     </BrowserRouter>
-
   );
 }
 

@@ -4,9 +4,8 @@ import ItemCard from "./ItemCard";
 import { ReactComponent as SortIcon } from "../../../assets/images/icons/ic_sort.svg";
 import { ReactComponent as SearchIcon } from "../../../assets/images/icons/ic_search.svg";
 import { Link } from "react-router-dom";
-import DropdownList from "../../../components/UI/DropdownList";
+import DropdownMenu from "../../../components/UI/DropdownMenu";
 import PaginationBar from "../../../components/UI/PaginationBar";
-import AddItemPage from "../../AddItemPage/AddItemPage.jsx"
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -27,7 +26,6 @@ function AllItemsSection() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(getPageSize());
   const [itemList, setItemList] = useState([]);
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [totalPageNum, setTotalPageNum] = useState();
 
   const fetchSortedData = async ({ orderBy, page, pageSize }) => {
@@ -38,7 +36,6 @@ function AllItemsSection() {
 
   const handleSortSelection = (sortOption) => {
     setOrderBy(sortOption);
-    setIsDropdownVisible(false);
   };
 
   useEffect(() => {
@@ -55,10 +52,6 @@ function AllItemsSection() {
       window.removeEventListener("resize", handleResize);
     };
   }, [orderBy, page, pageSize]);
-
-  const toggleDropdown = () => {
-    setIsDropdownVisible(!isDropdownVisible);
-  };
 
   const onPageChange = (pageNumber) => {
     setPage(pageNumber);
@@ -81,17 +74,7 @@ function AllItemsSection() {
             placeholder="검색할 상품을 입력해 주세요"
           />
         </div>
-        <div className="sortButtonWrapper">
-          <button
-            className="sortDropdownTriggerButton"
-            onClick={toggleDropdown}
-          >
-            <SortIcon />
-          </button>
-          {isDropdownVisible && (
-            <DropdownList onSortSelection={handleSortSelection} />
-          )}
-        </div>
+        <DropdownMenu onSortSelection={handleSortSelection} />
       </div>
 
       <div className="allItemsCardSection">

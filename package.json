@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "m4",
-=======
-  "name": "1-weekly-mission",
->>>>>>> 66f3ba6e6e7435aa827db8a2a9ce4b80c9b9d177
+  "name": "panda-market-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,11 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-router-dom": "^6.22.3",
-=======
->>>>>>> 66f3ba6e6e7435aa827db8a2a9ce4b80c9b9d177
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

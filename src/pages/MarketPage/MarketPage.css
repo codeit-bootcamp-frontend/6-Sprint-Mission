@@ -75,17 +75,6 @@
   padding-bottom: 16px;
 }
 
-.sortButtonWrapper {
-  position: relative;
-}
-
-.sortDropdownTriggerButton {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 9px;
-  margin-left: 8px;
-}
-
 .searchBarWrapper {
   display: flex;
   background-color: #f3f4f6;
