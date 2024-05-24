@@ -1,0 +1,11 @@
+.roducintroduction {
+  width: 1200px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.productWord {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.48px;
+}

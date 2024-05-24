@@ -1,0 +1,12 @@
+.producttag {
+  width: 1200px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+}
+
+.productWord {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.48px;
+}
