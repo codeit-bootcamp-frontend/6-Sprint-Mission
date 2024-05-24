@@ -1,13 +1,21 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../style/bestMarket.css";
-import Commas from "../util/Commas";
-import HeartIcon from "../assets/icon/ic_heart.svg";
-import { getMarketData } from "./API";
+import "../../style/bestMarket.css";
+import HeartIcon from "../../assets/icon/ic_heart.svg";
+import { getMarketData } from "../API/API";
 import { useMediaQuery } from "react-responsive";
+import Commas from "../../util/Commas";
+
+interface MarketItem {
+  id: number;
+  name: string;
+  images: string[];
+  price: number;
+  favoriteCount: number;
+}
 
 export default function BestMarket() {
-  const [bestData, setBestData] = useState([]);
+  const [bestData, setBestData] = useState<MarketItem[]>([]);
   const isMobile = useMediaQuery({
     query: "(max-width: 767px)",
   });

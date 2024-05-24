@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from "react";
-import "../style/allMarket.css";
-import LinkButton from "../common/Button";
-import HeartIcon from "../assets/icon/ic_heart.svg";
-import Arrow_left from "../assets/icon/ic_arrow_left.svg";
-import Arrow_right from "../assets/icon/ic_arrow_right.svg";
+import "../../style/allMarket.css";
+import HeartIcon from "../../assets/icon/ic_heart.svg";
+import Arrow_left from "../../assets/icon/ic_arrow_left.svg";
+import Arrow_right from "../../assets/icon/ic_arrow_right.svg";
 import { Link } from "react-router-dom";
-import { SearchInput } from "./SearchInput";
-import Commas from "../util/Commas";
 import SelectBtn from "./SelectBtn";
-import { getMarketData } from "./API";
+import { getMarketData } from "../API/API";
 import { useMediaQuery } from "react-responsive";
+import { SearchInput } from "./SearchInput";
+import Commas from "../../util/Commas";
+import LinkButton from "../../common/Button";
+
+interface Item {
+  id: number;
+  name: string;
+  images: string[];
+  price: number;
+  favoriteCount: number;
+}
 
 export default function AllMarket() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Item[]>([]);
   const [order, setOrder] = useState("recent");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -45,11 +53,11 @@ export default function AllMarket() {
     fetchData();
   }, [currentPage, order, isMobile, isTablet]);
 
-  const handleSortOrderChange = (selectedOrder) => {
+  const handleSortOrderChange = (selectedOrder: string) => {
     setOrder(selectedOrder);
   };
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
     }
@@ -148,7 +156,6 @@ export default function AllMarket() {
           <img
             src={Arrow_left}
             onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
             alt="arrow_left"
           />
         </div>
@@ -157,7 +164,6 @@ export default function AllMarket() {
           <img
             src={Arrow_right}
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
             alt="arrow_right"
           />
         </div>

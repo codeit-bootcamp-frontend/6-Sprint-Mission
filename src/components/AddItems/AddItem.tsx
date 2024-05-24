@@ -1,35 +1,38 @@
-import "../style/additem.css";
-import { useCallback, useEffect, useState } from "react";
-import ic_x_gray from "../assets/icon/ic_x_gray.svg";
-import ic_x_blue from "../assets/icon/ic_x_blue.svg";
+import "../../style/additem.css";
+import React, { useCallback, useEffect, useState } from "react";
+import ic_x_gray from "../../assets/icon/ic_x_gray.svg";
+import ic_x_blue from "../../assets/icon/ic_x_blue.svg";
 
 export default function AddItem() {
-  const [imageSrc, setImageSrc] = useState("");
-  const [isAllInputFilled, setIsAllInputFilled] = useState(false);
-  const [inputPrice, setInputPrice] = useState("");
-  const [inputName, setInputName] = useState("");
-  const [inputDes, setInputDes] = useState("");
-  const [tags, setTags] = useState([]);
-  const [inputTag, setInputTag] = useState("");
-  const [imageHovered, setImageHovered] = useState(false);
-  const [tagHovered, setTagHovered] = useState(Array(10).fill(false));
+  const [imageSrc, setImageSrc] = useState<string>("");
+  const [isAllInputFilled, setIsAllInputFilled] = useState<boolean>(false);
+  const [inputPrice, setInputPrice] = useState<string>("");
+  const [inputName, setInputName] = useState<string>("");
+  const [inputDes, setInputDes] = useState<string>("");
+  const [tags, setTags] = useState<string[]>([]);
+  const [inputTag, setInputTag] = useState<string>("");
+  const [imageHovered, setImageHovered] = useState<boolean>(false);
+  const [tagHovered, setTagHovered] = useState<boolean[]>(Array(10).fill(false));
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = (event) => {
-        setImageSrc(event.target.result);
+        const result = event.target?.result;
+        if (result) {
+          setImageSrc(result.toString());
+        }
       };
       reader.readAsDataURL(file);
     }
   };
 
-  function Commas(n) {
+  function Commas(n: string) {
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  const handlePriceChange = (e) => {
+  const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const price = e.target.value.replace(/\D/g, "");
     const formattedPrice = Commas(price);
     setInputPrice(formattedPrice);
@@ -50,17 +53,17 @@ export default function AddItem() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tags]);
 
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputName(e.target.value);
     handleInputChange();
   };
 
-  const handleDesChange = (e) => {
+  const handleDesChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputDes(e.target.value);
     handleInputChange();
   };
 
-  const handleTagInputKeyDown = (e) => {
+  const handleTagInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && inputTag.trim() !== "") {
       const newTag = inputTag.trim();
       if (!tags.includes(newTag)) {
@@ -73,7 +76,7 @@ export default function AddItem() {
     }
   };
 
-  const handleTagDelete = (index) => {
+  const handleTagDelete = (index: number) => {
     const updatedTags = [...tags];
     updatedTags.splice(index, 1);
     setTags(updatedTags);

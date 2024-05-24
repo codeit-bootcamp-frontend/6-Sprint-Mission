@@ -1,7 +1,8 @@
-import SearchIcon from "../assets/icon/ic_search.svg";
-import "../style/SearchInput.css";
+import React from "react";
+import SearchIcon from "../../assets/icon/ic_search.svg";
+import "../../style/SearchInput.css";
 
-export function SearchInput() {
+export function SearchInput(): JSX.Element {
   return (
     <div className="search">
       <img src={SearchIcon} alt="검색" />
