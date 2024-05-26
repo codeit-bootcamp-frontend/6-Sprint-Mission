@@ -7,12 +7,11 @@ import CommunityFeedPage from "./pages/CommunityFeedPage/CommunityFeedPage";
 import Header from "./components/Layout/Header";
 import ItemDetailPage from "./pages/ItemDetailPage/ItemDetailPage";
 
-function App() {
+function App(): JSX.Element {
   return (
     <BrowserRouter>
       {/* Global Navigation Bar */}
       <Header />
-
       <div className="withHeader">
         <Routes>
           {/* React Router v6부터는 path="/" 대신 간단하게 `index`라고 표기하면 돼요 */}
