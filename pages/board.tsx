@@ -19,7 +19,7 @@ export default function Board() {
         {/* 드롭다운 컴포넌트 */}
         </div>
         {/* 게시글 컴포넌트  */}
-        응애dddd
+        응애ddddaazz
       </div>
     </div>
   );
