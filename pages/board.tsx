@@ -14,7 +14,12 @@ export default function Board() {
           <span>게시글</span>
           <LinkButton href="/">글쓰기</LinkButton>
         </div>
+        <div className={styles.postsMiddle}>
         {/* 검색 컴포넌트 */}
+        {/* 드롭다운 컴포넌트 */}
+        </div>
+        {/* 게시글 컴포넌트  */}
+        응애dddd
       </div>
     </div>
   );
