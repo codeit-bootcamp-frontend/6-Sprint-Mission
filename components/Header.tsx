@@ -6,7 +6,7 @@ import logo from '@/public/logo.png';
 import mobileLogo from '@/public/logo-mobile.png';
 import profileIcon from '@/public/icon/profile.png';
 
-function Header() {
+export default function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.container}>
@@ -32,5 +32,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
