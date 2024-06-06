@@ -1,0 +1,32 @@
+.dropdownButtonWrapper {
+  position: relative;
+}
+.dropdownButton {
+  width: 130px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #1f2937;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 30px;
+}
+
+.dropdownSortingOptions {
+  position: absolute;
+  top: 50px;
+  width: 130px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1f2937;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  gap: 15px;
+  background-color: #ffffff;
+}

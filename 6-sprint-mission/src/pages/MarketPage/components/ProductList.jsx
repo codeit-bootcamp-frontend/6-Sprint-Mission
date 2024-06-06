@@ -1,6 +1,6 @@
-import "./ProductList.css";
-import HeartIcon from "./images/ic_heart.png";
-import SearchIcon from "./images/ic_search.png";
+import './ProductList.module.css'
+import HeartIcon from './images/ic_heart.png'
+import SearchIcon from './images/ic_search.png'
 
 function ProductListItem({ item }) {
   return (
@@ -21,7 +21,7 @@ function ProductListItem({ item }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 function ProductList({ items }) {
@@ -44,11 +44,11 @@ function ProductList({ items }) {
             <div className="Grid-item">
               <ProductListItem item={item} />
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
 
-export default ProductList;
+export default ProductList

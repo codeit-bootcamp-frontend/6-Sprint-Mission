@@ -1,0 +1,59 @@
+/* .bestItemsContainer {
+  padding-top: 17px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+
+.bestItemsCardSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .bestItemsContainer {
+    margin-bottom: 40px;
+  }
+
+  .bestItemsCardSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bestItemsCardSection {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */
+
+.bestItemsContainer {
+  width: 1200px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.bestItemsCardSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bestItemCard {
+  width: 282px;
+  height: 362px;
+}

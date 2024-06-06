@@ -1,0 +1,168 @@
+.sectionTitle {
+  color: #111827;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal;
+}
+
+.itemCard {
+  color: #1f2937;
+  overflow: hidden;
+  cursor: pointer;
+  width: 282px;
+}
+
+.itemCardThumbnail {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.itemSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.itemName {
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration-line: none;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+
+.favoriteCount {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.bestItemsContainer {
+  padding-top: 17px;
+  padding-bottom: 24px;
+}
+
+.allItemsCardSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 8px;
+}
+
+.allItemsSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.allItemsSectionHeader:first-child {
+  padding-bottom: 8px;
+}
+
+.allItemsSectionHeader:nth-child(2) {
+  padding-bottom: 16px;
+}
+
+.sortButtonWrapper {
+  position: relative;
+}
+
+.sortDropdownTriggerButton {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 9px;
+  margin-left: 8px;
+}
+
+.searchBarWrapper {
+  display: flex;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 9px 16px;
+  flex: 1;
+  align-items: center;
+
+  width: 293px;
+  height: 24px;
+  left: 588px;
+  gap: 10px;
+}
+
+.searchBarInput {
+  border: none;
+  flex: 1;
+  background-color: inherit;
+  margin-left: 4px;
+}
+
+.searchBarInput::placeholder {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+.linkButton {
+  width: 87;
+  height: 18;
+  padding: 12px 23px;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: #3692ff;
+  color: #ffffff;
+  text-decoration-line: none;
+}
+
+.paginationBarWrapper {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .bestItemsContainer {
+    margin-bottom: 40px;
+  }
+
+  .bestItemsCardSection {
+    width: 696px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .allItemsCardSection {
+    width: 696px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bestItemsCardSection {
+    width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .allItemsCardSection {
+    width: 1200px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 24px;
+  }
+}

@@ -1,0 +1,90 @@
+.allItemsCardSection {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 8px;
+}
+
+.allItemsSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.allItemsSectionNav {
+  display: flex;
+  gap: 12px;
+}
+
+.searchBarWrapper {
+  position: relative;
+}
+
+.searchBarIcon {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+}
+
+.searchBarInput {
+  width: 285px;
+  height: 42px;
+  gap: 10px;
+  border: none;
+  padding-left: 40px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+}
+
+.linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 133px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #3692ff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.allItemsSectionHeader:first-child {
+  padding-bottom: 8px;
+}
+
+.allItemsSectionHeader:nth-child(2) {
+  padding-bottom: 16px;
+}
+
+.allItemCard {
+  width: 221px;
+  height: 301px;
+}
+
+.paginationBarWrapper {
+  padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .allItemsCardSection {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .allItemsCardSection {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 24px;
+  }
+}

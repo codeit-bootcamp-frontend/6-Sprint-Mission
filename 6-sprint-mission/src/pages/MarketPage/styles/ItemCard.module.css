@@ -1,0 +1,48 @@
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.itemSummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.itemCardThumbnail {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 16px;
+}
+
+.itemName {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  margin: 0;
+  color: #1f2937;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.09px;
+  color: #1f2937;
+}
+
+.favoriteCount {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.32px;
+  display: flex;
+  gap: 4px;
+  color: #4b5563;
+}
+
+.heartIcon {
+  width: 16px;
+  height: 16px;
+}

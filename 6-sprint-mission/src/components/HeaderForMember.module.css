@@ -1,4 +1,4 @@
-.Header {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   border-bottom: solid 1px #dfdfdf;
 }
 
-.Nav {
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,12 +15,12 @@
   gap: 40px;
 }
 
-.HeaderLogo {
+.headerLogo {
   width: 153px;
   height: 51px;
 }
 
-.자유게시판 {
+.freeBoard {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.48px;
@@ -28,7 +28,7 @@
   color: #4b5563;
 }
 
-.중고마켓 {
+.usedMarket {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.48px;
@@ -36,49 +36,36 @@
   color: #3692ff;
 }
 
-.LoginButton {
-  width: 88px;
-  height: 42px;
-  padding: 12px 23px;
-  border-radius: 8px;
-  background-color: #3692ff;
-  color: #ffffff;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 19.09px;
-}
-
 /* PC: 1200px 이상
-Tablet: 768px 이상 ~ 1199px 이하
-Mobile: 375px 이상 ~ 767px 이하 */
+  Tablet: 768px 이상 ~ 1199px 이하
+  Mobile: 375px 이상 ~ 767px 이하 */
 
 @media (max-width: 1199px) {
-  .Header {
+  .header {
     padding: 10px 24px;
   }
 
-  .Nav {
+  .nav {
     gap: 15px;
   }
 
-  .HeaderLogo {
+  .headerLogo {
     width: 103px;
     height: 35px;
   }
 }
 
 /* @media (max-width: 767px) {
-  .Header {
-    padding: 15px 16px;
-  }
-
-  .Nav {
-    gap: 10px;
-  }
-
-  .HeaderLogo {
-    width: 81px;
-    height: 40px;
-  }
-} */
+    .Header {
+      padding: 15px 16px;
+    }
+  
+    .Nav {
+      gap: 10px;
+    }
+  
+    .HeaderLogo {
+      width: 81px;
+      height: 40px;
+    }
+  } */

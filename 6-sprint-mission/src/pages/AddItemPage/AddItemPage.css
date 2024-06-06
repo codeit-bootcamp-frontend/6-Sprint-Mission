@@ -35,7 +35,7 @@ h1 {
   cursor: pointer;
 }
 
-div p {
+.sectionTitle {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.48px;
@@ -43,7 +43,7 @@ div p {
   padding-bottom: 20px;
 }
 
-input {
+.addItemInput {
   width: calc(100% - 40px);
   height: 16px;
   border-radius: 12px;
