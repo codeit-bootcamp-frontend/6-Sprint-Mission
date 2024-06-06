@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.button {
+  margin: 0 2px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 16px;
+  color: var(--gray500);
+  cursor: pointer;
+}
+
+.inactive:hover {
+  background-color: #f0f0f0;
+}
+
+.active {
+  border-color: var(--blue);
+  background-color: var(--blue);
+  font-weight: 600;
+  color: white;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

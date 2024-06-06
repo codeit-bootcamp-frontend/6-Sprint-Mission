@@ -1,0 +1,29 @@
+.search {
+  display: flex;
+  align-items: center;
+  width: 325px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: var(--gray100);
+}
+
+.icon {
+  margin-left: 20px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray900);
+}
+
+::placeholder {
+  color: var(--gray400);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}

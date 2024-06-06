@@ -1,0 +1,40 @@
+.card-container {
+  max-width: 1200px;
+  margin: 24px auto 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.top {
+  margin-top: 100px;
+}
+
+.category {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray900);
+}
+
+.left {
+  display: flex;
+  gap: 12px;
+}
+
+.list {
+  display: grid;
+  margin-bottom: 40px;
+  gap: 40px 24px;
+}
+
+.all {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.best {
+  grid-template-columns: repeat(4, 1fr);
+}
