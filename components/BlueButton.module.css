@@ -1,0 +1,15 @@
+.write {
+  width: 84px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #3692ff;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}

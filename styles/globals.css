@@ -1,0 +1,16 @@
+body {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 900;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+body.white {
+  background-color: white;
+  color: black;
+}
+a {
+  text-decoration: none;
+}

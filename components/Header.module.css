@@ -1,0 +1,41 @@
+.header {
+  padding: 0 200px;
+  height: 70px;
+  border-bottom: 1px solid #dfdfdf;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 1920px;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 33px;
+}
+
+.leftNav div {
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  text-align: center;
+}
+
+.rightNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
