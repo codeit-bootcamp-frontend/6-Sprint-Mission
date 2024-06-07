@@ -1,0 +1,26 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+:root
+{
+	font-family: Pretendard;
+}
+
+@media (width < 1200px)
+{
+	main
+	{
+		scrollbar-width: none;
+	}
+}
+
+@layer components
+{
+	.button
+	{
+		@apply flex items-center justify-center text-[#FFFFFF] bg-[#3692FF] hover:bg-[#1967D6] focus:bg-[#1251AA] disabled:bg-[#9CA3AF];
+	}
+}
