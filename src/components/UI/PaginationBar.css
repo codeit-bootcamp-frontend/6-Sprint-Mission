@@ -6,11 +6,11 @@
 }
 
 .paginationButton {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--gray-200);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  color: #6b7280;
+  color: var(--gray-500);
   font-weight: 600;
   font-size: 16px;
   display: flex;

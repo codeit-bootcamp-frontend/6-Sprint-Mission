@@ -1,19 +1,22 @@
 /* Mobile styles */
 
+/* Updated color palette */
 :root {
   /* Gray scale */
-  --gray-900: #1b1d1f;
-  --gray-800: #26282b;
-  --gray-600: #454c53;
-  --gray-500: #72787f;
-  --gray-400: #9ea4a8;
+  --gray-900: #111827;
+  --gray-800: #1F2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-500: #6b7280;
+  --gray-400: #9ca3af;
   --gray-200: #e5e7eb;
-  --gray-100: #e8ebed;
-  --gray-50: #f7f7f8;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
 
   /* Primary color */
   --blue: #3692ff;
 
+  --red: #f74747;
   /* Layout dimensions */
   --header-height: 70px;
 }
@@ -56,7 +59,7 @@ svg {
 }
 
 body {
-  color: #374151;
+  color: var(--gray-700);
   word-break: keep-all;
   font-family: "Pretendard", sans-serif;
 }
@@ -81,8 +84,8 @@ header {
 }
 
 footer {
-  background-color: #111827;
-  color: #9ca3af;
+  background-color: var(--gray-900);
+  color: var(--gray-400);
   font-size: 16px;
   padding: 32px;
   display: flex;
@@ -113,6 +116,7 @@ footer {
   padding: 0 16px;
 }
 
+
 h1 {
   font-size: 40px;
   font-weight: 700;
@@ -137,7 +141,7 @@ h1 {
 }
 
 .button:disabled {
-  background-color: #9ca3af;
+  background-color: var(--gray-400);
   cursor: default;
   pointer-events: none;
 }
