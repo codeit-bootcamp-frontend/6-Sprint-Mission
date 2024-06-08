@@ -1,0 +1,21 @@
+.search_input {
+    width: 1054px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: #F3F4F6;
+    margin: 24px 0;
+    padding-left: 44px;
+}
+.search_input_wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search_icon {
+  position: absolute;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+}

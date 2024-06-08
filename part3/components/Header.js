@@ -8,16 +8,16 @@ function Header() {
       <div className={styles.logo}>
         <Image fill src="/logo_face.png" alt="판다마켓" />
       </div>
-      <ul className={styles.navMenu}>
-        <Link className={styles.linkStyles} href="/boards">
+      <ul className={styles.nav_menu}>
+        <Link className={styles.link_styles} href="/boards">
           자유게시판
         </Link>
-        <Link className={styles.linkStyles} href="/">
+        <Link className={styles.link_styles} href="/">
           중고마켓
         </Link>
       </ul>
-      <div className={styles.loginBtn}>
-        <p className={styles.loginBtnText}>로그인</p>
+      <div className={styles.login_btn}>
+        <p className={styles.login_btn_text}>로그인</p>
       </div>
     </header>
   );

@@ -7,15 +7,14 @@ function formatDate(value) {
 }
 
 export default function ArticleList({ articles = [] }) {
-  console.log(articles.writer);
   return (
-    <ul className={styles.articleContain}>
+    <ul className={styles.article_contain}>
       {articles.map((article) => (
         <li key={article.id}>
           <div className={styles.container}>
-            <p className={styles.titleText}>{article.title}</p>
+            <p className={styles.title_text}>{article.title}</p>
             {article.image && (
-              <div className={styles.imageSize}>
+              <div className={styles.image_size}>
                 <Image
                   fill
                   src={article.image}
@@ -28,15 +27,15 @@ export default function ArticleList({ articles = [] }) {
             )}
           </div>
           <div className={styles.container}>
-            <div className={styles.writerInfoWrap}>
+            <div className={styles.writer_info_wrap}>
               <p className={styles.nickname}>{article.writer.nickname}</p>
-              <p className={styles.writeTime}>
+              <p className={styles.write_time}>
                 {formatDate(article.createdAt)}
               </p>
             </div>
-            <p className={styles.likeCount}>{article.likeCount}</p>
+            <p className={styles.like_count}>{article.likeCount}</p>
           </div>
-          <hr className={styles.hrStyle}/>
+          <hr className={styles.hr_style}/>
         </li>
       ))}
     </ul>

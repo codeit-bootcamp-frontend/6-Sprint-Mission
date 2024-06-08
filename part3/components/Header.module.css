@@ -1,10 +1,10 @@
-.linkStyles{
+.link_styles{
     text-Decoration: none;
     padding: 24px 23px;
-    color: #4b5563;
+    color: #4B5563;
 }
-.linkStyles:hover{
-    color: #3692ff;
+.link_styles:hover{
+    color: #3692FF;
 }
 
 .nav{
@@ -15,7 +15,7 @@
     align-items: center;
     height: 70px;
     padding: 0 200px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 
 
@@ -25,16 +25,16 @@
     height: 51px;
 }
 
-.navMenu {
+.nav_menu {
     display: flex;
     list-style: none;
 }
 
-.navMenu li {
+.nav_menu li {
     padding: 24px 23px;
 }
 
-.loginBtn{
+.login_btn{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,10 +45,10 @@
     border-radius: 8px;
 }
 
-.loginBtn:hover {
+.login_btn:hover {
     background-color: #1967D6;
 }
 
-.loginBtnText {
-    color: #ffffff;
+.login_btn_text {
+    color: #FFFFFF;
 }
