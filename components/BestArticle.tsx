@@ -3,6 +3,7 @@ import React from "react";
 import Badge from "@/images/img_badge.svg";
 import Heart from "@/images/heart.svg";
 import { format } from "date-fns";
+import Link from "next/link";
 
 interface Article {
   id: number;
@@ -33,23 +34,25 @@ export default function BestArticle({
     <>
       {topArticles.map((article) => (
         <div key={article.id}>
-          <Container>
-            <Badge />
-            <Content>
-              <Text>{article.title}</Text>
-              {article.image ? (
-                <StyledImage src={article.image} alt="이미지" />
-              ) : (
-                <></>
-              )}
-            </Content>
-            <InfoContent>
-              <GrayText>{article.writer.nickname}</GrayText>
-              <Heart />
-              <GrayText>{article.likeCount}</GrayText>
-              <CreateAt>{format(article.createdAt, "yyyy. MM. dd")}</CreateAt>
-            </InfoContent>
-          </Container>
+          <Link href={`/addboard/${article.id}`}>
+            <Container>
+              <Badge />
+              <Content>
+                <Text>{article.title}</Text>
+                {article.image ? (
+                  <StyledImage src={article.image} alt="이미지" />
+                ) : (
+                  <></>
+                )}
+              </Content>
+              <InfoContent>
+                <GrayText>{article.writer.nickname}</GrayText>
+                <Heart />
+                <GrayText>{article.likeCount}</GrayText>
+                <CreateAt>{format(article.createdAt, "yyyy. MM. dd")}</CreateAt>
+              </InfoContent>
+            </Container>
+          </Link>
         </div>
       ))}
     </>

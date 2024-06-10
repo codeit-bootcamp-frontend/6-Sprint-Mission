@@ -8,6 +8,7 @@ import search from "@/images/ic_search.png";
 import ArrowDown from "@/images/arrow_down.svg";
 import Article from "@/components/Article";
 import sort from "@/images/ic_sort.png";
+import Link from "next/link";
 
 interface Article {
   id: number;
@@ -96,7 +97,15 @@ export default function Boards() {
         </BestSection>
         <div style={{ display: "flex" }}>
           <Title>게시글</Title>
-          <CreateButton>글쓰기</CreateButton>
+          <div
+            style={{
+              margin: "30px 0 30px auto",
+            }}
+          >
+            <Link href="/addboard">
+              <CreateButton>글쓰기</CreateButton>
+            </Link>
+          </div>
         </div>
         <div style={{ display: "flex" }}>
           <Search>
@@ -186,7 +195,6 @@ const CreateButton = styled.button`
   gap: 10px;
   width: 88px;
   height: 42px;
-  margin: 30px 0 30px auto;
   background: #3692ff;
   border: none;
   border-radius: 8px;

@@ -4,6 +4,7 @@ import Heart from "@/images/heart.svg";
 import ProfileImg from "@/images/ic_profile.png";
 import Image from "next/image";
 import { format } from "date-fns";
+import Link from "next/link";
 
 interface Article {
   id: number;
@@ -27,28 +28,32 @@ export default function Article({ articles }: ArticleProps) {
     <div>
       {articles.map((article) => (
         <div key={article.id}>
-          <Container>
-            <div style={{ display: "flex" }}>
-              <Content>{article.title}</Content>
-              {article.image ? (
-                <StyledImage src={article.image} alt="이미지" />
-              ) : (
-                <></>
-              )}
-            </div>
-            <div style={{ display: "flex" }}>
-              <Group>
-                <Image src={ProfileImg} alt="프로필 이미지" />
-                <GrayText>{article.writer.nickname}</GrayText>
-                <CreateAt>{format(article.createdAt, "yyyy. MM. dd")}</CreateAt>
-              </Group>
-              <HeartGroup>
-                <Heart />
-                <GrayText>{article.likeCount}</GrayText>
-              </HeartGroup>
-            </div>
-          </Container>
-          <Divider />
+          <Link href={`/addboard/${article.id}`}>
+            <Container>
+              <div style={{ display: "flex" }}>
+                <Content>{article.title}</Content>
+                {article.image ? (
+                  <StyledImage src={article.image} alt="이미지" />
+                ) : (
+                  <></>
+                )}
+              </div>
+              <div style={{ display: "flex" }}>
+                <Group>
+                  <Image src={ProfileImg} alt="프로필 이미지" />
+                  <GrayText>{article.writer.nickname}</GrayText>
+                  <CreateAt>
+                    {format(article.createdAt, "yyyy. MM. dd")}
+                  </CreateAt>
+                </Group>
+                <HeartGroup>
+                  <Heart />
+                  <GrayText>{article.likeCount}</GrayText>
+                </HeartGroup>
+              </div>
+            </Container>
+            <Divider />
+          </Link>
         </div>
       ))}
     </div>
