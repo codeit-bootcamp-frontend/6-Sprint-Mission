@@ -23,13 +23,13 @@
   --btn5: #4b5563;
 
   --bannerbg: #cfe5ff;
-  --coolGray50:#F9FAFB;
+  --coolGray50: #f9fafb;
   --coolGray800: #1f2937;
   --coolGray100: #f3f4f6;
-  --coolGray400: #9CA3AF;
-  --coolGray500: #6B7280;
-  --coolGray600: #4B5563;
-  --coolGray800: #1F2937;
+  --coolGray400: #9ca3af;
+  --coolGray500: #6b7280;
+  --coolGray600: #4b5563;
+  --coolGray800: #1f2937;
   /* font-size */
   --font-15: 1.5rem;
   --font-16: 1.6rem;
@@ -60,7 +60,17 @@ a {
   text-decoration: none;
 }
 
-button{
+button {
   cursor: pointer;
   border: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flexcenter {
+    @aplly flex items-center justify-center;
+  }
 }

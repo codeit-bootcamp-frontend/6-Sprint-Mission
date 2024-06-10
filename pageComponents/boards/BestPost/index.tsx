@@ -3,7 +3,7 @@ import PostElement from "./components/PostElement";
 import styles from "./style.module.css";
 import useSetNumOfItemsToShow from "@/hooks/useSetNumberOfItemsToShow";
 import useLoad from "@/hooks/useLoad";
-import { getArticle } from "@/apis/getArticles";
+import { getArticles } from "@/apis/getArticles";
 import { FAVORITE, RECENT } from "@/constants/sortBy";
 
 interface ArticleType {
@@ -28,7 +28,7 @@ const BestPost = () => {
     mobile: 1,
   });
   const showedPost = posts.slice(0, numOfItemsToShow);
-  const [isLoading, loadingError, handleLoad] = useLoad(getArticle);
+  const [isLoading, loadingError, handleLoad] = useLoad(getArticles);
 
   const handleBestPostLoad = async () => {
     const nextPosts = await handleLoad({

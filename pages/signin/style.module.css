@@ -1,0 +1,175 @@
+/* 판다마켓 로고 */
+.sign_header {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 39.6rem;
+  height: 13.2rem;
+}
+
+/* 메인 */
+.sign_main {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+.login_content {
+  width: 64rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* 이메일 아이디 로그인 버튼 */
+.login_form {
+  display: flex;
+  flex-direction: column;
+}
+.login_form input {
+  margin: 1.6rem 0 0 0;
+  background-color: var(--coolGray100);
+  width: 64rem;
+  height: 5.6rem;
+  border-radius: 1.2rem;
+  border: none;
+  padding-left: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: left;
+}
+.login_form input:focus {
+  outline-color: var(--btn1);
+}
+.login_form label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.1rem;
+  text-align: left;
+  color: var(--coolGray800);
+}
+.user_input {
+  margin-bottom: 2.4rem;
+}
+.user_input_section {
+  position: relative;
+  height: 9.3rem;
+}
+.password_visible_btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 57%;
+  right: 2.4rem;
+  cursor: pointer;
+}
+
+.login_form .err_input {
+  border: 1.5px solid var(--error);
+  margin-bottom: 0.8rem;
+}
+
+.input_err_message {
+  margin-left: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--error);
+}
+.login_form button {
+  padding: 1.6rem 0 1.6rem 0;
+  border-radius: 4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  background-color: var(--btn1);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.login_form button:disabled {
+  background-color: var(--btn4);
+  cursor: not-allowed;
+}
+/* 간편 로그인 */
+.login_easy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6f2ff;
+  padding: 1.6rem 2.3rem 1.6rem 2.3rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.sns_icon img {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+.sns_icon img:first-child {
+  margin-right: 1.6rem;
+}
+
+/* 처음이신가요? */
+.login_first {
+  text-align: center;
+}
+.login_first span {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-align: left;
+  color: var(--coolGray800);
+}
+.login_first span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--coolGray800);
+}
+.login_first a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #3182f6;
+}
+
+@media (max-width: 375px) {
+  .sign_header {
+    padding: 2.4rem 0rem;
+    text-align: center;
+  }
+  .logo {
+    width: 19.8rem;
+    height: 6.6rem;
+  }
+  .sign_main {
+    padding: 0px 1.6rem;
+  }
+  .login_content {
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  .login_form label {
+    font-size: 1.4rem;
+    line-height: 1.67rem;
+  }
+
+  .login_form input {
+    margin: 0.8px 0 1.6rem 0;
+    width: 100%;
+    height: 5.6rem;
+  }
+
+  .login_form button {
+    padding: 1.6rem 12.4rem;
+  }
+  .password_visible_btn {
+    top: 40%;
+  }
+}

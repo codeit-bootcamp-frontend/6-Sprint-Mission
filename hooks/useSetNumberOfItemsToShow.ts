@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { TABLET_WIDTH, MOBILE_WIDTH } from "@/constants/screenSizes";
 
-
-interface propType {
+interface PropType {
   desktop: number;
   tablet: number;
   mobile: number;
 }
-type useSetNumOfItemsToShowType = (prop: propType) => number;
+type useSetNumOfItemsToShowType = (prop: PropType) => number;
 
 const useSetNumOfItemsToShow: useSetNumOfItemsToShowType = ({
   desktop,

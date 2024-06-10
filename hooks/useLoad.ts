@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { GetArticleType } from "@/apis/getArticles";
+import { GetArticlesType } from "@/apis/getArticles";
 
-type PropGetData = GetArticleType;
-// 나중에 다른 api 함수들도 유니온 |로 추가 할 예정인데, 좀 귀찮은 것 같아요. 더 좋은 방법 없나여?
+type PropGetData = GetArticlesType;
+
 type HandleLoadType = (
   ...arg: Parameters<PropGetData>
 ) => ReturnType<PropGetData>;

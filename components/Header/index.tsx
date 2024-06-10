@@ -19,7 +19,7 @@ const Header = () => {
           <Link
             href="/boards"
             className={`${styles.navLink} ${
-              pathname === "/boards" ? styles.active : ""
+              pathname.includes("/boards") ? styles.active : ""
             }`}
           >
             자유게시판

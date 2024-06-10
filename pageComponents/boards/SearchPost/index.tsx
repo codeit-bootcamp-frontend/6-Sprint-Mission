@@ -6,8 +6,9 @@ import Image from "next/image";
 import ic_search from "@/images/ic_search.svg";
 import { FAVORITE, RECENT } from "@/constants/sortBy";
 import useLoad from "@/hooks/useLoad";
-import { getArticle } from "@/apis/getArticles";
+import { getArticles } from "@/apis/getArticles";
 import useInfiniteScroll from "@/hooks/useInfiniteScroll";
+import { useRouter } from "next/router";
 
 interface ArticleType {
   id: number;
@@ -28,7 +29,8 @@ const SearchPost = () => {
   const [order, setOrder] = useState(RECENT);
   const [keyword, setKeyword] = useState("");
   const [page, setPage] = useState(1);
-  const [isLoading, loadingError, handleLoad] = useLoad(getArticle);
+  const [isLoading, loadingError, handleLoad] = useLoad(getArticles);
+  const router = useRouter();
 
   const scrollAction = async () => {
     const nextPosts = await handleLoad({
@@ -80,6 +82,10 @@ const SearchPost = () => {
     }
   };
 
+  const handleWriteBtn = () => {
+    router.push("/addArticle");
+  };
+
   useEffect(() => {
     handlePostLoad();
   }, [order]);
@@ -88,7 +94,9 @@ const SearchPost = () => {
     <div className={styles.container}>
       <header>
         <h2 className={styles.title}>게시글</h2>
-        <button className={styles.write_btn}>글쓰기</button>
+        <button className={styles.write_btn} onClick={handleWriteBtn}>
+          글쓰기
+        </button>
       </header>
       <div className={styles.search}>
         <form className={styles.search_input} onSubmit={handleSearchSubmit}>
@@ -99,7 +107,7 @@ const SearchPost = () => {
             width={24}
             height={24}
           />
-          <input name="search" placeholder="검색할 상품을 입력해주세요" />
+          <input name="search" placeholder="검색할 상품을 입력해주세요" type="search"/>
         </form>
 
         <div className={styles.selectOrderBtn}>

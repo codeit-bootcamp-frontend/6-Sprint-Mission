@@ -1,0 +1,97 @@
+/* 이미지 인풋 */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  height: 28.2rem;
+}
+.container label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.1rem;
+  color: var(--coolGray800);
+}
+
+.content {
+  display: flex;
+  height: 28.2rem;
+  gap: 2.4rem;
+}
+
+.fileInput {
+  display: none;
+}
+
+.btn_upload {
+  width: 28.2rem;
+  height: 100%;
+  background-color: var(--coolGray100);
+  border: none;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.btn_upload:hover {
+  background-color: white;
+  color: black;
+}
+.btn_upload span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.preview_section {
+  width: 28.2rem;
+  height: 100%;
+  border-radius: 1.2rem;
+  background-color: var(--coolGray100);
+  position: relative;
+}
+.image_preview {
+  width: 100%;
+  height: 100%;
+}
+
+.preview_delete_btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 744px) {
+  .content {
+    gap: 1.6rem;
+    height: 16.2rem;
+  }
+  .btn_upload {
+    width: 16.2rem;
+  }
+  .preview_section {
+    width: 16.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .content {
+    gap: 0.8rem;
+    height: 16.8rem;
+  }
+  .btn_upload {
+    width: 16.8rem;
+  }
+  .preview_section {
+    width: 16.8rem;
+  }
+  .container label {
+    font-size: 1.4rem;
+  }
+  .container {
+    gap: 1.6rem;
+  }
+}

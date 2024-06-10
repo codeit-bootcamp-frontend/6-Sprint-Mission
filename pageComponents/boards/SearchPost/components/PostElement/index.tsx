@@ -19,10 +19,10 @@ interface PostType {
   };
 }
 const PostElement = ({ post }: { post: PostType }) => {
-  const { title, image, likeCount, updatedAt, writer } = post;
+  const { id, title, image, likeCount, updatedAt, writer } = post;
   const postingDate = formatTime(updatedAt);
   return (
-    <Link href="/boards" className={styles.container}>
+    <Link href={`/boards/${id}`} className={styles.container}>
       <div className={styles.title_img}>
         <h2 className={styles.title}>{title}</h2>
         {image && (

@@ -64,6 +64,10 @@
   background-color: var(--coolGray100);
   border: none;
   padding-left: 4.4rem;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: black;
 }
 
 .search_input input::placeholder {

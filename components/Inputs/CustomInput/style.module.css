@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.container label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.1rem;
+  color: var(--coolGray800);
+}
+
+.container input {
+  height: 5.6rem;
+  border-radius: 1.2rem;
+  border: none;
+  background-color: var(--coolGray100);
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+@media (max-width: 375px) {
+  .container label {
+    font-size: 1.4rem;
+  }
+  .container {
+    gap: 1.6rem;
+  }
+}
