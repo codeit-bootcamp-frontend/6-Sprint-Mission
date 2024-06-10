@@ -1,0 +1,138 @@
+.container {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #111827;
+  margin: 30px 0;
+}
+
+.BestPosts {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.postNav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 19px;
+  gap: 10px;
+  width: 88px;
+  height: 42px;
+  margin: 30px 0 30px auto;
+  background: #3692ff;
+  border: none;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.search {
+  display: flex;
+  margin-left: -40px;
+  max-width: 1200px;
+}
+
+.searchImg {
+  position: relative;
+  top: 10px;
+  left: 40px;
+  width: 24px;
+  height: 24px;
+  z-index: 999;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 9px 20px 9px 46px;
+  gap: 10px;
+  border: none;
+  width: 1054px;
+  height: 42px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  color: black;
+}
+
+.selectButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  gap: 10px;
+  width: 130px;
+  height: 42px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.Order {
+  width: 65px;
+  font-size: 16px;
+}
+
+.MobileSort {
+  display: none;
+}
+
+.OptionsContainer {
+  position: absolute;
+  z-index: 1;
+  width: 130px;
+  height: 84px;
+  background: #ffffff;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #e5e7eb;
+  border-radius: 12px 12px 12px 12px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1f2937;
+  right: 0;
+}
+
+.Option {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 42px;
+  border-bottom: 1px solid #ccc;
+}
+
+.Option &:hover {
+  background-color: #ddd;
+}

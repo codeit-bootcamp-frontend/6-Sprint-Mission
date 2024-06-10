@@ -1,0 +1,30 @@
+
+
+.header{
+  width: 100%;
+}
+.container{
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  padding: 10px 200px;
+  justify-content: space-between;
+    .leftbox{
+      margin-top: 10px;
+      display: flex;
+      .logo{
+        padding: 10px;
+      }
+      .nav{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 900;
+        padding: 24px 23px;
+      }
+    }
+    .profile{
+      padding: 24px;
+    }
+}
+
+
