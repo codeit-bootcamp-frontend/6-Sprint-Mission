@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from "react";
 import BestPosts from "./components/BestPosts";
 import AllPost from "./components/AllPost";
-const index = () => {
+import { Articles } from "@/types/articleResponseTypes";
+import Layout from "@/components/UI/Layout";
+interface IndexProps {
+  initialBestArticle: Articles;
+  initialAllArticle: Articles;
+}
+const index: React.FC<IndexProps> = ({
+  initialAllArticle,
+  initialBestArticle,
+}) => {
   return (
-    <>
-      <BestPosts />
-      <AllPost />
-    </>
+    <Layout>
+      <BestPosts initialArticle={initialBestArticle} />
+      <AllPost initialArticle={initialAllArticle} />
+    </Layout>
   );
 };
 

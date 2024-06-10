@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { OrderBy } from "../../../types/articleTypes";
+import { OrderBy } from "../../../types/articleResponseTypes";
 interface DropdownMenuProps {
   onSortSelection: (sortOption: OrderBy) => void;
 }

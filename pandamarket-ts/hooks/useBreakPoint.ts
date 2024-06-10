@@ -2,17 +2,18 @@ import { useState, useEffect } from "react";
 
 // 화면 크기를 감지하고 디바이스 타입을 반환하는 커스텀 훅
 const useBreakPoint = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [device, setDevice] = useState<"mobile" | "tablet" | "desktop">(
+    "desktop"
+  );
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-
-      setIsMobile(width < 768);
-      setIsTablet(width >= 768 && width < 1024);
-      setIsDesktop(width >= 1024);
+      width < 768
+        ? setDevice("mobile")
+        : width >= 768 && width < 1024
+        ? setDevice("tablet")
+        : setDevice("desktop");
     };
 
     // 초기 화면 크기 설정
@@ -27,7 +28,7 @@ const useBreakPoint = () => {
     };
   }, []);
 
-  return { isMobile, isTablet, isDesktop };
+  return { device };
 };
 
 export default useBreakPoint;
