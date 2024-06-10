@@ -4,7 +4,7 @@ import AllItemSection from "./components/AllItemSection";
 function MarketPage() {
   return (
     <>
-      <div>
+      <div className="m-[24px]">
         <BestItemSection />
         <AllItemSection />
       </div>

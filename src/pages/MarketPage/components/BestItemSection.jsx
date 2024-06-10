@@ -5,7 +5,9 @@ import ItemCard from "./ItemCard";
 
 const getPageSize = () => {
   const width = window.innerWidth;
-  if (width < 768) {
+  if (width < 400) {
+    return 1;
+  } else if (width < 800) {
     return 1;
   } else if (width < 1280) {
     return 2;
@@ -20,10 +22,6 @@ function BestItemSection() {
   const [item, setItem] = useState([]);
   const [page, setPage] = useState(pageFromStorage);
   const [pageSize, setPageSize] = useState(getPageSize());
-
-  // const handleSelection = (option) => {
-  //   setItem(option);
-  // };
 
   useEffect(() => {
     sessionStorage.setItem("page", page);
@@ -45,22 +43,12 @@ function BestItemSection() {
     };
   }, [order, page, pageSize]);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  // const onPageChange = (pageNumber) => {
-  //   setPage(pageNumber);
-  // };
-
   return (
-    <div className="max-w-[1200px] h-[406px] m-auto">
+    <div className="m-auto sm:min-w-[320px] md:min-w-[344px] lg:min-w-[500px] xl:min-w-[600px] max-w-[1200px]">
       <h1 className="text-[20px] font-[700] mb-[16px] mt-[24px]">
         베스트 상품
       </h1>
-      <div className="flex gap-[24px]">
+      <div className="grid gap-[24px] grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
         {item?.map((item) => (
           <ItemCard item={item} key={`best-item-${item.id}`} />
         ))}

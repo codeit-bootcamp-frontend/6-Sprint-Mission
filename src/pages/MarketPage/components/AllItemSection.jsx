@@ -7,8 +7,10 @@ import DropdownList from "../../../components/DropdownList";
 
 const getPageSize = () => {
   const width = window.innerWidth;
-  if (width < 768) {
+  if (width < 400) {
     return 4;
+  } else if (width < 800) {
+    return 6;
   } else if (width < 1280) {
     return 6;
   } else {
@@ -22,10 +24,11 @@ function AllItemSection() {
   const [page, setPage] = useState(pageFromStorage);
   const [pageSize, setPageSize] = useState(getPageSize());
   const [item, setItem] = useState([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const handleSelection = (option) => {
-  //   setItem(option);
-  // };
+  const handleSelection = (option) => {
+    setOrder(option);
+  };
 
   useEffect(() => {
     sessionStorage.setItem("page", page);
@@ -47,19 +50,13 @@ function AllItemSection() {
     };
   }, [order, page, pageSize]);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // const onPageChange = (pageNumber) => {
-  //   setPage(pageNumber);
-  // };
-
   return (
-    <div className="max-w-[1200px] m-auto">
-      <div className="flex gap-[12px]">
+    <div className="m-auto sm:min-w-[320px] md:min-w-[344px] lg:min-w-[500px] xl:min-w-[600px] max-w-[1200px]">
+      <div className="flex gap-[12px] items-center justify-center">
         <h1 className="flex-1 text-[20px] font-[700] mb-[16px] mt-[24px]">
           전체 상품
         </h1>
@@ -73,14 +70,19 @@ function AllItemSection() {
           <Link to="/additem">상품 등록하기</Link>
         </button>
         <div
-          className="flex items-center justify-center relative w-[133px] h-[42px] text-[16px] font-[600] text-[var(--blue50)] hover:bg-[var(--blue70)]"
+          className="flex relative items-center justify-center w-[133px] h-[42px] text-[16px] font-[600] text-[var(--blue50)] hover:bg-[var(--blue70)]"
           onClick={toggleMenu}
         >
           드롭버튼
+          {isMenuOpen && (
+            <DropdownList
+              onHandleSelection={handleSelection}
+              toggleMenu={toggleMenu}
+            />
+          )}
         </div>
-        {isMenuOpen && <DropdownList toggleMenu={toggleMenu} />}
       </div>
-      <div className="flex gap-[24px]">
+      <div className="grid gap-[24px] grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {item?.map((item) => (
           <ItemCard item={item} key={`best-item-${item.id}`} />
         ))}

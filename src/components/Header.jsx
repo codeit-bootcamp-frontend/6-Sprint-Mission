@@ -1,5 +1,3 @@
-//네비게이션 바
-
 import { Link, NavLink } from "react-router-dom";
 import logo from "../imgs/logo/logo.svg";
 
@@ -9,8 +7,10 @@ function getLinkStyle({ isActive }) {
 
 function Header() {
   return (
-    <header>
-      <div className="flex min-w-[375px] max-w-[1200px] items-center justify-between list-none gap-[8px] text-[18px] font-[700] text-[#4b5563] m-auto">
+    <header className="shadow-md">
+      {" "}
+      {/* shadow-md 클래스를 추가하여 그림자 효과 적용 */}
+      <div className="flex min-w-[375px] max-w-[1200px] items-center justify-between list-none gap-[8px] text-[18px] font-[700] text-[#4b5563] m-auto px-[24px] py-[15px]">
         <div className="flex gap-[32px]">
           <Link className="w-[153px]" to="/">
             <img src={logo} alt="판다마켓 로고" />
