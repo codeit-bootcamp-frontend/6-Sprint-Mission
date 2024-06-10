@@ -32,6 +32,7 @@
 .Header-btns {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 .Header-btn {
   margin-right: 30px;
@@ -69,6 +70,25 @@
 }
 .Header-login-btn:active {
   background-color: var(--click-blue);
+}
+
+.header-dropdown {
+  z-index: 2;
+  position: absolute;
+  right: 180px;
+  top: 60px;
+  background-color: var(--white);
+  border: solid 1px var(--gray200);
+  border-radius: 12px;
+}
+
+.header-dropdown__logout {
+  padding: 10px 15px;
+  border: none;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: var(--white);
 }
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
@@ -130,12 +150,20 @@
   .Header-login-btn:active {
     background-color: var(--click-blue);
   }
+
+  .header-dropdown {
+    right: 10px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .Header {
     width: 100%;
     padding: 0 30px;
+  }
+
+  .header-dropdown {
+    right: 10px;
   }
 
   .Header-container {

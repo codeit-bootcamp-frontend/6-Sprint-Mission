@@ -1,11 +1,34 @@
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import styles from "@/styles/Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Header = (): JSX.Element => {
-  const pathname = usePathname();
+  const router = useRouter();
+  const path = router.pathname;
+  const [isLogined, setIsLogined] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownOpen = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    localStorage.removeItem("user");
+    setIsLogined(false);
+    setIsDropdownOpen(false);
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("accessToken")) {
+      setIsLogined(true);
+    } else {
+      setIsLogined(false);
+    }
+  }, []);
 
   return (
     <>
@@ -31,17 +54,35 @@ const Header = (): JSX.Element => {
             />
           </Link>
           <ul className={styles["Header-btns"]}>
-            <Link href="/boards" className={styles[pathname === "/boards" ? "Header-btn-active" : "Header-btn"]}>
+            <Link href="/boards" className={styles[path.includes("/boards") ? "Header-btn-active" : "Header-btn"]}>
               <li>자유게시판</li>
             </Link>
-            <Link href="/Items" className={styles[pathname === "/Items" ? "Header-btn-active" : "Header-btn"]}>
+            <Link href="/Items" className={styles[path.includes("/Items") ? "Header-btn-active" : "Header-btn"]}>
               <li>중고마켓</li>
             </Link>
           </ul>
         </div>
-        <Link href="/sign-in" className={styles["Header-login-btn"]}>
-          로그인
-        </Link>
+        {isLogined ? (
+          <Image
+            src="/images/Header/userProfile.png"
+            alt="헤더 프로필 이미지"
+            width={40}
+            height={40}
+            onClick={handleDropdownOpen}
+            style={{ cursor: "pointer" }}
+          />
+        ) : (
+          <Link href="/SignIn" className={styles["Header-login-btn"]}>
+            로그인
+          </Link>
+        )}
+        {isDropdownOpen && (
+          <div className={styles["header-dropdown"]}>
+            <button className={styles["header-dropdown__logout"]} onClick={handleLogout}>
+              로그아웃
+            </button>
+          </div>
+        )}
       </header>
     </>
   );

@@ -1,0 +1,180 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.sign-up-from {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 24px;
+  width: 640px;
+}
+
+.con {
+  position: relative;
+}
+
+.sign-email-input:focus,
+.sign-pw-input:focus,
+.sign-nick-input:focus,
+.sign-repw-input:focus {
+  border: solid 2px var(--blue);
+}
+.sign-up-container__logo a {
+  margin: 60px 0 20px 0;
+}
+.sign-up-container__logo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 396px;
+  height: 132px;
+}
+.con label {
+  color: var(--gray800);
+  font-weight: 700;
+  font-size: 18px;
+}
+.sign-email-input,
+.sign-pw-input,
+.sign-nick-input,
+.sign-repw-input {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 16px;
+  outline: none;
+  background-color: var(--gray100);
+  font-size: 16px;
+  padding: 0 0 0 24px;
+}
+
+.sign-email-input-wrong,
+.sign-pw-input-wrong,
+.sign-nick-input-wrong,
+.sign-repw-input-wrong {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  margin-top: 16px;
+  outline: none;
+  background-color: var(--gray100);
+  font-size: 16px;
+  padding: 0 0 0 24px;
+  border: solid 2px var(--error-red);
+}
+.wrong-email,
+.wrong-pw,
+.wrong-nick,
+.wrong-repw {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--error-red);
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+.show-icon,
+.none-show-icon {
+  position: absolute;
+  top: 52px;
+  left: 600px;
+  cursor: pointer;
+}
+.signup-btn {
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  background-color: var(--inactive-color);
+  cursor: pointer;
+}
+.signup-btn:hover {
+  background-color: var(--blue);
+}
+.social-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--social-login-background-color);
+  height: 74px;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 550;
+  color: var(--gray800);
+}
+
+.social-login-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.go-signin-container {
+  text-align: center;
+  font-size: 15px;
+}
+.go-signin-container p {
+  display: inline;
+  color: var(--gray800);
+  font-weight: 550;
+}
+.go-signin-container a {
+  color: var(--go-login-signup-color);
+}
+
+/**********미디어 쿼리**********/
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+  .sign-up-container__logo {
+    width: 198px;
+    height: 66px;
+  }
+  .sign-up-from {
+    width: 100%;
+    gap: 16px;
+  }
+  .con label {
+    font-size: 14px;
+  }
+  .con input {
+    font-size: 14px;
+    margin-top: 8px;
+    padding: 0 15px;
+  }
+  .show-icon,
+  .none-show-icon {
+    position: absolute;
+    top: 52px;
+    left: 360px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .sign-up-container__logo {
+    width: 198px;
+    height: 66px;
+  }
+  .sign-up-from {
+    width: 400px;
+  }
+  .con label {
+    font-size: 16px;
+  }
+  .show-icon,
+  .none-show-icon {
+    position: absolute;
+    top: 52px;
+    left: 360px;
+    cursor: pointer;
+  }
+}

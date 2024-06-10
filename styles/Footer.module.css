@@ -4,6 +4,7 @@
   color: #fff;
   padding: 30px 300px 0 300px;
   font-weight: 100;
+  margin-top: auto;
 }
 .info-container {
   display: flex;

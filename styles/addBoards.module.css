@@ -1,0 +1,240 @@
+.article-form {
+  max-width: 1250px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 100px;
+  padding: 0 25px;
+}
+
+.article-title-input,
+.article-content-textarea,
+.article-img-label {
+  margin-top: 10px;
+}
+
+.article-form div {
+  width: 100%;
+}
+
+.article-title-input,
+.article-content-textarea {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cool-gray400);
+  padding-left: 20px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background-color: var(--cool-gray100);
+}
+
+.article-form .article-form-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-form-top-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--article-item-name-color);
+}
+
+.register-btn {
+  width: 88px;
+  height: 42px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px 12px 20px;
+  color: #fff;
+  background-color: var(--cool-gray400);
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  width: 88px;
+  height: 42px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px 12px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-color: var(--items-header-btn-color-active);
+}
+.active:hover {
+  background-color: var(--hover-blue);
+}
+.active:active {
+  background-color: var(--click-blue);
+}
+.article-form .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.article-form .article-img {
+  display: flex;
+  gap: 20px;
+}
+
+.article-img-label {
+  border: none;
+  position: relative;
+  width: 282px;
+  height: 282px;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: var(--cool-gray100);
+  color: var(--cool-gray400);
+  margin-bottom: 100px;
+}
+.article-image-tag {
+  position: absolute;
+  top: 100px;
+  left: 115px;
+  width: 46px;
+}
+.article-img-register-text {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  top: 150px;
+  left: 95px;
+}
+.article-img-input {
+  display: none;
+}
+.article-form .article-img .prev-img {
+  width: 282px;
+  height: 282px;
+  border: none;
+  position: relative;
+  top: 10px;
+  border-radius: 12px;
+  position: relative;
+}
+.article-prev-image-tag {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.article-form .article-img .prev-img button {
+  position: absolute;
+  top: 8px;
+  left: 250px;
+  width: 22px;
+  height: 24px;
+  color: #fff;
+  background-color: var(--items-header-btn-color-active);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.article-title-input {
+  height: 56px;
+}
+
+.article-content-textarea {
+  height: 200px;
+  padding: 20px;
+  resize: none;
+}
+
+@media screen and (min-width: 380px) and (max-width: 767px) {
+  .container h3 {
+    font-size: 16px;
+  }
+  .article-form {
+    padding: 0 15px;
+  }
+  .article-form-top-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--article-item-name-color);
+  }
+
+  .article-img-label {
+    border: none;
+    position: relative;
+    width: 162px;
+    height: 162px;
+  }
+  .article-img-label img {
+    position: absolute;
+    top: 45px;
+    left: 60px;
+    width: 46px;
+  }
+  .article-img-label p {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    top: 90px;
+    left: 40px;
+  }
+  .article-form .article-img .prev-img {
+    width: 162px;
+    height: 162px;
+    position: relative;
+  }
+  .article-form .article-img .prev-img button {
+    position: absolute;
+    top: 8px;
+    left: 132px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .article-img-label {
+    border: none;
+    position: relative;
+    width: 162px;
+    height: 162px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: var(--cool-gray100);
+    color: var(--cool-gray400);
+  }
+  .article-img-label img {
+    position: absolute;
+    top: 45px;
+    left: 60px;
+    width: 46px;
+  }
+  .article-img-register-text {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    top: 90px;
+    left: 40px;
+  }
+  .article-form .article-img .prev-img {
+    width: 162px;
+    height: 162px;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+  }
+  .article-form .article-img .prev-img button {
+    position: absolute;
+    top: 8px;
+    left: 132px;
+    width: 22px;
+    height: 24px;
+    color: #fff;
+    background-color: var(--items-header-btn-color-active);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+}

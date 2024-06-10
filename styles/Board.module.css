@@ -8,6 +8,9 @@
 .all-article-list {
   width: 100%;
 }
+.all-article-list {
+  height: 800px;
+}
 
 .best-article-list {
   display: flex;

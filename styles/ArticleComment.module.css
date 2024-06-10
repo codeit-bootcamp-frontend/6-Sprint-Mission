@@ -1,0 +1,137 @@
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment-input-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray900);
+}
+
+.comment-textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  height: 104px;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: var(--cool-gray100);
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.comment-textarea::placeholder {
+  color: var(--gray400);
+}
+
+.comment-register-btn {
+  border-radius: 8px;
+  padding: 12px 23px;
+  margin-left: auto;
+  border: none;
+  color: var(--white);
+  background-color: var(--gray400);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.active {
+  border-radius: 8px;
+  padding: 12px 23px;
+  margin-left: auto;
+  border: none;
+  color: var(--white);
+  background-color: var(--gray400);
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--items-header-btn-color-active);
+}
+.active:hover {
+  background-color: var(--hover-blue);
+}
+.active:active {
+  background-color: var(--click-blue);
+}
+
+.no-comment-img {
+  margin: 0 auto;
+}
+
+/* comment-list */
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--gray200);
+}
+
+.comment-container__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-content {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.comment-edit-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: 2px;
+}
+
+.comment-container__bottom {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-writer__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-writer__nickname {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray600);
+}
+
+.comment-writer__time {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray400);
+}
+
+.go-back-btn {
+  padding: 12px 51px;
+  border-radius: 40px;
+  border: none;
+  margin: 30px auto 0 auto;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.go-back-btn:hover {
+  background-color: var(--hover-blue);
+}
+.go-back-btn:active {
+  background-color: var(--click-blue);
+}

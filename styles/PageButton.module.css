@@ -1,0 +1,52 @@
+.button {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0 100px 0;
+}
+
+.button .page-btn,
+.button .page-side-btn {
+  width: 40px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: solid 1px var(--gray200);
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .page-btn:hover,
+.button .page-side-btn:hover:not(.page-side-btn[disabled]) {
+  background-color: var(--page-btn-hover-color);
+  color: #fff;
+}
+
+.button .page-btn-active {
+  width: 40px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: solid 1px var(--gray200);
+  cursor: pointer;
+  background-color: var(--page-btn-hover-color);
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .button {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .button {
+    margin-bottom: 40px;
+  }
+}

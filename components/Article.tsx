@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/Articles.module.css";
-import { WriterResponse } from "@/lib/apis/api";
+import { WriterResponse } from "@/lib/apis/getArticle.api";
 import Image from "next/image";
 import formatTime from "@/utils/formatTime";
 
