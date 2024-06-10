@@ -1,10 +1,10 @@
 import Image from "next/image";
-import formatDate from "utils/formatData";
-import Profile from "public/icon/ic_profile.png";
+import UserInfo from "components/UserInfo";
+import Heart from "components/Heart";
 import * as S from "./PostStyles";
-import { ArticlesProps } from "types/type";
+import { Articles } from "types/type";
 
-export default function Post({ articles }: ArticlesProps) {
+export default function Post({ articles }: Articles) {
   return (
     <S.PostList>
       {articles?.map((article) => (
@@ -25,18 +25,8 @@ export default function Post({ articles }: ArticlesProps) {
                 )}
               </S.ContentContainer>
               <S.Footer>
-                <S.ProfileImage
-                  src={Profile}
-                  width={24}
-                  height={24}
-                  alt="프로필 이미지"
-                />
-                <S.NickName>{article.writer?.nickname}</S.NickName>
-                <S.CreatedDate>{formatDate(new Date(article.createdAt))}</S.CreatedDate>
-                <S.HeartContainer>
-                  <S.HeartIcon width={20} height={17} />
-                  <S.HeartNumber>{article.likeCount}</S.HeartNumber>
-                </S.HeartContainer>
+                <UserInfo article={article} />
+                <Heart article={article}/>
               </S.Footer>
             </S.Container>
           </S.PostLayout>

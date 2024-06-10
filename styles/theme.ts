@@ -5,6 +5,7 @@ const windowSize = {
 };
 
 const fontSize = {
+  xxs: "1.2rem",
   xs: "1.4rem",
   sm: "1.6rem",
   base: "1.8rem",

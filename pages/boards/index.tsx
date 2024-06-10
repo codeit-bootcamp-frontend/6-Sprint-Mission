@@ -2,13 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import Card from "components/Card";
 import SearchForm from "components/SearchForm";
 import Post from "components/Post";
-import Button from "components/Button";
+import { RectangleButton } from "components/Button";
+import TitleContainer from "components/TitleContainer";
 import styled from "styled-components";
-import { dispatcher } from "lib/axios";
-import useRequest from "hooks/useRequest";
+import { axiosRequester } from "lib/axios";
+import useAxiosFetch from "hooks/useAxiosFetch";
 import useInterSectionObserver from "hooks/useInterSectionObserver";
-import { Article, InitialDataProps } from "types/type";
+import { Article, DataFormat, InitialDataProps } from "types/type";
 import useDeviceState, { Device } from "hooks/useDeviceState";
+import { AxiosResponse } from "axios";
+import Link from "next/link";
 
 const PAGE_SIZE = 5;
 
@@ -17,7 +20,7 @@ export async function getStaticProps() {
   let totalCount: number;
 
   try {
-    const res = await dispatcher({
+    const res: AxiosResponse<DataFormat<Article>> = await axiosRequester({
       method: "get",
       url: "/articles",
       params: {
@@ -26,8 +29,9 @@ export async function getStaticProps() {
         orderBy: "like",
       },
     });
-    articles = res.data.list;
-    totalCount = res.data.totalCount;
+
+    articles = res?.data?.list;
+    totalCount = res?.data?.totalCount;
   } catch {
     return {
       notFound: true,
@@ -39,16 +43,17 @@ export async function getStaticProps() {
       initialData: articles,
       initialTotalCount: totalCount,
     },
-  }
-} 
+    revalidate: 10,
+  };
+}
 
 function BestArticles() {
   const [articles, setArticles] = useState<Article[]>([]);
-  const { isLoading, error, requestFunc } = useRequest();
+  const { isLoading, error, axiosFetch } = useAxiosFetch();
   const deviceState = useDeviceState();
 
   const getArticles = async (pageSize: number) => {
-    const res = await requestFunc ({
+    const res = await axiosFetch<AxiosResponse<DataFormat<Article>>>({
       method: "get",
       url: "articles",
       params: {
@@ -73,23 +78,25 @@ function BestArticles() {
 
   return (
     <>
-        <Card articles={articles} />
+      <Card articles={articles} />
     </>
   );
 }
 
-
-export default function Boards({ initialData, initialTotalCount }: InitialDataProps) {
+export default function Boards({
+  initialData,
+  initialTotalCount,
+}: InitialDataProps) {
   const [articles, setArticles] = useState<Article[]>(initialData);
   const [articlesPage, setArticlesPage] = useState(2);
   const [totalArticles, setTotalArticles] = useState(initialTotalCount);
   const articlesRef = useRef<HTMLDivElement>(null);
   const isArticlesIntersection = useInterSectionObserver(articlesRef);
   const [orderBy, setOrderBy] = useState("like");
-  const { isLoading, error, requestFunc } = useRequest();
+  const { isLoading, error, axiosFetch } = useAxiosFetch();
 
   const getArticles = async () => {
-    const res = await requestFunc({
+    const res: AxiosResponse<DataFormat<Article>> = await axiosFetch({
       method: "get",
       url: "articles",
       params: {
@@ -97,11 +104,10 @@ export default function Boards({ initialData, initialTotalCount }: InitialDataPr
         pageSize: PAGE_SIZE,
         orderBy: orderBy,
       },
-    })
+    });
 
     return res;
-  }
-
+  };
 
   useEffect(() => {
     (async () => {
@@ -133,7 +139,9 @@ export default function Boards({ initialData, initialTotalCount }: InitialDataPr
       </ScrollX>
       <TitleContainer>
         <Title>게시글</Title>
-        <Button>글쓰기</Button>
+        <Link href="/addboard">
+          <RectangleButton type="button">글쓰기</RectangleButton>
+        </Link>
       </TitleContainer>
       <SearchContainer>
         <SearchForm handleSortChange={handleSortChange} />
@@ -144,13 +152,6 @@ export default function Boards({ initialData, initialTotalCount }: InitialDataPr
     </>
   );
 }
-
-const TitleContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-`;
 
 const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.md};

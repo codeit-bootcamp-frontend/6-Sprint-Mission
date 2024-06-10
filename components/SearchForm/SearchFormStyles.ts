@@ -18,6 +18,10 @@ export const Input = styled.input`
   padding: 13px 44px;
   border-radius: 12px;
   background-color: ${({ theme }) => theme.colorPalette.inputBackgroundColor};
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: ${({ theme }) => theme.colorPalette.inputPlaceholderColor};
   
   &::placeholder{
     font-size: 1.6rem;

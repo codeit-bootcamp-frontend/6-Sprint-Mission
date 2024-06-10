@@ -1,10 +1,11 @@
+import Heart from "components/Heart"
 import formatDate from 'utils/formatData';
 import Image from "next/image";
 import Badge from "public/image/image_badge.png";
 import * as S from "./CardStyles";
-import { ArticlesProps } from "types/type";
+import { Articles } from "types/type";
 
-export default function Card({ articles }: ArticlesProps) {
+export default function Card({ articles }: Articles) {
   return (
     <S.CardList>
       {articles?.map((article) => (

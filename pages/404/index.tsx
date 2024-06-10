@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "components/Button";
+import RectangleButton from "@/components/Button/RectangleButton";
 import styled from "styled-components";
 
 export default function NotFound() {
@@ -11,9 +11,9 @@ export default function NotFound() {
           <br />
           요청하신 페이지가 사라졌거나, 잘못된 경로를 이용하셨어요.
         </Paragraph>
-        <Button>
+        <RectangleButton type="button">
           <Link href="/">홈으로 이동</Link>
-        </Button>
+        </RectangleButton>
       </NotFoundLayout>
     </>
   );

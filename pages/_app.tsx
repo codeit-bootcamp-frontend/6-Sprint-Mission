@@ -1,10 +1,11 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Header from "components/Header";
-import Layout from "./layout";
+import { Layout } from "components/Layout";
 import GlobalStyle from "styles/GlobalStyle";
 import theme from "styles/theme";
 import { ThemeProvider } from "styled-components";
+// import "lib/axiosInterceptor";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

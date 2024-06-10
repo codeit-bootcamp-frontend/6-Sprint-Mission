@@ -1,15 +1,15 @@
 import { ChildrenProps } from "types/type";
 import styled from "styled-components";
 
-export default function Layout({ children }: ChildrenProps) {
+export default function RootLayout({ children }: ChildrenProps) {
   return (
-    <BaseLayout>
+    <Layout>
       {children}
-    </BaseLayout>
+    </Layout>
   );
 }
 
-const BaseLayout = styled.div`
+const Layout = styled.div`
   padding: 86px 16px 16px;
   max-width: 375px;
   margin: 0 auto;
@@ -20,7 +20,7 @@ const BaseLayout = styled.div`
   }
 
   @media ${({ theme }) => theme.windowSize.desktop} {
-    padding: 94px 0 24px;
+    padding: 103px 0 24px;
     max-width: 1200px;
   }
 `;
