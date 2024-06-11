@@ -1,14 +1,11 @@
+import getFormatDate from '@/lib/utils/formatDate';
 import Image from 'next/image';
-import ic_heart from '@/public/images/ic_heart.png';
-import ic_profile from '@/public/images/ic_profile.png';
-import { ListProps } from '@/lib/getArticles';
+import icHeart from '@/public/images/icons/ic_heart.png';
+import icProfile from '@/public/images/icons/ic_profile.png';
+import { ArticleProps } from '@/types';
 
-export default function ArticleComponent({ createdAt, likeCount, image, title, writer }: ListProps) {
-  const date = new Date(createdAt).getDate();
-  const month = new Date(createdAt).getMonth() + 1;
-  const year = new Date(createdAt).getFullYear();
-  const createdDate = `${year}. ${month}. ${date}`;
-
+export default function ArticlePreview({ createdAt, likeCount, image, title, writer }: ArticleProps) {
+  const createdDate = getFormatDate(createdAt);
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex justify-between gap-2 font-semibold text-cool-gray800'>
@@ -21,12 +18,12 @@ export default function ArticleComponent({ createdAt, likeCount, image, title, w
       </div>
       <div className='flex justify-between pb-6 border-b border-solid text-cool-gray400 border-cool-gray200'>
         <div className='flex items-center gap-2'>
-          <Image src={ic_profile} alt='프로필 이미지' width={24} />
+          <Image src={icProfile} alt='프로필 이미지' width={24} />
           <span className='text-cool-gray600'>{writer.nickname}</span>
-          <div>{createdDate}</div>
+          <time>{createdDate}</time>
         </div>
         <div className='flex items-center gap-1'>
-          <Image src={ic_heart} alt='좋아요 하트' width={16}></Image>
+          <Image src={icHeart} alt='좋아요 하트' width={16}></Image>
           <span>{likeCount}+</span>
         </div>
       </div>

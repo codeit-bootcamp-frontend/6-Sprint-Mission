@@ -16,6 +16,7 @@ module.exports = {
         'cool-gray800': '#1f2937',
         'cool-gray900': '#111827',
         'brand-blue': '#3692ff',
+        'sky-blue': '#cfe5ff',
       },
     },
     screens: {
@@ -31,6 +32,11 @@ module.exports = {
       4: '4px',
       6: '6px',
       8: '8px',
+    },
+    width: {
+      mobile: '343px',
+      tablet: '696px',
+      desktop: '1200px',
     },
   },
   plugins: [],

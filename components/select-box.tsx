@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import ic_sort from '@/public/images/ic_sort.svg';
-import ic_arrow_down from '@/public/images/ic_arrow_down.svg';
+import icSort from '@/public/images/icons/ic_sort.svg';
+import icArrowDown from '@/public/images/icons/ic_arrow_down.svg';
 
 type Props = {
-  handleOrder: (sortType: string) => void;
+  handleOrder: (sortType: 'like' | 'recent') => void;
 };
 
 export default function SelectBox({ handleOrder }: Props) {
@@ -33,10 +33,10 @@ export default function SelectBox({ handleOrder }: Props) {
       <button
         className='flex justify-center items-center w-[42px] h-[42px] rounded-xl border md:w-[130px] lg:w-[130px]'
         onClick={handleButtonClick}>
-        <Image className='w-6 md:hidden lg:hidden' src={ic_sort} width={24} alt='목차 누르는 화살표 버튼' />
+        <Image className='w-6 md:hidden lg:hidden' src={icSort} width={24} alt='목차 누르는 화살표 버튼' />
         <p className='flex gap-[14px] sm:hidden items-center justify-between'>
           <span className='text-cool-gray800'>{title}</span>
-          <Image src={ic_arrow_down} alt='목차 누르는 화살표 버튼' />
+          <Image src={icArrowDown} alt='목차 누르는 화살표 버튼' />
         </p>
       </button>
       {isDisplay && (

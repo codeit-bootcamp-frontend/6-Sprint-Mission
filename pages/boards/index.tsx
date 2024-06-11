@@ -1,21 +1,25 @@
 import Head from 'next/head';
 import BestArticles from '@/components/best-articles';
 import Articles from '@/components/articles';
-import { GetServerSideProps } from 'next';
-import instance from '@/lib/axios';
-import { ListProps } from '@/lib/getArticles';
-interface Props {
-  articlesServer: ListProps[];
-}
+import axiosInstance from '@/lib/api/axios';
+import { ArticleProps, ArticleList } from '@/types';
+import Link from 'next/link';
 
-export const getServerSideProps: GetServerSideProps = async () => {
+interface Props {
+  articlesServer: ArticleProps[];
+  totalCount: number;
+}
+export async function getServerSideProps() {
   try {
-    const res = await instance.get(`/articles`);
-    const articlesServer: ListProps[] = res.data.list ?? [];
+    const res = await axiosInstance.get(`/articles`);
+    const getArticlesServer: ArticleList = res.data ?? {};
+    const articlesServer: ArticleProps[] = getArticlesServer.list ?? [];
+    const totalCount = getArticlesServer.totalCount;
 
     return {
       props: {
         articlesServer,
+        totalCount,
       },
     };
   } catch (error) {
@@ -23,12 +27,13 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return {
       props: {
         articlesServer: [],
+        totalCount: 0,
       },
     };
   }
-};
+}
 
-export default function Boards({ articlesServer }: Props) {
+export default function Boards({ articlesServer, totalCount }: Props) {
   return (
     <>
       <Head>
@@ -41,9 +46,11 @@ export default function Boards({ articlesServer }: Props) {
         </div>
         <div className='flex justify-between mt-[40px] mb-4'>
           <h3 className='text-xl font-bold text-cool-gray900'>게시글</h3>
-          <button className='bg-brand-blue rounded-lg text-white w-[88px] h-[42px] font-semibold'>글쓰기</button>
+          <Link href='/addboard'>
+            <button className='bg-brand-blue rounded-lg text-white w-[88px] h-[42px] font-semibold'>글쓰기</button>
+          </Link>
         </div>
-        <Articles articlesServer={articlesServer} />
+        <Articles articlesServer={articlesServer} totalCount={totalCount} />
       </div>
     </>
   );
