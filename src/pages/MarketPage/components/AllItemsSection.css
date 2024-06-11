@@ -1,0 +1,38 @@
+.itemCards {
+  display: flex;
+  gap: 24px;
+}
+
+.allItems {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.allItemsBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.allItemsTitle {
+  font-size: 20px;
+  font-family: "Pretendard";
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.allItemsBarRight {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchItem {
+  width: 325px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  padding: 9px 20px 9px 16px;
+  font-size: 16px;
+}

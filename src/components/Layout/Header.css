@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 200px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.leftLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bannerLink {
+  width: 218px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.linkTo {
+  color: #4b5563;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Pretendard";
+}
+.linkTo :hover {
+  color: #3692ff;
+}
+
+.toHome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 153px;
+}
+.pandaMarket {
+  text-align: center;
+  color: #3692ff;
+  font-family: "Noto sans KR";
+  font-size: 25.63px;
+  font-weight: 700;
+  line-height: 34.6px;
+}
+
+.loginButton {
+  width: 88px;
+  height: 42px;
+  background-color: #3692ff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
