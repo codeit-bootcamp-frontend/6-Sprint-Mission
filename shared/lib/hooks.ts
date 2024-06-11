@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { debounce } from "./debounce";
 
 export const useScreenDetector = () => {
   const [screen, setScreen] = useState({
@@ -29,9 +30,12 @@ export const useScreenDetector = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
+    window.addEventListener("resize", debounce(handleWindowSizeChange, 100));
     return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
+      window.removeEventListener(
+        "resize",
+        debounce(handleWindowSizeChange, 100),
+      );
     };
   }, []);
 

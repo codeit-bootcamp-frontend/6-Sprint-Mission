@@ -22,3 +22,35 @@ export interface GetArticleProps {
   orderBy?: string;
   keyword?: string;
 }
+
+export type Comments = {
+  nextCursor: number | null;
+  list: {
+    writer: {
+      image: string | null;
+      nickname: string;
+      id: number;
+    };
+    updatedAt: string;
+    createdAt: string;
+    content: string;
+    id: number;
+  }[];
+};
+
+export type UserData = {
+  accessToken: string;
+  refreshToken: string;
+  user: {
+    id: number;
+    email: string;
+    image: null | string;
+    nickname: string;
+    updatedAt: string;
+    createdAt: string;
+  };
+};
+
+export type ImageUrlObject = {
+  url: string;
+};
