@@ -10,13 +10,24 @@ export interface GetBoardsQuery {
 interface WriterType {
 	id: number;
 	nickname: string;
+	image?: string | null;
 }
 
 export interface BoardType {
 	id: number;
+	title?: string;
 	content: string;
-	image: string;
+	image: string | null;
 	likeCount: number;
+	createdAt: string;
+	updatedAt: string;
+	writer: WriterType;
+	isLiked?: boolean;
+}
+
+export interface CommentType {
+	id: number;
+	content: string;
 	createdAt: string;
 	updatedAt: string;
 	writer: WriterType;
@@ -29,7 +40,7 @@ export interface GetBoardsResponse {
 export async function getBoards({
 	orderBy = 'recent',
 	page = 1,
-	pageSize = 5,
+	pageSize = 10,
 	search = '',
 }: GetBoardsQuery): Promise<GetBoardsResponse> {
 	const query = search
@@ -45,12 +56,22 @@ export async function getBoards({
 	}
 }
 
-export async function getBoardId(boardId: string | string[]): Promise<BoardType | null> {
+export async function getBoardId(boardId: string | string[]): Promise<BoardType> {
 	try {
 		const response = await instance.get(`/articles/${boardId}`);
-		return response.data as BoardType;
+		return response.data;
 	} catch (error) {
 		console.error('API 오류 \n', error);
-		return null;
+		return {} as BoardType;
+	}
+}
+
+export async function getBoardComments(boardId: string | string[]): Promise<CommentType[]> {
+	try {
+		const response = await instance.get(`/articles/${boardId}/comments?limit=3`);
+		return response.data.list;
+	} catch (error) {
+		console.error('API 오류 \n', error);
+		return [] as CommentType[];
 	}
 }

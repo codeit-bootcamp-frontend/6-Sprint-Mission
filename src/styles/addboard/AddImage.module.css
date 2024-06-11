@@ -1,0 +1,37 @@
+.AddImageTitle {
+	font-size: 18px;
+	font-weight: 700;
+	color: #1f2937;
+	padding-bottom: 16px;
+}
+
+.AddImageWrap {
+	display: flex;
+	gap: 10px;
+}
+
+.AddImageLabel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 282px;
+	height: 282px;
+	border: none;
+	border-radius: 12px;
+	background-color: #f3f4f6;
+	cursor: pointer;
+}
+
+.ImagePlaceholder {
+	font-size: 16px;
+	color: #9ca3af;
+}
+
+@media (max-width: 1199px) {
+	.AddImageLabel {
+		width: 162px;
+		height: 162px;
+	}
+}

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { getBoards, BoardType, GetBoardsResponse, GetBoardsQuery } from '@/api/boards.api';
 import AllSection from './AllSection';
 import Link from 'next/link';
-import Dropdown from '@/components/common/Dropdown';
+import Dropdown from '@/components/common/DropDown';
 import Image from 'next/image';
 import { debounce } from 'lodash';
 
@@ -30,9 +30,9 @@ const AllArticles: React.FC<AllArticlesProps> = ({ initialBoards }) => {
 		setBoards(list || []);
 	};
 
-	const handleSearch = (value: string) => {
+	const handleSearch = debounce((value: string) => {
 		setSearch(value);
-	};
+	}, 300);
 
 	useEffect(() => {
 		// 처음 렌더링 시에는 실행하지 않음
@@ -40,14 +40,15 @@ const AllArticles: React.FC<AllArticlesProps> = ({ initialBoards }) => {
 			setIsLoading(false);
 			return;
 		}
-		debounce(() => handleLoad({ orderBy: order, search: search }), 500)();
+
+		handleLoad({ orderBy: order, search: search });
 	}, [order, search]);
 
 	return (
 		<section className={styles.all_articles_wrap}>
 			<div className={styles.all_articles_title_wrap}>
 				<span className={styles.all_articles_title}>게시글</span>
-				<Link className={styles.all_articles_title_btn} href=''>
+				<Link className={styles.all_articles_title_btn} href='/addboard'>
 					글쓰기
 				</Link>
 			</div>

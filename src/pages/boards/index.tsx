@@ -4,7 +4,6 @@ import HeaderSpace from '@/components/common/HeaderSpace';
 import Header from '@/components/navigation/Header';
 import { GetServerSideProps } from 'next';
 import { getBoards, BoardType, GetBoardsResponse } from '@/api/boards.api';
-import useDeviceSize from '@/hooks/useDeviceSize';
 
 interface BoardsPageProps {
 	initialBestBoards: BoardType[];
@@ -13,24 +12,15 @@ interface BoardsPageProps {
 
 const BoardsPage: React.FC<BoardsPageProps> = ({ initialBestBoards, initialAllBoards }) => {
 	return (
-		<main>
+		<>
 			<Header />
 			<HeaderSpace />
-			<BestArticles initialBoards={initialBestBoards} />
-			<AllArticles initialBoards={initialAllBoards} />
-		</main>
+			<main>
+				<BestArticles initialBoards={initialBestBoards} />
+				<AllArticles initialBoards={initialAllBoards} />
+			</main>
+		</>
 	);
-};
-
-const deviceSize = () => {
-	const getDeviceSize = useDeviceSize();
-
-	if (getDeviceSize === 'mobile') {
-		return 1;
-	} else if (getDeviceSize === 'tablet') {
-		return 2;
-	}
-	return 3;
 };
 
 /**

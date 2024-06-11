@@ -1,5 +1,5 @@
 // 이미지
-import iconHeart from '@/assets/images/items/ic_heart.svg';
+import iconHeart from '@/assets/images/icon/ic_heart.svg';
 import iconBack from '@/assets/images/icon/ic_back.svg';
 import iconKebab from '@/assets/images/icon/ic_kebab.svg';
 import emptyQuestion from '@/assets/images/items/question-empty.svg';
@@ -85,7 +85,13 @@ const Item: React.FC = () => {
 						<span className={styles.item_name}>{products.name}</span>
 
 						<button className={styles.item_kebab_btn}>
-							<Image className={styles.item_kebab_img} src={iconKebab} alt='더보기' width={28} height={38} />
+							<Image
+								className={styles.item_kebab_img}
+								src={iconKebab}
+								alt='더보기'
+								width={28}
+								height={38}
+							/>
 						</button>
 					</div>
 
@@ -109,7 +115,13 @@ const Item: React.FC = () => {
 
 					<div className={styles.item_heart}>
 						<button className={styles.item_heart_btn}>
-							<Image className={styles.item_heart_icon} src={iconHeart} alt='icon_heart' width={32} height={32} />
+							<Image
+								className={styles.item_heart_icon}
+								src={iconHeart}
+								alt='icon_heart'
+								width={32}
+								height={32}
+							/>
 							<span className={styles.item_heart_count}>{products.favoriteCount}</span>
 						</button>
 					</div>
@@ -156,7 +168,13 @@ const Item: React.FC = () => {
 				<div className={styles.item_back}>
 					<Link href='/items' className={styles.item_back_btn}>
 						목록으로 돌아가기
-						<Image className={styles.item_back_img} src={iconBack} alt='돌아가기' width={24} height={24} />
+						<Image
+							className={styles.item_back_img}
+							src={iconBack}
+							alt='돌아가기'
+							width={24}
+							height={24}
+						/>
 					</Link>
 				</div>
 			</article>

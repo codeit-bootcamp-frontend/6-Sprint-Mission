@@ -79,7 +79,7 @@
 }
 
 .all_articles_input:focus {
-	border: 1px solid var(--blue);
+	outline: 2px solid var(--blue);
 }
 
 /* 

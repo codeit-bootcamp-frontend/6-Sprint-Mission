@@ -1,0 +1,87 @@
+.board_main {
+	display: flex;
+	flex-direction: column;
+	width: 1200px;
+	margin: 24px auto 0;
+}
+
+.board_title {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--gray-800);
+}
+
+/* writer */
+.board_writer {
+	display: flex;
+	align-items: center;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	gap: 8px;
+}
+
+.board_writer_img {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border-radius: 9999px;
+}
+
+.board_writer_name {
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--gray-600);
+}
+
+.board_writer_time {
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--gray-400);
+
+	margin-right: 4px;
+	border-right: 1px solid var(--gray-200);
+}
+
+.board_writer_like {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: 4px;
+}
+
+.board_writer_like_icon {
+	position: relative;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+}
+
+.board_writer_like_count {
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--gray-500);
+}
+
+/* content */
+.board_content {
+	padding-top: 16px;
+	border-top: 1px solid var(--gray-200);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	min-height: 150px;
+}
+
+.board_content_msg {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--gray-800);
+}
+
+.board_content_image {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	border-radius: 12px;
+}

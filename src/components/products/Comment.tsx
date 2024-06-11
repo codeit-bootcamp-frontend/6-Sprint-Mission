@@ -1,4 +1,6 @@
+import useDate from '@/hooks/useDate';
 import styles from '@/styles/Items/Comments.module.css';
+import { set } from 'lodash';
 import Image from 'next/image';
 
 import { useEffect, useState } from 'react';
@@ -15,29 +17,10 @@ interface CommentProps {
 }
 
 const Comment: React.FC<CommentProps> = ({ comment }) => {
-	const [time, setTime] = useState<string>('');
+	const lastUpdated = new Date(comment.updatedAt);
+	const diffDate = new Date().getTime() - lastUpdated.getTime();
 
-	const getDateDiff = (date: string) => {
-		const lastUpdated = new Date(date);
-		const today = new Date();
-
-		const diffDate = today.getTime() - lastUpdated.getTime();
-
-		const hour = Math.floor(Math.abs(diffDate / (1000 * 60 * 60)));
-		const min = Math.floor(Math.abs(diffDate / (1000 * 60)));
-		const sec = Math.floor(Math.abs(diffDate / 1000));
-
-		if (hour >= 24) setTime(`${Math.floor(hour / 24)}일 전`);
-		else if (hour >= 0) setTime(`${hour}시간 전`);
-		else if (min >= 0) setTime(`${min}분 전`);
-		else if (sec >= 0) setTime(`${sec}초 전`);
-		else if (hour >= 24) setTime(`${Math.abs(hour / 24)}일 전`);
-		else console.log(`${hour}시 ${min}분 ${sec}초`);
-	};
-
-	useEffect(() => {
-		getDateDiff(comment.updatedAt);
-	}, [comment.updatedAt]);
+	const time = useDate(diffDate);
 
 	return (
 		<div className={styles.comment_wrap}>
