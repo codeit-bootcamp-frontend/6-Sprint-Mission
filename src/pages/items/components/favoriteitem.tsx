@@ -58,12 +58,14 @@ export default function FavoriteItem() {
                 />
               ))}
             </div>
-            <h3>{product.name}</h3>
-            <p>{product.price}원</p>
-            <p>
-              <img src={heart} alt="하트 아이콘" />
-              {product.favoriteCount}
-            </p>
+            <div className="bestitem-detail">
+              <h3 className="bestitem-detail-name">{product.name}</h3>
+              <p className="bestitem-detail-price">{product.price}원</p>
+              <p className="bestitem-detail-favorite">
+                <img src={heart} alt="하트 아이콘" />
+                <span>{product.favoriteCount}</span>
+              </p>
+            </div>
           </div>
         ))}
       </div>

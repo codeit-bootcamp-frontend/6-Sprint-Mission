@@ -1,8 +1,10 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./main.css";
 import ImgHomeTop from "../../assets/logo/Img_home_top.png";
-import ImgHome01 from "../../assets/logo/Img_home_01.png";
-import ImgHome02 from "../../assets/logo/Img_home_02.png";
-import ImgHome03 from "../../assets/logo/Img_home_03.png";
+import ImgHome01 from "../../assets/logo/Img_home_01.jpg";
+import ImgHome02 from "../../assets/logo/Img_home_02.jpg";
+import ImgHome03 from "../../assets/logo/Img_home_03.jpg";
 import ImgHomeBottom from "../../assets/logo/Img_home_bottom.png";
 import FacebookIcon from "../../assets/logo/ic_facebook.png";
 import TwitterIcon from "../../assets/logo/ic_twitter.png";
@@ -10,6 +12,8 @@ import YoutubeIcon from "../../assets/logo/ic_youtube.png";
 import InstagramIcon from "../../assets/logo/ic_instagram.png";
 
 export default function Main() {
+  const navigate = useNavigate();
+
   return (
     <main>
       <div className="banner top">
@@ -21,7 +25,7 @@ export default function Main() {
             <button
               className="explore-btn"
               type="button"
-              onClick={() => (window.location.href = "../items")}
+              onClick={() => navigate("/items")}
             >
               구경하러 가기
             </button>

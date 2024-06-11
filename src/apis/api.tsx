@@ -1,5 +1,5 @@
 // api.tsx
-import { instance } from "./axios";
+import { instance } from "./apiManager";
 
 export const fetchProducts = async () => {
   try {
@@ -11,6 +11,21 @@ export const fetchProducts = async () => {
   }
 };
 
+export const fetchallProducts = async (orderBy: string) => {
+  try {
+    const response = await instance.get("/products", {
+      params: {
+        orderBy: orderBy,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    throw error;
+  }
+};
+
+/*
 export const fetchallProducts = async (sortBy: string) => {
   try {
     const response = await instance.get("/products", {
@@ -24,3 +39,4 @@ export const fetchallProducts = async (sortBy: string) => {
     throw error;
   }
 };
+*/

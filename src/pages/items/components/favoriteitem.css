@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.bestitems-writter {
+.bestitems-writer {
   width: 94px;
   height: 28px;
   font-weight: 700;
@@ -17,8 +17,53 @@
   gap: 24px;
 }
 
+.bestitem-container {
+  display: grid;
+  gap: 16px;
+}
+
 .bestitem-image {
   width: 282px;
   height: 282px;
   border-radius: 16px;
+}
+
+.bestitem-detail {
+  display: flex;
+  flex-direction: column;
+  height: 64px;
+  gap: 6px;
+}
+
+.bestitem-detail-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  margin: 0;
+}
+
+.bestitem-detail-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.09px;
+  margin: 0;
+}
+
+.bestitem-detail-favorite {
+  height: 16px;
+  margin: 0;
+  align-items: center;
+  display: flex;
+}
+
+.bestitem-detail-favorite > img {
+  height: 16px;
+  width: 16px;
+}
+
+.bestitem-detail-favorite > span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.32px;
+  padding-left: 3px;
 }

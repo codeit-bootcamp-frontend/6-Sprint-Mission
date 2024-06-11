@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./allitem.css";
 import heart from "../../../assets/item/ic_heart.svg";
 import search from "../../../assets/item/ic_search.svg";
 import dropdown from "../../../assets/item/ic_arrow_down.svg";
-import { fetchProducts } from "../../../apis/api.tsx";
+import { fetchallProducts } from "../../../apis/api.tsx";
 
 interface Product {
   id: number;
@@ -19,14 +19,14 @@ const ITEMS_PER_PAGE = 10;
 
 export default function AllItem() {
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
-  const [sortBy, setSortBy] = useState<string>("최신순");
+  const [sortBy, setSortBy] = useState<string>("recent");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [sortedProducts, setSortedProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchProducts(sortBy);
+        const data = await fetchallProducts(sortBy);
         setSortedProducts(data.list);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -42,17 +42,16 @@ export default function AllItem() {
 
   const handleSortChange = (sortOption: string) => {
     setSortBy(sortOption);
-    console.log("sortBy 상태:", sortOption);
     toggleDropdown();
   };
 
-  const sortOptions = ["최신순", "좋아요순"];
+  const sortOptions = ["recent", "favorite"];
 
-  const getCurrentItems = () => {
+  const currentItems = useMemo(() => {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
     return sortedProducts.slice(startIndex, endIndex);
-  };
+  }, [sortedProducts, currentPage]);
 
   const totalPages = Math.ceil(sortedProducts.length / ITEMS_PER_PAGE);
   const goToPage = (page: number) => {
@@ -89,7 +88,9 @@ export default function AllItem() {
               type="button"
               onClick={toggleDropdown}
             >
-              <span className="allitems-dropdown_write">{sortBy}</span>
+              <span className="allitems-dropdown_write">
+                {sortBy === "recent" ? "최신순" : "좋아요순"}
+              </span>
               <img src={dropdown} alt="드롭다운 아이콘" />
             </button>
             <div className="dropdown-content-container">
@@ -101,7 +102,7 @@ export default function AllItem() {
                       onClick={() => handleSortChange(option)}
                       className="dropdown-content-item"
                     >
-                      {option}
+                      {option === "recent" ? "최신순" : "좋아요순"}
                     </li>
                   ))}
                 </div>
@@ -112,10 +113,10 @@ export default function AllItem() {
       </div>
 
       <div className="allitem">
-        {getCurrentItems().map((product: Product) => (
-          <div key={product.id} className="allitem-container">
-            <div>
-              {product.images.map((image) => (
+        {currentItems?.map((product: Product) => (
+          <div key={product?.id} className="allitem-container">
+            <div className="allitem-image-nodata">
+              {product?.images?.map((image) => (
                 <img
                   className="allitem-image"
                   key={image}
@@ -124,17 +125,18 @@ export default function AllItem() {
                 />
               ))}
             </div>
-            <h3>{product.name}</h3>
-            <p>{product.price}원</p>
-            <p>
-              <img src={heart} alt="하트 아이콘" />
-              {product.favoriteCount}
-            </p>
+            <div className="allitem-detail">
+              <h3 className="allitem-detail-name">{product?.name}</h3>
+              <p className="allitem-detail-price">{product?.price}원</p>
+              <p className="allitem-detail-favorite">
+                <img src={heart} alt="하트 아이콘" />
+                <span>{product?.favoriteCount}</span>
+              </p>
+            </div>
           </div>
         ))}
       </div>
 
-      {/* 페이지 네이션 사용해보기...*/}
       <div className="pagination">
         <button
           className="pagination-btn"
