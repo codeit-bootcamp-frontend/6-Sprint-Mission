@@ -1,0 +1,40 @@
+.boardListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.boardListHeader h3 {
+  margin-bottom: 0;
+}
+.boardListSearch {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.search {
+  width: 100%;
+  position: relative;
+}
+.search img {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.boardListSearch input {
+  background-color: #f3f4f6;
+  padding: 9px 20px 9px 36px;
+  border-radius: 8px;
+  border: none;
+  width: calc(100% - 56px);
+}
+.boardListSearch input:focus {
+  outline: none;
+}
+.boardListSearch input::placeholder {
+  font-size: 15px;
+  color: #9ca3af;
+  font-weight: 200;
+}

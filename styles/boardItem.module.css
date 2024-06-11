@@ -1,0 +1,47 @@
+.boardItem {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.boardContent {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  justify-content: space-between;
+  min-height: 48px;
+}
+.boardContent p {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.023em;
+  line-height: 1.4;
+}
+.boardContent img {
+  padding: 12px 13px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 6px;
+}
+.boardFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.profile span {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.profile .boardDate {
+  color: #9ca3af;
+}
+.boardLike span {
+  font-size: 16px;
+  color: #6b7280;
+  margin-left: 8px;
+}

@@ -1,0 +1,52 @@
+.bestList {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 46px 16px 24px;
+  position: relative;
+}
+.link {
+  display: grid;
+  align-content: space-between;
+  height: 100%;
+}
+.bestBadge {
+  position: absolute;
+  left: 24px;
+  top: 0;
+}
+.bestListContent {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.bestListContent p {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.023em;
+  line-height: 1.4;
+}
+.bestListContent img {
+  padding: 12px 13px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 6px;
+}
+.bestListFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.bestListFoot div {
+  font-size: 14px;
+  color: #4b5563;
+}
+.bestListFoot div span:first-child {
+  margin-right: 8px;
+}
+.bestListFoot div img {
+  margin-right: 4px;
+}
+.bestListFoot > span {
+  font-size: 14px;
+  color: #9ca3af;
+}
