@@ -1,0 +1,37 @@
+.moreOptionsButton {
+  position: relative;
+  display: inline-block;
+}
+
+.moreOptionsIcon {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.options {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 8px;
+}
+
+.options button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.options button:hover {
+  background-color: #f0f0f0;
+}

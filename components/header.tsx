@@ -11,6 +11,11 @@ import user_icon from "@/public/icon/user_icon.svg";
 const NavBar: React.FC = () => {
   const router = useRouter();
 
+  const accessToken =
+    typeof window !== "undefined" ? localStorage.getItem("accessToken") : null;
+  const profileImg =
+    typeof window !== "undefined" ? localStorage.getItem("profileImg") : "null";
+
   return (
     <nav className={styles.navvar}>
       <Link href="/">
@@ -32,7 +37,7 @@ const NavBar: React.FC = () => {
       <div className={styles.menus}>
         <Link
           href="/boards"
-          className={router.pathname === "/boards" ? styles.focus : ""}
+          className={router.pathname.startsWith("/boards") ? styles.focus : ""}
         >
           <span>자유게시판</span>
         </Link>
@@ -43,9 +48,22 @@ const NavBar: React.FC = () => {
           <span>중고마켓</span>
         </Link>
       </div>
-      <Link href="/mypage">
-        <Image width={40} height={40} alt="user-icon" src={user_icon} />
-      </Link>
+
+      {accessToken === null ? (
+        <Link href="/signin">
+          <span>로그인</span>
+        </Link>
+      ) : (
+        <Link href="/mypage">
+          <Image
+            width={40}
+            height={40}
+            alt="user-icon"
+            src={profileImg === "null" ? user_icon : profileImg}
+            className={styles.userImg}
+          />
+        </Link>
+      )}
     </nav>
   );
 };

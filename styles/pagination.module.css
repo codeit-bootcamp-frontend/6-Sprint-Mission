@@ -1,0 +1,38 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pageBtn {
+    align-items: center;
+    color: #818181;
+    cursor: pointer;
+    display: flex;
+    font-weight: 400;
+    font-size: 20px;
+    height: 40px;
+    justify-content: center;
+    user-select: none;
+    width: 40px;
+}
+
+.pageBtn:hover,
+.pageBtn:focus {
+    background-color: #ffffff;
+}
+
+.pageBtn.active {
+    color: #341909;
+}
+
+.pageBtn.disabled {
+    cursor: not-allowed;
+}
+
+.pageBtn.ellipsis {
+    cursor: default;
+}

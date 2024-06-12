@@ -4,6 +4,7 @@
 
 body {
   background-color: #fff;
+  min-width: 385px;
 }
 
 html,

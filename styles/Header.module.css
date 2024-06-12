@@ -12,6 +12,7 @@
   background-color: #ffffff;
   border-bottom: 1px solid #dfdfdf;
   z-index: 9999;
+  min-width: 385px;
 }
 
 .menus {
@@ -42,6 +43,10 @@
 
 .focus {
   color: #3692ff;
+}
+
+.userImg {
+  border-radius: 50%;
 }
 
 @media (max-width: 1279px) {

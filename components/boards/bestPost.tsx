@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
-import Link from "next/link";
-
-import { List } from "@/types";
-import timeString from "@/utils/timeString";
 import axios from "@/utils/axios";
-
+import { useEffect, useState } from "react";
 import style from "@/styles/bestPost.module.css";
 import bestBadge from "@/public/icon/img_badge.svg";
 import heartImg from "@/public/icon/ic_heart.svg";
+import Image from "next/image";
+import timeString from "@/utils/timeString";
+import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
+import { ArticlesList } from "@/types";
 
 export default function BestPost() {
-  const [bestPosts, setBestPosts] = useState<List[]>([]);
+  const [bestPosts, setBestPosts] = useState<ArticlesList[]>([]);
 
   const isTablet = useMediaQuery({
     query: `(max-width: 1024px)`,
@@ -50,7 +48,7 @@ export default function BestPost() {
     <>
       {bestPosts.map((item) => (
         <Link key={item.id} href={`/boards/${item.id}`}>
-          <div className={style.BestContainer}>
+          <div className={style.BestContainer} >
             <div className={style.BestBadge}>
               <Image
                 width={102}
