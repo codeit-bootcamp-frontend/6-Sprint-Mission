@@ -1,23 +1,53 @@
 "use client";
 
+import API from "@/app/_api";
+
 import json from "./page.json";
 
 import Link from "next/link";
 import Image from "next/image";
 
+import { useEffect } from "react";
+
+import { redirect } from "next/navigation";
+
 import useForm, { Cause, Trigger } from "@/app/_hooks/useForm";
+import useLocalStorage from "@/app/_hooks/useLocalStorage";
 
 export default function Page()
 {
-	const { errors, verify, disabled } = useForm("signin",
-	// onSubmit
-	(data) =>
+	const [token, set_token] = useLocalStorage<Nullable<string>>("accessToken", null);
+
+	useEffect(() =>
 	{
-		console.log(data);
+		if (token)
+		{
+			redirect("/");
+		}
 	},
-	// onCheck
-	(input, values, causes) =>
+	[token]);
+
+	const signin = useForm("signin", [Trigger.BLUR, Trigger.CHANGE], (data) =>
 	{
+		API["auth/signIn"].POST(
+		{
+			// @ts-ignore
+			email: data.get("이메일"), password: data.get("비밀번호"),
+		})
+		.then((response) =>
+		{
+			set_token(response.accessToken);
+		})
+		.catch((error) =>
+		{
+			console.error(error);
+		});
+	});
+
+	signin.verify(({ input, trigger }) =>
+	{
+		const causes = signin.causes(input);
+
 		if (causes.has(Cause.REQUIRED))
 		{
 			return `${input.name}을(를) 입력해주세요`;
@@ -35,9 +65,7 @@ export default function Page()
 			return `${input.name}을(를) ${input.maxLength}자 이하 입력해주세요`;
 		}
 		return null;
-	},
-	// triggers
-	[Trigger.BLUR, Trigger.INPUT]);
+	});
 	
 	return (
 		<>
@@ -48,12 +76,10 @@ export default function Page()
 				(
 					<div key={index} class="group flex flex-col mobile:gap-[8px] tablet:gap-[8px] desktop:gap-[16px]">
 						<label for={args.id} class="text-[#1F2937] font-[700] mobile:text-[14px] tablet:text-[18px] desktop:text-[18px]">
-						{
-							args.id
-						}
+							{args.label}
 						</label>
 						<div class="flex h-[56px] px-[24px] bg-[#F3F4F6] rounded-[12px] border group-has-[:valid]:border-[#3692FF] group-has-[.error]:border-[#F74747]">
-							<input { ...args } name={args.id} class="grow text-[#1F2937] text-[16px] font-[400] outline-none bg-transparent placeholder:text-[#9CA3AF]"/>
+							<input { ...args } name={args.label} class="grow text-[#1F2937] text-[16px] font-[400] outline-none bg-transparent placeholder:text-[#9CA3AF]"/>
 							{
 								args.type === "password" && <Image src="/icons/invisible.svg" alt="visibility" width={24} height={24} onClick={(event) =>
 								{
@@ -77,13 +103,11 @@ export default function Page()
 								}}/>
 							}
 						</div>
-						{
-							errors[args.id] && <div class="error text-[#F74747] text-[15px] font-[600] group-[:not(:has(:invalid))]:hidden">{errors[args.id]}</div>
-						}
+						{signin.errors[args.label] && <div class="error text-[#F74747] text-[15px] font-[600] group-[:not(:has(:invalid))]:hidden">{signin.errors[args.label]}</div>}
 					</div>
 				))}
 				</div>
-				<button type="submit" disabled={disabled} class="button h-[56px] rounded-[40px] text-[16px] font-[600] mobile:mt-[16px] tablet:mt-[24px] desktop:mt-[24px]">
+				<button type="submit" disabled={signin.disabled} class="button h-[56px] rounded-[40px] text-[16px] font-[600] mobile:mt-[16px] tablet:mt-[24px] desktop:mt-[24px]">
 					로그인
 				</button>
 			</form>

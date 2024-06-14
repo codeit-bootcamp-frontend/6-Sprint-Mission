@@ -4,9 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { usePathname } from "next/navigation";
+import useLocalStorage from "@/app/_hooks/useLocalStorage";
 
 export default function Header(props: Readonly<{ children: { name: string; href: string; }[]; }>)
 {
+	const [token, set_token] = useLocalStorage<Nullable<string>>("accessToken", null);
+
 	const pathname = usePathname();
 
 	return (
@@ -25,19 +28,23 @@ export default function Header(props: Readonly<{ children: { name: string; href:
 				(
 					<Link key={index} href={args.href}>
 						<div class="flex items-center justify-center font-[700] text-nowrap h-full mobile:text-[16px] tablet:text-[18px] desktop:text-[18px] tablet:px-[16px] desktop:px-[16px] tablet:min-w-[109px] desktop:min-w-[109px]" style={{ color: new RegExp("^" + args.href).test(pathname) ? "#3692FF" : "#4B5563" }}>
-						{
-							args.name
-						}
+							{args.name}
 						</div>
 					</Link>
 				))}
 				</div>
 				{/* signin */}
-				<Link href="/signin">
-					<div class="button font-[500] rounded-[8px] h-full mobile:w-[88px] tablet:w-[128px] desktop:w-[128px]">
-						로그인
-					</div>
-				</Link>
+				{
+					token
+					?
+					<Image src="icons/avatar.svg" alt="profile" width={40} height={40} class="aspect-square"/>
+					:
+					<Link href="/signin">
+						<div class="button font-[500] rounded-[8px] h-full mobile:w-[88px] tablet:w-[128px] desktop:w-[128px]">
+							로그인
+						</div>
+					</Link>
+				}
 			</div>
 		</header>
 	);

@@ -12,208 +12,182 @@ export const enum Trigger
 {
 	BLUR,
 	FOCUS,
-	INPUT,
+	CHANGE,
 	SUBMIT,
+	VERIFY,
 }
-/*
-TODO)
-
-id, onSubmit, onTrigger ...triggers
-
-return { values, errors, disabled, verify, message }
-
-onCheck(...) => Nullable<string>
-->
-onTrigger(input, trigger, causes) => void;
-
-and use message(message: string) to update errors instead
-*/
-export default function useForm(id: string, onSubmit: (data: FormData) => void, onCheck: (input: HTMLInputElement, values: Record<string, string>, causes: Set<Cause>) => Nullable<string>, triggers: Trigger[])
+// TODO: get rid of anti-patterns
+export default function useForm(id: string, triggers: Trigger[], onSubmit: (data: FormData) => void)
 {
+	// DOM element
 	const form = useRef<Nullable<HTMLFormElement>>(null);
-
-	const [checks, set_checks] = useState<Record<string, boolean>>({});
+	// data tracker
+	const [values, set_values] = useState<Record<string, Nullable<string>>>({});	
 	const [errors, set_errors] = useState<Record<string, Nullable<string>>>({});
+	// event handles
+	const onBlock = useRef<({ input, key }: { input: HTMLInputElement; key: string; }) => boolean>(() => false);
+	const onEffect = useRef<({ input, trigger }: { input: HTMLInputElement; trigger: Trigger; }) => void>(() => null);
+	const onVerify = useRef<({ input, trigger }: { input: HTMLInputElement; trigger: Trigger; }) => typeof values[keyof typeof values]>(() => null);
+	// validation tracker
+	const checks = useRef<Record<string, boolean>>({}); const [disabled, set_disabled] = useState(true);
 
-	const [disabled, set_disabled] = useState(true);
-	//
-	// usseful macro 1st
-	//
-	const getValues = useCallback((form: HTMLFormElement) =>
+	const causes = useCallback((input: HTMLInputElement) =>
 	{
-		const values: Record<string, string> = {};
+		const buffer: Set<Cause> = new Set();
 
-		for (const [key, value] of new FormData(form).entries())
-		{
-			values[key] = typeof value === "string" ? value : "#FILE";
-		}
-		return values;
-	},
-	[]);
-	//
-	// useful macro 2nd
-	//
-	const getCauses = useCallback((input: HTMLInputElement) =>
-	{
-		const causes: Set<Cause> = new Set();
-	
 		if (input.required && input.value.length === 0)
 		{
-			causes.add(Cause.REQUIRED);
+			buffer.add(Cause.REQUIRED);
 		}
-		// if (input.required || (!input.required && 0 < input.value.length)) -> if (input.required || 0 < input.value.length) -> else
 		else
 		{
 			if (input.minLength && input.value.length < input.minLength)
 			{
-				causes.add(Cause.MINLENGTH);
+				buffer.add(Cause.MINLENGTH);
 			}
 			if (0 < input.maxLength && input.maxLength < input.value.length)
 			{
-				causes.add(Cause.MAXLENGTH);
+				buffer.add(Cause.MAXLENGTH);
 			}
 			if (input.pattern && !new RegExp(input.pattern).test(input.value))
 			{
-				causes.add(Cause.PATTERN);
+				buffer.add(Cause.PATTERN);
 			}
 		}
-		return causes;
+		return buffer;
 	},
 	[]);
-	//
-	// useful macro 3rd
-	//
-	const validate = useCallback((form: HTMLFormElement, input: HTMLInputElement) =>
-	{
-		// cache
-		const message = onCheck(input, getValues(form), getCauses(input));
 
-		set_errors((errors) =>
-		{
-			return errors[input.name] === message ? errors :  { ...errors, [input.name]: message };
-		});
-		set_checks((checks) =>
-		{
-			return checks[input.name] === !message ? checks : { ...checks, [input.name]: !message };
-		});
-		//
-		// (QoL) :valid & :invalid selector
-		//
-		input.setCustomValidity(message ?? "");
-	},
-	[onCheck, getValues, getCauses]);
-	//
-	// useful macro 4th
-	//
-	const verify = useCallback((name: string) =>
+	const message = useCallback((input: HTMLInputElement, value: Nullable<string> | (() => Nullable<string>)) =>
 	{
-		// @ts-ignore
-		validate(form.current, form.current.elements[name]);
+		if (!form.current) throw new Error();
+		
+		const msg = value instanceof Function ? value() : value;
+		// anti-pattern
+		errors[input.name] = msg; checks.current = { ...checks.current, [input.name]: !msg };
+		// actually update
+		set_errors((errors) => ({ ...errors, [input.name]: msg }));
+		// :valid :invalid supports
+		(form.current.elements[input.name as never] as HTMLInputElement).setCustomValidity(msg ?? "");
 	},
-	[validate]);
+	[errors]);
 
-	
+	const notify = useCallback((name: string, trigger: Trigger = Trigger.VERIFY) =>
+	{
+		if (!form.current) throw new Error();
+
+		const input = form.current.elements[name as never] as HTMLInputElement;
+
+		message(input, onVerify.current({ input, trigger }))
+
+		onEffect.current({ input, trigger });
+	},
+	[message]);
+
 	useEffect(() =>
 	{
-		// buffer
-		const _errors: typeof errors = {};
-		// buffer
-		const _checks: typeof checks = {};
-
-		form.current = document.getElementById(id) as HTMLFormElement;
-
-		for (const input of form.current.querySelectorAll<HTMLInputElement>("input[name]"))
+		if (form.current = document.getElementById(id) as Nullable<HTMLFormElement>)
 		{
-			_errors[input.name] = null; _checks[input.name] = !input.required;
+			const inputs = form.current.querySelectorAll<HTMLInputElement>("input[name]");
+
+			set_values((_) =>
+			{
+				const buffer: typeof values = {};
+	
+				for (const input of inputs) buffer[input.name] = input.value;
+	
+				return buffer;
+			});
+			set_errors((_) =>
+			{
+				const buffer: typeof errors = {};
+	
+				for (const input of inputs) buffer[input.name] = null;
+	
+				return buffer;
+			});
+			checks.current = (() =>
+			{
+				const buffer: typeof checks.current = {};
+	
+				for (const input of inputs) buffer[input.name] = !input.required;
+	
+				return buffer;
+			})();
 		}
-		//
-		// default value
-		//
-		set_errors(_errors);
-		set_checks(_checks);
 	},
 	[id]);
 
 	useEffect(() =>
 	{
-		if (form.current)
-		{
-			//
-			// capture
-			//
-			const target = form.current;
+		if (!form.current) throw new Error();
 
+		const target = form.current;
+
+		for (const input of target.querySelectorAll<HTMLInputElement>("input[name]"))
+		{
 			for (const trigger of new Set(triggers))
 			{
 				switch (trigger)
 				{
 					case Trigger.BLUR:
 					{
-						for (const input of target.querySelectorAll<HTMLInputElement>("input[name]"))
-						{
-							input.onblur = (event) => validate(target, input);
-						}
+						input.onblur = (event) => notify(input.name, trigger);
 						break;
 					}
 					case Trigger.FOCUS:
 					{
-						for (const input of target.querySelectorAll<HTMLInputElement>("input[name]"))
-						{
-							input.onfocus = (event) => validate(target, input);
-						}
-						break;
-					}
-					case Trigger.INPUT:
-					{
-						for (const input of target.querySelectorAll<HTMLInputElement>("input[name]"))
-						{
-							input.oninput = (event) => validate(target, input);
-						}
+						input.onfocus = (event) => notify(input.name, trigger);
 						break;
 					}
 				}
 			}
-
-			target.onsubmit = (event) =>
+			input.oninput = (event) =>
 			{
-				//
-				// conditional validate
-				//
-				if (triggers.includes(Trigger.SUBMIT))
-				{
-					for (const input of target.querySelectorAll<HTMLInputElement>("input[name]"))
-					{
-						validate(target, input);
-					}
-				}
-				//
-				// send form data
-				//
-				if (!disabled)
-				{
-					onSubmit(new FormData(target));
-				}
-				//
-				// fuck you
-				//
-				event.preventDefault();
+				// anti-pattern
+				values[input.name] = input.value; notify(input.name, Trigger.CHANGE);
+
+				set_values((values) => ({ ...values, [input.name]: input.value }));
+			};
+			input.onkeydown = (event) =>
+			{
+				if (onBlock.current({ input, key: event.key })) event.preventDefault();
 			};
 		}
+		target.onsubmit = (event) =>
+		{
+			if (triggers.includes(Trigger.SUBMIT))
+			{
+				for (const input of target.querySelectorAll<HTMLInputElement>("input[name]"))
+				{
+					notify(input.name, Trigger.SUBMIT);
+				}
+			}
+			if (!disabled)
+			{
+				// send form data
+				onSubmit(new FormData(target));
+			}
+			// fuck you
+			event.preventDefault();
+		};
 	},
-	[form, disabled, validate, onSubmit, triggers]);
+	[notify, values, disabled, triggers, onSubmit]);
 
 	useEffect(() =>
 	{
-		for (const check of Object.values(checks))
+		for (const check of Object.values(checks.current))
 		{
-			if (!check)
-			{
-				return set_disabled(true);
-			}
+			if (!check) return set_disabled(true);
 		}
 		return set_disabled(false);
 	},
-	[checks]);
+	[checks.current]);
 
-	return { errors, verify, disabled };
+	return {
+		values, errors, disabled, notify, causes, message,
+		block: (handle: typeof onBlock.current) => onBlock.current = handle,
+		verify: (handle: typeof onVerify.current) => onVerify.current = handle,
+		effect: (handle: typeof onEffect.current) => onEffect.current = handle,
+	};
 }

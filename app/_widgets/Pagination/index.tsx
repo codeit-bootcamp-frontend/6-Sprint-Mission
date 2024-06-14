@@ -39,9 +39,7 @@ export default function Pagination(props: Readonly<Props & Context["props"]>)
 			}
 		}}>
 		<div id={props.id} class={props.class} style={props.style}>
-		{
-			props.children
-		}
+			{props.children}
 		</div>
 		</Context.Provider>
 	)
@@ -84,9 +82,7 @@ Pagination.Button = function Button(props: Readonly<Props & { to: ("first" | "pr
 			}
 		}
 		}>
-		{
-			props.children
-		}
+			{props.children}
 		</div>
 	);
 };

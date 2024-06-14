@@ -11,9 +11,7 @@ export default function Layout(props: Readonly<Pick<Props, "children">>)
 			</Link>
 			{/* content */}
 			<article class="mobile:w-full mobile:px-[16px] mobile:mt-[24px] tablet:w-[640px] tablet:mt-[40px] desktop:w-[640px] desktop:mt-[40px]">
-			{
-				props.children
-			}
+				{props.children}
 			</article>
 		</main>
 	);

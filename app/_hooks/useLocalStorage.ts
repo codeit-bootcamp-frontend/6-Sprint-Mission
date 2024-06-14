@@ -31,7 +31,7 @@ export default function useLocalStorage<T>(key: string, fallback: T)
 	{
 		const signal = value instanceof Function ? value(storage) : value;
 
-		switch (storage)
+		switch (signal)
 		{
 			case null: case undefined:
 			{

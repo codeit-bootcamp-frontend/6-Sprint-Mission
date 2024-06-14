@@ -16,9 +16,7 @@ export default function Footer(props: Readonly<{ children: { name: string; href:
 				(
 					<Link key={index} href={args.href}>
 						<div class="font-[400] text-[#E5E7EB] text-[16px]">
-						{
-							args.name
-						}
+							{args.name}
 						</div>
 					</Link>
 				))}

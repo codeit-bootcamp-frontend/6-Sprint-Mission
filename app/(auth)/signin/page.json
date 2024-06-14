@@ -1,8 +1,8 @@
 [
 	{
-		"id": "이메일", "type": "email", "pattern": "[^@\\s]+@[^@\\s]+\\.[^@\\s]+", "required": true, "placeholder": "이메일을 입력해주세요", "autocomplete": "email"
+		"id": "email", "label": "이메일", "type": "email", "pattern": "[^@\\s]+@[^@\\s]+\\.[^@\\s]+", "required": true, "placeholder": "이메일을 입력해주세요", "autocomplete": "email"
 	},
 	{
-		"id": "비밀번호", "type": "password", "minlength": 8, "maxlength": 16, "required": true, "placeholder": "비밀번호를 입력해주세요", "autocomplete": "password"
+		"id": "password", "label": "비밀번호", "type": "password", "minlength": 8, "maxlength": 16, "required": true, "placeholder": "비밀번호를 입력해주세요", "autocomplete": "password"
 	}
 ]

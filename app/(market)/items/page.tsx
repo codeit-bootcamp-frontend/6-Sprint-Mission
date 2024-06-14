@@ -13,9 +13,7 @@ export default function Page()
 				<Pagination.Generator render={(key, page, highlight) =>
 				(
 					<Pagination.Button key={key} to={page} style={{ background: highlight ? "blue" : undefined }}>
-					{
-						page + 1
-					}
+						{page + 1}
 					</Pagination.Button>
 				)}/>
 				<Pagination.Button to="next">

@@ -16,7 +16,7 @@ export default function Page()
 		<main class="flex flex-col items-center h-screen overflow-x-hidden *:w-full">
 			<Header>
 			{[
-				// TODO: none
+				// ...
 			]}
 			</Header>
 			{/* content */}
