@@ -1,10 +1,10 @@
 .link_styles{
     text-Decoration: none;
     padding: 24px 23px;
-    color: #4B5563;
+    color: var(--gray-600);
 }
 .link_styles:hover{
-    color: #3692FF;
+    color: var(--blue);
 }
 
 .nav{
@@ -41,7 +41,7 @@
     align-items: center;
     width: 120px;
     height: 48px;
-    background: #3692FF;
+    background: var(--blue);
     border-radius: 8px;
 }
 

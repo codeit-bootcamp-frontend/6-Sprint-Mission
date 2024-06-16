@@ -1,0 +1,17 @@
+.Input {
+    background: var(--gray-100);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 16px 24px;
+    width: 100%;
+}
+
+.Input:focus {
+    outline: 2px solid var(--blue);
+}
+
+.Input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+}

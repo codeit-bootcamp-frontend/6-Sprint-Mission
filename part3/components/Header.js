@@ -16,9 +16,11 @@ function Header() {
           중고마켓
         </Link>
       </ul>
-      <div className={styles.login_btn}>
-        <p className={styles.login_btn_text}>로그인</p>
-      </div>
+      <Link className={styles.link_styles} href="/auth/signIn">
+        <div className={styles.login_btn}>
+          <p className={styles.login_btn_text}>로그인</p>
+        </div>
+      </Link>
     </header>
   );
 }

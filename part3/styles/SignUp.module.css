@@ -1,0 +1,94 @@
+.login_container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.login_logo {
+  position: relative;
+  width: 396px;
+  height: 132px;
+}
+
+.login_logo_wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.error_message {
+  color: var(--red);
+}
+
+.signup_input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.label_style {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.signup_btn {
+  background: var(--blue);
+  width: 100%;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 40px;
+  border: none;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+
+.signup_btn:disabled {
+  background: var(--gray-400);
+}
+
+.social_login {
+  background: #e6f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 23px;
+  margin-bottom: 24px;
+}
+
+.social_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.social_img {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+
+.login_signup {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.login_signup a {
+  text-decoration-line: underline;
+  color: #3182f6;
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 767px) {
+  .login-container {
+    width: 344px;
+    margin: 0 auto;
+  }
+}

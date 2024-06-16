@@ -20,7 +20,7 @@
   font-weight: 600;
   line-height: 23px;
   text-align: left;
-  color: #1f2937;
+  color: var(--gray-800);
 }
 
 .writer_info_wrap {
@@ -36,7 +36,7 @@
   font-weight: 400;
   line-height: 16px;
   text-align: left;
-  color: #4b5563;
+  color: var(--gray-600);
 }
 
 .write_time {
@@ -45,7 +45,7 @@
   font-weight: 400;
   line-height: 16.71px;
   text-align: left;
-  color: #9ca3af;
+  color: var(--gray-400);
 }
 
 .like_count {
@@ -54,10 +54,10 @@
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color: #6b7280;
+  color: var(--gray-500);
 }
 
 .hr_style {
     margin: 24px 0;
-    border: 1px solid #E5E7EB
+    border: 1px solid var(--gray-200);
 }

@@ -1,3 +1,18 @@
+:root {
+    --gray-900: #111827;
+    --gray-800: #1F2937;
+    --gray-700: #374151;
+    --gray-600: #4b5563;
+    --gray-500: #6b7280;
+    --gray-400: #9ca3af;
+    --gray-200: #e5e7eb;
+    --gray-100: #f3f4f6;
+    --gray-50: #f9fafb;
+    --blue: #3692ff;
+    --red: #f74747;
+    --header-height: 70px;
+  }
+  
 * {
   box-sizing: border-box;
 }

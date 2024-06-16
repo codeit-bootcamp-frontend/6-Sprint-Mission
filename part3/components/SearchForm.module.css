@@ -3,10 +3,11 @@
     height: 42px;
     border: none;
     border-radius: 12px;
-    background: #F3F4F6;
+    background: var(--gray-100);
     margin: 24px 0;
     padding-left: 44px;
 }
+
 .search_input_wrap {
   display: flex;
   align-items: center;
