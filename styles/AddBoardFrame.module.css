@@ -1,0 +1,15 @@
+.addBoardFrame {
+  margin: 10px auto;
+  width: 1200px;
+}
+@media (max-width: 1199px) {
+  .addBoardFrame {
+    width: 696px;
+  }
+}
+
+@media (max-width: 769px) {
+  .addBoardFrame {
+    width: 343px;
+  }
+}

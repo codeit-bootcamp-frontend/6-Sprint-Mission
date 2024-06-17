@@ -1,0 +1,91 @@
+.formFrame {
+  margin-top: 15px;
+}
+.formFrame > * {
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 18px;
+}
+.formFrame > input {
+  color: #1f2937;
+  font-weight: 400;
+  font-size: 16px;
+}
+.registerFrame {
+  display: flex;
+  height: 42px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.registerBtn {
+  cursor: pointer;
+  width: 74px;
+  height: 42px;
+  border-radius: 8px;
+  border: none;
+  background-color: #9ca3af;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.titleInput {
+  margin-top: 10px;
+  width: 100%;
+  height: 56px;
+  border: none;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+}
+
+.titleInput::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+.content {
+  margin-top: 10px;
+}
+.contentInput {
+  margin-top: 10px;
+  width: 100%;
+  height: 282px;
+  border: none;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+}
+.contentInput::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9ca3af;
+}
+.image {
+  margin-top: 10px;
+}
+.imageRegister {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 282px;
+  height: 282px;
+  border-radius: 12px;
+  background: #f3f4f6;
+}
+.imageRegister :first-child {
+  color: #9ca3af;
+  font-size: 42px;
+}
+
+.imageRegister :last-child {
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 16px;
+}
+.imageInput {
+  display: none;
+}
+

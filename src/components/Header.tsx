@@ -4,13 +4,12 @@ import logo from '../img/panda.png';
 import profile from '../img/profile.png';
 import Link from 'next/link';
 
-const Header = ({
-  isLogin,
-  children,
-}: {
+interface headerProps {
   isLogin: boolean;
   children: React.ReactNode;
-}) => {
+}
+
+const Header = ({ isLogin, children }: headerProps) => {
   return (
     <>
       <div className={style['nav']}>

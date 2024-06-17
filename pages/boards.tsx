@@ -4,9 +4,10 @@ import React from 'react';
 import style from '../styles/BoardFrame.module.css';
 import { GetServerSideProps } from 'next';
 import { AxiosError } from 'axios';
-import { getBestPosts, writing } from '@/src/api/api';
+import { getBestPosts } from '@/src/api/api';
+import { writingType } from '@/src/api/apiType';
 interface bestPosts {
-  bestPosts: writing[];
+  bestPosts: writingType[];
 }
 
 const boards: React.FC<bestPosts> = ({ bestPosts }) => {

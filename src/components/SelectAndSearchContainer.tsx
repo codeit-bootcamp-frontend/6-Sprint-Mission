@@ -5,9 +5,13 @@ import SearchBar from './SearchBar';
 const SelectAndSearchContainer = () => {
   const router = useRouter();
   const ref = useRef<HTMLInputElement>(null);
-  const [selectedOption, setSelectedOption] = useState('recent');
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'like'>(
+    'recent'
+  );
   const onChangeSelectHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(e.target.value);
+    if (e.target.value === 'recent') {
+      setSelectedOption(e.target.value);
+    } else if (e.target.value === 'like') setSelectedOption(e.target.value);
   };
   const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     if (ref.current) {

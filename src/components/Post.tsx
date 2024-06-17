@@ -3,19 +3,16 @@ import style from '@/styles/Post.module.css';
 import profile from '@/src/img/profile.png';
 import heart from '@/src/img/heart.png';
 import { convertTime } from '../util/convertTime';
-const Post = ({
-  image,
-  content,
-  likeCount,
-  nickName,
-  createdAt,
-}: {
+
+interface postItem {
   image: string | null;
   content: string;
   likeCount: number;
   nickName: string;
   createdAt: string;
-}) => {
+}
+
+const Post = ({ image, content, likeCount, nickName, createdAt }: postItem) => {
   const contentDate = convertTime(createdAt);
   return (
     <div className={style.postFrame}>

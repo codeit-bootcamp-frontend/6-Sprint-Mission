@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import style from '@/styles/BestPosts.module.css';
-import { writing } from '../api/api';
+import { writingType } from '../api/apiType';
 import BestPost from './BestPost';
-
-const BestPosts = ({ posts }: { posts: writing[] }) => {
+interface bestPostsProps {
+  posts: writingType[];
+}
+const BestPosts = ({ posts }: bestPostsProps) => {
   return (
     <div className={style.bestPostsFrame}>
       <p className={style.bestPostsTitle}>베스트 게시글</p>
