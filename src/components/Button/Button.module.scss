@@ -15,3 +15,25 @@
     background-color: $dark-blue;
   }
 }
+
+.active {
+  background-color: $grey-400;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: $grey-400;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.disabled {
+  background-color: $grey-400;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: $grey-400;
+  }
+}

@@ -1,0 +1,62 @@
+@import "@/src/styles/_mixin";
+@import "@/src/styles/_colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  label {
+    @include font-style(18px, 700, $grey-800);
+  }
+
+  input {
+    background-color: $grey-100;
+    height: 56px;
+    border-radius: 12px;
+    padding: 16px 24px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $grey-400;
+      font-size: 16px;
+    }
+  }
+
+  .errorMessage {
+    @include font-style(15px, 600, $error);
+    line-height: 18px;
+    padding-left: 10px;
+    cursor: default;
+  }
+}
+
+.goSignUp {
+  @include font-style(15px, 500, $grey-800);
+  cursor: default;
+
+  span {
+    text-decoration: underline;
+    color: $blue;
+  }
+}

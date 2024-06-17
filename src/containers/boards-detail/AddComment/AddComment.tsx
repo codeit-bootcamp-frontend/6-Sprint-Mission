@@ -4,6 +4,7 @@ import axios from "@/src/lib/axios";
 import Spinner from "@/src/components/Spinner/Spinner";
 
 import styles from "./AddComment.module.scss";
+import classnames from "classnames";
 
 export default function AddComment() {
   const router = useRouter();
@@ -47,9 +48,10 @@ export default function AddComment() {
           <Spinner />
         ) : (
           <button
-            className={styles.submitButton}
+            className={classnames(styles.submitButton, {
+              [styles.disabledButton]: isButtonDisabled, // 조건부로 클래스 추가
+            })}
             type="submit"
-            disabled={isButtonDisabled} // 버튼 활성화 여부 설정
           >
             등록
           </button>

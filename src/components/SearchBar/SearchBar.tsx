@@ -1,28 +1,17 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./SearchBar.module.scss";
 import searchIcon from "@/public/svgs/search.svg";
+import useDebounce from "@/src/hooks/useDebounce";
 
 interface SearchBarProps {
   keyword: (searchTerm: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ keyword }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const debouncedSearchTerm = useDebounce<string>(searchTerm, 2000);
 
-  // 디바운싱을 위한 useEffect
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedSearchTerm(searchTerm);
-    }, 2000); // 2초 딜레이가 지난 후 조회 API 호출
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [searchTerm]);
-
-  // 디바운싱된 검색어가 변경될 때 keyword 함수 호출
   useEffect(() => {
     if (debouncedSearchTerm) {
       keyword(debouncedSearchTerm);

@@ -10,6 +10,7 @@ import kebabIcon from "@/public/svgs/kebab.svg";
 import defaultProfileIcon from "@/public/svgs/default-profile.svg";
 import commentEmptyIcon from "@/public/svgs/comment-empty.svg";
 import backIcon from "@/public/svgs/back-page.svg";
+import { Fragment } from "react";
 
 export default function Comment() {
   const router = useRouter();
@@ -51,7 +52,7 @@ export default function Comment() {
   return (
     <div className={styles.container}>
       {comments?.list?.map((comment) => (
-        <>
+        <Fragment key={comment.id}>
           <div className={styles.contentSection}>
             <div className={styles.content}>{comment.content}</div>
             <Image src={kebabIcon} width={24} height={24} alt="케밥 아이콘" />
@@ -73,7 +74,7 @@ export default function Comment() {
           </div>
 
           <hr className={styles.hr} />
-        </>
+        </Fragment>
       ))}
 
       <div className={styles.backButtonSection}>

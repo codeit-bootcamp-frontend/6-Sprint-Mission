@@ -33,6 +33,35 @@
   }
 }
 
+.headerRight {
+  display: flex;
+  gap: 10px;
+
+  .userControl {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+
+    .user {
+      display: inline;
+      cursor: default;
+      span {
+        @include font-style(16px, 800, $grey-800);
+      }
+    }
+
+    .signOut {
+      @include font-style(14px, 400, $grey-500);
+      cursor: pointer;
+
+      &:hover {
+        color: $grey-800;
+      }
+    }
+  }
+}
+
 /* mobile */
 @media (max-width: 768px) {
   .headerLeft {

@@ -39,7 +39,8 @@
   }
 }
 
-.submitButton {
+.submitButton,
+.disabledButton {
   @include font-style(16px, 600, $white);
   padding: 12px 24px;
   background-color: $blue;
@@ -52,9 +53,13 @@
   &:hover {
     background-color: $dark-blue;
   }
+}
 
-  &:disabled {
+.disabledButton {
+  background-color: $grey-400;
+  cursor: not-allowed;
+
+  &:hover {
     background-color: $grey-400;
-    cursor: not-allowed;
   }
 }

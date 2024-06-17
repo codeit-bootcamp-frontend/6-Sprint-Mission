@@ -1,6 +1,9 @@
 import "@/src/styles/global.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { AuthProvider } from "@/src/contexts/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Layout from "@/src/components/Layout/Layout";
 import Header from "@/src/components/Header/Header";
@@ -14,10 +17,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Layout page>
-        <Component {...pageProps} />
-      </Layout>
+      <AuthProvider>
+        <Header />
+        <Layout>
+          <Component {...pageProps} />
+          <ToastContainer position="bottom-right" />
+        </Layout>
+      </AuthProvider>
     </>
   );
 }

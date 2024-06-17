@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  padding: 0 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,18 +8,26 @@
 
 .page.container {
   margin-top: 100px;
+  padding: 0 360px;
+}
+
+.authPage.container {
+  margin-top: 60px;
+  padding: 0 640px;
 }
 
 /* mobile */
 @media (max-width: 768px) {
-  .container {
+  .page.container,
+  .authPage.container {
     padding: 0 16px;
   }
 }
 
 /* tablet */
 @media (max-width: 1280px) {
-  .container {
+  .page.container,
+  .authPage.container {
     padding: 0 24px;
   }
 }
