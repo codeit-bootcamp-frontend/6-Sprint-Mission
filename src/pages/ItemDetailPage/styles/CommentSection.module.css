@@ -1,0 +1,51 @@
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.sectionTitle {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.09px;
+  color: #111827;
+}
+
+.input {
+  width: 1200px;
+  height: 104px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f3f4f6;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #9ca3af;
+}
+
+.input::placeholder {
+  text-align: start;
+  color: #9ca3af;
+}
+
+.button {
+  width: 74px;
+  height: 42px;
+  top: 155px;
+  left: 1126px;
+  padding: 12px 23px;
+  border-radius: 8px;
+  opacity: 0px;
+  background-color: #3692ff;
+  color: #ffffff;
+  border: none;
+}
+
+.button:disabled {
+  background-color: #9ca3af;
+}

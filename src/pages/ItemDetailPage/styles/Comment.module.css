@@ -1,0 +1,47 @@
+.commentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.content {
+  width: 1172px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #1f2937;
+}
+
+.userProfile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.userProfileImage {
+  width: 40px;
+  height: 40px;
+}
+
+.userNicknameAndTimeAgo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.userNickname {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+  text-align: left;
+  color: #4b5563;
+}
+
+.timeAgo {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.32px;
+  text-align: left;
+  color: #9ca3af;
+}

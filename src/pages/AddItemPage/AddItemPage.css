@@ -1,0 +1,63 @@
+.AddItemPageHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AddItemPage {
+  padding: 24px 360px;
+}
+
+.mainSection {
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.41px;
+  text-align: left;
+}
+
+.register-button {
+  width: 88px;
+  height: 42px;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  background-color: #3692ff;
+}
+
+.register-button:disabled {
+  background-color: #9ca3af;
+}
+
+.register-button:hover {
+  cursor: pointer;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.addItemInput {
+  width: 100%;
+  height: 16px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f3f4f6;
+  resize: none;
+  padding: 20px;
+}

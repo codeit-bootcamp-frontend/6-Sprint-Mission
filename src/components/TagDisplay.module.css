@@ -1,0 +1,12 @@
+.tagSection {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 16px;
+  gap: 10px;
+  border-radius: 26px;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}

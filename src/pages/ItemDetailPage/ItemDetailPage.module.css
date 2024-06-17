@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.button {
+  width: 240px;
+  height: 48px;
+  top: 418px;
+  left: 480px;
+  gap: 10px;
+  padding: 12px 0;
+  border-radius: 40px;
+  background-color: #3692ff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration-line: none;
+}
