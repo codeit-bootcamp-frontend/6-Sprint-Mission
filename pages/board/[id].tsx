@@ -54,7 +54,7 @@ export default function BoardDetail() {
       <Head>
         <title>{`${article?.title}`}</title>
       </Head>
-      <div className="flex items-center justify-center">
+      <div className="mt-[100px] flex items-center justify-center">
         <Container>
           <div className="border-b pb-[20px]">
             <div className="flex justify-between mb-[20px]">
@@ -86,6 +86,7 @@ export default function BoardDetail() {
               articleId={
                 typeof router.query.id === 'string' ? router.query.id : ''
               }
+              onCommentAdded={fetchCommentsList}
             />
           </div>
           <div>

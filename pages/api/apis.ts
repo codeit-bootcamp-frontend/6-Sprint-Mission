@@ -26,6 +26,33 @@ export async function loadArticlesDetail(articleId: string) {
   }
 }
 
+export async function imageUpload(imgFile: File) {
+  try {
+    const formData = new FormData();
+    formData.append('image', imgFile);
+    const res = await axios.post('/images/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    return res.data.url;
+  } catch (error) {
+    console.error('Error POST imageUpload', error);
+  }
+}
+
+export async function createArticle(
+  title: string,
+  content: string,
+  imgUrl?: string | null,
+) {
+  try {
+    await axios.post('/articles', { title, content, image: imgUrl });
+  } catch (error) {
+    console.error('Error POST createArticle', error);
+  }
+}
+
 export async function loadCommentsList(articleId: string) {
   try {
     const res = await axios.get(`/articles/${articleId}/comments`, {

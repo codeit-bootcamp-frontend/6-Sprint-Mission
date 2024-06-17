@@ -6,7 +6,7 @@ import IMG_NOTFOUND from '@/public/img-notfound.svg';
 export default function NotFound() {
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="mt-[100px] flex items-center justify-center">
         <Container>
           <div className="flex flex-col items-center justify-center">
             <Image

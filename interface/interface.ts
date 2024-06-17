@@ -36,3 +36,19 @@ export interface IBoardValues {
   content: string;
   imgFile: File | null;
 }
+
+export interface ISigninValues {
+  email: string;
+  nickname: string;
+  password: string;
+  passwordConfirmation: string;
+}
+
+export interface IUser {
+  id: number;
+  email: string;
+  nickname: string;
+  image: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
