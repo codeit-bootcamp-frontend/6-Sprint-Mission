@@ -1,0 +1,38 @@
+.BestContainer{
+  margin: 0 10px;
+  .InnerContainer{
+    padding: 0 24px 16px;
+    width: 384px;
+    height: 169px;
+    background-color: var(--gray-50);
+    @media (max-width: 745px) {
+      width: 384px;
+      height: 167px;
+    }
+    .Content{
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .InfoContent{
+      font-size: 14px;
+      color: var(--gray-600);
+      display: flex;
+      justify-content: space-between;
+      .Info{
+        display: flex;
+        line-height: 100%;
+        .nickname{
+          margin-right: 8px;
+        }
+        .likeCount{
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

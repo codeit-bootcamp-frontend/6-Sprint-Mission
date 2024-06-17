@@ -2,10 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import BestPosts from '../../components/BestPosts';
 import AllPosts from '../../components/AllPosts';
-import axios from '../../lib/axios';
 import Image from 'next/image';
-import styles from './index.module.css'
-import {Post} from "@/type/type";
+import styles from './index.module.css';
+import { Post } from '@/type/type';
+import instance from '../../lib/axios';
 
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -13,13 +13,15 @@ export default function Home() {
   const [order, setOrder] = useState('recent');
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const sortedArticles = posts ? [...posts].sort((a, b) => b.likeCount - a.likeCount) : [];
-  const topArticles = sortedArticles.slice(0, visiblePostsCount);
 
+  const sortedArticles = posts
+    ? [...posts].sort((a, b) => b.likeCount - a.likeCount)
+    : [];
+  const topArticles = sortedArticles.slice(0, visiblePostsCount);
   async function getPosts() {
     try {
-      const res = await axios.get(`/articles`);
-      const nextPosts: Post[] = res.data.results;
+      const res = await instance.get(`/articles`);
+      const nextPosts = res.data.list;
       setPosts(nextPosts);
     } catch (error) {
       console.error('Error fetching posts:', error);
@@ -52,8 +54,8 @@ export default function Home() {
   };
 
   const filteredPosts = posts
-    ?.filter((post) =>
-      post.title.toLowerCase().includes(searchTerm.toLowerCase())
+    ?.filter((posts) =>
+      posts.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .sort((a, b) => {
       if (order === 'recent') {
@@ -104,24 +106,22 @@ export default function Home() {
             onClick={() => setIsOpen(!isOpen)}
           >
             <div className={styles.Order}>
-              {order === "recent" ? "최신순" : "좋아요순"}
-              </div>
-              <div>
-              ▼
-              </div>
-              </div>
-              </div>
-              </div>
-              {isOpen ? (
+              {order === 'recent' ? '최신순' : '좋아요순'}
+            </div>
+            <div>▼</div>
+          </div>
+        </div>
+      </div>
+      {isOpen ? (
         <div className={styles.OptionsContainer}>
           <div
-            onClick={() => handleOrderChange("recent")}
+            onClick={() => handleOrderChange('recent')}
             className={styles.Option}
           >
             최신순
           </div>
           <div
-            onClick={() => handleOrderChange("like")}
+            onClick={() => handleOrderChange('like')}
             className={styles.Option}
           >
             좋아요순
@@ -130,8 +130,8 @@ export default function Home() {
       ) : (
         <></>
       )}
-      {(filteredPosts || []).map((post) => (
-        <AllPosts key={post.id} post={post} />
+      {(filteredPosts || []).map((posts) => (
+        <AllPosts key={posts.id} post={posts} />
       ))}
     </div>
   );

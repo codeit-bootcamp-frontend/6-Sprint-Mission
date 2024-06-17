@@ -14,7 +14,8 @@
     "date-fns-tz": "^3.1.3",
     "next": "13.5.6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sass": "^1.77.5"
   },
   "devDependencies": {
     "@types/node": "20.12.13",

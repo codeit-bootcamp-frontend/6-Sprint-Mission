@@ -1,18 +1,17 @@
-import Image from "next/image";
-import React from "react";
-import { format } from "date-fns";
-import styles from "./AllPosts.module.css";
-import {PostsProps} from "@/type/type";
-
+import Image from 'next/image';
+import React from 'react';
+import { format } from 'date-fns';
+import styles from './AllPosts.module.css';
+import { PostsProps } from '@/type/type';
 
 function AllPosts({ post }: PostsProps) {
   return (
     <>
       <div className={styles.Container}>
-        <div className={styles.InnerContainer}>
+        <div className={styles.Content}>
           <p className={styles.Content}>{post.content}</p>
           <div>
-            {post.image ? (
+          {post.image && (
               <Image
                 src={post.image}
                 width={72}
@@ -20,8 +19,6 @@ function AllPosts({ post }: PostsProps) {
                 alt="이미지"
                 className={styles.Img}
               />
-            ) : (
-              <></>
             )}
           </div>
         </div>
@@ -35,7 +32,7 @@ function AllPosts({ post }: PostsProps) {
             />
             <div className={styles.nickname}>{post.writer.nickname}</div>
             <div className={styles.CreatedAt}>
-              {format(post.createdAt, "yyyy. MM. dd")}
+              {format(post.createdAt, 'yyyy. MM. dd')}
             </div>
           </div>
           <div className={styles.HeartGroup}>

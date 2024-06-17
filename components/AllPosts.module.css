@@ -1,0 +1,27 @@
+.Container{
+  height: 136px;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 24px;
+  .Content{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gray-800);
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    margin-bottom: 16px;
+  }
+  .InnerContainer{
+    display: flex;
+    justify-content: space-between;
+    .Group{
+      display: flex;
+      gap: 8px;
+    }
+    .HeartGroup{
+      display: flex;
+      gap: 8px;
+      line-height: 100%;
+    }
+  }
+}
