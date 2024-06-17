@@ -1,24 +1,46 @@
 import React, { useEffect, useState } from "react";
-import "../style/product.css";
-import HeartIcon from "../assets/icon/ic_heart.svg";
-import { getProductData, getProductCommentData } from "./API";
+import "../../style/product.css";
+import HeartIcon from "../../assets/icon/ic_heart.svg";
+import { getProductData, getProductCommentData } from "../API/API";
 import { Link, useParams } from "react-router-dom";
-import Commas from "../util/Commas";
-import TimeString from "../util/times";
-import inquiry_empty from "../assets/img/img_inquiry_empty.svg";
-import ic_back from "../assets/icon/ic_back.svg";
+import inquiry_empty from "../../assets/img/img_inquiry_empty.svg";
+import ic_back from "../../assets/icon/ic_back.svg";
+import Commas from "../../util/Commas";
+import TimeString from "../../util/times";
+
+interface ProductData {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  favoriteCount: number;
+  tags: string[];
+  images: string[];
+}
+
+interface CommentData {
+  id: number;
+  content: string;
+  updatedAt: string;
+  writer: {
+    image: string;
+    nickname: string;
+  };
+}
 
 export default function Product() {
-  const [productData, setProductData] = useState(null);
-  const [productCommentData, setProductCommentData] = useState(null);
+  const [productData, setProductData] = useState<ProductData | null>(null);
+  const [productCommentData, setProductCommentData] = useState<{
+    list: CommentData[];
+  } | null>(null);
   const [comment, setComment] = useState("");
   const [isFilled, setIsFilled] = useState(false);
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getProductData(id);
+        const data = await getProductData(id as unknown as number);
         setProductData(data);
       } catch (e) {
         console.error(e);
@@ -27,9 +49,8 @@ export default function Product() {
 
     const fetchCommentData = async () => {
       try {
-        const commentData = await getProductCommentData(id);
+        const commentData = await getProductCommentData(id as unknown as number);
         setProductCommentData(commentData);
-        console.log(productCommentData);
       } catch (e) {
         console.error(e);
       }
@@ -37,11 +58,9 @@ export default function Product() {
 
     fetchData();
     fetchCommentData();
-    console.log(productCommentData);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  const handleCommentChange = (e) => {
+  const handleCommentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const text = e.target.value;
     setComment(text);
     setIsFilled(text.trim().length > 0);

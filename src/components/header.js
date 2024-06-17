@@ -1,34 +1,30 @@
-import MainLogo from "../assets/icon/main_logo.svg";
-import SmallMainLogo from "../assets/icon/main_logo_small.svg";
-import { Link, useLocation } from "react-router-dom";
-import "../style/header.css";
-import LinkButton from "../common/Button";
-
-export default function NavBar() {
-  const location = useLocation();
-  return (
-    <nav className="navvar">
-      <Link to="/">
-        <img className="mainlogo" src={MainLogo} alt="로고" />
-        <img className="mainlogo" src={SmallMainLogo} alt="로고" />
-      </Link>
-      <div className="menus">
-        <Link to="/">
-          <span>자유게시판</span>
-        </Link>
-        <Link
-          to="/items"
-          className={
-            location.pathname.startsWith("/items") ||
-            location.pathname === "/additem"
-              ? "focus"
-              : ""
-          }
-        >
-          <span>중고마켓</span>
-        </Link>
-      </div>
-      <LinkButton to="/">로그인</LinkButton>
-    </nav>
-  );
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(require("react"));
+const main_logo_svg_1 = __importDefault(require("../assets/icon/main_logo.svg"));
+const main_logo_small_svg_1 = __importDefault(require("../assets/icon/main_logo_small.svg"));
+const react_router_dom_1 = require("react-router-dom");
+require("../style/header.css");
+const Button_1 = __importDefault(require("../common/Button"));
+const user_icon_svg_1 = __importDefault(require("../assets/icon/user_icon.svg"));
+const AuthProvider_1 = require("../context/AuthProvider");
+function NavBar() {
+    const location = (0, react_router_dom_1.useLocation)();
+    const { user, logout } = (0, AuthProvider_1.useAuth)();
+    return (react_1.default.createElement("nav", { className: "navvar" },
+        react_1.default.createElement(react_router_dom_1.Link, { to: "/" },
+            react_1.default.createElement("img", { className: "mainlogo", src: main_logo_svg_1.default, alt: "\uB85C\uACE0" }),
+            react_1.default.createElement("img", { className: "mainlogo", src: main_logo_small_svg_1.default, alt: "\uB85C\uACE0" })),
+        react_1.default.createElement("div", { className: "menus" },
+            react_1.default.createElement(react_router_dom_1.Link, { to: "/" },
+                react_1.default.createElement("span", null, "\uC790\uC720\uAC8C\uC2DC\uD310")),
+            react_1.default.createElement(react_router_dom_1.Link, { to: "/items", className: location.pathname.startsWith("/items") ||
+                    location.pathname === "/additem"
+                    ? "focus"
+                    : "" },
+                react_1.default.createElement("span", null, "\uC911\uACE0\uB9C8\uCF13"))),
+        user ? (react_1.default.createElement("img", { src: user_icon_svg_1.default, alt: "userIcon", onClick: logout })) : (react_1.default.createElement(Button_1.default, { to: "/signin" }, "\uB85C\uADF8\uC778"))));
 }
+exports.default = NavBar;

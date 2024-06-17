@@ -1,0 +1,252 @@
+main {
+    width: 100%;
+}
+
+.banner-top {
+    background-color: #CFE5FF;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/img/img_home_top.svg');
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+}
+
+.banner-top>div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 32px;
+    color: #374151;
+    font-weight: 700;
+}
+
+.btn-items {
+    width: 355px;
+    height: 56px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: #3692FF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-middle {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item img {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.item {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.item-text {
+    flex-basis: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-text.right {
+    text-align: right;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #3692FF;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 40px;
+    color: #374151;
+}
+
+.description {
+    font-weight: 500;
+    font-size: 24px;
+    color: #374151;
+    margin-top: 24px;
+}
+
+.banner-bottom {
+    background-color: #CFE5FF;
+    height: 540px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/img/img_home_bottom.svg');
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: 55%;
+}
+
+.banner-bottom>div {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    color: #374151;
+}
+
+/* 푸터부분 */
+footer {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background: #1B1D1F;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer>div {
+    padding-top: 20px;
+    flex-basis: 350px;
+    text-align: center;
+}
+
+.codeit {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9CA3AF;
+    margin-top: 0;
+}
+
+.FAQ {
+    font-size: 16px;
+    font-weight: 400;
+    gap: 255px;
+}
+
+footer>.FAQ>a {
+    background: none;
+    color: #E5E7EB;
+}
+
+/* 푸터부분 */
+
+/* 반응형 디자인 */
+
+@media (max-width: 1279px) {
+    header {
+        padding: 0 24px;
+    }
+
+    .banner-top {
+        height: 771px;
+        background-size: 120%;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 84px;
+    }
+
+    .banner-middle {
+        padding: 24px 24px 16px 24px;
+    }
+
+    .item {
+        display: block;
+    }
+
+    .item img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner-bottom {
+        height: 927px;
+        display: block;
+        text-align: center;
+        background-size: 120%;
+        padding-top: 84px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .description {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .break-on-desktop {
+        display: none;
+    }
+
+    .banner-top h1 br {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 0 16px;
+    }
+
+    .banner-top {
+        height: 540px;
+        background-position: bottom;
+        background-size: 130%;
+    }
+
+    .btn-items {
+        padding: 14px 33px;
+        width: auto;
+    }
+
+    .title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .banner-bottom {
+        height: 540px;
+        display: block;
+        text-align: center;
+        background-size: 130%;
+        padding: 48px 16px 0 0;
+    }
+
+    .banner-top h1 br {
+        display: inline;
+    }
+}

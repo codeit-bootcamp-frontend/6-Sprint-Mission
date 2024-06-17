@@ -1,16 +1,21 @@
-import { useState, useEffect, useRef } from "react";
-import "../style/SelectBtn.css";
-import ArrowDownIcon from "../assets/icon/ic_arrow_down.svg";
-import sortBtn from "../assets/icon/ic_sort.svg";
+import React, { FC, useState, useEffect, useRef } from "react";
+import "../../style/SelectBtn.css";
+import ArrowDownIcon from "../../assets/icon/ic_arrow_down.svg";
+import sortBtn from "../../assets/icon/ic_sort.svg";
 import { useMediaQuery } from "react-responsive";
 
-export default function SelectBtn({ onChange }) {
+interface SelectBtnProps {
+  onChange: (order: string) => void;
+}
+
+const SelectBtn: FC<SelectBtnProps> = ({ onChange }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [order, setOrder] = useState("recent");
-  const ORDER_KR = {
+  const ORDER_KR: { [key: string]: string } = {
     recent: "최신순",
     favorite: "좋아요순",
   };
+  
 
   const isMobile = useMediaQuery({
     query: "(max-width: 767px)",
@@ -28,22 +33,22 @@ export default function SelectBtn({ onChange }) {
       );
   };
 
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
 
   // 정렬 옵션 선택시 호출되는 함수
-  const handleOrderChange = (order) => {
+  const handleOrderChange = (order: string) => {
     setOrder(order); // 상태 업데이트
     onChange(order); // 부모 컴포넌트로 선택된 정렬 순서 전달
     setDropdownOpen(false); // 드롭다운 닫기
   };
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setDropdownOpen(false);
       }
     };
@@ -67,4 +72,6 @@ export default function SelectBtn({ onChange }) {
       )}
     </div>
   );
-}
+};
+
+export default SelectBtn;
