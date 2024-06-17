@@ -1,0 +1,158 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 344px;
+}
+
+.logoContainer {
+  display: flex;
+  width: 198px;
+  gap: 11px;
+  align-items: center;
+  margin: 24px auto;
+
+  img {
+    width: 52px;
+    height: 52px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    font-family: ROKAF Sans;
+    font-size: 33.17px;
+    color: #3692ff;
+    font-weight: 700;
+  }
+}
+
+.formContainer {
+  margin-bottom: 24px;
+
+  label {
+    position: relative;
+    margin-bottom: 8px;
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  input {
+    margin-bottom: 16px;
+  }
+
+  input::placeholder {
+    font-weight: 400;
+    color: #9ca3af;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .errorMessages {
+    margin-bottom: 8px;
+    margin-left: 16px;
+    color: #f74747;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  img {
+    position: absolute;
+    right: -262px;
+    bottom: -50px;
+  }
+
+  button {
+    width: 100%;
+    height: 56px;
+    background-color: #9ca3af;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .isValid {
+    background-color: #3692ff;
+  }
+}
+
+.socialLoginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1f2937;
+  }
+
+  div {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.signupContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 24px auto;
+  gap: 4px;
+
+  span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #1f2937;
+  }
+
+  .signupLink {
+    font-size: 15px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 744px) {
+  .container {
+    width: 640px;
+  }
+  .logoContainer {
+    width: 396px;
+    margin: 40px auto;
+    img {
+      width: 104px;
+      height: 104px;
+    }
+
+    span {
+      font-size: 66px;
+      font-weight: 700;
+    }
+  }
+
+  .formContainer {
+    margin-bottom: 24px;
+
+    label {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    input {
+      margin-bottom: 24px;
+    }
+
+    img {
+      right: -546px;
+    }
+  }
+}

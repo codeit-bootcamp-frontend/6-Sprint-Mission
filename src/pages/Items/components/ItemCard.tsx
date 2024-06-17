@@ -2,10 +2,10 @@ import React from "react";
 import "./ItemCard.css";
 import likeIcon from "../../../assets/icon-like-heart.svg";
 import { Link } from "react-router-dom";
-import { Product } from "../../../types";
+import { ProductItem } from "../../../types";
 
 interface ItemCardProps {
-  item: Product;
+  item: ProductItem;
   best?: boolean;
   desktop?: boolean;
 }

@@ -1,19 +1,26 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Items from "./pages/Items/Items";
 import HomePage from "./pages/HomePage/HomePage";
 import Layout from "./Layout";
-import { useState } from "react";
-import AuthContext from "./contexts/AuthContext";
 import AddItem from "./pages/AddItem/AddItem";
 import FreeBoard from "./pages/FreeBoard/FreeBoard";
 import ItemDetail from "./pages/ItemDetail/ItemDetail";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import SignUpPage from "./pages/SignUpPage/SignUpPage";
+import Items from "./pages/Items/Items";
+import { AuthProvider } from "./contexts/AuthContext";
+
+interface ProvidersProps {
+  children: ReactNode;
+}
+
+const Providers: React.FC<ProvidersProps> = ({ children }) => {
+  return <AuthProvider>{children}</AuthProvider>;
+};
 
 const App: React.FC = () => {
-  const [isLogin, setIsLogin] = useState(false);
-
   return (
-    <AuthContext.Provider value={isLogin}>
+    <Providers>
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -22,10 +29,12 @@ const App: React.FC = () => {
             <Route path="/products/:id" element={<ItemDetail />} />
             <Route path="/freeboard" element={<FreeBoard />} />
             <Route path="/additem" element={<AddItem />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
           </Route>
         </Routes>
       </Router>
-    </AuthContext.Provider>
+    </Providers>
   );
 };
 

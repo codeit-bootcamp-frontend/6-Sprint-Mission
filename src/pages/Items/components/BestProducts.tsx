@@ -8,8 +8,7 @@ import { Product } from "../../../types";
 
 const BestProducts: React.FC = () => {
   const maxVisibleItems: number = useItemCount();
-  const [bestItems, setItems] = useState<Product[]>([]);
-  // const [pageSize, setPageSize] = useState(10); 페이지네이션 기능에 사용
+  const [bestItems, setItems] = useState<Product["list"]>();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -21,15 +20,17 @@ const BestProducts: React.FC = () => {
     };
 
     fetchProducts();
-  }, []);
+  }, [maxVisibleItems]);
 
   return (
     <div className="container-best-products">
       <h1>베스트 상품</h1>
       <div className="item-cards-container">
-        {bestItems.map((item, i) => {
-          return <ItemCard key={item.id} best item={item} />;
-        })}
+        {bestItems ? (
+          bestItems.map(item => <ItemCard key={item.id} best item={item} />)
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );
