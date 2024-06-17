@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Auth.module.scss";
-import LoginForm from "@/components/auth/LoginForm";
 import QuickLogin from "@/components/auth/QuickLogin";
+import SignupForm from "@/components/auth/SignupForm";
 
-function Login() {
+function Signup() {
   return (
     <>
       <header className={styles.header}>
@@ -14,15 +14,15 @@ function Login() {
       </header>
 
       <main className={styles.main}>
-        <LoginForm />
+        <SignupForm />
         <QuickLogin />
-        <div className={styles.go_signup}>
-          <p>판다마켓이 처음이신가요?</p>
-          <Link href="/signup">회원가입</Link>
+        <div className={styles.go_login}>
+          <p>이미 회원이신가요?</p>
+          <Link href="/login">로그인</Link>
         </div>
       </main>
     </>
   );
 }
 
-export default Login;
+export default Signup;

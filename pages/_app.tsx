@@ -1,10 +1,16 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 import Nav from "@/components/common/Nav";
-import { DeviceProvider } from "@/lib/DeviceContext";
+import { DeviceProvider } from "@/contexts/DeviceContext";
+import { usePathname } from "next/navigation";
+
+const PAGES_WITHOUT_NAV = ["/login", "/signup"];
 
 export default function App({ Component, pageProps }: AppProps) {
+  const path = usePathname();
+  const hasNav = !PAGES_WITHOUT_NAV.includes(path);
+
   return (
     <>
       <Head>
@@ -33,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <DeviceProvider>
-        <Nav />
+        {hasNav && <Nav />}
         <Component {...pageProps} />
       </DeviceProvider>
     </>

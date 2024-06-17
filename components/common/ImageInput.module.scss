@@ -1,0 +1,73 @@
+@import "@/styles/_color";
+@import "@/styles/input";
+
+@mixin card-default {
+  width: 282px;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+
+  @media (max-width: 1199px) {
+    width: 162px;
+  }
+
+  @media (max-width: 767px) {
+    width: 168px;
+  }
+}
+
+.card_container {
+  margin: 16px 0 23px;
+  display: flex;
+  gap: 24px;
+
+  .add_card {
+    @include card-default;
+
+    background-color: $cool-gray100;
+    color: $cool-gray400;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-radius: 12px;
+
+    &:hover {
+      box-shadow: 0px 0px 5px $cool-gray500;
+    }
+  }
+
+  .image_card {
+    @include card-default;
+
+    position: relative;
+    border: 1px solid $cool-gray50;
+
+    .delete_btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .card_container {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card_container {
+    gap: 8px;
+  }
+}

@@ -2,32 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Nav.module.scss";
-import { useDevice } from "@/lib/DeviceContext";
-import Device from "@/constants/Device";
+import { useDevice } from "@/contexts/DeviceContext";
+import { DEVICE } from "@/constants/Device";
+import { useEffect, useState } from "react";
 
 function Nav() {
-  const device = useDevice();
-
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <Link href="/">
-          {device === Device.Mobile ? (
-            <Image
-              alt="판다마켓 로고"
-              src="/logo_text.png"
-              width="81"
-              height="40"
-            />
-          ) : (
-            <Image
-              alt="판다마켓 로고"
-              src={"/logo.png"}
-              width="153"
-              height="51"
-            />
-          )}
-        </Link>
+        <Logo />
         <ul className={styles.menu}>
           <li>
             <Menu path="/boards" menu="자유게시판" />
@@ -37,25 +20,69 @@ function Nav() {
           </li>
         </ul>
       </div>
-      <Link className={`button ${styles.login_button}`} href="/login">
-        로그인
-      </Link>
+      <Auth />
     </nav>
+  );
+}
+
+function Logo() {
+  const device = useDevice();
+
+  return (
+    <Link href="/">
+      {device === DEVICE.MOBILE ? (
+        <Image
+          alt="판다마켓 로고"
+          src="/images/logo_text.png"
+          width="81"
+          height="40"
+        />
+      ) : (
+        <Image
+          alt="판다마켓 로고"
+          src={"/images/logo.png"}
+          width="153"
+          height="51"
+        />
+      )}
+    </Link>
   );
 }
 
 function Menu({ path, menu }: { path: string; menu: string }) {
   const router = useRouter();
 
-  const linkStyle = {
-    color:
-      path === router.pathname ? "var(--point-blue)" : "var(--cool-gray600)",
-  };
+  const className = path === router.pathname ? styles.active : "";
 
   return (
-    <Link href={path} style={linkStyle}>
+    <Link href={path} className={className}>
       {menu}
     </Link>
+  );
+}
+
+function Auth() {
+  const [isAuthentic, setIsAuthentic] = useState(false);
+
+  useEffect(() => {
+    setIsAuthentic(Boolean(localStorage.getItem("accessToken")));
+  }, []);
+
+  return (
+    <>
+      {isAuthentic ? (
+        <Image
+          alt="프로필 이미지"
+          src="/icons/profile.svg"
+          width={40}
+          height={40}
+        />
+      ) : (
+        <Link className={styles.login_button} href="/login">
+          로그인
+        </Link>
+      )}
+    </>
   );
 }
 

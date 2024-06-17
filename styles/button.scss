@@ -1,0 +1,38 @@
+@import "_color";
+
+@mixin btn-blue {
+  background-color: $point-blue;
+  color: $white;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+  &:active {
+    background-color: $button-click;
+  }
+  &:disabled {
+    background-color: $cool-gray400;
+  }
+}
+
+@mixin btn-align-center {
+  // a 태그로 버튼 만들 때 정렬
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn-no-border {
+  // button 태그로 버튼 만들때 border 제거
+  border: none;
+}
+
+@mixin btn-a-default {
+  @include btn-blue;
+  @include btn-align-center;
+}
+
+@mixin btn-button-default {
+  @include btn-blue;
+  @include btn-no-border;
+}

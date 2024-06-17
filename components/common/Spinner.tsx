@@ -1,5 +1,5 @@
 import Image from "next/image";
-import spinnerImg from "@/public/spinner.svg";
+import spinnerImg from "@/public/icons/spinner.svg";
 import styles from "./Spinner.module.scss";
 
 export default function Spinner({ className = "" }) {

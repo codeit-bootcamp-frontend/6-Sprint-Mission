@@ -4,7 +4,7 @@ import axios from "@/lib/axios";
 
 function useFetchData<T>(url: string) {
   const [data, setData] = useState<T>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [loadingError, setError] = useState<null | Error>(null);
 
   useEffect(() => {
@@ -13,6 +13,7 @@ function useFetchData<T>(url: string) {
         setIsLoading(true);
         const res: AxiosResponse<T> = await axios.get(url);
         setData(res.data);
+        setError(null);
       } catch (e) {
         if (e instanceof Error) {
           setError(e);

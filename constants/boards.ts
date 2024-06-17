@@ -1,17 +1,21 @@
-import Device from "./Device";
+import { DEVICE } from "./Device";
+
+export const IMAGE_DOMAIN_ALLOWED =
+  "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com";
 
 export const NUM_BEST_ARTICLES = {
-  [Device.Mobile]: 1,
-  [Device.Tablet]: 2,
-  [Device.PC]: 3,
+  [DEVICE.MOBILE]: 1,
+  [DEVICE.TABLET]: 2,
+  [DEVICE.PC]: 3,
 };
 
-export enum Order {
-  Recent = "recent",
-  Like = "like",
-}
+export const ORDER = {
+  RECENT: "recent",
+  LIKE: "like",
+} as const;
+export type Order = (typeof ORDER)[keyof typeof ORDER];
 
 export const ORDER_MESSAGE = {
-  [Order.Recent]: "최신순",
-  [Order.Like]: "좋아요순",
+  [ORDER.RECENT]: "최신순",
+  [ORDER.LIKE]: "좋아요순",
 };

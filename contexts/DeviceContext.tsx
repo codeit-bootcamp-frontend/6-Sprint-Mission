@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import Device from "@/constants/Device";
+import { DEVICE, Device } from "@/constants/Device";
 
 const DeviceContext = createContext<Device | undefined>(undefined);
 const MAX_MOBILE_WIDTH = 767;
@@ -13,17 +13,17 @@ const MAX_TABLET_WIDTH = 1199;
 
 function getDevice() {
   if (typeof window === "undefined") {
-    return Device.PC;
+    return DEVICE.PC;
   }
 
   const width = window.innerWidth;
 
   if (width <= MAX_MOBILE_WIDTH) {
-    return Device.Mobile;
+    return DEVICE.MOBILE;
   } else if (width <= MAX_TABLET_WIDTH) {
-    return Device.Tablet;
+    return DEVICE.TABLET;
   } else {
-    return Device.PC;
+    return DEVICE.PC;
   }
 }
 

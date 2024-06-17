@@ -1,0 +1,64 @@
+@import "@/styles/_color";
+
+.header {
+  margin-top: 60px;
+  min-width: 360px;
+
+  .logo {
+    position: relative;
+    display: block;
+    width: 396px;
+    height: 132px;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  width: 640px;
+  min-width: 360px;
+  margin: 40px auto;
+  color: var(--cool-gray800);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .go_signup,
+  .go_login {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    a {
+      color: $link-blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    margin-top: 24px;
+
+    .logo {
+      width: 192px;
+      height: 66px;
+    }
+  }
+
+  .main {
+    width: 100%;
+    margin: 24px 0;
+    padding: 0 16px;
+  }
+}

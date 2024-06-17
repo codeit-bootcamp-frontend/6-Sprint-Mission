@@ -20,7 +20,7 @@ function SearchBar({
 
   return (
     <div className={styles.search_bar}>
-      <Image src="/boards/search.svg" alt="검색" width={24} height={24} />
+      <Image src="/icons/search.svg" alt="검색" width={24} height={24} />
       <input
         type="text"
         id="keyword"

@@ -1,21 +1,23 @@
+@import "@/styles/_color";
+
 .search_bar {
   flex-grow: 1;
   height: 42px;
   padding: 9px 16px;
   border-radius: 12px;
-  background-color: var(--cool-gray100);
+  background-color: $cool-gray100;
 
   display: flex;
   gap: 4px;
 
   input {
-    background-color: var(--cool-gray100);
+    background-color: $cool-gray100;
     outline: none;
     border: none;
     width: 100%;
-    color: var(--cool-gray400);
+    color: $cool-gray400;
     &::placeholder {
-      color: var(--cool-gray400);
+      color: $cool-gray400;
     }
   }
 }

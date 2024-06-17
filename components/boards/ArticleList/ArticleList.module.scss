@@ -1,0 +1,44 @@
+@import "@/styles/_color";
+
+.list {
+  margin-top: 24px;
+
+  display: flex;
+  gap: 24px;
+
+  &.normal {
+    flex-direction: column;
+
+    .divider {
+      margin-top: 24px;
+      border: 1px solid $cool-gray200;
+    }
+  }
+
+  &.best {
+    li {
+      flex-grow: 1;
+    }
+  }
+}
+
+.spinner_container {
+  width: 100%;
+  height: 217px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .list.best {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .list.best {
+    margin-top: 16px;
+  }
+}

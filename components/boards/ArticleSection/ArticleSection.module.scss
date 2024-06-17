@@ -1,0 +1,56 @@
+@import "@/styles/_color";
+@import "@/styles/button";
+
+.section {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .title {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: $cool-gray900;
+    }
+
+    .button {
+      border-radius: 8px;
+      padding: 12px 20px;
+
+      font-size: 16px;
+      font-weight: 600;
+      @include btn-a-default;
+    }
+  }
+
+  .toolbar {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    display: flex;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    .header {
+      margin-bottom: 16px;
+
+      .title {
+        font-size: 18px;
+      }
+    }
+
+    .toolbar {
+      gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "@/styles/_color";
+
+.section {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+
+  .title {
+    font-size: 20px;
+    line-height: 1.2;
+    color: $cool-gray900;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    .title {
+      font-size: 18px;
+    }
+  }
+}

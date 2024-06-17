@@ -1,0 +1,78 @@
+@import "@/styles/_color";
+@import "@/styles/input";
+@import "@/styles/button";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .label {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .input {
+    @include input-default;
+    margin-top: 16px;
+  }
+
+  .password_wrapper {
+    position: relative;
+    margin-top: 16px;
+
+    .input {
+      margin-top: 0;
+    }
+
+    .on_off {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      border: none;
+    }
+  }
+
+  .warning {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-left: 16px;
+    margin-top: 8px;
+    color: $point-red;
+  }
+
+  .button {
+    @include btn-button-default;
+    padding: 16px 24px;
+    border-radius: 40px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $white;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .form {
+    gap: 16px;
+
+    .label {
+      font-size: 14px;
+    }
+
+    .input,
+    .password_wrapper {
+      margin-top: 8px;
+    }
+
+    .button {
+      font-size: 16px;
+    }
+  }
+}
