@@ -1,8 +1,8 @@
-import { axiosInstance } from "./api";
+import axiosInstance  from "./api";
 
 interface PostSignupParams {
   email: string;
-  nickName: string;
+  nickname: string;
   password: string;
   passwordConfirmation: string;
 }
@@ -24,14 +24,14 @@ export type PostSignup = (prop: PostSignupParams) => Promise<Response>;
 
 const postSignup: PostSignup = async ({
   email,
-  nickName,
+  nickname,
   password,
   passwordConfirmation,
 }) => {
   try {
     const { data } = await axiosInstance.post<Response>(`auth/signUp`, {
       email,
-      nickName,
+      nickname,
       password,
       passwordConfirmation,
     });

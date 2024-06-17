@@ -1,22 +1,10 @@
-import { axiosInstance } from "./api";
+import axiosInstance  from "./api";
+import { ArticleType } from "@/constants/type";
 
 interface GetArticleParams {
   articleId: number;
 }
 
-interface ArticleType {
-  updatedAt: string;
-  createdAt: string;
-  likeCount: number;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-  image: string | null;
-  content: string;
-  title: string;
-  id: number;
-}
 
 export type GetArticleType = (prop: GetArticleParams) => Promise<ArticleType>;
 

@@ -1,5 +1,6 @@
-import { axiosInstance } from "./api";
+import axiosInstance from "./api";
 import postImage from "./postImage";
+import { ArticleType } from "@/constants/type";
 
 interface PostArticleParams {
   image?: File | null;
@@ -7,55 +8,23 @@ interface PostArticleParams {
   title: string;
 }
 
-interface Response {
-  createdAt: string;
-  updatedAt: string;
-  likeCount: number;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-  image: string | null;
-  content: string;
-  title: string;
-  id: number;
-}
-
-export type PostArticle = (prop: PostArticleParams) => Promise<Response>;
+export type PostArticle = (prop: PostArticleParams) => Promise<ArticleType>;
 
 const postArticle: PostArticle = async ({ image, content, title }) => {
   try {
-    const accessToken = localStorage.getItem("accessToken");
     if (image) {
       const imageUrl = await postImage({ image });
-      console.log(imageUrl);
-      const { data } = await axiosInstance.post<Response>(
-        `articles`,
-        {
-          image: imageUrl,
-          content,
-          title,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
-      );
+      const { data } = await axiosInstance.post<ArticleType>(`articles`, {
+        image: imageUrl,
+        content,
+        title,
+      });
       return data;
     } else {
-      const { data } = await axiosInstance.post<Response>(
-        `articles`,
-        {
-          content,
-          title,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
-      );
+      const { data } = await axiosInstance.post<ArticleType>(`articles`, {
+        content,
+        title,
+      });
       return data;
     }
   } catch (error) {

@@ -1,67 +1,58 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ic_kakao from "@/images/ic_kakao.png";
 import ic_google from "@/images/ic_google.png";
 import ic_hidden from "@/images/btn_visibility_off.svg";
 import ic_visible from "@/images/btn_visibility_on.svg";
 import logo from "@/images/login_logo.png";
-import { validateEmailAddress, validatePassword } from "@/utils/validateLogin";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./style.module.css";
 import postSignin from "@/apis/postSignin";
-import { FormEvent } from 'react';
+import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
+
+interface FormValues {
+  email: string;
+  password: string;
+}
 
 const Signin = () => {
-  const [email, setEmail] = useState<string>("");
-  const [passWord, setPassWord] = useState<string>("");
   const [visible, setVisible] = useState<boolean>(false);
   const eyeIcon = visible ? ic_visible : ic_hidden;
+  const router = useRouter();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isValid },
+  } = useForm<FormValues>({mode: "onChange",});
 
-  const buttonActivate: boolean =
-    validateEmailAddress(email) && validatePassword(passWord);
 
-  const emailErrorMessage: string =
-    email === ""
-      ? "이메일을 입력해주세요"
-      : validateEmailAddress(email)
-      ? ""
-      : "잘못된 이메일 형식입니다";
-
-  const passWordErrorMessage: string =
-    passWord === ""
-      ? "비밀번호을 입력해주세요"
-      : validatePassword(passWord)
-      ? ""
-      : "비밀번호를 8자 이상 입력해주세요";
-
-  const handleEmailInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-  const handlePassWordInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setPassWord(e.target.value);
-  };
   const handleVisibleBtn = () => {
     setVisible((prev) => !prev);
   };
 
-  const handleSignInButton = async (e: FormEvent) => {
-    e.preventDefault();
+  const handleSignIn = handleSubmit(async (data: FormValues) => {
     try {
-      const result = await postSignin({
-        email: email,
-        password: passWord,
-      });
-      // 결과에서 accessToken 가져오기
-      const accessToken = result.accessToken;
-
-      // 로컬 스토리지에 accessToken 저장
+      const result = await postSignin(data);
+      const { accessToken, refreshToken } = result;
       localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("refreshToken", refreshToken);
+      alert("로그인 성공");
+      router.push("/");
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
       }
     }
-  };
+  });
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    if (accessToken) {
+      alert("이미 로그인 상태입니다.");
+      router.push("/");
+    }
+  }, []);
 
   return (
     <>
@@ -74,21 +65,25 @@ const Signin = () => {
       </div>
       <main className={styles.sign_main}>
         <div className={styles.login_content}>
-          <form className={styles.login_form}>
+          <form className={styles.login_form} onSubmit={handleSignIn}>
             <div className={styles.user_input}>
               <div className={styles.user_input_section}>
                 <label htmlFor="userEmail">이메일</label>
                 <input
                   id="userEmail"
                   type="email"
-                  name="userEmail"
                   placeholder="이메일을 입력해주세요"
-                  value={email}
-                  onChange={handleEmailInput}
+                  {...register("email", {
+                    required: { value: true, message: "이메일을 입력해주세요" },
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: "이메일 형식이 올바르지 않습니다",
+                    },
+                  })}
                 />
               </div>
               <span className={styles.input_err_message}>
-                {emailErrorMessage}
+                {errors.email?.message}
               </span>
             </div>
             <div className={styles.user_input}>
@@ -97,10 +92,17 @@ const Signin = () => {
                 <input
                   id="userPassword"
                   type={visible ? "text" : "password"}
-                  name="userPassword"
                   placeholder="비밀번호를 입력해주세요"
-                  value={passWord}
-                  onChange={handlePassWordInput}
+                  {...register("password", {
+                    required: {
+                      value: true,
+                      message: "비밀번호를 입력해주세요",
+                    },
+                    minLength: {
+                      value: 8,
+                      message: "비밀번호 길이를 8자리 이상 입력해주세요",
+                    },
+                  })}
                 />
                 <Image
                   src={eyeIcon}
@@ -110,10 +112,10 @@ const Signin = () => {
                 />
               </div>
               <span className={styles.input_err_message}>
-                {passWordErrorMessage}
+                {errors.password?.message}
               </span>
             </div>
-            <button disabled={!buttonActivate} onClick={handleSignInButton}>
+            <button disabled={!isValid} type="submit">
               로그인
             </button>
           </form>

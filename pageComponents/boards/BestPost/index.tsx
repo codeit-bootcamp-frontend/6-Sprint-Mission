@@ -5,20 +5,8 @@ import useSetNumOfItemsToShow from "@/hooks/useSetNumberOfItemsToShow";
 import useLoad from "@/hooks/useLoad";
 import { getArticles } from "@/apis/getArticles";
 import { FAVORITE, RECENT } from "@/constants/sortBy";
+import { ArticleType } from "@/constants/type";
 
-interface ArticleType {
-  id: number;
-  title: string;
-  content: string;
-  image: string | null;
-  likeCount: number;
-  createdAt: string;
-  updatedAt: string;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-}
 
 const BestPost = () => {
   const [posts, setPost] = useState<ArticleType[]>([]);

@@ -1,4 +1,5 @@
-import { axiosInstance } from "./api";
+import axiosInstance  from "./api";
+import { ArticleComment } from "@/constants/type";
 
 interface GetArticleCommentsParams {
   articleId: number;
@@ -7,20 +8,9 @@ interface GetArticleCommentsParams {
 }
 
 interface GetArticleCommentsReturn {
-  list: {
-    id: number;
-    content: string;
-    createdAt: string;
-    updatedAt: string;
-    writer: {
-      id: number;
-      nickname: string;
-      image: string | null;
-    };
-  }[];
+  list: ArticleComment[];
   nextCursor: number;
 }
-
 
 export type getArticleCommentsType = (
   prop: GetArticleCommentsParams

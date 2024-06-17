@@ -1,4 +1,4 @@
-import { axiosInstance } from "./api";
+import axiosInstance from "./api";
 
 interface PostImageParams {
   image: File;
@@ -9,13 +9,11 @@ const postImage: PostImage = async ({ image }) => {
   const formData = new FormData();
   formData.append("image", image);
   try {
-    const accessToken = localStorage.getItem("accessToken");
     const { data } = await axiosInstance.post<Response>(
       `images/upload`,
       formData,
       {
         headers: {
-          Authorization: `Bearer ${accessToken}`,
           "Content-Type": "multipart/form-data",
         },
       }

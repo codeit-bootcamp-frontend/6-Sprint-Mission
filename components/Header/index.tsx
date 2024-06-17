@@ -4,11 +4,23 @@ import styles from "./style.module.css";
 import logo from "@/images/panda_market_home_logo.png";
 import user_icon from "@/images/ic_user.png";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import RegisterButton from "../RegisterButton";
 
 const Header = () => {
   const router = useRouter();
   const { pathname } = router;
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  const checkLoginStatus = () => {
+    const accessToken = localStorage.getItem("accessToken");
+    setLoggedIn(!!accessToken);
+  };
+
+  useEffect(() => {
+    checkLoginStatus();
+  }, [pathname]);
+  
   return (
     <header className={styles.header}>
       <div className={styles.contents}>
@@ -34,9 +46,22 @@ const Header = () => {
           </Link>
         </div>
         <div className={styles.login}>
-          <div className={styles.user_icon}>
-            <Image src={user_icon} fill alt="유저 아이콘" priority />
-          </div>
+          {loggedIn ? (
+            <div className={styles.user_icon}>
+              <Image src={user_icon} fill alt="유저 아이콘" priority />
+            </div>
+          ) : (
+            <RegisterButton
+              width={74}
+              height={42}
+              disabled={false}
+              onClick={() => {
+                router.push("/signin");
+              }}
+            >
+              로그인
+            </RegisterButton>
+          )}
         </div>
       </div>
     </header>

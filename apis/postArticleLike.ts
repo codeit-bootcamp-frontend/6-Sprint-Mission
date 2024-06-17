@@ -1,4 +1,4 @@
-import { axiosInstance } from "./api";
+import axiosInstance from "./api";
 
 interface PostArticleLikeParams {
   articleId: number;
@@ -25,15 +25,8 @@ export type PostArticleLike = (
 
 const postArticleLike: PostArticleLike = async ({ articleId }) => {
   try {
-    const accessToken = localStorage.getItem("accessToken");
     const { data } = await axiosInstance.post<Response>(
-      `articles/${articleId}/like`,
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
+      `articles/${articleId}/like`
     );
     return data;
   } catch (error) {

@@ -4,25 +4,12 @@ import PostElement from "./components/PostElement";
 import styles from "./style.module.css";
 import Image from "next/image";
 import ic_search from "@/images/ic_search.svg";
-import { FAVORITE, RECENT } from "@/constants/sortBy";
+import { RECENT } from "@/constants/sortBy";
 import useLoad from "@/hooks/useLoad";
 import { getArticles } from "@/apis/getArticles";
 import useInfiniteScroll from "@/hooks/useInfiniteScroll";
 import { useRouter } from "next/router";
-
-interface ArticleType {
-  id: number;
-  title: string;
-  content: string;
-  image: string | null;
-  likeCount: number;
-  createdAt: string;
-  updatedAt: string;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-}
+import { ArticleType } from "@/constants/type";
 
 const SearchPost = () => {
   const [posts, setPost] = useState<ArticleType[]>([]);
@@ -107,7 +94,11 @@ const SearchPost = () => {
             width={24}
             height={24}
           />
-          <input name="search" placeholder="검색할 상품을 입력해주세요" type="search"/>
+          <input
+            name="search"
+            placeholder="검색할 상품을 입력해주세요"
+            type="search"
+          />
         </form>
 
         <div className={styles.selectOrderBtn}>

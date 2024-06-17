@@ -9,14 +9,15 @@ interface HeartButtonProp {
 
 const HeartButton = ({ width, height, onClick }: HeartButtonProp) => {
   return (
-    <Image
-      src={ic_heart}
-      alt="하트 버튼"
-      width={width}
-      height={height}
-      className="cursor-pointer"
-      onClick={onClick}
-    />
+    <button type="button" onClick={onClick}>
+      <Image
+        src={ic_heart}
+        alt="하트 버튼"
+        width={width}
+        height={height}
+        className="cursor-pointer"
+      />
+    </button>
   );
 };
 

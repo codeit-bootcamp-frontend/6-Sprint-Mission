@@ -4,21 +4,9 @@ import Link from "next/link";
 import ic_user from "@/images/ic_user.png";
 import ic_heart from "@/images/ic_heart.svg";
 import formatTime from "@/utils/formatTime";
+import { ArticleType } from "@/constants/type";
 
-interface PostType {
-  id: number;
-  title: string;
-  content: string;
-  image: string | null;
-  likeCount: number;
-  createdAt: string;
-  updatedAt: string;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-}
-const PostElement = ({ post }: { post: PostType }) => {
+const PostElement = ({ post }: { post: ArticleType }) => {
   const { id, title, image, likeCount, updatedAt, writer } = post;
   const postingDate = formatTime(updatedAt);
   return (

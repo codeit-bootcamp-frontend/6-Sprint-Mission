@@ -10,31 +10,8 @@ import getArticleComments from "@/apis/getArticleComments";
 import NoContentSign from "@/components/NoContentSign";
 import empty_sign from "@/images/Img_reply_empty.png";
 import postArticleComment from "@/apis/postArticleComment";
+import { ArticleType,ArticleComment } from "@/constants/type";
 
-interface ArticleType {
-  updatedAt: string;
-  createdAt: string;
-  likeCount: number;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-  image: string | null;
-  content: string;
-  title: string;
-  id: number;
-}
-interface ArticleComment {
-  id: number;
-  content: string;
-  createdAt: string;
-  updatedAt: string;
-  writer: {
-    id: number;
-    nickname: string;
-    image: string | null;
-  };
-}
 
 interface ArticleComments {
   list: ArticleComment[];

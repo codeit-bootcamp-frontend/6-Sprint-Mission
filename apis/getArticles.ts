@@ -1,4 +1,5 @@
-import { axiosInstance } from "./api";
+import axiosInstance  from "./api";
+import { ArticleType } from "@/constants/type";
 
 interface GetArticlesParams {
   page: number;
@@ -7,19 +8,6 @@ interface GetArticlesParams {
   keyword?: string;
 }
 
-interface ArticleType {
-  id: number;
-  title: string;
-  content: string;
-  image: string | null;
-  likeCount: number;
-  createdAt: string;
-  updatedAt: string;
-  writer: {
-    id: number;
-    nickname: string;
-  };
-}
 
 interface Articles {
   list: ArticleType[];

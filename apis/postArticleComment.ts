@@ -1,41 +1,22 @@
-import { axiosInstance } from "./api";
+import axiosInstance  from "./api";
+import { ArticleComment } from "@/constants/type";
 
 interface PostArticleCommentParams {
   articleId: number;
   content: string;
 }
-
-interface Response {
-  writer: {
-    image: string;
-    nickname: string;
-    id: number;
-  };
-  updatedAt: string;
-  createdAt: string;
-  content: string;
-  id: number;
-}
-
 export type PostArticleComment = (
   prop: PostArticleCommentParams
-) => Promise<Response>;
-//Post 요청일 경우 보통 리스폰스를 받아서 확인하나요?
+) => Promise<ArticleComment>;
 
 const postArticleComment: PostArticleComment = async ({
   articleId,
   content,
 }) => {
   try {
-    const accessToken = localStorage.getItem("accessToken");
-    const { data } = await axiosInstance.post<Response>(
+    const { data } = await axiosInstance.post<ArticleComment>(
       `articles/${articleId}/comments`,
       { content },
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
     );
     return data;
   } catch (error) {
