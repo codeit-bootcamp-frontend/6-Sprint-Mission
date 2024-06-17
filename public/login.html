@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 판다마켓</title>
+    <link rel="stylesheet" href="./styles/style_login.module.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Add React and Babel -->
+    <script
+      src="https://unpkg.com/react/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img id="logo" src="Image/판다 얼굴@3x.png" />
+      <a href="/"><div class="name">판다마켓</div></a>
+    </div>
+    <!-- <form>
+      <label for="email_input">이메일</label>
+      <input
+        type="email"
+        id="email_input"
+        class="email_input"
+        placeholder="이메일을 입력하세요"
+        required
+      />
+      <p id="emailErrorMessage" class="error_message">
+        잘못된 이메일 형식입니다
+      </p>
+      <label for="pw_input">비밀번호</label>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="pw_input"
+          class="pw_input"
+          placeholder="비밀번호를 입력하세요"
+          required
+        />
+        <img
+          src="Image/btn_visibility_off.png"
+          alt="비밀번호 숨김"
+          class="toggle-password"
+        />
+      </div>
+      <p id="passwordErrorMessage" class="error_message">
+        비밀번호를 8자 이상 입력해주세요
+      </p>
+      <div class="loginButton" id="loginButton" disabled>로그인</div>
+      <div class="easyloginbox">
+        <div class="easylogin">간편 로그인하기</div>
+        <div class="image">
+          <a href="https://www.google.com/"><img src="Image/google.png" /></a>
+          <a href="https://www.kakaocorp.com/page/"
+            ><img src="Image/kakao.png"
+          /></a>
+        </div>
+      </div>
+      <div class="signup">
+        <span class="p">판다마켓은 처음이신가요?</span>
+        <a href="signup.html">회원가입</a>
+      </div>
+    </form> -->
+    <div id="loginFormContainer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="../build/login.js"></script>
+  </body>
+</html>

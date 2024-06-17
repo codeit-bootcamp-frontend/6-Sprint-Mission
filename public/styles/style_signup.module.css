@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+body {
+  color: #374151;
+  width: 100%;
+  font-family: "Pretendard", sans-serif;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  width: 396px;
+  height: 132px;
+  justify-content: left;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.header #logo {
+  margin: 0 auto;
+  width: 103.53px;
+  height: 103.88px;
+}
+
+.name {
+  color: #3692ff;
+  font-family: ROKAF Sans;
+  font-size: 66.34px;
+  font-weight: 700;
+  height: 90px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  gap: 16px;
+  margin: 24px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+input {
+  background-color: #f3f4f6;
+  width: 100%;
+  line-height: 24px;
+  gap: 10px;
+  border-radius: 12px;
+  margin-top: 16px;
+  border: none;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+  height: 56px;
+  gap: 10px;
+  border-radius: 12px;
+  margin-top: 16px;
+  border: none;
+  width: 100%;
+}
+
+.error_message {
+  display: none;
+  color: red;
+}
+
+.error {
+  border: 1px solid #f74747;
+}
+
+.signupButton {
+  background-color: #3692ff;
+  height: 56px;
+  padding: 16px 124px;
+  gap: 10px;
+  border-radius: 40px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.easyloginbox {
+  background-color: #e6f2ff;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+  margin-top: 24px;
+  padding: 16px 23px;
+}
+
+.easylogin {
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+}
+
+.image {
+  height: 42px;
+}
+
+img {
+  width: 42px;
+  height: 42px;
+}
+
+.auth-switch {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  label {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .signupButton {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 126px;
+  }
+}

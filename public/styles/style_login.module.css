@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+} 
+a{
+    text-decoration-line : none;
+}
+
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    text-align: center;
+} 
+.header #logo {
+
+    width: 103.53px;
+    height: 103.88px;
+}
+.name {
+    color : #3692FF;
+    font-family: ROKAF Sans;
+    font-size: 66px;
+    font-weight: 700;
+    height: 90px;
+}
+
+
+form{
+    margin : 0 auto; 
+    max-width: 100%;
+
+
+}
+label {
+    display: block;
+    gap: 16px;
+    margin: 24px 0;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+input{
+    box-sizing: border-box;
+    background-color : #F3F4F6;
+    height: 56px;
+    gap: 10px;
+    border-radius: 12px;
+    margin-top: 16px;
+    border : none;
+    padding: 16px 24px;
+    width: 100%;
+}
+.input-wrapper{
+    position: relative;
+    display:flex;
+    align-items:center;
+    box-sizing: border-box;
+    background-color : #F3F4F6;
+    height: 56px;
+    gap: 10px;
+    border-radius: 12px;
+    margin-top: 16px;
+    border : none;
+    width: 100%;
+}
+
+.error_message{
+    display: none;
+    color: red;
+}
+.error{
+    border: 1px solid #f74747;
+}
+
+.loginButton{
+    box-sizing: border-box;
+    background-color:#3692FF;
+    height:56px;
+    padding: 16px 124px;
+    gap: 10px;
+    border-radius: 40px;
+    font-weight: 600;
+    color:#FFFFFF;
+    text-align:center;
+    margin-top: 24px;
+
+}
+
+.easyloginbox{
+    background-color: #E6F2FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding: 16px 23px;
+    
+   
+}
+.easylogin{ 
+    color :#1F2937;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+
+}
+img{
+    width: 42px;
+    height: 42px;
+
+}
+.signup{
+    display: flex;
+    justify-content: center ;
+    margin-top: 24px;
+}
+@media (min-width: 768px){
+    .header{
+       width: 100%;
+       margin:0 auto;
+       margin-top: 60px;
+    }
+    form{
+        max-width: 640px;
+        
+    }
+    label{
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    .loginButton{
+        font-size : 20px;
+        font-weight : 700;
+        padding : 16px 126px;
+    }
+    
+}
+@media (max-width:767px){
+    .name{
+        font-size: 40px;
+        height: 45px;
+    }
+    .header #logo{
+        width: 50px;
+        height: 50px;
+    }
+}
