@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 type PaginationProps = {
   currentPage: number;
@@ -19,13 +19,10 @@ export default function Pagination({
     onPageChange(currentPage + 1);
   };
 
-  const pages = [];
-
-  for (let i = 1; i <= totalPages; i++) {
-    pages.push(i);
-  }
-  // console.log(pages);
-  // console.log(currentPage, totalPages);
+  const pages = useMemo(
+    () => Array.from({ length: totalPages }, (_, i) => i + 1),
+    [totalPages],
+  );
 
   return (
     <div className="mt-8 flex items-center justify-center gap-4">
@@ -41,8 +38,8 @@ export default function Pagination({
           <div
             key={i}
             className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-300 font-bold ${
-              currentPage === i ? "bg-[--btn1] text-white" : ""
-            } hover:bg-[--btn1] hover:text-white`}
+              currentPage === i ? "bg-btn-1 text-white" : ""
+            } hover:bg-btn-1 hover:text-white`}
             onClick={() => onPageChange(i)}
           >
             {i}

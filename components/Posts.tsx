@@ -108,14 +108,14 @@ export default function Posts({ initialPosts }: PostsProps) {
             <Image src={icon_search} alt="검색 아이콘" width={24} height={24} />
           </div>
           <input
-            className="flex h-[42px] flex-shrink-0 flex-grow basis-auto rounded-[0.5rem] border-none bg-[var(--coolgray100)] px-[2.8rem] py-[0.8rem] focus:outline-none"
+            className="flex h-[42px] flex-shrink-0 flex-grow basis-auto rounded-md border-none bg-gray-50 px-10 py-2 focus:outline-none"
             placeholder="검색할 게시글 제목을 입력해주세요"
             type="search"
             onChange={handleKeywordSearch}
           />
         </div>
         <div
-          className="relative flex h-[42px] w-[2rem] cursor-pointer items-center justify-center rounded-[0.5rem] border border-[var(--gray100)] bg-white px-4 py-2 md:w-[8rem]"
+          className="relative flex h-[42px] w-[2rem] cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 md:w-[8rem]"
           onClick={toggleDropdown}
         >
           <picture className="flex items-center">
@@ -130,12 +130,12 @@ export default function Posts({ initialPosts }: PostsProps) {
             <Image src={icon_dropdown} alt="드롭다운" width={24} height={24} />
           </picture>
           {isDropdownView && (
-            <ul className="absolute -left-[2.5rem] top-full z-50 m-0 w-max list-none rounded-[0.5rem] border border-[var(--gray100)] bg-white p-0 md:-left-0 md:w-full">
+            <ul className="absolute -left-10 top-full z-50 m-0 w-max list-none rounded-md border border-gray-200 bg-white p-0 md:-left-0 md:w-full">
               {selectOptions.map((option) => (
                 <li
                   key={option.value}
                   onClick={() => selectOption(option.value)}
-                  className="cursor-pointer border-b-[var(--gray100)] p-2 text-center hover:bg-[var(--gray100)]"
+                  className="cursor-pointer border-b border-gray-200 p-2 text-center hover:bg-gray-200"
                 >
                   {option.label}
                 </li>
@@ -149,14 +149,14 @@ export default function Posts({ initialPosts }: PostsProps) {
           posts.map((post) => {
             return (
               <div key={post.id}>
-                <div className="w-full max-w-[1200px] border-b-[1px] border-[var(--gray100)] pb-4 pt-4">
+                <div className="w-full max-w-5xl border-b border-gray-200 pb-4 pt-4">
                   <Link
                     href={`/boards/${post.id}`}
-                    className="flex h-[80px] items-start justify-between gap-[0.3rem]"
+                    className="flex h-[80px] items-start justify-between gap-1"
                   >
                     <h3 className="m-0 p-0 font-bold">{post.title}</h3>
                     {post.image && (
-                      <div className="flex h-[72px] w-[72px] items-center justify-center overflow-hidden rounded-[0.3rem] border-[1.5px] border-[var(--gray100)] bg-white p-4">
+                      <div className="flex h-[72px] w-[72px] items-center justify-center overflow-hidden rounded border border-gray-200 bg-white p-4">
                         <Image
                           src={post.image}
                           alt="포스트 이미지"
@@ -167,30 +167,28 @@ export default function Posts({ initialPosts }: PostsProps) {
                     )}
                   </Link>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-[0.5rem]">
+                    <div className="flex items-center gap-2">
                       <Image
                         src={img_profile}
                         alt="프로필 이미지"
                         width={24}
                         height={24}
                       />
-                      <p className="text-[14px] text-[var(--gray600)]">
+                      <p className="text-sm text-gray-600">
                         {post.writer.nickname}
                       </p>
-                      <p className="text-[14px] text-[var(--gray400)]">
+                      <p className="text-sm text-gray-400">
                         {formatDate(post.createdAt)}
                       </p>
                     </div>
-                    <div className="flex items-center gap-[0.2rem]">
+                    <div className="flex items-center gap-1">
                       <Image
                         src={icon_favorite}
                         alt="하트"
                         width={16}
                         height={16}
                       />
-                      <p className="text-[14px] text-[var(--gray600)]">
-                        {post.likeCount}
-                      </p>
+                      <p className="text-sm text-gray-600">{post.likeCount}</p>
                     </div>
                   </div>
                 </div>

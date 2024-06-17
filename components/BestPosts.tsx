@@ -104,17 +104,17 @@ export default function BestPosts({ initialBestPosts }: BestPostsProps) {
         bestPosts.map((post) => (
           <Link
             href={`/boards/${post.id}`}
-            className="h-[169px] w-[400px] rounded-[1rem] bg-[var(--gray50)] px-8 md:w-[380px] xl:w-full"
+            className="h-[169px] w-[400px] rounded-[1rem] bg-gray-50 px-8 md:w-[380px] xl:w-full"
             key={post.id}
           >
-            <div className="inline-flex h-[30px] w-[102px] items-center justify-center rounded-b-[5rem] bg-[var(--main)]">
-              <Image src={icon_medal} alt="메달" width={16} height={16} />
+            <div className="bg-main inline-flex h-[30px] w-[102px] items-center justify-center rounded-b-[5rem]">
+              <Image src={icon_medal} alt="" width={16} height={16} />
               <p className="text-[16px] text-white">Best</p>
             </div>
             <div className="flex h-[80px] items-center justify-between gap-[0.3rem]">
               <h3 className="m-0 p-0 font-bold">{post.title}</h3>
               {post.image && (
-                <div className="flex h-[72px] min-w-[72px] items-center justify-center rounded-[0.3rem] border-[1.5px] border-[var(--gray100)] bg-white">
+                <div className="flex h-[72px] min-w-[72px] items-center justify-center rounded-[0.3rem] border-[1.5px] border-gray-100 bg-white">
                   <Image
                     src={post.image}
                     alt="포스트 이미지"
@@ -126,15 +126,13 @@ export default function BestPosts({ initialBestPosts }: BestPostsProps) {
             </div>
             <div className="mt-4 flex items-end justify-between">
               <div className="flex items-center justify-start gap-[0.2rem]">
-                <p className="text-[14px] text-[var(--gray600)]">
+                <p className="text-[14px] text-gray-600">
                   {post.writer.nickname}
                 </p>
                 <Image src={icon_favorite} alt="하트" width={16} height={16} />
-                <p className="text-[14px] text-[var(--gray600)]">
-                  {post.likeCount}
-                </p>
+                <p className="text-[14px] text-gray-600">{post.likeCount}</p>
               </div>
-              <p className="text-[14px] text-[var(--gray400)]">
+              <p className="text-[14px] text-gray-400">
                 {formatDate(post.createdAt)}
               </p>
             </div>

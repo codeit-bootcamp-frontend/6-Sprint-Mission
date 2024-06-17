@@ -10,64 +10,44 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import instance from "@/lib/axios";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
-export default function signup() {
-  const [email, setEmail] = useState<string>("");
-  const [nickname, setNickname] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [passwordConfirmation, setpasswordConfirmation] = useState<string>("");
+type FormData = {
+  email: string;
+  nickname: string;
+  password: string;
+  passwordConfirmation: string;
+};
 
-  const [emailError, setEmailError] = useState<string>("");
-  const [nicknameError, setNicknameError] = useState<string>("");
-  const [passwordError, setPasswordError] = useState<string>("");
-  const [passwordConfirmationError, setpasswordConfirmationError] =
-    useState<string>("");
+export default function Signup() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors, isValid },
+  } = useForm<FormData>({
+    mode: "onChange",
+  });
 
   const [isVisibilityIcon, setIsVisibilityIcon] = useState<boolean>(false);
   const [isVisibilityIconConfirm, setIsVisibilityIconConfirm] =
     useState<boolean>(false);
 
-  const [isDisabled, setIsDisabled] = useState<boolean>(true);
-
-  const isRegexValid =
-    EMAIL_REGEX.test(email.trim()) &&
-    EIGHT_NUMBERS_REGEX.test(password.trim()) &&
-    nickname.trim() !== "" &&
-    password === passwordConfirmation;
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-    setEmailError("");
-  };
-
-  const handleNicknameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNickname(e.target.value);
-    setNicknameError("");
-  };
-
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-    setPasswordError("");
-  };
-
-  const handlepasswordConfirmationChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ) => {
-    setpasswordConfirmation(e.target.value);
-    setpasswordConfirmationError("");
-  };
+  // 비밀번호 확인 필드에서 비밀번호 필드의 값을 가져오기 위해 watch 함수 사용
+  const password = watch("password", "");
 
   const router = useRouter();
 
-  const handleformSubmit = async () => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       const response = await instance.post(
         "/auth/signUp",
         {
-          email,
-          nickname,
-          password,
-          passwordConfirmation,
+          email: data.email,
+          nickname: data.email,
+          password: data.password,
+          passwordConfirmation: data.passwordConfirmation,
         },
         {
           headers: {
@@ -77,43 +57,12 @@ export default function signup() {
       );
       const { accessToken } = response.data;
       localStorage.setItem("accessToken", accessToken);
-      router.push("/");
+      alert("회원가입이 완료되었습니다!");
+      router.push("/signin");
     } catch (error) {
-      console.log({ email, nickname, password, passwordConfirmation });
       console.log("데이터 전송 실패", error);
     }
   };
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (isRegexValid) {
-      handleformSubmit();
-    } else {
-      if (email === "") {
-        setEmailError("이메일을 입력해주세요.");
-      } else if (!EMAIL_REGEX.test(email.trim())) {
-        setEmailError("잘못된 이메일 형식입니다.");
-      }
-      if (nickname === "") {
-        setNicknameError("닉네임을 입력해주세요.");
-      }
-      if (password === "") {
-        setPasswordError("비밀번호를 입력해주세요.");
-      } else if (!EIGHT_NUMBERS_REGEX.test(password.trim())) {
-        setPasswordError("비밀번호를 8자 이상 입력해주세요.");
-      }
-      if (passwordConfirmation === "") {
-        setpasswordConfirmationError("비밀번호를 다시 한 번 입력해주세요.");
-      } else if (password !== passwordConfirmation) {
-        setpasswordConfirmationError("비밀번호가 일치하지 않습니다.");
-      }
-    }
-  };
-
-  useEffect(() => {
-    setIsDisabled(!isRegexValid);
-  }, [email, nickname, password, passwordConfirmation, isRegexValid]);
 
   const togglePasswordVisibility = () => {
     setIsVisibilityIcon(!isVisibilityIcon);
@@ -132,7 +81,7 @@ export default function signup() {
       </Link>
       <div className="w-full px-4 md:px-8">
         <form
-          onSubmit={handleLogin}
+          onSubmit={handleSubmit(onSubmit)}
           noValidate
           className="flex w-full flex-col items-center justify-center lg:px-40"
         >
@@ -144,16 +93,24 @@ export default function signup() {
               id="email"
               type="email"
               placeholder="이메일을 입력해주세요"
-              onChange={handleEmailChange}
-              className={`w-full rounded-xl bg-[--coolgray100] p-4 text-base text-gray-400 focus:outline-[--main] lg:w-[512px] ${
-                emailError ? "border-2 border-red-500" : "border-none"
+              {...register("email", {
+                required: "이메일을 입력해주세요.",
+                pattern: {
+                  value: EMAIL_REGEX,
+                  message: "잘못된 이메일 형식입니다.",
+                },
+              })}
+              className={`w-full rounded-xl bg-coolgray-100 p-4 text-base text-gray-400 focus:outline-main lg:w-[512px] ${
+                errors.email ? "border-2 border-error" : "border-none"
               }`}
             />
-            {emailError && (
-              <p className="errorMessage ml-4 text-xs text-red-500">
-                {emailError}
-              </p>
-            )}
+            <ErrorMessage
+              errors={errors}
+              name="email"
+              render={({ message }) => (
+                <p className="ml-4 text-xs text-error">{message}</p>
+              )}
+            />
           </div>
           <div className="relative my-4 flex w-full flex-col justify-center gap-2 lg:w-auto">
             <label
@@ -166,16 +123,18 @@ export default function signup() {
               id="nickname"
               type="text"
               placeholder="닉네임을 입력해주세요"
-              onChange={handleNicknameChange}
-              className={`w-full rounded-xl bg-[--coolgray100] p-4 text-base text-gray-400 focus:outline-[--main] lg:w-[512px] ${
-                nicknameError ? "border-2 border-red-500" : "border-none"
+              {...register("nickname")}
+              className={`w-full rounded-xl bg-coolgray-100 p-4 text-base text-gray-400 focus:outline-main lg:w-[512px] ${
+                errors.nickname ? "border-2 border-error" : "border-none"
               }`}
             />
-            {nicknameError && (
-              <p className="errorMessage ml-4 text-xs text-red-500">
-                {nicknameError}
-              </p>
-            )}
+            <ErrorMessage
+              errors={errors}
+              name="nickname"
+              render={({ message }) => (
+                <p className="ml-4 text-xs text-error">{message}</p>
+              )}
+            />
           </div>
           <div className="relative my-4 flex w-full flex-col justify-center gap-2 lg:w-auto">
             <label
@@ -188,9 +147,15 @@ export default function signup() {
               type={isVisibilityIcon ? "text" : "password"}
               placeholder="비밀번호를 입력해주세요"
               id="password"
-              onChange={handlePasswordChange}
-              className={`w-full rounded-xl bg-[--coolgray100] p-4 text-base text-gray-400 focus:outline-[--main] lg:w-[512px] ${
-                passwordError ? "border-2 border-red-500" : "border-none"
+              {...register("password", {
+                required: "비밀번호를 입력해주세요.",
+                pattern: {
+                  value: EIGHT_NUMBERS_REGEX,
+                  message: "비밀번호를 8자 이상 입력해주세요.",
+                },
+              })}
+              className={`w-full rounded-xl bg-coolgray-100 p-4 text-base text-gray-400 focus:outline-main lg:w-[512px] ${
+                errors.password ? "border-2 border-error" : "border-none"
               }`}
             />
             <Image
@@ -199,15 +164,17 @@ export default function signup() {
               className="absolute right-[1rem] top-[3.2rem] h-6 w-6 cursor-pointer"
               onClick={togglePasswordVisibility}
             />
-            {passwordError && (
-              <p className="errorMessage ml-4 text-xs text-red-500">
-                {passwordError}
-              </p>
-            )}
+            <ErrorMessage
+              errors={errors}
+              name="password"
+              render={({ message }) => (
+                <p className="ml-4 text-xs text-error">{message}</p>
+              )}
+            />
           </div>
           <div className="relative my-4 flex w-full flex-col justify-center gap-2 lg:w-auto">
             <label
-              htmlFor="confirm_password"
+              htmlFor="passwordConfirmation"
               className="text-lg font-bold text-gray-700"
             >
               비밀번호 확인
@@ -215,11 +182,15 @@ export default function signup() {
             <input
               type={isVisibilityIconConfirm ? "text" : "password"}
               placeholder="비밀번호를 다시 한 번 입력해주세요"
-              id="confirm_password"
-              onChange={handlepasswordConfirmationChange}
-              className={`w-full rounded-xl bg-[--coolgray100] p-4 text-base text-gray-400 focus:outline-[--main] lg:w-[512px] ${
-                passwordConfirmationError
-                  ? "border-2 border-red-500"
+              id="passwordConfirmation"
+              {...register("passwordConfirmation", {
+                required: "비밀번호를 다시 입력해주세요.",
+                validate: (value) =>
+                  value === password || "비밀번호가 일치하지 않습니다.",
+              })}
+              className={`w-full rounded-xl bg-coolgray-100 p-4 text-base text-gray-400 focus:outline-main lg:w-[512px] ${
+                errors.passwordConfirmation
+                  ? "border-2 border-error"
                   : "border-none"
               }`}
             />
@@ -229,26 +200,28 @@ export default function signup() {
               className="absolute right-[1rem] top-[3.2rem] h-6 w-6 cursor-pointer"
               onClick={togglepasswordConfirmationVisibility}
             />
-            {passwordConfirmationError && (
-              <p className="errorMessage ml-4 text-xs text-red-500">
-                {passwordConfirmationError}
-              </p>
-            )}
+            <ErrorMessage
+              errors={errors}
+              name="passwordConfirmation"
+              render={({ message }) => (
+                <p className="ml-4 text-xs text-error">{message}</p>
+              )}
+            />
           </div>
           <button
             type="submit"
-            className={`w-full cursor-pointer rounded-[5rem] bg-[--btn4] px-5 py-3 text-white lg:w-[512px] ${
-              !isDisabled && "bg-[--main]"
+            className={`w-full cursor-pointer rounded-[5rem] bg-btn-4 px-5 py-3 text-white lg:w-[512px] ${
+              isValid && "bg-main"
             }`}
-            disabled={isDisabled}
+            disabled={!isValid}
           >
             회원가입
           </button>
         </form>
       </div>
       <div className="w-full px-4 lg:w-[512px]">
-        <div className="my-4 flex flex-row items-center justify-between rounded-xl bg-[--loginbg] p-4">
-          <p className="text-main font-semibold">간편 로그인하기</p>
+        <div className="my-4 flex flex-row items-center justify-between rounded-xl bg-loginbg p-4">
+          <p className="text-black">간편 로그인하기</p>
           <div className="flex flex-row gap-4">
             <Link href="https://www.google.com/">
               <Image src={iconGoogle} alt="google" className="h-10 w-10" />
@@ -260,7 +233,7 @@ export default function signup() {
         </div>
         <div className="flex flex-row items-center justify-center gap-2">
           <p>이미 회원이신가요?</p>
-          <Link href="/signin" className="text-[--main] underline">
+          <Link href="/signin" className="text-main underline">
             로그인
           </Link>
         </div>

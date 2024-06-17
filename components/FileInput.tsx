@@ -51,7 +51,7 @@ function FileInput({ name, value, initialPreview, onChange }: FileInputProps) {
   }, [value, initialPreview]);
 
   return (
-    <div className="rounded-0.5rem relative my-2 h-[162px] w-[162px] overflow-hidden rounded-md bg-[--coolgray100] lg:h-[282px] lg:w-[282px]">
+    <div className="bg-coolgray-100 relative my-2 h-[162px] w-[162px] overflow-hidden rounded-md lg:h-[282px] lg:w-[282px]">
       <div className="flex h-full w-full items-center justify-center">
         {preview ? (
           <Image
@@ -80,7 +80,7 @@ function FileInput({ name, value, initialPreview, onChange }: FileInputProps) {
       />
       {value && (
         <button
-          className="absolute right-[9px] top-[9px] h-[26px] w-[26px] cursor-pointer rounded-full border-none bg-black bg-opacity-40 p-1 hover:bg-[--main]"
+          className="hover:bg-main absolute right-2.5 top-2.5 h-6 w-6 cursor-pointer rounded-full border-none bg-black bg-opacity-40 p-1"
           onClick={handleClearClick}
         >
           <Image src={icon_reset} alt="선택해제" width={26} height={26} />

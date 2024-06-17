@@ -21,8 +21,10 @@ export default function Header() {
 
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
-    setAccessToken(token);
-  }, []);
+    if (token) {
+      setAccessToken(token);
+    }
+  }, [router.pathname]);
 
   const handleProfileClick = () => {
     setIsLogoutBoxVisible(!isLogoutBoxVisible);
@@ -30,12 +32,14 @@ export default function Header() {
 
   const logout = () => {
     localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    setAccessToken(null);
+    setIsLogoutBoxVisible(false);
     router.push("/");
-    window.location.reload();
   };
 
   return (
-    <div className="fixed top-0 z-50 flex h-16 w-full items-center justify-between gap-4 bg-white px-[24px] py-0 lg:gap-12 lg:px-48 lg:py-4">
+    <div className="fixed top-0 z-50 flex h-16 w-full items-center justify-between gap-4 bg-white px-6 py-0 lg:gap-12 lg:px-12 lg:py-4">
       <div className="flex items-center gap-4">
         <div
           onClick={goToMain}
@@ -55,9 +59,9 @@ export default function Header() {
           <nav className="flex flex-row gap-2 text-lg font-bold md:gap-8">
             <Link
               href="/boards"
-              className={`hover:text-[--main] ${
+              className={`hover:text-main ${
                 pathName.includes("/boards") || pathName.includes("/addBoards")
-                  ? "text-[--main]"
+                  ? "text-blue-500"
                   : ""
               }`}
             >
@@ -65,8 +69,8 @@ export default function Header() {
             </Link>
             <Link
               href="/items"
-              className={`hover:text-[--main] ${
-                pathName === "/items" ? "text-[--main]" : ""
+              className={`hover:text-main ${
+                pathName === "/items" ? "text-main" : ""
               }`}
             >
               중고마켓
@@ -85,11 +89,8 @@ export default function Header() {
         />
       )}
       {isLogoutBoxVisible && (
-        <div className="absolute right-5 top-14 z-50 rounded-lg bg-white px-4 py-2 shadow-md lg:right-12 lg:top-3">
-          <button
-            className="text-gray-700 hover:text-[--main]"
-            onClick={logout}
-          >
+        <div className="absolute right-5 top-14 z-50 rounded-lg bg-white px-4 py-2 shadow-md lg:right-12 lg:top-16">
+          <button className="text-gray-700 hover:text-main" onClick={logout}>
             로그아웃
           </button>
         </div>
@@ -98,7 +99,7 @@ export default function Header() {
         <button
           id="btn_small"
           onClick={goToSignin}
-          className="inline-flex h-[42px] w-[128px] cursor-pointer items-center justify-center rounded-[0.5rem] border-none bg-[--btn1] px-[0.5rem] py-[1.5rem] text-white hover:bg-[--btn2]"
+          className="inline-flex cursor-pointer items-center justify-center rounded-md border-none bg-main px-6 py-2 text-white hover:bg-btn-2"
         >
           로그인
         </button>
