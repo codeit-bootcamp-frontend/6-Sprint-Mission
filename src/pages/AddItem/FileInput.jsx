@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import ImageAdd from "../../assets/images/ic_plus.png";
+import { useEffect, useRef, useState } from 'react';
+import ImageAdd from '../../assets/images/ic_plus.png';
 
 function FileInput({ name, value, onChange }) {
   const [preview, setPreview] = useState();
@@ -14,7 +14,7 @@ function FileInput({ name, value, onChange }) {
     const inputNode = inputRef.current;
     if (!inputNode) return;
 
-    inputNode.value = "";
+    inputNode.value = '';
     onChange(name, null);
   };
 

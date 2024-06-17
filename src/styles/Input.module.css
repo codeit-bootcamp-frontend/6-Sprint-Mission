@@ -1,0 +1,10 @@
+.input {
+  width: 100%;
+  font-size: 16px;
+  background: #f3f4f6;
+  padding: 16px 24px;
+  border-radius: 12px;
+}
+.input::placeholder {
+  color: val(--color-gray400);
+}

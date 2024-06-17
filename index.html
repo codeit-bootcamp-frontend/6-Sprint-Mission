@@ -1,125 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>판다마켓</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link
+      rel="icon"
+      href="/src/assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:image" content="../image/og_img.png" />
     <meta property="og:title" content="판다마켓" />
     <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
     <meta property="og:url" content="https://kyj-pandamarket.netlify.app" />
 
+    <title>판다마켓</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" href="../image/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="wrap">
-      <header>
-        <a href="/" class="logo">
-          <img src="../image/logo.png" alt="로고" class="pc_ver" />
-          <img src="../image/logo_m.png" alt="모바일-로고" class="mobile_ver" />
-        </a>
-        <button
-          type="button"
-          class="login_btn"
-          onclick="location.href='login.html';"
-        >
-          로그인
-        </button>
-      </header>
-
-      <main>
-        <section class="main_visual">
-          <div class="inner">
-            <div class="mv_txt">
-              <div class="tit">
-                일상의 모든 물건을<br />
-                거래해 보세요
-              </div>
-              <button type="button" onclick="location.href='items.html';">
-                구경하러 가기
-              </button>
-            </div>
-          </div>
-        </section>
-        <section class="main_content">
-          <div class="inner">
-            <ul class="panda_content">
-              <li>
-                <div class="img">
-                  <img src="../image/Img_home_01.png" alt="hot-item" />
-                </div>
-                <div class="txt">
-                  <div class="blue_txt">Hot item</div>
-                  <div class="tit">인기 상품을<br />확인해 보세요</div>
-                  <div class="sub">
-                    가장 HOT한 중고거래 물품을<br />판다 마켓에서 확인해 보세요
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="txt">
-                  <div class="blue_txt">Search</div>
-                  <div class="tit">구매를 원하는<br />상품을 검색하세요</div>
-                  <div class="sub">
-                    구매하고 싶은 물품은 검색해서<br />쉽게 찾아보세요
-                  </div>
-                </div>
-                <div class="img">
-                  <img src="../image/Img_home_02.png" alt="search" />
-                </div>
-              </li>
-              <li>
-                <div class="img">
-                  <img src="../image/Img_home_03.png" alt="register" />
-                </div>
-                <div class="txt">
-                  <div class="blue_txt">Register</div>
-                  <div class="tit">판매를 원하는<br />상품을 등록하세요</div>
-                  <div class="sub">
-                    어떤 물건이든 판매하고 싶은 상품을<br />쉼게 등록하세요
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="main_visual main_banner">
-          <div class="inner">
-            <div class="mv_txt">
-              <div class="tit">믿을 수 있는<br />판다마켓 중고거래</div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div class="year">©codeit - 2024</div>
-        <div class="link">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-        <div class="sns">
-          <a href="https://www.facebook.com" target="_blank"
-            ><img src="../image/ic_facebook.png" alt="facebook"
-          /></a>
-          <a href="https://twitter.com" target="_blank"
-            ><img src="../image/ic_twitter.png" alt="twitter"
-          /></a>
-          <a href="https://www.youtube.com" target="_blank"
-            ><img src="../image/ic_youtube.png" alt="youtube"
-          /></a>
-          <a href="https://www.instagram.com" target="_blank"
-            ><img src="../image/ic_instagram.png" alt="instagram"
-          /></a>
-        </div>
-      </footer>
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

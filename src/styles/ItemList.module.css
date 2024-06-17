@@ -1,0 +1,22 @@
+.item_list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.item_list li {
+  width: 20%;
+  margin-bottom: 40px;
+}
+.item_list li .img img {
+  border-radius: 16px;
+  object-fit: cover;
+}
+.item_list.best {
+  flex-wrap: nowrap;
+}
+.item_list.best li {
+  width: auto;
+}
+.item_list.best li .img img {
+  height: 282px;
+}
