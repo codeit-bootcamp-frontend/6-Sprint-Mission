@@ -9,31 +9,26 @@ import {
 } from "@/css/common/sign.styled";
 import { css } from "@/styled-system/css";
 import Link from "next/link";
-import postSignin from "@/apis/auth/postSignin";
-import { ChangeEventHandler, useState } from "react";
-import { useRouter } from "next/router";
-import { saveTokenToLocalStorage } from "@/utils/localStorageToken";
+import { useAuth } from "@/context/AuthProvider";
+import { useForm } from "react-hook-form";
+import { UserData } from "@/types/auth";
 
 function Signin() {
-  const [userData, setUserData] = useState({
-    email: "",
-    password: "",
-  });
-  const router = useRouter();
+  const { login } = useAuth();
 
-  const onChangeInput: ChangeEventHandler<HTMLInputElement> = (e) => {
-    const { name, value } = e.target;
-    setUserData({
-      ...userData,
-      [name]: value,
-    });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    trigger,
+  } = useForm<UserData>();
+
+  const onSubmit = async (data: UserData) => {
+    await login(data);
   };
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push("/boards");
-    const response = await postSignin(userData);
-    saveTokenToLocalStorage(response);
+  const handleBlur = async (field: keyof UserData) => {
+    await trigger(field);
   };
 
   return (
@@ -44,31 +39,55 @@ function Signin() {
       })}
     >
       <HeaderSign />
-      <form className={formBasicStyle}>
+      <form className={formBasicStyle} onSubmit={handleSubmit(onSubmit)}>
         <div className={labelInputContainer}>
-          <label className={labelBasicStyle}>이메일</label>
-          <input
-            name="email"
-            type="email"
-            placeholder="이메일을 입력해주세요"
-            className={inputRecipe()}
-            onChange={onChangeInput}
-          />
+          <label className={labelBasicStyle}>
+            이메일
+            <input
+              {...register("email", {
+                required: { value: true, message: "이메일을 입력해주세요" },
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "이메일 형식이 올바르지 않습니다",
+                },
+              })}
+              placeholder="이메일을 입력해주세요"
+              className={inputRecipe()}
+              onBlur={() => handleBlur("email")}
+            />
+            {errors.email && (
+              <p className={css({ color: "errorRed" })}>
+                {errors.email.message}
+              </p>
+            )}
+          </label>
         </div>
         <div className={labelInputContainer}>
-          <label className={labelBasicStyle}>비밀번호</label>
-          <input
-            name="password"
-            type="password"
-            placeholder="비밀번호를 입력해주세요"
-            className={inputRecipe()}
-            onChange={onChangeInput}
-          />
+          <label className={labelBasicStyle}>
+            비밀번호
+            <input
+              {...register("password", {
+                required: { value: true, message: "비밀번호를 입력해주세요" },
+                minLength: {
+                  value: 8,
+                  message: "비밀번호를 8자 이상 입력해주세요",
+                },
+              })}
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              className={inputRecipe()}
+              onBlur={() => handleBlur("password")}
+            />
+            {errors.password && (
+              <p className={css({ color: "errorRed" })}>
+                {errors.password.message}
+              </p>
+            )}
+          </label>
         </div>
         <button
           type="submit"
-          className={buttonRecipe({ visual: "sign" })}
-          onClick={handleSubmit}
+          className={buttonRecipe({ visual: "sign", active: isValid })}
         >
           로그인
         </button>

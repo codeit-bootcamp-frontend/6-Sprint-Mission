@@ -38,8 +38,8 @@ function NormalPost() {
   useEffect(() => {
     const loadArticles = async () => {
       const receive = await getArticles({
-        orderBy: `${orderBy}`,
-        keyword: `${searchValue}`,
+        orderBy: orderBy,
+        keyword: searchValue,
       });
       setArticles(receive.list);
     };

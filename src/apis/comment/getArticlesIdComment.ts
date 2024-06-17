@@ -1,12 +1,13 @@
+import { ArticleId } from "@/types/articles";
 import axiosInstance from "../axiosInstance";
 
 interface GetArticlesIdCommentResponse {
-  list: [];
+  list: ArticleId[];
   nextCursor: null | string;
 }
 
 const getArticlesIdComment = async (
-  articleId: string | string[] | undefined
+  articleId?: string | string[]
 ): Promise<GetArticlesIdCommentResponse> => {
   try {
     const { data } = await axiosInstance.get<GetArticlesIdCommentResponse>(

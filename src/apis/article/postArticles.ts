@@ -1,25 +1,19 @@
 import { Token } from "@/types/api";
 import axiosInstance from "../axiosInstance";
-import { PostData } from "@/components/addBoardComponents/Form";
+import { PostData } from "@/components/addBoardComponents/ArticleForm";
 
 const postArticles = async (
   option: PostData = {
     content: "",
     title: "",
     image: null,
-  },
-  token?: string | null
+  }
 ) => {
   const { image, ...restOption } = option;
   const payload = image ? option : restOption;
 
   try {
-    const { data } = await axiosInstance.post<any>("/articles", payload, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return data;
+    await axiosInstance.post<any>("/articles", payload);
   } catch (error) {
     console.error(`Failed to fetch data: ${error}`);
     throw error;

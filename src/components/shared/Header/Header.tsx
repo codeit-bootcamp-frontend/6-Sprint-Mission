@@ -12,9 +12,15 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { buttonRecipe } from "@/css/recipe/buttonRecipe.styled";
 import userPassiveIcon from "@/assets/icons/user_passive_ic.svg";
+import { useEffect, useState } from "react";
 
 function Header() {
   const router = useRouter();
+  const [isToken, setIsToken] = useState<string | undefined>("");
+
+  useEffect(() => {
+    setIsToken(localStorage.getItem("accessToken")?.replace(/"/gi, ""));
+  });
 
   return (
     <div className={headerContainer}>
@@ -40,7 +46,7 @@ function Header() {
           중고마켓
         </Link>
       </div>
-      {router.pathname !== "/" ? (
+      {isToken ? (
         <Link href="/signin">
           <Image src={userPassiveIcon} alt="userPassive" />
         </Link>

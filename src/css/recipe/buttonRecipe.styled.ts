@@ -42,5 +42,10 @@ export const buttonRecipe = cva({
         margin: "auto",
       },
     },
+    active: {
+      true: {
+        backgroundColor: "blueBasic",
+      },
+    },
   },
 });

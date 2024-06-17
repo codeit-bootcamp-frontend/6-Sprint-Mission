@@ -1,10 +1,10 @@
 import postArticles from "@/apis/article/postArticles";
 import postImage from "@/apis/postImage";
-import Form from "@/components/addBoardComponents/Form";
-import FormTitle from "@/components/addBoardComponents/FormTitle";
+import ArticleForm from "@/components/addBoardComponents/ArticleForm";
+import ArticleFormTitle from "@/components/addBoardComponents/ArticleFormTitle";
 import Header from "@/components/shared/Header/Header";
 import { css } from "@/styled-system/css";
-import { AccessTokenTOLocalStorage } from "@/utils/localStorageToken";
+import { getToken } from "@/utils/localStorageToken";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
@@ -15,7 +15,7 @@ interface PostData {
 }
 
 function AddBoard() {
-  const [postData, setUserData] = useState<PostData>({
+  const [postData, setPostData] = useState<PostData>({
     content: "",
     title: "",
     image: null,
@@ -27,27 +27,30 @@ function AddBoard() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setUserData({
+    setPostData({
       ...postData,
       [name]: value,
     });
   };
 
-  const onChangeImage = async (e: any) => {
+  const onChangeImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files) {
+      console.error("파일골라라");
+      return;
+    }
     const file = e.target.files[0];
     setAddImage(file);
     const token = localStorage.getItem("accessToken");
-    const response = await postImage(token, file);
-    setUserData({
+    const response = await postImage(file);
+    setPostData({
       ...postData,
-      image: response.url,
+      image: response.image,
     });
   };
 
   const handleSubmit = async () => {
     if (!isValid) return;
-    const token = await AccessTokenTOLocalStorage();
-    await postArticles(postData, token);
+    await postArticles(postData);
     router.push("/boards");
   };
   const isValid: boolean = !!(postData.content && postData.title);
@@ -62,8 +65,8 @@ function AddBoard() {
           p: { base: "16px", md: "16px 24px", xl: "24px" },
         })}
       >
-        <FormTitle isValid={isValid} handleSubmit={handleSubmit} />
-        <Form
+        <ArticleFormTitle isValid={isValid} handleSubmit={handleSubmit} />
+        <ArticleForm
           postData={postData}
           file={addImage}
           onChangeInput={onChangeInput}

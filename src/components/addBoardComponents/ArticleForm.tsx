@@ -21,7 +21,12 @@ interface FormProps {
   onChangeImage: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function Form({ postData, file, onChangeInput, onChangeImage }: FormProps) {
+function ArticleForm({
+  postData,
+  file,
+  onChangeInput,
+  onChangeImage,
+}: FormProps) {
   const [imageUrl, setImageUrl] = useState<string | StaticImageData>(imageAdd);
 
   useEffect(() => {
@@ -35,36 +40,42 @@ function Form({ postData, file, onChangeInput, onChangeImage }: FormProps) {
   return (
     <div className={cx(formStyle, css({ marginTop: "24px" }))}>
       <div className={labelInput}>
-        <label className={labelBasicStyle}>*제목</label>
-        <input
-          name="title"
-          type="text"
-          value={postData.title}
-          onChange={onChangeInput}
-          className={inputRecipe()}
-          placeholder="제목을 입력해주세요"
-        />
+        <label className={labelBasicStyle}>
+          *제목
+          <input
+            name="title"
+            type="text"
+            value={postData.title}
+            onChange={onChangeInput}
+            className={inputRecipe()}
+            placeholder="제목을 입력해주세요"
+          />
+        </label>
       </div>
       <div className={labelInput}>
-        <label className={labelBasicStyle}>*내용</label>
-        <textarea
-          name="content"
-          value={postData.content}
-          onChange={onChangeInput}
-          className={inputRecipe({ visual: "xLarge" })}
-          placeholder="내용을 입력해주세요"
-        />
+        <label className={labelBasicStyle}>
+          *내용
+          <textarea
+            name="content"
+            value={postData.content}
+            onChange={onChangeInput}
+            className={inputRecipe({ visual: "xLarge" })}
+            placeholder="내용을 입력해주세요"
+          />
+        </label>
       </div>
       <div className={labelInput}>
-        <label className={labelBasicStyle}>이미지</label>
-        <input
-          type="file"
-          name="image"
-          accept="image/*"
-          onChange={onChangeImage}
-          className={css({ display: "none" })}
-          id="image-upload"
-        />
+        <label className={labelBasicStyle}>
+          이미지
+          <input
+            type="file"
+            name="image"
+            accept="image/*"
+            onChange={onChangeImage}
+            className={css({ display: "none" })}
+            id="image-upload"
+          />
+        </label>
         <label htmlFor="image-upload" className={css({ cursor: "pointer" })}>
           <Image
             src={imageUrl}
@@ -83,4 +94,4 @@ function Form({ postData, file, onChangeInput, onChangeImage }: FormProps) {
   );
 }
 
-export default Form;
+export default ArticleForm;

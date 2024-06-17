@@ -1,10 +1,10 @@
 import axiosInstance from "@/apis/axiosInstance";
 
 interface PostImageResponse {
-  url?: null | Blob | MediaSource;
+  image?: null | Blob | MediaSource;
 }
 
-const postImage = async (token: string | null, image?: any) => {
+const postImage = async (image?: any) => {
   try {
     const formData = new FormData();
     if (image) {
@@ -15,7 +15,6 @@ const postImage = async (token: string | null, image?: any) => {
       formData,
       {
         headers: {
-          Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
         },
       }

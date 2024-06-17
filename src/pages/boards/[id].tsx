@@ -20,8 +20,6 @@ import Header from "@/components/shared/Header/Header";
 import postArticlesComment from "@/apis/comment/postArticlesIdComment";
 import { ParsedUrlQuery } from "querystring";
 import { boardIdPageStyle, flexStyle } from "@/css/boardsId.styled";
-import PostRefreshToken from "@/apis/auth/PostRefreshToken";
-import { AccessTokenTOLocalStorage } from "@/utils/localStorageToken";
 
 function BoardDetail() {
   const router = useRouter();
@@ -38,9 +36,8 @@ function BoardDetail() {
 
   const handleSubmit = async () => {
     if (typeof id !== "string") return;
-    const token = await AccessTokenTOLocalStorage();
+    await postArticlesComment(commentData, id);
     setCommentData("");
-    await postArticlesComment(commentData, id, token);
     setIsChangeComments(!isChangeComments);
   };
 
@@ -49,7 +46,6 @@ function BoardDetail() {
       if (id) {
         const response = await getArticlesId(id);
         setPostDetail(response);
-        console.log(response);
       }
     };
     if (router.isReady) {
@@ -65,7 +61,7 @@ function BoardDetail() {
     if (router.isReady) {
       loadComment();
     }
-  }, [isChangeComments, router.isReady]);
+  }, [router.isReady, isChangeComments]);
 
   const {
     content = "",
@@ -99,7 +95,7 @@ function BoardDetail() {
           </div>
         </div>
         <p className={css({ minH: "80px" })}>{content}</p>
-        <div className={flexStyle}>
+        <form className={flexStyle}>
           <label className={subTitle}>댓글 달기</label>
           <textarea
             name="comment"
@@ -120,7 +116,7 @@ function BoardDetail() {
           >
             등록
           </button>
-        </div>
+        </form>
         {comments && comments.length > 0 ? (
           <div className={css({ marginBottom: "24px" })}>
             {comments.map((comment) => {
@@ -134,7 +130,7 @@ function BoardDetail() {
             className={css({ margin: "auto" })}
           />
         )}
-        <Link href="../" className={buttonRecipe({ visual: "large" })}>
+        <Link href="/boards" className={buttonRecipe({ visual: "large" })}>
           목록으로 돌아가기
           <Image src={backIcon} alt="돌아가기" />
         </Link>

@@ -8,7 +8,7 @@ interface FormTitleProps {
   handleSubmit: MouseEventHandler<HTMLButtonElement>;
 }
 
-function FormTitle({ isValid, handleSubmit }: FormTitleProps) {
+function ArticleFormTitle({ isValid, handleSubmit }: FormTitleProps) {
   return (
     <div className={hstack({ justifyContent: "space-between" })}>
       <h2 className={subTitle}>게시글 쓰기</h2>
@@ -24,4 +24,4 @@ function FormTitle({ isValid, handleSubmit }: FormTitleProps) {
   );
 }
 
-export default FormTitle;
+export default ArticleFormTitle;
