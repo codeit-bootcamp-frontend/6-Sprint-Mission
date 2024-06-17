@@ -3,7 +3,6 @@ import styled from "styled-components";
 import InputItem from "./InputItem";
 import { FlexContainer } from "../../styles/CommonStyles";
 import DeleteButton from "./DeleteButton";
-import { Tag } from "styled-components/dist/sheet/types";
 
 const TagButtonsSection = styled.div`
   display: flex;
@@ -12,7 +11,7 @@ const TagButtonsSection = styled.div`
   flex-wrap: wrap;
 `;
 
-const Tag = styled(FlexContainer)`
+const TagContainer = styled(FlexContainer)`
   background-color: ${({ theme }) => theme.colors.gray[50]};
   color: ${({ theme }) => theme.colors.gray[800]};
   padding: 14px 14px 14px 16px;
@@ -66,14 +65,13 @@ const TagInput: React.FC<TagInputProps> = ({ tags, onAddTag, onRemoveTag }) => {
       {tags.length > 0 && (
         <TagButtonsSection>
           {tags.map((tag) => (
-            <Tag key={`tag-${tag}`}>
+            <TagContainer key={`tag-${tag}`}>
               <TagText>{tag}</TagText>
-
               <DeleteButton
                 onClick={() => onRemoveTag(tag)}
                 label={`${tag} 태그`}
               />
-            </Tag>
+            </TagContainer>
           ))}
         </TagButtonsSection>
       )}

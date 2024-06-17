@@ -15,7 +15,7 @@ const PaginationBar = ({
   onPageChange,
 }: PaginationBarProps) => {
   const maxVisiblePages = 5;
-  let startPage;
+  let startPage: number; // 타입을 명시
 
   if (totalPageNum <= maxVisiblePages) {
     startPage = 1;

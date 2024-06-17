@@ -55,8 +55,8 @@ function AllItemsSection() {
     try {
       const products: ProductsResponse = await getProducts({
         orderBy,
-        page,
-        pageSize,
+        page: page.toString(),
+        pageSize: pageSize.toString(),
       });
       setItemList(products.list);
       setTotalPageNum(Math.ceil(products.totalCount / pageSize));

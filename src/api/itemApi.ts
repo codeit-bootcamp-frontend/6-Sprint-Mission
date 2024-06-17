@@ -1,4 +1,4 @@
-export async function getProducts(params = {}) {
+export async function getProducts(params: Record<string, string> = {}) {
   const query = new URLSearchParams(params).toString();
 
   try {
@@ -16,7 +16,7 @@ export async function getProducts(params = {}) {
   }
 }
 
-export async function getProductDetail(productId) {
+export async function getProductDetail(productId: string) {
   if (!productId) {
     throw new Error("Invalid product ID");
   }
@@ -36,7 +36,13 @@ export async function getProductDetail(productId) {
   }
 }
 
-export async function getProductComments({ productId, params }) {
+export async function getProductComments({
+  productId,
+  params = {},
+}: {
+  productId: string;
+  params: Record<string, string>;
+}) {
   if (!productId) {
     throw new Error("Invalid product ID");
   }

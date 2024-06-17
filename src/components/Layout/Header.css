@@ -27,6 +27,14 @@
   padding: 11.5px 23px;
 }
 
+.loginImage {
+  background-color: #ffffff;
+}
+
+.loginImage:hover {
+  background-color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .globalHeader nav ul {
     gap: 36px;

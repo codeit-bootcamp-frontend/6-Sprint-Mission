@@ -45,7 +45,7 @@ function BestItemsSection() {
     try {
       const products: ProductsResponse = await getProducts({
         orderBy,
-        pageSize,
+        pageSize: pageSize.toString(),
       });
       setItemList(products.list);
     } catch (error) {

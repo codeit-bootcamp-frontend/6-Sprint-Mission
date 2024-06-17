@@ -134,7 +134,7 @@ function CommentThread({ productId }: CommentThreadProps) {
     const fetchComments = async () => {
       setIsLoading(true);
       const params = {
-        limit: 10,
+        limit: "10", // 숫자를 문자열로 변환
       };
 
       try {
