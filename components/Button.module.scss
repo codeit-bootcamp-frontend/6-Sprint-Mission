@@ -1,0 +1,17 @@
+$primary-color: #5179fa;
+$secondary-color: #94b1ff;
+$sub1-color: #ffffff;
+$sub2-color: #000000;
+.btn_style {
+  padding: 15px 20px;
+  border-radius: 200px;
+  max-width: 150px;
+  width: 100%;
+  background-color: $primary-color;
+  border: 1px solid $secondary-color;
+  color: $sub1-color;
+  font-weight: bold;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}

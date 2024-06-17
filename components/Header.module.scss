@@ -1,0 +1,38 @@
+$primary-color: #5179fa;
+$secondary-color: #94b1ff;
+$sub1-color: #ffffff;
+$sub2-color: #000000;
+/*  Header */
+.header {
+  padding: 10px;
+  border-bottom: 1px solid $secondary-color;
+  .header_wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    .header_logo {
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .header_menu {
+      display: flex;
+      gap: 20px;
+      font-size: 22px;
+      li {
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+    .header_button {
+      margin-left: auto;
+    }
+  }
+}

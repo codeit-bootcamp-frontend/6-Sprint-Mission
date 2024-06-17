@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Poor Story";
+  src: url("/fonts/PoorStory-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Poor Story", system-ui;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poor Story", system-ui;
+  word-break: keep-all;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+section {
+  padding: 50px 0;
+}

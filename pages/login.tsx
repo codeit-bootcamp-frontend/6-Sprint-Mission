@@ -1,77 +1,9 @@
-# 💡Simple todo pwa
-
-스프린트 쇼핑몰 실습 과제
-
-# 🖥️View web site
-
-https://6-sprint-mission-gules.vercel.app/
-
-<!--프로젝트 대문 이미지-->
-
-<!--목차-->
-
-# Table of Contents
-
-- [[1] About the Project](#1-about-the-project)
-  - [Features](#features)
-  - [Technologies](#technologies)
-- [[2] Getting Started](#2-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-- [[3] Usage](#3-usage)
-- [[4] Contribution](#4-contribution)
-- [[5] Acknowledgement](#5-acknowledgement)
-- [[6] Contact](#6-contact)
-- [[7] License](#7-license)
-
-# [1] About the Project
-
-스프린트 실습 과제입니다.
-
-## Features
-
-## Technologies
-
-- React js
-- Typescript
-- Next.js
-- scss
-
-# [2] Getting Started
-
-## Prerequisites
-
-- npm
-
-```bash
-npm install npm@latest -g
-```
-
-## Installation
-
-1. Repository 클론
-
-```bash
-git clone https://github.com/your-username/project-repository
-```
-
-2. NPM packages 설치
-
-```bash
-npm install
-```
-
-# [3] Usage
-
-로그인 유효성 검사
-
-```java
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Home.module.scss";
+import Button from "@/components/Button";
 
 interface Input {
   email: string;
@@ -178,7 +110,7 @@ const Login = () => {
               />
               <span>{message.passwordMsg}</span>
             </div>
-            <button className={styles.btn_style}>로그인</button>
+            <Button text={"로그인"} className={"btn_style"} />
           </form>
         </div>
         <div className={styles.sign_notice}>
@@ -191,46 +123,4 @@ const Login = () => {
   );
 };
 
-
-```
-
-# [4] Contribution
-
-버그 수정에 🐞, 아이디어 제공에 💡, 새로운 기능 구현에 ✨를 사용할 수 있습니다.\*
-
-- (예시) 🐞 [YUMEEKIM](https://github.com/yumi-kim-0827): 메인페이지 버그 수정
-
-# [5] Acknowledgement
-
-- design https://www.figma.com/design/IVkRlYWHY74QlgmxqA99Ym/%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%EB%AF%B8%EC%85%98?node-id=541-21096&t=P95cJXwaUwd214sk-0
-
-# [6] Contact
-
-- 📧 yumee0827@naver.com
-- 📋 [https://github.com/yumi-kim-0827](https://github.com/yumi-kim-0827)
-
-# [7] License
-
-MIT 라이센스
-
-<!--Url for Badges-->
-
-[license-shield]: https://img.shields.io/github/license/dev-ujin/readme-template?labelColor=D8D8D8&color=04B4AE
-[repository-size-shield]: https://img.shields.io/github/repo-size/dev-ujin/readme-template?labelColor=D8D8D8&color=BE81F7
-[issue-closed-shield]: https://img.shields.io/github/issues-closed/dev-ujin/readme-template?labelColor=D8D8D8&color=FE9A2E
-
-<!--Url for Buttons-->
-
-[readme-eng-shield]: https://img.shields.io/badge/-readme%20in%20english-2E2E2E?style=for-the-badge
-[view-demo-shield]: https://img.shields.io/badge/-%F0%9F%98%8E%20view%20demo-F3F781?style=for-the-badge
-[view-demo-url]: https://dev-ujin.github.io
-[report-bug-shield]: https://img.shields.io/badge/-%F0%9F%90%9E%20report%20bug-F5A9A9?style=for-the-badge
-[report-bug-url]: https://github.com/dev-ujin/readme-template/issues
-[request-feature-shield]: https://img.shields.io/badge/-%E2%9C%A8%20request%20feature-A9D0F5?style=for-the-badge
-[request-feature-url]: https://github.com/dev-ujin/readme-template/issues
-
-<!--URLS-->
-
-[license-url]: LICENSE.md
-[contribution-url]: CONTRIBUTION.md
-[readme-eng-url]: ../README.md
+export default Login;
