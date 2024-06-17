@@ -30,7 +30,7 @@ export async function GET<T>(
 // base POST 선언부
 export async function POST<T>(
   endpoint: string,
-  body?: FormData | Record<string, string>,
+  body?: FormData | Record<string, string> | PostSignInBody,
   headers?: Record<string, string>,
 ): Promise<T> {
   try {
@@ -111,4 +111,24 @@ export async function postArticle(
   return await POST(`/articles`, body, {
     Authorization: `Bearer ${accessToken}`,
   });
+}
+
+interface PostSignInBody {
+  email: string;
+  password: string;
+}
+
+export async function postSignIn(body: PostSignInBody) {
+  return await POST<SignInResponse>(`/auth/signIn`, body);
+}
+
+interface PostSignUpBody {
+  email: string;
+  password: string;
+  nickname: string;
+  passwordConfirmation: string;
+}
+
+export async function postSignUp(body: PostSignUpBody) {
+  return await POST<SignInResponse>(`/auth/signUp`, body);
 }
