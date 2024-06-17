@@ -1,0 +1,235 @@
+/* =================================================================================================================================== */
+/* 로그인, 회원가입 페이지 =========================================================================================================== */
+/* =================================================================================================================================== */
+
+.sign_up_main,
+.sign_in_main {
+	padding-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content {
+	margin-top: 1rem;
+	width: 38rem;
+}
+
+.user_psw_content,
+.user_psw_chk_content {
+	position: relative;
+}
+
+.user_email_label,
+.user_nickname_label,
+.user_psw_label,
+.user_psw_chk_label {
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.user_email_input,
+.user_nickname_input,
+.user_psw_input,
+.user_psw_chk_input {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	width: 100%;
+	height: 50px;
+	font-size: 1rem;
+	border: 0;
+	border-radius: 12px;
+	padding: 0 25px;
+	background-color: var(--gray-50);
+}
+
+.user_email_input:focus,
+.user_nickname_input:focus,
+.user_psw_input:focus,
+.user_psw_chk_input:focus {
+	outline-color: var(--blue);
+}
+
+.user_email_input::placeholder,
+.user_nickname_input::placeholder,
+.user_psw_input::placeholder,
+.user_psw_chk_input::placeholder {
+	color: var(--blue-50);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.psw_chk_btn {
+	cursor: pointer;
+	position: absolute;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	right: 0.8rem;
+	top: 1rem;
+}
+
+.error_msg {
+	margin-left: 1rem;
+	color: var(--error-red);
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+.error_line,
+.error_line:focus {
+	outline-style: solid;
+	outline-width: 2px;
+	outline-color: var(--error-red);
+}
+
+.hide {
+	display: none;
+}
+
+.psw_chk_img {
+	margin-top: 0.2rem;
+	height: 1.5rem;
+}
+
+.eye_open {
+}
+.eye_close {
+}
+
+.submit_btn {
+	cursor: pointer;
+	margin-top: 1rem;
+	width: 100%;
+	height: 56px;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #fff;
+	border: none;
+	border-radius: 9999px;
+	background-color: var(--blue);
+}
+
+.submit_btn:disabled {
+	background-color: var(--blue-50);
+	cursor: not-allowed;
+}
+
+.submit_btn:hover.submit_btn:enabled {
+	background-color: var(--blue-200);
+}
+
+.social_sign_in {
+	width: 38rem;
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #e6f2ff;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--gray-800);
+	padding: 0.5rem 1.5rem;
+}
+
+.sign_in_google img {
+	margin-right: 0.5rem;
+	height: 2.5rem;
+}
+
+.sign_in_kakao img {
+	height: 2.5rem;
+}
+
+.to_sign_up,
+.to_sign_in {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--gray-800);
+}
+
+.sign_up_btn,
+.sign_in_btn {
+	color: #3182f6;
+	text-decoration: underline;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Tablet Size================================================================================================================================= */
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Mobile Size================================================================================================================================= */
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.main_sign_in,
+	.main_sign_up {
+		padding: 16px;
+	}
+
+	.sign_in_form,
+	.sign_up_form {
+		max-width: 400px;
+		width: 100%;
+	}
+
+	.content {
+		max-width: 400px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.user_email_label,
+	.user_nickname_label,
+	.user_psw_label,
+	.user_psw_chk_label {
+		font-size: 1rem;
+	}
+
+	.user_email_input,
+	.user_nickname_input,
+	.user_psw_input,
+	.user_psw_chk_input {
+		font-size: 0.8rem;
+	}
+
+	.user_email_input::placeholder,
+	.user_nickname_input::placeholder,
+	.user_psw_input::placeholder,
+	.user_psw_chk_input::placeholder {
+		font-size: 0.8rem;
+	}
+
+	.error_msg {
+		font-size: 0.85rem;
+	}
+
+	.submit_btn {
+		margin-top: 0.5rem;
+	}
+
+	.sign_in_google img {
+		margin-right: 0.2rem;
+		height: 2rem;
+	}
+
+	.sign_in_kakao img {
+		height: 2rem;
+	}
+
+	.social_sign_in {
+		max-width: 400px;
+		width: 100%;
+		font-size: 0.8rem;
+	}
+
+	.to_sign_up,
+	.to_sign_in {
+		font-size: 0.9rem;
+	}
+}
