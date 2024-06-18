@@ -1,21 +1,14 @@
-import axiosInstance from './axios';
+import { axiosInstance } from './axios';
 
-type ArticleType = {
-  image?: string;
+type CommentType = {
   content: string;
-  title: string;
 };
 
-export const postArticle = async (
-  title: string,
-  content: string,
-  token: string,
-  image?: string | undefined
-): Promise<ArticleType> => {
+export const postComment = async (content: string, articleId: string, token: string | null): Promise<CommentType> => {
   try {
     const response = await axiosInstance.post(
-      `/articles`,
-      { content, title, image },
+      `/articles/${articleId}/comments`,
+      { content },
       {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -16,7 +16,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <main>
-        <section className='overflow-hidden bg-sky-blue'>
+        <section className='overflow-hidden bg-sky-blue200'>
           <div className='m-auto w-mobile h-[540px] md:w-tablet md:h-[771px] lg:w-desktop lg:h-[540px]'>
             <div className='flex flex-col gap-4 w-[240px] md:w-[512px] lg:w-[355px] relative top-12 left-12 text-center'>
               <h3 className='font-bold text-[32px] break-words'>일상의 모든 물건을 거래해 보세요</h3>
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='bg-sky-blue m-auto h-[540px] md:h-[771px] lg:h-[540px] overflow-hidden'>
+        <section className='bg-sky-blue200 m-auto h-[540px] md:h-[771px] lg:h-[540px] overflow-hidden'>
           <div className='m-auto w-mobile md:w-tablet lg:w-desktop'>
             <h3 className='font-bold text-[32px] break-words relative top-12 text-center'>
               믿을 수 있는 <br />

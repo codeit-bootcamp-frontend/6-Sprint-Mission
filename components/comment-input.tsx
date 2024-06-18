@@ -1,6 +1,6 @@
-import { postComment } from '@/lib/api/postComment';
+import { postComment } from '@/lib/api/comment';
 import SubmitButton from '@/components/submit-btn';
-import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 type Props = {
   id: string;
@@ -9,14 +9,7 @@ type Props = {
 
 export default function CommentForm({ id, onNewComment }: Props) {
   const [comment, setComment] = useState('');
-  const [token, setToken] = useState('');
-
-  useEffect(() => {
-    const localToken = typeof window !== 'undefined' ? localStorage.getItem('accessToken') : null;
-    if (localToken) {
-      setToken(localToken);
-    }
-  }, []);
+  const accessToken = typeof window !== 'undefined' ? sessionStorage.getItem('accessToken') : null;
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setComment(e.target.value);
@@ -26,7 +19,7 @@ export default function CommentForm({ id, onNewComment }: Props) {
     e.preventDefault();
 
     try {
-      const response = await postComment(comment, id, token);
+      const response = await postComment(comment, id, accessToken);
       if (response) {
         setComment('');
         onNewComment();
@@ -51,7 +44,7 @@ export default function CommentForm({ id, onNewComment }: Props) {
         placeholder='댓글을 입력해주세요'
       />
       <div className='flex justify-end'>
-        <SubmitButton checkValue={comment.length > 0 ? true : false}>등록</SubmitButton>
+        <SubmitButton isChecked={comment.length > 0 ? true : false}>등록</SubmitButton>
       </div>
     </form>
   );

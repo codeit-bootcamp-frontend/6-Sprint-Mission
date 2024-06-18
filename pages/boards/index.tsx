@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import BestArticles from '@/components/best-articles';
 import Articles from '@/components/articles';
-import axiosInstance from '@/lib/api/axios';
+import { axiosInstance } from '@/lib/api/axios';
 import { ArticleProps, ArticleList } from '@/types';
 import Link from 'next/link';
 

@@ -3,54 +3,50 @@ import Image from 'next/image';
 import imgLogo from '@/public/images/img_logo.png';
 import textLogo from '@/public/images/text_logo.png';
 import icProfile from '@/public/images/icons/ic_profile.png';
+import SelectBox from './select-box';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Navigation() {
   const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [isDisplay, setIsDisplay] = useState(false);
+  const selectBoxRef = useRef<HTMLDivElement | null>(null);
+  const profileRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
-    const token = localStorage.getItem('accessToken');
-    setIsLoggedIn(!!token);
-    setIsChecked(true);
-  }, []);
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        selectBoxRef.current &&
+        !selectBoxRef.current.contains(event.target as Node) &&
+        profileRef.current &&
+        !profileRef.current.contains(event.target as Node)
+      ) {
+        setIsDisplay(!isDisplay);
+        console.log(isDisplay);
+      }
+    }
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      const token = localStorage.getItem('accessToken');
-      setIsLoggedIn(!!token);
-    };
-
-    handleRouteChange();
-
-    const handleStorageChange = () => {
-      handleRouteChange();
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
+  }, [selectBoxRef, isDisplay]);
+
+  useEffect(() => {
+    const token = sessionStorage.getItem('accessToken');
+    setAccessToken(token);
   }, []);
-
-  const handleLogoutClick = () => {
-    localStorage.removeItem('accessToken');
-    setIsLoggedIn(false);
-  };
-
-  const handleLoginClick = () => {
-    router.push('/login');
-  };
 
   const freeBoardActive = router.pathname.startsWith('/boards');
-  const isUsedMarketActive = router.pathname === '/' || router.pathname.startsWith('/items');
+  const isUsedMarketActive = router.pathname === '/items' || router.pathname.startsWith('/items');
 
-  if (!isChecked) {
-    return null;
-  }
+  const handleLogoutClick = () => {
+    setAccessToken(null);
+    sessionStorage.removeItem('accessToken');
+    sessionStorage.removeItem('refreshToken');
+    router.push('/');
+  };
 
   return (
     <nav className='flex justify-center items-center h-[70px] border-b border-solid border-[#DFDFDF]'>
@@ -62,8 +58,8 @@ export default function Navigation() {
               <Image className='sm:hidden md:block' src={imgLogo} width={153} alt='판다마켓로고' />
             </div>
           </Link>
-          {isLoggedIn && (
-            <>
+          {accessToken ? (
+            <div className='flex gap-2 md:gap-0 lg:gap-0'>
               <Link href='/boards'>
                 <button
                   className={`font-bold block h-[70px] sm:w-[73px] md:w-[109px] lg:w-[109px] text-[#4B5563] ${
@@ -80,19 +76,46 @@ export default function Navigation() {
                   중고마켓
                 </button>
               </Link>
-            </>
-          )}
+            </div>
+          ) : null}
         </div>
 
         <div className='flex items-center'>
-          {isLoggedIn ? (
-            <div onClick={handleLogoutClick}>
-              <Image src={icProfile} width={40} alt='프로필 기본 이미지' />
-            </div>
+          {accessToken ? (
+            <>
+              <Image
+                ref={profileRef}
+                className='cursor-pointer'
+                src={icProfile}
+                width={40}
+                alt='프로필 기본 이미지'
+                onClick={() => {
+                  setIsDisplay(prev => !prev);
+                  console.log(isDisplay);
+                }}
+              />
+              {isDisplay ? (
+                <div ref={selectBoxRef} className='relative z-50 top-6'>
+                  <SelectBox
+                    firstButtonName={'마이페이지'}
+                    secondButtonName={'로그아웃'}
+                    handleFirstButton={() => {
+                      router.push('/mypage');
+                    }}
+                    handleSecondButton={handleLogoutClick}
+                    isDisplay={isDisplay}
+                  />
+                </div>
+              ) : (
+                ''
+              )}
+            </>
           ) : (
             <button
               className='w-[128px] h-12 px-5 py-3 font-semibold text-white rounded-lg bg-brand-blue'
-              onClick={handleLoginClick}>
+              onClick={() => {
+                router.push('/login');
+              }}>
               로그인
             </button>
           )}

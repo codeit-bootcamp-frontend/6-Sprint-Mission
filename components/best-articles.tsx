@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { getBestArticles } from '@/lib/api/getArticles';
-import { ArticleProps } from '@/types';
-import getFormatDate from '@/lib/utils/formatDate';
+import { getBestArticles } from '@/lib/api/articles';
+import type { ArticleProps } from '@/types';
+import getFormatDate from '@/lib/utils/date';
 import Link from 'next/link';
 import Image from 'next/image';
 import imageBadge from '@/public/images/img_badge.svg';
-import icHeart from '@/public/images/icons/ic_heart.png';
-import { constants, IS_SERVER } from '../lib/constants';
+import icEmptyHeart from '@/public/images/icons/ic_empty-heart.svg';
+import { PAGINATION_DEFAULT, IS_SERVER } from '../lib/constants';
 
 function getPageSize() {
   const width = window.innerWidth;
@@ -17,6 +17,7 @@ function getPageSize() {
   else if (width < 1199) return 2;
   else return 3;
 }
+const { PAGE_NUM, ORDERBY } = PAGINATION_DEFAULT;
 
 export default function BestArticles() {
   const [bestArticles, setBestArticles] = useState<ArticleProps[]>([]);
@@ -25,7 +26,7 @@ export default function BestArticles() {
   useEffect(() => {
     const fetchBestArticles = async () => {
       try {
-        const data = await getBestArticles(constants.PAGE_NUM, pageSize, constants.ORDERBY);
+        const data = await getBestArticles(PAGE_NUM, pageSize, ORDERBY);
         setBestArticles(data);
       } catch (error) {
         console.error('Failed to fetch items:', error);
@@ -75,7 +76,7 @@ function BestArticlePreview({ createdAt, likeCount, image, title, writer }: Arti
         <div className='flex items-center gap-2'>
           <span className='text-cool-gray600'>{writer.nickname}</span>
           <div className='flex items-center gap-1'>
-            <Image src={icHeart} alt='좋아요 하트' width={16} height={16}></Image>
+            <Image src={icEmptyHeart} alt='좋아요 하트' width={16} height={16}></Image>
             <span className='text-cool-gray500'>{likeCount}</span>
           </div>
         </div>

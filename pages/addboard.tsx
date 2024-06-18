@@ -1,9 +1,9 @@
 import { useState, useEffect, ChangeEvent, FormEvent, KeyboardEvent } from 'react';
 import SubmitButton from '@/components/submit-btn';
 import FileInput from '@/components/fileInput';
-import { postArticle } from '@/lib/api/postArticle';
+import { postArticle } from '@/lib/api/articles';
 import { useRouter } from 'next/router';
-import { postImageUrl } from '@/lib/api/postImageUrl';
+import { postImageUrl } from '@/lib/api/image-url';
 
 type Values = {
   imgFile: File | null;

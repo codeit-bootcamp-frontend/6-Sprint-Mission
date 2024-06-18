@@ -1,11 +1,12 @@
-import getFormatDate from '@/lib/utils/formatDate';
+import getFormatDate from '@/lib/utils/date';
 import Image from 'next/image';
-import icHeart from '@/public/images/icons/ic_heart.png';
 import icProfile from '@/public/images/icons/ic_profile.png';
-import { ArticleProps } from '@/types';
+import HeartButton from './heart-button';
+import type { ArticleProps } from '@/types';
 
 export default function ArticlePreview({ createdAt, likeCount, image, title, writer }: ArticleProps) {
   const createdDate = getFormatDate(createdAt);
+
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex justify-between gap-2 font-semibold text-cool-gray800'>
@@ -23,7 +24,7 @@ export default function ArticlePreview({ createdAt, likeCount, image, title, wri
           <time>{createdDate}</time>
         </div>
         <div className='flex items-center gap-1'>
-          <Image src={icHeart} alt='좋아요 하트' width={16}></Image>
+          <HeartButton like={false} />
           <span>{likeCount}+</span>
         </div>
       </div>

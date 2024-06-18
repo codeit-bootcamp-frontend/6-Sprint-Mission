@@ -1,6 +1,6 @@
 import { CommentProps } from '@/types';
 import Image from 'next/image';
-import getFormatTime from '@/lib/utils/formatTime';
+import getFormatTime from '@/lib/utils/time';
 import icKebab from '@/public/images/icons/ic_kebab.svg';
 import icProfile from '@/public/images/icons/ic_profile.png';
 import imageReplyEmpty from '@/public/images/Img_reply_empty.png';

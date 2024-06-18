@@ -16,7 +16,8 @@ module.exports = {
         'cool-gray800': '#1f2937',
         'cool-gray900': '#111827',
         'brand-blue': '#3692ff',
-        'sky-blue': '#cfe5ff',
+        'sky-blue100': '#E6F2FF',
+        'sky-blue200': '#cfe5ff',
       },
     },
     screens: {

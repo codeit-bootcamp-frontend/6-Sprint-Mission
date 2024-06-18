@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
-import { constants } from '../lib/constants';
+import { PAGINATION_DEFAULT } from '../lib/constants';
+import usePagination from '@/hooks/usePagination';
 
 type Props = {
   totalCount: number;
@@ -7,28 +8,15 @@ type Props = {
   setPageNum: Dispatch<SetStateAction<number>>;
 };
 
+const { PAGE_SIZE } = PAGINATION_DEFAULT;
+
 export default function Pagination({ pageNum, setPageNum, totalCount }: Props) {
-  const totalPage = Math.ceil(totalCount / constants.PAGE_SIZE);
-  const pageGroup = Math.ceil(pageNum / 5);
-  const startPage = (pageGroup - 1) * 5 + 1;
-  let lastPage = pageGroup * 5;
-  if (lastPage > totalPage) lastPage = totalPage;
-
-  const handlePrevious = () => {
-    if (pageNum > 1) {
-      setPageNum(pageNum - 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (pageNum < totalPage) {
-      setPageNum(pageNum + 1);
-    }
-  };
-
-  const handlePage = (pageIndex: number) => {
-    setPageNum(pageIndex);
-  };
+  const { totalPage, startPage, lastPage, handlePrevious, handleNext, handlePage } = usePagination(
+    pageNum,
+    setPageNum,
+    totalCount,
+    PAGE_SIZE
+  );
 
   return (
     <div className='flex items-center justify-center gap-1 my-10'>

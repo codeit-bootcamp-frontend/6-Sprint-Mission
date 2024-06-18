@@ -1,4 +1,4 @@
-export const constants = {
+export const PAGINATION_DEFAULT = {
   PAGE_NUM: 1,
   ORDERBY: 'like',
   PAGE_SIZE: 10,
