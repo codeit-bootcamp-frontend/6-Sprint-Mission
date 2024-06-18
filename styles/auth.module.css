@@ -1,0 +1,36 @@
+.auth {
+  max-width: 640px;
+}
+.authLogo {
+  margin: 0 auto 40px;
+  display: block;
+}
+.submitBtn {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.auth_sns {
+  background: #e6f2ff;
+  border-radius: 8px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+}
+.auth_sns p {
+  font-weight: 500;
+}
+.auth_btm {
+  text-align: center;
+  font-size: 15px;
+}
+.auth_btm a {
+  color: #3182f6;
+  margin-left: 4px;
+}
+.sns_area {
+  display: flex;
+  gap: 16px;
+}

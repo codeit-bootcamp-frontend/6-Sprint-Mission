@@ -1,10 +1,18 @@
 import { API_URL } from "../containts";
 
 // 토큰 저장 함수
-export function saveTokens(accessToken: string, refreshToken?: string) {
+export function saveTokens(
+  accessToken: string,
+  userid?: string,
+  refreshToken?: string
+) {
   localStorage.setItem("accessToken", accessToken);
   if (refreshToken) {
     localStorage.setItem("refreshToken", refreshToken);
+  }
+  if (userid) {
+    //임시 유저 정보 저장
+    localStorage.setItem("userid", userid);
   }
 }
 
@@ -36,28 +44,10 @@ export async function validateAndRefreshTokens() {
   if (!accessToken || !refreshToken) {
     throw new Error("No tokens found");
   }
-
   const isTokenExpired = false;
   if (isTokenExpired) {
     return await refreshAccessToken(refreshToken);
   }
 
   return accessToken;
-}
-
-//토큰 가져오기
-export async function getAccessToken() {
-  const res = await fetch(`${API_URL}/auth/signIn`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email: "zzoni@zzoni.com", password: "z100004z" }),
-  });
-  const data = await res.json();
-  const accessToken = data.accessToken;
-  const refreshToken = data.refreshToken;
-
-  // 토큰 저장
-  saveTokens(accessToken, refreshToken);
 }

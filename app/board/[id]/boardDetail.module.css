@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  position: relative;
 }
 .title h3 {
   margin-bottom: 0;
@@ -38,4 +39,13 @@
 .content div {
   margin-top: 20px;
   margin-left: 0;
+}
+.likeBtn {
+  cursor: pointer;
+}
+.popUp {
+  position: relative;
+}
+.popUp > div {
+  position: absolute;
 }

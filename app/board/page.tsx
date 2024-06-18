@@ -3,6 +3,8 @@ import BestBoard from "@/components/bestBoard";
 import styles from "./board.module.css";
 import BoardList from "@/components/boardList";
 
+export const metadata = { title: "판다마켓 | 자유게시판" };
+
 export default async function Board() {
   const bestBoard = await getBoardList({
     page: 1,

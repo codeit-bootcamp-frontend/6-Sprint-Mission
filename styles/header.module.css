@@ -1,0 +1,12 @@
+.header {
+  padding: 8px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hraderProfile {
+  position: relative;
+}
+.profile {
+  cursor: pointer;
+}

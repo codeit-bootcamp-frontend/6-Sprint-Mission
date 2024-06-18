@@ -4,9 +4,10 @@ import Image from "next/image";
 
 interface IFormInput {
   onChange: (file: File | null) => void;
+  image: string | null;
 }
 
-export default function FileInput({ onChange, ...args }: IFormInput) {
+export default function FileInput({ onChange, image }: IFormInput) {
   const [preview, setPreview] = useState("");
 
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -15,7 +16,7 @@ export default function FileInput({ onChange, ...args }: IFormInput) {
     const imgTarget = e.target.files;
     if (!imgTarget || imgTarget.length === 0) return;
     const file = imgTarget[0];
-
+    console.log(`파일 이름 : ${file}`);
     onChange(file);
 
     const nextPreview = URL.createObjectURL(file);
@@ -30,7 +31,11 @@ export default function FileInput({ onChange, ...args }: IFormInput) {
     onChange(null);
     setPreview("");
   };
-
+  useEffect(() => {
+    if (image !== null) {
+      setPreview(image);
+    }
+  }, [image]);
   useEffect(() => {
     const revokePreview = () => {
       if (preview) {
@@ -75,7 +80,6 @@ export default function FileInput({ onChange, ...args }: IFormInput) {
 
       <input
         type="file"
-        {...args}
         onChange={handleChange}
         id="imgInput"
         ref={inputRef}

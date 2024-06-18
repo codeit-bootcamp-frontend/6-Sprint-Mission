@@ -1,7 +1,7 @@
 "use client";
 
 import { IBoardComment } from "@/@types";
-import { addBoardComment } from "@/app/api/board";
+import { addBoardComment } from "@/app/api/comment";
 import { useEffect, useState } from "react";
 
 interface addComment {

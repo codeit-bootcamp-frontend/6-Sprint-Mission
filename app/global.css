@@ -124,9 +124,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body {
-  padding-top: 100px;
-}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -140,6 +138,19 @@ h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 24px;
+}
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav {
+  display: flex;
+  gap: 40px;
+}
+.nav .active {
+  color: #3692ff;
+  font-weight: 600;
 }
 
 .primaryBtn {
@@ -172,6 +183,7 @@ h3 {
 .defaultForm label {
   font-weight: 700;
   font-size: 18px;
+  position: relative;
 }
 .defaultForm input,
 .defaultForm textarea {
@@ -179,7 +191,7 @@ h3 {
   padding: 16px 24px;
   border-radius: 8px;
   font-size: 15px;
-  border: none;
+  border: 1px solid transparent;
   display: block;
   width: 100%;
   line-height: 1.4;
@@ -198,7 +210,6 @@ h3 {
   color: #9ca3af;
   letter-spacing: -0.023em;
 }
-
 .FileInput {
   width: fit-content;
 }
@@ -222,7 +233,27 @@ h3 {
   top: 10px;
   cursor: pointer;
 }
-
+.errText {
+  color: red;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.defaultForm input.errInput {
+  margin-bottom: 8px;
+  border: 1px solid red;
+}
+.pwdLabel {
+  position: relative;
+}
+.pwdToggleIcon {
+  position: absolute;
+  right: 16px;
+  top: 55px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
 .flexBetween {
   display: flex;
   justify-content: space-between;
@@ -269,4 +300,46 @@ h3 {
   color: #9ca3af;
   line-height: 24px;
   margin-top: 7px;
+}
+.moreBtn {
+  cursor: pointer;
+  padding: 0 10px;
+  box-sizing: content-box;
+}
+.morePopup {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  background: #e5e7eb;
+  border-radius: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -75px;
+}
+.morePopup::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  position: absolute;
+  background: #e5e7eb;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.morePopup a {
+  padding: 10px 0;
+  display: block;
+  font-size: 12px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.morePopup button {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
 }
