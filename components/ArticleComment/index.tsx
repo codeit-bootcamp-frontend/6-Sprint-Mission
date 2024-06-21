@@ -1,44 +1,31 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useState, useRef, useEffect } from "react";
 import styles from "@/styles/ArticleComment.module.css";
 import { CommentResponse } from "@/lib/apis/getComment.api";
 import Image from "next/image";
-import formatTimeAgo from "@/utils/formatTimeAgo";
 import Link from "next/link";
 import { commentRegisterValidation } from "@/utils/validations";
 import { postComment } from "@/lib/apis/postComment.api";
 import { FormDataResponse } from "@/lib/apis/postComment.api";
 import { useRouter } from "next/router";
-
-function CommentList({ content, createdAt, writer }: CommentResponse) {
-  return (
-    <div className={styles["comment-container"]}>
-      <div className={styles["comment-container__top"]}>
-        <p className={styles["comment-content"]}>{content}</p>
-        <button className={styles["comment-edit-btn"]}>
-          <Image src="/images/Articles/hamburger-icon.svg" alt="게시글 수정 버튼" width={24} height={24} />
-        </button>
-      </div>
-      <div className={styles["comment-container__bottom"]}>
-        <Image src="/images/Articles/profile.png" alt="댓글 작성자 프로필 이미지" width={32} height={32}></Image>
-        <div className={styles["comment-writer__info"]}>
-          <span className={styles["comment-writer__nickname"]}>{writer.nickname}</span>
-          <span className={styles["comment-writer__time"]}>{formatTimeAgo(createdAt)}</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import CommentList from "./CommentList";
 
 interface Props {
   comments: CommentResponse[];
   setNewComment: (value: CommentResponse) => void;
+  cursor: number | null;
+  getComments: (value: number | null) => void;
+  loading: boolean;
 }
 
-function ArticleComment({ comments, setNewComment }: Props) {
+function ArticleComment({ comments, setNewComment, cursor, getComments, loading }: Props) {
   const [isButtonDisabled, setisButtonDisabled] = useState(true);
   const [comment, setComment] = useState("");
   const router = useRouter();
   const id = router.query.id;
+
+  const loadingRef = useRef(null);
+  const interesting = useIntersectionObserver(loadingRef);
 
   const handleTextarea = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = e.target;
@@ -69,6 +56,12 @@ function ArticleComment({ comments, setNewComment }: Props) {
       }
     }
   };
+
+  useEffect(() => {
+    if (interesting && cursor !== null) {
+      getComments(cursor);
+    }
+  }, [interesting]);
 
   return (
     <div className={styles["comment-wrapper"]}>
@@ -103,6 +96,19 @@ function ArticleComment({ comments, setNewComment }: Props) {
           height={195}
         />
       )}
+      <div ref={loadingRef}>
+        {loading && (
+          <div className={styles["comment-loading-container"]}>
+            <Image
+              className={styles["comment-loading-spinner"]}
+              src="/images/Articles/spinner.svg"
+              alt="댓글 로딩 아이콘"
+              width={48}
+              height={48}
+            ></Image>
+          </div>
+        )}
+      </div>
       <Link href="/boards" className={styles["go-back-btn"]}>
         목록으로 돌아가기
         <Image src="/images/Articles/go-back-icon.svg" alt="목록으로 돌아가기 버튼 아이콘" width={24} height={24} />

@@ -1,5 +1,8 @@
-import instance from "@/lib/axios";
+import instance from "@/lib/instance";
 import { AxiosResponse } from "axios";
+
+const PAGE_SIZE = 5;
+const PAGE = 1;
 
 export type ArticleResponse = {
   id: number;
@@ -29,7 +32,7 @@ export interface OrderQuery {
 }
 
 // 게시글 목록 받아오는 API
-export async function getArticles({ orderBy = "recent", keyword = "", page = "1" }: OrderQuery) {
+export async function getArticles({ orderBy = "recent", keyword = "", page = PAGE.toString() }: OrderQuery) {
   const formattedOrderBy = Array.isArray(orderBy) ? orderBy[0] : orderBy;
   const formattedKeyword = Array.isArray(keyword) ? keyword[0] : keyword;
   const formattedPage = Array.isArray(page) ? page[0] : page;
@@ -37,7 +40,7 @@ export async function getArticles({ orderBy = "recent", keyword = "", page = "1"
   const params = new URLSearchParams({
     orderBy: formattedOrderBy,
     keyword: formattedKeyword,
-    pageSize: "5",
+    pageSize: PAGE_SIZE.toString(),
     page: formattedPage,
   });
   try {
@@ -63,7 +66,7 @@ export async function getArticle(id: string | string[] | undefined) {
 // 베스트 게시글 목록 받아오는 API
 export async function getBestArticles(pageSize: number) {
   const params = new URLSearchParams({
-    page: "1",
+    page: PAGE.toString(),
     pageSize: pageSize.toString(),
     orderBy: "like",
   });

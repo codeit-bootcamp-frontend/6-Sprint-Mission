@@ -1,4 +1,4 @@
-import instance from "@/lib/axios";
+import instance from "@/lib/instance";
 import { AxiosResponse } from "axios";
 import { WriterResponse } from "./getArticle.api";
 
@@ -20,9 +20,11 @@ export type commentWriterResponse = {
 } & WriterResponse;
 
 // 게시글 댓글 목록 받아오는 API
-export async function getArticleComments(id: string | string[] | undefined, limit: 10) {
+export async function getArticleComments(id: string | string[] | undefined, limit: 10, cursor: number | null) {
   try {
-    const response: AxiosResponse<CommentsResponse> = await instance.get(`/articles/${id}/comments?limit=${limit}`);
+    const response: AxiosResponse<CommentsResponse> = await instance.get(
+      `/articles/${id}/comments?limit=${limit}&cursor=${cursor}`
+    );
     return response.data;
   } catch (e) {
     console.error(`error : ${e}`);

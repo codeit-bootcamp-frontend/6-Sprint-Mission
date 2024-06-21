@@ -8,7 +8,7 @@ import { GetStaticPropsContext } from "next";
 import { getArticles, getBestArticles, ArticleResponse, OrderQuery } from "@/lib/apis/getArticle.api";
 import useMediaQuery from "@/hooks/useMatchMedia";
 import Link from "next/link";
-import PageButton from "@/components/PageButton";
+import PageButton from "@/components/Pagination";
 
 export interface QueryOption {
   orderBy?: string | string[];

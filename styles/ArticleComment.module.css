@@ -116,6 +116,26 @@
   color: var(--gray400);
 }
 
+.comment-loading-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.comment-loading-spinner {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
+}
+
 .go-back-btn {
   padding: 12px 51px;
   border-radius: 40px;
