@@ -29,7 +29,7 @@ export default function SigninForm() {
       const accessToken = res.data.accessToken;
       localStorage.setItem("accessToken", accessToken);
       alert("로그인 되셨습니다!");
-      router.push("/boards");
+      router.push("/");
     } catch (error) {
       console.error(error);
       alert("로그인에 실패하셨습니다.");

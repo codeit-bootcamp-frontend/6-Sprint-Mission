@@ -1,8 +1,8 @@
-import BestBadge from "@/public/bestbadge.svg";
+import BestBadge from "@/public/img/img_bestbadge.svg";
 import { ArticleType, ArticleProps } from "@/types/type";
 import Image from "next/image";
 import styles from "@/styles/BestArticle.module.css";
-import heart from "@/public/heart.svg";
+import heart from "@/public/icon/ic_heart.svg";
 import BestArticleList from "./BestArticleList";
 import Link from "next/link";
 

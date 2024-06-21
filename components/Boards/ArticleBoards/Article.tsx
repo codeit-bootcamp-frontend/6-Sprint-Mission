@@ -1,7 +1,7 @@
 import { ArticleType, ArticleProps } from "@/types/type";
 import Image from "next/image";
-import profileimg from "@/public/userprofile.svg";
-import heart from "@/public/heart.svg";
+import profileimg from "@/public/user/userprofile.svg";
+import heart from "@/public/icon/ic_heart.svg";
 import styles from "@/styles/Article.module.css";
 import Link from "next/link";
 

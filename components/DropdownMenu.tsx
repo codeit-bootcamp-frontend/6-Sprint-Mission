@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import styles from "@/styles/DropdownMenu.module.css";
 import Image from "next/image";
-import arrowdown from "@/public/arrowdown.svg";
-import sort from "@/public/sort.svg";
-
-interface DropDownProps {
-  orderBySort: (orderby: string) => void;
-}
-
-type SelectedOption = "recent" | "like";
+import arrowdown from "@/public/icon/ic_arrowdown.svg";
+import sort from "@/public/icon/ic_sort.svg";
+import { DropDownProps, SelectedOption } from "@/types/type";
 
 export default function DropdownMenu({ orderBySort }: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +14,12 @@ export default function DropdownMenu({ orderBySort }: DropDownProps) {
     setIsOpen(!isOpen);
   };
 
-  const handleOptionClick = (value: "recent" | "like") => {
+  const handleOptionClick = (value: SelectedOption) => {
     setSelectedOption(value);
     orderBySort(value);
   };
 
-  const getOptionText = (option: "recent" | "like"): string => {
+  const getOptionText = (option: SelectedOption): string => {
     return option === "recent" ? "최신순" : "좋아요순";
   };
 

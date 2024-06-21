@@ -38,7 +38,6 @@ export default function SignupForm() {
     }
 
     try {
-      console.log(email, nickname, password, passwordConfirm);
       await axios.post("auth/signUp", {
         email: email,
         nickname: nickname,

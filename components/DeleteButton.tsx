@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
-import ic_x from "@/public/ic_x.svg";
+import ic_x from "@/public/icon/ic_x.svg";
 
 interface DeleteButtonProps {
   onClick: () => void;

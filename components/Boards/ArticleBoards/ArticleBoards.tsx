@@ -3,7 +3,7 @@ import { ArticleType } from "@/types/type";
 import DropdownMenu from "@/components/DropdownMenu";
 import ArticleList from "./ArticleList";
 import styles from "@/styles/ArticleBoards.module.css";
-import search from "@/public/search.svg";
+import search from "@/public/icon/ic_search.svg";
 import Image from "next/image";
 
 import { getArticle } from "@/api/api";

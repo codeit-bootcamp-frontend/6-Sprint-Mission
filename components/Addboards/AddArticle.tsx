@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageUpload from "../ImageUpload";
 import InputItem from "../InputItem";
 import styles from "@/styles/AddArticle.module.css";
-import { postArticle, postImageUrl } from "@/api/api";
+import { createArticle, createImageUrl } from "@/api/api";
 import { ArticleFormData } from "@/types/type";
 
 export default function AddArticle() {
@@ -28,9 +28,8 @@ export default function AddArticle() {
       formData.append("image", image);
 
       try {
-        // postImageUrl 호출 시, 이미지 데이터를 FormData로 전달
-        const response = await postImageUrl(formData, accessToken);
-        console.log(response);
+        // createImageUrl 호출 시, 이미지 데이터를 FormData로 전달
+        const response = await createImageUrl(formData, accessToken);
         imageUrl = response.url;
       } catch (error) {
         console.error("이미지 업로드 실패", error);
@@ -46,13 +45,11 @@ export default function AddArticle() {
     };
 
     try {
-      const response = await postArticle(articleData, accessToken);
-      console.log(response);
+      const response = await createArticle(articleData, accessToken);
       alert("게시글이 성공적으로 등록되었습니다.");
     } catch (error) {
       alert("게시글 등록에 실패했습니다.");
       console.error(error);
-      console.log(articleData, accessToken);
     }
   };
 

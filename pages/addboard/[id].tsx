@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from "react";
 import axios from "@/lib/axios";
 import { useRouter } from "next/router";
-import { ArticleComments, ArticleType } from "@/types/type";
+import { ArticleType } from "@/types/type";
+import type { ArticleComment } from "@/types/type";
 import Comment from "@/components/Addboards/Comment";
 import ArticleDetails from "@/components/Addboards/ArticleDetails";
 import styled from "styled-components";
 import InputItem from "@/components/InputItem";
 import Link from "next/link";
-import ic_back from "@/public/ic_back.svg";
+import ic_back from "@/public/icon/ic_back.svg";
 import Image from "next/image";
-import nonecomments from "@/public/nonecomments.svg";
+import nonecomments from "@/public/img/img_nonecomments.svg";
 
 export default function ArticleComment() {
   const router = useRouter();
   const { id: ArticleId } = router.query;
 
   const [accessToken, setAccessToken] = useState("");
-  const [articleComment, setArticleComment] = useState<ArticleComments[]>([]);
+  const [articleComment, setArticleComment] = useState<ArticleComment[]>([]);
   const [articleDetails, setArticleDetails] = useState<ArticleType | null>(
     null
   );
@@ -35,7 +36,6 @@ export default function ArticleComment() {
       try {
         const res = await axios.get(`articles/${ArticleId}/comments?limit=999`);
         setArticleComment(res.data.list);
-        console.log(res.data);
       } catch (error) {
         console.error(error);
       }
@@ -50,7 +50,6 @@ export default function ArticleComment() {
       try {
         const res = await axios.get(`articles/${ArticleId}`);
         setArticleDetails(res.data);
-        console.log(res.data);
       } catch (error) {
         console.error(error);
       }
@@ -61,7 +60,6 @@ export default function ArticleComment() {
 
   const postComment = async () => {
     if (!ArticleId || !comment) return;
-    console.log(comment);
     try {
       const res = await axios.post(
         `/articles/${ArticleId}/comments`,
@@ -75,12 +73,12 @@ export default function ArticleComment() {
         }
       );
       if (res.status === 200 || res.status === 201) {
-        console.log("댓글이 성공적으로 작성되었습니다.", res.data);
+        alert("댓글이 성공적으로 작성되었습니다.");
         setArticleComment((prevComments) => [res.data, ...prevComments]);
         setComment("");
       }
     } catch (e) {
-      console.error("댓글 작성에 실패했습니다.", e);
+      alert("댓글 작성에 실패했습니다.");
     }
   };
 

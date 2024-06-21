@@ -19,7 +19,7 @@ export interface ArticleProps {
   article: ArticleType;
 }
 
-export interface ArticleComments {
+export interface ArticleComment {
   writer: WriterType;
   updatedAt: string;
   createdAt: string;
@@ -28,7 +28,7 @@ export interface ArticleComments {
 }
 
 export interface CommentProps {
-  comment: ArticleComments;
+  comment: ArticleComment;
 }
 
 export interface ArticleFormData {
@@ -36,3 +36,9 @@ export interface ArticleFormData {
   content: string;
   image?: string | File | null;
 }
+
+export interface DropDownProps {
+  orderBySort: (orderby: string) => void;
+}
+
+export type SelectedOption = "recent" | "like";

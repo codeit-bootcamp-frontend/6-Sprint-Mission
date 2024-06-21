@@ -56,6 +56,30 @@
   padding: 16px;
 }
 
+.HeaderLogin {
+  cursor: pointer;
+  background-color: #3692ff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 128px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.HeaderLogin a {
+  color: #ffffff;
+}
+
+.panda-login:hover {
+  background-color: #1967d6;
+  transition: 0.7s;
+}
+
 @media (max-width: 767px) {
   .Header-logo-mob {
     display: flex;

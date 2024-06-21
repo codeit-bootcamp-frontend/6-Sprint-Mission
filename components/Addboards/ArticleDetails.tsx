@@ -2,9 +2,9 @@ import React from "react";
 import { ArticleType } from "@/types/type";
 import Image from "next/image";
 import styles from "@/styles/ArticleDetails.module.css";
-import ic_kebab from "@/public/ic_kebab.svg";
-import profileimg from "@/public/userprofile.svg";
-import heart from "@/public/heart.svg";
+import ic_kebab from "@/public/icon/ic_kebab.svg";
+import profileimg from "@/public/user/userprofile.svg";
+import ic_heart from "@/public/icon/ic_heart.svg";
 
 interface ArticleDetailsProps {
   details: ArticleType;
@@ -45,7 +45,7 @@ export default function ArticleDetails({ details }: ArticleDetailsProps) {
           <div className={styles.likeSection}>
             <Image
               className={styles.likeIcon}
-              src={heart}
+              src={ic_heart}
               alt="게시글 좋아요 아이콘"
               width={24}
               height={24}

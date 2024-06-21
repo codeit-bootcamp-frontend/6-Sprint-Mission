@@ -1,0 +1,306 @@
+.pandaSpan {
+  font-weight: 700;
+}
+
+.pandaP {
+  font-weight: 500;
+}
+
+.pandaA {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pandaBody {
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 24px;
+}
+
+.pandaMain {
+  margin-top: 70px;
+}
+
+.pandaNav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  padding: 10px 200px 10px;
+}
+
+.pandaLogin {
+  cursor: pointer;
+  background-color: var(--brandblue);
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 128px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.pandaBanner {
+  height: 540px;
+  background-color: var(--maincolor);
+}
+
+.pandaBannerSpan {
+  display: block;
+  color: #374151;
+}
+
+.pandaBannertext {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  height: 540px;
+  line-height: 56px;
+}
+
+.pandaBannerDiv {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.buypanda {
+  margin-top: auto;
+  max-width: 996px;
+  max-height: 446px;
+}
+
+.hellopanda {
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: 80% bottom;
+}
+
+.itemButton {
+  cursor: pointer;
+  display: inline;
+  background-color: var(--brandblue);
+  color: #ffffff;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 16px 124px;
+  margin-top: 32px;
+}
+
+.pandaLogin:hover,
+.itemButton:hover {
+  background-color: #1967d6;
+  transition: 0.7s;
+}
+
+.panderMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 138px 0 138px 0;
+}
+
+.panderImg {
+  flex: 1 0 50%;
+  max-width: 588px;
+  height: 444px;
+  padding: 0px auto 0px auto;
+  border-radius: 12px;
+}
+
+.panderInfo {
+  width: 588px;
+  margin-left: 64px;
+}
+
+.panderInfoCenter {
+  width: 588px;
+  text-align: right;
+  margin-right: 64px;
+}
+
+.infoBadge {
+  color: var(--brandblue);
+  margin-bottom: 12px;
+}
+
+.infoTitle {
+  margin: 12px 0px 24px 0px;
+  line-height: 56px;
+}
+
+.infoTitleSpan {
+  display: block;
+}
+
+.pandaFooter {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  padding: 32px 200px 108px 200px;
+  color: #cfcfcf;
+  gap: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.footerLink {
+  display: flex;
+  gap: 30px;
+}
+
+.footerLink a {
+  color: #cfcfcf;
+  text-decoration: none;
+}
+
+.footerSns {
+  display: flex;
+  justify-content: space-between;
+  width: 116px;
+}
+
+.footerSnsImg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Tablet : 768px ~ 1199px */
+
+@media (max-width: 1199px) {
+  .pandaNav {
+    padding: 10px 24px;
+  }
+
+  .pandaBanner {
+    height: 771px;
+    background-color: var(--maincolor);
+    padding: 0;
+    margin-top: 70px;
+  }
+
+  .pandaBannerDiv {
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 84px 116px;
+    line-height: 56px;
+  }
+
+  .buypanda,
+  .hellopanda {
+    background-size: 100%;
+    background-position: 50% bottom;
+  }
+
+  .panderMain {
+    flex-direction: column;
+    margin: 24px;
+  }
+
+  .panderMain:nth-child(3) div {
+    order: 2;
+    text-align: left;
+  }
+
+  .panderImg {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .panderInfo {
+    text-align: left;
+    margin: 0 0 64px 0;
+    width: 100%;
+  }
+
+  .panderInfoCenter {
+    width: 100%;
+    margin: 0 0 64px 0;
+  }
+
+  .panderInfoSpan {
+    margin-bottom: 12px;
+  }
+
+  .pandaBannerSpan {
+    display: inline;
+  }
+
+  .infoTitle {
+    margin-bottom: 20px;
+  }
+
+  .infoTitleSpan {
+    display: inline;
+  }
+
+  .pandaFooter {
+    padding: 32px 104px 108px 104px;
+  }
+}
+
+/* Mobile : 375px ~ 767px */
+
+@media (max-width: 767px) {
+  .pandaNav {
+    padding: 10px 16px;
+  }
+
+  .itemButton {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 14px 34px;
+  }
+
+  .pandaBanner {
+    height: 540px;
+  }
+
+  .pandaBannerDiv {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    height: 540px;
+    line-height: 56px;
+  }
+
+  .pandaBannerSpan {
+    display: block;
+    font-size: 32px;
+  }
+
+  .panderMain {
+    flex-direction: column;
+    margin: 52px 16px;
+  }
+
+  .pandaFooter {
+    position: relative;
+    padding: 32px;
+    height: 160px;
+  }
+
+  .footerCopyright {
+    position: absolute;
+    bottom: 32px;
+  }
+}

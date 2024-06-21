@@ -1,7 +1,7 @@
 import { CommentProps } from "@/types/type";
 import styles from "@/styles/Comment.module.css";
 import Image from "next/image";
-import userProfile from "@/public/userprofile.svg";
+import userProfile from "@/public/user/userprofile.svg";
 
 export default function Comment({ comment }: CommentProps) {
   return (

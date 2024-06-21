@@ -30,8 +30,8 @@ export async function getBestArticle(
   return articleList;
 }
 
-//postArticle 함수(게시글 작성)
-export async function postArticle(
+//createArticle 함수(게시글 작성)
+export async function createArticle(
   formData: ArticleFormData,
   accessToken: string | null
 ) {
@@ -48,8 +48,8 @@ export async function postArticle(
   }
 }
 
-//postImageUrl함수(서버에 이미지를 올리기 위한 사전작업)
-export async function postImageUrl(
+//createImageUrl함수(서버에 이미지를 올리기 위한 사전작업)
+export async function createImageUrl(
   image: FormData,
   accessToken: string | null
 ) {
