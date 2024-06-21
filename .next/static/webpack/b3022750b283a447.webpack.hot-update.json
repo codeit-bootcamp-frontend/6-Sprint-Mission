@@ -1,0 +1,1 @@
+{"c":["pages/addboard/[id]","webpack"],"r":["pages/boards"],"m":["./components/BoardItem.tsx","./components/DropDown.tsx","./components/SearchForm.tsx","./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=C%3A%5Ccodeit%5C6-Sprint-Mission%5Cpages%5Cboards.tsx&page=%2Fboards!","./pages/boards.tsx"]}
