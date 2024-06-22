@@ -4,7 +4,7 @@ import {
   loadTokenFromLocalStorage,
   saveTokenToLocalStorage,
 } from "@/utils/localStorageToken";
-import PostRefreshToken from "@/apis/auth/PostRefreshToken";
+import postRefreshToken from "./auth/postRefreshToken";
 
 interface InternalAxiosRequestConfig extends AxiosRequestConfig {
   _retry?: boolean;
@@ -45,7 +45,7 @@ axiosInstance.interceptors.response.use(
       const token = loadTokenFromLocalStorage();
       if (token?.refreshToken) {
         try {
-          const newToken = await PostRefreshToken(token.refreshToken);
+          const newToken = await postRefreshToken(token.refreshToken);
           saveTokenToLocalStorage(newToken);
           originalRequest.headers.Authorization = `Bearer ${newToken.accessToken}`;
           return axiosInstance(originalRequest);

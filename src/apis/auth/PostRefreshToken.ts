@@ -1,7 +1,7 @@
 import axiosInstance from "../axiosInstance";
 import { Token } from "@/types/api";
 
-const PostRefreshToken = async (refreshToken?: string): Promise<Token> => {
+const postRefreshToken = async (refreshToken?: string): Promise<Token> => {
   try {
     const { data } = await axiosInstance.post<Token>("/auth/refresh-token", {
       refreshToken: refreshToken,
@@ -13,4 +13,4 @@ const PostRefreshToken = async (refreshToken?: string): Promise<Token> => {
   }
 };
 
-export default PostRefreshToken;
+export default postRefreshToken;

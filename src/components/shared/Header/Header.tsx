@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 
 function Header() {
   const router = useRouter();
-  const [isToken, setIsToken] = useState<string | undefined>("");
+  const [isToken, setIsToken] = useState<string>();
 
   useEffect(() => {
     setIsToken(localStorage.getItem("accessToken")?.replace(/"/gi, ""));

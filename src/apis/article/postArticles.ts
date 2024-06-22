@@ -1,4 +1,3 @@
-import { Token } from "@/types/api";
 import axiosInstance from "../axiosInstance";
 import { PostData } from "@/components/addBoardComponents/ArticleForm";
 
@@ -13,7 +12,7 @@ const postArticles = async (
   const payload = image ? option : restOption;
 
   try {
-    await axiosInstance.post<any>("/articles", payload);
+    await axiosInstance.post<PostData>("/articles", payload);
   } catch (error) {
     console.error(`Failed to fetch data: ${error}`);
     throw error;
