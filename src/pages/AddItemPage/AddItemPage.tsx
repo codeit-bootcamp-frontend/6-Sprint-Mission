@@ -5,7 +5,7 @@ import TagClose from '../../assets/images/icons/tag_close.png'
 import '../../styles/global.css'
 
 function AddItemPage() {
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState<string[]>([]);
   const [values, setValues] = useState({
     productName: '',
     productItd: '',
@@ -14,34 +14,36 @@ function AddItemPage() {
     imgFile: null,
   })
 
-  const onKeyPress = e => {
-    if(tags.includes(e.target.value)) return;
-    if (e.target.value.length !== 0 && e.key === 'Enter') {
+  const onKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    if(tags.includes(target.value)) return;
+    if (target.value.length !== 0 && e.key === 'Enter') {
       setTags([
         ...tags,
-        e.target.value
+        target.value
       ])
     }
     values.tag = '';
   }
-  const DeleteTag = e => {
-    const newTags = tags.filter((item) => item !== e.target.id);
+  const DeleteTag = (e: React.MouseEvent<HTMLImageElement>) => {
+    const id = e.currentTarget.id;
+    const newTags = tags.filter((item) => item !== id);
     setTags(newTags);
   }
 
-  const handleChange = (name, value) => {
+  const handleChange = (name: string, value: any) => {
     setValues({
       ...values,
       [name] : value,
     })
   }
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     handleChange(name, value);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }
   const disabled = () => {

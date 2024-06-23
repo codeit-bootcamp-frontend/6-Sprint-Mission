@@ -1,7 +1,11 @@
 import React from "react";
 import "./DropdownList.css";
 
-function DropdownList({ onSortSelection }) {
+interface DropdownListProps {
+  onSortSelection: (sortType: string) => void;
+}
+
+function DropdownList({ onSortSelection }: DropdownListProps) {
   return (
     <div className="dropdownList">
       <div className="dropdownItem" onClick={() => onSortSelection("recent")}>

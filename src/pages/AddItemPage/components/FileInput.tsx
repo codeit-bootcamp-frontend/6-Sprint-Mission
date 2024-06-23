@@ -1,14 +1,21 @@
+import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import PlusImg from '../../../assets/images/icons/ic_plus.svg';
 import CloseBtn from '../../../assets/images/icons/close_btn.png'
 
-function FileInput({ name, value, onChange }) {
-  const [preview, setPreview] = useState();
-  const inputRef = useRef();
+interface FileInputProps {
+  name: string;
+  value: File | null;
+  onChange: (name: string, value: File | null) => void;
+}
 
-  const handleChange = (e) => {
-    const nextValue = e.target.files[0];
+function FileInput({ name, value, onChange }: FileInputProps) {
+  const [preview, setPreview] = useState<string | undefined>(undefined);
+  const inputRef = useRef<HTMLInputElement>(null); 
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const nextValue = e.target.files ? e.target.files[0] : null;
     onChange(name, nextValue);
   }
   const handleClearClick = () => {
@@ -26,7 +33,7 @@ function FileInput({ name, value, onChange }) {
     setPreview(nextPreview);
 
     return () => {
-      setPreview();
+      setPreview(undefined);
       URL.revokeObjectURL(nextPreview);
     }
   },[value])

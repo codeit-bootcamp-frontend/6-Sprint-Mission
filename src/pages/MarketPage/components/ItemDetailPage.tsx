@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import { getProductInformation } from "../../../api/itemApi";
 import { Link, useParams } from "react-router-dom";
@@ -9,18 +10,28 @@ import turn from '../../../assets/images/icons/ic_back.png'
 function ItemDetailPage() {
   const { itemId } = useParams();
   const [tags, setTags] = useState([]);
-  const [item, setItem] = useState({});
+  const [item, setItem] = useState({
+    images: '',
+    name: '',
+    price: 0,
+    description: '',
+    favoriteCount: 0,
+    tags: []
+  });
   const [text, setText] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e :React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
   };
 
   useEffect(() => {
     const ItemLoad = async () => {
-      const result = await getProductInformation(itemId);
-      setItem(result);
-      setTags(result.tags);
+      if (itemId) {
+        const numberItemId = Number(itemId);
+        const result = await getProductInformation(numberItemId);
+        setItem(result);
+        setTags(result.tags);
+      }
     };
     ItemLoad();
   }, [itemId]);

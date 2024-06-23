@@ -17,7 +17,7 @@ export async function getProducts(params = {}) {
   }
 }
 
-export async function getProductInformation(itemId) {
+export async function getProductInformation(itemId: number) {
   try {
     const response = await fetch(
       `${baseurl}/products/${itemId}`
@@ -33,7 +33,7 @@ export async function getProductInformation(itemId) {
   }
 }
 
-export async function getComments(itemId) {
+export async function getComments(itemId: number) {
   try {
     const response = await fetch(
       `${baseurl}/products/${itemId}/comments/?limit=100`

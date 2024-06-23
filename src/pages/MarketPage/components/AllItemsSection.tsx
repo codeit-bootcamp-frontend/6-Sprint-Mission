@@ -7,6 +7,22 @@ import { Link } from "react-router-dom";
 import DropdownList from "../../../components/UI/DropdownList";
 import PaginationBar from "../../../components/UI/PaginationBar";
 
+// Product 타입 정의
+interface Product {
+  id: number;
+  images: string[];
+  name: string;
+  price: number;
+  favoriteCount: number;
+}
+
+// getProducts 함수의 매개변수 타입 정의
+interface GetProductsParams {
+  orderBy: string;
+  page: number;
+  pageSize: number;
+}
+
 const getPageSize = () => {
   const width = window.innerWidth;
   if (width < 768) {
@@ -25,17 +41,17 @@ function AllItemsSection() {
   const [orderBy, setOrderBy] = useState("recent");
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(getPageSize());
-  const [itemList, setItemList] = useState([]);
+  const [itemList, setItemList] = useState<Product[]>([]);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const [totalPageNum, setTotalPageNum] = useState();
+  const [totalPageNum, setTotalPageNum] = useState<number>();
 
-  const fetchSortedData = async ({ orderBy, page, pageSize }) => {
+  const fetchSortedData = async ({ orderBy, page, pageSize }: GetProductsParams) => {
     const products = await getProducts({ orderBy, page, pageSize });
     setItemList(products.list);
     setTotalPageNum(Math.ceil(products.totalCount / pageSize));
   };
 
-  const handleSortSelection = (sortOption) => {
+  const handleSortSelection = (sortOption: string) => {
     setOrderBy(sortOption);
     setIsDropdownVisible(false);
   };
@@ -59,7 +75,7 @@ function AllItemsSection() {
     setIsDropdownVisible(!isDropdownVisible);
   };
 
-  const onPageChange = (pageNumber) => {
+  const onPageChange = (pageNumber: number) => {
     setPage(pageNumber);
   };
 
@@ -101,7 +117,7 @@ function AllItemsSection() {
 
       <div className="paginationBarWrapper">
         <PaginationBar
-          totalPageNum={totalPageNum}
+          totalPageNum={totalPageNum || 0} 
           activePageNum={page}
           onPageChange={onPageChange}
         />

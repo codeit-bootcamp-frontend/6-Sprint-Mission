@@ -2,7 +2,19 @@ import React from "react";
 import { ReactComponent as HeartIcon } from "../../../assets/images/icons/ic_heart.svg";
 import { Link } from 'react-router-dom';
 
-function ItemCard({ item }) {
+interface Item {
+  id: number;
+  images: string[];
+  name: string;
+  price: number;
+  favoriteCount: number;
+}
+
+interface ItemCardProps {
+  item: Item;
+}
+
+function ItemCard({ item }: ItemCardProps) {
   return (
     <Link to={`${item.id}`}>
       <div className="itemCard">

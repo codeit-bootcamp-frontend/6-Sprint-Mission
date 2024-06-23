@@ -1,28 +1,41 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getComments } from "../../../api/itemApi";
 import EmptyLogo from "../../../assets/images/logo/commentEmpty.png";
 import styled from "styled-components";
 
+interface Writer {
+  image: string;
+  nickname: string;
+}
+
+interface Comment {
+  id: number;
+  content: string;
+  writer: Writer;
+  updatedAt: string;
+}
+
 function ItemComments() {
-  const [comments, setComments] = useState();
+  const [comments, setComments] = useState<Comment[]>([]);
   const { itemId } = useParams();
-  const CommentsLoad = async itemId => {
+  const CommentsLoad = async (itemId: number) => {
     const result = await getComments(itemId);
     setComments(result.list);
   };
 
   useEffect(() => {
     if (itemId) {
-      CommentsLoad(itemId);
+      CommentsLoad(Number(itemId));
     }
   }, [itemId]);
 
   // timeAgo 나중에 따로 파일로 관리 할 예정입니다...ㅜ
-  const timeAgo = (date) => {
+  const timeAgo = (date: string) => {
     const now = new Date();
     const updatedAt = new Date(date);
-    const difference = now - updatedAt;
+    const difference =  now.getTime() - updatedAt.getTime();
 
     const seconds = Math.floor(difference / 1000);
     const minutes = Math.floor(seconds / 60);
@@ -46,7 +59,7 @@ function ItemComments() {
         <CommentsArea>
           {comments.map(item => (
             <UserCommentsArea key={item.id}>
-              <Comment>{item.content}</Comment>
+              <CommentContent>{item.content}</CommentContent>
               <AskUserArea>
                 <UserImg src={item.writer.image} alt="userimage" />
                 <UserInfo>
@@ -98,7 +111,7 @@ const UserCommentsArea = styled.div`
   padding-bottom: 24px;
   border-bottom: 1px solid #e5e7eb;
 `;
-const Comment = styled.div`
+const CommentContent = styled.div`
   font-size: 16px;
   font-weight: 400;
   line-height: 22.4px;

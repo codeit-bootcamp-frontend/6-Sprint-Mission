@@ -1,4 +1,4 @@
-
+import React from 'react';
 import Logo from "../../assets/images/logo/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
@@ -11,7 +11,7 @@ const UserLogo = styled.div`
 `
 
 // react-router-dom의 NavLink를 이용하면 활성화된 네비게이션 항목을 하이라이트해줄 수 있어요!
-function getLinkStyle({ isActive }) {
+function getLinkStyle({ isActive }: { isActive: boolean }) {
   return { color: isActive ? "var(--blue)" : undefined };
 }
 

@@ -2,6 +2,21 @@ import React, { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import { getProducts } from "../../../api/itemApi";
 
+// Product 타입 정의
+interface Product {
+  id: number;
+  images: string[];
+  name: string;
+  price: number;
+  favoriteCount: number;
+}
+
+// getProducts 함수의 매개변수 타입 정의
+interface GetProductsParams {
+  orderBy: string;
+  pageSize: number;
+}
+
 const getPageSize = () => {
   const width = window.innerWidth;
   if (width < 768) {
@@ -17,10 +32,10 @@ const getPageSize = () => {
 };
 
 function BestItemsSection() {
-  const [itemList, setItemList] = useState([]);
+  const [itemList, setItemList] = useState<Product[]>([]);
   const [pageSize, setPageSize] = useState(getPageSize());
 
-  const fetchSortedData = async ({ orderBy, pageSize }) => {
+  const fetchSortedData = async ({ orderBy, pageSize }: GetProductsParams) => {
     const products = await getProducts({ orderBy, pageSize });
     setItemList(products.list);
   };
