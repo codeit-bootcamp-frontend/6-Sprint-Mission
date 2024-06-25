@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios, { GetArticlesQuery } from "@/lib/axios";
+import axios from "@/lib/axios";
 import BoardList from "@/src/components/page/Boards/BoardList";
 import Title from "@/src/components/Title";
-import LinkButton from "@/src/components/LinkButton";
+import LinkButton from "@/src/components/button/LinkButton";
 import SearchForm from "@/src/components/SearchForm";
 import BestBoardList from "@/src/components/page/Boards/BestBoardList";
 import Dropdown from "@/src/components/Dropdown";
@@ -33,15 +33,22 @@ interface IBoardsProps {
   initialArticles: ArticleArrayType["list"];
 }
 
-const setBestPageSize = (category: string) => {
-  if (category === "S") return 1;
-  else if (category === "M") return 2;
-  else if (category === "L") return 3;
+export interface GetArticlesQuery {
+  page?: number;
+  pageSize?: number;
+  orderBy: "recent" | "like";
+  keyword?: string;
+}
+
+const getBestPageSize = (breakpoint: string) => {
+  if (breakpoint === "S") return 1;
+  else if (breakpoint === "M") return 2;
+  else if (breakpoint === "L") return 3;
   else return 0;
 };
 
 const Boards = ({ initialBestArticles, initialArticles }: IBoardsProps) => {
-  const category = useWindowSize();
+  const breakpoint = useWindowSize();
 
   // state
   const [articles, setArticles] =
@@ -75,9 +82,9 @@ const Boards = ({ initialBestArticles, initialArticles }: IBoardsProps) => {
   useEffect(() => {
     setBestOption((prev) => ({
       ...prev,
-      pageSize: setBestPageSize(category),
+      pageSize: getBestPageSize(breakpoint),
     }));
-  }, [category]);
+  }, [breakpoint]);
 
   useEffect(() => {
     const getBestArticles = async () => {
@@ -170,10 +177,10 @@ export const getServerSideProps = async () => {
   };
 
   try {
-    const bestArticlesRes = await axios.get("/articles", {
-      params: bestOption,
-    });
-    const articlesRes = await axios.get("/articles", { params: option });
+    const [bestArticlesRes, articlesRes] = await Promise.all([
+      axios.get("/articles", { params: bestOption }),
+      axios.get("/articles", { params: option }),
+    ]);
 
     const initialBestArticles = bestArticlesRes.data.list;
     const initialArticles = articlesRes.data.list;

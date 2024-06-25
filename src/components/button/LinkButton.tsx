@@ -1,13 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import type { UrlObject } from "url";
-import type { ChildrenProps } from "@/src/types/common.interface";
 
-interface LinkButtonProps extends ChildrenProps {
+interface LinkButtonProps {
   href: string | UrlObject;
 }
 
-const LinkButton = ({ children, href }: LinkButtonProps) => {
+const LinkButton = ({ children, href }: PropsWithChildren<LinkButtonProps>) => {
   return (
     <Link
       href={href}

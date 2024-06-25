@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { OrderByListType } from "../types/common.interface";
-import { GetArticlesQuery } from "@/lib/axios";
+import { GetArticlesQuery } from "@/pages/boards";
 import toggleIcon from "@/public/icons/toggle_icon.svg";
 
 type PropsType = {
@@ -9,8 +9,7 @@ type PropsType = {
   setOption: React.Dispatch<React.SetStateAction<GetArticlesQuery>>;
 };
 
-const Dropdown = (props: PropsType) => {
-  const { list, setOption } = props;
+const Dropdown = ({ list, setOption }: PropsType) => {
   const [view, setView] = useState(false);
   const [selected, setSelected] = useState(list[0].text);
 

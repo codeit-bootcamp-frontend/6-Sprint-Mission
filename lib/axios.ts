@@ -1,12 +1,5 @@
 import axios from "axios";
 
-export interface GetArticlesQuery {
-  page?: number;
-  pageSize?: number;
-  orderBy: "recent" | "like";
-  keyword?: string;
-}
-
 const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 if (!baseURL) {

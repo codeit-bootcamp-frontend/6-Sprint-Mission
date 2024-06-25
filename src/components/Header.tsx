@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import LinkButton from "./LinkButton";
-import { ChildrenProps } from "@/src/types/common.interface";
+import LinkButton from "./button/LinkButton";
 import pandaLogo from "@/public/icons/panda_face.svg";
+import { PropsWithChildren } from "react";
 
-interface LinkType extends ChildrenProps {
+interface LinkType {
   href: string;
   activePaths?: string[];
 }
@@ -15,7 +15,11 @@ interface LinkType extends ChildrenProps {
  * @param activePaths 활성화되어야하는 경로 배열
  * @returns Link 태그 반환
  */
-const CustomLink = ({ href, activePaths, children }: LinkType) => {
+const CustomLink = ({
+  href,
+  activePaths,
+  children,
+}: PropsWithChildren<LinkType>) => {
   const router = useRouter();
   const isActive = activePaths?.includes(router.pathname);
 

@@ -1,7 +1,6 @@
-import React from "react";
-import type { ChildrenProps } from "@/src/types/common.interface";
+import React, { PropsWithChildren } from "react";
 
-const Title = ({ children }: ChildrenProps) => {
+const Title = ({ children }: PropsWithChildren) => {
   return (
     <h3 className="text-xl leading-[1.4] font-bold text-gray-900">
       {children}
