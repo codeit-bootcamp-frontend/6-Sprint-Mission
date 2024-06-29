@@ -1,0 +1,40 @@
+.Label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.InputStyle {
+  box-sizing: border-box;
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+}
+
+.InputStyle ::placeholder {
+  color: #9ca3af;
+}
+.InputStyle :focus {
+  outline-color: #3692ff;
+}
+
+.textStyle {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 200px;
+  resize: none;
+}

@@ -1,0 +1,75 @@
+.Title {
+  color: #111827;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal;
+}
+
+.Product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProductBar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.searchBar {
+  width: 325px;
+  height: 42px;
+  padding-bottom: 16px;
+  display: flex;
+  background-color: var(--gray-100);
+  border-radius: 12px;
+  padding: 9px 16px;
+  flex: 1;
+  align-items: center;
+}
+.searchImg {
+  position: absolute;
+}
+.searchInput {
+  width: 100%;
+  height: 42px;
+  border: none;
+  flex: 1;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  margin-left: -5px;
+  padding-left: 30px;
+}
+
+.loginLink {
+  background-color: #3692ff;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 8px;
+  width: 132px;
+  height: 42px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Item {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .Item {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .Item {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 24px;
+  }
+}

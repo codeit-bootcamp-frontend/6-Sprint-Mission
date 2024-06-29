@@ -1,0 +1,31 @@
+.ImageUploadContainer {
+  display: flex;
+  gap: 8px;
+}
+.ImgContainer {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+}
+
+.ImgUpload {
+  display: none;
+}
+
+.imagePreviewUrl {
+  background-image: url(imagePreviewUrl);
+  background-size: cover;
+  background-position: center;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+}

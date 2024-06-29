@@ -1,25 +1,32 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/pages/Home/Home";
-import Community from "./components/pages/Community/Community";
-import ItemPage from "./components/pages/ItemPage/ItemPage";
-import AddItemPage from "./components/pages/AddItemPage/AddItemPage";
-import Login from "./components/pages/Login/Login";
-import NotFound from "./components/pages/NotFound";
-
+import Header from "./components/context/Header";
+import MainPage from "./pages/MainPage";
+import Login from "./pages/Login";
+import ItemsPage from "./pages/ItemsPage";
+import ItemsIdPage from "./pages/ItemsIdPage";
+import Community from "./pages/Community";
+import ItemsAddPage from "./pages/ItemsAddPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="community" element={<Community />} />
-        <Route exact path="items" element={<ItemPage />} />
-        <Route exact path="login" element={<Login/>} />
-        <Route exact path="addItem" element={<AddItemPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/">
+          <Route index element={<MainPage />} />
+          <Route path="login" element={<Login />} />
+          <Route path="items">
+            <Route index element={<ItemsPage />} />
+            <Route path=":id" element={<ItemsIdPage />} />
+          </Route>
+          <Route path="community" element={<Community />} />
+          <Route path="additems" element={<ItemsAddPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
-)}
+  );
+}
 
 export default App;
-

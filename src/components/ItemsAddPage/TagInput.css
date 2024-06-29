@@ -1,0 +1,28 @@
+.tagsSection {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.tagsLayOut {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+  color: #1f2937;
+  padding: 14px 14px 14px 16px;
+  border-radius: 999px;
+  min-width: 100px;
+}
+
+.TagContents {
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 8px;
+  max-width: calc(100% - 28px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

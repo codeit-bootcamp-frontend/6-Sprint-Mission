@@ -1,0 +1,42 @@
+.Container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.addItemTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.addItemButton {
+  width: 88px;
+  height: 42px;
+  background-color: #3692ff;
+  color: #ffffff;
+  padding: 11.5px 23px;
+  border: 0px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addItemButton :hover {
+  background-color: #1967d6;
+}
+
+.addItemButton :focus {
+  background-color: #1251aa;
+}
+.addItemButton :disabled {
+  background-color: #9ca3af;
+  cursor: default;
+  pointer-events: none;
+}

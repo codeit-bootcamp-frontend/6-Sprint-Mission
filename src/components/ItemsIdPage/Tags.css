@@ -1,0 +1,13 @@
+.tagsDisplay {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sortTag {
+  background-color: #f9fafb;
+  color: #1f2937;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 16px;
+}

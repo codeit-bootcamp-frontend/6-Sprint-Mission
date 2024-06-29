@@ -1,14 +1,17 @@
 .Header {
   position: fixed;
-  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   height: 70px;
   display: flex;
+  height: var(--header-height);
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 200px;
   background-color: #ffffff;
   border-bottom: 1px solid #dfdfdf;
-
+  z-index: 999;
 }
 
 .HeaderLeft {
@@ -17,13 +20,24 @@
 }
 
 .HeaderLink {
-  margin-right : 15px;
+  display: flex;
+  list-style: none;
 }
 
+.HeaderLinkInner {
+  width: 109px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration-line: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+}
 
 .HeaderLogo {
   margin-right: 16px;
-  
 }
 
 .loginButton {
@@ -32,3 +46,19 @@
   border-radius: 8px;
   padding: 11.5px 23px;
 }
+
+/* 태블릿일때 */
+@media (min-width: 768px)and ( max-width: 1200px) {
+  .Header {
+    padding: 0 100px;
+  }
+}
+
+
+/* 모바일 일때 */
+@media (max-width: 767px) {
+  .Header {
+    padding: 0px;
+  }
+}
+

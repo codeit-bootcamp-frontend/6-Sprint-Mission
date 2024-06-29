@@ -1,0 +1,55 @@
+.CardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.itemsContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.QuestionContent {
+  height: 22px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin: 0;
+}
+
+.SeeMoreButton {
+  border: 0;
+  background-color: white;
+  display: none;
+}
+
+
+.QuestionProfile {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.QuestionProfileImg {
+  width: 40px;
+  height: 40px;
+}
+
+.Username {
+  font-size: 14px;
+}
+
+.QuestionTimestamp {
+  font-size: 14px;
+  margin: 0;
+}
+
+.hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb ;
+  margin : 16px 0 ;
+}

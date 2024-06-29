@@ -1,14 +1,15 @@
 import React from "react";
-import logo from "../img/logo.svg";
-import { Link, NavLink } from "react-router-dom";
-import './Header.css';
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import logo from "../../assets/img/logo.svg";
+import "./Header.css";
 
 function getLinkStyle({ isActive }) {
   return { color: isActive ? "blue" : undefined };
 }
 
+function Header(props) {
+  const nav = useNavigate()
 
-const Header = () => {
   return (
     <div className="Header">
       <div className="HeaderLeft">
@@ -16,19 +17,21 @@ const Header = () => {
           <img src={logo} alt="판다마켓 로고" />
         </Link>
         <div className="HeaderLink">
-          <NavLink to="/community" style={getLinkStyle}>
+          <NavLink to="/community" className="HeaderLinkInner"style={getLinkStyle}>
             자유게시판
           </NavLink>
-          <NavLink to="/items" style={getLinkStyle}>
+          <NavLink to="/items" className="HeaderLinkInner" style={getLinkStyle}>
             중고마켓
           </NavLink>
         </div>
       </div>
-      <Link to="/login" className="loginButton">
+      <button className="loginButton" onClick={() => {
+              nav('/login');
+            }}>
         로그인
-      </Link>
+      </button>
     </div>
   );
-};
+}
 
 export default Header;

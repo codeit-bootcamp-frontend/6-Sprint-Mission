@@ -1,0 +1,54 @@
+.QuestionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.QuestionName {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.Items_Question_textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  height: 104px;
+  resize: none;
+}
+
+.ButtonEnd {
+  display: flex;
+  justify-content: end;
+}
+
+.QuestionSubmit {
+  background-color: #3692ff;
+  color: #ffffff;
+  padding: 11.5px 23px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  border: 0px;
+}
+
+.QuestionSubmit:hover {
+  background-color: #1967d6;
+}
+
+.QuestionSubmit:focus {
+  background-color: #1251aa;
+}
+
+.QuestionSubmit:disabled {
+  background-color: #9ca3af;
+  cursor: default;
+  pointer-events: none;
+}

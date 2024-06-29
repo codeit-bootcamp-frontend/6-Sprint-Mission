@@ -1,0 +1,85 @@
+.DescriptionContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.ItemsImg {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  max-width: 486px;
+}
+
+.ItemDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.ItemDetailName {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ItemDetailPrice {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 16px 0;
+}
+
+.ItemsIntroduce {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.ItemDetailDescription {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.TagsContainer {
+  margin: 24px 0;
+}
+
+.ItemsTag {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.PillButton {
+  color: #6b7280;
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+}
+
+.ButtonContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.PillButton :hover .heartIcon {
+  width: 24px;
+  content: url("../../assets/img/heart-red.svg");
+}
+
+.heartIcon {
+  width: 24px;
+}
