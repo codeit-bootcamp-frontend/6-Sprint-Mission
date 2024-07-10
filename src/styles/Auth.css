@@ -1,0 +1,143 @@
+/* Mobile styles */
+
+.auth-container {
+  /* 로고 위 여백은 전체적인 레이아웃으로 보는 것이 적절한 것 같아 로고 요소가 아닌 페이지 전체 컨테이너의 vertical padding으로 적용했어요 */
+  /* 컨테이너에 horizontal padding으로 여백을 주고 내부 콘텐츠가 컨테이너의 가로 폭을 꽉 채우도록 하면 화면 크기 변화에 따라 자식 요소들의 크기가 조정되는 효과를 만듭니다 */
+  padding: 24px 16px;
+  /* 
+    프로젝트 시작할 때 global style에서 전체 요소에 box-sizing: border-box를 적용했던 것 기억하시나요? 
+    이 설정은 요소의 width에 padding과 border 등의 너비를 포함하도록 만들어 콘텐츠가 레이아웃 밖으로 삐져나오는 것을 방지합니다. 
+    컨테이너에 padding을 준 상태에서 내부 콘텐츠의 실제 사용 가능 너비를 400px로 유지하고자 한다면 max-width를 400px이 아닌, 좌우 패딩을 고려한 432px (400px + 16px*2)로 설정해 주세요.
+  */
+  max-width: 432px;
+  margin: 0 auto;
+}
+
+.logo-home-link {
+  /* inline 요소인 anchor 태그에 margin을 적용하려면 block으로 바꿔야 해요 */
+  display: block;
+  margin-bottom: 24px;
+  /* inline 자식요소인 img를 가운데 정렬할 때는 text-align: center를 사용하세요 */
+  text-align: center;
+}
+
+/* 반응형으로 이미지 크기를 변경하고 싶다면 <img> 태그에 바로 width 속성을 넣는 대신 스타일시트에서 img 선택자를 통해 너비를 적용할 수 있어요 */
+.logo-home-link img {
+  width: 198px;
+}
+
+.input-item {
+  margin-bottom: 24px;
+}
+
+.input-item label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.input-item input {
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+}
+
+.input-item input::placeholder {
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.input-item input:focus {
+  outline-color: var(--blue);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.error-message {
+  color: #f74747;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 8px;
+  display: none;
+  padding-left: 16px;
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 24px;
+}
+
+.social-login-container {
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 23px;
+  margin: 24px 0;
+}
+
+.social-login-container h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.social-login-links-container {
+  display: flex;
+  gap: 16px;
+}
+
+.auth-switch {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: #3182f6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Tablet styles */
+
+@media (min-width: 768px) {
+  .auth-container {
+    max-width: 640px;
+    /* max-width 덕분에 이미 가로 여백이 확보되어 있으니, 불필요한 여백이 추가되어 내부 콘텐츠의 너비가 줄어들지 않도록 가로 패딩은 0으로 적용해 주세요 */
+    padding: 48px 0;
+  }
+
+  .logo-home-link {
+    margin-bottom: 40px;
+  }
+
+  .logo-home-link img {
+    width: 396px;
+  }
+
+  .input-item label {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Desktop styles */
+
+@media (min-width: 1280px) {
+  .auth-container {
+    padding: 60px 0;
+  }
+}

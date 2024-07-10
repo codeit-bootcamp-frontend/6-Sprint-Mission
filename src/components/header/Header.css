@@ -1,0 +1,32 @@
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo {
+  margin-right: 16px;
+}
+
+.mainHeader nav ul {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #4b5563;
+}
+
+.mainHeader nav ul li a:hover {
+  color: var(--blue);
+}
+
+.mainHeader nav ul li a:active {
+  color: var(--blue);
+}
+
+.loginLink {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 11.5px 23px;
+}
