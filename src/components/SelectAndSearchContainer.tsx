@@ -20,11 +20,22 @@ const SelectAndSearchContainer = () => {
   };
   const onChangeKeyDownHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      router.push(`/boards?keyword=${ref.current?.value}`);
+      if (ref.current?.value !== '') {
+        return router.push(
+          `/boards?keyword=${ref.current?.value}&orderBy=${selectedOption}`
+        );
+      }
+      router.push(`boards?&orderBy=${selectedOption}`);
     }
   };
   useEffect(() => {
-    router.push(`/boards?page=1&pageSize=5&orderBy=${selectedOption}`);
+    if (ref.current?.value !== '') {
+      router.push(
+        `/boards?keyword=${ref.current?.value}&orderBy=${selectedOption}`
+      );
+    } else {
+      router.push(`/boards?orderBy=${selectedOption}`);
+    }
   }, [selectedOption]);
   return (
     <SearchBar

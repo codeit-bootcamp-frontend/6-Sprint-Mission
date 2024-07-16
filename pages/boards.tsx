@@ -1,6 +1,6 @@
 import BestPostsContainer from '@/src/components/BestPostsContainer';
 import TotalPosts from '@/src/components/TotalPosts';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import style from '../styles/BoardFrame.module.css';
 import { GetServerSideProps } from 'next';
 import { AxiosError } from 'axios';
@@ -18,8 +18,9 @@ const boards: React.FC<bestPosts> = ({ bestPosts }) => {
     </div>
   );
 };
+
 export const getServerSideProps: GetServerSideProps<bestPosts> = async () => {
-  const URL = 'page=1&pageSize=3&orderBy=like';
+  const URL = `page=1&pageSize=3&orderBy=like`;
   try {
     const bestPosts = await getBestPosts(URL);
     return {

@@ -1,0 +1,43 @@
+.commentFrame {
+  margin-top: 10px;
+  height: 97px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.contentFrame {
+  display: flex;
+  justify-content: space-between;
+}
+.kebabButton {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+}
+.kebabImage {
+  width: 24px;
+  height: 24px;
+}
+.content {
+  font-weight: 400;
+  font-size: 14px;
+  color: #1f2937;
+}
+.userInfoFrame {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.profile {
+  width: 32px;
+  height: 32px;
+}
+.nickName {
+  font-weight: 400;
+  font-size: 12px;
+  color: #4b5563;
+}
+.createdAt {
+  font-weight: 400;
+  font-size: 12px;
+  color: #9ca3af;
+}
+

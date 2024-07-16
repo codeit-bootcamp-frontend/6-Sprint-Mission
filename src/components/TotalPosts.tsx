@@ -8,7 +8,7 @@ const TotalPosts = () => {
     <div>
       <div className={style.header}>
         <p className={style.title}>게시글</p>
-        <Link className={style.writeButton} href={'/'}>
+        <Link className={style.writeButton} href={'/addboard'}>
           글쓰기
         </Link>
       </div>

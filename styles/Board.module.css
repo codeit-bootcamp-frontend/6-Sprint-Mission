@@ -1,0 +1,131 @@
+.boardFrame {
+  margin: 0px auto;
+  width: 1200px;
+}
+
+.articleFrame {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.kebabImage {
+  width: 24px;
+  height: 24px;
+}
+.kebabButton {
+  cursor: pointer;
+  background-color: #ffffffff;
+  border: none;
+  width: 24px;
+  height: 24px;
+}
+.boardDataFrame {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profileImage {
+  width: 24px;
+  height: 24px;
+}
+
+.nickName {
+  font-weight: 400;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.createdAt {
+  font-weight: 400;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.likeImage {
+  width: 24px;
+  height: 24px;
+}
+
+.likeCount {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6b7280;
+}
+.content {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1f2937;
+}
+.commentFrame {
+  margin-top: 50px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.comment {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+}
+.commentInput {
+  height: 104px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+}
+.registerButton {
+  align-self: flex-end;
+  width: 74px;
+  height: 42px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #9ca3af;
+  color: #ffffffff;
+  border: none;
+}
+.backButton {
+  position: relative;
+  width: 240px;
+  height: 48px;
+  border-radius: 40px;
+  text-align: center;
+  line-height: 48px;
+  background-color: #3692ff;
+  display: block;
+  margin: 30px auto;
+  text-decoration: none;
+  color: #ffffffff;
+}
+.backButtonImage {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+
+@media (max-width: 1199px) {
+  .boardFrame {
+    width: 696px;
+  }
+}
+
+@media (max-width: 769px) {
+  .boardFrame {
+    width: 343px;
+  }
+}
+

@@ -17,19 +17,23 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .registerBtn {
   cursor: pointer;
   width: 74px;
   height: 42px;
   border-radius: 8px;
   border: none;
-  background-color: #9ca3af;
+
   font-weight: 600;
   font-size: 16px;
   color: #ffffff;
 }
-
+.ableBtn {
+  background-color: #3692ff;
+}
+.disableBtn {
+  background-color: #9ca3af;
+}
 .titleInput {
   margin-top: 10px;
   width: 100%;
@@ -38,13 +42,11 @@
   background-color: #f3f4f6;
   border-radius: 12px;
 }
-
 .titleInput::placeholder {
   font-weight: 400;
   font-size: 16px;
   color: #9ca3af;
 }
-
 .content {
   margin-top: 10px;
 }
@@ -56,14 +58,22 @@
   background-color: #f3f4f6;
   border-radius: 12px;
 }
+
 .contentInput::placeholder {
   font-weight: 400;
   font-size: 16px;
   color: #9ca3af;
 }
+
 .image {
   margin-top: 10px;
 }
+
+.imageFrame {
+  display: flex;
+  gap: 50px;
+}
+
 .imageRegister {
   margin-top: 10px;
   display: flex;
@@ -75,6 +85,7 @@
   border-radius: 12px;
   background: #f3f4f6;
 }
+
 .imageRegister :first-child {
   color: #9ca3af;
   font-size: 42px;
@@ -87,5 +98,20 @@
 }
 .imageInput {
   display: none;
+}
+.cancelBtn {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.previewImageBox {
+  position: relative;
+  width: 282px;
+  height: 282px;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
 }
 

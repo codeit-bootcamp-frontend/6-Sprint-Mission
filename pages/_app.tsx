@@ -5,7 +5,7 @@ import '../styles/Reset.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Header isLogin={false}>
+    <Header>
       <Component {...pageProps} />
     </Header>
   );

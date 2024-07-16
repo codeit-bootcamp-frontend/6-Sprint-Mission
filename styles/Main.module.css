@@ -1,0 +1,499 @@
+/* header */
+
+#home {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#login {
+  cursor: pointer;
+  border: none;
+  background-color: #3692ff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  width: 128px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+/* main */
+
+.mainFrame {
+  background: #cfe5ff;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 540px;
+  width: 100%;
+}
+
+.card .box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
+}
+
+.box a {
+  width: 355px;
+  height: 56px;
+  border-radius: 40px;
+  background-color: #3692ff;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card img {
+  width: 996px;
+  height: 447px;
+}
+
+.section {
+  background-color: #ffffff;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section .confirmBox {
+  top: 137.5px;
+  left: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.confirmBox .specific {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.specific h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
+}
+
+.specific p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  color: #374151;
+}
+
+.section .searchBox {
+  display: flex;
+  align-items: center;
+}
+
+.searchBox .specific2 {
+  padding-right: 50px;
+  text-align: right;
+}
+
+.specific2 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
+}
+
+.specific2 p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #374151;
+}
+
+.card4 {
+  background-color: #ffffff;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section .registerBox {
+  display: flex;
+  align-items: center;
+}
+
+.registerBox .specific3 {
+  padding-left: 50px;
+}
+
+.specific3 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
+}
+
+.specific3 p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #374151;
+}
+
+.bottomCard {
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomCard h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #374151;
+}
+
+.bottomCard img {
+  height: 540px;
+}
+
+.footerFrame {
+  height: 160px;
+  background-color: #111827;
+}
+
+.footerFrame .tag {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerFrame .tag .mark {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerFrame .tag .mark .privacy-container {
+  margin-right: 50px;
+  display: flex;
+}
+
+.tag .codeit {
+  margin-left: 50px;
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+.tag .privacy {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #e5e7eb;
+}
+.tag .faq {
+  margin-left: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #e5e7eb;
+}
+
+.social {
+  margin-right: 40px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.social a {
+  padding-right: 10px;
+}
+
+@media (max-width: 1199px) {
+  .card {
+    height: 771px;
+    display: block;
+  }
+
+  .card .box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 320px;
+  }
+
+  .box h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    color: #374151;
+  }
+  .box h1 > br {
+    display: none;
+  }
+
+  .box a {
+    width: 355px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: #3692ff;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .card img {
+    width: 100%;
+    height: 450px;
+  }
+  /* 첫번째 쎅션 */
+
+  .section {
+    background-color: #ffffff;
+    height: 771px;
+    display: block;
+    width: 100%;
+  }
+  .section .confirmBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section .confirmBox > img {
+    margin-top: 20px;
+    height: 454px;
+    width: 696px;
+  }
+
+  .confirmBox .specific {
+    margin-top: 30px;
+    width: 696px;
+    display: flex;
+    flex-direction: column;
+  }
+  .specific h1 > br {
+    display: none;
+  }
+  .specific h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+    color: #374151;
+  }
+
+  .specific p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28.8px;
+    color: #374151;
+  }
+
+  /* 2번쩨 섹션 */
+
+  .section .searchBox {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .searchBox > img {
+    height: 454px;
+    width: 696px;
+  }
+  .searchBox .specific2 {
+    margin-top: 30px;
+    width: 696px;
+    padding-right: 50px;
+    text-align: right;
+  }
+
+  .specific2 h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+    color: #374151;
+  }
+
+  .specific2 h1 > br {
+    display: none;
+  }
+
+  .specific2 p {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28.8px;
+    color: #374151;
+  }
+
+  /* 3번째 쎅션 */
+
+  .section .registerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .registerBox > img {
+    width: 696px;
+  }
+  .registerBox .specific3 {
+    margin-top: 30px;
+    width: 696px;
+  }
+
+  .specific3 h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+    color: #374151;
+  }
+
+  .specific3 h1 > br {
+    display: none;
+  }
+
+  .specific3 p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28.8px;
+    color: #374151;
+  }
+
+  .bottomCard {
+    height: 927px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottomCard h2 {
+    font-size: 40px;
+  }
+
+  .bottomCard img {
+    height: 540px;
+  }
+}
+
+@media (max-width: 769px) {
+  .card {
+    height: 541px;
+  }
+  .box {
+    text-align: center;
+  }
+  .card .box h1 {
+    font-size: 32px;
+  }
+  .box h1 br {
+    display: block;
+  }
+  .box a {
+    height: 48px;
+    width: 154px;
+    font-size: 16px;
+  }
+  .card img {
+    width: 100%;
+    height: 221px;
+  }
+  .section .confirmBox > img {
+    margin-top: 50px;
+    width: 344px;
+    height: 259px;
+  }
+  .section .confirmBox .specific {
+    padding-left: 350px;
+  }
+  .section .confirmBox .specific h1 {
+    font-size: 24px;
+  }
+  .section .confirmBox .specific p {
+    font-size: 16px;
+  }
+  .section .searchBox > img {
+    margin-top: 50px;
+    width: 344px;
+    height: 259px;
+  }
+  .section .searchBox .specific2 {
+    padding-right: 350px;
+  }
+
+  .section .searchBox .specific2 h1 {
+    font-size: 24px;
+  }
+
+  .section .searchBox .specific2 p {
+    font-size: 16px;
+  }
+  .section .registerBox > img {
+    margin-top: 50px;
+    width: 344px;
+    height: 259px;
+  }
+  .section .registerBox .specific3 {
+    padding-left: 350px;
+  }
+  .section .registerBox .specific3 h1 {
+    font-size: 24px;
+  }
+  .bottomCard {
+    height: 540px;
+  }
+  .bottomCard h2 {
+    font-size: 32px;
+  }
+  .bottomCard img {
+    width: 497.91px;
+    height: 269.95px;
+  }
+  .footer .tag {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .tag .mark {
+    margin-left: 50px;
+
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .tag .privacy-container {
+    margin-top: 20%;
+  }
+  .tag .mark .codeit {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+}
+

@@ -15,14 +15,17 @@
 .leftBtn * {
   margin-right: 30px;
 }
+
 .leftBtn .logo {
   cursor: pointer;
 }
-.leftBtn p {
+
+.leftBtn a {
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   color: #4b5563;
+  text-decoration: none;
 }
 #presentPage {
   color: #3692ff;
@@ -35,12 +38,20 @@
 
 .loginBtn {
   cursor: pointer;
-  border: 1px solid;
   width: 88px;
   height: 42px;
+  text-align: center;
+  text-decoration: none;
   border-radius: 8px;
+  line-height: 42px;
   background-color: #3692ff;
   color: #ffffff;
+  border: none;
   font-size: 16px;
+}
+
+.profile {
+  border: none;
+  background-color: #ffffff;
 }
 

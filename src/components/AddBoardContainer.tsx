@@ -1,42 +1,54 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
-import { postArticles, postImage, tempSignUP } from '../api/api';
+import { useRouter } from 'next/router';
+import React, { ChangeEvent, useState } from 'react';
+import { postArticles, postImage } from '../api/api';
 import AddBoardForm from './AddBoardForm';
-import { form } from './AddBoardForm';
+import { formType } from './AddBoardForm';
 
 const AddBoardContainer = () => {
-  const [formData, setFormData] = useState<form>({
+  const routes = useRouter();
+  const [previewImage, setPreviewImage] = useState<string>('');
+  const [formData, setFormData] = useState<formType>({
     title: '',
     content: '',
     image: null,
   });
 
+  const onCancelHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    URL.revokeObjectURL(previewImage);
+    setPreviewImage('');
+    setFormData((prev) => ({ ...prev, ['image']: null }));
+  };
+
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === 'title') {
+    const targetName = e.target.name;
+    if (targetName === 'title') {
       setFormData((prev) => ({ ...prev, ['title']: e.target.value }));
-    } else if (e.target.name === 'content') {
+    } else if (targetName === 'content') {
       setFormData((prev) => ({ ...prev, ['content']: e.target.value }));
-    } else if (e.target.name === 'image') {
+    } else if (targetName === 'image') {
       const file = e.target.files?.[0];
-      if (file) setFormData((prev) => ({ ...prev, ['image']: file }));
+      if (file) {
+        setFormData((prev) => ({ ...prev, ['image']: file }));
+        const objectURL = URL.createObjectURL(file);
+        setPreviewImage(objectURL);
+      }
     }
   };
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const url = await postImage(formData.image);
-    console.log(url);
-
-    // postArticles(formData, url);
+    const result = await postArticles(formData, url);
+    routes.push('/boards');
   };
-  useEffect(() => {
-    tempSignUP();
-  }, []);
 
   return (
     <>
       <AddBoardForm
+        onCancelHandler={onCancelHandler}
         onChangeHandler={onChangeHandler}
         formData={formData}
+        previewImage={previewImage}
         onSubmitHandler={onSubmitHandler}
       />
     </>

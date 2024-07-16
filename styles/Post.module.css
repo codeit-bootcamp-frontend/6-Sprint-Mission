@@ -1,19 +1,21 @@
 .postFrame {
+  cursor: pointer;
   margin-bottom: 30px;
   height: 112px;
+  text-decoration: none;
   border-bottom: 1px solid #e5e7eb;
 }
+
 .contentFrame {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 5px;
 }
-
 .content {
   font-weight: 600;
   font-size: 20px;
   color: #1f2937;
 }
-
 .contentImage {
   width: 72px;
   height: 72px;
@@ -29,9 +31,9 @@
 }
 
 .userInfo {
-  width: 180px;
+  width: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .userInfo .profileImage {
@@ -57,5 +59,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.observer {
+  height: 50px;
 }
 

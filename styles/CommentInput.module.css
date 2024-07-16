@@ -1,0 +1,29 @@
+.commentFrame {
+  margin-top: 50px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.comment {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+}
+.commentInput {
+  height: 104px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+}
+.registerButton {
+  align-self: flex-end;
+  width: 74px;
+  height: 42px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #9ca3af;
+  color: #ffffffff;
+  border: none;
+}
+

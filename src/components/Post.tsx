@@ -10,12 +10,22 @@ interface postItem {
   likeCount: number;
   nickName: string;
   createdAt: string;
+  id: number;
+  onClickHandler: (id: number) => void;
 }
 
-const Post = ({ image, content, likeCount, nickName, createdAt }: postItem) => {
+const Post = ({
+  image,
+  content,
+  likeCount,
+  nickName,
+  createdAt,
+  id,
+  onClickHandler,
+}: postItem) => {
   const contentDate = convertTime(createdAt);
   return (
-    <div className={style.postFrame}>
+    <div className={style.postFrame} onClick={() => onClickHandler(id)}>
       <div className={style.contentFrame}>
         <p className={style.content}>{content}</p>
         {image ? (

@@ -1,0 +1,130 @@
+.root {
+  --inputColor: #3692ff;
+  --fontColor: #1f2937;
+}
+
+.section {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.section .loginBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fontColor);
+  gap: 24px;
+}
+.section input {
+  background: #f3f4f6;
+  height: 56px;
+  border-radius: 12px;
+  width: 640px;
+  border: none;
+}
+.email-error-message {
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+  font-size: 15px;
+  color: #f74747;
+}
+.section .error-border {
+  border: 2px solid red;
+}
+.section input:focus {
+  background-color: #ffffff;
+  border-color: var(--inputColor);
+}
+.section input::placeholder {
+  padding: 16px 24px;
+}
+.email-error-message {
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+  font-size: 15px;
+  color: #f74747;
+}
+.passwordLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.passwordLabel img {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+}
+.pw-error-message {
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+  font-size: 15px;
+  color: #f74747;
+}
+.loginButton {
+  cursor: pointer;
+  width: 640px;
+  height: 56px;
+  border-radius: 40px;
+  background: #9ca3af;
+  border: #9ca3af;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.simpleLoginBox {
+  margin-top: 24px;
+  background: #e6f2ff;
+  display: flex;
+  align-items: center;
+  width: 640px;
+  height: 74px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.simpleLoginBox p {
+  padding-left: 24px;
+}
+.simpleLoginIcons {
+  width: 100px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signUp {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 769px) {
+  .section .homeBtn > img {
+    width: 198px;
+    height: 66px;
+  }
+  .section input {
+    background: #f3f4f6;
+
+    height: 56px;
+    border: none;
+    border-radius: 12px;
+    width: 343px;
+  }
+  .loginButton {
+    width: 343px;
+  }
+  .simpleLoginBox {
+    width: 344px;
+  }
+}
+
