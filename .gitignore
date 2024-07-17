@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+<<<<<<< HEAD
+.yarn/install-state.gz
+=======
+>>>>>>> upstream/Next.js-최윤석
 
 # testing
 /coverage
