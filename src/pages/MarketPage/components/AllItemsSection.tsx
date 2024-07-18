@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../../../api/itemApi";
 import ItemCard from "./ItemCard";
 import { ReactComponent as SearchIcon } from "../../../assets/images/icons/ic_search.svg";
@@ -38,38 +39,16 @@ function AllItemsSection() {
   const [orderBy, setOrderBy] = useState<string>("recent");
   const [page, setPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(getPageSize());
-  const [itemList, setItemList] = useState<Item[]>([]);
-  const [totalPageNum, setTotalPageNum] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const fetchSortedData = async ({
-    orderBy,
-    page,
-    pageSize,
-  }: {
-    orderBy: string;
-    page: number;
-    pageSize: number;
-  }) => {
-    setIsLoading(true);
-    try {
-      const products: ProductsResponse = await getProducts({
+  const { data, isLoading, error } = useQuery<ProductsResponse, Error>({
+    queryKey: ["allItems", orderBy, page, pageSize],
+    queryFn: () =>
+      getProducts({
         orderBy,
         page: page.toString(),
         pageSize: pageSize.toString(),
-      });
-      setItemList(products.list);
-      setTotalPageNum(Math.ceil(products.totalCount / pageSize));
-    } catch (error) {
-      console.error("오류: ", (error as Error).message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleSortSelection = (sortOption: string) => {
-    setOrderBy(sortOption);
-  };
+      }),
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -77,55 +56,59 @@ function AllItemsSection() {
     };
 
     window.addEventListener("resize", handleResize);
-    fetchSortedData({ orderBy, page, pageSize });
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [orderBy, page, pageSize]);
+  }, []);
+
+  const handleSortSelection = (sortOption: string) => {
+    setOrderBy(sortOption);
+  };
 
   const onPageChange = (pageNumber: number) => {
     setPage(pageNumber);
   };
 
+  if (isLoading) return <LoadingSpinner isLoading={isLoading} />;
+  if (error) return <div>오류가 발생했습니다: {error.message}</div>;
+
   return (
-    <>
-      <LoadingSpinner isLoading={isLoading} />
+    <div>
+      <div className="allItemsSectionHeader">
+        <h1 className="sectionTitle">판매 중인 상품</h1>
+        <Link to="/additem" className="loginLink button">
+          상품 등록하기
+        </Link>
+      </div>
 
-      <div>
-        <div className="allItemsSectionHeader">
-          <h1 className="sectionTitle">판매 중인 상품</h1>
-          <Link to="/additem" className="loginLink button">
-            상품 등록하기
-          </Link>
+      <div className="allItemsSectionHeader">
+        <div className="searchBarWrapper">
+          <SearchIcon />
+          <input
+            className="searchBarInput"
+            placeholder="검색할 상품을 입력해 주세요"
+          />
         </div>
+        <DropdownMenu onSortSelection={handleSortSelection} />
+      </div>
 
-        <div className="allItemsSectionHeader">
-          <div className="searchBarWrapper">
-            <SearchIcon />
-            <input
-              className="searchBarInput"
-              placeholder="검색할 상품을 입력해 주세요"
-            />
-          </div>
-          <DropdownMenu onSortSelection={handleSortSelection} />
-        </div>
+      <div className="allItemsCardSection">
+        {data?.list.map((item: Item) => (
+          <ItemCard item={item} key={`market-item-${item.id}`} />
+        ))}
+      </div>
 
-        <div className="allItemsCardSection">
-          {itemList?.map((item) => (
-            <ItemCard item={item} key={`market-item-${item.id}`} />
-          ))}
-        </div>
-
+      {data && (
         <div className="paginationBarWrapper">
           <PaginationBar
-            totalPageNum={totalPageNum}
+            totalPageNum={Math.ceil(data.totalCount / pageSize)}
             activePageNum={page}
             onPageChange={onPageChange}
           />
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 }
 
