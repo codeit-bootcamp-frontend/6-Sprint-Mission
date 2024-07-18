@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getProductComments } from "../../../api/itemApi";
 import styled from "styled-components";
 import { ReactComponent as EmptyStateImage } from "../../../assets/images/ui/empty-comments.svg";
 import { ReactComponent as SeeMoreIcon } from "../../../assets/images/icons/ic_kebab.svg";
 import DefaultProfileImage from "../../../assets/images/ui/ic_profile.svg";
 import { formatUpdatedAt } from "../../../utils/dateUtils";
+import { useState } from "react";
 
 const CommentContainer = styled.div`
   padding: 24px 0;
@@ -14,6 +15,32 @@ const CommentContainer = styled.div`
 const SeeMoreButton = styled.button`
   position: absolute;
   right: 0;
+`;
+
+const DropdownMenu = styled.div`
+  position: absolute;
+  right: 0;
+  top: 24px;
+  background-color: white;
+  border: 1px solid ${({ theme }) => theme.colors.gray[300]};
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+`;
+
+const DropdownItem = styled.button`
+  padding: 8px 16px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: ${({ theme }) => theme.colors.gray[800]};
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.gray[100]};
+  }
 `;
 
 const CommentContent = styled.p`
@@ -64,13 +91,27 @@ interface CommentItemProps {
 const CommentItem = ({ item }: CommentItemProps) => {
   const authorInfo = item.writer;
   const formattedTimestamp = formatUpdatedAt(item.updatedAt);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
 
   return (
     <>
       <CommentContainer>
-        <SeeMoreButton>
+        <SeeMoreButton onClick={toggleDropdown}>
           <SeeMoreIcon />
         </SeeMoreButton>
+
+        {isDropdownOpen && (
+          <DropdownMenu>
+            <DropdownItem onClick={() => alert("Edit")}>수정하기</DropdownItem>
+            <DropdownItem onClick={() => alert("Delete")}>
+              삭제하기
+            </DropdownItem>
+          </DropdownMenu>
+        )}
 
         <CommentContent>{item.content}</CommentContent>
 
@@ -124,51 +165,25 @@ interface CommentThreadProps {
 }
 
 function CommentThread({ productId }: CommentThreadProps) {
-  const [comments, setComments] = useState<Comment[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!productId) return;
-
-    const fetchComments = async () => {
-      setIsLoading(true);
-      const params = {
-        limit: "10", // 숫자를 문자열로 변환
-      };
-
-      try {
-        const data: { list: Comment[] } = await getProductComments({
-          productId,
-          params,
-        });
-        setComments(data.list);
-        setError(null);
-      } catch (error) {
-        console.error("Error fetching comments:", error);
-        setError("상품의 댓글을 불러오지 못했어요.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchComments();
-  }, [productId]);
+  const { data, isLoading, error } = useQuery<{ list: Comment[] }, Error>({
+    queryKey: ["comments", productId],
+    queryFn: () => getProductComments({ productId, params: { limit: "10" } }),
+  });
 
   if (isLoading) {
     return <div>상품 댓글 로딩중...</div>;
   }
 
   if (error) {
-    return <div>오류: {error}</div>;
+    return <div>오류: {error.message}</div>;
   }
 
-  if (comments && !comments.length) {
+  if (data?.list && !data.list.length) {
     return <EmptyState />;
   } else {
     return (
       <ThreadContainer>
-        {comments.map((item) => (
+        {data?.list.map((item) => (
           <CommentItem item={item} key={`comment-${item.id}`} />
         ))}
       </ThreadContainer>

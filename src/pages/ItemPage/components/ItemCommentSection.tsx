@@ -1,7 +1,9 @@
-import React, { useState, ChangeEvent, MouseEvent } from "react";
+import { useState, ChangeEvent, MouseEvent } from "react";
 import styled from "styled-components";
 import { Button } from "../../../styles/CommonStyles";
 import CommentThread from "./CommentThread";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { postProductComment } from "../../../api/itemApi";
 
 const COMMENT_PLACEHOLDER =
   "개인정보를 공유 및 요청하거나, 명예 훼손, 무단 광고, 불법 정보 유포시 모니터링 후 삭제될 수 있으며, 이에 대한 민형사상 책임은 게시자에게 있습니다.";
@@ -56,6 +58,18 @@ interface ItemCommentSectionProps {
 
 const ItemCommentSection = ({ productId }: ItemCommentSectionProps) => {
   const [comment, setComment] = useState<string>("");
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: postProductComment,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["comments", productId] });
+      setComment("");
+    },
+    onError: (error) => {
+      console.error("댓글등록에 실패했습니다.:", error);
+    },
+  });
 
   const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setComment(e.target.value);
@@ -63,6 +77,9 @@ const ItemCommentSection = ({ productId }: ItemCommentSectionProps) => {
 
   const handlePostComment = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    if (!comment.trim()) return;
+
+    mutation.mutate({ productId, commentContent: comment });
   };
 
   return (
@@ -78,7 +95,7 @@ const ItemCommentSection = ({ productId }: ItemCommentSectionProps) => {
 
         <PostCommentButton
           onClick={handlePostComment}
-          disabled={!comment.trim()}
+          disabled={mutation.status === "pending" || !comment.trim()}
         >
           등록
         </PostCommentButton>

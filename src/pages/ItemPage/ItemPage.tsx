@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { useQuery } from "@tanstack/react-query";
 import { Container, LineDivider, StyledLink } from "../../styles/CommonStyles";
 import { getProductDetail } from "../../api/itemApi";
 import ItemProfileSection from "./components/ItemProfileSection";
@@ -29,42 +30,25 @@ interface Product {
 }
 
 function ItemPage() {
-  const [product, setProduct] = useState<Product | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
   const { productId } = useParams<{ productId: string }>();
 
-  useEffect(() => {
-    async function fetchProduct() {
-      if (!productId) {
-        setError("상품 아이디가 제공되지 않았어요.");
-        setIsLoading(false);
-        return;
+  const {
+    data: product,
+    isLoading,
+    error,
+  } = useQuery<Product, Error>({
+    queryKey: ["productDetail", productId],
+    queryFn: () => {
+      if (productId) {
+        return getProductDetail(productId);
       }
-
-      setIsLoading(true);
-      try {
-        const data = await getProductDetail(productId);
-        if (!data) {
-          throw new Error("해당 상품의 데이터를 찾을 수 없습니다.");
-        }
-        setProduct(data);
-      } catch (error) {
-        if (error instanceof Error) {
-          setError(error.message);
-        } else {
-          setError("알 수 없는 오류가 발생했습니다.");
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    fetchProduct();
-  }, [productId]);
+      return Promise.reject(new Error("상품 아이디가 제공되지 않았어요."));
+    },
+    enabled: !!productId,
+  });
 
   if (error) {
-    alert(`오류: ${error}`);
+    alert(`오류: ${error.message}`);
   }
 
   if (!productId || !product) return null;
