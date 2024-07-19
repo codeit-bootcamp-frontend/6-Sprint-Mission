@@ -1,5 +1,4 @@
 /* eslint-disable no-alert */
-/* eslint-disable react/jsx-props-no-spreading */
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/public/images/logo/logo.svg';
@@ -50,11 +49,11 @@ export default function SignUpPage() {
         passwordConfirmation,
       })
       .then(() => {
-        alert('회원가입성공');
+        alert('ȸ�����Լ���');
         router.replace('/login');
       })
       .catch(() => {
-        alert('회원가입실패');
+        alert('ȸ�����Խ���');
       });
   };
 
@@ -71,7 +70,7 @@ export default function SignUpPage() {
         <Image
           className="mb-[40px] mt-[60px] h-[132px] w-[396px]"
           src={Logo}
-          alt="회원가입 페이지 로고"
+          alt="ȸ������ ������ �ΰ�"
         />
       </Link>
 
@@ -81,20 +80,20 @@ export default function SignUpPage() {
             htmlFor="email"
             className="mb-[16px] text-[18px] font-bold leading-[21px]"
           >
-            이메일
+            �̸���
           </label>
 
           <input
             {...register('email', {
-              required: { value: true, message: '이메일을 입력해주세요' },
+              required: { value: true, message: '�̸����� �Է����ּ���' },
               pattern: {
                 value: /^\S+@\S+$/i,
-                message: '잘못된 이메일 형식입니다',
+                message: '�߸��� �̸��� �����Դϴ�',
               },
             })}
             type="email"
             id="email"
-            placeholder="이메일을 입력해주세요"
+            placeholder="�̸����� �Է����ּ���"
             className={`mb-[30px] h-[56px] w-[640px] rounded-[12px] bg-gray-200 px-[24px] py-[16px] text-[16px] font-normal leading-[24px] outline-none outline-offset-0 ${errors.email ? 'outline-red-error' : 'outline-blue-active'}`}
           />
           {errors?.email?.message && (
@@ -109,15 +108,15 @@ export default function SignUpPage() {
             htmlFor="nickname"
             className="mb-[16px] text-[18px] font-bold leading-[21px]"
           >
-            닉네임
+            �г���
           </label>
           <input
             {...register('nickname', {
-              required: '닉네임을 입력해주세요',
+              required: '�г����� �Է����ּ���',
             })}
             type="text"
             id="nickname"
-            placeholder="닉네임을 입력해주세요"
+            placeholder="�г����� �Է����ּ���"
             className={`mb-[30px] h-[56px] w-[640px] rounded-[12px] bg-gray-200 px-[24px] py-[16px] text-[16px] font-normal leading-[24px] outline-none outline-offset-0 ${errors.nickname ? 'outline-red-error' : 'outline-blue-active'}`}
           />
           {errors?.nickname?.message && (
@@ -132,22 +131,22 @@ export default function SignUpPage() {
             htmlFor="password"
             className="mb-[16px] text-[18px] font-bold leading-[21px]"
           >
-            비밀번호
+            ��й�ȣ
           </label>
           <input
             {...register('password', {
-              required: '비밀번호를 입력해주세요',
-              minLength: { value: 8, message: '8자리 이상 입력해주세요' },
+              required: '��й�ȣ�� �Է����ּ���',
+              minLength: { value: 8, message: '8�ڸ� �̻� �Է����ּ���' },
             })}
             type={showedPW ? 'text' : 'password'}
             id="password"
-            placeholder="비밀번호를 입력해주세요"
+            placeholder="��й�ȣ�� �Է����ּ���"
             className={`mb-[30px] h-[56px] w-[640px] rounded-[12px] bg-gray-200 px-[24px] py-[16px] text-[16px] font-normal leading-[24px] outline-none outline-offset-0 ${errors.password ? 'outline-red-error' : 'outline-blue-active'}`}
           />
           {showedPW ? (
             <Image
               src={Eyes}
-              alt="보이기"
+              alt="���̱�"
               width={24}
               height={24}
               className="absolute right-[24px] top-[53px] cursor-pointer"
@@ -158,7 +157,7 @@ export default function SignUpPage() {
           ) : (
             <Image
               src={NoEyes}
-              alt="보이기"
+              alt="���̱�"
               width={24}
               height={24}
               className="absolute right-[24px] top-[53px] cursor-pointer"
@@ -179,22 +178,22 @@ export default function SignUpPage() {
             htmlFor="checkpassword"
             className="mb-[16px] text-[18px] font-bold leading-[21px]"
           >
-            비밀번호 확인
+            ��й�ȣ Ȯ��
           </label>
           <input
             {...register('passwordConfirmation', {
-              required: '비밀번호를 다시 한 번 입력해주세요',
+              required: '��й�ȣ�� �ٽ� �� �� �Է����ּ���',
               validate: (value) => value === formValues.passwordConfirmation,
             })}
             type={showedPWCheck ? 'text' : 'password'}
             id="checkpassword"
-            placeholder="비밀번호를 다시 한 번 입력해주세요"
+            placeholder="��й�ȣ�� �ٽ� �� �� �Է����ּ���"
             className={`mb-[30px] h-[56px] w-[640px] rounded-[12px] bg-gray-200 px-[24px] py-[16px] text-[16px] font-normal leading-[24px] outline-none outline-offset-0 ${errors.passwordConfirmation ? 'outline-red-error' : 'outline-blue-active'}`}
           />
           {showedPWCheck ? (
             <Image
               src={Eyes}
-              alt="보이기"
+              alt="���̱�"
               width={24}
               height={24}
               className="absolute right-[24px] top-[53px] cursor-pointer"
@@ -205,7 +204,7 @@ export default function SignUpPage() {
           ) : (
             <Image
               src={NoEyes}
-              alt="보이기"
+              alt="���̱�"
               width={24}
               height={24}
               className="absolute right-[24px] top-[53px] cursor-pointer"
@@ -221,7 +220,7 @@ export default function SignUpPage() {
           )}
           {errors?.passwordConfirmation?.type === 'validate' && (
             <p className="absolute left-[10px] top-[100px] mr-[8px] text-[15px] font-semibold leading-[18px] text-red-error">
-              비밀번호가 일치하지 않습니다
+              ��й�ȣ�� ��ġ���� �ʽ��ϴ�
             </p>
           )}
         </div>
@@ -231,22 +230,22 @@ export default function SignUpPage() {
           disabled={!isFormValid}
           className="hover: h-[56px] w-[640px] cursor-pointer rounded-[40px] bg-blue-active text-[20px] font-semibold leading-[24px] text-white hover:bg-blue-hover disabled:bg-gray-400"
         >
-          회원가입
+          ȸ������
         </button>
       </form>
       <div className="my-[24px] flex h-[74px] w-[640px] items-center justify-between rounded-[8px] bg-[#e6f2ff] px-[23px] py-[16px]">
         <p className="text-[16px] font-medium leading-[24px] text-gray-800">
-          간편 로그인하기
+          ���� �α����ϱ�
         </p>
         <div className="flex gap-[16px]">
-          <Image src={Google} alt="구글 로그인" width={42} height={42} />
-          <Image src={Kakao} alt="카카오톡 로그인" width={42} height={42} />
+          <Image src={Google} alt="���� �α���" width={42} height={42} />
+          <Image src={Kakao} alt="īī���� �α���" width={42} height={42} />
         </div>
       </div>
       <div className="text-[15px] font-medium leading-[18px]">
-        판다마켓이 처음이신가요?
+        �Ǵٸ����� ó���̽Ű���?
         <Link href="/login">
-          <span className="text-[#3182f6]">로그인</span>
+          <span className="text-[#3182f6]">�α���</span>
         </Link>
       </div>
     </div>

@@ -1,5 +1,4 @@
 /* eslint-disable no-alert */
-/* eslint-disable react/jsx-props-no-spreading */
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/public/images/logo/logo.svg';

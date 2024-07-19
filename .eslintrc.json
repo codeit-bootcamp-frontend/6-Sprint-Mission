@@ -40,6 +40,7 @@
     "prettier/prettier": ["error", { "endOfLine": "lf", "singleQuote": true }],
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
