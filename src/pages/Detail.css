@@ -1,0 +1,9 @@
+.detail-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 1229px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

@@ -24,13 +24,11 @@ function AddItem() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     handleChange(name, value);
-    console.log(name, value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setValues(INITIAL_VALUES);
-    console.log(values);
   };
 
   return (

@@ -57,8 +57,8 @@
 }
 
 .search-button img {
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: auto;
 }
 
 .search-input {
@@ -175,12 +175,54 @@
 }
 
 .all-products-wrap {
-  width: 100%;
+  width: 1201px;
   height: 301px;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 301px;
 
-  gap: 20px;
+  gap: 24px;
 }
+
+.all-page-buttons {
+  margin: 0 auto;
+  width: 304px;
+  height: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-button {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  outline: none;
+
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.09;
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+.page-button.button-number:focus {
+  background-color: #3692ff;
+  color: #fff;
+}
+
+/* .button-number {
+} */

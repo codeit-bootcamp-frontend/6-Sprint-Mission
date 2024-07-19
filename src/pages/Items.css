@@ -10,32 +10,3 @@
 
   gap: 40px;
 }
-
-.page-button-container {
-  width: 304px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.page-button-container button {
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 50%;
-
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 19.09px;
-  color: #6b7280;
-
-  cursor: pointer;
-}
