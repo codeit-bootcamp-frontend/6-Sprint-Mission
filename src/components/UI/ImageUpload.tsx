@@ -70,9 +70,10 @@ const HiddenFileInput = styled.input`
 
 interface ImageUploadProps {
   title?: string;
+  setImageFiles: (images: File[]) => void;
 }
 
-const ImageUpload = ({ title }: ImageUploadProps) => {
+const ImageUpload: React.FC<ImageUploadProps> = ({ title, setImageFiles }) => {
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string>("");
 
   const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -80,11 +81,13 @@ const ImageUpload = ({ title }: ImageUploadProps) => {
     if (file) {
       const imageUrl = URL.createObjectURL(file);
       setImagePreviewUrl(imageUrl);
+      setImageFiles([file]); // File 객체를 넘겨줌
     }
   };
 
   const handleDelete = () => {
     setImagePreviewUrl("");
+    setImageFiles([]); // 빈 배열을 넘겨줌
   };
 
   return (

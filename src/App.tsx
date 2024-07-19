@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import LoginPage from "./pages/LoginPage/LoginPage";
+import LoginPage from "./pages/auth/LoginPage";
 import MarketPage from "./pages/MarketPage/MarketPage";
 import AddItemPage from "./pages/AddItemPage/AddItemPage";
 import CommunityFeedPage from "./pages/CommunityFeedPage/CommunityFeedPage";
 import Header from "./components/Layout/Header";
 import ItemPage from "./pages/ItemPage/ItemPage";
-import SignupPage from "./pages/LoginPage/SignupPage";
+import SignupPage from "./pages/auth/SignupPage";
 
 function App() {
   return (

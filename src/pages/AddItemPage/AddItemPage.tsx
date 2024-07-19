@@ -35,6 +35,7 @@ const AddItemPage: React.FC = () => {
   const [description, setDescription] = useState<string>("");
   const [price, setPrice] = useState<string>("");
   const [tags, setTags] = useState<string[]>([]);
+  const [imageFiles, setImageFiles] = useState<File[]>([]);
 
   const addTag = (tag: string) => {
     if (!tags.includes(tag)) {
@@ -59,7 +60,7 @@ const AddItemPage: React.FC = () => {
         </TitleSection>
 
         <InputSection>
-          <ImageUpload title="상품 이미지" />
+          <ImageUpload title="상품 이미지" setImageFiles={setImageFiles} />
 
           <InputItem
             id="name"

@@ -164,3 +164,62 @@ export async function deleteProductComment(commentId: number) {
     throw error;
   }
 }
+
+export interface NewProduct {
+  images: string[];
+  tags: string[];
+  price: number;
+  description: string;
+  name: string;
+}
+
+export async function uploadProduct(newProduct: NewProduct) {
+  if (!newProduct) {
+    throw new Error("Invalid product data");
+  }
+
+  try {
+    const response = await fetch(`${baseURL}/products/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    });
+
+    if (!response.ok) {
+      const errorBody = await response.json();
+      throw new Error(
+        `Failed to upload the post. ${errorBody.message || "Unknown error"}`
+      );
+    }
+
+    const body = await response.json();
+    return body;
+  } catch (error) {
+    console.error("Failed to upload product:", error);
+    throw error;
+  }
+}
+
+export async function uploadImage(imageFile: File) {
+  const formData = new FormData();
+  formData.append("image", imageFile);
+
+  try {
+    const response = await fetch(`${baseURL}/images/upload`, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    const body = await response.json();
+    return body.url; // Assuming the response contains the URL of the uploaded image
+  } catch (error) {
+    console.error("Failed to upload image:", error);
+    throw error;
+  }
+}
