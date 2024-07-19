@@ -1,5 +1,9 @@
 const baseURL = "https://panda-market-api.vercel.app";
 
+function getAccessToken() {
+  return localStorage.getItem("accessToken") || "";
+}
+
 export async function getProducts(params: Record<string, string> = {}) {
   const query = new URLSearchParams(params).toString();
 
@@ -85,6 +89,7 @@ export async function postProductComment({
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${getAccessToken()}`,
       },
       body: JSON.stringify(requestBody),
     });
@@ -125,6 +130,7 @@ export async function updateProductComment({
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${getAccessToken()}`,
       },
       body: JSON.stringify(requestBody),
     });
@@ -151,6 +157,7 @@ export async function deleteProductComment(commentId: number) {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${getAccessToken()}`,
       },
     });
 
@@ -183,6 +190,7 @@ export async function uploadProduct(newProduct: NewProduct) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${getAccessToken()}`,
       },
       body: JSON.stringify(newProduct),
     });
@@ -209,6 +217,9 @@ export async function uploadImage(imageFile: File) {
   try {
     const response = await fetch(`${baseURL}/images/upload`, {
       method: "POST",
+      headers: {
+        Authorization: `Bearer ${getAccessToken()}`,
+      },
       body: formData,
     });
 
@@ -217,7 +228,7 @@ export async function uploadImage(imageFile: File) {
     }
 
     const body = await response.json();
-    return body.url; // Assuming the response contains the URL of the uploaded image
+    return body.url;
   } catch (error) {
     console.error("Failed to upload image:", error);
     throw error;
