@@ -1,0 +1,117 @@
+.bestItem {
+  padding: 0 1.5rem 1rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #f9fafb;
+}
+
+.badge {
+  width: 102px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: #3692ff;
+  border-radius: 0 0 32px 32px;
+}
+
+.badgeWrap {
+  width: 54px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badgeWrap span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
+  color: #fff;
+}
+
+.bestUserContents {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bestTitle {
+  max-width: 256px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+
+  color: #1f2937;
+}
+
+.userProductImg {
+  width: 71px;
+  height: 71px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.productImg {
+  width: 3rem;
+  height: auto;
+}
+
+.bestUserInfoWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bestUserInfo {
+  width: auto;
+  height: 17px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+
+  color: #4b5563;
+}
+
+.bestUserCount {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.likeCount {
+  color: #6b7280;
+}
+
+.bestUserDate {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+
+  color: #4b5563;
+}
