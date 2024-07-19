@@ -1,0 +1,8 @@
+@layer reset, base, tokens, recipes, utilities;
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+body {
+  font-family: "Pretendard", sans-serif;
+  color: #374151;
+  box-sizing: border-box;
+}
