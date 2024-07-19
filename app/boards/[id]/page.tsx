@@ -1,12 +1,13 @@
-import BoardDetail from "@/components/BoardDetail/BoardDetail";
-import CommentInput from "@/components/BoardDetail/CommentInput";
-import CommentsList from "@/components/BoardDetail/CommentsList";
-import { getComments } from "@/app/apis/getComments";
-import { getArticleDetail, RootObject } from "@/app/apis/getArticleDetail";
-import styles from "@/app/boards/[id]/Page.module.css";
-import backIcon from "@/app/assets/images/ic_back.png";
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { getArticleDetail, RootObject } from '@/app/apis/getArticleDetail';
+import { getComments } from '@/app/apis/getComments';
+import backIcon from '@/app/assets/images/ic_back.png';
+import styles from '@/app/boards/[id]/Page.module.css';
+import BoardDetail from '@/components/BoardDetail/BoardDetail';
+import CommentInput from '@/components/BoardDetail/CommentInput';
+import CommentsList from '@/components/BoardDetail/CommentsList';
 
 interface BoardDetailProps {
   params: {

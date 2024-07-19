@@ -1,3 +1,57 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    // 전역객체를 eslint가 인식하는 구간
+    "browser": true, // document나 window 인식되게 함
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "eslint-plugin-simple-import-sort",
+    "prettier",
+    "react",
+    "@typescript-eslint"
+  ],
+
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/jsx-first-prop-new-line": "error",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "eol-last": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "semi": ["error", "always"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "comma-spacing": ["error", { "before": false, "after": true }]
+  }
 }

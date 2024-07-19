@@ -1,0 +1,19 @@
+.bestProductContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* 태블릿 */
+@media (max-width: 1200px) {
+  .bestProductContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .bestProductContainer {
+    grid-template-columns: 1fr;
+  }
+}

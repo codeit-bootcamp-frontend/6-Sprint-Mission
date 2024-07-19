@@ -1,10 +1,11 @@
-import styles from "@/components/BoardDetail/CommentList.module.css";
-import emptyCommentImg from "@/app/assets/images/Img_reply_empty.png";
-import { formatTimes } from "@/app/utils/fotmatTime";
-import DropdownMenu from "@/components/DropDown";
-import ProfileImg from "@/app/assets/images/ic_profile.png";
-import Image from "next/image";
-import { List } from "@/app/apis/getComments";
+import Image from 'next/image';
+
+import { List } from '@/app/apis/getComments';
+import ProfileImg from '@/app/assets/images/ic_profile.png';
+import emptyCommentImg from '@/app/assets/images/Img_reply_empty.png';
+import { formatTimes } from '@/app/utils/fotmatTime';
+import styles from '@/components/BoardDetail/CommentList.module.css';
+import DropdownMenu from '@/components/DropDown';
 interface Props {
   articleId: number;
   comments: List[];

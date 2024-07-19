@@ -1,21 +1,22 @@
-"use client";
+'use client';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
-import React from "react";
-import { useRouter } from "next/navigation";
-import SignUpForm from "@/app/signup/signUpForm";
-import PandaLogo from "@/app/assets/images/logo.png";
-import styles from "./Page.module.css";
-import Image from "next/image";
+import PandaLogo from '@/app/assets/images/logo.png';
+import SignUpForm from '@/app/signup/signUpForm';
+
+import styles from './Page.module.css';
 
 const SignUpPage = () => {
   const router = useRouter();
 
   const handleLogoClick = () => {
-    router.push("/");
+    router.push('/');
   };
 
   const handleLoginClick = () => {
-    router.push("/login");
+    router.push('/login');
   };
 
   return (
@@ -32,7 +33,7 @@ const SignUpPage = () => {
       </div>
       <SignUpForm />
       <div className={styles.goLogin}>
-        이미 회원이신가요?{" "}
+        이미 회원이신가요?{' '}
         <a className={styles.loginLink} onClick={handleLoginClick}>
           로그인
         </a>

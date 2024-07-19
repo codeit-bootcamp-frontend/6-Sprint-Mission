@@ -1,12 +1,14 @@
-import React from "react";
-import styles from "./SignupForm.module.css";
-import { signUpSchema } from "@/app/utils/validation/Schema";
-import { signUpUser } from "@/app/apis/SignUpUser";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import GoogleLogo from "../../app/assets/images/google.png";
-import KakaoLogo from "../../app/assets/images/kakao.png";
-import Image from "next/image";
+import { yupResolver } from '@hookform/resolvers/yup';
+import Image from 'next/image';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+
+import { signUpUser } from '@/app/apis/SignUpUser';
+import { signUpSchema } from '@/app/utils/validation/Schema';
+
+import GoogleLogo from '../../app/assets/images/google.png';
+import KakaoLogo from '../../app/assets/images/kakao.png';
+import styles from './SignupForm.module.css';
 
 interface FormValues {
   email: string;
@@ -23,17 +25,17 @@ const SignUpForm = () => {
     formState: { errors, isValid },
   } = useForm<FormValues>({
     resolver,
-    mode: "onChange",
+    mode: 'onChange',
   });
 
   const handleSignUp = handleSubmit(async (data: FormValues) => {
     try {
       const response = await signUpUser(data);
       if (response) {
-        console.log("회원가입 성공");
+        console.log('회원가입 성공');
       }
     } catch (error) {
-      console.error("회원가입 실패:", error);
+      console.error('회원가입 실패:', error);
     }
   });
 
@@ -47,8 +49,8 @@ const SignUpForm = () => {
           <input
             placeholder="이메일을 입력해주세요"
             type="email"
-            {...register("email")}
-            className={`${styles.input} ${errors.email ? styles.error : ""}`}
+            {...register('email')}
+            className={`${styles.input} ${errors.email ? styles.error : ''}`}
           />
           <div className={styles.errorText}>{errors.email?.message}</div>
         </div>
@@ -59,8 +61,8 @@ const SignUpForm = () => {
           <input
             placeholder="닉네임을 입력하세요"
             type="text"
-            {...register("nickname")}
-            className={`${styles.input} ${errors.nickname ? styles.error : ""}`}
+            {...register('nickname')}
+            className={`${styles.input} ${errors.nickname ? styles.error : ''}`}
           />
           <div className={styles.errorText}>{errors.nickname?.message}</div>
         </div>
@@ -71,8 +73,8 @@ const SignUpForm = () => {
           <input
             placeholder="비밀번호를 입력해주세요"
             type="password"
-            {...register("password")}
-            className={`${styles.input} ${errors.password ? styles.error : ""}`}
+            {...register('password')}
+            className={`${styles.input} ${errors.password ? styles.error : ''}`}
           />
           <div className={styles.errorText}>{errors.password?.message}</div>
         </div>
@@ -83,9 +85,9 @@ const SignUpForm = () => {
           <input
             placeholder="비밀번호를 다시 한번 입력해주세요"
             type="password"
-            {...register("passwordConfirmation")}
+            {...register('passwordConfirmation')}
             className={`${styles.input} ${
-              errors.passwordConfirmation ? styles.error : ""
+              errors.passwordConfirmation ? styles.error : ''
             }`}
           />
           <div className={styles.errorText}>
@@ -96,7 +98,7 @@ const SignUpForm = () => {
           type="submit"
           disabled={!isValid}
           className={`${styles.signUpButton} ${
-            !isValid ? styles.disabled : ""
+            !isValid ? styles.disabled : ''
           }`}
         >
           회원가입

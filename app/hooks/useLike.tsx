@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { postLike, deleteLike } from "@/app/apis/postLike";
+import { useState } from 'react';
+
+import { deleteLike, postLike } from '@/app/apis/postLike';
 
 export default function useLike(articleId: number, initialLikeCount: number) {
   const [likeCount, setLikeCount] = useState(initialLikeCount);
@@ -13,7 +14,7 @@ export default function useLike(articleId: number, initialLikeCount: number) {
         setLikeCount((prevCount) => prevCount - 1);
         setIsLiked(false);
       } catch (error) {
-        console.error("Failed to delete like:", error);
+        console.error('Failed to delete like:', error);
       }
     } else {
       // 좋아요 추가

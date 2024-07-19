@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
-import { useRouter } from "next/navigation";
-import LoginForm from "./LoginForm";
-import PandaLogo from "../assets/images/logo.png";
-import styles from "./LoginPage.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import PandaLogo from "../assets/images/logo.png";
+import LoginForm from "./LoginForm";
+import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
   const router = useRouter();

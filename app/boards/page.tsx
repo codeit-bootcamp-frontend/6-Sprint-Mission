@@ -1,8 +1,9 @@
-import BestList from "@/components/Board/BestList";
-import styles from "@/app/boards/BoardPage.module.css";
-import SearchTitle from "@/components/Board/SearchTitle";
-import { List, RootObject, BASE_URL } from "@/app/apis/getArticle";
-import Link from "next/link";
+import Link from 'next/link';
+
+import { BASE_URL, List, RootObject } from '@/app/apis/getArticle';
+import styles from '@/app/boards/BoardPage.module.css';
+import BestList from '@/components/Board/BestList';
+import SearchTitle from '@/components/Board/SearchTitle';
 
 interface Props {
   searchParams?: {
@@ -14,18 +15,18 @@ interface Props {
 }
 
 export default async function BoardPage({ searchParams }: Props) {
-  const page = parseInt(searchParams?.page || "1");
-  const pageSize = parseInt(searchParams?.pageSize || "10");
-  const orderBy = searchParams?.orderBy || "recent";
-  const keyword = searchParams?.keyword || "";
+  const page = parseInt(searchParams?.page || '1');
+  const pageSize = parseInt(searchParams?.pageSize || '10');
+  const orderBy = searchParams?.orderBy || 'recent';
+  const keyword = searchParams?.keyword || '';
 
   const [articlesRes, bestListRes] = await Promise.all([
     fetch(
       `${BASE_URL}/articles?page=${page}&pageSize=${pageSize}&orderBy=${orderBy}&keyword=${keyword}`,
-      { cache: "no-store" }
+      { cache: 'no-store' },
     ),
     fetch(`${BASE_URL}/articles?page=1&pageSize=3&orderBy=like`, {
-      cache: "no-store",
+      cache: 'no-store',
     }),
   ]);
 

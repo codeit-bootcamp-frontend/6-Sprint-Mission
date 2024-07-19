@@ -1,13 +1,15 @@
-"use client";
-import styles from "./SearchTitle.module.css";
-import Image from "next/image";
-import { List } from "@/app/apis/getArticle";
-import { formatDate } from "@/app/utils/formateDate";
-import heartIcon from "@/app/assets/images/ic_heart.svg";
-import profileIcon from "@/app/assets/images/ic_profile.png";
-import searchIcon from "@/app/assets/images/ic_search.png";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+'use client';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
+import { List } from '@/app/apis/getArticle';
+import heartIcon from '@/app/assets/images/ic_heart.svg';
+import profileIcon from '@/app/assets/images/ic_profile.png';
+import searchIcon from '@/app/assets/images/ic_search.png';
+import { formatDate } from '@/app/utils/formateDate';
+
+import styles from './SearchTitle.module.css';
 
 interface Props {
   articles: List[];
@@ -38,10 +40,10 @@ export default function SearchTitle({
   useEffect(() => {
     const debounceTimer = setTimeout(() => {
       const params = new URLSearchParams();
-      params.append("page", String(page));
-      params.append("pageSize", String(pageSize));
-      params.append("keyword", searchKeyword);
-      params.append("orderBy", sortBy);
+      params.append('page', String(page));
+      params.append('pageSize', String(pageSize));
+      params.append('keyword', searchKeyword);
+      params.append('orderBy', sortBy);
 
       const newUrl = `/boards?${params.toString()}`;
       router.push(newUrl);
@@ -61,10 +63,10 @@ export default function SearchTitle({
     setIsDropdownOpen(false);
 
     const params = new URLSearchParams();
-    params.append("page", String(page));
-    params.append("pageSize", String(pageSize));
-    params.append("keyword", searchKeyword);
-    params.append("orderBy", newSortBy);
+    params.append('page', String(page));
+    params.append('pageSize', String(pageSize));
+    params.append('keyword', searchKeyword);
+    params.append('orderBy', newSortBy);
 
     const newUrl = `/boards?${params.toString()}`;
     router.push(newUrl);
@@ -72,10 +74,10 @@ export default function SearchTitle({
 
   const handleArticleClick = (articleId: number) => {
     const params = new URLSearchParams();
-    params.append("page", String(page));
-    params.append("pageSize", String(pageSize));
-    params.append("keyword", searchKeyword);
-    params.append("orderBy", sortBy);
+    params.append('page', String(page));
+    params.append('pageSize', String(pageSize));
+    params.append('keyword', searchKeyword);
+    params.append('orderBy', sortBy);
 
     const newUrl = `/boards/${articleId}?${params.toString()}`;
     router.push(newUrl);
@@ -88,15 +90,15 @@ export default function SearchTitle({
 
   const pageNumbers = Array.from(
     { length: endPage - startPage + 1 },
-    (_, index) => startPage + index
+    (_, index) => startPage + index,
   );
 
   const handlePageChange = (newPage: number) => {
     const params = new URLSearchParams();
-    params.append("page", String(newPage));
-    params.append("pageSize", String(pageSize));
-    params.append("keyword", searchKeyword);
-    params.append("orderBy", sortBy);
+    params.append('page', String(newPage));
+    params.append('pageSize', String(pageSize));
+    params.append('keyword', searchKeyword);
+    params.append('orderBy', sortBy);
 
     const newUrl = `/boards?${params.toString()}`;
     router.push(newUrl, { scroll: false });
@@ -117,13 +119,13 @@ export default function SearchTitle({
             className={styles.sortDropdownToggle}
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
-            {sortBy === "recent" ? "최신순" : "좋아요순"}
+            {sortBy === 'recent' ? '최신순' : '좋아요순'}
             <span className={styles.sortDropdownIcon}>▼</span>
           </div>
           {isDropdownOpen && (
             <ul className={styles.sortDropdownMenu}>
-              <li onClick={() => handleSortChange("recent")}>최신순</li>
-              <li onClick={() => handleSortChange("like")}>좋아요순</li>
+              <li onClick={() => handleSortChange('recent')}>최신순</li>
+              <li onClick={() => handleSortChange('like')}>좋아요순</li>
             </ul>
           )}
         </div>
@@ -181,18 +183,18 @@ export default function SearchTitle({
       <div className={styles.pagination}>
         <button
           className={`${styles.paginationButton} ${styles.prev} ${
-            startPage === 1 ? styles.disabled : ""
+            startPage === 1 ? styles.disabled : ''
           }`}
           onClick={() => handlePageChange(startPage - 1)}
           disabled={startPage === 1}
         >
-          {"<"}
+          {'<'}
         </button>
         {pageNumbers.map((pageNumber) => (
           <button
             key={pageNumber}
             className={`${styles.paginationButton} ${
-              page === pageNumber ? styles.active : ""
+              page === pageNumber ? styles.active : ''
             }`}
             onClick={() => handlePageChange(pageNumber)}
           >
@@ -201,12 +203,12 @@ export default function SearchTitle({
         ))}
         <button
           className={`${styles.paginationButton} ${styles.next} ${
-            endPage === totalPages ? styles.disabled : ""
+            endPage === totalPages ? styles.disabled : ''
           }`}
           onClick={() => handlePageChange(endPage + 1)}
           disabled={endPage === totalPages}
         >
-          {">"}
+          {'>'}
         </button>
       </div>
     </div>

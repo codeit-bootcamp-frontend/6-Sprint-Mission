@@ -1,5 +1,6 @@
-import { AxiosError } from "axios";
-import { instance } from "./Axios";
+import { AxiosError } from 'axios';
+
+import { instance } from './Axios';
 
 type LoginData = {
   email: string;
@@ -12,23 +13,23 @@ type LoginResponse = {
 };
 
 const loginUser = async (
-  data: LoginData
+  data: LoginData,
 ): Promise<LoginResponse | undefined> => {
   try {
-    const response = await instance.post<LoginResponse>("/auth/signIn", data);
+    const response = await instance.post<LoginResponse>('/auth/signIn', data);
     const { accessToken, refreshToken } = response.data;
 
-    if (typeof window !== "undefined") {
-      localStorage.setItem("accessToken", accessToken);
-      localStorage.setItem("refreshToken", refreshToken);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('accessToken', accessToken);
+      localStorage.setItem('refreshToken', refreshToken);
     }
 
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) {
-      console.error("요청 실패 (Axios error):", error.message);
+      console.error('요청 실패 (Axios error):', error.message);
     } else {
-      console.error("요청 실패 (Unknown error):", error);
+      console.error('요청 실패 (Unknown error):', error);
     }
     return undefined;
   }

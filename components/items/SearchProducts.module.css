@@ -1,0 +1,71 @@
+.searchContainerWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  display: flex;
+  padding: 0.5rem;
+  border: 1px solid #3692ff;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.searchContainers {
+  display: flex;
+}
+
+.dropdownWrapper {
+  width: 120px;
+  height: 45px;
+  padding: 12px 20px 2px 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dropdownList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100px;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.dropdownOption {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.dropdownOption:hover {
+  background-color: #f0f0f0;
+}
+
+.buttonProduct {
+  padding: 10px 17px;
+  background-color: #3692ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .searchContainerWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchContainers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,20 +1,21 @@
-"use client";
-import { useState, useEffect } from "react";
-import styles from "@/components/BoardDetail/CommentInput.module.css";
-import { useRouter } from "next/navigation";
-import { postComment } from "@/app/apis/postComments";
+'use client';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
+import { postComment } from '@/app/apis/postComments';
+import styles from '@/components/BoardDetail/CommentInput.module.css';
 
 interface CommentInputProps {
   articleId: number;
 }
 
 export default function CommentInput({ articleId }: CommentInputProps) {
-  const [comment, setComment] = useState("");
-  const [token, setToken] = useState("");
+  const [comment, setComment] = useState('');
+  const [token, setToken] = useState('');
   const router = useRouter();
 
   useEffect(() => {
-    const storedToken = localStorage.getItem("accessToken");
+    const storedToken = localStorage.getItem('accessToken');
     if (storedToken) {
       setToken(storedToken);
     }
@@ -25,10 +26,10 @@ export default function CommentInput({ articleId }: CommentInputProps) {
 
     try {
       await postComment(articleId, comment, token);
-      setComment("");
+      setComment('');
       router.refresh();
     } catch (error) {
-      console.error("댓글 작성 중 오류 발생:", error);
+      console.error('댓글 작성 중 오류 발생:', error);
     }
   };
 

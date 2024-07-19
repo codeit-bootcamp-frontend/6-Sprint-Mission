@@ -1,4 +1,3 @@
-// postArticle.ts
 import { instance } from "./Axios";
 
 export const uploadImage = async (

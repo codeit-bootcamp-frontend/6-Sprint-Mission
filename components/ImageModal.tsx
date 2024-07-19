@@ -1,7 +1,9 @@
-import { useRef } from "react";
-import styles from "./ImageModal.module.css";
-import Image from "next/image";
-import useOutsideClick from "@/app/hooks/useOutsideClick";
+import Image from 'next/image';
+import { useRef } from 'react';
+
+import useOutsideClick from '@/app/hooks/useOutsideClick';
+
+import styles from './ImageModal.module.css';
 
 type Props = {
   isOpen: boolean;

@@ -1,13 +1,15 @@
-"use client";
-import styles from "@/components/BoardDetail/BoardDetail.module.css";
-import { RootObject } from "@/app/apis/getArticleDetail";
-import { formatDate } from "@/app/utils/formateDate";
-import Image from "next/image";
-import profileImg from "@/app/assets/images/ic_profile.png";
-import LikeButton from "./LikeButton";
-import DropdownMenu from "@/components/DropDown";
-import { useState } from "react";
-import ImageModal from "@/components/ImageModal";
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+
+import { RootObject } from '@/app/apis/getArticleDetail';
+import profileImg from '@/app/assets/images/ic_profile.png';
+import { formatDate } from '@/app/utils/formateDate';
+import styles from '@/components/BoardDetail/BoardDetail.module.css';
+import DropdownMenu from '@/components/DropDown';
+import ImageModal from '@/components/ImageModal';
+
+import LikeButton from './LikeButton';
 
 type Props = {
   article: RootObject;
@@ -61,7 +63,7 @@ export default function BoardDetail({ article }: Props) {
       <ImageModal
         isOpen={isModalOpen}
         onClose={closeModal}
-        imageSrc={article.image || ""}
+        imageSrc={article.image || ''}
       />
     </div>
   );

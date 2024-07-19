@@ -1,10 +1,12 @@
-import BestListCss from "./BestList.module.css";
-import { List } from "@/app/apis/getArticle";
-import { formatDate } from "@/app/utils/formateDate";
-import Image from "next/image";
-import bestBadge from "@/app/assets/images/img_badgez.svg";
-import heartIcon from "@/app/assets/images/ic_heart.svg";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { List } from '@/app/apis/getArticle';
+import heartIcon from '@/app/assets/images/ic_heart.svg';
+import bestBadge from '@/app/assets/images/img_badgez.svg';
+import { formatDate } from '@/app/utils/formateDate';
+
+import BestListCss from './BestList.module.css';
 
 interface Props {
   bestList: List[];

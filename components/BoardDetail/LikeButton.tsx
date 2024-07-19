@@ -1,10 +1,11 @@
 // LikeButton.tsx
-"use client";
-import Image from "next/image";
-import styles from "@/components/BoardDetail/BoardDetail.module.css";
-import heartImg from "@/app/assets/images/ic_heart.svg";
-import heartfill from "@/app/assets/images/fillheart.png";
-import useLike from "@/app/hooks/useLike";
+'use client';
+import Image from 'next/image';
+
+import heartfill from '@/app/assets/images/fillheart.png';
+import heartImg from '@/app/assets/images/ic_heart.svg';
+import useLike from '@/app/hooks/useLike';
+import styles from '@/components/BoardDetail/BoardDetail.module.css';
 
 type Props = {
   articleId: number;
@@ -14,7 +15,7 @@ type Props = {
 export default function LikeButton({ articleId, initialLikeCount }: Props) {
   const { likeCount, isLiked, handleLikeClick } = useLike(
     articleId,
-    initialLikeCount
+    initialLikeCount,
   );
 
   return (

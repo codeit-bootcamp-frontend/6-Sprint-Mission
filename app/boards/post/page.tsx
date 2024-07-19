@@ -1,9 +1,11 @@
-"use client";
-import styles from "./Page.module.css";
-import FileInput from "@/components/BoardPost/FileInput";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { BASE_URL } from "@/app/apis/getArticle";
+'use client';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+
+import { BASE_URL } from '@/app/apis/getArticle';
+import FileInput from '@/components/BoardPost/FileInput';
+
+import styles from './Page.module.css';
 
 type Values = {
   title: string;
@@ -14,8 +16,8 @@ type Values = {
 export default function PostPage() {
   const router = useRouter();
   const [values, setValues] = useState<Values>({
-    title: "",
-    content: "",
+    title: '',
+    content: '',
     imgFile: null,
   });
 
@@ -28,10 +30,10 @@ export default function PostPage() {
 
   const handleSubmit = async () => {
     try {
-      const accessToken = localStorage.getItem("accessToken");
+      const accessToken = localStorage.getItem('accessToken');
 
       if (!accessToken) {
-        console.error("Access token not found");
+        console.error('Access token not found');
         return;
       }
 
@@ -42,10 +44,10 @@ export default function PostPage() {
       if (imgFile) {
         const formData = new FormData();
 
-        formData.append("image", imgFile);
+        formData.append('image', imgFile);
 
         const imageResponse = await fetch(`${BASE_URL}/images/upload`, {
-          method: "POST",
+          method: 'POST',
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -57,7 +59,7 @@ export default function PostPage() {
 
           imageUrl = imageData.url;
         } else {
-          console.error("Error uploading image:", imageResponse.statusText);
+          console.error('Error uploading image:', imageResponse.statusText);
           return;
         }
       }
@@ -69,21 +71,21 @@ export default function PostPage() {
       };
 
       const response = await fetch(`${BASE_URL}/articles`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
           Authorization: `Bearer ${accessToken}`,
         },
         body: JSON.stringify(requestBody),
       });
 
       if (response.ok) {
-        router.push("/articles");
+        router.push('/articles');
       } else {
-        console.error("Error posting article:", response.statusText);
+        console.error('Error posting article:', response.statusText);
       }
     } catch (error) {
-      console.error("Error posting article:", error);
+      console.error('Error posting article:', error);
     }
   };
 
@@ -108,7 +110,7 @@ export default function PostPage() {
             className={styles.postTitleInput}
             placeholder="제목을 입력해주세요"
             value={values.title}
-            onChange={(e) => handleChange("title", e.target.value)}
+            onChange={(e) => handleChange('title', e.target.value)}
           />
         </div>
         <div className={styles.postContentWrapper}>
@@ -117,7 +119,7 @@ export default function PostPage() {
             className={styles.postContentInput}
             placeholder="내용을 입력해주세요"
             value={values.content}
-            onChange={(e) => handleChange("content", e.target.value)}
+            onChange={(e) => handleChange('content', e.target.value)}
           />
         </div>
         <div>

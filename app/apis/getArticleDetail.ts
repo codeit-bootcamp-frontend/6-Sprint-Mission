@@ -1,4 +1,4 @@
-import { instance } from "./Axios";
+import { instance } from './Axios';
 
 export interface RootObject {
   id: number;
@@ -27,6 +27,6 @@ export async function getArticleDetail(articleId: number): Promise<RootObject> {
     const data = res.data;
     return data;
   } catch (error) {
-    throw error;
+    throw new Error('게시글 조회 중 오류 발생');
   }
 }

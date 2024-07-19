@@ -1,0 +1,32 @@
+.totalProductContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* 태블릿 */
+@media (max-width: 1200px) {
+  .totalProductContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .totalProductContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.totalProductWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totalProductContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}

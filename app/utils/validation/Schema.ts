@@ -1,5 +1,6 @@
-import * as yup from "yup";
-import Messages from "./Message";
+import * as yup from 'yup';
+
+import Messages from './Message';
 
 export const loginSchema = yup.object().shape({
   email: yup
@@ -24,6 +25,6 @@ export const signUpSchema = yup.object().shape({
   passwordConfirmation: yup
     .string()
     .required(Messages.CONFIRM_PASSWORD_REQUIRED)
-    .oneOf([yup.ref("password")], Messages.PASSWORDS_MUST_MATCH),
+    .oneOf([yup.ref('password')], Messages.PASSWORDS_MUST_MATCH),
   nickname: yup.string().required(Messages.NICKNAME_REQUIRED),
 });

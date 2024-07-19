@@ -1,5 +1,6 @@
-import { AxiosError } from "axios";
-import { instance } from "./Axios";
+import { AxiosError } from 'axios';
+
+import { instance } from './Axios';
 
 type SignUpData = {
   email: string;
@@ -14,23 +15,23 @@ type SignUpResponse = {
 
 const fetchData = async <T>(
   url: string,
-  data?: SignUpData
+  data?: SignUpData,
 ): Promise<T | undefined> => {
   try {
     const response = await instance.post<T>(url, JSON.stringify(data));
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) {
-      console.error("요청 실패 (Axios error):", error.message);
+      console.error('요청 실패 (Axios error):', error.message);
     } else {
-      console.error("요청 실패 (Unknown error):", error);
+      console.error('요청 실패 (Unknown error):', error);
     }
     return undefined;
   }
 };
 
 export const signUpUser = (
-  data: SignUpData
+  data: SignUpData,
 ): Promise<SignUpResponse | undefined> => {
-  return fetchData<SignUpResponse>("/auth/signup", data);
+  return fetchData<SignUpResponse>('/auth/signup', data);
 };

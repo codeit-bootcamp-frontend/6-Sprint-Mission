@@ -1,7 +1,8 @@
-"use client";
-import React, { useState, useRef, useEffect } from "react";
-import styles from "./FileInput.module.css";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
+
+import styles from './FileInput.module.css';
 
 interface FileInputProps {
   name: string;
@@ -10,7 +11,7 @@ interface FileInputProps {
 }
 
 const FileInput: React.FC<FileInputProps> = ({ name, value, onChange }) => {
-  const [previewImg, setPreviewImg] = useState<string>("");
+  const [previewImg, setPreviewImg] = useState<string>('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,14 +22,14 @@ const FileInput: React.FC<FileInputProps> = ({ name, value, onChange }) => {
   const handleRemoveFile = () => {
     const inputNode = inputRef.current;
     if (!inputNode) return;
-    inputNode.value = "";
+    inputNode.value = '';
     onChange(name, null);
-    setPreviewImg("");
+    setPreviewImg('');
   };
 
   useEffect(() => {
     if (!value) {
-      setPreviewImg("");
+      setPreviewImg('');
       return;
     }
     const nextPreview = URL.createObjectURL(value);
@@ -47,7 +48,7 @@ const FileInput: React.FC<FileInputProps> = ({ name, value, onChange }) => {
           onChange={handleChange}
           id="file-input"
           ref={inputRef}
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
         />
         <label htmlFor="file-input">
           <div className={styles.uploadButton}>
