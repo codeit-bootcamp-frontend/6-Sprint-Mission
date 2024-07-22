@@ -1,9 +1,18 @@
 import React from 'react';
-import { Product } from '../api/api';
+import { productType } from '../api/type';
 import heart from '../img/smallHeart.png';
-const TotalProduct = ({ element }: { element: Product }) => {
+interface totalProductProps {
+  element: productType;
+  onClick: (id: number) => void;
+}
+
+const TotalProduct = ({ element, onClick }: totalProductProps) => {
   return (
-    <div className='gridComponent' key={element.id}>
+    <div
+      className='gridComponent'
+      key={element.id}
+      onClick={() => onClick(element.id)}
+    >
       <img className='productImage' src={element.images[0]} />
       <p className='name'>{element.name}</p>
       <p className='price'>{element.price}원</p>

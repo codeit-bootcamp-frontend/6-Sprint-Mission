@@ -10,6 +10,7 @@ import twitterIcon from '../icon/twitter.png';
 import youtubeIcon from '../icon/youtube.png';
 import style from '../style/Main.module.css';
 import { Link } from 'react-router-dom';
+
 const MainPage = () => {
   return (
     <>

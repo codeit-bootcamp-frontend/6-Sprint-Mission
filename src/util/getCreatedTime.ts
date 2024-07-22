@@ -1,6 +1,6 @@
-import { Inquiry } from '../api/api';
+import { inquiryType } from '../api/type';
 
-export const getCreatedTime = (element: Inquiry) => {
+export const getCreatedTime = (element: inquiryType) => {
   const now = new Date();
   const before = new Date(element.createdAt);
   const time = now.getTime() - before.getTime();

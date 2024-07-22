@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className='nav'>
       <div className='leftBtn'>
-        <Link to={'/main'}>
+        <Link to={'/'}>
           <img className='logo' src={logo} alt='로고' />
         </Link>
         <p>자유게시판</p>

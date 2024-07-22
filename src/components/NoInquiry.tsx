@@ -1,6 +1,7 @@
 import React from 'react';
 import noComment from '../img/noComment.png';
 import '../style/NoComment.css';
+
 const NoInquiry = () => {
   return (
     <div className='noComment'>

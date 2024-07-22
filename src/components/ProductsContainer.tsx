@@ -23,7 +23,7 @@ const ProductsContainer = () => {
     window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize); // 언마운트시 이벤트 리스너 삭제[
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 

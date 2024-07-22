@@ -5,7 +5,7 @@
   border-bottom: 1px solid var(--bottom);
 }
 
-#itemImage {
+.itemImage {
   border-radius: 12px;
   width: 486px;
   height: 486px;

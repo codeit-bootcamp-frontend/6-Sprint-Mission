@@ -1,13 +1,17 @@
 import React from 'react';
 import moreImg from '../img/moreBtn.png';
 import mediumHeart from '../img/mediumHeart.png';
-import { Product } from '../api/api';
+import { productType } from '../api/type';
 import style from '../style/ProductIntroduce.module.css';
 
-const ProductDetail = ({ product }: { product: Product }) => {
+const ProductDetail = ({ product }: { product: productType }) => {
   return (
     <div className={style['productContainer']}>
-      <img id='itemImage' src={product.images[0]} alt='물품상세이미지' />
+      <img
+        className={style['itemImage']}
+        src={product.images[0]}
+        alt='물품상세이미지'
+      />
       <div className={style['informationContainer']}>
         <div className={style['info']}>
           <div>
