@@ -47,12 +47,9 @@ export async function postArticle(values) {
 }
 
 export async function postFile(file) {
-  const accessToken = localStorage.getItem("accessToken");
-
   const res = await axios.post(`/images/upload`, file, {
     headers: {
       "Content-Type": "multipart/form-data",
-      Authorization: `Bearer ${accessToken}`,
     },
   });
   return res;

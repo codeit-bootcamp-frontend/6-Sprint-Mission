@@ -9,3 +9,11 @@ export default interface Product {
   name: string;
   id: number;
 }
+
+export interface ProductForm {
+  images: string;
+  tags: string[];
+  price: string;
+  description: string;
+  name: string;
+}

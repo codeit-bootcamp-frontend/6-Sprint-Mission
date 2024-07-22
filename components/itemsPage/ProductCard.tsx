@@ -12,13 +12,13 @@ const ProductCard = ({
   const { images, name, price, favoriteCount } = item;
 
   return (
-    <div className="mb-16 flex flex-col gap-16">
+    <div className="flex flex-col gap-16 mb-16">
       {images ? (
         <Link
           href={`/items/${item.id}`}
-          className={` ${bestSize ? "h-343 md:h-336 xl:h-282 relative aspect-square w-343 rounded-16 md:w-336 xl:w-282" : "md:h-221 relative aspect-square h-168 w-168 rounded-16 md:w-221"}`}
+          className={` ${bestSize ? "relative aspect-square h-343 w-343 md:h-336 md:w-336 xl:h-282 xl:w-282" : "relative aspect-square h-168 w-168 rounded-16 md:h-221 md:w-221"}`}
         >
-          <Image src={images[0]} fill alt="product" />
+          <Image className="rounded-16" src={images[0]} fill alt="product" />
         </Link>
       ) : (
         ""
