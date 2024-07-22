@@ -4,13 +4,13 @@ import {
   Route,
 } from "react-router-dom";
 
-import App from "../app/App";
 import { Items } from "../pages/items";
 import { RegisterPage } from "../pages/RegisterPage";
 import { ErrorPage } from "../pages/ErrorPage";
 import { ProductPage } from "../pages/ProductPage";
-import { LoginPage } from "@/pages/login";
-import { SignupPage } from "@/pages/signup";
+import { LoginPage } from "../pages/login";
+import { SignupPage } from "../pages/signup";
+import App from "@/app/App";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

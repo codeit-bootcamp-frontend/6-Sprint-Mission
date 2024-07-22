@@ -1,9 +1,10 @@
 import { AxiosError } from "axios";
-import { instance } from "./axios";
+import { instanceWithoutInterceptors } from "./axios";
 import {
   GetCommentsProps,
   GetDatumProps,
   GetProductProps,
+  PostAuthRefreshToken,
   SignInRequestData,
   SignInResponseData,
   SignUpRequestData,
@@ -12,6 +13,7 @@ import {
   SpecificProductData,
   TotalProductsData,
 } from "./type";
+import Cookies from "js-cookie";
 
 // 나중에 전부 axios로 바꾸기
 export async function getDatum({
@@ -27,8 +29,10 @@ export async function getDatum({
       orderBy,
     });
     if (keyword) searchParams.set("keyword", keyword);
-    const response = await instance(`/products?`, { params: searchParams });
-    return response.data as TotalProductsData;
+    const response = await instanceWithoutInterceptors(`/products?`, {
+      params: searchParams,
+    });
+    return response.data;
   } catch (error) {
     console.error(error);
     alert(error);
@@ -38,7 +42,9 @@ export async function getDatum({
 
 export const getProduct = async ({ productId }: GetProductProps) => {
   try {
-    const response = await instance(`/products/${productId}`);
+    const response = await instanceWithoutInterceptors(
+      `/products/${productId}`
+    );
     const data: SpecificProductData = response.data;
     return data;
   } catch (error) {
@@ -56,9 +62,12 @@ export const getComments = async ({
     const searchParams = new URLSearchParams({
       limit: limit.toString(),
     });
-    const response = await instance(`/products/${productId}/comments`, {
-      params: searchParams,
-    });
+    const response = await instanceWithoutInterceptors(
+      `/products/${productId}/comments`,
+      {
+        params: searchParams,
+      }
+    );
     const data: SpecificCommentsData = response.data;
     return data;
   } catch (error) {
@@ -75,7 +84,7 @@ export const postSignUp = async ({
   passwordConfirmation,
 }: SignUpRequestData) => {
   try {
-    const response = await instance.post(`/auth/signUp`, {
+    const response = await instanceWithoutInterceptors.post(`/auth/signUp`, {
       email,
       nickname,
       password,
@@ -84,21 +93,51 @@ export const postSignUp = async ({
     const data: SignUpResponseData = response.data;
     return data;
   } catch (error) {
-    console.error(error);
-    alert(error);
+    if (error instanceof AxiosError) {
+      console.log(error.response);
+      alert(error.response?.data?.message);
+      throw new Error();
+    }
     throw new Error();
   }
 };
 
 export const postSignIn = async ({ email, password }: SignInRequestData) => {
   try {
-    const response = await instance.post(`/auth/signIn`, { email, password });
+    const response = await instanceWithoutInterceptors.post(`/auth/signIn`, {
+      email,
+      password,
+    });
     const data: SignInResponseData = response.data;
     return data;
   } catch (error) {
     if (error instanceof AxiosError) {
       console.log(error.response);
       alert(error.response?.data?.message);
+      throw new Error();
     }
+    throw new Error();
+  }
+};
+
+export const postAuthRefreshToken = async () => {
+  try {
+    const refreshToken = Cookies.get("refreshToken");
+    if (refreshToken === undefined) {
+      throw new Error("refreshToken이 없습니다.");
+    }
+    const response = await instanceWithoutInterceptors.post(
+      `/auth/refresh-token`,
+      { refreshToken }
+    );
+    const data: PostAuthRefreshToken = response.data;
+    return data;
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      console.log(error.response);
+      alert(error.response?.data?.message);
+      throw new Error();
+    }
+    throw new Error();
   }
 };

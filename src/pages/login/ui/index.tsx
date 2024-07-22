@@ -1,4 +1,4 @@
-import { useStore } from "@/app/store";
+import { useUserStore } from "@/app/store";
 import { postSignIn } from "@/shared/api/api";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FieldValues, useForm } from "react-hook-form";
@@ -11,7 +11,7 @@ const schema = z.object({
 });
 // 네트워크 요청을 보내기 전에 형식 검사
 export function LoginPage() {
-  const { login } = useStore();
+  const { login } = useUserStore();
   const navigate = useNavigate();
   const {
     register,

@@ -96,3 +96,7 @@ export interface SignInResponseData {
     createdAt: string;
   };
 }
+
+export interface PostAuthRefreshToken {
+  accessToken: string;
+}

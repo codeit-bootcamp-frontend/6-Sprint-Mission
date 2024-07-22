@@ -3,10 +3,10 @@ import logoUrl from "/src/shared/asset/headerLogo.png";
 import { Link } from "react-router-dom";
 import loginUrl from "/src/shared/asset/login.png";
 import { Button } from "@/shared/ui/Button";
-import { useStore } from "@/app/store";
+import { useUserStore } from "@/app/store";
 
 export const Header = () => {
-  const { user } = useStore();
+  const { user } = useUserStore();
   return (
     <header className="header">
       <div className="wrapper">
@@ -22,10 +22,7 @@ export const Header = () => {
             </Link>
           </div>
           <div className="header__nav--wrap">
-            <Link
-              to="/freeBoard"
-              className="link header__nav header__nav--not-active"
-            >
+            <Link to="/" className="link header__nav header__nav--not-active">
               자유게시판
             </Link>
             <Link to="/market" className="link header__nav header__nav--active">
