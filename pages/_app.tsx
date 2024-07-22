@@ -5,12 +5,15 @@ import Container from "../components/Layout/Container";
 import Head from "next/head";
 import { AuthProvider } from "../contexts/AuthProvider";
 import { usePathname } from "next/navigation";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export default function App({ Component, pageProps }: AppProps) {
   const path = usePathname();
+  const queryClient = new QueryClient();
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
@@ -32,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </AuthProvider>
       </Container>
-    </>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }

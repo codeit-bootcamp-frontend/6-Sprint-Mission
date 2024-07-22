@@ -1,0 +1,131 @@
+@import "/styles/index.scss";
+
+.container {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  gap: 7px;
+
+  .likes {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    .like_button {
+      display: inline-block;
+      position: relative;
+
+      .toggle_button {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background-image: url("/src/assets/images/icons/ic_heart.svg");
+        cursor: pointer;
+      }
+
+      .like_toggle {
+        &:checked {
+          + .toggle_button {
+            background-image: url("/src/assets/images/icons/ic_heart.svg");
+          }
+        }
+
+        .like_toggle {
+          display: none;
+        }
+      }
+    }
+
+    .like_count {
+      display: inline-block;
+      @include font-base(get_color(black), 500, 12px, 14.32px);
+    }
+  }
+  .title {
+    @include font-base(get_color(black), 500, 14px, 16.71px);
+    text-decoration: none;
+  }
+
+  .image {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1/1;
+    border: 1px black solid;
+    border-radius: 16px;
+    &.all {
+      width: 221px;
+      height: 221px;
+    }
+
+    &.best {
+      width: 282px;
+      height: 282px;
+    }
+    img {
+      border-radius: 16px;
+    }
+  }
+
+  .price {
+    @include font-base(get_color(black), 700, 16px, 19.09px);
+  }
+}
+
+.list {
+  display: grid;
+  column-gap: 24px;
+
+  &.all {
+    grid-template: repeat(2, 301px) / repeat(5, 221px);
+    row-gap: 10px;
+  }
+
+  &.best {
+    grid-template: 1fr / repeat(4, 282px);
+  }
+
+  .items {
+    list-style-type: none;
+  }
+
+  li {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .list {
+    &.all {
+      grid-template: repeat(2, 301px) / repeat(3, 221px);
+    }
+
+    &.best {
+      grid-template: 1fr / repeat(2, 336px);
+    }
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .list {
+    &.all {
+      grid-template: repeat(2, 248px) / repeat(2, 168px);
+    }
+
+    &.best {
+      grid-template: 1fr / auto;
+    }
+  }
+
+  .container {
+    .image {
+      &.all {
+        width: 168px;
+        height: 168px;
+      }
+      &.best {
+        width: 343px;
+        height: 343px;
+      }
+    }
+  }
+}

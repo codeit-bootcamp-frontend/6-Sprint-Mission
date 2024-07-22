@@ -9,7 +9,7 @@ import ProfileImage from "../../src/assets/images/ui/ic_profile.svg";
 
 const menuItems = [
   { id: "item1", name: "자유게시판", path: "/board" },
-  { id: "item2", name: "중고마켓", path: "/additem" },
+  { id: "item2", name: "중고마켓", path: "/items" },
 ];
 
 export default function Header() {

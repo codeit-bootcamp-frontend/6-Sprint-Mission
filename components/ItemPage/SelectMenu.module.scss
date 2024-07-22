@@ -1,0 +1,21 @@
+@import "/styles/index.scss";
+
+.sort_button {
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+}
+
+.toggle_menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: get_color(white);
+  row-gap: 3px;
+  z-index: 3;
+}

@@ -5,20 +5,24 @@ const nextConfig = {
   reactStrictMode: true,
   // assetPrefix: ".",
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "sprint-fe-project.s3.ap-northeast-2.amazonaws.com",
-        port: "",
-        pathname: "/Sprint_Mission/**",
-      },
-      {
-        protocol: "https",
-        hostname: "example.com",
-        port: "",
-        pathname: "/",
-      },
+    domains: [
+      "sprint-fe-project.s3.ap-northeast-2.amazonaws.com",
+      "example.com",
     ],
+    // remotePatterns: [
+    //   {
+    //     protocol: "https",
+    //     hostname: "sprint-fe-project.s3.ap-northeast-2.amazonaws.com",
+    //     port: "",
+    //     pathname: "/Sprint_Mission/**",
+    //   },
+    //   {
+    //     protocol: "https",
+    //     hostname: "example.com",
+    //     port: "",
+    //     pathname: "/",
+    //   },
+    // ],
   },
 
   webpack(config) {

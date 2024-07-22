@@ -1,0 +1,93 @@
+@import "/styles/index.scss";
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-block: 24px 12px;
+
+  .content {
+    @include font-base(get_color(black), 700, 20px, 28px);
+    max-width: 600px;
+    flex-grow: 3;
+  }
+
+  .search {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background-color: get_color(gray_100);
+    border-radius: 12px;
+    padding-block: 9px;
+    padding-inline: 20px 16px;
+
+    .search_image {
+      width: 16px;
+      height: 16px;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-image: url("../../src/assets/images/icons/ic_search.svg");
+    }
+
+    .search_input {
+      @include font-base(get_color(black), 400, 16px, 24px);
+      background-color: get_color(gray_100);
+      border: none;
+    }
+  }
+
+  .add_item {
+    @include font-base(get_color(white), 600, 16px, 19.09px);
+    text-align: center;
+    width: 133px;
+    height: 42px;
+    border-radius: 8px;
+    padding: 12px 10px;
+    background-color: get_color(blue_primary);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .select_box_area {
+    position: relative;
+    max-width: 64px;
+    background-color: get_color(white);
+    padding: 3px;
+    border-radius: 3px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .search {
+    width: 242px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .title {
+    display: grid;
+    grid-template: repeat(2, auto) / 300px auto;
+
+    .content {
+      width: fit-content;
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    .search {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+    .add_item {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+  }
+
+  .select_box_area {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+}

@@ -1,0 +1,10 @@
+@import "/styles/index.scss";
+
+.container {
+  .title {
+    padding-block: 24px 12px;
+    .content {
+      @include font-base(get_color(gray_800), 700, 20px, 28px);
+    }
+  }
+}
