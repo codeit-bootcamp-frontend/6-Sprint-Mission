@@ -1,13 +1,17 @@
-import { useState } from "react";
-import { styled } from "styled-components";
-import arrow from "../../assets/arrowDown.svg";
+import { useState } from 'react';
+import { styled } from 'styled-components';
+import arrow from '../../assets/arrowDown.svg';
 
-interface AccordionProps {
-  handleRecent: () => void;
-  handleFavorite: () => void;
+interface AccordionItem {
+  label: string;
+  onClick: () => void;
 }
 
-function Accordion({ handleRecent, handleFavorite }: AccordionProps) {
+interface AccordionProps {
+  items: AccordionItem[];
+}
+
+function Accordion({ items }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -22,8 +26,11 @@ function Accordion({ handleRecent, handleFavorite }: AccordionProps) {
       </StyledButton>
       {isOpen && (
         <AccList>
-          <AccEle onClick={handleRecent}>최신순</AccEle>
-          <AccEle onClick={handleFavorite}>좋아요순</AccEle>
+          {items.map((item, index) => (
+            <AccEle key={index} onClick={item.onClick}>
+              {item.label}
+            </AccEle>
+          ))}
         </AccList>
       )}
     </StyledAccordion>

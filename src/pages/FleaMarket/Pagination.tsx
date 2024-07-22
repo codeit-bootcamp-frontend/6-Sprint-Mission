@@ -10,18 +10,25 @@ interface PaginationProps {
   pageNumbers: number[];
 }
 
-function Pagination({ page, handlePrevPage, handleNextPage, handleClickPageNum, pageNumbers }: PaginationProps) {
-
+function Pagination({
+  page,
+  handlePrevPage,
+  handleNextPage,
+  handleClickPageNum,
+  pageNumbers,
+}: PaginationProps) {
   return (
     <PaginationIconContainer>
       <ButtonIcon>
         <img src={leftButton} alt="왼쪽 버튼" onClick={handlePrevPage} />
       </ButtonIcon>
       {pageNumbers.map((number) => (
-        <NumberContainer key={number} $isActive={number === page} onClick={() => handleClickPageNum(number)} >
-          <Number $isActive={number === page}>
-            {number}
-          </Number>
+        <NumberContainer
+          key={number}
+          $isActive={number === page}
+          onClick={() => handleClickPageNum(number)}
+        >
+          <Number $isActive={number === page}>{number}</Number>
         </NumberContainer>
       ))}
       <ButtonIcon type="button" onClick={handleNextPage}>
@@ -47,13 +54,15 @@ const NumberContainer = styled.div<{ $isActive: boolean }>`
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  border: 1px solid ${({ $isActive }) => $isActive ? "var(--main-color)" : "#E5E7EB"};
+  border: 1px solid
+    ${({ $isActive }) => ($isActive ? "var(--main-color)" : "#E5E7EB")};
   padding: 12.5px;
-  background-color: ${({ $isActive }) => $isActive ? "var(--main-color)" : "white"}; 
+  background-color: ${({ $isActive }) =>
+    $isActive ? "var(--main-color)" : "white"};
 `;
 
 const Number = styled.p<{ $isActive: boolean }>`
-  color: ${({ $isActive }) => $isActive ? "white" : "#E5E7EB"}; 
+  color: ${({ $isActive }) => ($isActive ? "white" : "#E5E7EB")};
 `;
 
 export default Pagination;

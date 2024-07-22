@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import { styled } from "styled-components";
-import DefaultButton from "../../../../common/DefaultButton";
-import { ReactComponent as DotsIcon } from "../../../../assets/dotsIcon.svg";
-
+import { Link } from 'react-router-dom';
+import { styled } from 'styled-components';
+import DefaultButton from '../../../../common/DefaultButton';
+import { ReactComponent as DotsIcon } from '../../../../assets/dotsIcon.svg';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,10 +9,10 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   width: 1200px;
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     width: 373px;
   }
-  @media ${props => props.theme.tablet} {
+  @media ${(props) => props.theme.tablet} {
     width: 696px;
   }
 `;
@@ -26,7 +25,7 @@ export const ProductDetailContainer = styled.section`
   margin: 0 auto;
   border-bottom: 1px solid var(--input-background-color);
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     flex-direction: column;
   }
 `;
@@ -36,11 +35,11 @@ export const ProductImage = styled.img`
   height: 486px;
   border-radius: 28.59px;
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     width: 340px;
     height: 340px;
   }
-  @media ${props => props.theme.tablet} {
+  @media ${(props) => props.theme.tablet} {
     width: 340px;
     height: 340px;
   }
@@ -51,13 +50,13 @@ export const DescriptionContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     justify-content: normal;
-    gap: 24px; 
+    gap: 24px;
   }
-  @media ${props => props.theme.tablet} {
+  @media ${(props) => props.theme.tablet} {
     justify-content: normal;
-    gap: 24px; 
+    gap: 24px;
   }
 `;
 
@@ -68,7 +67,7 @@ export const DescriptionBox = styled.div`
 export const DescriptionTitle = styled.h2`
   margin-bottom: 16px;
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     font-size: 16px;
     font-weight: 600;
     line-height: 19.09px;
@@ -77,13 +76,14 @@ export const DescriptionTitle = styled.h2`
 `;
 
 export const SettingIcon = styled(DotsIcon)`
-  display: none;
-  
-  @media ${props => props.theme.mobile} {
+  margin-left: auto;
+  cursor: pointer;
+
+  @media ${(props) => props.theme.mobile} {
     display: inline;
     margin-left: auto;
   }
-  @media ${props => props.theme.tablet} {
+  @media ${(props) => props.theme.tablet} {
     display: inline;
     margin-left: auto;
   }
@@ -100,7 +100,7 @@ export const DescriptionPrice = styled.p`
   line-height: 47.73px;
   margin-bottom: 16px;
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     font-size: 24px;
     font-weight: 600;
     line-height: 28.64px;
@@ -165,7 +165,7 @@ export const Input = styled.textarea`
     color: var(--placeholder-color);
   }
 
-  @media ${props => props.theme.mobile} {
+  @media ${(props) => props.theme.mobile} {
     &::placeholder {
       font-size: 14px;
       font-weight: 400;
@@ -177,7 +177,7 @@ export const Input = styled.textarea`
 export const SubmitButton = styled(DefaultButton)`
   align-self: flex-end;
   background-color: var(--main-color);
-  
+
   &:disabled {
     background-color: var(--placeholder-color);
   }
@@ -197,7 +197,7 @@ export const InquireDescription = styled.h3`
 export const StyledLink = styled(Link)`
   align-self: center;
 `;
-  
+
 export const BackButton = styled(DefaultButton)`
   display: flex;
   align-items: center;

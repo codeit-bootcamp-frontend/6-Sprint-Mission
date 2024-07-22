@@ -1,99 +1,86 @@
-import { useState, useEffect, useCallback } from "react";
-import { Helmet } from "react-helmet";
-import { styled } from "styled-components";
-import BestProducts from "./BestProducts";
-import AllProducts from "./AllProducts";
-import { PAGESIZE } from "../../utils/constant";
-import { getBestProducts, getItems } from "../../api/api";
-import Pagination from "./Pagination";
-import useAsync from "../../hooks/useAsync";
-import usePagination from "../../hooks/usePagination";
-import { Product, PageOptions } from "../../types";
+/* eslint-disable @typescript-eslint/no-redeclare */
+import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { useQuery } from '@tanstack/react-query';
+import styled from 'styled-components';
+import BestProducts from './BestProducts';
+import AllProducts from './AllProducts';
+import { getAllProducts, getBestProducts } from '../../api/api';
+import Pagination from './Pagination';
+import usePagination from '../../hooks/usePagination';
+import { Product } from '../../types';
+
+const PAGE_SIZE = 10;
 
 function FleaMarketPage() {
-  const [products, setProducts] = useState<Product["list"]>([]);
-  const [orderBy, setOrderBy] = useState("recent");
-  const [allProductsError, getAllProductsAsync] = useAsync<Product>(getItems);
-  const [bestProductsError, getBestProductsAsync] = useAsync<Product>(getBestProducts);
-  const [bestProducts, setBestProducts] = useState<Product["list"]>([]);
+  const [orderBy, setOrderBy] = useState('recent');
   const [totalCount, setTotalCount] = useState(0);
 
-  // Pagination Custom Hook
-  const {
-    page,
-    pageNumbers,
-    handleNextPage,
-    handlePrevPage,
-    handleClickPageNum,
-  } = usePagination<Product>(1, totalCount, PAGESIZE, async function (): Promise<Product> {
-    const result = await getAllProductsAsync({
-      page,
-      pageSize: PAGESIZE,
-      orderBy,
+  // 페이지네이션
+  const { page, setPage, pageNumbers, handleNextPage, handlePrevPage, handleClickPageNum } =
+    usePagination<Product>(1, totalCount, PAGE_SIZE, async ({ page, pageSize, orderBy }) => {
+      const data = await getAllProducts({ page, pageSize, orderBy });
+      return data;
     });
-    return result;
+
+  // 전체 상품
+  const {
+    status: allProductsStatus,
+    error: allProductsError,
+    data: allProductsData,
+  } = useQuery({
+    queryKey: ['products', page, orderBy],
+    queryFn: () => getAllProducts({ page, pageSize: PAGE_SIZE, orderBy }),
   });
 
   // 베스트 상품
-  const handleLoadBestProducts = useCallback(
-    async function () {
-      const result = await getBestProductsAsync();
-      if (!result) return;
+  const {
+    status: bestProductStatus,
+    data: bestProductsData,
+    error: bestProductsError,
+  } = useQuery({
+    queryKey: ['bestProducts'],
+    queryFn: getBestProducts,
+  });
 
-      const { list } = result;
-      const sliceList = list.slice(0, 4);
-      setBestProducts(sliceList);
-    },
-    [getBestProducts]
-  );
-
-  // 전체 상품
-  const handleLoadAllProducts = useCallback(
-    async (options: PageOptions) => {
-      const result = await getAllProductsAsync(options);
-      if (!result) return;
-
-      const { list, totalCount } = result;
-      if (totalCount !== undefined) {
-        setTotalCount(totalCount);
-      }
-
-      if (options.page === 1) {
-        setProducts(list);
-      } else {
-        setProducts([...list]);
-      }
-    },
-    [getItems]
-  );
+  const sliceBestProductsData = bestProductsData?.list?.slice(0, 4);
 
   useEffect(() => {
-    handleLoadAllProducts({ page, pageSize: PAGESIZE, orderBy });
-    handleLoadBestProducts();
-  }, [page, orderBy, handleLoadBestProducts, handleLoadAllProducts]);
+    setTotalCount(allProductsData?.totalCount);
+  }, [totalCount]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [orderBy]);
+
+  if (allProductsStatus === 'pending') return <h1>Loading...</h1>;
+  if (allProductsStatus === 'error') return <h1>{allProductsError.message}</h1>;
+
+  if (bestProductStatus === 'pending') return <h1>Loading...</h1>;
+  if (bestProductStatus === 'error') return <h1>{bestProductsError.message}</h1>;
 
   return (
     <>
       <Helmet>
         <title>중고마켓</title>
       </Helmet>
-      {bestProductsError?.message || allProductsError?.message ? (
-        <ErrorContainer>
-          {bestProductsError?.message || allProductsError?.message}
-        </ErrorContainer>
-      ) : (
-        <FleaMarketContainer>
-          <BestProducts bestProducts={bestProducts} />
-          <AllProducts products={products} setOrderBy={setOrderBy} />
-          <Pagination
-            page={page}
-            handlePrevPage={handlePrevPage}
-            handleNextPage={handleNextPage}
-            handleClickPageNum={handleClickPageNum}
-            pageNumbers={pageNumbers}
-          />
-        </FleaMarketContainer>
-      )}
+      <FleaMarketContainer>
+        {bestProductStatus === 'success' && (
+          <BestProducts bestProducts={sliceBestProductsData || []} />
+        )}
+        {allProductsStatus === 'success' && (
+          <>
+            <AllProducts products={allProductsData?.list || []} setOrderBy={setOrderBy} />
+            <Pagination
+              page={page}
+              handlePrevPage={handlePrevPage}
+              handleNextPage={handleNextPage}
+              handleClickPageNum={handleClickPageNum}
+              pageNumbers={pageNumbers}
+            />
+          </>
+        )}
+      </FleaMarketContainer>
     </>
   );
 }

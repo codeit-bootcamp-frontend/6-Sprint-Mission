@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 import ProductContainer from "./ProductContainer";
-import { Product } from '../../types';
+import { Product } from "../../types";
 
 interface BestProductsProps {
-  bestProducts: Product['list'];
+  bestProducts: Product["list"];
 }
 
 function BestProducts({ bestProducts }: BestProductsProps) {
@@ -11,7 +11,7 @@ function BestProducts({ bestProducts }: BestProductsProps) {
     <BestProductsContainer>
       <BestProductsTitle>베스트 상품</BestProductsTitle>
       <BestProductsList>
-        {bestProducts.map((product) => (
+        {bestProducts?.map((product) => (
           <ProductContainer
             key={product.id}
             src={product.images}

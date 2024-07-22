@@ -1,39 +1,44 @@
-import { useState } from "react";
-import FileInput from "./FileInput";
-import InputForm from "./InputForm";
-import Tag from "./Tag";
-import * as S from "./Styles/AddItemPageStyles";
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useMutation } from '@tanstack/react-query';
+import { postProduct, postImage } from '../../api/api';
+import FileInput from './FileInput';
+import InputForm from './InputForm';
+import Tag from './Tag';
+import * as S from './Styles/AddItemPageStyles';
 
 function AddItemPage() {
-  const [image, setImage] = useState<string | null>(null);
-  const [name, setName] = useState("");
-  const [introduce, setIntroduce] = useState("");
-  const [price, setPrice] = useState("");
-  const [tag, setTag] = useState("");
+  const [image, setImage] = useState<File | null>(null);
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
+  const [tag, setTag] = useState('');
   const [tags, setTags] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     handleChange(name, value);
-  }
+  };
 
-  const handleChange = (name: string, value: string | null) => {
-    const newValue = value === null ? "" : value;
+  const handleChange = (name: string, value: string | File | null) => {
+    const newValue = value === null ? '' : value;
     switch (name) {
-      case "name":
-        setName(newValue);
+      case 'name':
+        setName(newValue as string);
         break;
-      case "introduce":
-        setIntroduce(newValue);
+      case 'description':
+        setDescription(newValue as string);
         break;
-      case "price":
-        setPrice(newValue);
+      case 'price':
+        setPrice(newValue as string);
         break;
-      case "tag":
-        setTag(newValue);
+      case 'tag':
+        setTag(newValue as string);
         break;
-      case "image":
-        setImage(value);
+      case 'image':
+        setImage(newValue as File);
         break;
       default:
         break;
@@ -42,20 +47,53 @@ function AddItemPage() {
 
   const isFormValid = () => {
     return (
-      name.trim() !== "" &&
-      introduce.trim() !== "" &&
-      price.trim() !== "" &&
-      tags.length > 0
+      name.trim() !== '' && description.trim() !== '' && price.trim() !== '' && tags.length > 0
     );
   };
 
   // Tags
   const AddTags = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    const inputValue =(e.target as HTMLInputElement).value;
+    const inputValue = (e.target as HTMLInputElement).value;
 
-    if (e.key === "Enter" && inputValue !== "" && !tags.includes(inputValue)) {
+    if (e.key === 'Enter' && inputValue !== '' && !tags.includes(inputValue)) {
       setTags([...tags, inputValue]);
-     (e.target as HTMLInputElement).value = "";
+      (e.target as HTMLInputElement).value = '';
+    }
+  };
+
+  const mutateImage = useMutation({
+    mutationFn: postImage,
+  });
+
+  const mutateProduct = useMutation({
+    mutationFn: postProduct,
+  });
+
+  const handleSubmit = async () => {
+    if (!isFormValid()) return;
+
+    try {
+      let imageUrl = '';
+
+      if (image) {
+        const imageData = await mutateImage.mutateAsync(image);
+        imageUrl = imageData.url;
+      }
+
+      const productData = {
+        name,
+        description,
+        price: Number(price),
+        images: imageUrl ? [imageUrl] : [],
+        tags,
+      };
+
+      await mutateProduct.mutateAsync(productData);
+      alert('상품이 성공적으로 등록되었습니다.');
+      navigate('/items');
+    } catch (error) {
+      console.error('에러가 발생했습니다.', error);
+      alert('에러가 발생했습니다. 다시 시도해주세요.');
     }
   };
 
@@ -63,18 +101,14 @@ function AddItemPage() {
     <S.Wrapper>
       <S.Header>
         <S.HeaderTitle>상품 등록하기</S.HeaderTitle>
-        <S.StyledButton type="button" disabled={isFormValid()}>
+        <S.StyledButton type="button" disabled={!isFormValid()} onClick={handleSubmit}>
           등록
         </S.StyledButton>
       </S.Header>
       <S.Main>
         <div>
           <S.Title>상품 이미지</S.Title>
-          <FileInput
-            name="image"
-            value={image}
-            onChange={handleChange}
-            />
+          <FileInput name="image" value={image} onChange={handleChange} />
         </div>
 
         <InputForm
@@ -85,10 +119,10 @@ function AddItemPage() {
           onChange={handleInputChange}
         />
         <InputForm
-          name="introduce"
+          name="description"
           label="상품 소개"
           placeholder="상품 소개를 입력해주세요."
-          value={introduce}
+          value={description}
           onChange={handleInputChange}
         />
         <InputForm

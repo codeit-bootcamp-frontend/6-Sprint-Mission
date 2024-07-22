@@ -1,13 +1,13 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
-import styled from "styled-components";
-import DefaultButton from "../common/DefaultButton";
-import logo from "../assets/pandaLogo.svg";
-import logoWithoutPanda from "../assets/logo.svg";
-import profile from "../assets/profileIcon.svg";
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+import DefaultButton from '../common/DefaultButton';
+import logo from '../assets/pandaLogo.svg';
+import logoWithoutPanda from '../assets/logo.svg';
+import profile from '../assets/profileIcon.svg';
 
 function Nav() {
   const { pathname } = useLocation();
-  const accessToken = localStorage.getItem("accessToken");
+  const accessToken = localStorage.getItem('accessToken');
 
   return (
     <StyledNav>
@@ -15,13 +15,10 @@ function Nav() {
         <LogoContainer>
           <Img src={logo} alt="판다마켓 로고" />
         </LogoContainer>
-        <StyledNavLink to="/board" $isActive={pathname === "/board"}>
+        <StyledNavLink to="/board" $isActive={pathname === '/board'}>
           자유게시판
         </StyledNavLink>
-        <StyledNavLink
-          to="/items"
-          $isActive={pathname === "/additem" ? true : false}
-        >
+        <StyledNavLink to="/items" $isActive={pathname === '/additem' ? true : false}>
           중고마켓
         </StyledNavLink>
       </ListContainer>
@@ -70,8 +67,7 @@ const StyledNavLink = styled(NavLink)<{ $isActive: boolean }>`
   font-size: 18px;
   font-weight: 700;
   line-height: 21.48px;
-  color: ${({ $isActive }) =>
-    $isActive ? "var(--main-color)" : "var(--nav-text-color)"};
+  color: ${({ $isActive }) => ($isActive ? 'var(--main-color)' : 'var(--nav-text-color)')};
   margin-left: 47px;
 
   &:not(:first-of-type) {
@@ -88,6 +84,7 @@ const StyledNavLink = styled(NavLink)<{ $isActive: boolean }>`
     &:not(:first-of-type) {
       margin-left: 8px;
     }
+  }
   @media ${(props) => props.theme.tablet} {
     margin-left: 39px;
 

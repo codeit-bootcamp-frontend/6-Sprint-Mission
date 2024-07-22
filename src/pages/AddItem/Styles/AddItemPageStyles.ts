@@ -17,8 +17,8 @@ export const HeaderTitle = styled.p`
   font-weight: 700;
   line-height: 33.41px;
   color: var(--main-text-color);
-  
-  @media ${props => props.theme.mobile} {
+
+  @media ${(props) => props.theme.mobile} {
     font-size: 20px;
     line-height: 23.87px;
   }
@@ -26,10 +26,10 @@ export const HeaderTitle = styled.p`
 
 export const StyledButton = styled(DefaultButton)`
   line-height: 19.09px;
-  background-color: var(--placeholder-color);
+  background-color: var(--main-color);
 
   &:disabled {
-    background-color: var(--main-color);
+    background-color: var(--placeholder-color);
   }
 `;
 
@@ -70,8 +70,8 @@ export const Title = styled.p`
   line-height: 21.48px;
   color: var(--main-text-color);
   margin-bottom: 12px;
-  
-  @media ${props => props.theme.mobile} {
+
+  @media ${(props) => props.theme.mobile} {
     font-size: 14px;
     line-height: 16.71px;
   }

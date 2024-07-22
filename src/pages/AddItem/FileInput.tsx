@@ -1,15 +1,15 @@
-import { useState, useRef, ChangeEvent } from "react";
-import uploadIcon from "../../assets/plusIcon.svg";
-import * as S from "./Styles/FileInputStyles";
+import { useState, useRef, ChangeEvent } from 'react';
+import uploadIcon from '../../assets/plusIcon.svg';
+import * as S from './Styles/FileInputStyles';
 
 interface FileInputProps {
-  name: string; 
-  value?: string | null;
-  onChange: (name: string, value: string | null) =>  void;
+  name: string;
+  value?: File | null;
+  onChange: (name: string, value: File | null) => void;
 }
 
 function FileInput({ name, onChange }: FileInputProps) {
-  const [preview, setPreview] = useState("");
+  const [preview, setPreview] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -18,16 +18,16 @@ function FileInput({ name, onChange }: FileInputProps) {
       const nextValue = files[0];
       const nextPreview = URL.createObjectURL(nextValue);
       setPreview(nextPreview);
-      onChange(name, nextPreview);
+      onChange(name, nextValue);
     }
   };
 
   const handleDelete = () => {
     const inputNode = inputRef.current;
     if (inputNode) {
-      inputNode.value = "";
+      inputNode.value = '';
     }
-    setPreview("");
+    setPreview('');
     onChange(name, null);
   };
 
@@ -48,9 +48,7 @@ function FileInput({ name, onChange }: FileInputProps) {
       {preview && (
         <S.ImagePreviewContainer>
           <S.ImagePreview src={preview} alt="이미지 미리보기" />
-          <S.DeleteIcon
-            onClick={handleDelete}
-          />
+          <S.DeleteIcon onClick={handleDelete} />
         </S.ImagePreviewContainer>
       )}
     </S.Wrapper>

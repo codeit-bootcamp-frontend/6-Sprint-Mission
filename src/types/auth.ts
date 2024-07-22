@@ -1,4 +1,4 @@
-import { UseFormRegister, FieldErrors, UseFormWatch } from "react-hook-form";
+import { UseFormRegister, FieldErrors, UseFormWatch } from 'react-hook-form';
 
 export interface SignInFormValues {
   email: string;
@@ -20,13 +20,17 @@ export interface InputWithLabelProps {
 
 export interface AuthResponse {
   user: {
-    id: number,
-    nickname: string,
-    image: string | null,
-    createdAt: string,
-    updatedAt: string,
-    email: string
-  },
-  accessToken: number,
-  refreshToken: number
+    id: number;
+    nickname: string;
+    image: string | null;
+    createdAt: string;
+    updatedAt: string;
+    email: string;
+  };
+  accessToken: number;
+  refreshToken: number;
+}
+export interface AuthRequest {
+  email: string;
+  password: string;
 }
