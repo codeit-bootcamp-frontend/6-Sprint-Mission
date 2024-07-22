@@ -8,11 +8,14 @@ interface ItemCardImageProps {
 }
 
 const ItemCardImage = ({ src, alt, className }: ItemCardImageProps) => {
-  const verifiedImageSrc = src.startsWith(
-    "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com",
-  )
-    ? src
-    : EMPTY_POST_IMAGE;
+  const verifiedImageSrc =
+    typeof src !== "string"
+      ? EMPTY_POST_IMAGE
+      : src.startsWith(
+            "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com",
+          )
+        ? src
+        : EMPTY_POST_IMAGE;
 
   return (
     <div

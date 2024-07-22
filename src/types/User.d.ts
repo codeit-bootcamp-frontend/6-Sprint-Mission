@@ -1,7 +1,7 @@
 interface User {
-  updatedAt: Date;
+  updatedAt: Date | null;
   createdAt: Date;
-  image: string;
+  image: string | null;
   nickname: string;
-  id: number;
+  id: string;
 }

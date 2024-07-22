@@ -1,34 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Modal from "@/components/Modal/Modal";
-import EditDeleteDropdown from "@/components/Dropdown/EditDeleteDropdown";
 import CommentEditForm from "@/components/Comment/CommentEditForm";
 import WriterInfo from "@/components/WriterInfo/WriterInfo";
-import sendAxiosRequest from "@/lib/api/sendAxiosRequest";
-import { useModal } from "@/contexts/ModalProvider";
-
-const updateComment = async (id: number, comment: string) => {
-  const options = {
-    method: "PATCH",
-    url: `/comments/${id}`,
-    data: {
-      content: comment,
-    },
-  };
-  const { data } = await sendAxiosRequest(options);
-  return data;
-};
-
-const deleteComment = async (id: number) => {
-  const options = {
-    method: "DELETE",
-    url: `/comments/${id}`,
-  };
-  const { data } = await sendAxiosRequest(options);
-  return data;
-};
-
+import { deleteComment, updateComment } from "@/lib/api/comment";
+import CommentActions from "./CommentActions";
+import { useQueryClient, useMutation } from "@tanstack/react-query";
+import { useParams } from "next/navigation";
 interface CommentProps {
   comment: Comment;
   isUserComment: boolean;
@@ -42,34 +20,39 @@ const Comment = ({
   onCommentEdited = () => {},
   onCommentDeleted = () => {},
 }: CommentProps) => {
+  const queryClient = useQueryClient();
   const [isEditable, setIsEditable] = useState(false);
   const { id, writer, content, createdAt } = comment;
   const { image, nickname } = writer;
 
-  const { showModal, hideModal } = useModal();
+  const prams = useParams<{ id: string }>();
+  const productId = prams?.id;
 
-  const handleDeleteComment = async () => {
-    hideModal();
-    const data = await deleteComment(id);
-    onCommentDeleted(data as Comment);
+  const deleteCommentMutation = useMutation({
+    mutationFn: () => deleteComment(Number(id)),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["productComments", productId],
+      });
+    },
+  });
+
+  const updateCommentMutation = useMutation({
+    mutationFn: (comment: string) => updateComment(Number(id), comment),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["productComments", productId],
+      });
+    },
+  });
+
+  const handleDeleteComment = () => {
+    deleteCommentMutation.mutate();
   };
 
-  const onConfirmEditForm = async (comment: string) => {
-    const data = await updateComment(id, comment);
-    onCommentEdited(data as Comment);
+  const onConfirmEditForm = (comment: string) => {
+    updateCommentMutation.mutate(comment);
     setIsEditable(false);
-  };
-
-  const handleDeleteCommentButton = () => {
-    showModal(
-      <Modal
-        contentText="삭제하시겠습니까?"
-        onConfirm={handleDeleteComment}
-        onCancel={hideModal}
-        confirmText="확인"
-        cancelText="취소"
-      />,
-    );
   };
 
   return (
@@ -87,8 +70,8 @@ const Comment = ({
               {content}
             </div>
             {isUserComment && (
-              <EditDeleteDropdown
-                onDelete={handleDeleteCommentButton}
+              <CommentActions
+                onDelete={handleDeleteComment}
                 onEdit={() => setIsEditable(true)}
               />
             )}

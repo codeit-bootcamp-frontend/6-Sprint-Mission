@@ -5,7 +5,9 @@ import Image from "next/image";
 import NavLink from "@/components/NavLink";
 import Button from "@/components/Button/Button";
 import BaseDropdown from "@/components/Dropdown/BaseDropdown";
-import { useAuth } from "@/contexts/AuthProvider";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { logout } from "@/lib/api/auth";
+import { userAtom } from "@/recoil/atoms/UserAtom";
 
 interface GNBNavLinkProps {
   href: string;
@@ -32,7 +34,9 @@ const GNBNavLink = ({ href, children }: GNBNavLinkProps) => {
 };
 
 function Header() {
-  const { user, logout } = useAuth();
+  const { user } = useRecoilValue(userAtom);
+
+  const setUserAtom = useSetRecoilState(userAtom);
 
   return (
     <nav className="fixed top-0 z-20 flex h-70 w-full items-center gap-8 border-b border-gray-200 bg-white px-16 md:px-24 xl:px-200">
@@ -58,7 +62,7 @@ function Header() {
       </div>
       <GNBNavLink href="/boards">자유게시판</GNBNavLink>
       <GNBNavLink href="/items">중고마켓</GNBNavLink>
-      {user ? (
+      {user.id ? (
         <div className="flexcenter ml-auto gap-16">
           <BaseDropdown
             buttonContent={
@@ -74,7 +78,10 @@ function Header() {
               <Button.Link href="/me" className=" h-40 w-full border-b-1 ">
                 마이페이지
               </Button.Link>
-              <Button onClick={logout} className="h-40 w-full">
+              <Button
+                onClick={() => logout(setUserAtom)}
+                className="h-40 w-full"
+              >
                 로그아웃
               </Button>
             </div>

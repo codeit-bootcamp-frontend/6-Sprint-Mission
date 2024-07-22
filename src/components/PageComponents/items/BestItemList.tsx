@@ -1,39 +1,43 @@
 "use client";
 
 import ItemCard from "@/components/Item/ItemCard";
-import Image from "next/image";
 import useDeviceSize from "@/hooks/useDeviceSize";
 import { BEST_ITEM_LIMIT } from "@/constants/pageLimit";
+import { getBestProducts } from "@/lib/api/product";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import EmptyItem from "./EmptyItem";
 
 interface BestItemListProps {
   className?: string;
-  data: Item[];
 }
 
-const BestItemList = ({ className = "", data }: BestItemListProps) => {
+const BestItemList = ({ className = "" }: BestItemListProps) => {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["bestProducts"],
+    queryFn: getBestProducts,
+    placeholderData: keepPreviousData,
+  });
+
+  const bestItems = data?.list ?? [];
+
   const deviceSize = useDeviceSize();
-  const slicedItems = data.slice(0, BEST_ITEM_LIMIT[deviceSize]);
+  const slicedItems = bestItems.slice(0, BEST_ITEM_LIMIT[deviceSize]);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
 
   return (
     <div className={`${className}`}>
       <div className="text-20 font-bold text-cool-gray-800">베스트 상품</div>
       <div>
-        {data && data.length !== 0 ? (
+        {bestItems && bestItems.length !== 0 ? (
           <div className="flex justify-between gap-8">
             {slicedItems.map((item: Item) => (
               <ItemCard key={item.id} data={item} className={`w-full`} />
             ))}
           </div>
         ) : (
-          <div className="flexcenter mt-88 flex-col py-16 text-20 font-medium text-gray-500">
-            <Image
-              src="/images/img_inquiry-empty.svg"
-              alt="아무것도 없어요 u.u"
-              width={140}
-              height={140}
-            />
-            상품이 없어요
-          </div>
+          <EmptyItem />
         )}
       </div>
     </div>

@@ -6,10 +6,12 @@ import Button from "@/components/Button/Button";
 import FormGroup from "@/components/FormGroup/FormGroup";
 import { AuthLogoHeader, SocialLogin } from "@/components/PageComponents/auth";
 import useAuthForm, { LogInRequest } from "@/hooks/useAuthForm";
-import { useAuth } from "@/contexts/AuthProvider";
+import { login } from "@/lib/api/auth";
+import { useSetRecoilState } from "recoil";
+import { userAtom } from "@/recoil/atoms/UserAtom";
 
 const LogIn = () => {
-  const { login } = useAuth(false);
+  const setUserAtom = useSetRecoilState(userAtom);
   const router = useRouter();
   const { handleSubmit, emailRegister, passwordRegister, errors } =
     useAuthForm<LogInRequest>("onChange", {
@@ -19,10 +21,11 @@ const LogIn = () => {
 
   const onSubmit = async (data: LogInRequest) => {
     try {
-      await login(data);
+      await login(setUserAtom, data);
       router.replace("/");
     } catch (err: any) {
-      alert(err.response.data.message);
+      console.log(err);
+      // alert(err.response.data.message);
     }
   };
 

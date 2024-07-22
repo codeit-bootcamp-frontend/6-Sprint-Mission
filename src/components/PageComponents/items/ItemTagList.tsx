@@ -4,7 +4,7 @@ interface ItemTagListProps {
   className?: string;
   tags: string[];
   isEditable: boolean;
-  onClickTag: () => void;
+  onClickTag: (tag: string) => void;
 }
 
 const ItemTagList = ({
@@ -19,7 +19,7 @@ const ItemTagList = ({
         <ItemTag
           key={tag}
           tag={tag}
-          onClick={onClickTag}
+          onClick={() => onClickTag(tag)}
           isEditable={isEditable}
         />
       ))}

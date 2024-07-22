@@ -1,32 +1,30 @@
+"use client";
+
 import {
   ItemDetailSection,
   ItemCommentSection,
 } from "@/components/PageComponents/items";
-import { APP_BASE_URL } from "@/constants/common";
-import { ITEM_COMMENT_LIMIT } from "@/constants/pageLimit";
+import { getProductDetail } from "@/lib/api/product";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
 
 const Page = async ({ params }: { params: { id: string } }) => {
   const id = encodeURIComponent(params.id);
 
-  const [itemResponse, commentsResponse] = await Promise.all([
-    fetch(`${APP_BASE_URL}/products/${id}`, { next: { revalidate: 3600 } }),
-    fetch(
-      `${APP_BASE_URL}/products/${id}/comments?limit=${ITEM_COMMENT_LIMIT}`,
-      {
-        cache: "no-cache",
-      },
-    ),
-  ]);
-  if (!itemResponse.ok || !commentsResponse.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  const itemData: Item = await itemResponse.json();
-  const commentsData: CommentResponse = await commentsResponse.json();
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["product", id],
+    queryFn: () => getProductDetail(id),
+    placeholderData: keepPreviousData,
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
+
+  const productData = data ?? {};
 
   return (
     <div className="h-auto p-24">
-      <ItemDetailSection initialData={itemData} />
-      <ItemCommentSection initialData={commentsData} />
+      <ItemDetailSection data={productData} />
+      <ItemCommentSection />
     </div>
   );
 };

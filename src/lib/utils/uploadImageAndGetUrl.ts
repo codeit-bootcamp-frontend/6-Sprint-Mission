@@ -1,4 +1,5 @@
-import sendAxiosRequest from "@/lib/api/sendAxiosRequest";
+import { APP_BASE_URL } from "@/constants/common";
+import { requestWithToken } from "@/lib/api/api";
 
 const uploadImageAndGetUrl = async (image: File) => {
   if (typeof image === "string") return console.log("file만 받을 수 있습니다");
@@ -7,14 +8,13 @@ const uploadImageAndGetUrl = async (image: File) => {
     const formData = new FormData();
     formData.append("image", image, image.name);
 
-    const response = await sendAxiosRequest({
+    const response = await requestWithToken(`${APP_BASE_URL}/images/upload`, {
       method: "POST",
-      url: "/images/upload",
-      data: formData,
-      headers: { "Content-Type": "multipart/form-data" },
+      body: formData,
+      headers: {},
     });
-
-    return response.data.url;
+    const data = await response;
+    return data.url;
   } catch (error) {
     alert(`Error uploading image: ${error}`);
     throw error;

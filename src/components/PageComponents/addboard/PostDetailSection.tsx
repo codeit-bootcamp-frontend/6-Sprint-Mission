@@ -8,12 +8,14 @@ import FavoriteButton from "@/components/Button/FavoriteButton";
 import useDataFetch from "@/hooks/useDataFetch";
 import useFavoriteButton from "@/hooks/useFavoriteButton";
 import formatDate from "@/lib/utils/formatDate";
-import { useAuth } from "@/contexts/AuthProvider";
+import { userAtom } from "@/recoil/atoms/UserAtom";
+import { useRecoilValue } from "recoil";
 
 const Post = ({ initialData }: { initialData: Post }) => {
   const [data, setData] = useState<Post>(initialData);
   const [isUserPost, setIsUserPost] = useState(false);
-  const { user } = useAuth();
+  const { user } = useRecoilValue(userAtom);
+
   const router = useRouter();
   const { isLoading, axiosFetcher } = useDataFetch();
 

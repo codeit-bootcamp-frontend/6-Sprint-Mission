@@ -1,63 +1,81 @@
-import { useState } from "react";
-import { useAuth } from "@/contexts/AuthProvider";
-import sendAxiosRequest from "@/lib/api/sendAxiosRequest";
+import { deleteFavorite, favorite, getFavoriteStatus } from "@/lib/api/product";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
-// 좋아요 요청을 보내는 함수
-const sendLikeRequest = async (method: string, url: string) => {
-  const options = {
-    method: method,
-    url: url,
-  };
-  const res = await sendAxiosRequest(options);
-  return res.data;
-};
+const useFavoriteButton = (path: string, id: string) => {
+  const queryClient = useQueryClient();
 
-const useFavoriteButton = (
-  path: string,
-  isLiked: boolean,
-  likeCount: number,
-) => {
-  const [values, setValues] = useState({
-    isFavoriteButtonLiked: isLiked,
-    favoriteButtonLikeCount: likeCount,
+  const { data } = useQuery({
+    queryKey: ["favoriteStatus", path, id],
+    queryFn: () => getFavoriteStatus(path, id),
   });
-  const { user } = useAuth();
 
-  const { isFavoriteButtonLiked, favoriteButtonLikeCount } = values;
+  const favoriteCount = data?.favoriteCount ?? 0;
+  const isFavorite = data?.isFavorite ?? false;
 
-  // 좋아요 상태 및 좋아요 수를 업데이트하는 함수
-  const updateFavoriteButtonState = (
-    newIsLiked: boolean,
-    newLikeCount: number,
-  ) => {
-    setValues({
-      isFavoriteButtonLiked: newIsLiked,
-      favoriteButtonLikeCount: newLikeCount,
+  const likesMutation = useMutation({
+    mutationFn: async ({ userAction }: { userAction: "LIKE" | "UNLIKE" }) => {
+      if (userAction === "LIKE") {
+        await favorite(path, id);
+      } else {
+        await deleteFavorite(path, id);
+      }
+    },
+    onMutate: async ({ userAction }: { userAction: "LIKE" | "UNLIKE" }) => {
+      await queryClient.cancelQueries({
+        queryKey: ["favoriteStatus", path, id],
+      });
+
+      const prevLikeStatus = queryClient.getQueryData<{
+        favoriteCount: number;
+        isFavorite: boolean;
+      }>(["favoriteStatus", path, id]);
+
+      queryClient.setQueryData(
+        ["favoriteStatus", path, id],
+        (prev: { favoriteCount: number; isFavorite: boolean } | undefined) => {
+          if (!prev) return prevLikeStatus;
+          return userAction === "LIKE"
+            ? {
+                ...prev,
+                favoriteCount: prev.favoriteCount + 1,
+                isFavorite: true,
+              }
+            : {
+                ...prev,
+                favoriteCount: prev.favoriteCount - 1,
+                isFavorite: false,
+              };
+        },
+      );
+
+      return { prevLikeStatus };
+    },
+    onError: (
+      err,
+      { userAction }: { userAction: "LIKE" | "UNLIKE" },
+      context: any,
+    ) => {
+      if (context?.prevLikeStatus) {
+        queryClient.setQueryData(
+          ["favoriteStatus", path, id],
+          context.prevLikeStatus,
+        );
+      }
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["favoriteStatus", path, id],
+      });
+    },
+  });
+
+  const handleLikeButtonClick = (userAction: "LIKE" | "UNLIKE") => {
+    likesMutation.mutate({
+      userAction,
     });
   };
 
-  const toggleFavoriteButton = async (id: number) => {
-    if (!user) return alert("로그인 후 이용해주세요");
-
-    try {
-      // 좋아요 버튼 상태에 따라 요청 메소드 결정
-      const method = isFavoriteButtonLiked ? "DELETE" : "POST";
-      const url = path.replace("id", id.toString());
-
-      // 좋아요 처리 요청
-      const res = await sendLikeRequest(method, url);
-      updateFavoriteButtonState(res.isLiked, res.likeCount);
-    } catch (error) {
-      alert(error);
-    }
-  };
-
-  return {
-    toggleFavoriteButton,
-    updateFavoriteButtonState,
-    isFavoriteButtonLiked,
-    favoriteButtonLikeCount,
-  };
+  return { favoriteCount, isFavorite, handleLikeButtonClick };
 };
 
 export default useFavoriteButton;

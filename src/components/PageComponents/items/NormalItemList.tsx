@@ -1,7 +1,6 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Button from "@/components/Button/Button";
 import SortDropdown from "@/components/Dropdown/SortDropdown";
 import Input from "@/components/Input/Input";
@@ -11,24 +10,46 @@ import useDeviceSize from "@/hooks/useDeviceSize";
 import usePagination from "@/hooks/usePagination";
 import { ITEM_LIMIT } from "@/constants/pageLimit";
 import { ITEM_SORT_OPTIONS, ItemSortOptionsKeys } from "@/types/SortOptions";
+import { getProducts } from "@/lib/api/product";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
+import EmptyItem from "./EmptyItem";
+
+const INITIAL_ITEM_PARAMS = {
+  pageSize: ITEM_LIMIT["large"],
+  order: "recent" as ItemSortOptionsKeys,
+};
 
 interface NormalItemListProps {
   className?: string;
-  data: { totalCount: number; list: Item[] };
-  keyword: string;
+  searchParams: {
+    page?: number;
+    keyword?: string;
+    order?: ItemSortOptionsKeys;
+  };
 }
 
 const NormalItemList = ({
   className = "",
-  data,
-  keyword,
+  searchParams,
 }: NormalItemListProps) => {
-  const { totalCount, list } = data;
+  const page = searchParams.page || 1;
+  const keyword = searchParams.keyword || "";
+  const order = searchParams.order || INITIAL_ITEM_PARAMS.order;
+  const limit = INITIAL_ITEM_PARAMS.pageSize;
+
+  const {
+    data,
+    isLoading: itemsLoading,
+    error: itemsError,
+  } = useQuery({
+    queryKey: ["products", page, keyword, order],
+    queryFn: () => getProducts({ page, limit, keyword, order }),
+    placeholderData: keepPreviousData,
+  });
+
+  const { totalCount, list } = data ?? { totalCount: 0, list: [] };
   const deviceSize = useDeviceSize();
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const params = new URLSearchParams(searchParams ? searchParams : undefined);
-  const order = params.get("order") as ItemSortOptionsKeys;
 
   const {
     currentPageNumber,
@@ -47,6 +68,9 @@ const NormalItemList = ({
   };
 
   const slicedItems = list.slice(0, ITEM_LIMIT[deviceSize]);
+
+  if (itemsLoading) return <div>Loading...</div>;
+  if (itemsError) return <div>Error loading data</div>;
 
   return (
     <>
@@ -96,15 +120,7 @@ const NormalItemList = ({
             />
           </>
         ) : (
-          <div className="flexcenter mt-88 flex-col py-16 text-20 font-medium text-gray-500">
-            <Image
-              src="/images/img_inquiry-empty.svg"
-              alt="아무것도 없어요 u.u"
-              width={140}
-              height={140}
-            />
-            상품이 없어요
-          </div>
+          <EmptyItem />
         )}
       </div>
     </>

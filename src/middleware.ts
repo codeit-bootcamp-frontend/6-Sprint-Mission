@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
   // 로그인 되어 있는 경우 접근제한
   if (pathname === "/login" || pathname === "/signup") {
     if (token) {
-      return NextResponse.redirect(new URL("/", request.url));
+      // return NextResponse.redirect(new URL("/", request.url));
     }
   }
 }

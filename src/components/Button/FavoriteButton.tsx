@@ -8,6 +8,7 @@ interface FavoriteButtonProps {
   isLiked?: boolean;
   likeCount: number;
   onClick?: React.MouseEventHandler;
+  disabled?: boolean;
 }
 
 const FavoriteButton = ({
@@ -15,11 +16,13 @@ const FavoriteButton = ({
   isLiked = false,
   likeCount,
   onClick,
+  ...rest
 }: FavoriteButtonProps) => {
   return (
     <button
       className={`flex cursor-pointer items-center gap-4 bg-transparent p-0 text-12 font-medium ${className}`}
       onClick={onClick}
+      {...rest}
     >
       {isLiked ? (
         <HeartActiveIcon width="16" height="16" viewBox="0 0 24 24" />

@@ -4,8 +4,9 @@ import Button from "@/components/Button/Button";
 import CommentAddForm from "@/components/Comment/CommentAddForm";
 import Comment from "@/components/Comment/Comment";
 import CommentEmpty from "@/components/Comment/CommentEmpty";
-import { useAuth } from "@/contexts/AuthProvider";
 import BackIcon from "/public/images/ic_back.svg";
+import { userAtom } from "@/recoil/atoms/UserAtom";
+import { useRecoilValue } from "recoil";
 
 interface CommentSectionProps {
   initialData: CommentResponse;
@@ -18,54 +19,11 @@ const CommentSection = ({
   dataFetcher,
   returnPath = "/",
 }: CommentSectionProps) => {
-  const { user } = useAuth();
+  const { user } = useRecoilValue(userAtom);
+
   const [values, setValues] = useState(initialData);
   const { nextCursor, list } = values;
   const pathname = usePathname();
-
-  const fetchComments = async (cursor?: number) => {
-    const data = await dataFetcher(cursor);
-
-    setValues((prev) => ({
-      ...prev,
-      list: [...prev.list, ...data.list],
-      nextCursor: data.nextCursor,
-    }));
-  };
-
-  const handleCommentAdded = (newComment: Comment) => {
-    console.dir(pathname);
-    setValues((prev) => ({
-      ...prev,
-      list: [newComment, ...prev.list],
-    }));
-  };
-
-  const handleCommentEdited = (editedComment: Comment) => {
-    setValues((prev) => {
-      const updatedList = prev.list.map((comment) =>
-        comment.id === editedComment.id ? editedComment : comment,
-      );
-
-      return {
-        ...prev,
-        list: updatedList,
-      };
-    });
-  };
-
-  const handleCommentDeleted = (deletedComment: Comment) => {
-    setValues((prev) => {
-      const updatedList = prev.list.filter(
-        (comment) => comment.id !== deletedComment.id,
-      );
-
-      return {
-        ...prev,
-        list: updatedList,
-      };
-    });
-  };
 
   return (
     <>
