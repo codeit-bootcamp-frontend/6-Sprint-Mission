@@ -11,27 +11,7 @@ export default function Navigation() {
   const router = useRouter();
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [isDisplay, setIsDisplay] = useState(false);
-  const selectBoxRef = useRef<HTMLDivElement | null>(null);
   const profileRef = useRef<HTMLImageElement | null>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        selectBoxRef.current &&
-        !selectBoxRef.current.contains(event.target as Node) &&
-        profileRef.current &&
-        !profileRef.current.contains(event.target as Node)
-      ) {
-        setIsDisplay(!isDisplay);
-        console.log(isDisplay);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [selectBoxRef, isDisplay]);
 
   useEffect(() => {
     const token = sessionStorage.getItem('accessToken');
@@ -47,6 +27,11 @@ export default function Navigation() {
     sessionStorage.removeItem('refreshToken');
     router.push('/');
   };
+
+  const dropdownList = [
+    { label: '마이페이지', onClick: () => {} },
+    { label: '로그아웃', onClick: handleLogoutClick },
+  ];
 
   return (
     <nav className='flex justify-center items-center h-[70px] border-b border-solid border-[#DFDFDF]'>
@@ -68,7 +53,7 @@ export default function Navigation() {
                   자유게시판
                 </button>
               </Link>
-              <Link href='/'>
+              <Link href='/items'>
                 <button
                   className={`font-bold block h-[70px] sm:w-[58px] md:w-[109px] lg:w-[109px] text-[#4B5563] ${
                     isUsedMarketActive ? 'text-brand-blue' : ''
@@ -94,20 +79,14 @@ export default function Navigation() {
                   console.log(isDisplay);
                 }}
               />
-              {isDisplay ? (
-                <div ref={selectBoxRef} className='relative z-50 top-6'>
+              {isDisplay && (
+                <div className='absolute z-50 top-16'>
                   <SelectBox
-                    firstButtonName={'마이페이지'}
-                    secondButtonName={'로그아웃'}
-                    handleFirstButton={() => {
-                      router.push('/mypage');
-                    }}
-                    handleSecondButton={handleLogoutClick}
-                    isDisplay={isDisplay}
+                    items={dropdownList} //
+                    setSelectBoxIsOpen={setIsDisplay} //
+                    exceptions={[profileRef]}
                   />
                 </div>
-              ) : (
-                ''
               )}
             </>
           ) : (

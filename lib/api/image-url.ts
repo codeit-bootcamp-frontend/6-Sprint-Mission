@@ -3,7 +3,7 @@ import { axiosInstance } from './axios';
 type ImageUrlType = {
   url: string;
 };
-export const postImageUrl = async (formData: FormData, token: string): Promise<ImageUrlType> => {
+export const postImageUrl = async (formData: FormData, token: string | null): Promise<ImageUrlType> => {
   try {
     const response = await axiosInstance.post('images/upload', formData, {
       headers: {

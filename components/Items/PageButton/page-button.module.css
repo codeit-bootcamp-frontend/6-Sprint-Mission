@@ -1,0 +1,17 @@
+.items__buttons {
+  text-align: center;
+}
+
+.items__buttons button {
+  width: 40px; /* 4rem */
+  height: 40px; /* 4rem */
+  border-radius: 50%;
+  border: 1px solid var(--color-gray200);
+  background-color: white;
+}
+
+.items__buttons button:active {
+  border: 0px;
+  color: white;
+  background-color: var(--color-brand-blue);
+}

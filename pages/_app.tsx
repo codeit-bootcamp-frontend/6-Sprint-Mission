@@ -4,6 +4,10 @@ import Head from 'next/head';
 import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
 import { useRouter } from 'next/router';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -17,7 +21,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       {pathname !== '/login' && pathname !== '/signup' && <Navigation />}
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
       {pathname !== '/login' && pathname !== '/signup' && <Footer />}
     </>
   );

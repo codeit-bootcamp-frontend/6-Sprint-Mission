@@ -1,0 +1,21 @@
+.main {
+  margin: 20px auto 40px;
+  width: 344px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Ipad */
+@media (min-width: 768px) {
+  .main {
+    width: 696px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .main {
+    width: 1201px;
+  }
+}

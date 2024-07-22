@@ -1,42 +1,38 @@
-type Props = {
-  firstButtonName: string;
-  secondButtonName: string;
-  handleFirstButton: () => void;
-  handleSecondButton: () => void;
-  isDisplay: boolean;
+import useOutsideClick from '@/hooks/useOutsideClick';
+import { Dispatch, SetStateAction, useRef } from 'react';
+
+type SelectBoxProps = {
+  items: {
+    label: string;
+    onClick: () => void;
+  }[];
+  setSelectBoxIsOpen: Dispatch<SetStateAction<boolean>>;
+  exceptions?: React.RefObject<HTMLElement>[];
 };
 
-export default function SelectBox({
-  firstButtonName,
-  secondButtonName,
-  handleFirstButton,
-  handleSecondButton,
-  isDisplay,
-}: Props) {
+export default function SelectBox({ items, setSelectBoxIsOpen, exceptions = [] }: SelectBoxProps) {
+  const dropdownRef = useRef<HTMLUListElement>(null);
+  useOutsideClick(dropdownRef, () => setSelectBoxIsOpen(false), exceptions);
+
+  const handleClick = (onClick: () => void) => {
+    onClick();
+    setSelectBoxIsOpen(false);
+  };
+
   return (
-    <>
-      {isDisplay ? (
-        <ul className={`w-[100px] absolute mt-1 bg-white sm:right-0 rounded-t-xl rounded-b-xl`}>
-          <li>
-            <button
-              className={`w-[100px] h-[42px] border-t border-x rounded-t-xl border-cool-gray200`}
-              type='button'
-              onClick={handleFirstButton}>
-              {firstButtonName}
-            </button>
-          </li>
-          <li>
-            <button
-              className={`w-[100px] h-[42px] border rounded-b-xl border-cool-gray200`}
-              type='button'
-              onClick={handleSecondButton}>
-              {secondButtonName}
-            </button>
-          </li>
-        </ul>
-      ) : (
-        ''
-      )}
-    </>
+    <ul
+      ref={dropdownRef}
+      className='flex flex-col gap-1 p-1 mt-1 text-center bg-white border min-w-10 rounded-b-xl rounded-t-xl sm:right-0'>
+      {items.map(item => (
+        <li key={item.label}>
+          <button
+            className='h-6 w-[60px] text-[12px] rounded-md hover:bg-brand-blue/10 hover:text-brand-blue'
+            type='button'
+            onClick={() => handleClick(item.onClick)}>
+            {item.label}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }

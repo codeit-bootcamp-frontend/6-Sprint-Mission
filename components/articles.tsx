@@ -75,7 +75,7 @@ export default function Articles({ articlesServer, totalCount: initialTotalCount
       <div className='flex flex-col gap-6 min-h-[350px]'>
         {articles.map(article => (
           <Link key={article.id} href={`/boards/${article.id}`}>
-            <ArticlePreview {...article} />
+            <ArticlePreview {...article} articleId={article.id} />
           </Link>
         ))}
       </div>

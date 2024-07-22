@@ -7,10 +7,11 @@ type Props = {
   name: string;
   value: File | string | null | Blob;
   onChange: (name: string, value: File | null) => void;
+  defaultValue?: string;
 };
 
-export default function FileInput({ name, value, onChange }: Props) {
-  const [preview, setPreview] = useState<string>();
+export default function FileInput({ name, value, onChange, defaultValue }: Props) {
+  const [preview, setPreview] = useState<string>(defaultValue ? defaultValue : '');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

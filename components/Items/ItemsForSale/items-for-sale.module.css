@@ -1,0 +1,93 @@
+.itemsForSale {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.searchBar {
+  min-width: 344px;
+  display: grid;
+  grid-template-columns: 100px 100px 91px 42px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'title title register register'
+    'input input input select';
+  grid-row-gap: 8px;
+}
+
+.selectBox {
+  grid-area: select;
+}
+
+.searchBar__title {
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  line-height: 28px;
+  grid-area: title;
+}
+
+.searchBar__input {
+  box-sizing: border-box;
+  width: 294px;
+  height: 42px;
+  padding: 9px 20px;
+  border-radius: 12px;
+  background-color: var(--color-cool-gray100);
+  grid-area: input;
+}
+
+.searchBar__register {
+  width: 133px;
+  padding: 12px 23px;
+  margin-left: 10px;
+  border-radius: 8px;
+  background-color: var(--color-brand-blue);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  grid-area: register;
+}
+
+.items {
+  height: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .searchBar {
+    display: flex;
+  }
+
+  .searchBar__title {
+    padding-right: 58px;
+  }
+
+  .items {
+    gap: 16px;
+    height: 642px;
+  }
+
+  .searchBar__input {
+    width: 242px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .searchBar__title {
+    padding-right: 484px;
+  }
+
+  .items {
+    height: 642px;
+    gap: 24px;
+  }
+
+  .searchBar__input {
+    width: 325px;
+  }
+}

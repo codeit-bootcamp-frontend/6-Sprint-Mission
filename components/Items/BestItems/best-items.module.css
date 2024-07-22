@@ -1,0 +1,18 @@
+.bestItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bestItems__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.bestItems__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--color-cool-gray900);
+}

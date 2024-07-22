@@ -1,8 +1,20 @@
 import { axiosInstance } from '@/lib/api/axios';
 import { AxiosInstance } from 'axios';
+import { StringSchema } from 'yup';
 
 type LoginResponse = {
   accessToken: string;
+  refreshToken: string;
+  user: User;
+};
+
+type User = {
+  id: number;
+  email: string;
+  image: null;
+  nickname: string;
+  updatedAt: string;
+  createdAt: string;
 };
 
 export const loginUser = async (email: string, password: string): Promise<LoginResponse> => {

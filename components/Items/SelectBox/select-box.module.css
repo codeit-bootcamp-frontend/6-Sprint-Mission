@@ -1,0 +1,57 @@
+.selectBox {
+  position: relative;
+  display: inline-block;
+}
+
+.selectBox__btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid var(--color-gray300);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.selectBox__btn__p {
+  display: flex;
+  align-items: center;
+  font-size: 14px; /* 1.4rem */
+  line-height: 20px; /* 2rem */
+}
+
+.selectBox__btn__arrow {
+  margin-left: 8px;
+  width: 10px;
+  height: 10px;
+}
+
+.selectBox__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 4px 0;
+  padding: 8px 0;
+  border: 1px solid var(--color-gray300);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.selectBox__list__newestBtn,
+.selectBox__list__likeBtn {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  font-size: 14px; /* 1.4rem */
+  line-height: 20px; /* 2rem */
+  background-color: var(--color-white);
+  border: none;
+  cursor: pointer;
+}
+
+.selectBox__list__newestBtn:hover,
+.selectBox__list__likeBtn:hover {
+  background-color: var(--color-gray100);
+}

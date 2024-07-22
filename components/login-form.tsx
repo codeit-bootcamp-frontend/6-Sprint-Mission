@@ -31,9 +31,10 @@ export default function Login() {
   const onSubmit: SubmitHandler<Inputs> = async data => {
     try {
       const response = await loginUser(data.email, data.password);
-      const { accessToken } = response;
+      const { accessToken, user } = response;
       if (accessToken) {
-        localStorage.setItem('accessToken', accessToken);
+        sessionStorage.setItem('accessToken', accessToken);
+        sessionStorage.setItem('userInfo', user.id.toString());
         await router.replace('/boards');
       }
     } catch (e) {

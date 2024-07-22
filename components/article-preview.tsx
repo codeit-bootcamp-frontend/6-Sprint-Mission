@@ -3,10 +3,18 @@ import Image from 'next/image';
 import icProfile from '@/public/images/icons/ic_profile.png';
 import HeartButton from './heart-button';
 import type { ArticleProps } from '@/types';
+type ArticleDetailProps = ArticleProps & { articleId: number };
 
-export default function ArticlePreview({ createdAt, likeCount, image, title, writer }: ArticleProps) {
+export default function ArticleDetail({
+  createdAt,
+  image,
+  likeCount,
+  title,
+  writer,
+  isLiked,
+  articleId,
+}: ArticleDetailProps) {
   const createdDate = getFormatDate(createdAt);
-
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex justify-between gap-2 font-semibold text-cool-gray800'>
@@ -24,8 +32,7 @@ export default function ArticlePreview({ createdAt, likeCount, image, title, wri
           <time>{createdDate}</time>
         </div>
         <div className='flex items-center gap-1'>
-          <HeartButton like={false} />
-          <span>{likeCount}+</span>
+          <HeartButton toggle={false} isLiked={isLiked} articleId={articleId.toString()} likeCount={likeCount} />
         </div>
       </div>
     </div>
