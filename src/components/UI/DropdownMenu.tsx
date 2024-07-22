@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './DropdownMenu.css';
 import { ReactComponent as SortIcon } from '../../assets/images/icons/ic_sort.svg';
 
-interface DropdownMenuProps {
-  onSortSelection: (value: string) => void;
-}
+type DropdownMenuProps = {
+  onSortSelection: (value: 'recent' | 'favorite') => void;
+};
 
 function DropdownMenu({ onSortSelection }: DropdownMenuProps) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);

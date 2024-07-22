@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-secondary-100 bg-primary-100 hover:bg-primary-200 active:bg-primary-200 rounded-full h-[56px] cursor-pointer;
+  }
+
+  .btn-disabled {
+    @apply bg-secondary-400 hover:bg-secondary-400 cursor-default;
+  }
+
+  .input {
+    @apply block bg-secondary-100 outline-none border border-secondary-100 focus:border-primary-100 font-normal w-full h-14 mt-4 inner-p rounded;
+  }
+
+  .input-error {
+    @apply border-error-red focus:border-error-red;
+  }
+
+  .inner-p {
+    @apply px-6 py-4;
+  }
+
+  .error-message {
+    @apply px-4 py-2 text-sm text-error-red font-semibold;
+  }
+}

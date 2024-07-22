@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../../assets/images/logo/logo.svg';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -10,6 +9,8 @@ function getLinkStyle({ isActive }: { isActive: boolean }) {
 
 function Header() {
   const location = useLocation(); // 현재 경로 정보
+
+  if (window.location.pathname === '/login') return null;
 
   return (
     <header className="globalHeader">

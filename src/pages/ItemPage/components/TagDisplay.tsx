@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const TagsDisplaySection = styled.div`
@@ -15,9 +14,9 @@ const Tag = styled.div`
   font-size: 16px;
 `;
 
-interface TagDisPlayProps {
+type TagDisPlayProps = {
   tags: string[];
-}
+};
 
 function TagDisplay({ tags }: TagDisPlayProps) {
   if (!tags || tags.length === 0) return null;

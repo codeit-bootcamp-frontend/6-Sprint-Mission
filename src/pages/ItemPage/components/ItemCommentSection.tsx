@@ -51,7 +51,11 @@ const PostCommentButton = styled(Button)`
   }
 `;
 
-function ItemCommentSection({ productId }: { productId: string }) {
+type ItemCommentSectionProps = {
+  productId: number;
+};
+
+function ItemCommentSection({ productId }: ItemCommentSectionProps) {
   const [comment, setComment] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

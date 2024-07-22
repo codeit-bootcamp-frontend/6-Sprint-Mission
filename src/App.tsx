@@ -6,6 +6,7 @@ import AddItemPage from './pages/AddItemPage/AddItemPage';
 import CommunityFeedPage from './pages/CommunityFeedPage/CommunityFeedPage';
 import Header from './components/Layout/Header';
 import ItemPage from './pages/ItemPage/ItemPage';
+import './index.css';
 
 function App() {
   return (

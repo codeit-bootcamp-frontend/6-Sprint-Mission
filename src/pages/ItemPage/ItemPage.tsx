@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container, LineDivider, StyledLink } from '../../styles/CommonStyles';
@@ -7,6 +7,7 @@ import ItemProfileSection from './components/ItemProfileSection';
 import ItemCommentSection from './components/ItemCommentSection';
 import { ReactComponent as BackIcon } from '../../assets/images/icons/ic_back.svg';
 import LoadingSpinner from '../../components/UI/LoadingSpinner';
+import { Product } from '../../types/ProductTypes';
 
 const BackToMarketPageLink = styled(StyledLink)<{ $pill?: string }>`
   display: flex;
@@ -18,15 +19,17 @@ const BackToMarketPageLink = styled(StyledLink)<{ $pill?: string }>`
 `;
 
 function ItemPage() {
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState<Product | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
 
-  const { productId } = useParams<{ productId: string }>();
+  const { productId } = useParams();
+
+  const productIdNumber = Number(productId);
 
   useEffect(() => {
     async function fetchProduct() {
-      if (!productId) {
+      if (!productIdNumber) {
         setError('상품 아이디가 제공되지 않았어요.' || '');
         setIsLoading(false);
         return;
@@ -34,7 +37,7 @@ function ItemPage() {
 
       setIsLoading(true);
       try {
-        const data = await getProductDetail(productId);
+        const data: Product = await getProductDetail(productIdNumber);
         if (!data) {
           throw new Error('해당 상품의 데이터를 찾을 수 없습니다.');
         }
@@ -47,7 +50,7 @@ function ItemPage() {
     }
 
     fetchProduct();
-  }, [productId]);
+  }, [productIdNumber]);
 
   if (error) {
     alert(`오류: ${error}`);
@@ -64,7 +67,7 @@ function ItemPage() {
 
         <LineDivider />
 
-        <ItemCommentSection productId={productId} />
+        <ItemCommentSection productId={productIdNumber} />
 
         <BackToMarketPageLink $pill="true" to="/items">
           목록으로 돌아가기

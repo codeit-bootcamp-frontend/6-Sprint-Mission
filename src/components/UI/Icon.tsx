@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface IconProps {
+type IconProps = {
   iconComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   size?: number;
   fillColor?: string;
   outlineColor?: string;
-}
+};
 
 const IconWrapper = styled.div<{
   $size?: number;

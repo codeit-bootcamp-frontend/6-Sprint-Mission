@@ -30,11 +30,11 @@ const TagText = styled.span`
   white-space: nowrap;
 `;
 
-interface TagInputProps {
+type TagInputProps = {
   tags: string[];
   onAddTag: (tag: string) => void;
   onRemoveTag: (tag: string) => void;
-}
+};
 
 function TagInput({ tags, onAddTag, onRemoveTag }: TagInputProps) {
   const [input, setInput] = useState<string>('');

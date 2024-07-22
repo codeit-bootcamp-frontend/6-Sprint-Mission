@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getProducts } from '../../../api/itemApi';
 import ItemCard from './ItemCard';
 import { ReactComponent as SearchIcon } from '../../../assets/images/icons/ic_search.svg';
@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import DropdownMenu from '../../../components/UI/DropdownMenu';
 import PaginationBar from '../../../components/UI/PaginationBar';
 import LoadingSpinner from '../../../components/UI/LoadingSpinner';
+import { Item, OrderBy } from '../../../types/ItemTypes';
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -21,22 +22,14 @@ const getPageSize = () => {
   }
 };
 
-interface FetchDataParams {
-  orderBy: string;
+type FetchDataParams = {
+  orderBy: OrderBy;
   page: number;
   pageSize: number;
-}
-
-interface Item {
-  id: number;
-  name: string;
-  images: string;
-  favoriteCount: number;
-  price: number;
-}
+};
 
 function AllItemsSection() {
-  const [orderBy, setOrderBy] = useState('recent');
+  const [orderBy, setOrderBy] = useState<OrderBy>('recent');
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(getPageSize());
   const [itemList, setItemList] = useState<Item[]>([]);
@@ -56,7 +49,7 @@ function AllItemsSection() {
     }
   };
 
-  const handleSortSelection = (sortOption: string) => {
+  const handleSortSelection = (sortOption: OrderBy) => {
     setOrderBy(sortOption);
   };
 

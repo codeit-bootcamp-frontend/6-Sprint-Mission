@@ -1,14 +1,6 @@
-import React from 'react';
 import { ReactComponent as HeartIcon } from '../../../assets/images/icons/ic_heart.svg';
 import { Link } from 'react-router-dom';
-
-interface Item {
-  id: number;
-  name: string;
-  images: string;
-  favoriteCount: number;
-  price: number;
-}
+import { Item } from '../../../types/ItemTypes';
 
 function ItemCard({ item }: { item: Item }) {
   return (

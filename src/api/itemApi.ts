@@ -1,36 +1,5 @@
-interface Entity {
-  id: string;
-  name: string;
-}
-
-interface Product extends Entity {
-  price: number;
-}
-
-interface ProductDetail extends Entity {
-  description: string;
-}
-
-interface Comment extends Entity {
-  productId: string;
-  content: string;
-}
-
-interface ProductResponse {
-  list: Product[];
-  totalCount: number;
-}
-
-export async function getProducts(params: {
-  orderBy: string;
-  page: number;
-  pageSize: number;
-}): Promise<ProductResponse> {
-  const query = new URLSearchParams({
-    orderBy: params.orderBy,
-    page: params.page.toString(),
-    pageSize: params.pageSize.toString(),
-  }).toString();
+export async function getProducts(params = {}) {
+  const query = new URLSearchParams(params).toString();
 
   try {
     const response = await fetch(`https://panda-market-api.vercel.app/products?${query}`);
@@ -45,7 +14,7 @@ export async function getProducts(params: {
   }
 }
 
-export async function getProductDetail(productId: string): Promise<ProductDetail> {
+export async function getProductDetail(productId: number) {
   if (!productId) {
     throw new Error('Invalid product ID');
   }
@@ -63,18 +32,13 @@ export async function getProductDetail(productId: string): Promise<ProductDetail
   }
 }
 
-export async function getProductComments(params: {
-  productId: string;
-  params?: Record<string, any>;
-}): Promise<Comment[]> {
-  const { productId, params: queryParams } = params;
-
+export async function getProductComments({ productId, params }: { productId: number; params: {} }) {
   if (!productId) {
     throw new Error('Invalid product ID');
   }
 
   try {
-    const query = new URLSearchParams(queryParams).toString();
+    const query = new URLSearchParams(params).toString();
     const response = await fetch(`https://panda-market-api.vercel.app/products/${productId}/comments?${query}`);
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
