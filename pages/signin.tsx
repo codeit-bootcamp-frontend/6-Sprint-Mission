@@ -1,26 +1,46 @@
 "use client";
 
 import Image from "next/image";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Button from "@/components/Button/Button";
 import Input from "@/components/Input";
 import LogoImg from "@/src/img/logo-big.png";
 import IcoGoogle from "@/src/img/ic_google.svg";
 import IcoKakao from "@/src/img/ic_kakao.svg";
 import Link from "next/link";
+import { useAuth } from "@/src/contexts/AuthProvider";
+import { useRouter } from "next/router";
 
 export default function SignInPage() {
+  const { user, login } = useAuth(false);
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
   const [isEmailInvalid, setIsEmailInvalid] = useState(true);
   const [isPasswordInvalid, setIsPasswordInvalid] = useState(true);
-  const [isFormInvalid, setIsFormInvalid] = useState(true);
+  const router = useRouter();
 
-  const handleChange = (e: ChangeEvent<HTMLFormElement>) => {
-    if (!isEmailInvalid && !isPasswordInvalid) {
-      setIsFormInvalid(false);
-    } else {
-      setIsFormInvalid(true);
-    }
+  const handleInputChange = (e: ChangeEvent<HTMLFormElement>) => {
+    const { name, value } = e.target;
+
+    setValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
   };
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const jsonObject : Record<string, any> = {};
+    formData.forEach((value, key) => {
+      jsonObject[key] = value;
+    });
+
+    await login(jsonObject);
+    router.push("/");
+  }
 
   return (
     <div className="wrap wrap-form">
@@ -33,7 +53,7 @@ export default function SignInPage() {
           </a>
         </header>
         <div className="section-form__content">
-          <form action="/items.html" onChange={handleChange}>
+          <form action="/items.html" onSubmit={handleSubmit}>
             <fieldset className="section-form__form">
               <legend className="blind">로그인 폼</legend>
               <div className="section-form__box">
@@ -41,7 +61,15 @@ export default function SignInPage() {
                   이메일
                 </label>
                 <span className="section-form__input-box">
-                  <Input.Email id="login-email" className="section-form__input" placeholder="이메일을 입력해주세요" required={true} setIsInvalid={setIsEmailInvalid} />
+                  <Input.Email
+                    id="login-email"
+                    className="section-form__input"
+                    name="email"
+                    onChange={handleInputChange}
+                    placeholder="이메일을 입력해주세요"
+                    required={true}
+                    setIsInvalid={setIsEmailInvalid}
+                  />
                 </span>
               </div>
               <div className="section-form__box">
@@ -49,11 +77,11 @@ export default function SignInPage() {
                   비밀번호
                 </label>
                 <span className="section-form__input-box">
-                  <Input.Password id="login-pw" setIsInvalid={setIsPasswordInvalid} />
+                  <Input.Password id="login-pw" name="password" onChange={handleInputChange} setIsInvalid={setIsPasswordInvalid} />
                 </span>
               </div>
               <div className="section-form__box">
-                <Button size="large" type="submit" id="btn-submit" className="section-form__btn btn-large" disabled={isFormInvalid}>
+                <Button size="large" type="submit" id="btn-submit" className="section-form__btn btn-large" disabled={isEmailInvalid || isPasswordInvalid}>
                   로그인
                 </Button>
               </div>

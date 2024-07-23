@@ -7,6 +7,7 @@ import { Article } from "@/src/types/article";
 import Link from "next/link";
 import WriterInfo from "./WriterInfo";
 import Styles from "./BoardList.module.scss";
+import ImgProductEmpty from "@/src/img/Img_product_empty-sm.png";
 
 interface articleListProps {
   order: string;
@@ -58,7 +59,7 @@ export function BoardList({ order = "", pageSize = 0, keyword = "", page = undef
                 </h3>
                 {article.image && (
                   <figure className={Styles.image}>
-                    <Image width="72" height="72" src={article.image} alt="이미지" />
+                    <Image width="72" height="72" src={article?.image ?? ImgProductEmpty} alt="이미지" />
                   </figure>
                 )}
               </div>

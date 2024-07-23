@@ -6,6 +6,8 @@ import useResponsive from "@/src/hooks/useResponsive";
 import ItemList from "@/components/ItemList";
 import Input from "@/components/Input";
 import Header from "@/components/Header";
+import ImgProductEmpty from "@/src/img/Img_product_empty.png";
+
 
 export default function Page() {
   const [isPC, isTablet, isMobile] = useResponsive();

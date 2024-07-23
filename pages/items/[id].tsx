@@ -11,6 +11,7 @@ import { Item } from "@/src/types/item";
 import { GetServerSidePropsContext } from "next";
 import { getItemComments, getItemDetail } from "@/src/api/api";
 import { ChangeEvent, useState } from "react";
+import ImgProductEmpty from "@/src/img/Img_product_empty.png";
 
 const defaultProduct: Item = {
   id: 0,
@@ -58,7 +59,7 @@ export default function ItemDetailPage({ product, comments }: { product: any; co
       <div className="section-wrap">
         <section className="section-detail">
           <div className="section-img">
-            <img src={product.images} alt="상품 이미지" className="detail-img" />
+            <Image src={product?.images[0] ?? ImgProductEmpty} width={486} height={486} alt="상품 이미지" className="detail-img" />
           </div>
           <div className="section-content">
             <div className="section-row">

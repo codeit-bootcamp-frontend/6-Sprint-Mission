@@ -1,18 +1,19 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import Styles from "./Input.module.scss";
 
 interface EmailInputProps {
   name: string;
   value: string;
-  onChange: () => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;
   className: string;
   required: boolean;
   setIsInvalid: (value: boolean) => void;
 }
 
-export default function EmailInput({ name, value, id, className, required, setIsInvalid }: EmailInputProps) {
+export default function EmailInput({ name, value, id, className, required, setIsInvalid, onChange }: EmailInputProps) {
   const [isEmpty, setIsEmpty] = useState(false);
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.checkValidity()) {
       setIsInvalid(false);
@@ -24,6 +25,7 @@ export default function EmailInput({ name, value, id, className, required, setIs
     } else {
       setIsEmpty(false);
     }
+    onChange(e);
   };
   return (
     <>

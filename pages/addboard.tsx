@@ -3,24 +3,23 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import useAsync from "@/src/hooks/useAsync";
-import { createItems } from "@/src/api/api";
+import { createItems, postArticle, uploadImg } from "@/src/api/api";
 import Input from "@/components/Input";
 import Button from "@/components/Button/Button";
 import Header from "@/components/Header";
+import { useAuth } from "@/src/contexts/AuthProvider";
 
-const INITIAL_VALUES = {
-  name: null,
-  description: null,
-  images: null,
-};
-
-export default function AddBoardPage({ initialValues = INITIAL_VALUES }) {
+export default function AddBoardPage() {
+  const { user } = useAuth(true);
   const [isLoading, loadingError, onSubmitAsync] = useAsync(createItems);
-  const [isDisableSubmit, setIsDisableSubmit] = useState(true);
-  const [values, setValues] = useState(initialValues);
+  const [values, setValues] = useState({
+    title: "",
+    content: "",
+    image: "",
+  });
   const router = useRouter();
 
-  const handleChange = (name: keyof typeof INITIAL_VALUES, value: string) => {
+  const handleChange = (name: string, value: string) => {
     setValues((prevValues) => ({
       ...prevValues,
       [name]: value,
@@ -29,31 +28,37 @@ export default function AddBoardPage({ initialValues = INITIAL_VALUES }) {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    handleChange(name as keyof typeof INITIAL_VALUES, value);
+    handleChange(name, value);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("name", values.name || "");
-    formData.append("description", values.description || "");
-    formData.append("images", values.images || "");
+    formData.append("title", values.title);
+    formData.append("content", values.content);
+    if (values.image) {
+      const imgForm = new FormData();
+      imgForm.append("image", values.image);
 
-    if (typeof onSubmitAsync !== "function") {
-      console.error("onSubmitAsync is not a function");
-      return;
+      const response = await uploadImg(imgForm);
+      if (!response) return;
+      formData.append("image", response);
     }
 
-    const result = await onSubmitAsync(formData);
-    if (!result) return;
+    const jsonObject: { [key: string]: any } = {};
+    formData.forEach((value, key) => {
+      jsonObject[key] = value;
+    });
 
-    router.push("/items");
+    const response = await postArticle(jsonObject);
+    if (!response) return;
+
+    router.push(`/boards/${response.id}`);
   };
 
-  useEffect(() => {
-    setIsDisableSubmit(Object.values(values).every((el: any) => el !== "" && el !== null && el.length !== 0));
-  }, [values]);
-
+  if (!user) {
+    return null;
+  }
   return (
     <>
       <Header />
@@ -62,7 +67,7 @@ export default function AddBoardPage({ initialValues = INITIAL_VALUES }) {
           <div className="section-wrap">
             <header className="section-header">
               <h2 className="section-tit">게시글 쓰기</h2>
-              <Button type="submit" id="submit-article" size="small" disabled={!isDisableSubmit} className="btn-small btn-submit">
+              <Button type="submit" id="submit-article" size="small" disabled={values.title === "" || values.content === ""} className="btn-small btn-submit">
                 등록
               </Button>
             </header>
@@ -73,7 +78,7 @@ export default function AddBoardPage({ initialValues = INITIAL_VALUES }) {
                 </sup>
                 제목
               </h3>
-              <Input.Text name="name" value={values.name} onChange={handleInputChange} placeholder="제목을 입력해주세요" />
+              <Input.Text name="title" value={values.title} onChange={handleInputChange} placeholder="제목을 입력해주세요" />
             </section>
             <section className="section-addItem-content">
               <h3 className="section-tit">
@@ -82,11 +87,11 @@ export default function AddBoardPage({ initialValues = INITIAL_VALUES }) {
                 </sup>
                 내용
               </h3>
-              <Input.Textarea name="description" value={values.description} onChange={handleInputChange} size="large" placeholder="내용을 입력해주세요" />
+              <Input.Textarea name="content" value={values.content} onChange={handleInputChange} size="large" placeholder="내용을 입력해주세요" />
             </section>
             <section className="section-addItem-content">
               <h3 className="section-tit">상품 이미지</h3>
-              <Input.File name="images" value={values.images} onChange={handleChange} />
+              <Input.File name="image" value={values.image} onChange={handleChange} />
             </section>
           </div>
         </form>

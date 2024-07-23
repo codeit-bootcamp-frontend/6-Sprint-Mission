@@ -49,7 +49,7 @@ export default function FileInput({ name, value, onChange }: FileInputProps) {
 
       {preview && (
         <div className={Styles["file-view__preview"]}>
-          <img src={preview} alt="이미지 미리보기" className={Styles.img} />
+          <Image src={preview} width={282} height={282} alt="이미지 미리보기" className={Styles.img} />
           <button type="button" onClick={handleClearClick} className={Styles["btn-close"]}>
             <Image width="8" height="8" src={icoX} alt="아이콘" aria-hidden="true" />
           </button>

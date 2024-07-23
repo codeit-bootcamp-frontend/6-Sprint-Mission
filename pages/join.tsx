@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
-import { ChangeEvent, useRef, ReactElement, ReactNode, useEffect, useState } from "react";
+import { ChangeEvent, useRef, ReactElement, ReactNode, useEffect, useState, FormEvent } from "react";
 import Input from "@/components/Input";
 import Button from "@/components/Button/Button";
 import LogoImg from "@/src/img/logo-big.png";
 import IcoGoogle from "@/src/img/ic_google.svg";
 import IcoKakao from "@/src/img/ic_kakao.svg";
+import { join } from "@/src/api/api";
+import { useRouter } from "next/router";
+import { useAuth } from "@/src/contexts/AuthProvider";
 
 export default function JoinPage() {
   const [isEmailInvalid, setIsEmailInvalid] = useState<boolean | null>(null);
@@ -16,6 +19,8 @@ export default function JoinPage() {
   const [isFormInvalid, setIsFormInvalid] = useState(true);
   const inputPW = useRef<HTMLInputElement>();
   const inputRePW = useRef<HTMLInputElement>();
+  const router = useRouter();
+  const { user } = useAuth(false);
 
   const handleChange = (e: ChangeEvent<HTMLFormElement>) => {
     switch (e.target.type) {
@@ -37,6 +42,23 @@ export default function JoinPage() {
         break;
     }
   };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const jsonObject: { [key: string]: any } = {};
+    formData.forEach((value, key) => {
+      jsonObject[key] = value;
+    });
+
+    const result = await join(jsonObject);
+
+    if (!result) return;
+    else {
+      router.push("/signin");
+    }
+  };
+
   useEffect(() => {
     if (isEmailInvalid !== null && isPasswordInvalid !== null && isPasswordInvalid !== null && isRePasswordInvalid !== null && isNameInvalid !== null && isPasswordNotSame !== null) {
       setIsFormInvalid(isEmailInvalid || isPasswordInvalid || isRePasswordInvalid || isNameInvalid || isPasswordNotSame);
@@ -54,7 +76,7 @@ export default function JoinPage() {
           </a>
         </header>
         <div className="section-form__content">
-          <form action="/signin" onChange={handleChange}>
+          <form onChange={handleChange} onSubmit={handleSubmit}>
             <fieldset className="section-form__form">
               <legend className="blind">회원가입 폼</legend>
               <div className="section-form__box">
@@ -62,7 +84,7 @@ export default function JoinPage() {
                   이메일
                 </label>
                 <span className="section-form__input-box">
-                  <Input.Email id="join-email" setIsInvalid={setIsEmailInvalid} />
+                  <Input.Email id="join-email" name="email" setIsInvalid={setIsEmailInvalid} />
                   {isEmailInvalid && <p className="alert">잘못된 이메일 형식입니다.</p>}
                 </span>
               </div>
@@ -79,7 +101,7 @@ export default function JoinPage() {
                   비밀번호
                 </label>
                 <span className="section-form__input-box">
-                  <Input.Password id="join-pw" inputRef={inputPW} setIsInvalid={setIsPasswordInvalid} />
+                  <Input.Password id="join-pw" name="password" inputRef={inputPW} setIsInvalid={setIsPasswordInvalid} />
                 </span>
               </div>
               <div className="section-form__box">
@@ -87,7 +109,7 @@ export default function JoinPage() {
                   비밀번호 확인
                 </label>
                 <span className="section-form__input-box">
-                  <Input.Password id="join-pw-re" inputRef={inputRePW} setIsInvalid={setIsRePasswordInvalid} />
+                  <Input.Password id="join-pw-re" name="passwordConfirmation" inputRef={inputRePW} setIsInvalid={setIsRePasswordInvalid} />
                   {isPasswordNotSame && <p className="alert">비밀번호가 일치하지 않습니다.</p>}
                 </span>
               </div>

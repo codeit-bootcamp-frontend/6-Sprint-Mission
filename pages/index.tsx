@@ -8,8 +8,12 @@ import IcoFacebook from "@/src/img/ic_facebook.svg";
 import IcoYoutube from "@/src/img/ic_youtube.svg";
 import IcoTwitter from "@/src/img/ic_twitter.svg";
 import IcoInstagram from "@/src/img/ic_instagram.svg";
+import { useAuth } from "@/src/contexts/AuthProvider";
+import ImgUser from "@/src/img/ic_profile.svg";
 
 export default function Page() {
+  const { user, isAuth } = useAuth(false);
+
   return (
     <div className="wrap wrap-index">
       <header className="header">
@@ -25,9 +29,13 @@ export default function Page() {
             </Link>
           </h1>
           <div className="header__btn">
-            <Link href="/signin" className="btn-login">
-              로그인
-            </Link>
+            {isAuth ? (
+              <Image src={ImgUser} width={40} height={40} alt="유저 이미지" />
+            ) : (
+              <Link href="/signin" className="btn-login">
+                로그인
+              </Link>
+            )}
           </div>
         </div>
       </header>

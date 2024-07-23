@@ -94,6 +94,12 @@
           border-left: 1px solid var(--cool-grey200);
         }
       }
+      .chk_like {
+        display:none;
+      }
+      .lab_like {
+        display: flex;
+      }
       .like {
         display: flex;
         gap: 4px;
@@ -142,6 +148,16 @@
     .btn-comment {
       align-self: flex-end;
     }
+  }
+}
+
+.section-replyList {
+  .no-reply {
+    padding-top:40px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color:#9CA3AF;
   }
 }
 
