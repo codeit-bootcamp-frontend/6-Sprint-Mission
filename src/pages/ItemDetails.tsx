@@ -18,7 +18,7 @@ export default function ItemDetails() {
       <main className="my-6">
         <div className="mx-auto flex flex-col px-4 sm:px-6 lg:w-[1200px] lg:px-0">
           <ItemIntroduction postedItems={postedItems} />
-          <CommentInput />
+          <CommentInput productId={postedItems.id} />
           <CommentList productId={postedItems.id} />
           <div className="my-10 flex justify-center">
             <Link

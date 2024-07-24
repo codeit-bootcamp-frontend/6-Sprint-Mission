@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useMutation, useQueryClient } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 
+import axiosInstance from '../api/apiClient';
 import { closeTagIcon, deletePreviewImageIcon } from '../images';
 
 // form내 에러메시지를 객체로 관리하였습니다.
@@ -12,6 +15,10 @@ const formErrorMessage = {
 };
 
 export default function ProductForm() {
+  const queryClient = useQueryClient();
+  // 폼 완료 후 페이지 이동
+  const navigate = useNavigate();
+
   // 태그에 관한 state입니다.
   const [tagState, setTagState] = useState<{
     tags: string[];
@@ -22,6 +29,8 @@ export default function ProductForm() {
   });
   // 미리보기 이미지를 위한 state입니다.
   const [previewImage, setPreviewImage] = useState<any | null>(null);
+  // 이미지 업로드를 위한 state입니다
+  const [imageUpload, setImageUpload] = useState<File | null>(null);
 
   // react-hook-form으로 form의 유효성 체크 및 에러 관리를 하였습니다.
   const {
@@ -39,7 +48,8 @@ export default function ProductForm() {
     if (e.key === 'Enter' && tagState.tagInput.trim() !== '') {
       e.preventDefault();
       setTagState({
-        tags: [...tagState.tags, tagState.tagInput],
+        // TODO : 추후 tags set으로 migration 필요
+        tags: Array.from(new Set([...tagState.tags, tagState.tagInput])),
         tagInput: '',
       });
     }
@@ -56,6 +66,7 @@ export default function ProductForm() {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
     const file = e.target.files[0];
+    setImageUpload(file);
     const reader = new FileReader();
 
     reader.onloadend = () => {
@@ -67,13 +78,56 @@ export default function ProductForm() {
     }
   };
 
+  const createImage = useMutation({
+    mutationFn: async (image: FormData) => {
+      const response = await axiosInstance.post('/images/upload', image);
+      return response.data.url;
+    },
+  });
+
+  const createProduct = useMutation({
+    mutationFn: async (data: any) => {
+      const response = await axiosInstance.post(
+        '/products',
+        {
+          images: [data.image],
+          tags: data.tags,
+          price: +data.price,
+          name: data.productName,
+          description: data.productIntro,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        },
+      );
+      return response.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries('products');
+      /*
+       * TODO : 쿼리 키 문제로 추정되는데 products는 따로 제품 키 마다 관리가 되지 않고 있어 상세 페이지로 이동이 불가능 하는 것 같다. (페이지 이동은 되나 undefined오류가 뜸.)
+       *        useFetchItems를 리팩토링 후 상세페이지로 이동하는 로직 구현할 것.
+       */
+      // if (resData.id) {
+      //   navigate(`/items/${resData.id}`);
+      // }
+      navigate('/items');
+    },
+  });
+
   // * onSubmit테스트 코드입니다.
-  const onSubmit = (data: any) => {
-    console.log('로그인 데이터입니다', {
-      ...data,
-      tags: tagState.tags,
-      previewImage,
-    });
+  const onSubmit = async (data: any) => {
+    let image = null;
+    if (imageUpload) {
+      // console.log('previewImage', previewImage);
+      const formData = new FormData();
+      formData.append('image', imageUpload);
+      image = await createImage.mutateAsync(formData);
+    }
+
+    await createProduct.mutate({ tags: tagState.tags, image, ...data });
   };
 
   return (
@@ -208,7 +262,8 @@ export default function ProductForm() {
           className="mt-3 rounded-xl bg-[var(--cool-gray100)] py-4 pl-6"
           value={tagState.tagInput}
           onChange={handleTagInput}
-          onKeyDown={handleTagKeyDown}
+          // 맥북 한글 마지막 글자 중복으로 인한 onKeyPress 이용
+          onKeyPress={handleTagKeyDown}
         />
         <div className="mt-3 flex flex-wrap gap-x-3">
           {tagState.tags.map((tag, idx) => {

@@ -1,9 +1,37 @@
+import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
+import axiosInstance from '../api/apiClient';
 import { pandaLogo } from '../images';
 
 export default function Navbar() {
   const location = useLocation();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken');
+    if (accessToken) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = async () => {
+    const response = await axiosInstance.post('/auth/signIn', {
+      email: process.env.REACT_APP_AUTH_EMAIL,
+      password: process.env.REACT_APP_AUTH_PASSWORD,
+    });
+
+    localStorage.setItem('accessToken', response.data.accessToken);
+    localStorage.setItem('refreshToken', response.data.refreshToken);
+
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    setIsLoggedIn(false);
+  };
 
   return (
     <nav className="border-b bg-white">
@@ -44,9 +72,21 @@ export default function Navbar() {
             </NavLink>
           </li>
         </ul>
-        <button className="rounded-lg bg-[var(--btn-blue1)] px-6 py-3 text-white">
-          로그인
-        </button>
+        {isLoggedIn ? (
+          <button
+            className="rounded-lg bg-[var(--btn-blue1)] px-6 py-3 text-white"
+            onClick={handleLogout}
+          >
+            로그아웃
+          </button>
+        ) : (
+          <button
+            className="rounded-lg bg-[var(--btn-blue1)] px-6 py-3 text-white"
+            onClick={handleLogin}
+          >
+            로그인
+          </button>
+        )}
       </div>
     </nav>
   );

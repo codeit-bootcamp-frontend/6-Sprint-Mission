@@ -1,24 +1,24 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import useFetchItems from "../api/useFetchItems";
-import { arrowDown, favoriteIcon, searchIcon, sortButton } from "../images";
-import paginationStore from "../store/paginationStore";
-import { useProductCountStore } from "../store/productCountStore";
-import formatNumber from "../utils/formatNumber";
-import { Pagination, SortDropdown } from ".";
+import { Pagination, SortDropdown } from '.';
+import useFetchItems from '../api/useFetchItems';
+import { arrowDown, favoriteIcon, searchIcon, sortButton } from '../images';
+import paginationStore from '../store/paginationStore';
+import { useProductCountStore } from '../store/productCountStore';
+import formatNumber from '../utils/formatNumber';
 
 export default function AllItemsList() {
   // 정렬 옵션을 위한 객체입니다.
   const sortOptions = {
-    LIKE: "좋아요순",
-    NEWEST: "최신순",
+    LIKE: '좋아요순',
+    NEWEST: '최신순',
   };
 
   // 드롭다운 on off를 위한 state입니다.
   const [dropdownView, setDropdownView] = useState(false);
   // 최신순으로 데이터를 받아올지, 좋아요 순으로 데이터를 받아올지 정하는 state입니다.
-  const [orderBy, setOrderBy] = useState("favorite");
+  const [orderBy, setOrderBy] = useState('favorite');
   // 정렬 후 화면으로 최신순인지 좋아요순인지 보여줍니다.
   // * api를 받은 후 좋아요 순으로 정렬 되어 있어 기본 값을 좋아요순으로 바꾸었습니다.
   const [sortContent, setSortContent] = useState(sortOptions.LIKE);

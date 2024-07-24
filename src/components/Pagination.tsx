@@ -1,9 +1,16 @@
 import { MouseEventHandler } from 'react';
-import { arrowLeft, arrowRight } from "../images";
-import paginationStore from "../store/paginationStore";
-import { useProductCountStore } from "../store/productCountStore";
 
-function PageButton({ onClick, children }: {onClick?: MouseEventHandler<HTMLButtonElement>, children: React.ReactNode}) {
+import { arrowLeft, arrowRight } from '../images';
+import paginationStore from '../store/paginationStore';
+import { useProductCountStore } from '../store/productCountStore';
+
+function PageButton({
+  onClick,
+  children,
+}: {
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  children: React.ReactNode;
+}) {
   return (
     <button
       onClick={onClick}
@@ -14,7 +21,11 @@ function PageButton({ onClick, children }: {onClick?: MouseEventHandler<HTMLButt
   );
 }
 
-export default function Pagination({ datatotalCount }: {datatotalCount: number}) {
+export default function Pagination({
+  datatotalCount,
+}: {
+  datatotalCount: number;
+}) {
   const setCurrentPage = paginationStore((state) => state.setCurrentPage);
   // 화면에 따라 보여줄 제품 개수입니다.
   const productCount = useProductCountStore();
