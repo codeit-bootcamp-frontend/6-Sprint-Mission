@@ -1,8 +1,18 @@
-function DropdownList() {
+function DropdownList({ onHandleSelection }) {
   return (
-    <div className="absolute w-[100px] h-[100px] bg-[var(--gray50)]">
-      <button className="hover:bg-[var(--gray200)]">최신순</button>
-      <button className="hover:bg-[var(--gray200)]">좋아요 순</button>
+    <div className="absolute w-[150px] bg-white shadow-lg rounded-lg border border-gray-300 mt-2">
+      <button
+        className="w-full px-4 py-2 text-left hover:bg-gray-200 rounded-t-lg transition-colors"
+        onClick={() => onHandleSelection("recent")}
+      >
+        최신순
+      </button>
+      <button
+        className="w-full px-4 py-2 text-left hover:bg-gray-200 rounded-b-lg transition-colors"
+        onClick={() => onHandleSelection("favorite")}
+      >
+        좋아요순
+      </button>
     </div>
   );
 }

@@ -17,7 +17,7 @@ function Header() {
           </Link>
           <div className="flex items-center gap-[24px]">
             <li className="w-[90px] hover:text-[var(--blue50)]">
-              <NavLink to="/freeboard" style={getLinkStyle}>
+              <NavLink to="/community" style={getLinkStyle}>
                 자유게시판
               </NavLink>
             </li>

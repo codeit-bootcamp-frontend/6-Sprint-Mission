@@ -5,6 +5,7 @@ import AddItem from "./pages/AddItemPage/AddItemPage";
 import Header from "./components/Header";
 import CommunityFeedPage from "./pages/CommunityFeedPage/CommunityFeedPage";
 import Login from "./pages/LoginPage/LoginPage";
+import ItemPage from "./pages/ItemPage/ItemPage";
 
 function Main() {
   return (
@@ -14,8 +15,9 @@ function Main() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="login" element={<Login />} />
-          <Route path="/freeboard" element={<CommunityFeedPage />} />
+          <Route path="/community" element={<CommunityFeedPage />} />
           <Route path="/items" element={<UsedMarket />} />
+          <Route path="/items/:productId" element={<ItemPage />} />
           <Route path="/additem" element={<AddItem />} />
         </Routes>
       </div>
