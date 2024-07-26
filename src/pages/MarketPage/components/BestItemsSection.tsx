@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import { getProducts } from "../../../api/itemApi";
 import LoadingSpinner from "../../../components/UI/LoadingSpinner";
+import { useQuery } from "@tanstack/react-query";
 
 interface Item {
   id: number;
@@ -30,30 +31,13 @@ const getPageSize = (): number => {
 };
 
 function BestItemsSection() {
-  const [itemList, setItemList] = useState<Item[]>([]);
   const [pageSize, setPageSize] = useState<number>(getPageSize());
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const fetchSortedData = async ({
-    orderBy,
-    pageSize,
-  }: {
-    orderBy: string;
-    pageSize: number;
-  }) => {
-    setIsLoading(true);
-    try {
-      const products: ProductsResponse = await getProducts({
-        orderBy,
-        pageSize: pageSize.toString(),
-      });
-      setItemList(products.list);
-    } catch (error) {
-      console.error("오류: ", (error as Error).message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const { data, isLoading, error } = useQuery<ProductsResponse, Error>({
+    queryKey: ["bestItems", pageSize],
+    queryFn: () =>
+      getProducts({ orderBy: "favorite", pageSize: pageSize.toString() }),
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,27 +45,23 @@ function BestItemsSection() {
     };
 
     window.addEventListener("resize", handleResize);
-    fetchSortedData({ orderBy: "favorite", pageSize });
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [pageSize]);
+  }, []);
 
+  if (isLoading) return <LoadingSpinner isLoading={isLoading} />;
+  if (error) return <div>오류가 발생했습니다: {(error as Error).message}</div>;
   return (
-    <>
-      <LoadingSpinner isLoading={isLoading} />
-
-      <div className="bestItemsContainer">
-        <h1 className="sectionTitle">베스트 상품</h1>
-
-        <div className="bestItemsCardSection">
-          {itemList?.map((item) => (
-            <ItemCard item={item} key={`best-item-${item.id}`} />
-          ))}
-        </div>
+    <div className="bestItemsContainer">
+      <h1 className="sectionTitle">베스트 상품</h1>
+      <div className="bestItemsCardSection">
+        {data?.list.map((item: Item) => (
+          <ItemCard item={item} key={`best-item-${item.id}`} />
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 

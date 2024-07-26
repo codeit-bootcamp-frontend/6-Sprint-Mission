@@ -1,4 +1,9 @@
-import React, { ChangeEvent, Key, KeyboardEvent } from "react";
+import { ChangeEvent, KeyboardEvent, FocusEvent } from "react";
+import {
+  UseFormRegisterReturn,
+  UseFormSetValue,
+  UseFormTrigger,
+} from "react-hook-form";
 import styled, { css } from "styled-components";
 
 const inputStyle = css`
@@ -31,7 +36,7 @@ export const Label = styled.label`
   }
 `;
 
-const InputField = styled.input`
+export const InputField = styled.input`
   ${inputStyle}
 `;
 
@@ -41,43 +46,102 @@ const TextArea = styled.textarea`
   resize: none;
 `;
 
+export const ErrorMessage = styled.span`
+  color: var(--red);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 8px;
+  display: block;
+`;
+
 interface InputItemProps {
   id: string;
-  label?: string;
-  value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  placeholder?: string;
-  onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void;
+  label: string;
+  placeholder: string;
+  value?: string;
+  errorMessage?: string;
+  onChange?: (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  onKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   isTextArea?: boolean;
+  type?: string;
+  register?: UseFormRegisterReturn;
+  setValue?: UseFormSetValue<any>;
+  trigger?: UseFormTrigger<any>;
 }
 
-const InputItem = ({
+const InputItem: React.FC<InputItemProps> = ({
   id,
   label,
+  placeholder,
   value,
   onChange,
-  placeholder,
   onKeyDown,
+  onBlur,
   isTextArea,
-}: InputItemProps) => {
+  errorMessage,
+  type = "text",
+  register,
+  setValue,
+  trigger,
+}) => {
+  const handleBlur = async (
+    event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const trimmedValue = event.target.value.trim();
+
+    if (setValue && trigger) {
+      setValue(id, trimmedValue);
+      await trigger(id);
+    }
+
+    if (onBlur) {
+      onBlur(event);
+    }
+  };
+
+  const combinedRegister = register
+    ? {
+        ...register,
+        onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+          register.onChange(e);
+          if (onChange) {
+            onChange(e);
+          }
+        },
+        onBlur: (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+          register.onBlur(e);
+          handleBlur(e);
+        },
+      }
+    : {};
+
   return (
     <div>
       {label && <Label htmlFor={id}>{label}</Label>}
+
       {isTextArea ? (
         <TextArea
           id={id}
           value={value}
-          onChange={onChange}
           placeholder={placeholder}
+          {...combinedRegister}
         />
       ) : (
         <InputField
           id={id}
           value={value}
-          onChange={onChange}
           onKeyDown={onKeyDown}
+          placeholder={placeholder}
+          type={type}
+          {...combinedRegister}
         />
       )}
+
+      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   );
 };
