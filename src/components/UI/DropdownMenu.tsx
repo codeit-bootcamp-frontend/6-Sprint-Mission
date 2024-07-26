@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import "./DropdownMenu.css";
 import { ReactComponent as SortIcon } from "../../assets/images/icons/ic_sort.svg";
 
-function DropdownMenu({ onSortSelection }) {
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+interface DropdownMenuProps {
+  onSortSelection: (sortType: string) => void;
+}
+
+const DropdownMenu: React.FC<DropdownMenuProps> = ({ onSortSelection }) => {
+  const [isDropdownVisible, setIsDropdownVisible] = useState<boolean>(false);
 
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
@@ -39,5 +43,6 @@ function DropdownMenu({ onSortSelection }) {
       )}
     </div>
   );
-}
+};
+
 export default DropdownMenu;

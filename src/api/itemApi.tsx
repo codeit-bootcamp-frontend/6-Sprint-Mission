@@ -1,3 +1,7 @@
+import { ItemType } from "../types/Items";
+import { AddItemType } from "../types/Items";
+import { Comment } from "../types/Items";
+
 const PANDA_API = "https://panda-market-api.vercel.app/products";
 
 export async function getProducts(params = {}) {
@@ -17,7 +21,7 @@ export async function getProducts(params = {}) {
   }
 }
 
-export async function getProductById(productId) {
+export async function getProductById(productId: string) {
   // 제품 상세 정보를 가져오는 api입니다.
   try {
     const response = await fetch(`${PANDA_API}/${productId}`);
@@ -32,7 +36,7 @@ export async function getProductById(productId) {
   }
 }
 
-export async function getProductCommentsById(productId) {
+export async function getProductCommentsById(productId: string) {
   // 제품 상세 정보의 댓글을 가져오는 api입니다.
   try {
     const response = await fetch(`${PANDA_API}/${productId}/comments?limit=3`);

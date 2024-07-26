@@ -1,6 +1,16 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+interface InputItemProps {
+  id: string;
+  label?: string;
+  value: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  placeholder?: string;
+  onKeyDown?: React.KeyboardEventHandler<HTMLInputElement>;
+  isTextArea?: boolean;
+}
+
 // input과 textarea의 스타일이 대부분 중복되기 때문에 styled-components의 css 헬퍼 함수를 사용해 공통 스타일을 정의했어요.
 // `${}`로 정의된 스타일을 삽입하면 여러 styled component 내에서 코드를 재사용할 수 있어요.
 const inputStyle = css`
@@ -51,7 +61,7 @@ function InputItem({
   placeholder,
   onKeyDown,
   isTextArea,
-}) {
+}: InputItemProps) {
   return (
     <div>
       {label && <Label htmlFor={id}>{label}</Label>}
@@ -67,7 +77,7 @@ function InputItem({
           id={id}
           value={value}
           onChange={onChange}
-          onKeyDown={onKeyDown} // `onKeyPress` 이벤트는 리액트에서 더이상 지원되지 않기 때문에(deprecated) `onKeyDown` 또는 `onKeyUp`을 사용해 주세요
+          onKeyDown={onKeyDown}
           placeholder={placeholder}
         />
       )}

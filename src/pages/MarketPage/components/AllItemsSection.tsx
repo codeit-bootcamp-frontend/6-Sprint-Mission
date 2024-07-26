@@ -25,15 +25,23 @@ function AllItemsSection() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(getPageSize());
   const [itemList, setItemList] = useState([]);
-  const [totalPageNum, setTotalPageNum] = useState();
+  const [totalPageNum, setTotalPageNum] = useState<number>();
 
-  const fetchSortedData = async ({ orderBy, page, pageSize }) => {
+  const fetchSortedData = async ({
+    orderBy,
+    page,
+    pageSize,
+  }: {
+    orderBy: string;
+    pageSize: number;
+    page: number;
+  }) => {
     const products = await getProducts({ orderBy, page, pageSize });
     setItemList(products.list);
     setTotalPageNum(Math.ceil(products.totalCount / pageSize));
   };
 
-  const handleSortSelection = (sortOption) => {
+  const handleSortSelection = (sortOption: string) => {
     setOrderBy(sortOption);
   };
 
@@ -52,7 +60,7 @@ function AllItemsSection() {
     };
   }, [orderBy, page, pageSize]);
 
-  const onPageChange = (pageNumber) => {
+  const onPageChange = (pageNumber: number) => {
     setPage(pageNumber);
   };
 

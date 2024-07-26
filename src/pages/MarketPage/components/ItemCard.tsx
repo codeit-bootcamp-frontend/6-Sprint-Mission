@@ -1,7 +1,14 @@
 import React from "react";
 import { ReactComponent as HeartIcon } from "../../../assets/images/icons/ic_heart.svg";
 
-function ItemCard({ item }) {
+interface Item {
+  images: string[];
+  name: string;
+  favoriteCount: number;
+  price: number;
+}
+
+function ItemCard({ item }: { item: Item }) {
   return (
     <div className="itemCard">
       <img src={item.images[0]} alt={item.name} className="itemCardThumbnail" />

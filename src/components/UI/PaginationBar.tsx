@@ -3,9 +3,20 @@ import "./PaginationBar.css";
 import { ReactComponent as LeftArrow } from "../../assets/images/icons/arrow_left.svg";
 import { ReactComponent as RightArrow } from "../../assets/images/icons/arrow_right.svg";
 
-const PaginationBar = ({ totalPageNum, activePageNum, onPageChange }) => {
+// Props 타입 정의
+interface PaginationBarProps {
+  totalPageNum: number;
+  activePageNum: number;
+  onPageChange: (pageNum: number) => void;
+}
+
+const PaginationBar: React.FC<PaginationBarProps> = ({
+  totalPageNum,
+  activePageNum,
+  onPageChange,
+}) => {
   const maxVisiblePages = 5;
-  let startPage;
+  let startPage: number;
 
   if (totalPageNum <= maxVisiblePages) {
     startPage = 1;

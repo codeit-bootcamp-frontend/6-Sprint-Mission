@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductCommentsById } from "../../../api/itemApi";
-import NoneCommentsImg from "../../../assets/images/img_nonecomment.png";
+import NoneCommentsImg from "../../../assets/images/icons/img_nonecomment.svg";
+import { Comment } from "../../../types/Items";
 
 function ItemComments() {
   const { itemId } = useParams();
-  const [comments, setCommnets] = useState();
+  const [comments, setCommnets] = useState<Comment[]>();
 
   const fetch = async () => {
     try {
@@ -16,8 +17,8 @@ function ItemComments() {
     }
   };
 
-  function formatTime(time) {
-    const elapsed = (new Date() - new Date(time)) / 1000;
+  function formatTime(time: Date) {
+    const elapsed = (new Date().getTime() - new Date(time).getTime()) / 1000;
 
     const intervals = {
       일: 86400,

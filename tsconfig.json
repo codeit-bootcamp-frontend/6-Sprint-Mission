@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "es2022",
+    "target": "ES6",
+    "moduleDetection": "auto",
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "outDir": "./dist",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node"
+  },
+  "exclude": ["node_modules", "**/*.(spec|test).ts"],
+  "include": ["./src/**/*", "src/components", "custom.d.ts"]
+}
