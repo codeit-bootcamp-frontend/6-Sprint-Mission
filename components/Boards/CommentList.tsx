@@ -4,8 +4,13 @@ import { Comment } from "@/types";
 
 import Image from "next/image";
 import formatTimeAgo from "@/utils/formatTimeAgo";
+import { CommentSchemaType } from "@/schema/comment";
 
-export default function CommentList({ comments }: { comments: Comment[] }) {
+export default function CommentList({
+  comments,
+}: {
+  comments: CommentSchemaType[];
+}) {
   return (
     <>
       {comments?.map((comment) => {

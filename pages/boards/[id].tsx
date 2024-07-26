@@ -5,43 +5,56 @@ import heart_inactive from "@/public/images/heart_inactive.png";
 import IconReturn from "@/public/icons/icon_return.svg";
 import Image from "next/image";
 import Link from "next/link";
-import instance from "@/lib/axios";
-import { GetServerSidePropsContext } from "next";
-import { Article, Comment } from "@/types";
+// import instance from "@/lib/axios";
+// import { GetServerSidePropsContext } from "next";
+// import { Article, Comment } from "@/types";
 import formatDate from "@/utils/formatDate";
 import CommentList from "@/components/Boards/CommentList";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useMemo, useState } from "react";
+import { useRouter } from "next/router";
+import useArticle from "@/hooks/useArticleQuery";
+import { useCommentList } from "@/hooks/useCommentQuery";
 
 const COMMENTS_MAX = 5;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const id = context.query.id;
+// export async function getServerSideProps(context: GetServerSidePropsContext) {
+//   const id = context.query.id;
 
-  const res = await Promise.allSettled([
-    instance.get(`/articles/${id}`),
-    instance.get(`/articles/${id}/comments?limit=${COMMENTS_MAX}`),
-  ]);
+//   const res = await Promise.allSettled([
+//     instance.get(`/articles/${id}`),
+//     instance.get(`/articles/${id}/comments?limit=${COMMENTS_MAX}`),
+//   ]);
 
-  const article: Article =
-    res[0].status === "fulfilled" ? res[0].value.data : {};
-  const comments: Comment[] =
-    res[1].status === "fulfilled" ? res[1].value.data.list : [];
+//   const article: Article =
+//     res[0].status === "fulfilled" ? res[0].value.data : {};
+//   const comments: Comment[] =
+//     res[1].status === "fulfilled" ? res[1].value.data.list : [];
 
-  return {
-    props: {
-      article,
-      comments,
-    },
-  };
-}
+//   return {
+//     props: {
+//       article,
+//       comments,
+//     },
+//   };
+// }
 
-export default function Article({
-  article,
-  comments,
-}: {
-  article: Article;
-  comments: Comment[];
-}) {
+export default function Article() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  // router에서 id값이 string으로 넘어옴..
+  const articleId = Number(id);
+  const { data: article, isLoading: isArticleLoading } = useArticle(articleId);
+  const { data: comments, isLoading: isCommentListLoading } = useCommentList({
+    articleId,
+    limit: COMMENTS_MAX,
+  });
+
+  const isLoading = useMemo(
+    () => isArticleLoading || isCommentListLoading,
+    [isArticleLoading, isCommentListLoading]
+  );
+
   const [commentText, setCommentText] = useState<string>("");
 
   const handleChangeComment = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -53,10 +66,28 @@ export default function Article({
     console.log(commentText);
   };
 
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-80px)]">
+        <div className="animate-spin border-8 border-gray-200 border-t-blue-500 rounded-full w-12 h-12">
+          Loading...
+        </div>
+      </div>
+    );
+  }
+
+  if (!article) {
+    return (
+      <div className="flex justify-center items-center min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-80px)]">
+        <p className="text-gray-500">게시글을 불러올 수 없습니다.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
-        <h2 className="text-xl font-bold text-gray-800">{article.title}</h2>
+        <h2 className="text-xl font-bold text-gray-800">{article?.title}</h2>
         <div className="flex gap-2 items-center">
           <Image
             src={ProfileDefault}
@@ -130,7 +161,7 @@ export default function Article({
             등록
           </button>
         </form>
-        <CommentList comments={comments} />
+        {comments && <CommentList comments={comments.list} />}
         <Link
           className="w-60 h-12 bg-blue-default rounded-full flex justify-center items-center gap-2 mx-auto"
           href="/boards"

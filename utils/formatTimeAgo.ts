@@ -1,4 +1,4 @@
-export default function formatTimeAgo(dateString: string): string {
+export default function formatTimeAgo(dateString: Date): string {
   const currentDate: Date = new Date();
   const pastDate: Date = new Date(dateString);
 
