@@ -1,22 +1,28 @@
-import { ChangeEvent, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { ChangeEvent, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Button from "components/Button";
 import Input from "components/Input";
 import { Tag, TagList } from "components/Tag";
 import { ImageCard } from "components/Card/ImageCard";
 import Comment from "components/Comment";
 import Loading from "components/Loading";
-import useAxiosFetch from "hooks/useAxiosFetch";
 import CommentType from "models/comment";
-import Product from "models/product";
 import { addCommas } from "utils/commas";
 import kebabIcon from "assets/icon/ic_kebab.svg";
 import inquiryEmpty from "assets/img/Img_inquiry_empty.svg";
 import backIcon from "assets/icon/ic_back.svg";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { deleteProduct, getProductDetail } from "api/product";
+import { getCommentList, postComment } from "api/comment";
+import { useAtomValue } from "jotai";
+import { userInfoAtom } from "contexts/atom/user";
+import Dropdown from "components/Dropdown";
 import * as S from "./ProductDetail.style";
 
 export default function ProductDetail() {
   const params = useParams();
+
+  if (!params.productId) return null;
 
   return (
     <>
@@ -26,47 +32,69 @@ export default function ProductDetail() {
   );
 }
 
-function ProductDetailInfo({ productId }: { productId?: string }) {
-  const [productData, setProductData] = useState<Product | null>(null);
-  const { isLoading, error, axiosFetch } = useAxiosFetch();
+function ProductDetailInfo({ productId }: { productId: string }) {
+  const navigate = useNavigate();
+  const { data, isLoading } = useQuery({
+    queryKey: ["product-detail"],
+    queryFn: () => getProductDetail(productId),
+  });
+  const deleteMutation = useMutation({
+    mutationFn: () => deleteProduct(productId),
+    onSuccess: () => {
+      navigate("/items");
+    },
+  });
+  const userInfo = useAtomValue(userInfoAtom);
 
-  useEffect(() => {
-    (async () => {
-      const res = await axiosFetch({
-        url: `products/${productId}`,
-      });
+  const handleDelete = () => {
+    const confirm = window.confirm("게시글을 삭제하시겠습니까?");
 
-      setProductData(res.data);
-    })();
-  }, []);
+    if (confirm) deleteMutation.mutate();
+  };
 
   if (isLoading) return <Loading />;
 
   return (
     <S.ProductDetailInfoContainer>
-      <ImageCard src={productData?.images[0]} alt="product-img" />
+      <ImageCard src={data?.images[0]} alt="product-img" />
       <S.InfoContainer>
         <S.InfoTop>
-          <h1 className="product-name">{productData?.name}</h1>
-          <img className="kebab-icon" src={kebabIcon} alt="ic-kebab" />
-          <span className="price">
-            {addCommas(productData?.price as number)}원
-          </span>
+          <h1 className="product-name">{data?.name}</h1>
+          {userInfo && userInfo.id === data.ownerId ? (
+            <Dropdown.Root>
+              <Dropdown.Toggle>
+                <img src={kebabIcon} alt="kebab" />
+              </Dropdown.Toggle>
+
+              <Dropdown.List>
+                <Dropdown.Item
+                  onClick={() => navigate(`/edititem/${productId}`)}
+                >
+                  수정하기
+                </Dropdown.Item>
+                <Dropdown.Item onClick={handleDelete}>삭제하기</Dropdown.Item>
+              </Dropdown.List>
+            </Dropdown.Root>
+          ) : (
+            <div />
+          )}
+
+          <span className="price">{addCommas(data?.price as number)}원</span>
         </S.InfoTop>
 
         <S.InfoBottom>
           <h2>상품 소개</h2>
-          <p>{productData?.description}</p>
+          <p>{data?.description}</p>
           <h2>상품 태그</h2>
           <TagList>
-            {productData?.tags.map((tag) => (
+            {data?.tags.map((tag: string) => (
               <Tag.Product key={tag}>{`#${tag}`}</Tag.Product>
             ))}
           </TagList>
         </S.InfoBottom>
 
         <S.LikeBtnBox>
-          <Button.Like>{productData?.favoriteCount}</Button.Like>
+          <Button.Like>{data?.favoriteCount}</Button.Like>
         </S.LikeBtnBox>
       </S.InfoContainer>
     </S.ProductDetailInfoContainer>
@@ -76,10 +104,19 @@ function ProductDetailInfo({ productId }: { productId?: string }) {
 const PRIVACY_POLICY_NOTICE =
   "개인정보를 공유 및 요청하거나, 명예 훼손, 무단 광고, 불법 정보 유포시 모니터링 후 삭제될 수 있으며, 이에 대한 민형사상 책임은 게시자에게 있습니다.";
 
-function InquiryComments({ productId }: { productId?: string }) {
+function InquiryComments({ productId }: { productId: string }) {
   const [text, setText] = useState("");
-  const [commentList, setCommentList] = useState<CommentType[]>([]);
-  const { isLoading, error, axiosFetch } = useAxiosFetch();
+  const queryClient = useQueryClient();
+  const { data, isLoading } = useQuery({
+    queryKey: ["comment-list"],
+    queryFn: () => getCommentList({ productId }),
+  });
+  const submitMutation = useMutation({
+    mutationFn: (content: string) => postComment({ productId, content }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["comment-list"] });
+    },
+  });
 
   const onTextChange = (
     e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
@@ -87,18 +124,9 @@ function InquiryComments({ productId }: { productId?: string }) {
     setText(e.target.value);
   };
 
-  useEffect(() => {
-    (async () => {
-      const res = await axiosFetch({
-        url: `products/${productId}/comments`,
-        params: {
-          limit: 5,
-        },
-      });
-
-      setCommentList(res.data.list);
-    })();
-  }, []);
+  const handleSubmit = () => {
+    submitMutation.mutate(text);
+  };
 
   if (isLoading) return <Loading />;
 
@@ -114,12 +142,14 @@ function InquiryComments({ productId }: { productId?: string }) {
           placeholder={PRIVACY_POLICY_NOTICE}
         />
         <S.SubmitBtnBox>
-          <Button.Submit isActive={!!text}>등록</Button.Submit>
+          <Button.Submit isActive={!!text} handleSubmit={handleSubmit}>
+            등록
+          </Button.Submit>
         </S.SubmitBtnBox>
       </form>
-      {commentList.length > 0 ? (
+      {data.list.length > 0 ? (
         <S.CommentListContainer>
-          {commentList.map((comment) => (
+          {data.list.map((comment: CommentType) => (
             <Comment key={comment.id} data={comment} />
           ))}
         </S.CommentListContainer>

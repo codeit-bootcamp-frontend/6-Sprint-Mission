@@ -4,7 +4,6 @@ import Loading from "components/Loading";
 import Input from "components/Input";
 import Card from "components/Card";
 import useDeviceState from "hooks/useDeviceState";
-import useAxiosFetch from "hooks/useAxiosFetch";
 import getPageSize from "utils/getPageSize";
 import Product from "models/product";
 import {
@@ -12,6 +11,8 @@ import {
   useOrder,
   useSetTotalPages,
 } from "contexts/react-context/FleaMarket";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { getProducts } from "api/product";
 import * as S from "./FleaMarket.style";
 
 const DEVICE_PRODUCT_COUNT = {
@@ -22,42 +23,35 @@ const DEVICE_PRODUCT_COUNT = {
 
 export default function AllProducts() {
   const [keyword, setKeyword] = useState("");
-  const [totalCount, setTotalCount] = useState(0);
-  const [renderDataList, setRenderDataList] = useState<Product[]>([]);
   const orderState = useOrder();
   const currentPage = useCurrentPage();
   const setTotalPages = useSetTotalPages();
-  const { isLoading, error, axiosFetch } = useAxiosFetch();
   const { deviceState } = useDeviceState();
 
-  // 렌더되는 데이터 설정
-  useEffect(() => {
-    (async () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["products", { deviceState, orderState, currentPage, keyword }],
+    queryFn: () => {
       const pageSize = getPageSize(deviceState, DEVICE_PRODUCT_COUNT);
       const order = orderState === "최신순" ? "recent" : "favorite";
 
-      const res = await axiosFetch({
-        url: "products",
-        params: {
-          orderBy: order,
-          page: currentPage,
-          pageSize,
-          keyword,
-        },
+      return getProducts({
+        page: currentPage,
+        pageSize,
+        orderBy: order,
+        keyword,
       });
+    },
+    placeholderData: keepPreviousData,
+  });
 
-      setRenderDataList(res.data.list);
-      setTotalCount(res.data.totalCount);
-    })();
-  }, [currentPage, deviceState, orderState, keyword]);
-
-  // 전체 페이지 설정
   useEffect(() => {
-    const pageSize = getPageSize(deviceState, DEVICE_PRODUCT_COUNT);
-    const totalPages = Math.ceil(totalCount / pageSize);
+    if (data) {
+      const pageSize = getPageSize(deviceState, DEVICE_PRODUCT_COUNT);
+      const totalPages = Math.ceil(data.totalCount / pageSize);
 
-    setTotalPages(totalPages > 0 ? totalPages : 1);
-  }, [deviceState, renderDataList]);
+      setTotalPages(totalPages > 0 ? totalPages : 1);
+    }
+  }, [data, deviceState, setTotalPages]);
 
   const handleKeywordChange = (e: ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value);
@@ -80,15 +74,15 @@ export default function AllProducts() {
         </S.SelectInputBox>
       </S.AllProductsHeader>
 
-      {renderDataList.length > 0 ? (
+      {isLoading && <Loading />}
+      {!isLoading && data && data.list.length > 0 && (
         <S.AllProductsCards>
-          {isLoading ? (
-            <Loading />
-          ) : (
-            renderDataList.map((data, idx) => <Card key={idx} data={data} />)
-          )}
+          {data.list.map((product: Product, idx: number) => (
+            <Card key={idx} data={product} />
+          ))}
         </S.AllProductsCards>
-      ) : (
+      )}
+      {!isLoading && data && data.list.length === 0 && (
         <S.NoItems height={500}>상품이 존재하지 않습니다</S.NoItems>
       )}
     </S.AllProductsContainer>

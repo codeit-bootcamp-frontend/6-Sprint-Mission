@@ -5,10 +5,15 @@ import * as S from "./ImageInput.style";
 interface ImageInputProps {
   name: string;
   onImageChange: (file: File | null) => void;
+  deaultValue?: string;
 }
 
-export default function ImageInput({ name, onImageChange }: ImageInputProps) {
-  const [preview, setPreview] = useState("");
+export default function ImageInput({
+  name,
+  onImageChange,
+  deaultValue,
+}: ImageInputProps) {
+  const [preview, setPreview] = useState(deaultValue ?? "");
   const imgFileRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {

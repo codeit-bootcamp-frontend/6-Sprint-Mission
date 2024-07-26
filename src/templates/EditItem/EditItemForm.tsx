@@ -1,27 +1,41 @@
 import { ChangeEvent, KeyboardEvent, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { removeCommas } from "utils/commas";
 import Button from "components/Button";
 import Input from "components/Input";
 import { TagList, Tag } from "components/Tag";
 import postImage from "api/image";
-import { useMutation } from "@tanstack/react-query";
-import { PostProductPayload, postProduct } from "api/product";
-import * as S from "./AddItemForm.style";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { PostProductPayload, editProduct, getProductDetail } from "api/product";
+import { useAtomValue } from "jotai";
+import { userInfoAtom } from "contexts/atom/user";
+import * as S from "./EditItemForm.style";
 
-export default function AddItemForm() {
+export default function EditItemForm() {
   const navigate = useNavigate();
-  const [imgFile, setImgFile] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState(0);
+  const params = useParams();
+  const { data } = useQuery({
+    queryKey: ["product-detail"],
+    queryFn: () => {
+      if (!params.productId) return;
+
+      return getProductDetail(params.productId);
+    },
+  });
+  const userInfo = useAtomValue(userInfoAtom);
+
+  const [imgFile, setImgFile] = useState(data?.images[0] ?? "");
+  const [title, setTitle] = useState(data?.name ?? "");
+  const [description, setDescription] = useState(data?.description ?? "");
+  const [price, setPrice] = useState(data?.price ?? 0);
   const [currentTag, setCurrentTag] = useState("");
-  const [tagList, setTagList] = useState<string[]>([]);
+  const [tagList, setTagList] = useState<string[]>(data?.tags ?? []);
   const [isActive, setIsActive] = useState(false);
   const submitMutation = useMutation({
-    mutationFn: (payload: PostProductPayload) => postProduct(payload),
+    mutationFn: (payload: PostProductPayload) =>
+      editProduct({ productId: params.productId as string, payload }),
     onSuccess: () => {
-      navigate("/items");
+      navigate(`/items/${params.productId}`);
     },
   });
 
@@ -80,19 +94,27 @@ export default function AddItemForm() {
     }
   }, [title, description, price, tagList, imgFile]);
 
+  useEffect(() => {
+    if (userInfo?.id !== data?.ownerId) navigate("/items");
+  }, [userInfo, data]);
+
   return (
-    <S.AddItemContainer>
-      <S.AddItemHeader>
+    <S.EditItemContainer>
+      <S.EditItemHeader>
         <h1>상품 등록하기</h1>
         <Button.Submit isActive={isActive} handleSubmit={handleSubmit}>
           등록
         </Button.Submit>
-      </S.AddItemHeader>
+      </S.EditItemHeader>
 
-      <S.AddItemForm>
+      <S.EditItemForm>
         <div className="form__image">
           <h1>상품 이미지</h1>
-          <Input.Form.Image name="img-file" onImageChange={onImageChange} />
+          <Input.Form.Image
+            name="img-file"
+            deaultValue={imgFile}
+            onImageChange={onImageChange}
+          />
         </div>
 
         <div className="form__productName">
@@ -142,7 +164,7 @@ export default function AddItemForm() {
             ))}
           </TagList>
         </div>
-      </S.AddItemForm>
-    </S.AddItemContainer>
+      </S.EditItemForm>
+    </S.EditItemContainer>
   );
 }

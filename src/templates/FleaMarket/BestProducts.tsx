@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
 import Card from "components/Card";
 import Loading from "components/Loading";
 import useDeviceState from "hooks/useDeviceState";
-import useAxiosFetch from "hooks/useAxiosFetch";
-import { DeviceProductCount } from "models/device";
 import Product from "models/product";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { getProducts } from "api/product";
+import { DeviceProductCount } from "models/device";
 import getPageSize from "utils/getPageSize";
 import * as S from "./FleaMarket.style";
 
@@ -16,39 +16,29 @@ const DEVICE_PRODUCT_COUNT: DeviceProductCount = {
 
 export default function BestProducts() {
   const { deviceState } = useDeviceState();
-  const [renderDataList, setRenderDataList] = useState<Product[]>([]);
-  const { isLoading, error, axiosFetch } = useAxiosFetch();
-
-  useEffect(() => {
-    (async () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["products", "best", { deviceState }],
+    queryFn: () => {
       const pageSize = getPageSize(deviceState, DEVICE_PRODUCT_COUNT);
 
-      const res = await axiosFetch({
-        url: "products",
-        params: {
-          orderBy: "favorite",
-          page: 1,
-          pageSize,
-        },
-      });
-
-      setRenderDataList(res.data.list);
-    })();
-  }, [deviceState]);
+      return getProducts({ pageSize, orderBy: "favorite" });
+    },
+    placeholderData: keepPreviousData,
+  });
 
   return (
     <S.BestProductsContainer>
       <h1 className="title">베스트 상품</h1>
 
-      {renderDataList.length > 0 ? (
+      {isLoading && <Loading height={300} />}
+      {!isLoading && data && data.list.length > 0 && (
         <S.BestProductsCards>
-          {isLoading ? (
-            <Loading height={300} />
-          ) : (
-            renderDataList.map((data, idx) => <Card key={idx} data={data} />)
-          )}
+          {data.list.map((product: Product, idx: number) => (
+            <Card key={idx} data={product} />
+          ))}
         </S.BestProductsCards>
-      ) : (
+      )}
+      {!isLoading && data && data.list.length === 0 && (
         <S.NoItems height={300}>상품이 존재하지 않습니다</S.NoItems>
       )}
     </S.BestProductsContainer>

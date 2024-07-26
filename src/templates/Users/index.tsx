@@ -6,6 +6,8 @@ import mainLogo from "assets/icon/main_logo.svg";
 import kakaoIcon from "assets/icon/ic_kakao.svg";
 import googleIcon from "assets/icon/ic_google.svg";
 import { loginRequest, signupRequest } from "api/auth";
+import { userInfoAtom } from "contexts/atom/user";
+import { useSetAtom } from "jotai";
 import * as S from "./index.style";
 
 export function AuthLogo() {
@@ -32,6 +34,7 @@ export function LoginForm() {
   });
 
   const navigate = useNavigate();
+  const setUserInfo = useSetAtom(userInfoAtom);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -44,7 +47,10 @@ export function LoginForm() {
     if (!valid.email || !valid.password) return;
     const res = await loginRequest(user);
 
-    if (res) navigate("/");
+    if (res) {
+      setUserInfo(res.data.user);
+      navigate("/");
+    }
   };
 
   const handleFormEnter = (e: KeyboardEvent<HTMLFormElement>) => {

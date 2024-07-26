@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import {
   useCurrentPageState,
   useTotalPages,
 } from "contexts/react-context/FleaMarket";
+import useDeviceState from "hooks/useDeviceState";
 import ArrowLeft from "assets/icon/ic_arrow_left.svg";
 import ArrowRight from "assets/icon/ic_arrow_right.svg";
 import * as S from "./Pagination.style";
@@ -24,6 +25,7 @@ function PageButton({ children, isFocus, onClick }: PageButtonProps) {
 export default function Pagination() {
   const [currentPage, setCurrentPage] = useCurrentPageState();
   const totalPages = useTotalPages();
+  const { deviceState } = useDeviceState();
 
   const handleButtonClick = (page: number) => {
     setCurrentPage(page);
@@ -38,6 +40,10 @@ export default function Pagination() {
     if (currentPage === totalPages) return;
     setCurrentPage((prev: number) => prev + 1);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [deviceState]);
 
   return (
     <S.PaginationContainer>
