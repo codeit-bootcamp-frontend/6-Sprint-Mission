@@ -1,4 +1,6 @@
+import { AxiosResponse } from 'axios';
 import { baseAxios } from './api';
+import { ProductCommentType } from 'types/comment';
 
 interface getProductCommentProps {
   productId: number;
@@ -12,12 +14,15 @@ export const getProductComment = async ({
   cursor,
 }: getProductCommentProps) => {
   try {
-    const response = await baseAxios.get(`products/${productId}/comments`, {
-      params: {
-        limit,
-        cursor,
-      },
-    });
+    const response: AxiosResponse<ProductCommentType> = await baseAxios.get(
+      `products/${productId}/comments`,
+      {
+        params: {
+          limit,
+          cursor,
+        },
+      }
+    );
     return response.data;
   } catch (error) {
     throw new Error('문의 가져오기 실패');

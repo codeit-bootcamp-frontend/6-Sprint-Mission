@@ -18,3 +18,8 @@ export type ItemType = {
   updatedAt: Date;
   isFavorite: boolean;
 };
+
+export type ProductResponse = {
+  totalCount: number;
+  list: ItemType[];
+};

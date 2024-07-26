@@ -6,13 +6,13 @@ import DropDown from 'components/Dropdown';
 import ArrowDownIcon from 'assets/icons/ArrowDown';
 import SortIcon from 'assets/icons/Sort';
 import './style.css';
-import { OrderBy } from 'types/order';
+import { type OrderType } from 'constants/orderOption';
 
 interface ProductControlProps {
   search: string;
   setSearch: (value: string) => void;
-  orderBy: OrderBy;
-  setOrderBy: (value: OrderBy) => void;
+  orderBy: OrderType;
+  setOrderBy: (value: OrderType) => void;
   pageSize: number;
 }
 
@@ -28,15 +28,15 @@ const ProductControl = ({
   const DROP_DOWN_OPTIONS = [
     {
       label: '최신순',
-      onClick: () => handleClickOrder(OrderBy.최신순),
+      onClick: () => handleClickOrder('recent'),
     },
     {
       label: '좋아요순',
-      onClick: () => handleClickOrder(OrderBy.좋아요순),
+      onClick: () => handleClickOrder('favorite'),
     },
   ];
 
-  const handleClickOrder = (orderType: OrderBy) => setOrderBy(orderType);
+  const handleClickOrder = (orderType: OrderType) => setOrderBy(orderType);
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
@@ -65,7 +65,7 @@ const ProductControl = ({
               ) : (
                 <>
                   <button className="dropdown-trigger">
-                    {orderBy === OrderBy.최신순 ? '최신순' : '좋아요순'}
+                    {orderBy === 'recent' ? '최신순' : '좋아요순'}
                   </button>
                   <ArrowDownIcon className="dropdown-icon" />
                 </>

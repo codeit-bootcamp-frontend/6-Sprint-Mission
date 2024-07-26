@@ -1,0 +1,14 @@
+.already {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4a4a4a;
+}
+
+.already a {
+  text-decoration: underline;
+  color: #0070f3;
+}

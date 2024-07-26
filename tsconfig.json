@@ -18,5 +18,5 @@
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["@types"]
   },
-  "include": ["src"]
+  "include": ["src", "**/*.d.ts"]
 }

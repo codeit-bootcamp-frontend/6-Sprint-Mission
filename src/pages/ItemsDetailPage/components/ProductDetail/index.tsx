@@ -16,19 +16,46 @@ import Heart from 'assets/icons/Heart';
 import { getProductDetail } from 'api/getProductDetail';
 import useLoading from 'hooks/useLoading';
 import { ItemType } from 'types/item';
+import NewDropDown from 'components/NewDropDown';
+import { useMutation } from '@tanstack/react-query';
+import { deleteProduct } from 'api/product/deleteProduct';
+import { useNavigate } from 'react-router-dom';
 
 interface ProductDetailProps {
   productId: number;
 }
 
 const ProductDetail = ({ productId }: ProductDetailProps) => {
+  const navigate = useNavigate();
+
   const { isLoading, error, handleLoad } = useLoading(getProductDetail);
   const [item, setItem] = useState<ItemType | null>(null);
+
+  const userId = localStorage.getItem('userId');
+
+  const { mutate } = useMutation({
+    mutationFn: (id: number) => deleteProduct(id),
+    onSuccess: () => {
+      alert('게시물 삭제 성공');
+      navigate('/items');
+    },
+    onError: (error) => {
+      alert(error);
+    },
+  });
 
   const handleProductLoad = async () => {
     const product = await handleLoad({ productId: productId });
     if (product) {
       setItem(product);
+    }
+  };
+
+  const handleClickItem = (label: string) => {
+    if (label === '수정하기') {
+      alert('미구현 기능');
+    } else {
+      mutate(productId);
     }
   };
 
@@ -45,7 +72,15 @@ const ProductDetail = ({ productId }: ProductDetailProps) => {
       <Wrapper>
         <Image alt={item.name} src={item.images[0]} />
         <ContentWrapper>
-          <Title>{item.name}</Title>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Title>{item.name}</Title>
+            {Number(userId) === item.ownerId && (
+              <NewDropDown
+                options={['수정하기', '삭제하기']}
+                handleClickItem={handleClickItem}
+              />
+            )}
+          </div>
           <Price>{formatNumberToWon(item.price)}</Price>
           <Division />
           <Description>

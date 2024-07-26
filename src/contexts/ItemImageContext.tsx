@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { createContext, useContext, useState } from 'react';
 
-type ImageType = Blob | MediaSource | null;
+type ImageType = null | File;
 
 interface ImageUrlProviderProps {
   defaultValue?: ImageType;

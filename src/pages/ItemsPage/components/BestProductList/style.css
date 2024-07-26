@@ -1,6 +1,0 @@
-/* 모바일 사이즈 */
-@media (max-width: 767px) {
-  .container {
-    gap: 2rem;
-  }
-}

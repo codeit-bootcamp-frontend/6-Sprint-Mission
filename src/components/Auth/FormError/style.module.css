@@ -1,0 +1,9 @@
+.message {
+  color: #f74747;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  margin-top: -15px;
+  margin-left: 3px;
+}

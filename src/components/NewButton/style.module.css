@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  background-color: #007bff; /* 실제 색상 코드로 대체 */
+  padding: 12px 23px;
+  border-radius: 8px;
+  border: none;
+  color: #fff; /* 실제 색상 코드로 대체 */
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:hover {
+  background-color: #0056b3; /* 실제 색상 코드로 대체 */
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #b0b0b0; /* 실제 색상 코드로 대체 */
+}
+
+.round {
+  border-radius: 40px;
+}

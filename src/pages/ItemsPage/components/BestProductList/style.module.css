@@ -1,0 +1,14 @@
+@media (max-width: 899px) {
+  .item-2,
+  .item-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .item-1,
+  .item-2,
+  .item-3 {
+    display: none;
+  }
+}

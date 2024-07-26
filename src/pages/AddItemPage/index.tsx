@@ -10,8 +10,33 @@ import { FormHeader, AddItemTitle, FormContainer, TagList, Tag } from './style';
 import { useImageUrl, useSetImageUrl } from 'contexts/ItemImageContext';
 import CloseXIcon from 'assets/icons/CloseX';
 import { AddItemType } from 'types/item';
+import { createImage } from 'api/createImage';
+import { ProductFormData } from 'types/product';
+import { useMutation } from '@tanstack/react-query';
+import { createProduct } from 'api/product/createProduct';
+import { useNavigate } from 'react-router-dom';
 
 const AddItemPage = () => {
+  const navigate = useNavigate();
+
+  const { mutate: mutateImage } = useMutation({
+    mutationFn: (image: File) => createImage(image),
+    onError: (error) => {
+      alert(error);
+    },
+  });
+
+  const { mutate: mutateProduct, isPending } = useMutation({
+    mutationFn: (data: ProductFormData) => createProduct(data),
+    onSuccess: (res) => {
+      alert('상품이 등록되었습니다.');
+      navigate(`/items/${res.id}`);
+    },
+    onError: (error) => {
+      alert(error);
+    },
+  });
+
   const [inputData, setInputData] = useState<AddItemType>({
     itemName: '',
     itemDescription: '',
@@ -30,15 +55,28 @@ const AddItemPage = () => {
     );
   };
 
-  const handleSubmitForm = (e: FormEvent<HTMLFormElement>) => {
+  // 상품 등록하기
+  const handleSubmitForm = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append('image', JSON.stringify(imageUrl));
-    formData.append('name', inputData.itemName);
-    formData.append('description', inputData.itemDescription);
-    formData.append('price', inputData.itemPrice);
-    formData.append('tag', JSON.stringify(inputData.itemTag));
+    const itemData: ProductFormData = {
+      name: inputData.itemName.trim(),
+      description: inputData.itemDescription.trim(),
+      tags: inputData.itemTag,
+      price: Number(inputData.itemPrice),
+      images: [],
+    };
+
+    if (imageUrl) {
+      mutateImage(imageUrl, {
+        onSuccess: (res) => {
+          itemData.images.push(res.url);
+          mutateProduct(itemData);
+        },
+      });
+    } else {
+      mutateProduct(itemData);
+    }
   };
 
   const handleChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
@@ -101,7 +139,11 @@ const AddItemPage = () => {
         <form onSubmit={handleSubmitForm}>
           <FormHeader>
             <AddItemTitle>상품 등록하기</AddItemTitle>
-            <Button disabled={!isFormValid()} title="등록" type="submit" />
+            <Button
+              disabled={!isFormValid() || isPending}
+              title="등록"
+              type="submit"
+            />
           </FormHeader>
           <FormContainer>
             <ImageFileInput

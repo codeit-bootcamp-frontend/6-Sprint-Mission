@@ -1,0 +1,17 @@
+.main {
+  max-width: 700px;
+  padding-top: 200px;
+  margin-block: auto;
+}
+
+.form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form button {
+  height: 56px;
+  justify-content: center;
+}

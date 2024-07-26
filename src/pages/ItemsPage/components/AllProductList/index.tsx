@@ -9,17 +9,17 @@ import { MOBILE_SIZE, TABLET_SIZE } from 'constants/windowSize';
 import { ALL } from 'constants/productItems';
 import './style.css';
 import { ItemType } from 'types/item';
-import { OrderBy } from 'types/order';
+import { type OrderType } from 'constants/orderOption';
 
 interface LoadOptions {
   page: number;
   pageSize: number;
-  orderBy: OrderBy;
+  orderBy: OrderType;
 }
 
 const AllProductList = () => {
   const [allProduct, setAllProduct] = useState<ItemType[]>([]);
-  const [orderBy, setOrderBy] = useState<OrderBy>(OrderBy.최신순);
+  const [orderBy, setOrderBy] = useState<OrderType>('recent');
   const [pageSize, setPageSize] = useState<number>(10);
   const [search, setSearch] = useState<string>('');
   const [page, setPage] = useState<number>(1);
